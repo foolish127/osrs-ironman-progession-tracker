@@ -121,7 +121,41 @@
         let data = {};
         let originalData = {};
 
-        function parseYamlWithDates(text) {
+        function parseYamlWithDates(text, isPets = false) {
+            if (isPets) {
+                // Pets have flat structure: obtained:/missing: at root level
+                const result = { obtained: [], missing: [] };
+                let currentSection = null;
+                
+                for (const line of text.split('\n')) {
+                    if (!line || line.startsWith('#')) continue;
+                    const stripped = line.trim();
+                    
+                    if (stripped === 'obtained:') {
+                        currentSection = 'obtained';
+                    } else if (stripped === 'missing:') {
+                        currentSection = 'missing';
+                    } else if (stripped.startsWith('- ') && currentSection) {
+                        const itemText = stripped.slice(2);
+                        let name, date = null;
+                        
+                        if (itemText.includes(' | ')) {
+                            const parts = itemText.split(' | ');
+                            name = parts[0].trim();
+                            date = parts[1]?.trim() || null;
+                        } else if (itemText.endsWith(' |')) {
+                            name = itemText.slice(0, -2).trim();
+                        } else {
+                            name = itemText.trim();
+                        }
+                        
+                        result[currentSection].push({ name, date });
+                    }
+                }
+                return result;
+            }
+            
+            // Original nested structure for clog and CA
             const result = {};
             let currentKey = null;
             let currentSubkey = null;
@@ -173,7 +207,7 @@
                             const res = await fetch(`${GITHUB_BASE}/${file}`);
                             if (!res.ok) throw new Error(`Failed to load ${file}`);
                             const text = await res.text();
-                            return [key, parseYamlWithDates(text)];
+                            return [key, parseYamlWithDates(text, key === 'pets')];
                         } catch (e) {
                             console.error(e);
                             return [key, null];
@@ -233,10 +267,13 @@
 
         function renderFilters() {
             const container = document.getElementById('filters');
-            const obtKey = currentTab === 'ca' ? 'completed' : 'obtained';
-            const missKey = currentTab === 'ca' ? 'not_completed' : 'missing';
+            let categories;
             
-            const categories = ['all', obtKey, missKey];
+            if (currentTab === 'ca') {
+                categories = ['all', 'completed', 'not_completed'];
+            } else {
+                categories = ['all', 'obtained', 'missing'];
+            }
             
             container.innerHTML = categories.map(cat => {
                 const label = cat === 'all' ? 'All' : cat === 'not_completed' ? 'Remaining' : cat.charAt(0).toUpperCase() + cat.slice(1);
@@ -260,15 +297,16 @@
                 return;
             }
             
-            const obtKey = currentTab === 'ca' ? 'completed' : 'obtained';
-            const missKey = currentTab === 'ca' ? 'not_completed' : 'missing';
-            
             let obtained = 0, total = 0, changes = 0;
             
             if (currentTab === 'pets') {
+                // Pets have flat structure
                 obtained = (tabData.obtained || []).length;
                 total = obtained + (tabData.missing || []).length;
             } else {
+                const obtKey = currentTab === 'ca' ? 'completed' : 'obtained';
+                const missKey = currentTab === 'ca' ? 'not_completed' : 'missing';
+                
                 for (const [key, items] of Object.entries(tabData)) {
                     obtained += (items[obtKey] || []).length;
                     total += (items[obtKey] || []).length + (items[missKey] || []).length;
@@ -305,18 +343,16 @@
             }
             
             const search = document.getElementById('search').value.toLowerCase();
-            const obtKey = currentTab === 'ca' ? 'completed' : 'obtained';
-            const missKey = currentTab === 'ca' ? 'not_completed' : 'missing';
-            
             let html = '';
             
             if (currentTab === 'pets') {
-                // Pets are flat structure
+                // Pets have flat structure: { obtained: [], missing: [] }
                 let items = [];
                 
                 if (currentFilter === 'all' || currentFilter === 'obtained') {
                     items = items.concat((tabData.obtained || []).map(i => ({
-                        ...i,
+                        name: i.name,
+                        date: i.date,
                         obtained: true,
                         category: 'Pets'
                     })));
@@ -344,6 +380,9 @@
                 }
             } else {
                 // Collection log and CA have nested structure
+                const obtKey = currentTab === 'ca' ? 'completed' : 'obtained';
+                const missKey = currentTab === 'ca' ? 'not_completed' : 'missing';
+                
                 const sortedKeys = currentTab === 'ca' 
                     ? ['Easy', 'Medium', 'Hard', 'Elite', 'Master', 'Grandmaster'].filter(k => tabData[k])
                     : Object.keys(tabData).sort();
@@ -356,7 +395,8 @@
                     
                     if (currentFilter === 'all' || currentFilter === obtKey) {
                         allItems = allItems.concat((items[obtKey] || []).map(i => ({
-                            ...i,
+                            name: i.name,
+                            date: i.date,
                             obtained: true,
                             category
                         })));
@@ -413,23 +453,25 @@
 
         function toggleItem(category, name) {
             const tabData = data[currentTab];
-            const obtKey = currentTab === 'ca' ? 'completed' : 'obtained';
-            const missKey = currentTab === 'ca' ? 'not_completed' : 'missing';
             
             if (currentTab === 'pets') {
+                // Pets have flat structure
                 const obtIdx = (tabData.obtained || []).findIndex(i => i.name === name);
                 const missIdx = (tabData.missing || []).findIndex(i => i.name === name);
                 
                 if (obtIdx >= 0) {
                     const item = tabData.obtained.splice(obtIdx, 1)[0];
                     tabData.missing = tabData.missing || [];
-                    tabData.missing.push({ name: item.name });
+                    tabData.missing.push({ name: item.name, date: null });
                 } else if (missIdx >= 0) {
                     const item = tabData.missing.splice(missIdx, 1)[0];
                     tabData.obtained = tabData.obtained || [];
                     tabData.obtained.push({ name: item.name, date: getToday() });
                 }
             } else {
+                const obtKey = currentTab === 'ca' ? 'completed' : 'obtained';
+                const missKey = currentTab === 'ca' ? 'not_completed' : 'missing';
+                
                 const items = tabData[category];
                 if (!items) return;
                 
@@ -439,7 +481,7 @@
                 if (obtIdx >= 0) {
                     const item = items[obtKey].splice(obtIdx, 1)[0];
                     items[missKey] = items[missKey] || [];
-                    items[missKey].push({ name: item.name });
+                    items[missKey].push({ name: item.name, date: null });
                 } else if (missIdx >= 0) {
                     const item = items[missKey].splice(missIdx, 1)[0];
                     items[obtKey] = items[obtKey] || [];
@@ -452,12 +494,12 @@
 
         function updateDate(category, name, date) {
             const tabData = data[currentTab];
-            const obtKey = currentTab === 'ca' ? 'completed' : 'obtained';
             
             if (currentTab === 'pets') {
                 const item = (tabData.obtained || []).find(i => i.name === name);
                 if (item) item.date = date || null;
             } else {
+                const obtKey = currentTab === 'ca' ? 'completed' : 'obtained';
                 const items = tabData[category];
                 if (!items) return;
                 const item = (items[obtKey] || []).find(i => i.name === name);
@@ -476,8 +518,6 @@
                 return;
             }
             
-            const obtKey = currentTab === 'ca' ? 'completed' : 'obtained';
-            const missKey = currentTab === 'ca' ? 'not_completed' : 'missing';
             const titles = { clog: 'Collection Log', ca: 'Combat Achievements', pets: 'Pet' };
             
             let yaml = `# FoolinSlays ${titles[currentTab]} Tracker\n`;
@@ -494,6 +534,9 @@
                     yaml += `  - ${item.name}\n`;
                 }
             } else {
+                const obtKey = currentTab === 'ca' ? 'completed' : 'obtained';
+                const missKey = currentTab === 'ca' ? 'not_completed' : 'missing';
+                
                 const sortedKeys = currentTab === 'ca' 
                     ? ['Easy', 'Medium', 'Hard', 'Elite', 'Master', 'Grandmaster'].filter(k => tabData[k])
                     : Object.keys(tabData).sort();
