@@ -1,158 +1,159 @@
 # FoolinSlays Combat Achievements Tracker
-# Format for completed tasks: "Task Name: YYYY-MM-DD" or "Task Name: null" for unknown date
-# Format for incomplete tasks: just "- Task Name"
+# Format: task name | YYYY-MM-DD (date optional)
+# Example: Barrows Novice | 2024-01-20
+# Total: 178 / 625 tasks
 
 Easy:
   completed:
-    A Demon's Best Friend: null
-    A Greater Foe: null
-    A Scaley Encounter: null
-    A Slithery Encounter: null
-    A Slow Death: null
-    Barrows Novice: null
-    Big, Black and Fiery: null
-    Bryophyta Novice: null
-    Calm Before the Storm: null
-    Cosy: null
-    Defence? What Defence?: null
-    Deranged Archaeologist Novice: null
-    Elemental Company: null
-    Fighting as Intended: null
-    Fighting as Intended II: null
-    Fire in the Hole!: null
-    Giant Mole Novice: null
-    Handyman: null
-    Into the Den of Giants: null
-    King Black Dragon Novice: null
-    Let them fight: null
-    Master of Buckets: null
-    Mummy!: null
-    Not So Great After All: null
-    Noxious Foe: null
-    Obor Novice: null
-    One by one: null
-    Preparation Is Key: null
-    Protection from Moss: null
-    Sarachnis Novice: null
-    Scurrius Novice: null
-    Shayzien Protector: null
-    Sit Rat: null
-    Sleeping Giant: null
-    Tempoross Novice: null
-    The Demonic Punching Bag: null
-    The Walking Volcano: null
-    Wintertodt Novice: null
+  - A Demon's Best Friend |
+  - A Greater Foe |
+  - A Scaley Encounter |
+  - A Slithery Encounter |
+  - A Slow Death |
+  - Barrows Novice |
+  - Big, Black and Fiery |
+  - Bryophyta Novice |
+  - Calm Before the Storm |
+  - Cosy |
+  - Defence? What Defence? |
+  - Deranged Archaeologist Novice |
+  - Elemental Company |
+  - Fighting as Intended |
+  - Fighting as Intended II |
+  - Fire in the Hole! |
+  - Giant Mole Novice |
+  - Handyman |
+  - Into the Den of Giants |
+  - King Black Dragon Novice |
+  - Let them fight |
+  - Master of Buckets |
+  - Mummy! |
+  - Not So Great After All |
+  - Noxious Foe |
+  - Obor Novice |
+  - One by one |
+  - Preparation Is Key |
+  - Protection from Moss |
+  - Sarachnis Novice |
+  - Scurrius Novice |
+  - Shayzien Protector |
+  - Sit Rat |
+  - Sleeping Giant |
+  - Tempoross Novice |
+  - The Demonic Punching Bag |
+  - The Walking Volcano |
+  - Wintertodt Novice |
   not_completed:
 Medium:
   completed:
-    A Frozen Foe from the Past: null
-    A Frozen King: null
-    A Smashing Time: null
-    Amoxliatl Champion: null
-    Antifire Protection: null
-    Avoiding Those Little Arms: null
-    Back to Our Roots: null
-    Back to the Wall: null
-    Barrows Champion: null
-    Brutal, Big, Black and Firey: null
-    Bryophyta Champion: null
-    Can We Fix It?: null
-    Can't Touch Me: null
-    Chaos Fanatic Champion: null
-    Claw Clipper: null
-    Crazy Archaeologist Champion: null
-    Dagannoth Rex Champion: null
-    Demonbane Weaponry: null
-    Demonic Weakening: null
-    Deranged Archaeologist Champion: null
-    Efficient Pest Control: null
-    Giant Mole Champion: null
-    Hide Penetration: null
-    Hueycoatl Champion: null
-    I'd Rather Be Illiterate: null
-    I'd Rather Not Learn: null
-    It takes too long: null
-    King Black Dragon Champion: null
-    Leaving No One Behind: null
-    Lunar Triplet: null
-    Mage of the Ruins: null
-    Mage of the Swamp: null
-    Master of Broad Weaponry: null
-    Moons of Peril Speed-Trialist: null
-    Newspaper Enthusiast: null
-    Obor Champion: null
-    Perfect Scurrius: null
-    Perilous Novice: null
-    Pray for Success: null
-    Quick Cutter: null
-    Royal Titan Adept: null
-    Royal Titan Champion: null
-    Sarachnis Champion: null
-    Scurrius Champion: null
-    Sit Back and Relax: null
-    Skotizo Champion: null
-    Sorry, What Was That?: null
-    Squashing the Giant: null
-    Tempoross Champion: null
-    The Lone Angler: null
-    Wintertodt Champion: null
-    You're a wizard: null
+  - A Frozen Foe from the Past |
+  - A Frozen King |
+  - A Smashing Time |
+  - Amoxliatl Champion |
+  - Antifire Protection |
+  - Avoiding Those Little Arms |
+  - Back to Our Roots |
+  - Back to the Wall |
+  - Barrows Champion |
+  - Brutal, Big, Black and Firey |
+  - Bryophyta Champion |
+  - Can We Fix It? |
+  - Can't Touch Me |
+  - Chaos Fanatic Champion |
+  - Claw Clipper |
+  - Crazy Archaeologist Champion |
+  - Dagannoth Rex Champion |
+  - Demonbane Weaponry |
+  - Demonic Weakening |
+  - Deranged Archaeologist Champion |
+  - Efficient Pest Control |
+  - Giant Mole Champion |
+  - Hide Penetration |
+  - Hueycoatl Champion |
+  - I'd Rather Be Illiterate |
+  - I'd Rather Not Learn |
+  - It takes too long |
+  - King Black Dragon Champion |
+  - Leaving No One Behind |
+  - Lunar Triplet |
+  - Mage of the Ruins |
+  - Mage of the Swamp |
+  - Master of Broad Weaponry |
+  - Moons of Peril Speed-Trialist |
+  - Newspaper Enthusiast |
+  - Obor Champion |
+  - Perfect Scurrius |
+  - Perilous Novice |
+  - Pray for Success |
+  - Quick Cutter |
+  - Royal Titan Adept |
+  - Royal Titan Champion |
+  - Sarachnis Champion |
+  - Scurrius Champion |
+  - Sit Back and Relax |
+  - Skotizo Champion |
+  - Sorry, What Was That? |
+  - Squashing the Giant |
+  - Tempoross Champion |
+  - The Lone Angler |
+  - Wintertodt Champion |
+  - You're a wizard |
   not_completed:
   - Dagannoth Prime Champion
   - Dagannoth Supreme Champion
   - Temotli Triumph
 Hard:
   completed:
-    Abyssal Adept: null
-    Amoxliatl Adept: null
-    Amoxliatl Speed-Trialist: null
-    Betrayal: null
-    Chitin Penetrator: null
-    Crazy Archaeologist Adept: null
-    Dagannoth Rex Adept: null
-    Demonbane Weaponry II: null
-    Don't Look at the Eclipse: null
-    Don't Stop Moving: null
-    Don't Whip Me: null
-    Dress Like You Mean It: null
-    Faithless Crypt Run: null
-    Fat of the Land: null
-    Fortified: null
-    Granite Footwork: null
-    Grotesque Guardians Adept: null
-    Heal No More: null
-    Hespori Adept: null
-    Hesporisn't: null
-    Hueycoatl Adept: null
-    I need room: null
-    Inspect Repellent: null
-    Just Like That: null
-    Kemo Makti: null
-    Krakan't Hurt Me: null
-    Kraken Adept: null
-    Moons of Peril Speed-Chaser: null
-    Nagua Negation: null
-    Novice Tomb Explorer: null
-    Perfect Royal Titans: null
-    Perilous Champion: null
-    Perilous Dancer: null
-    Pillar Lover: null
-    Prison Break: null
-    Ready to Pounce: null
-    Skotizo Adept: null
-    Static Awareness: null
-    The Clone Zone: null
-    Theatre of Blood: SM Adept: null
-    They Grow Up Too Fast: null
-    Totally Shattered: null
-    Unnecessary Optimisation: null
-    Vet'ion Adept: null
-    Weed Whacker: null
-    Whack-a-Mole: null
-    Why Are You Running?: null
-    Why Cook?: null
-    Why Fletch?: null
-    Yarr No More: null
+  - Abyssal Adept |
+  - Amoxliatl Adept |
+  - Amoxliatl Speed-Trialist |
+  - Betrayal |
+  - Chitin Penetrator |
+  - Crazy Archaeologist Adept |
+  - Dagannoth Rex Adept |
+  - Demonbane Weaponry II |
+  - Don't Look at the Eclipse |
+  - Don't Stop Moving |
+  - Don't Whip Me |
+  - Dress Like You Mean It |
+  - Faithless Crypt Run |
+  - Fat of the Land |
+  - Fortified |
+  - Granite Footwork |
+  - Grotesque Guardians Adept |
+  - Heal No More |
+  - Hespori Adept |
+  - Hesporisn't |
+  - Hueycoatl Adept |
+  - I need room |
+  - Inspect Repellent |
+  - Just Like That |
+  - Kemo Makti |
+  - Krakan't Hurt Me |
+  - Kraken Adept |
+  - Moons of Peril Speed-Chaser |
+  - Nagua Negation |
+  - Novice Tomb Explorer |
+  - Perfect Royal Titans |
+  - Perilous Champion |
+  - Perilous Dancer |
+  - Pillar Lover |
+  - Prison Break |
+  - Ready to Pounce |
+  - Skotizo Adept |
+  - Static Awareness |
+  - The Clone Zone |
+  - Theatre of Blood: SM Adept |
+  - They Grow Up Too Fast |
+  - Totally Shattered |
+  - Unnecessary Optimisation |
+  - Vet'ion Adept |
+  - Weed Whacker |
+  - Whack-a-Mole |
+  - Why Are You Running? |
+  - Why Cook? |
+  - Why Fletch? |
+  - Yarr No More |
   not_completed:
   - Airborne Showdown
   - Callisto Adept
@@ -188,35 +189,35 @@ Hard:
   - Zulrah Adept
 Elite:
   completed:
-    3, 2, 1 - Mage: null
-    3, 2, 1 - Range: null
-    Anti-Bite Mechanics: null
-    Cerberus Veteran: null
-    Corrupted Gauntlet Veteran: null
-    Don't Look at Me!: null
-    Done before Dusk: null
-    Duke Sucellus Adept: null
-    Fight Caves Veteran: null
-    Gauntlet Veteran: null
-    Ghost Buster: null
-    High Hitter: null
-    Hitting Them Where It Hurts: null
-    Hueycoatl Speed-Trialist: null
-    Hueycoatl Veteran: null
-    If Gorillas Could Fly: null
-    Mimic Veteran: null
-    No-Pillar: null
-    Perfect Grotesque Guardians: null
-    Plant-Based Diet: null
-    Reflecting on This Encounter: null
-    Respiratory Runner: null
-    Ten-tacles: null
-    Through Fire and Flames: null
-    Unending Torment: null
-    Unrequired Antifire: null
-    Up for the Challenge: null
-    Vet'eran: null
-    Wolf Puncher: null
+  - 3, 2, 1 - Mage |
+  - 3, 2, 1 - Range |
+  - Anti-Bite Mechanics |
+  - Cerberus Veteran |
+  - Corrupted Gauntlet Veteran |
+  - Don't Look at Me! |
+  - Done before Dusk |
+  - Duke Sucellus Adept |
+  - Fight Caves Veteran |
+  - Gauntlet Veteran |
+  - Ghost Buster |
+  - High Hitter |
+  - Hitting Them Where It Hurts |
+  - Hueycoatl Speed-Trialist |
+  - Hueycoatl Veteran |
+  - If Gorillas Could Fly |
+  - Mimic Veteran |
+  - No-Pillar |
+  - Perfect Grotesque Guardians |
+  - Plant-Based Diet |
+  - Reflecting on This Encounter |
+  - Respiratory Runner |
+  - Ten-tacles |
+  - Through Fire and Flames |
+  - Unending Torment |
+  - Unrequired Antifire |
+  - Up for the Challenge |
+  - Vet'eran |
+  - Wolf Puncher |
   not_completed:
   - A Near Miss!
   - Abyssal Veteran
@@ -352,13 +353,13 @@ Elite:
   - Zulrah Veteran
 Master:
   completed:
-    Arooo No More: null
-    Cerberus Master: null
-    Corrupted Gauntlet Master: null
-    Gauntlet Master: null
-    One Hundred Tentacles: null
-    Perfect Corrupted Hunllef: null
-    Perfect Crystalline Hunllef: null
+  - Arooo No More |
+  - Cerberus Master |
+  - Corrupted Gauntlet Master |
+  - Gauntlet Master |
+  - One Hundred Tentacles |
+  - Perfect Corrupted Hunllef |
+  - Perfect Crystalline Hunllef |
   not_completed:
   - ... 'til Dawn
   - A Not So Special Lizard
@@ -523,8 +524,8 @@ Master:
   - Zulrah Speed-Chaser
 Grandmaster:
   completed:
-    Corrupted Gauntlet Grandmaster: null
-    Wolf Puncher II: null
+  - Corrupted Gauntlet Grandmaster |
+  - Wolf Puncher II |
   not_completed:
   - A Long Trip
   - Akkhan't Do it
