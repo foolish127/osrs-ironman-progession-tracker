@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 OSRS Ironman Progression Tracker
-Fetches data from official hiscores and collectionlog.net API.
+Fetches data from TempleOSRS API and official hiscores, updates local JSON files.
 """
 
 import json
@@ -14,9 +14,17 @@ from pathlib import Path
 RSN = os.environ.get("RSN", "FoolinSlays")
 DATA_DIR = Path(__file__).parent.parent / "data"
 
+TEMPLE_STATS_URL = "https://templeosrs.com/api/player_stats.php"
+TEMPLE_GAINS_URL = "https://templeosrs.com/api/player_gains.php"
 HISCORES_URL = "https://secure.runescape.com/m=hiscore_oldschool_ironman/index_lite.json"
-CLOG_API_URL = "https://api.collectionlog.net/collectionlog/user"
 
+SKILLS = [
+    "Overall", "Attack", "Defence", "Strength", "Hitpoints", "Ranged",
+    "Prayer", "Magic", "Cooking", "Woodcutting", "Fletching", "Fishing",
+    "Firemaking", "Crafting", "Smithing", "Mining", "Herblore", "Agility",
+    "Thieving", "Slayer", "Farming", "Runecraft", "Hunter", "Construction",
+    "Sailing"
+]
 NUM_SKILLS = 24
 
 XP_TABLE = [
@@ -69,9 +77,12 @@ def main():
     print(f"Timestamp: {now.isoformat()}")
     print("-" * 50)
 
-    # Fetch official hiscores
     print("Fetching from official hiscores...")
     official = fetch_json(HISCORES_URL, {"player": RSN})
+
+    print("Fetching from TempleOSRS...")
+    temple = fetch_json(TEMPLE_STATS_URL, {"player": RSN, "bosses": 1})
+    temple_data = temple.get("data") if temple else None
 
     # Process skills
     skills = {}
@@ -108,102 +119,26 @@ def main():
             }
         })
 
-    # Process bosses and activities
+    # Process bosses
     bosses = {}
-    clog_count_hiscores = 0
-    ca_points = 0
+    clog_count = 0
     if official and "activities" in official:
         for a in official["activities"]:
             name, score = a.get("name"), a.get("score", -1)
             if name == "Collections Logged":
-                clog_count_hiscores = max(0, score)
-            elif name == "Combat Achievements":
-                ca_points = max(0, score)
+                clog_count = max(0, score)
             elif score > 0:
                 bosses[name] = {"kc": score, "rank": a.get("rank", -1)}
 
     if bosses:
         save_json(DATA_DIR / "bosses.json", {"rsn": RSN, "updated": now.isoformat(), "bosses": bosses})
 
-    # Fetch collection log details from collectionlog.net API
-    print("Fetching collection log from collectionlog.net...")
-    clog_data = fetch_json(f"{CLOG_API_URL}/{RSN}")
-    
-    clog_items = []
-    clog_tabs = {}
-    clog_count = clog_count_hiscores
-    total_items = 1615
-    
-    if clog_data and "collectionLog" in clog_data:
-        cl = clog_data["collectionLog"]
-        clog_count = cl.get("uniqueObtained", clog_count_hiscores)
-        total_items = cl.get("uniqueItems", 1615)
-        
-        # Process each tab and page
-        tabs = cl.get("tabs", {})
-        for tab_name, pages in tabs.items():
-            clog_tabs[tab_name] = {}
-            for page_name, page_data in pages.items():
-                items = page_data.get("items", [])
-                clog_tabs[tab_name][page_name] = {
-                    "items": items,
-                    "killCount": page_data.get("killCount", [])
-                }
-                # Track obtained items
-                for item in items:
-                    if item.get("obtained", False):
-                        clog_items.append({
-                            "id": item.get("id"),
-                            "name": item.get("name"),
-                            "quantity": item.get("quantity", 0),
-                            "tab": tab_name,
-                            "page": page_name
-                        })
-        
-        print(f"Collection log: {clog_count}/{total_items} items obtained from collectionlog.net")
-    else:
-        print(f"Could not fetch from collectionlog.net - you may need to:")
-        print(f"  1. Install the 'Collection Log' RuneLite plugin")
-        print(f"  2. Open your collection log in-game")
-        print(f"  3. The plugin will upload your data automatically")
-        print(f"Using hiscores count only: {clog_count_hiscores}")
-
+    # Save collection log count (details come from WikiSync in browser)
     save_json(DATA_DIR / "collection_log.json", {
-        "rsn": RSN,
-        "updated": now.isoformat(),
-        "collection_log": {
-            "unique_obtained": clog_count,
-            "unique_total": total_items,
-            "obtained_items": clog_items,
-            "tabs": clog_tabs
-        }
+        "rsn": RSN, "updated": now.isoformat(),
+        "collection_log": {"unique_obtained": clog_count, "unique_total": 1615}
     })
-
-    # Save combat achievements data
-    # CA tier definitions
-    CA_TIERS = {
-        "Easy": {"points": 1, "total": 46},
-        "Medium": {"points": 2, "total": 94},
-        "Hard": {"points": 3, "total": 152},
-        "Elite": {"points": 4, "total": 132},
-        "Master": {"points": 5, "total": 141},
-        "Grandmaster": {"points": 6, "total": 48}
-    }
-    
-    total_possible_points = sum(t["points"] * t["total"] for t in CA_TIERS.values())  # 2253
-    total_tasks = sum(t["total"] for t in CA_TIERS.values())  # 613
-    
-    save_json(DATA_DIR / "combat_achievements.json", {
-        "rsn": RSN,
-        "updated": now.isoformat(),
-        "combat_achievements": {
-            "points": ca_points,
-            "total_possible_points": total_possible_points,
-            "total_tasks": total_tasks,
-            "tiers": CA_TIERS
-        }
-    })
-    print(f"Combat achievements: {ca_points}/{total_possible_points} points")
+    print(f"Collection log count: {clog_count}")
 
     print("-" * 50)
     print("Update complete!")
