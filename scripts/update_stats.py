@@ -17,7 +17,9 @@ DATA_DIR = Path(__file__).parent.parent / "data"
 
 # API URLs
 TEMPLE_STATS_URL = "https://templeosrs.com/api/player_stats.php"
-TEMPLE_COLLECTION_URL = "https://templeosrs.com/api/collection-log/player_collection_log.php"
+TEMPLE_PLAYER_CLOG_URL = "https://templeosrs.com/api/collection-log/player_collection_log.php"
+TEMPLE_CLOG_CATEGORIES_URL = "https://templeosrs.com/api/collection-log/categories.php"
+TEMPLE_CLOG_ITEMS_URL = "https://templeosrs.com/api/collection-log/items.php"
 TEMPLE_GAINS_URL = "https://templeosrs.com/api/player_gains.php"
 HISCORES_URL = "https://secure.runescape.com/m=hiscore_oldschool_ironman/index_lite.json"
 
@@ -74,16 +76,25 @@ def fetch_temple_stats(rsn: str) -> dict | None:
     return None
 
 
-def fetch_temple_collection_log(rsn: str) -> dict | None:
-    """Fetch collection log data from TempleOSRS API."""
-    # Use the correct endpoint with categories=all to get summary
-    data = fetch_json(TEMPLE_COLLECTION_URL, {"player": rsn})
-    return data
+def fetch_temple_collection_log(rsn: str) -> tuple[dict | None, dict | None, dict | None]:
+    """
+    Fetch collection log data from TempleOSRS API.
+    Returns: (player_items, all_categories, item_names)
+    """
+    # Fetch player's obtained items with all categories
+    player_data = fetch_json(TEMPLE_PLAYER_CLOG_URL, {"player": rsn, "categories": "all"})
+    
+    # Fetch the master list of all categories and their items
+    categories_data = fetch_json(TEMPLE_CLOG_CATEGORIES_URL)
+    
+    # Fetch item ID to name mapping
+    items_data = fetch_json(TEMPLE_CLOG_ITEMS_URL)
+    
+    return player_data, categories_data, items_data
 
 
 def fetch_temple_gains(rsn: str, days: int = 30) -> dict | None:
     """Fetch recent gains from TempleOSRS API."""
-    # time parameter is in seconds
     data = fetch_json(TEMPLE_GAINS_URL, {"player": rsn, "time": days * 86400, "bosses": 1})
     if data and "data" in data:
         return data["data"]
@@ -116,7 +127,6 @@ def update_skills_data(temple_data: dict, official_data: dict) -> dict:
     """Merge and format skills data from both sources."""
     skills = {}
     
-    # Prefer official hiscores for accuracy, fall back to Temple
     if official_data and "skills" in official_data:
         for skill_data in official_data["skills"]:
             name = skill_data.get("name", "Unknown")
@@ -126,7 +136,6 @@ def update_skills_data(temple_data: dict, official_data: dict) -> dict:
                 "rank": skill_data.get("rank", -1)
             }
     
-    # Add EHP data from Temple if available
     if temple_data:
         for skill in SKILLS:
             skill_key = skill.lower().replace(" ", "_")
@@ -144,7 +153,6 @@ def update_bosses_data(temple_data: dict, official_data: dict) -> dict:
     """Merge and format boss KC data from both sources."""
     bosses = {}
     
-    # Get from official hiscores
     if official_data and "activities" in official_data:
         for activity in official_data["activities"]:
             name = activity.get("name", "Unknown")
@@ -155,7 +163,6 @@ def update_bosses_data(temple_data: dict, official_data: dict) -> dict:
                     "rank": activity.get("rank", -1)
                 }
     
-    # Add EHB data from Temple
     if temple_data:
         for boss in BOSSES:
             boss_key = boss.lower().replace(" ", "_").replace("'", "").replace(":", "")
@@ -169,39 +176,90 @@ def update_bosses_data(temple_data: dict, official_data: dict) -> dict:
     return bosses
 
 
-def update_collection_log(temple_clog: dict) -> dict:
-    """Format collection log data from TempleOSRS API response."""
-    if not temple_clog:
-        return {}
-    
-    # The API returns data in different formats, handle both
-    if "data" in temple_clog:
-        clog_data = temple_clog["data"]
-    else:
-        clog_data = temple_clog
-    
-    # Try to extract the summary info
+def process_collection_log(player_data: dict, categories_data: dict, items_data: dict) -> dict:
+    """
+    Process collection log data into a structured format.
+    """
     result = {
-        "unique_obtained": clog_data.get("Unique Obtained") or clog_data.get("unique_obtained") or clog_data.get("obtained", 0),
-        "unique_items": clog_data.get("Unique") or clog_data.get("unique_items") or clog_data.get("total", 0),
-        "rank": clog_data.get("Rank") or clog_data.get("rank", -1),
+        "obtained_items": [],  # List of item IDs the player has
+        "categories": {},      # Category -> list of items with obtained status
+        "item_names": {},      # Item ID -> name mapping
+        "summary": {
+            "unique_obtained": 0,
+            "unique_total": 0,
+            "rank": -1
+        }
     }
     
-    # If we got item-level data, count them
-    if "items" in clog_data:
-        result["unique_obtained"] = len(clog_data["items"])
+    # Store item names mapping
+    if items_data and "data" in items_data:
+        result["item_names"] = {str(k): v for k, v in items_data["data"].items()}
+    elif items_data:
+        result["item_names"] = {str(k): v for k, v in items_data.items()}
+    
+    # Get player's obtained items
+    obtained_set = set()
+    if player_data and "data" in player_data:
+        pdata = player_data["data"]
+        # The API returns items as a dict with item_id: count or as a list
+        if isinstance(pdata, dict):
+            for key, value in pdata.items():
+                if key.isdigit():
+                    obtained_set.add(str(key))
+                elif key == "items" and isinstance(value, (list, dict)):
+                    if isinstance(value, list):
+                        obtained_set.update(str(i) for i in value)
+                    else:
+                        obtained_set.update(str(k) for k in value.keys())
+        elif isinstance(pdata, list):
+            obtained_set.update(str(i) for i in pdata)
+    elif player_data:
+        # Try direct access if no "data" wrapper
+        if isinstance(player_data, dict):
+            for key, value in player_data.items():
+                if key.isdigit():
+                    obtained_set.add(str(key))
+    
+    result["obtained_items"] = list(obtained_set)
+    
+    # Process categories
+    total_items = 0
+    if categories_data and "data" in categories_data:
+        cats = categories_data["data"]
+    elif categories_data:
+        cats = categories_data
+    else:
+        cats = {}
+    
+    for cat_name, cat_items in cats.items():
+        if not isinstance(cat_items, list):
+            continue
+        
+        cat_item_list = []
+        for item_id in cat_items:
+            item_id_str = str(item_id)
+            item_name = result["item_names"].get(item_id_str, f"Item {item_id}")
+            cat_item_list.append({
+                "id": item_id_str,
+                "name": item_name,
+                "obtained": item_id_str in obtained_set
+            })
+            total_items += 1
+        
+        result["categories"][cat_name] = cat_item_list
+    
+    result["summary"]["unique_obtained"] = len(obtained_set)
+    result["summary"]["unique_total"] = total_items if total_items > 0 else len(result["item_names"])
     
     return result
 
 
 def calculate_milestones(skills: dict) -> dict:
     """Calculate various account milestones."""
-    # Use Overall skill's level directly instead of summing
     overall_skill = skills.get("Overall", {})
     total_level = overall_skill.get("level", 0)
     total_xp = overall_skill.get("xp", 0)
     
-    # If Overall isn't available, calculate from individual skills
     if total_level == 0:
         total_level = sum(
             s.get("level", 1) 
@@ -214,14 +272,12 @@ def calculate_milestones(skills: dict) -> dict:
             if name != "Overall" and s.get("xp")
         )
     
-    # Count skills at various thresholds (excluding Overall)
     individual_skills = {k: v for k, v in skills.items() if k != "Overall"}
     skills_99 = sum(1 for s in individual_skills.values() if s.get("level", 0) >= 99)
     skills_90 = sum(1 for s in individual_skills.values() if s.get("level", 0) >= 90)
     skills_80 = sum(1 for s in individual_skills.values() if s.get("level", 0) >= 80)
     skills_70 = sum(1 for s in individual_skills.values() if s.get("level", 0) >= 70)
     
-    # Combat level calculation
     attack = skills.get("Attack", {}).get("level", 1)
     strength = skills.get("Strength", {}).get("level", 1)
     defence = skills.get("Defence", {}).get("level", 1)
@@ -258,7 +314,7 @@ def main():
     # Fetch from all sources
     print("Fetching from TempleOSRS...")
     temple_stats = fetch_temple_stats(RSN)
-    temple_clog = fetch_temple_collection_log(RSN)
+    player_clog, clog_categories, clog_items = fetch_temple_collection_log(RSN)
     temple_gains = fetch_temple_gains(RSN)
     
     print("Fetching from official hiscores...")
@@ -283,18 +339,22 @@ def main():
             "bosses": bosses
         })
     
-    # Save collection log
-    clog = update_collection_log(temple_clog)
-    if clog:
+    # Process and save collection log
+    clog = process_collection_log(player_clog, clog_categories, clog_items)
+    if clog["summary"]["unique_obtained"] > 0 or clog["categories"]:
         save_json(DATA_DIR / "collection_log.json", {
             "rsn": RSN,
             "updated": now.isoformat(),
-            "collection_log": clog
+            "collection_log": clog["summary"],
+            "obtained_items": clog["obtained_items"],
+            "categories": clog["categories"],
+            "item_names": clog["item_names"]
         })
+        print(f"Collection log: {clog['summary']['unique_obtained']} / {clog['summary']['unique_total']} items")
     else:
         print("Note: Collection log data not available. Make sure you've synced via the TempleOSRS RuneLite plugin.")
     
-    # Save recent gains for tracking progress
+    # Save recent gains
     if temple_gains:
         save_json(DATA_DIR / "recent_gains.json", {
             "rsn": RSN,
