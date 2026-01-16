@@ -31,15 +31,16 @@ jobs:
           RSN: ${{ vars.RSN || 'FoolinSlays' }}
         run: python scripts/update_stats.py
       
-      - name: Generate README
-        env:
-          RSN: ${{ vars.RSN || 'FoolinSlays' }}
-        run: python scripts/generate_readme.py
+      - name: Copy data to docs for GitHub Pages
+        run: |
+          mkdir -p docs/data
+          cp data/*.json docs/data/
+          cp data/goals.yaml docs/data/
       
       - name: Commit and push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add data/ README.md
+          git add data/ docs/
           git diff --staged --quiet || git commit -m "📊 Auto-update stats - $(date -u '+%Y-%m-%d %H:%M UTC')"
           git push

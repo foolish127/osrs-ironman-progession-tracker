@@ -1,78 +1,26 @@
-# 🎮 FoolinSlays - Ironman Progression Tracker
+# FoolinSlays - OSRS Ironman Tracker
 
-![Last Updated](https://img.shields.io/badge/Last%20Updated-Never-blue)
-![Account Type](https://img.shields.io/badge/Account-Ironman-gray)
+Automated tracking of my OSRS Ironman progress.
 
-Automated tracking of my OSRS Ironman progress using data from [TempleOSRS](https://templeosrs.com/player/overview.php?player=FoolinSlays) and the official hiscores.
+## 🌐 [View Dashboard](https://YOUR_USERNAME.github.io/osrs-ironman-tracker/)
 
----
+> Replace `YOUR_USERNAME` with your GitHub username after enabling GitHub Pages.
 
-## 🎯 Goals
+## Setup
 
-### Short-Term Goals
-- ⬜ Get 85 Slayer for Abyssal Demons
-- ⬜ Complete Song of the Elves
-- ⬜ Get full Void Knight equipment
-- ⬜ Unlock Prifddinas
+1. **Enable GitHub Pages**: Go to Settings → Pages → Source → Deploy from branch → `main` → `/docs`
+2. **Trigger first update**: Go to Actions → "Update OSRS Stats" → Run workflow
 
-### Long-Term Goals
-- ⬜ Get 77 Prayer for Rigour/Augury
-- ⬜ Max combat stats (99 Att/Str/Def/Range/Mage) (0/5 maxed)
-- ⬜ Complete Chambers of Xeric (0 KC)
-- ⬜ Complete Theatre of Blood (0 KC)
-- ⬜ Complete Tombs of Amascut (0 KC)
-- ⬜ Get Infernal Cape
-- ⬜ Complete all Combat Achievement tiers (Easy tier)
-- ⬜ Max total level (2277) (0/2277)
-- ⬜ Complete Collection Log (all uniques) (0%)
+## Data Sources
 
+- **Skills & Boss KC**: Official OSRS Hiscores + TempleOSRS API
+- **Collection Log**: TempleOSRS (requires RuneLite plugin)
+- **Goals**: Manual editing of `data/goals.yaml`
 
+## Customization
+
+Edit `data/goals.yaml` to update your goals. The workflow runs automatically every 6 hours.
 
 ---
 
-## 📊 Skills
-
-### Summary
-| Stat | Value |
-|------|-------|
-| Total Level | **N/A** |
-| Total XP | **0** |
-| Combat Level | **N/A** |
-| 99s | **0/23** |
-| 90+ Skills | **0/23** |
-
-### All Skills
-| Skill | Level | XP | Rank |
-|-------|-------|-----|------|
-
-
----
-
-## ⚔️ Boss Kills
-
-*No boss kills recorded yet.*
-
-
----
-
-## 📚 Collection Log
-
-| Metric | Progress |
-|--------|----------|
-| Total Slots | **0** / 0 (0.0%) |
-| Unique Items | **0** / 0 (0.0%) |
-| Rank | **#-1** |
-
-
-
----
-
-## 🔗 Links
-
-- [TempleOSRS Profile](https://templeosrs.com/player/overview.php?player=FoolinSlays)
-- [Official Hiscores](https://secure.runescape.com/m=hiscore_oldschool_ironman/hiscorepersonal?user1=FoolinSlays)
-
----
-
-<sub>Last automated update: Never</sub>
-<sub>Data sourced from TempleOSRS API and official OSRS Hiscores</sub>
+*Powered by TempleOSRS API and GitHub Actions*
