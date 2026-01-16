@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
 OSRS Ironman Progression Tracker
-Fetches data from official hiscores and reads manual YAML tracking files.
+Fetches data from official hiscores and reads manual YAML tracking files with date support.
 """
 
 import json
 import os
+import re
 import urllib.request
 import urllib.parse
 from datetime import datetime, timezone
@@ -62,39 +63,81 @@ def save_json(path, data):
         json.dump(data, f, indent=2)
     print(f"Saved: {path}")
 
-def parse_yaml_simple(content):
-    """Simple YAML parser for our specific format"""
+def parse_yaml_with_dates(content):
+    """Parse YAML with date support for obtained items"""
     result = {}
     current_key = None
     current_subkey = None
     
     for line in content.split('\n'):
-        # Skip comments and empty lines
         if not line or line.startswith('#'):
             continue
         
-        # Count leading spaces
-        stripped = line.lstrip()
-        indent = len(line) - len(stripped)
+        # Remove inline comments
+        if '#' in line:
+            line = line[:line.index('#')]
+        
+        stripped = line.rstrip()
+        if not stripped:
+            continue
+            
+        indent = len(line) - len(line.lstrip())
+        stripped = stripped.strip()
         
         if indent == 0 and stripped.endswith(':'):
-            # Top-level key (collection/tier name)
             current_key = stripped[:-1]
-            result[current_key] = {}
+            result[current_key] = {'obtained': {}, 'missing': []}
             current_subkey = None
         elif indent == 2 and stripped.endswith(':'):
-            # Sub-key (obtained/missing or completed/not_completed)
             current_subkey = stripped[:-1]
-            result[current_key][current_subkey] = []
-        elif stripped.startswith('- ') and current_key and current_subkey:
-            # List item
-            item = stripped[2:]
-            result[current_key][current_subkey].append(item)
-        elif stripped == '[]' and current_key and current_subkey:
-            # Empty list
-            result[current_key][current_subkey] = []
+        elif current_key and current_subkey:
+            if stripped.startswith('- '):
+                # Missing item (list format)
+                item = stripped[2:].strip()
+                if current_subkey == 'missing' or current_subkey == 'not_completed':
+                    result[current_key].setdefault('missing', []).append(item)
+                    if 'not_completed' not in result[current_key]:
+                        result[current_key]['not_completed'] = result[current_key]['missing']
+            elif ':' in stripped:
+                # Obtained item with date (key: value format)
+                parts = stripped.split(':', 1)
+                item = parts[0].strip()
+                date_str = parts[1].strip() if len(parts) > 1 else 'null'
+                date = None if date_str == 'null' else date_str
+                
+                if current_subkey == 'obtained' or current_subkey == 'completed':
+                    result[current_key].setdefault('obtained', {})[item] = date
+                    if current_subkey == 'completed':
+                        result[current_key]['completed'] = result[current_key]['obtained']
     
     return result
+
+def parse_pets_yaml(content):
+    """Parse pets YAML (simple key: value format)"""
+    pets = {'obtained': {}, 'missing': []}
+    
+    for line in content.split('\n'):
+        if not line or line.startswith('#') or line.startswith('='):
+            continue
+        
+        # Remove inline comments
+        if '#' in line:
+            line = line[:line.index('#')]
+        
+        stripped = line.strip()
+        if not stripped or ':' not in stripped:
+            continue
+        
+        parts = stripped.split(':', 1)
+        pet = parts[0].strip()
+        date_str = parts[1].strip() if len(parts) > 1 else 'null'
+        
+        if date_str == 'null':
+            pets['missing'].append(pet)
+        else:
+            pets['obtained'][pet] = date_str
+    
+    return pets
 
 def load_collection_log():
     """Load collection log from YAML file"""
@@ -106,20 +149,19 @@ def load_collection_log():
     with open(yaml_path, 'r') as f:
         content = f.read()
     
-    data = parse_yaml_simple(content)
+    data = parse_yaml_with_dates(content)
     
-    # Convert to structured format
     collections = {}
     total_obtained = 0
     total_items = 0
     
     for collection_name, items in data.items():
-        obtained = items.get('obtained', [])
+        obtained = items.get('obtained', {})
         missing = items.get('missing', [])
         
         collections[collection_name] = {
-            'obtained': obtained,
-            'missing': missing,
+            'obtained': obtained,  # dict with dates
+            'missing': missing,    # list
             'obtained_count': len(obtained),
             'total_count': len(obtained) + len(missing)
         }
@@ -143,9 +185,8 @@ def load_combat_achievements():
     with open(yaml_path, 'r') as f:
         content = f.read()
     
-    data = parse_yaml_simple(content)
+    data = parse_yaml_with_dates(content)
     
-    # Tier point values
     tier_points = {
         'Easy': 1, 'Medium': 2, 'Hard': 3,
         'Elite': 4, 'Master': 5, 'Grandmaster': 6
@@ -159,14 +200,14 @@ def load_combat_achievements():
     for tier_name in ['Easy', 'Medium', 'Hard', 'Elite', 'Master', 'Grandmaster']:
         if tier_name not in data:
             continue
-            
-        completed = data[tier_name].get('completed', [])
-        not_completed = data[tier_name].get('not_completed', [])
+        
+        completed = data[tier_name].get('obtained', data[tier_name].get('completed', {}))
+        not_completed = data[tier_name].get('missing', data[tier_name].get('not_completed', []))
         points = tier_points.get(tier_name, 1)
         
         tiers[tier_name] = {
-            'completed': completed,
-            'not_completed': not_completed,
+            'completed': completed,  # dict with dates
+            'not_completed': not_completed,  # list
             'completed_count': len(completed),
             'total_count': len(completed) + len(not_completed),
             'points_per_task': points,
@@ -184,6 +225,18 @@ def load_combat_achievements():
         'total_points': total_points,
         'max_points': sum(t['total_count'] * t['points_per_task'] for t in tiers.values())
     }
+
+def load_pets():
+    """Load pets from YAML file"""
+    yaml_path = DATA_DIR / "pets.yaml"
+    if not yaml_path.exists():
+        print(f"Pets YAML not found: {yaml_path}")
+        return None
+    
+    with open(yaml_path, 'r') as f:
+        content = f.read()
+    
+    return parse_pets_yaml(content)
 
 def main():
     now = datetime.now(timezone.utc)
@@ -241,31 +294,32 @@ def main():
     if bosses:
         save_json(DATA_DIR / "bosses.json", {"rsn": RSN, "updated": now.isoformat(), "bosses": bosses})
 
-    # Load and save collection log from YAML
+    # Load and save collection log
     print("Loading collection log from YAML...")
     clog = load_collection_log()
     if clog:
         save_json(DATA_DIR / "collection_log.json", {
-            "rsn": RSN,
-            "updated": now.isoformat(),
-            "collection_log": clog
+            "rsn": RSN, "updated": now.isoformat(), "collection_log": clog
         })
         print(f"Collection log: {clog['total_obtained']}/{clog['total_items']} items")
-    else:
-        print("No collection log data found")
 
-    # Load and save combat achievements from YAML
+    # Load and save combat achievements
     print("Loading combat achievements from YAML...")
     ca = load_combat_achievements()
     if ca:
         save_json(DATA_DIR / "combat_achievements.json", {
-            "rsn": RSN,
-            "updated": now.isoformat(),
-            "combat_achievements": ca
+            "rsn": RSN, "updated": now.isoformat(), "combat_achievements": ca
         })
-        print(f"Combat achievements: {ca['total_completed']}/{ca['total_tasks']} tasks ({ca['total_points']}/{ca['max_points']} points)")
-    else:
-        print("No combat achievements data found")
+        print(f"Combat achievements: {ca['total_completed']}/{ca['total_tasks']} tasks")
+
+    # Load and save pets
+    print("Loading pets from YAML...")
+    pets = load_pets()
+    if pets:
+        save_json(DATA_DIR / "pets.json", {
+            "rsn": RSN, "updated": now.isoformat(), "pets": pets
+        })
+        print(f"Pets: {len(pets['obtained'])}/{len(pets['obtained']) + len(pets['missing'])} obtained")
 
     print("-" * 50)
     print("Update complete!")

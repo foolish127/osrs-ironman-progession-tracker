@@ -30,15 +30,16 @@
         header::after { content: ''; position: absolute; bottom: -1px; left: 50%; transform: translateX(-50%); width: 200px; height: 2px; background: linear-gradient(90deg, transparent, var(--accent-gold), transparent); }
         .player-name { font-family: 'Cinzel', serif; font-size: 3rem; font-weight: 700; color: var(--accent-gold); letter-spacing: 0.05em; margin-bottom: 0.5rem; }
         .account-type { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'Fira Code', monospace; font-size: 0.875rem; color: var(--text-secondary); padding: 0.25rem 1rem; border: 1px solid var(--border); border-radius: 4px; background: var(--bg-card); }
-        .account-type .iron-icon { width: 16px; height: 16px; }
+        .iron-icon { width: 16px; height: 16px; }
         .last-updated { margin-top: 1rem; font-size: 0.8rem; color: var(--text-secondary); background: var(--bg-card); display: inline-block; padding: 0.25rem 0.75rem; border-radius: 4px; }
-        .stats-overview { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 3rem; }
+        .stats-overview { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-bottom: 3rem; }
         .stat-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem; text-align: center; }
         .stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.5rem; }
-        .stat-value { font-family: 'Fira Code', monospace; font-size: 1.5rem; font-weight: 500; }
+        .stat-value { font-family: 'Fira Code', monospace; font-size: 1.4rem; font-weight: 500; }
         .stat-value.gold { color: var(--accent-gold); }
         .stat-value.green { color: var(--accent-green); }
         .stat-value.blue { color: var(--accent-blue); }
+        .stat-value.purple { color: var(--accent-purple); }
         .nav-tabs { display: flex; gap: 0; margin-bottom: 2rem; border-bottom: 1px solid var(--border); overflow-x: auto; }
         .nav-tab { padding: 1rem 1.5rem; font-size: 0.875rem; font-weight: 500; color: var(--text-secondary); background: transparent; border: none; cursor: pointer; position: relative; white-space: nowrap; }
         .nav-tab:hover { color: var(--text-primary); }
@@ -86,11 +87,12 @@
         .collection-count .total { color: var(--text-muted); }
         .collection-items { display: none; padding: 0.75rem 1rem; border-top: 1px solid var(--border); background: var(--bg-dark); }
         .collection.expanded .collection-items { display: block; }
-        .item-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.25rem; }
+        .item-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.25rem; }
         .item { font-size: 0.8rem; padding: 0.35rem 0.5rem; border-radius: 3px; display: flex; align-items: center; gap: 0.5rem; }
         .item.obtained { color: var(--accent-green); }
         .item.missing { color: var(--text-muted); }
-        .item-check { width: 16px; font-size: 0.75rem; }
+        .item-check { width: 16px; font-size: 0.75rem; flex-shrink: 0; }
+        .item-date { font-family: 'Fira Code', monospace; font-size: 0.7rem; color: var(--text-muted); margin-left: auto; }
         .ca-tier { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
         .ca-tier-header { padding: 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
         .ca-tier-header:hover { background: var(--bg-card-hover); }
@@ -106,18 +108,28 @@
         .ca-tier-progress-fill { height: 100%; border-radius: 3px; }
         .ca-tier-tasks { display: none; padding: 0.75rem 1rem; border-top: 1px solid var(--border); background: var(--bg-dark); }
         .ca-tier.expanded .ca-tier-tasks { display: block; }
+        .pets-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.75rem; }
+        .pet-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; text-align: center; }
+        .pet-card.obtained { border-color: var(--accent-green); background: rgba(63, 185, 80, 0.1); }
+        .pet-card.missing { opacity: 0.5; }
+        .pet-name { font-weight: 500; font-size: 0.9rem; margin-bottom: 0.25rem; }
+        .pet-date { font-family: 'Fira Code', monospace; font-size: 0.75rem; color: var(--accent-green); }
+        .pet-status { font-size: 0.75rem; color: var(--text-muted); }
         .goals-section { margin-bottom: 2rem; }
         .goals-title { font-size: 1.1rem; font-weight: 500; margin-bottom: 1rem; color: var(--text-secondary); }
         .goal-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 0.75rem 1rem; margin-bottom: 0.5rem; }
         .empty-state { text-align: center; padding: 3rem; color: var(--text-muted); }
+        .edit-link { display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--accent-gold); text-decoration: none; font-size: 0.85rem; }
+        .edit-link:hover { border-color: var(--accent-gold); }
         footer { text-align: center; padding: 2rem 0; margin-top: 3rem; border-top: 1px solid var(--border); }
-        footer a { color: var(--text-secondary); text-decoration: none; margin: 0 0.75rem; font-size: 0.85rem; padding: 0.5rem 1rem; border: 1px solid var(--border); border-radius: 4px; transition: all 0.2s; }
+        footer a { color: var(--text-secondary); text-decoration: none; margin: 0 0.5rem; font-size: 0.85rem; padding: 0.5rem 1rem; border: 1px solid var(--border); border-radius: 4px; transition: all 0.2s; display: inline-block; margin-bottom: 0.5rem; }
         footer a:hover { color: var(--text-primary); border-color: var(--text-muted); }
         @media (max-width: 768px) {
             .skills-grid { grid-template-columns: repeat(2, 1fr); }
             .container { padding: 1rem; }
             .player-name { font-size: 2rem; }
             .search-filter { flex-direction: column; }
+            .stats-overview { grid-template-columns: repeat(3, 1fr); }
         }
     </style>
 </head>
@@ -135,10 +147,11 @@
         <div class="stats-overview">
             <div class="stat-card"><div class="stat-label">Total Level</div><div class="stat-value gold" id="totalLevel">—</div></div>
             <div class="stat-card"><div class="stat-label">Total XP</div><div class="stat-value" id="totalXp">—</div></div>
-            <div class="stat-card"><div class="stat-label">Combat Level</div><div class="stat-value blue" id="combatLevel">—</div></div>
+            <div class="stat-card"><div class="stat-label">Combat</div><div class="stat-value blue" id="combatLevel">—</div></div>
             <div class="stat-card"><div class="stat-label">99s</div><div class="stat-value green" id="count99s">—</div></div>
-            <div class="stat-card"><div class="stat-label">Collection Log</div><div class="stat-value green" id="clogCount">—</div></div>
+            <div class="stat-card"><div class="stat-label">Coll. Log</div><div class="stat-value green" id="clogCount">—</div></div>
             <div class="stat-card"><div class="stat-label">CA Tasks</div><div class="stat-value" id="caTasks">—</div></div>
+            <div class="stat-card"><div class="stat-label">Pets</div><div class="stat-value purple" id="petCount">—</div></div>
         </div>
 
         <nav class="nav-tabs">
@@ -146,34 +159,22 @@
             <button class="nav-tab" data-tab="bosses">Bosses</button>
             <button class="nav-tab" data-tab="clog">Collection Log</button>
             <button class="nav-tab" data-tab="ca">Combat Achievements</button>
+            <button class="nav-tab" data-tab="pets">Pets</button>
             <button class="nav-tab" data-tab="goals">Goals</button>
         </nav>
 
-        <div id="skills" class="tab-content active">
-            <div class="skills-grid" id="skillsGrid">Loading...</div>
-        </div>
-
-        <div id="bosses" class="tab-content">
-            <div class="boss-grid" id="bossGrid">Loading...</div>
-        </div>
-
-        <div id="clog" class="tab-content">
-            <div id="clogContainer">Loading...</div>
-        </div>
-
-        <div id="ca" class="tab-content">
-            <div id="caContainer">Loading...</div>
-        </div>
-
-        <div id="goals" class="tab-content">
-            <div id="goalsContainer">Loading...</div>
-        </div>
+        <div id="skills" class="tab-content active"><div class="skills-grid" id="skillsGrid">Loading...</div></div>
+        <div id="bosses" class="tab-content"><div class="boss-grid" id="bossGrid">Loading...</div></div>
+        <div id="clog" class="tab-content"><div id="clogContainer">Loading...</div></div>
+        <div id="ca" class="tab-content"><div id="caContainer">Loading...</div></div>
+        <div id="pets" class="tab-content"><div id="petsContainer">Loading...</div></div>
+        <div id="goals" class="tab-content"><div id="goalsContainer">Loading...</div></div>
 
         <footer>
+            <a href="editor.html">📝 Edit Progress</a>
             <a href="https://templeosrs.com/player/overview.php?player=FoolinSlays" target="_blank">TempleOSRS</a>
             <a href="https://secure.runescape.com/m=hiscore_oldschool_ironman/hiscorepersonal?user1=FoolinSlays" target="_blank">Official Hiscores</a>
             <a href="https://oldschool.runescape.wiki/w/Collection_log" target="_blank">Wiki Collection Log</a>
-            <a href="https://oldschool.runescape.wiki/w/Combat_Achievements" target="_blank">Wiki Combat Achievements</a>
         </footer>
     </div>
 
@@ -195,15 +196,20 @@
             return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' });
         }
 
-        let clogData = null;
-        let caData = null;
+        function formatShortDate(dateStr) {
+            if (!dateStr || dateStr === 'null') return '';
+            return dateStr; // Already in YYYY-MM-DD format
+        }
+
+        let clogData = null, caData = null, petsData = null;
 
         async function loadData() {
-            const [skillsRes, bossesRes, clogRes, caRes, goalsRes] = await Promise.all([
+            const [skillsRes, bossesRes, clogRes, caRes, petsRes, goalsRes] = await Promise.all([
                 fetch('./data/skills.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/bosses.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/collection_log.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/combat_achievements.json').then(r=>r.json()).catch(()=>null),
+                fetch('./data/pets.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/goals.yaml').then(r=>r.text()).catch(()=>null)
             ]);
 
@@ -230,10 +236,17 @@
                 document.getElementById('caTasks').textContent = `${caData.total_completed}/${caData.total_tasks}`;
             }
 
+            if (petsRes?.pets) {
+                petsData = petsRes.pets;
+                const total = Object.keys(petsData.obtained).length + petsData.missing.length;
+                document.getElementById('petCount').textContent = `${Object.keys(petsData.obtained).length}/${total}`;
+            }
+
             if (skillsRes?.skills) renderSkills(skillsRes.skills);
             if (bossesRes?.bosses) renderBosses(bossesRes.bosses);
             renderCollectionLog();
             renderCombatAchievements();
+            renderPets();
             if (goalsRes) renderGoals(goalsRes);
         }
 
@@ -265,10 +278,7 @@
 
         function renderCollectionLog(searchTerm = '', statusFilter = 'all') {
             const container = document.getElementById('clogContainer');
-            if (!clogData) {
-                container.innerHTML = '<div class="empty-state">Collection log data not available</div>';
-                return;
-            }
+            if (!clogData) { container.innerHTML = '<div class="empty-state">Collection log data not available</div>'; return; }
 
             const pct = ((clogData.total_obtained / clogData.total_items) * 100).toFixed(1);
             
@@ -292,10 +302,8 @@
                 <div id="clogList"></div>`;
             
             container.innerHTML = html;
-            
             document.getElementById('clogSearch').addEventListener('input', e => renderCollectionLog(e.target.value, document.getElementById('clogFilter').value));
             document.getElementById('clogFilter').addEventListener('change', e => renderCollectionLog(document.getElementById('clogSearch').value, e.target.value));
-            
             renderClogList(searchTerm, statusFilter);
         }
 
@@ -305,41 +313,33 @@
             let html = '';
 
             for (const [collName, coll] of Object.entries(clogData.collections).sort((a,b) => a[0].localeCompare(b[0]))) {
-                let obtained = coll.obtained || [];
-                let missing = coll.missing || [];
+                let obtained = Object.entries(coll.obtained || {}).map(([name, date]) => ({ name, date, obtained: true }));
+                let missing = (coll.missing || []).map(name => ({ name, date: null, obtained: false }));
                 
-                // Apply search filter
                 if (search) {
                     if (!collName.toLowerCase().includes(search)) {
-                        obtained = obtained.filter(i => i.toLowerCase().includes(search));
-                        missing = missing.filter(i => i.toLowerCase().includes(search));
+                        obtained = obtained.filter(i => i.name.toLowerCase().includes(search));
+                        missing = missing.filter(i => i.name.toLowerCase().includes(search));
                     }
                 }
                 
-                // Apply status filter
                 let items = [];
-                if (statusFilter === 'all' || statusFilter === 'obtained') {
-                    items = items.concat(obtained.map(i => ({ name: i, obtained: true })));
-                }
-                if (statusFilter === 'all' || statusFilter === 'missing') {
-                    items = items.concat(missing.map(i => ({ name: i, obtained: false })));
-                }
+                if (statusFilter === 'all' || statusFilter === 'obtained') items = items.concat(obtained);
+                if (statusFilter === 'all' || statusFilter === 'missing') items = items.concat(missing);
                 
                 if (items.length === 0) continue;
-                
-                const obtCount = items.filter(i => i.obtained).length;
-                const totalCount = (statusFilter === 'all') ? coll.obtained.length + coll.missing.length : items.length;
                 
                 html += `<div class="collection">
                     <div class="collection-header" onclick="this.parentElement.classList.toggle('expanded')">
                         <span class="collection-name">${collName}</span>
-                        <span class="collection-count"><span class="obtained">${coll.obtained.length}</span> <span class="total">/ ${coll.obtained.length + coll.missing.length}</span></span>
+                        <span class="collection-count"><span class="obtained">${Object.keys(coll.obtained || {}).length}</span> <span class="total">/ ${Object.keys(coll.obtained || {}).length + (coll.missing || []).length}</span></span>
                     </div>
                     <div class="collection-items">
                         <div class="item-list">
                             ${items.map(i => `<div class="item ${i.obtained ? 'obtained' : 'missing'}">
                                 <span class="item-check">${i.obtained ? '✓' : '○'}</span>
-                                ${i.name}
+                                <span>${i.name}</span>
+                                ${i.date ? `<span class="item-date">${formatShortDate(i.date)}</span>` : ''}
                             </div>`).join('')}
                         </div>
                     </div>
@@ -351,10 +351,7 @@
 
         function renderCombatAchievements(searchTerm = '', statusFilter = 'all') {
             const container = document.getElementById('caContainer');
-            if (!caData) {
-                container.innerHTML = '<div class="empty-state">Combat achievements data not available</div>';
-                return;
-            }
+            if (!caData) { container.innerHTML = '<div class="empty-state">Combat achievements data not available</div>'; return; }
 
             const pct = ((caData.total_points / caData.max_points) * 100).toFixed(1);
             const tierColors = { Easy: '#3fb950', Medium: '#58a6ff', Hard: '#a371f7', Elite: '#d4a84b', Master: '#f85149', Grandmaster: '#ff7b72' };
@@ -380,21 +377,17 @@
             const search = searchTerm.toLowerCase();
             
             for (const [tierName, tier] of Object.entries(caData.tiers)) {
-                let completed = tier.completed || [];
-                let notCompleted = tier.not_completed || [];
+                let completed = Object.entries(tier.completed || {}).map(([name, date]) => ({ name, date, done: true }));
+                let notCompleted = (tier.not_completed || []).map(name => ({ name, date: null, done: false }));
                 
                 if (search) {
-                    completed = completed.filter(t => t.toLowerCase().includes(search));
-                    notCompleted = notCompleted.filter(t => t.toLowerCase().includes(search));
+                    completed = completed.filter(t => t.name.toLowerCase().includes(search));
+                    notCompleted = notCompleted.filter(t => t.name.toLowerCase().includes(search));
                 }
                 
                 let tasks = [];
-                if (statusFilter === 'all' || statusFilter === 'completed') {
-                    tasks = tasks.concat(completed.map(t => ({ name: t, done: true })));
-                }
-                if (statusFilter === 'all' || statusFilter === 'not_completed') {
-                    tasks = tasks.concat(notCompleted.map(t => ({ name: t, done: false })));
-                }
+                if (statusFilter === 'all' || statusFilter === 'completed') tasks = tasks.concat(completed);
+                if (statusFilter === 'all' || statusFilter === 'not_completed') tasks = tasks.concat(notCompleted);
                 
                 if (tasks.length === 0 && search) continue;
                 
@@ -413,7 +406,8 @@
                         <div class="item-list">
                             ${tasks.map(t => `<div class="item ${t.done ? 'obtained' : 'missing'}">
                                 <span class="item-check">${t.done ? '✓' : '○'}</span>
-                                ${t.name}
+                                <span>${t.name}</span>
+                                ${t.date ? `<span class="item-date">${formatShortDate(t.date)}</span>` : ''}
                             </div>`).join('')}
                         </div>
                     </div>
@@ -421,9 +415,48 @@
             }
             
             container.innerHTML = html;
-            
             document.getElementById('caSearch').addEventListener('input', e => renderCombatAchievements(e.target.value, document.getElementById('caFilter').value));
             document.getElementById('caFilter').addEventListener('change', e => renderCombatAchievements(document.getElementById('caSearch').value, e.target.value));
+        }
+
+        function renderPets() {
+            const container = document.getElementById('petsContainer');
+            if (!petsData) { container.innerHTML = '<div class="empty-state">Pet data not available</div>'; return; }
+
+            const obtained = Object.entries(petsData.obtained || {});
+            const missing = petsData.missing || [];
+            const total = obtained.length + missing.length;
+            const pct = total > 0 ? ((obtained.length / total) * 100).toFixed(1) : 0;
+
+            let html = `
+                <div class="progress-section">
+                    <div class="progress-header">
+                        <span class="progress-title">Pet Collection</span>
+                        <span class="progress-stats"><span class="obtained">${obtained.length}</span> <span class="total">/ ${total}</span></span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" style="width:${pct}%;background:linear-gradient(90deg, #7c3aed, #a371f7)"></div></div>
+                    <div class="progress-percentage">${pct}%</div>
+                </div>
+                <h3 style="color:var(--accent-green);margin-bottom:1rem;">🎉 Obtained Pets</h3>
+                <div class="pets-grid">
+                    ${obtained.sort((a,b) => a[0].localeCompare(b[0])).map(([name, date]) => `
+                        <div class="pet-card obtained">
+                            <div class="pet-name">${name}</div>
+                            <div class="pet-date">${formatShortDate(date) || 'Date unknown'}</div>
+                        </div>
+                    `).join('') || '<div class="empty-state">No pets yet!</div>'}
+                </div>
+                <h3 style="color:var(--text-muted);margin:2rem 0 1rem;">Missing Pets</h3>
+                <div class="pets-grid">
+                    ${missing.sort().map(name => `
+                        <div class="pet-card missing">
+                            <div class="pet-name">${name}</div>
+                            <div class="pet-status">Not obtained</div>
+                        </div>
+                    `).join('')}
+                </div>`;
+
+            container.innerHTML = html;
         }
 
         function renderGoals(yaml) {
