@@ -259,20 +259,30 @@
         }
 
         async function loadData() {
+            console.log('Loading data...');
+            
             // Load local JSON data
             const [skillsRes, bossesRes, clogRes, goalsRes] = await Promise.all([
-                fetch('data/skills.json').then(r=>r.json()).catch(()=>null),
-                fetch('data/bosses.json').then(r=>r.json()).catch(()=>null),
-                fetch('data/collection_log.json').then(r=>r.json()).catch(()=>null),
-                fetch('data/goals.yaml').then(r=>r.text()).catch(()=>null)
+                fetch('./data/skills.json').then(r=>r.json()).catch(e=>{console.error('skills.json error:', e); return null;}),
+                fetch('./data/bosses.json').then(r=>r.json()).catch(e=>{console.error('bosses.json error:', e); return null;}),
+                fetch('./data/collection_log.json').then(r=>r.json()).catch(e=>{console.error('clog.json error:', e); return null;}),
+                fetch('./data/goals.yaml').then(r=>r.text()).catch(e=>{console.error('goals.yaml error:', e); return null;})
             ]);
+            
+            console.log('Local data loaded:', {skillsRes, bossesRes, clogRes, goalsRes});
 
             // Load WikiSync and master data in parallel
-            const [wsData, clogMaster, caMaster] = await Promise.all([
-                fetchWikiSync(),
-                fetchClogMaster(),
-                fetchCAMaster()
-            ]);
+            let wsData = null, clogMaster = null, caMaster = null;
+            try {
+                [wsData, clogMaster, caMaster] = await Promise.all([
+                    fetchWikiSync(),
+                    fetchClogMaster(),
+                    fetchCAMaster()
+                ]);
+                console.log('WikiSync data:', {wsData, clogMaster, caMaster});
+            } catch(e) {
+                console.error('WikiSync fetch error:', e);
+            }
 
             // Update header
             if (skillsRes?.rsn) {
@@ -296,7 +306,8 @@
             // Boss KC total
             if (bossesRes?.bosses) {
                 const total = Object.values(bossesRes.bosses).reduce((s,b)=>s+(b.kc||0),0);
-                document.getElementById('totalBossKc')?.textContent = formatNumber(total);
+                const bossEl = document.getElementById('totalBossKc');
+                if (bossEl) bossEl.textContent = formatNumber(total);
             }
 
             renderSkills(skillsRes?.skills || {});
