@@ -484,14 +484,14 @@
             const pct = ((caData.total_points / caData.max_points) * 100).toFixed(1);
             const tierColors = { Easy: '#3fb950', Medium: '#58a6ff', Hard: '#a371f7', Elite: '#d4a84b', Master: '#f85149', Grandmaster: '#ff7b72' };
             
-            // CA tier unlock thresholds
+            // CA tier unlock thresholds (from OSRS Wiki - updated)
             const tierUnlocks = [
-                { name: 'Easy', points: 33, rewards: ['Ghommal\'s hilt 1', 'Antique lamp (easy CA)'] },
-                { name: 'Medium', points: 115, rewards: ['Ghommal\'s hilt 2', '5% Slayer point boost'] },
-                { name: 'Hard', points: 304, rewards: ['Ghommal\'s hilt 3', '10% Slayer point boost', 'Free instance costs'] },
-                { name: 'Elite', points: 820, rewards: ['Ghommal\'s hilt 4', 'Faster boss respawns', '15% Slayer boost'] },
-                { name: 'Master', points: 1465, rewards: ['Ghommal\'s hilt 5', 'Red slayer helmet recolor'] },
-                { name: 'Grandmaster', points: 2005, rewards: ['Ghommal\'s hilt 6', 'Green slayer helmet recolor'] }
+                { name: 'Easy', points: 38, rewards: ['Ghommal\'s hilt 1', '5% easy clue boost', '+5 boss task kills'] },
+                { name: 'Medium', points: 148, rewards: ['Ghommal\'s hilt 2', '5% medium clue boost', '+10 boss task kills'] },
+                { name: 'Hard', points: 394, rewards: ['Ghommal\'s hilt 3', 'Unlimited GWD teles', 'GWD private instances'] },
+                { name: 'Elite', points: 1038, rewards: ['Ghommal\'s hilt 4', '5% elite clue boost', 'Cannon holds 60'] },
+                { name: 'Master', points: 1878, rewards: ['Ghommal\'s hilt 5', 'Red slayer helmet'] },
+                { name: 'Grandmaster', points: 2604, rewards: ['Ghommal\'s hilt 6', 'Green slayer helmet'] }
             ];
             
             // Find current and next tier
