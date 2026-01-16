@@ -24,11 +24,7 @@
             --accent-red: #f85149;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -38,11 +34,7 @@
             line-height: 1.6;
         }
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
+        .container { max-width: 1400px; margin: 0 auto; padding: 2rem; }
 
         /* Header */
         header {
@@ -52,7 +44,6 @@
             border-bottom: 1px solid var(--border);
             position: relative;
         }
-
         header::after {
             content: '';
             position: absolute;
@@ -63,7 +54,6 @@
             height: 2px;
             background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
         }
-
         .player-name {
             font-family: 'Cinzel', serif;
             font-size: 3rem;
@@ -73,7 +63,6 @@
             letter-spacing: 0.05em;
             margin-bottom: 0.5rem;
         }
-
         .account-type {
             display: inline-flex;
             align-items: center;
@@ -86,12 +75,7 @@
             border-radius: 4px;
             background: var(--bg-card);
         }
-
-        .account-type .iron-icon {
-            width: 16px;
-            height: 16px;
-        }
-
+        .account-type .iron-icon { width: 16px; height: 16px; }
         .last-updated {
             margin-top: 1rem;
             font-size: 0.8rem;
@@ -109,39 +93,15 @@
             gap: 1rem;
             margin-bottom: 3rem;
         }
-
         .stat-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: 6px;
             padding: 1.25rem;
             text-align: center;
-            position: relative;
-            overflow: hidden;
             transition: all 0.2s ease;
         }
-
-        .stat-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: var(--accent-gold);
-            opacity: 0;
-            transition: opacity 0.2s ease;
-        }
-
-        .stat-card:hover {
-            background: var(--bg-card-hover);
-            border-color: var(--accent-gold-dim);
-        }
-
-        .stat-card:hover::before {
-            opacity: 1;
-        }
-
+        .stat-card:hover { background: var(--bg-card-hover); }
         .stat-label {
             font-size: 0.7rem;
             text-transform: uppercase;
@@ -149,19 +109,16 @@
             color: var(--text-muted);
             margin-bottom: 0.5rem;
         }
-
         .stat-value {
             font-family: 'Fira Code', monospace;
             font-size: 1.5rem;
             font-weight: 500;
-            color: var(--text-primary);
         }
-
         .stat-value.gold { color: var(--accent-gold); }
         .stat-value.green { color: var(--accent-green); }
         .stat-value.blue { color: var(--accent-blue); }
 
-        /* Navigation Tabs */
+        /* Navigation */
         .nav-tabs {
             display: flex;
             gap: 0;
@@ -169,7 +126,6 @@
             border-bottom: 1px solid var(--border);
             overflow-x: auto;
         }
-
         .nav-tab {
             padding: 1rem 1.5rem;
             font-size: 0.875rem;
@@ -182,15 +138,8 @@
             transition: color 0.2s ease;
             white-space: nowrap;
         }
-
-        .nav-tab:hover {
-            color: var(--text-primary);
-        }
-
-        .nav-tab.active {
-            color: var(--accent-gold);
-        }
-
+        .nav-tab:hover { color: var(--text-primary); }
+        .nav-tab.active { color: var(--accent-gold); }
         .nav-tab.active::after {
             content: '';
             position: absolute;
@@ -202,21 +151,14 @@
         }
 
         /* Tab Content */
-        .tab-content {
-            display: none;
-            animation: fadeIn 0.3s ease;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
+        .tab-content { display: none; animation: fadeIn 0.3s ease; }
+        .tab-content.active { display: block; }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Skills Grid - OSRS style 3-column layout */
+        /* Skills Grid */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(140px, 200px));
@@ -225,7 +167,6 @@
             max-width: 650px;
             margin: 0 auto;
         }
-
         .skill-item {
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -237,17 +178,8 @@
             transition: all 0.2s ease;
             position: relative;
         }
-
-        .skill-item:hover {
-            background: var(--bg-card-hover);
-            border-color: var(--accent-gold-dim);
-        }
-
-        .skill-item.maxed {
-            border-color: var(--accent-gold);
-            background: rgba(212, 168, 75, 0.05);
-        }
-
+        .skill-item:hover { background: var(--bg-card-hover); border-color: var(--accent-gold-dim); }
+        .skill-item.maxed { border-color: var(--accent-gold); background: rgba(212, 168, 75, 0.05); }
         .skill-item.maxed::after {
             content: '✦';
             position: absolute;
@@ -256,59 +188,25 @@
             color: var(--accent-gold);
             font-size: 0.65rem;
         }
-
-        .skill-icon {
-            width: 24px;
-            height: 24px;
-            image-rendering: pixelated;
-            flex-shrink: 0;
-        }
-
-        .skill-info {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .skill-name {
-            font-size: 0.7rem;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.03em;
-        }
-
-        .skill-level {
-            font-family: 'Fira Code', monospace;
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: var(--text-primary);
-        }
-
-        .skill-xp {
-            font-family: 'Fira Code', monospace;
-            font-size: 0.65rem;
-            color: var(--text-muted);
-        }
-
-        /* Overall skill special styling */
+        .skill-icon { width: 24px; height: 24px; image-rendering: pixelated; flex-shrink: 0; }
+        .skill-info { flex: 1; min-width: 0; }
+        .skill-name { font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.03em; }
+        .skill-level { font-family: 'Fira Code', monospace; font-size: 1.1rem; font-weight: 500; }
+        .skill-xp { font-family: 'Fira Code', monospace; font-size: 0.65rem; color: var(--text-muted); }
         .skill-item.overall {
             grid-column: span 3;
             justify-content: center;
             background: linear-gradient(135deg, var(--bg-card) 0%, rgba(212, 168, 75, 0.08) 100%);
             border-color: var(--accent-gold-dim);
         }
+        .skill-item.overall .skill-level { font-size: 1.5rem; color: var(--accent-gold); }
 
-        .skill-item.overall .skill-level {
-            font-size: 1.5rem;
-            color: var(--accent-gold);
-        }
-
-        /* Bosses Table */
+        /* Bosses */
         .bosses-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
             gap: 0.75rem;
         }
-
         .boss-item {
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -319,78 +217,166 @@
             align-items: center;
             transition: all 0.2s ease;
         }
-
-        .boss-item:hover {
-            background: var(--bg-card-hover);
-        }
-
-        .boss-name {
-            font-size: 0.85rem;
-            color: var(--text-primary);
-        }
-
-        .boss-kc {
-            font-family: 'Fira Code', monospace;
-            font-size: 0.95rem;
-            color: var(--accent-blue);
-        }
+        .boss-item:hover { background: var(--bg-card-hover); }
+        .boss-name { font-size: 0.85rem; }
+        .boss-kc { font-family: 'Fira Code', monospace; font-size: 0.95rem; color: var(--accent-blue); }
 
         /* Collection Log */
-        .clog-progress {
+        .clog-header-section {
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: 6px;
-            padding: 2rem;
-            max-width: 600px;
-            margin: 0 auto;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
         }
-
-        .clog-header {
+        .clog-stats {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
-
-        .clog-title {
+        .clog-progress-info h3 {
             font-family: 'Cinzel', serif;
-            font-size: 1.1rem;
             color: var(--accent-gold);
+            margin-bottom: 0.25rem;
         }
-
+        .clog-progress-info p { color: var(--text-secondary); font-size: 0.9rem; }
         .clog-percentage {
             font-family: 'Fira Code', monospace;
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: var(--text-primary);
         }
-
-        .clog-details {
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-        }
-
         .progress-bar {
-            height: 10px;
+            height: 8px;
             background: var(--bg-dark);
-            border-radius: 5px;
+            border-radius: 4px;
             overflow: hidden;
+            margin-top: 1rem;
         }
-
         .progress-fill {
             height: 100%;
             background: linear-gradient(90deg, var(--accent-gold-dim), var(--accent-gold));
-            border-radius: 5px;
-            transition: width 1s ease;
+            border-radius: 4px;
+            transition: width 0.5s ease;
         }
 
-        /* Goals Section */
+        /* Collection Log Filters */
+        .clog-filters {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .clog-search {
+            flex: 1;
+            min-width: 200px;
+            padding: 0.75rem 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+        }
+        .clog-search:focus { outline: none; border-color: var(--accent-gold); }
+        .clog-search::placeholder { color: var(--text-muted); }
+        .clog-select {
+            padding: 0.75rem 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            min-width: 180px;
+            cursor: pointer;
+        }
+        .clog-select:focus { outline: none; border-color: var(--accent-gold); }
+
+        /* Collection Log Categories */
+        .clog-categories { display: flex; flex-direction: column; gap: 1rem; }
+        .clog-category {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .clog-category-header {
+            padding: 1rem 1.25rem;
+            background: var(--bg-card-hover);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+        }
+        .clog-category-header:hover { background: #22272e; }
+        .clog-category-name {
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+        .clog-category-count {
+            font-family: 'Fira Code', monospace;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        .clog-category-count .obtained { color: var(--accent-green); }
+        .clog-category-items {
+            display: none;
+            padding: 1rem;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .clog-category.expanded .clog-category-items { display: flex; }
+        .clog-category-header .toggle-icon { transition: transform 0.2s ease; }
+        .clog-category.expanded .toggle-icon { transform: rotate(180deg); }
+
+        .clog-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0.75rem;
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            transition: all 0.2s ease;
+        }
+        .clog-item.obtained {
+            color: var(--text-primary);
+            border-color: var(--accent-green);
+            background: rgba(63, 185, 80, 0.1);
+        }
+        .clog-item-icon {
+            width: 20px;
+            height: 20px;
+            image-rendering: pixelated;
+            opacity: 0.4;
+        }
+        .clog-item.obtained .clog-item-icon { opacity: 1; }
+        .clog-item-check {
+            width: 14px;
+            height: 14px;
+            border: 2px solid var(--border);
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.6rem;
+            flex-shrink: 0;
+        }
+        .clog-item.obtained .clog-item-check {
+            background: var(--accent-green);
+            border-color: var(--accent-green);
+            color: var(--bg-dark);
+        }
+
+        /* Goals */
         .goals-section {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
         }
-
         .goals-column h3 {
             font-family: 'Cinzel', serif;
             font-size: 1rem;
@@ -399,7 +385,6 @@
             padding-bottom: 0.5rem;
             border-bottom: 1px solid var(--border);
         }
-
         .goal-item {
             display: flex;
             align-items: flex-start;
@@ -407,7 +392,6 @@
             padding: 0.75rem 0;
             border-bottom: 1px solid var(--border);
         }
-
         .goal-checkbox {
             width: 18px;
             height: 18px;
@@ -420,29 +404,14 @@
             margin-top: 2px;
             font-size: 0.7rem;
         }
-
         .goal-checkbox.completed {
             background: var(--accent-green);
             border-color: var(--accent-green);
             color: var(--bg-dark);
         }
-
-        .goal-text {
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-        }
-
-        .goal-item.completed .goal-text {
-            text-decoration: line-through;
-            color: var(--text-muted);
-        }
-
-        .goal-progress {
-            font-family: 'Fira Code', monospace;
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            margin-top: 0.25rem;
-        }
+        .goal-text { font-size: 0.875rem; color: var(--text-secondary); }
+        .goal-item.completed .goal-text { text-decoration: line-through; color: var(--text-muted); }
+        .goal-progress { font-family: 'Fira Code', monospace; font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem; }
 
         /* Links */
         .external-links {
@@ -454,7 +423,6 @@
             border-top: 1px solid var(--border);
             flex-wrap: wrap;
         }
-
         .external-link {
             color: var(--text-secondary);
             text-decoration: none;
@@ -464,19 +432,10 @@
             border-radius: 4px;
             transition: all 0.2s ease;
         }
+        .external-link:hover { color: var(--accent-gold); border-color: var(--accent-gold); }
 
-        .external-link:hover {
-            color: var(--accent-gold);
-            border-color: var(--accent-gold);
-        }
-
-        /* Loading State */
-        .loading {
-            text-align: center;
-            padding: 3rem;
-            color: var(--text-muted);
-        }
-
+        /* Utility */
+        .loading { text-align: center; padding: 3rem; color: var(--text-muted); }
         .loading::after {
             content: '';
             display: inline-block;
@@ -489,12 +448,7 @@
             margin-left: 0.5rem;
             vertical-align: middle;
         }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        /* Empty state */
+        @keyframes spin { to { transform: rotate(360deg); } }
         .empty-state {
             text-align: center;
             padding: 3rem;
@@ -503,32 +457,21 @@
             border: 1px solid var(--border);
             border-radius: 6px;
         }
+        .no-results {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+        }
 
-        /* Responsive */
         @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-
-            .player-name {
-                font-size: 2rem;
-            }
-
-            .stats-overview {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .skill-item.overall {
-                grid-column: span 2;
-            }
-
-            .goals-section {
-                grid-template-columns: 1fr;
-            }
+            .container { padding: 1rem; }
+            .player-name { font-size: 2rem; }
+            .stats-overview { grid-template-columns: repeat(2, 1fr); }
+            .skills-grid { grid-template-columns: repeat(2, 1fr); }
+            .skill-item.overall { grid-column: span 2; }
+            .goals-section { grid-template-columns: 1fr; }
+            .clog-filters { flex-direction: column; }
+            .clog-select { width: 100%; }
         }
     </style>
 </head>
@@ -543,7 +486,7 @@
             <p class="last-updated">Last updated: <span id="lastUpdated">—</span></p>
         </header>
 
-        <div class="stats-overview" id="statsOverview">
+        <div class="stats-overview">
             <div class="stat-card">
                 <div class="stat-label">Total Level</div>
                 <div class="stat-value gold" id="totalLevel">—</div>
@@ -578,27 +521,19 @@
         </nav>
 
         <div id="skills" class="tab-content active">
-            <div class="skills-grid" id="skillsGrid">
-                <div class="loading">Loading skills</div>
-            </div>
+            <div class="skills-grid" id="skillsGrid"><div class="loading">Loading skills</div></div>
         </div>
 
         <div id="bosses" class="tab-content">
-            <div class="bosses-container" id="bossesGrid">
-                <div class="loading">Loading bosses</div>
-            </div>
+            <div class="bosses-container" id="bossesGrid"><div class="loading">Loading bosses</div></div>
         </div>
 
         <div id="collection" class="tab-content">
-            <div class="clog-progress" id="clogProgress">
-                <div class="loading">Loading collection log</div>
-            </div>
+            <div id="clogContainer"><div class="loading">Loading collection log</div></div>
         </div>
 
         <div id="goals" class="tab-content">
-            <div class="goals-section" id="goalsSection">
-                <div class="loading">Loading goals</div>
-            </div>
+            <div class="goals-section" id="goalsSection"><div class="loading">Loading goals</div></div>
         </div>
 
         <div class="external-links">
@@ -608,7 +543,6 @@
     </div>
 
     <script>
-        // Skill icons from OSRS Wiki
         const SKILL_ICONS = {
             'Overall': 'https://oldschool.runescape.wiki/images/Stats_icon.png',
             'Attack': 'https://oldschool.runescape.wiki/images/Attack_icon.png',
@@ -637,7 +571,6 @@
             'Sailing': 'https://oldschool.runescape.wiki/images/Sailing_icon.png'
         };
 
-        // Skill order for display (OSRS-style 3-column layout)
         const SKILL_ORDER = [
             'Attack', 'Hitpoints', 'Mining',
             'Strength', 'Agility', 'Smithing',
@@ -650,7 +583,8 @@
             'Overall'
         ];
 
-        const NUM_SKILLS = 24; // Excluding Overall
+        const NUM_SKILLS = 24;
+        let collectionLogData = null;
 
         function formatNumber(n) {
             if (n >= 1000000000) return (n / 1000000000).toFixed(1) + 'B';
@@ -663,12 +597,13 @@
             if (!dateStr) return '—';
             const date = new Date(dateStr);
             return date.toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'short',
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit'
+                year: 'numeric', month: 'short', day: 'numeric',
+                hour: '2-digit', minute: '2-digit'
             });
+        }
+
+        function formatCategoryName(name) {
+            return name.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
         }
 
         async function loadData() {
@@ -680,42 +615,33 @@
                     fetch('data/goals.yaml').then(r => r.text()).catch(() => null)
                 ]);
 
-                // Update header
                 if (skillsRes?.rsn) {
                     document.getElementById('playerName').textContent = skillsRes.rsn;
                     document.getElementById('lastUpdated').textContent = formatDate(skillsRes.updated);
                 }
 
-                // Update overview stats from milestones (pre-calculated correctly)
                 if (skillsRes?.milestones) {
                     const m = skillsRes.milestones;
                     document.getElementById('totalLevel').textContent = m.total_level?.toLocaleString() || '—';
                     document.getElementById('totalXp').textContent = formatNumber(m.total_xp || 0);
                     document.getElementById('combatLevel').textContent = m.combat_level || '—';
-                    const numSkills = m.num_skills || NUM_SKILLS;
-                    document.getElementById('count99s').textContent = `${m.skills_99 || 0}/${numSkills}`;
+                    document.getElementById('count99s').textContent = `${m.skills_99 || 0}/${m.num_skills || NUM_SKILLS}`;
                 }
 
-                // Collection log count
                 if (clogRes?.collection_log) {
-                    const clog = clogRes.collection_log;
-                    if (clog.unique_obtained > 0) {
-                        document.getElementById('clogCount').textContent = clog.unique_obtained.toLocaleString();
-                    } else {
-                        document.getElementById('clogCount').textContent = '—';
-                    }
+                    const obtained = clogRes.collection_log.unique_obtained || 0;
+                    document.getElementById('clogCount').textContent = obtained > 0 ? obtained.toLocaleString() : '—';
+                    collectionLogData = clogRes;
                 }
 
-                // Total boss KC
                 if (bossesRes?.bosses) {
-                    const totalKc = Object.values(bossesRes.bosses)
-                        .reduce((sum, b) => sum + (b.kc || 0), 0);
+                    const totalKc = Object.values(bossesRes.bosses).reduce((sum, b) => sum + (b.kc || 0), 0);
                     document.getElementById('totalBossKc').textContent = formatNumber(totalKc);
                 }
 
                 renderSkills(skillsRes?.skills || {});
                 renderBosses(bossesRes?.bosses || {});
-                renderCollectionLog(clogRes?.collection_log || {});
+                renderCollectionLog(clogRes);
                 renderGoals(goalsRes);
 
             } catch (error) {
@@ -725,25 +651,20 @@
 
         function renderSkills(skills) {
             const grid = document.getElementById('skillsGrid');
-            
             if (Object.keys(skills).length === 0) {
-                grid.innerHTML = '<div class="empty-state">No skills data available yet. Run the GitHub Action to fetch data.</div>';
+                grid.innerHTML = '<div class="empty-state">No skills data available yet.</div>';
                 return;
             }
-
             grid.innerHTML = SKILL_ORDER.map(skillName => {
                 const skill = skills[skillName] || { level: 1, xp: 0 };
                 const isMaxed = skillName !== 'Overall' && skill.level >= 99;
                 const isOverall = skillName === 'Overall';
-                const icon = SKILL_ICONS[skillName] || '';
-                
                 let classes = 'skill-item';
                 if (isMaxed) classes += ' maxed';
                 if (isOverall) classes += ' overall';
-                
                 return `
                     <div class="${classes}">
-                        <img src="${icon}" alt="${skillName}" class="skill-icon">
+                        <img src="${SKILL_ICONS[skillName] || ''}" alt="${skillName}" class="skill-icon">
                         <div class="skill-info">
                             <div class="skill-name">${skillName}</div>
                             <div class="skill-level">${skill.level || 1}</div>
@@ -756,7 +677,6 @@
 
         function renderBosses(bosses) {
             const container = document.getElementById('bossesGrid');
-            
             const sortedBosses = Object.entries(bosses)
                 .filter(([_, data]) => data.kc > 0)
                 .sort((a, b) => b[1].kc - a[1].kc);
@@ -765,7 +685,6 @@
                 container.innerHTML = '<div class="empty-state">No boss kills recorded yet.</div>';
                 return;
             }
-
             container.innerHTML = sortedBosses.map(([name, data]) => `
                 <div class="boss-item">
                     <span class="boss-name">${name}</span>
@@ -774,44 +693,147 @@
             `).join('');
         }
 
-        function renderCollectionLog(clog) {
-            const container = document.getElementById('clogProgress');
-            
-            if (!clog || !clog.unique_obtained) {
+        function renderCollectionLog(data) {
+            const container = document.getElementById('clogContainer');
+
+            if (!data || !data.categories || Object.keys(data.categories).length === 0) {
                 container.innerHTML = `
                     <div class="empty-state">
-                        <p>No collection log data available yet.</p>
+                        <p>No collection log data available.</p>
                         <p style="margin-top: 0.5rem; font-size: 0.85rem;">
-                            Make sure you have the TempleOSRS RuneLite plugin installed and have synced your collection log.
+                            Make sure you have the TempleOSRS RuneLite plugin installed and have synced your collection log in-game.
                         </p>
                     </div>
                 `;
                 return;
             }
 
-            const obtained = clog.unique_obtained || 0;
-            const total = clog.unique_items || 1615; // Approximate total clog slots
-            const percentage = ((obtained / total) * 100).toFixed(1);
-            const rank = clog.rank;
+            const summary = data.collection_log || {};
+            const categories = data.categories || {};
+            const obtained = summary.unique_obtained || 0;
+            const total = summary.unique_total || Object.values(categories).reduce((sum, items) => sum + items.length, 0);
+            const percentage = total > 0 ? ((obtained / total) * 100).toFixed(1) : 0;
+
+            // Build category options
+            const categoryNames = Object.keys(categories).sort();
+            const categoryOptions = categoryNames.map(name => 
+                `<option value="${name}">${formatCategoryName(name)}</option>`
+            ).join('');
 
             container.innerHTML = `
-                <div class="clog-header">
-                    <span class="clog-title">Collection Log Progress</span>
-                    <span class="clog-percentage">${percentage}%</span>
+                <div class="clog-header-section">
+                    <div class="clog-stats">
+                        <div class="clog-progress-info">
+                            <h3>Collection Log Progress</h3>
+                            <p><strong>${obtained.toLocaleString()}</strong> / ${total.toLocaleString()} unique items</p>
+                        </div>
+                        <div class="clog-percentage">${percentage}%</div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${percentage}%"></div>
+                    </div>
                 </div>
-                <p class="clog-details">
-                    <strong>${obtained.toLocaleString()}</strong> / ${total.toLocaleString()} unique items
-                    ${rank && rank > 0 ? ` • Rank <strong>#${rank.toLocaleString()}</strong>` : ''}
-                </p>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: ${percentage}%"></div>
+
+                <div class="clog-filters">
+                    <input type="text" class="clog-search" id="clogSearch" placeholder="Search items...">
+                    <select class="clog-select" id="clogCategoryFilter">
+                        <option value="all">All Categories</option>
+                        ${categoryOptions}
+                    </select>
+                    <select class="clog-select" id="clogStatusFilter">
+                        <option value="all">All Items</option>
+                        <option value="obtained">Obtained Only</option>
+                        <option value="missing">Missing Only</option>
+                    </select>
                 </div>
+
+                <div class="clog-categories" id="clogCategories"></div>
             `;
+
+            // Initial render
+            renderClogCategories(categories);
+
+            // Add filter listeners
+            document.getElementById('clogSearch').addEventListener('input', () => filterCollectionLog(categories));
+            document.getElementById('clogCategoryFilter').addEventListener('change', () => filterCollectionLog(categories));
+            document.getElementById('clogStatusFilter').addEventListener('change', () => filterCollectionLog(categories));
+        }
+
+        function renderClogCategories(categories, searchTerm = '', categoryFilter = 'all', statusFilter = 'all') {
+            const container = document.getElementById('clogCategories');
+            const categoryNames = Object.keys(categories).sort();
+
+            let html = '';
+            let hasResults = false;
+
+            for (const catName of categoryNames) {
+                if (categoryFilter !== 'all' && catName !== categoryFilter) continue;
+
+                const items = categories[catName] || [];
+                let filteredItems = items;
+
+                // Apply search filter
+                if (searchTerm) {
+                    filteredItems = filteredItems.filter(item => 
+                        item.name.toLowerCase().includes(searchTerm.toLowerCase())
+                    );
+                }
+
+                // Apply status filter
+                if (statusFilter === 'obtained') {
+                    filteredItems = filteredItems.filter(item => item.obtained);
+                } else if (statusFilter === 'missing') {
+                    filteredItems = filteredItems.filter(item => !item.obtained);
+                }
+
+                if (filteredItems.length === 0) continue;
+                hasResults = true;
+
+                const obtainedCount = filteredItems.filter(i => i.obtained).length;
+                const totalCount = filteredItems.length;
+
+                html += `
+                    <div class="clog-category" data-category="${catName}">
+                        <div class="clog-category-header" onclick="toggleCategory(this)">
+                            <span class="clog-category-name">${formatCategoryName(catName)}</span>
+                            <span class="clog-category-count">
+                                <span class="obtained">${obtainedCount}</span> / ${totalCount}
+                                <span class="toggle-icon">▼</span>
+                            </span>
+                        </div>
+                        <div class="clog-category-items">
+                            ${filteredItems.map(item => `
+                                <div class="clog-item ${item.obtained ? 'obtained' : ''}">
+                                    <span class="clog-item-check">${item.obtained ? '✓' : ''}</span>
+                                    <span class="clog-item-name">${item.name}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+
+            if (!hasResults) {
+                html = '<div class="no-results">No items found matching your filters.</div>';
+            }
+
+            container.innerHTML = html;
+        }
+
+        function filterCollectionLog(categories) {
+            const searchTerm = document.getElementById('clogSearch').value;
+            const categoryFilter = document.getElementById('clogCategoryFilter').value;
+            const statusFilter = document.getElementById('clogStatusFilter').value;
+            renderClogCategories(categories, searchTerm, categoryFilter, statusFilter);
+        }
+
+        function toggleCategory(header) {
+            const category = header.closest('.clog-category');
+            category.classList.toggle('expanded');
         }
 
         function renderGoals(yamlText) {
             const container = document.getElementById('goalsSection');
-            
             if (!yamlText) {
                 container.innerHTML = '<div class="empty-state">No goals configured. Edit data/goals.yaml to add your goals.</div>';
                 return;
@@ -824,43 +846,29 @@
             yamlText.split('\n').forEach(line => {
                 line = line.trimEnd();
                 if (!line || line.startsWith('#')) return;
-
-                if (line === 'short_term:') {
-                    currentSection = 'short_term';
-                } else if (line === 'long_term:') {
-                    currentSection = 'long_term';
-                } else if (line.match(/^\s+-\s+description:/)) {
-                    if (currentGoal && currentSection) {
-                        goals[currentSection].push(currentGoal);
-                    }
+                if (line === 'short_term:') currentSection = 'short_term';
+                else if (line === 'long_term:') currentSection = 'long_term';
+                else if (line.match(/^\s+-\s+description:/)) {
+                    if (currentGoal && currentSection) goals[currentSection].push(currentGoal);
                     currentGoal = {
                         description: line.split('description:')[1].trim().replace(/"/g, ''),
                         completed: false,
                         progress: ''
                     };
                 } else if (line.match(/^\s+completed:/)) {
-                    if (currentGoal) {
-                        currentGoal.completed = line.includes('true');
-                    }
+                    if (currentGoal) currentGoal.completed = line.includes('true');
                 } else if (line.match(/^\s+progress:/)) {
-                    if (currentGoal) {
-                        currentGoal.progress = line.split('progress:')[1].trim().replace(/"/g, '');
-                    }
+                    if (currentGoal) currentGoal.progress = line.split('progress:')[1].trim().replace(/"/g, '');
                 }
             });
-
-            if (currentGoal && currentSection) {
-                goals[currentSection].push(currentGoal);
-            }
+            if (currentGoal && currentSection) goals[currentSection].push(currentGoal);
 
             container.innerHTML = `
                 <div class="goals-column">
                     <h3>Short-Term Goals</h3>
                     ${goals.short_term.length ? goals.short_term.map(g => `
                         <div class="goal-item ${g.completed ? 'completed' : ''}">
-                            <div class="goal-checkbox ${g.completed ? 'completed' : ''}">
-                                ${g.completed ? '✓' : ''}
-                            </div>
+                            <div class="goal-checkbox ${g.completed ? 'completed' : ''}">${g.completed ? '✓' : ''}</div>
                             <div>
                                 <div class="goal-text">${g.description}</div>
                                 ${g.progress ? `<div class="goal-progress">${g.progress}</div>` : ''}
@@ -872,9 +880,7 @@
                     <h3>Long-Term Goals</h3>
                     ${goals.long_term.length ? goals.long_term.map(g => `
                         <div class="goal-item ${g.completed ? 'completed' : ''}">
-                            <div class="goal-checkbox ${g.completed ? 'completed' : ''}">
-                                ${g.completed ? '✓' : ''}
-                            </div>
+                            <div class="goal-checkbox ${g.completed ? 'completed' : ''}">${g.completed ? '✓' : ''}</div>
                             <div>
                                 <div class="goal-text">${g.description}</div>
                                 ${g.progress ? `<div class="goal-progress">${g.progress}</div>` : ''}
@@ -890,7 +896,6 @@
             tab.addEventListener('click', () => {
                 document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
                 document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-                
                 tab.classList.add('active');
                 document.getElementById(tab.dataset.tab).classList.add('active');
             });
