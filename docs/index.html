@@ -32,8 +32,8 @@
         .account-type { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'Fira Code', monospace; font-size: 0.875rem; color: var(--text-secondary); padding: 0.25rem 1rem; border: 1px solid var(--border); border-radius: 4px; background: var(--bg-card); }
         .account-type .iron-icon { width: 16px; height: 16px; }
         .last-updated { margin-top: 1rem; font-size: 0.8rem; color: var(--text-secondary); background: var(--bg-card); display: inline-block; padding: 0.25rem 0.75rem; border-radius: 4px; }
-        .stats-overview { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-bottom: 3rem; }
-        .stat-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem; text-align: center; }
+        .stats-overview { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-bottom: 3rem; }
+        .stat-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem; text-align: center; min-width: 140px; flex: 0 1 auto; }
         .stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.5rem; }
         .stat-value { font-family: 'Fira Code', monospace; font-size: 1.5rem; font-weight: 500; }
         .stat-value.gold { color: var(--accent-gold); }
@@ -801,10 +801,16 @@
                 let quests = [];
                 
                 if (filter === 'all' || filter === 'completed' || filter === 'f2p' || filter === 'members' || filter === 'miniquests') {
-                    quests = quests.concat((catData.completed || []).map(q => ({...q, completed: true})));
+                    quests = quests.concat((catData.completed || []).map(q => {
+                        const item = typeof q === 'string' ? {name: q} : q;
+                        return {...item, completed: true};
+                    }));
                 }
                 if (filter === 'all' || filter === 'incomplete' || filter === 'f2p' || filter === 'members' || filter === 'miniquests') {
-                    quests = quests.concat((catData.not_completed || []).map(q => ({...q, completed: false})));
+                    quests = quests.concat((catData.not_completed || []).map(q => {
+                        const item = typeof q === 'string' ? {name: q} : q;
+                        return {...item, completed: false};
+                    }));
                 }
                 
                 // Filter by search
