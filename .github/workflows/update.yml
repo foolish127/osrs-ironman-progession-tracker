@@ -2,11 +2,12 @@ name: Update OSRS Stats
 
 on:
   schedule:
-    - cron: '0 */6 * * *'
-  workflow_dispatch:
+    - cron: '0 */6 * * *'  # Every 6 hours
+  workflow_dispatch:       # Manual trigger
   push:
     paths:
-      - 'data/goals.yaml'
+      - 'data/*.yaml'      # Any YAML data file changes
+      - 'scripts/update_stats.py'  # Script changes
 
 jobs:
   update:
