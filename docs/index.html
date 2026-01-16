@@ -20,448 +20,141 @@
             --accent-gold-dim: #8a6a2a;
             --accent-green: #3fb950;
             --accent-blue: #58a6ff;
-            --accent-purple: #a371f7;
             --accent-red: #f85149;
+            --progress-low: #f85149;
+            --progress-mid: #d4a84b;
+            --progress-high: #3fb950;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Inter', -apple-system, sans-serif;
             background: var(--bg-dark);
             color: var(--text-primary);
             min-height: 100vh;
             line-height: 1.6;
         }
-
         .container { max-width: 1400px; margin: 0 auto; padding: 2rem; }
 
         /* Header */
-        header {
-            text-align: center;
-            margin-bottom: 3rem;
-            padding: 2rem 0;
-            border-bottom: 1px solid var(--border);
-            position: relative;
-        }
-        header::after {
-            content: '';
-            position: absolute;
-            bottom: -1px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 200px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
-        }
-        .player-name {
-            font-family: 'Cinzel', serif;
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--accent-gold);
-            text-shadow: 0 0 40px rgba(212, 168, 75, 0.2);
-            letter-spacing: 0.05em;
-            margin-bottom: 0.5rem;
-        }
-        .account-type {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-family: 'Fira Code', monospace;
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            padding: 0.25rem 1rem;
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            background: var(--bg-card);
-        }
+        header { text-align: center; margin-bottom: 3rem; padding: 2rem 0; border-bottom: 1px solid var(--border); position: relative; }
+        header::after { content: ''; position: absolute; bottom: -1px; left: 50%; transform: translateX(-50%); width: 200px; height: 2px; background: linear-gradient(90deg, transparent, var(--accent-gold), transparent); }
+        .player-name { font-family: 'Cinzel', serif; font-size: 3rem; font-weight: 700; color: var(--accent-gold); text-shadow: 0 0 40px rgba(212,168,75,0.2); letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+        .account-type { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'Fira Code', monospace; font-size: 0.875rem; color: var(--text-secondary); padding: 0.25rem 1rem; border: 1px solid var(--border); border-radius: 4px; background: var(--bg-card); }
         .account-type .iron-icon { width: 16px; height: 16px; }
-        .last-updated {
-            margin-top: 1rem;
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            background: var(--bg-card);
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 4px;
-        }
+        .last-updated { margin-top: 1rem; font-size: 0.8rem; color: var(--text-secondary); background: var(--bg-card); display: inline-block; padding: 0.25rem 0.75rem; border-radius: 4px; }
 
         /* Stats Overview */
-        .stats-overview {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 1rem;
-            margin-bottom: 3rem;
-        }
-        .stat-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 1.25rem;
-            text-align: center;
-            transition: all 0.2s ease;
-        }
+        .stats-overview { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 3rem; }
+        .stat-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem; text-align: center; transition: all 0.2s ease; }
         .stat-card:hover { background: var(--bg-card-hover); }
-        .stat-label {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-muted);
-            margin-bottom: 0.5rem;
-        }
-        .stat-value {
-            font-family: 'Fira Code', monospace;
-            font-size: 1.5rem;
-            font-weight: 500;
-        }
+        .stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.5rem; }
+        .stat-value { font-family: 'Fira Code', monospace; font-size: 1.5rem; font-weight: 500; }
         .stat-value.gold { color: var(--accent-gold); }
         .stat-value.green { color: var(--accent-green); }
         .stat-value.blue { color: var(--accent-blue); }
 
         /* Navigation */
-        .nav-tabs {
-            display: flex;
-            gap: 0;
-            margin-bottom: 2rem;
-            border-bottom: 1px solid var(--border);
-            overflow-x: auto;
-        }
-        .nav-tab {
-            padding: 1rem 1.5rem;
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: var(--text-secondary);
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            position: relative;
-            transition: color 0.2s ease;
-            white-space: nowrap;
-        }
+        .nav-tabs { display: flex; gap: 0; margin-bottom: 2rem; border-bottom: 1px solid var(--border); overflow-x: auto; }
+        .nav-tab { padding: 1rem 1.5rem; font-size: 0.875rem; font-weight: 500; color: var(--text-secondary); background: transparent; border: none; cursor: pointer; position: relative; transition: color 0.2s ease; white-space: nowrap; }
         .nav-tab:hover { color: var(--text-primary); }
         .nav-tab.active { color: var(--accent-gold); }
-        .nav-tab.active::after {
-            content: '';
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: var(--accent-gold);
-        }
+        .nav-tab.active::after { content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 2px; background: var(--accent-gold); }
 
-        /* Tab Content */
         .tab-content { display: none; animation: fadeIn 0.3s ease; }
         .tab-content.active { display: block; }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
         /* Skills Grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(140px, 200px));
-            gap: 0.5rem;
-            justify-content: center;
-            max-width: 650px;
-            margin: 0 auto;
-        }
-        .skill-item {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            padding: 0.75rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            transition: all 0.2s ease;
-            position: relative;
-        }
+        .skills-grid { display: grid; grid-template-columns: repeat(3, minmax(160px, 220px)); gap: 0.5rem; justify-content: center; max-width: 720px; margin: 0 auto; }
+        .skill-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 0.6rem 0.75rem; display: flex; align-items: center; gap: 0.6rem; transition: all 0.2s ease; position: relative; }
         .skill-item:hover { background: var(--bg-card-hover); border-color: var(--accent-gold-dim); }
-        .skill-item.maxed { border-color: var(--accent-gold); background: rgba(212, 168, 75, 0.05); }
-        .skill-item.maxed::after {
-            content: '✦';
-            position: absolute;
-            top: 0.25rem;
-            right: 0.5rem;
-            color: var(--accent-gold);
-            font-size: 0.65rem;
-        }
+        .skill-item.maxed { border-color: var(--accent-gold); background: rgba(212,168,75,0.05); }
+        .skill-item.maxed::after { content: '✦'; position: absolute; top: 0.2rem; right: 0.4rem; color: var(--accent-gold); font-size: 0.6rem; }
         .skill-icon { width: 24px; height: 24px; image-rendering: pixelated; flex-shrink: 0; }
         .skill-info { flex: 1; min-width: 0; }
-        .skill-name { font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.03em; }
-        .skill-level { font-family: 'Fira Code', monospace; font-size: 1.1rem; font-weight: 500; }
-        .skill-xp { font-family: 'Fira Code', monospace; font-size: 0.65rem; color: var(--text-muted); }
-        .skill-item.overall {
-            grid-column: span 3;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(212, 168, 75, 0.08) 100%);
-            border-color: var(--accent-gold-dim);
-        }
+        .skill-header { display: flex; justify-content: space-between; align-items: baseline; }
+        .skill-name { font-size: 0.65rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.03em; }
+        .skill-level { font-family: 'Fira Code', monospace; font-size: 1rem; font-weight: 500; }
+        .skill-xp { font-family: 'Fira Code', monospace; font-size: 0.6rem; color: var(--text-muted); }
+        .skill-progress-bar { height: 4px; background: var(--bg-dark); border-radius: 2px; margin-top: 0.3rem; overflow: hidden; }
+        .skill-progress-fill { height: 100%; border-radius: 2px; transition: width 0.3s ease; }
+        .skill-item.overall { grid-column: span 3; justify-content: center; background: linear-gradient(135deg, var(--bg-card) 0%, rgba(212,168,75,0.08) 100%); border-color: var(--accent-gold-dim); }
         .skill-item.overall .skill-level { font-size: 1.5rem; color: var(--accent-gold); }
 
         /* Bosses */
-        .bosses-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 0.75rem;
-        }
-        .boss-item {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            padding: 0.875rem 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: all 0.2s ease;
-        }
+        .bosses-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.75rem; }
+        .boss-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 0.875rem 1rem; display: flex; justify-content: space-between; align-items: center; }
         .boss-item:hover { background: var(--bg-card-hover); }
         .boss-name { font-size: 0.85rem; }
         .boss-kc { font-family: 'Fira Code', monospace; font-size: 0.95rem; color: var(--accent-blue); }
 
-        /* Collection Log */
-        .clog-header-section {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-        .clog-stats {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        .clog-progress-info h3 {
-            font-family: 'Cinzel', serif;
-            color: var(--accent-gold);
-            margin-bottom: 0.25rem;
-        }
-        .clog-progress-info p { color: var(--text-secondary); font-size: 0.9rem; }
-        .clog-percentage {
-            font-family: 'Fira Code', monospace;
-            font-size: 2.5rem;
-            color: var(--text-primary);
-        }
-        .progress-bar {
-            height: 8px;
-            background: var(--bg-dark);
-            border-radius: 4px;
-            overflow: hidden;
-            margin-top: 1rem;
-        }
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--accent-gold-dim), var(--accent-gold));
-            border-radius: 4px;
-            transition: width 0.5s ease;
-        }
+        /* Progress Section (Collection Log & Combat Achievements) */
+        .progress-section { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; margin-bottom: 1.5rem; }
+        .progress-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+        .progress-title { font-family: 'Cinzel', serif; font-size: 1.1rem; color: var(--accent-gold); }
+        .progress-stats { font-family: 'Fira Code', monospace; font-size: 1.5rem; }
+        .progress-stats .obtained { color: var(--accent-green); }
+        .progress-stats .total { color: var(--text-muted); }
+        .progress-bar { height: 12px; background: var(--bg-dark); border-radius: 6px; overflow: hidden; margin-top: 0.5rem; }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent-gold-dim), var(--accent-gold)); border-radius: 6px; transition: width 0.5s ease; }
+        .progress-percentage { text-align: right; font-family: 'Fira Code', monospace; font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem; }
 
-        /* Collection Log Filters */
-        .clog-filters {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-        }
-        .clog-search {
-            flex: 1;
-            min-width: 200px;
-            padding: 0.75rem 1rem;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            color: var(--text-primary);
-            font-size: 0.9rem;
-        }
+        /* Combat Achievements Tiers */
+        .ca-tiers { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+        .ca-tier { background: var(--bg-dark); border: 1px solid var(--border); border-radius: 4px; padding: 1rem; text-align: center; }
+        .ca-tier-name { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+        .ca-tier-name.easy { color: #3fb950; }
+        .ca-tier-name.medium { color: #58a6ff; }
+        .ca-tier-name.hard { color: #a371f7; }
+        .ca-tier-name.elite { color: #d4a84b; }
+        .ca-tier-name.master { color: #f85149; }
+        .ca-tier-name.grandmaster { color: #ff7b72; }
+        .ca-tier-progress { font-family: 'Fira Code', monospace; font-size: 0.9rem; color: var(--text-secondary); }
+        .ca-tier-bar { height: 6px; background: var(--bg-card); border-radius: 3px; margin-top: 0.5rem; overflow: hidden; }
+        .ca-tier-fill { height: 100%; border-radius: 3px; }
+
+        /* Collection Log Filters & Items */
+        .clog-filters { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .clog-search { flex: 1; min-width: 200px; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); font-size: 0.9rem; }
         .clog-search:focus { outline: none; border-color: var(--accent-gold); }
         .clog-search::placeholder { color: var(--text-muted); }
-        .clog-select {
-            padding: 0.75rem 1rem;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            color: var(--text-primary);
-            font-size: 0.9rem;
-            min-width: 180px;
-            cursor: pointer;
-        }
+        .clog-select { padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); font-size: 0.9rem; min-width: 180px; cursor: pointer; }
         .clog-select:focus { outline: none; border-color: var(--accent-gold); }
 
-        /* Collection Log Categories */
-        .clog-categories { display: flex; flex-direction: column; gap: 1rem; }
-        .clog-category {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            overflow: hidden;
-        }
-        .clog-category-header {
-            padding: 1rem 1.25rem;
-            background: var(--bg-card-hover);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            user-select: none;
-        }
+        .clog-category { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; margin-bottom: 0.75rem; }
+        .clog-category-header { padding: 1rem 1.25rem; background: var(--bg-card-hover); display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
         .clog-category-header:hover { background: #22272e; }
-        .clog-category-name {
-            font-weight: 500;
-            text-transform: capitalize;
-        }
-        .clog-category-count {
-            font-family: 'Fira Code', monospace;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-        }
+        .clog-category-name { font-weight: 500; text-transform: capitalize; }
+        .clog-category-count { font-family: 'Fira Code', monospace; font-size: 0.85rem; color: var(--text-secondary); }
         .clog-category-count .obtained { color: var(--accent-green); }
-        .clog-category-items {
-            display: none;
-            padding: 1rem;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
+        .clog-category-items { display: none; padding: 1rem; gap: 0.5rem; flex-wrap: wrap; }
         .clog-category.expanded .clog-category-items { display: flex; }
         .clog-category-header .toggle-icon { transition: transform 0.2s ease; }
         .clog-category.expanded .toggle-icon { transform: rotate(180deg); }
 
-        .clog-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 0.75rem;
-            background: var(--bg-dark);
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            transition: all 0.2s ease;
-        }
-        .clog-item.obtained {
-            color: var(--text-primary);
-            border-color: var(--accent-green);
-            background: rgba(63, 185, 80, 0.1);
-        }
-        .clog-item-icon {
-            width: 20px;
-            height: 20px;
-            image-rendering: pixelated;
-            opacity: 0.4;
-        }
-        .clog-item.obtained .clog-item-icon { opacity: 1; }
-        .clog-item-check {
-            width: 14px;
-            height: 14px;
-            border: 2px solid var(--border);
-            border-radius: 3px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.6rem;
-            flex-shrink: 0;
-        }
-        .clog-item.obtained .clog-item-check {
-            background: var(--accent-green);
-            border-color: var(--accent-green);
-            color: var(--bg-dark);
-        }
+        .clog-item { display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.6rem; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 4px; font-size: 0.75rem; color: var(--text-muted); }
+        .clog-item.obtained { color: var(--text-primary); border-color: var(--accent-green); background: rgba(63,185,80,0.1); }
+        .clog-item-check { width: 12px; height: 12px; border: 2px solid var(--border); border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 0.5rem; flex-shrink: 0; }
+        .clog-item.obtained .clog-item-check { background: var(--accent-green); border-color: var(--accent-green); color: var(--bg-dark); }
 
         /* Goals */
-        .goals-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-        .goals-column h3 {
-            font-family: 'Cinzel', serif;
-            font-size: 1rem;
-            color: var(--accent-gold);
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--border);
-        }
-        .goal-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
-            padding: 0.75rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-        .goal-checkbox {
-            width: 18px;
-            height: 18px;
-            border: 2px solid var(--border);
-            border-radius: 3px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            margin-top: 2px;
-            font-size: 0.7rem;
-        }
-        .goal-checkbox.completed {
-            background: var(--accent-green);
-            border-color: var(--accent-green);
-            color: var(--bg-dark);
-        }
+        .goals-section { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+        .goals-column h3 { font-family: 'Cinzel', serif; font-size: 1rem; color: var(--accent-gold); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+        .goal-item { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border); }
+        .goal-checkbox { width: 18px; height: 18px; border: 2px solid var(--border); border-radius: 3px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; font-size: 0.7rem; }
+        .goal-checkbox.completed { background: var(--accent-green); border-color: var(--accent-green); color: var(--bg-dark); }
         .goal-text { font-size: 0.875rem; color: var(--text-secondary); }
         .goal-item.completed .goal-text { text-decoration: line-through; color: var(--text-muted); }
         .goal-progress { font-family: 'Fira Code', monospace; font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem; }
 
         /* Links */
-        .external-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border);
-            flex-wrap: wrap;
-        }
-        .external-link {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.85rem;
-            padding: 0.5rem 1rem;
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            transition: all 0.2s ease;
-        }
+        .external-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); flex-wrap: wrap; }
+        .external-link { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; padding: 0.5rem 1rem; border: 1px solid var(--border); border-radius: 4px; transition: all 0.2s ease; }
         .external-link:hover { color: var(--accent-gold); border-color: var(--accent-gold); }
 
-        /* Utility */
         .loading { text-align: center; padding: 3rem; color: var(--text-muted); }
-        .loading::after {
-            content: '';
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            border: 2px solid var(--border);
-            border-top-color: var(--accent-gold);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin-left: 0.5rem;
-            vertical-align: middle;
-        }
-        @keyframes spin { to { transform: rotate(360deg); } }
-        .empty-state {
-            text-align: center;
-            padding: 3rem;
-            color: var(--text-muted);
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-        }
-        .no-results {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-muted);
-        }
+        .empty-state { text-align: center; padding: 3rem; color: var(--text-muted); background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; }
+        .no-results { text-align: center; padding: 2rem; color: var(--text-muted); }
 
         @media (max-width: 768px) {
             .container { padding: 1rem; }
@@ -487,51 +180,34 @@
         </header>
 
         <div class="stats-overview">
-            <div class="stat-card">
-                <div class="stat-label">Total Level</div>
-                <div class="stat-value gold" id="totalLevel">—</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-label">Total XP</div>
-                <div class="stat-value" id="totalXp">—</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-label">Combat Level</div>
-                <div class="stat-value blue" id="combatLevel">—</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-label">99s</div>
-                <div class="stat-value green" id="count99s">—</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-label">Collection Log</div>
-                <div class="stat-value" id="clogCount">—</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-label">Boss Kills</div>
-                <div class="stat-value" id="totalBossKc">—</div>
-            </div>
+            <div class="stat-card"><div class="stat-label">Total Level</div><div class="stat-value gold" id="totalLevel">—</div></div>
+            <div class="stat-card"><div class="stat-label">Total XP</div><div class="stat-value" id="totalXp">—</div></div>
+            <div class="stat-card"><div class="stat-label">Combat Level</div><div class="stat-value blue" id="combatLevel">—</div></div>
+            <div class="stat-card"><div class="stat-label">99s</div><div class="stat-value green" id="count99s">—</div></div>
+            <div class="stat-card"><div class="stat-label">Collection Log</div><div class="stat-value" id="clogCount">—</div></div>
+            <div class="stat-card"><div class="stat-label">Boss Kills</div><div class="stat-value" id="totalBossKc">—</div></div>
         </div>
 
         <nav class="nav-tabs">
             <button class="nav-tab active" data-tab="skills">Skills</button>
             <button class="nav-tab" data-tab="bosses">Bosses</button>
             <button class="nav-tab" data-tab="collection">Collection Log</button>
+            <button class="nav-tab" data-tab="combat">Combat Achievements</button>
             <button class="nav-tab" data-tab="goals">Goals</button>
         </nav>
 
         <div id="skills" class="tab-content active">
             <div class="skills-grid" id="skillsGrid"><div class="loading">Loading skills</div></div>
         </div>
-
         <div id="bosses" class="tab-content">
             <div class="bosses-container" id="bossesGrid"><div class="loading">Loading bosses</div></div>
         </div>
-
         <div id="collection" class="tab-content">
             <div id="clogContainer"><div class="loading">Loading collection log</div></div>
         </div>
-
+        <div id="combat" class="tab-content">
+            <div id="caContainer"><div class="loading">Loading combat achievements</div></div>
+        </div>
         <div id="goals" class="tab-content">
             <div class="goals-section" id="goalsSection"><div class="loading">Loading goals</div></div>
         </div>
@@ -570,337 +246,239 @@
             'Construction': 'https://oldschool.runescape.wiki/images/Construction_icon.png',
             'Sailing': 'https://oldschool.runescape.wiki/images/Sailing_icon.png'
         };
-
-        const SKILL_ORDER = [
-            'Attack', 'Hitpoints', 'Mining',
-            'Strength', 'Agility', 'Smithing',
-            'Defence', 'Herblore', 'Fishing',
-            'Ranged', 'Thieving', 'Cooking',
-            'Prayer', 'Crafting', 'Firemaking',
-            'Magic', 'Fletching', 'Woodcutting',
-            'Runecraft', 'Slayer', 'Farming',
-            'Construction', 'Hunter', 'Sailing',
-            'Overall'
-        ];
-
+        const SKILL_ORDER = ['Attack','Hitpoints','Mining','Strength','Agility','Smithing','Defence','Herblore','Fishing','Ranged','Thieving','Cooking','Prayer','Crafting','Firemaking','Magic','Fletching','Woodcutting','Runecraft','Slayer','Farming','Construction','Hunter','Sailing','Overall'];
         const NUM_SKILLS = 24;
-        let collectionLogData = null;
+
+        let clogData = null;
 
         function formatNumber(n) {
-            if (n >= 1000000000) return (n / 1000000000).toFixed(1) + 'B';
-            if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
-            if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
+            if (n >= 1e9) return (n/1e9).toFixed(1)+'B';
+            if (n >= 1e6) return (n/1e6).toFixed(1)+'M';
+            if (n >= 1e3) return (n/1e3).toFixed(1)+'K';
             return n.toLocaleString();
         }
-
-        function formatDate(dateStr) {
-            if (!dateStr) return '—';
-            const date = new Date(dateStr);
-            return date.toLocaleDateString('en-US', {
-                year: 'numeric', month: 'short', day: 'numeric',
-                hour: '2-digit', minute: '2-digit'
-            });
+        function formatDate(d) {
+            if (!d) return '—';
+            return new Date(d).toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});
         }
-
-        function formatCategoryName(name) {
-            return name.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+        function formatCategoryName(n) { return n.replace(/_/g,' ').replace(/\b\w/g,l=>l.toUpperCase()); }
+        function getProgressColor(p) {
+            if (p < 33) return 'var(--progress-low)';
+            if (p < 66) return 'var(--progress-mid)';
+            return 'var(--progress-high)';
         }
 
         async function loadData() {
-            try {
-                const [skillsRes, bossesRes, clogRes, goalsRes] = await Promise.all([
-                    fetch('data/skills.json').then(r => r.json()).catch(() => null),
-                    fetch('data/bosses.json').then(r => r.json()).catch(() => null),
-                    fetch('data/collection_log.json').then(r => r.json()).catch(() => null),
-                    fetch('data/goals.yaml').then(r => r.text()).catch(() => null)
-                ]);
+            const [skillsRes,bossesRes,clogRes,goalsRes,caRes] = await Promise.all([
+                fetch('data/skills.json').then(r=>r.json()).catch(()=>null),
+                fetch('data/bosses.json').then(r=>r.json()).catch(()=>null),
+                fetch('data/collection_log.json').then(r=>r.json()).catch(()=>null),
+                fetch('data/goals.yaml').then(r=>r.text()).catch(()=>null),
+                fetch('data/combat_achievements.yaml').then(r=>r.text()).catch(()=>null)
+            ]);
 
-                if (skillsRes?.rsn) {
-                    document.getElementById('playerName').textContent = skillsRes.rsn;
-                    document.getElementById('lastUpdated').textContent = formatDate(skillsRes.updated);
-                }
-
-                if (skillsRes?.milestones) {
-                    const m = skillsRes.milestones;
-                    document.getElementById('totalLevel').textContent = m.total_level?.toLocaleString() || '—';
-                    document.getElementById('totalXp').textContent = formatNumber(m.total_xp || 0);
-                    document.getElementById('combatLevel').textContent = m.combat_level || '—';
-                    document.getElementById('count99s').textContent = `${m.skills_99 || 0}/${m.num_skills || NUM_SKILLS}`;
-                }
-
-                if (clogRes?.collection_log) {
-                    const obtained = clogRes.collection_log.unique_obtained || 0;
-                    document.getElementById('clogCount').textContent = obtained > 0 ? obtained.toLocaleString() : '—';
-                    collectionLogData = clogRes;
-                }
-
-                if (bossesRes?.bosses) {
-                    const totalKc = Object.values(bossesRes.bosses).reduce((sum, b) => sum + (b.kc || 0), 0);
-                    document.getElementById('totalBossKc').textContent = formatNumber(totalKc);
-                }
-
-                renderSkills(skillsRes?.skills || {});
-                renderBosses(bossesRes?.bosses || {});
-                renderCollectionLog(clogRes);
-                renderGoals(goalsRes);
-
-            } catch (error) {
-                console.error('Error loading data:', error);
+            if (skillsRes?.rsn) {
+                document.getElementById('playerName').textContent = skillsRes.rsn;
+                document.getElementById('lastUpdated').textContent = formatDate(skillsRes.updated);
             }
+            if (skillsRes?.milestones) {
+                const m = skillsRes.milestones;
+                document.getElementById('totalLevel').textContent = m.total_level?.toLocaleString()||'—';
+                document.getElementById('totalXp').textContent = formatNumber(m.total_xp||0);
+                document.getElementById('combatLevel').textContent = m.combat_level||'—';
+                document.getElementById('count99s').textContent = `${m.skills_99||0}/${m.num_skills||NUM_SKILLS}`;
+            }
+            if (clogRes?.collection_log) {
+                const o = clogRes.collection_log.unique_obtained||0;
+                document.getElementById('clogCount').textContent = o>0?o.toLocaleString():'—';
+                clogData = clogRes;
+            }
+            if (bossesRes?.bosses) {
+                const total = Object.values(bossesRes.bosses).reduce((s,b)=>s+(b.kc||0),0);
+                document.getElementById('totalBossKc').textContent = formatNumber(total);
+            }
+
+            renderSkills(skillsRes?.skills||{});
+            renderBosses(bossesRes?.bosses||{});
+            renderCollectionLog(clogRes);
+            renderCombatAchievements(caRes);
+            renderGoals(goalsRes);
         }
 
         function renderSkills(skills) {
             const grid = document.getElementById('skillsGrid');
-            if (Object.keys(skills).length === 0) {
-                grid.innerHTML = '<div class="empty-state">No skills data available yet.</div>';
-                return;
-            }
-            grid.innerHTML = SKILL_ORDER.map(skillName => {
-                const skill = skills[skillName] || { level: 1, xp: 0 };
-                const isMaxed = skillName !== 'Overall' && skill.level >= 99;
-                const isOverall = skillName === 'Overall';
-                let classes = 'skill-item';
-                if (isMaxed) classes += ' maxed';
-                if (isOverall) classes += ' overall';
-                return `
-                    <div class="${classes}">
-                        <img src="${SKILL_ICONS[skillName] || ''}" alt="${skillName}" class="skill-icon">
-                        <div class="skill-info">
-                            <div class="skill-name">${skillName}</div>
-                            <div class="skill-level">${skill.level || 1}</div>
-                            <div class="skill-xp">${formatNumber(skill.xp || 0)} XP</div>
+            if (!Object.keys(skills).length) { grid.innerHTML='<div class="empty-state">No skills data.</div>'; return; }
+            grid.innerHTML = SKILL_ORDER.map(name => {
+                const s = skills[name]||{level:1,xp:0};
+                const isMaxed = name!=='Overall' && s.level>=99;
+                const isOverall = name==='Overall';
+                const progress = s.progress?.progress||0;
+                const progressColor = getProgressColor(progress);
+                let cls = 'skill-item';
+                if (isMaxed) cls += ' maxed';
+                if (isOverall) cls += ' overall';
+                return `<div class="${cls}">
+                    <img src="${SKILL_ICONS[name]||''}" alt="${name}" class="skill-icon">
+                    <div class="skill-info">
+                        <div class="skill-header">
+                            <span class="skill-name">${name}</span>
+                            <span class="skill-level">${s.level||1}</span>
                         </div>
+                        <div class="skill-xp">${formatNumber(s.xp||0)} XP</div>
+                        ${!isOverall && !isMaxed ? `<div class="skill-progress-bar"><div class="skill-progress-fill" style="width:${progress}%;background:${progressColor}"></div></div>` : ''}
                     </div>
-                `;
+                </div>`;
             }).join('');
         }
 
         function renderBosses(bosses) {
-            const container = document.getElementById('bossesGrid');
-            const sortedBosses = Object.entries(bosses)
-                .filter(([_, data]) => data.kc > 0)
-                .sort((a, b) => b[1].kc - a[1].kc);
-
-            if (sortedBosses.length === 0) {
-                container.innerHTML = '<div class="empty-state">No boss kills recorded yet.</div>';
-                return;
-            }
-            container.innerHTML = sortedBosses.map(([name, data]) => `
-                <div class="boss-item">
-                    <span class="boss-name">${name}</span>
-                    <span class="boss-kc">${data.kc.toLocaleString()} KC</span>
-                </div>
-            `).join('');
+            const c = document.getElementById('bossesGrid');
+            const sorted = Object.entries(bosses).filter(([_,d])=>d.kc>0).sort((a,b)=>b[1].kc-a[1].kc);
+            if (!sorted.length) { c.innerHTML='<div class="empty-state">No boss kills recorded.</div>'; return; }
+            c.innerHTML = sorted.map(([n,d])=>`<div class="boss-item"><span class="boss-name">${n}</span><span class="boss-kc">${d.kc.toLocaleString()} KC</span></div>`).join('');
         }
 
         function renderCollectionLog(data) {
-            const container = document.getElementById('clogContainer');
+            const c = document.getElementById('clogContainer');
+            if (!data?.collection_log) { c.innerHTML='<div class="empty-state">No collection log data. Sync via TempleOSRS RuneLite plugin.</div>'; return; }
+            const sum = data.collection_log;
+            const obt = sum.unique_obtained||0;
+            const tot = sum.unique_total||1615;
+            const pct = tot>0?((obt/tot)*100).toFixed(1):0;
+            const cats = data.categories||{};
+            const catNames = Object.keys(cats).sort();
+            const catOpts = catNames.map(n=>`<option value="${n}">${formatCategoryName(n)}</option>`).join('');
 
-            if (!data || !data.categories || Object.keys(data.categories).length === 0) {
-                container.innerHTML = `
-                    <div class="empty-state">
-                        <p>No collection log data available.</p>
-                        <p style="margin-top: 0.5rem; font-size: 0.85rem;">
-                            Make sure you have the TempleOSRS RuneLite plugin installed and have synced your collection log in-game.
-                        </p>
+            c.innerHTML = `
+                <div class="progress-section">
+                    <div class="progress-header">
+                        <span class="progress-title">Collection Log Progress</span>
+                        <span class="progress-stats"><span class="obtained">${obt.toLocaleString()}</span> <span class="total">/ ${tot.toLocaleString()}</span></span>
                     </div>
-                `;
-                return;
-            }
-
-            const summary = data.collection_log || {};
-            const categories = data.categories || {};
-            const obtained = summary.unique_obtained || 0;
-            const total = summary.unique_total || Object.values(categories).reduce((sum, items) => sum + items.length, 0);
-            const percentage = total > 0 ? ((obtained / total) * 100).toFixed(1) : 0;
-
-            // Build category options
-            const categoryNames = Object.keys(categories).sort();
-            const categoryOptions = categoryNames.map(name => 
-                `<option value="${name}">${formatCategoryName(name)}</option>`
-            ).join('');
-
-            container.innerHTML = `
-                <div class="clog-header-section">
-                    <div class="clog-stats">
-                        <div class="clog-progress-info">
-                            <h3>Collection Log Progress</h3>
-                            <p><strong>${obtained.toLocaleString()}</strong> / ${total.toLocaleString()} unique items</p>
-                        </div>
-                        <div class="clog-percentage">${percentage}%</div>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: ${percentage}%"></div>
-                    </div>
+                    <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>
+                    <div class="progress-percentage">${pct}%</div>
                 </div>
-
                 <div class="clog-filters">
                     <input type="text" class="clog-search" id="clogSearch" placeholder="Search items...">
-                    <select class="clog-select" id="clogCategoryFilter">
-                        <option value="all">All Categories</option>
-                        ${categoryOptions}
-                    </select>
-                    <select class="clog-select" id="clogStatusFilter">
-                        <option value="all">All Items</option>
-                        <option value="obtained">Obtained Only</option>
-                        <option value="missing">Missing Only</option>
-                    </select>
+                    <select class="clog-select" id="clogCatFilter"><option value="all">All Categories</option>${catOpts}</select>
+                    <select class="clog-select" id="clogStatusFilter"><option value="all">All Items</option><option value="obtained">Obtained</option><option value="missing">Missing</option></select>
                 </div>
-
-                <div class="clog-categories" id="clogCategories"></div>
-            `;
-
-            // Initial render
-            renderClogCategories(categories);
-
-            // Add filter listeners
-            document.getElementById('clogSearch').addEventListener('input', () => filterCollectionLog(categories));
-            document.getElementById('clogCategoryFilter').addEventListener('change', () => filterCollectionLog(categories));
-            document.getElementById('clogStatusFilter').addEventListener('change', () => filterCollectionLog(categories));
+                <div id="clogCategories"></div>`;
+            renderClogCategories(cats);
+            document.getElementById('clogSearch').addEventListener('input',()=>filterClog(cats));
+            document.getElementById('clogCatFilter').addEventListener('change',()=>filterClog(cats));
+            document.getElementById('clogStatusFilter').addEventListener('change',()=>filterClog(cats));
         }
 
-        function renderClogCategories(categories, searchTerm = '', categoryFilter = 'all', statusFilter = 'all') {
-            const container = document.getElementById('clogCategories');
-            const categoryNames = Object.keys(categories).sort();
-
-            let html = '';
-            let hasResults = false;
-
-            for (const catName of categoryNames) {
-                if (categoryFilter !== 'all' && catName !== categoryFilter) continue;
-
-                const items = categories[catName] || [];
-                let filteredItems = items;
-
-                // Apply search filter
-                if (searchTerm) {
-                    filteredItems = filteredItems.filter(item => 
-                        item.name.toLowerCase().includes(searchTerm.toLowerCase())
-                    );
-                }
-
-                // Apply status filter
-                if (statusFilter === 'obtained') {
-                    filteredItems = filteredItems.filter(item => item.obtained);
-                } else if (statusFilter === 'missing') {
-                    filteredItems = filteredItems.filter(item => !item.obtained);
-                }
-
-                if (filteredItems.length === 0) continue;
-                hasResults = true;
-
-                const obtainedCount = filteredItems.filter(i => i.obtained).length;
-                const totalCount = filteredItems.length;
-
-                html += `
-                    <div class="clog-category" data-category="${catName}">
-                        <div class="clog-category-header" onclick="toggleCategory(this)">
-                            <span class="clog-category-name">${formatCategoryName(catName)}</span>
-                            <span class="clog-category-count">
-                                <span class="obtained">${obtainedCount}</span> / ${totalCount}
-                                <span class="toggle-icon">▼</span>
-                            </span>
-                        </div>
-                        <div class="clog-category-items">
-                            ${filteredItems.map(item => `
-                                <div class="clog-item ${item.obtained ? 'obtained' : ''}">
-                                    <span class="clog-item-check">${item.obtained ? '✓' : ''}</span>
-                                    <span class="clog-item-name">${item.name}</span>
-                                </div>
-                            `).join('')}
-                        </div>
+        function renderClogCategories(cats, search='', catFilter='all', statusFilter='all') {
+            const c = document.getElementById('clogCategories');
+            const names = Object.keys(cats).sort();
+            let html = '', found = false;
+            for (const name of names) {
+                if (catFilter!=='all' && name!==catFilter) continue;
+                let items = cats[name]||[];
+                if (search) items = items.filter(i=>i.name.toLowerCase().includes(search.toLowerCase()));
+                if (statusFilter==='obtained') items = items.filter(i=>i.obtained);
+                else if (statusFilter==='missing') items = items.filter(i=>!i.obtained);
+                if (!items.length) continue;
+                found = true;
+                const obt = items.filter(i=>i.obtained).length;
+                html += `<div class="clog-category" data-cat="${name}">
+                    <div class="clog-category-header" onclick="toggleCat(this)">
+                        <span class="clog-category-name">${formatCategoryName(name)}</span>
+                        <span class="clog-category-count"><span class="obtained">${obt}</span> / ${items.length} <span class="toggle-icon">▼</span></span>
                     </div>
-                `;
+                    <div class="clog-category-items">${items.map(i=>`<div class="clog-item ${i.obtained?'obtained':''}"><span class="clog-item-check">${i.obtained?'✓':''}</span>${i.name}</div>`).join('')}</div>
+                </div>`;
             }
-
-            if (!hasResults) {
-                html = '<div class="no-results">No items found matching your filters.</div>';
-            }
-
-            container.innerHTML = html;
+            c.innerHTML = found ? html : '<div class="no-results">No items match your filters.</div>';
         }
-
-        function filterCollectionLog(categories) {
-            const searchTerm = document.getElementById('clogSearch').value;
-            const categoryFilter = document.getElementById('clogCategoryFilter').value;
-            const statusFilter = document.getElementById('clogStatusFilter').value;
-            renderClogCategories(categories, searchTerm, categoryFilter, statusFilter);
+        function filterClog(cats) {
+            renderClogCategories(cats, document.getElementById('clogSearch').value, document.getElementById('clogCatFilter').value, document.getElementById('clogStatusFilter').value);
         }
+        function toggleCat(h) { h.closest('.clog-category').classList.toggle('expanded'); }
 
-        function toggleCategory(header) {
-            const category = header.closest('.clog-category');
-            category.classList.toggle('expanded');
-        }
-
-        function renderGoals(yamlText) {
-            const container = document.getElementById('goalsSection');
-            if (!yamlText) {
-                container.innerHTML = '<div class="empty-state">No goals configured. Edit data/goals.yaml to add your goals.</div>';
-                return;
-            }
-
-            const goals = { short_term: [], long_term: [] };
-            let currentSection = null;
-            let currentGoal = null;
-
-            yamlText.split('\n').forEach(line => {
-                line = line.trimEnd();
-                if (!line || line.startsWith('#')) return;
-                if (line === 'short_term:') currentSection = 'short_term';
-                else if (line === 'long_term:') currentSection = 'long_term';
-                else if (line.match(/^\s+-\s+description:/)) {
-                    if (currentGoal && currentSection) goals[currentSection].push(currentGoal);
-                    currentGoal = {
-                        description: line.split('description:')[1].trim().replace(/"/g, ''),
-                        completed: false,
-                        progress: ''
-                    };
-                } else if (line.match(/^\s+completed:/)) {
-                    if (currentGoal) currentGoal.completed = line.includes('true');
-                } else if (line.match(/^\s+progress:/)) {
-                    if (currentGoal) currentGoal.progress = line.split('progress:')[1].trim().replace(/"/g, '');
+        function renderCombatAchievements(yaml) {
+            const c = document.getElementById('caContainer');
+            if (!yaml) { c.innerHTML='<div class="empty-state">No combat achievements data. Edit data/combat_achievements.yaml.</div>'; return; }
+            const tiers = {easy:{done:0,total:33},medium:{done:0,total:41},hard:{done:0,total:63},elite:{done:0,total:129},master:{done:0,total:129},grandmaster:{done:0,total:90}};
+            yaml.split('\n').forEach(line => {
+                const m = line.match(/^\s{4}(\w+):/);
+                if (m) { /* tier name */ }
+                const dm = line.match(/tasks_done:\s*(\d+)/);
+                const tm = line.match(/tasks_total:\s*(\d+)/);
+                // Simple parse for tier stats
+            });
+            // Parse YAML more carefully
+            let currentTier = null;
+            yaml.split('\n').forEach(line => {
+                const tierMatch = line.match(/^\s{2}(\w+):$/);
+                if (tierMatch && tiers[tierMatch[1]]) currentTier = tierMatch[1];
+                if (currentTier) {
+                    const doneMatch = line.match(/tasks_done:\s*(\d+)/);
+                    const totalMatch = line.match(/tasks_total:\s*(\d+)/);
+                    if (doneMatch) tiers[currentTier].done = parseInt(doneMatch[1]);
+                    if (totalMatch) tiers[currentTier].total = parseInt(totalMatch[1]);
                 }
             });
-            if (currentGoal && currentSection) goals[currentSection].push(currentGoal);
+            const totalDone = Object.values(tiers).reduce((s,t)=>s+t.done,0);
+            const totalAll = Object.values(tiers).reduce((s,t)=>s+t.total,0);
+            const pct = totalAll>0?((totalDone/totalAll)*100).toFixed(1):0;
 
-            container.innerHTML = `
-                <div class="goals-column">
-                    <h3>Short-Term Goals</h3>
-                    ${goals.short_term.length ? goals.short_term.map(g => `
-                        <div class="goal-item ${g.completed ? 'completed' : ''}">
-                            <div class="goal-checkbox ${g.completed ? 'completed' : ''}">${g.completed ? '✓' : ''}</div>
-                            <div>
-                                <div class="goal-text">${g.description}</div>
-                                ${g.progress ? `<div class="goal-progress">${g.progress}</div>` : ''}
-                            </div>
-                        </div>
-                    `).join('') : '<p style="color: var(--text-muted)">No short-term goals set.</p>'}
+            c.innerHTML = `
+                <div class="progress-section">
+                    <div class="progress-header">
+                        <span class="progress-title">Combat Achievements</span>
+                        <span class="progress-stats"><span class="obtained">${totalDone}</span> <span class="total">/ ${totalAll}</span></span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>
+                    <div class="progress-percentage">${pct}%</div>
                 </div>
-                <div class="goals-column">
-                    <h3>Long-Term Goals</h3>
-                    ${goals.long_term.length ? goals.long_term.map(g => `
-                        <div class="goal-item ${g.completed ? 'completed' : ''}">
-                            <div class="goal-checkbox ${g.completed ? 'completed' : ''}">${g.completed ? '✓' : ''}</div>
-                            <div>
-                                <div class="goal-text">${g.description}</div>
-                                ${g.progress ? `<div class="goal-progress">${g.progress}</div>` : ''}
-                            </div>
-                        </div>
-                    `).join('') : '<p style="color: var(--text-muted)">No long-term goals set.</p>'}
+                <div class="ca-tiers">
+                    ${Object.entries(tiers).map(([name,t])=>{
+                        const p = t.total>0?((t.done/t.total)*100).toFixed(0):0;
+                        return `<div class="ca-tier">
+                            <div class="ca-tier-name ${name}">${name}</div>
+                            <div class="ca-tier-progress">${t.done} / ${t.total}</div>
+                            <div class="ca-tier-bar"><div class="ca-tier-fill" style="width:${p}%;background:var(--accent-${name==='easy'?'green':name==='medium'?'blue':name==='hard'?'purple':name==='elite'?'gold':'red'})"></div></div>
+                        </div>`;
+                    }).join('')}
                 </div>
-            `;
+                <p style="margin-top:1.5rem;color:var(--text-muted);font-size:0.85rem;text-align:center;">Combat achievements are tracked manually. Edit <code>data/combat_achievements.yaml</code> to update.</p>`;
         }
 
-        // Tab navigation
-        document.querySelectorAll('.nav-tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-                tab.classList.add('active');
-                document.getElementById(tab.dataset.tab).classList.add('active');
+        function renderGoals(yaml) {
+            const c = document.getElementById('goalsSection');
+            if (!yaml) { c.innerHTML='<div class="empty-state">No goals. Edit data/goals.yaml.</div>'; return; }
+            const goals = {short_term:[],long_term:[]};
+            let sec = null, goal = null;
+            yaml.split('\n').forEach(line => {
+                if (line==='short_term:') sec='short_term';
+                else if (line==='long_term:') sec='long_term';
+                else if (line.match(/^\s+-\s+description:/)) {
+                    if (goal&&sec) goals[sec].push(goal);
+                    goal = {description:line.split('description:')[1].trim().replace(/"/g,''),completed:false,progress:''};
+                } else if (line.match(/completed:/) && goal) goal.completed = line.includes('true');
+                else if (line.match(/progress:/) && goal) goal.progress = line.split('progress:')[1].trim().replace(/"/g,'');
             });
-        });
+            if (goal&&sec) goals[sec].push(goal);
+            c.innerHTML = ['short_term','long_term'].map(key=>`
+                <div class="goals-column">
+                    <h3>${key==='short_term'?'Short-Term':'Long-Term'} Goals</h3>
+                    ${goals[key].length?goals[key].map(g=>`
+                        <div class="goal-item ${g.completed?'completed':''}">
+                            <div class="goal-checkbox ${g.completed?'completed':''}">${g.completed?'✓':''}</div>
+                            <div><div class="goal-text">${g.description}</div>${g.progress?`<div class="goal-progress">${g.progress}</div>`:''}</div>
+                        </div>`).join(''):'<p style="color:var(--text-muted)">No goals set.</p>'}
+                </div>`).join('');
+        }
 
+        document.querySelectorAll('.nav-tab').forEach(t=>t.addEventListener('click',()=>{
+            document.querySelectorAll('.nav-tab').forEach(x=>x.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(x=>x.classList.remove('active'));
+            t.classList.add('active');
+            document.getElementById(t.dataset.tab).classList.add('active');
+        }));
         loadData();
     </script>
 </body>
