@@ -324,16 +324,34 @@ def main():
             }
         })
 
-    # Process bosses
+    # Items to exclude from boss list
+    BOSS_EXCLUSIONS = {
+        "Collections Logged", "Combat Achievements", 
+        "PvP Arena", "Colosseum Glory",
+        "Clue Scrolls (all)", "Clue Scrolls (beginner)", "Clue Scrolls (easy)",
+        "Clue Scrolls (medium)", "Clue Scrolls (hard)", "Clue Scrolls (elite)",
+        "Clue Scrolls (master)"
+    }
+    
+    # Process bosses and clue scrolls separately
     bosses = {}
+    clues = {}
     if official and "activities" in official:
         for a in official["activities"]:
             name, score = a.get("name"), a.get("score", -1)
-            if score > 0 and name not in ["Collections Logged", "Combat Achievements", "PvP Arena"]:
-                bosses[name] = {"kc": score, "rank": a.get("rank", -1)}
+            if score > 0:
+                if name in BOSS_EXCLUSIONS:
+                    continue
+                elif "Clue Scrolls" in name or "Clue" in name:
+                    clues[name] = {"count": score, "rank": a.get("rank", -1)}
+                else:
+                    bosses[name] = {"kc": score, "rank": a.get("rank", -1)}
 
     if bosses:
         save_json(DATA_DIR / "bosses.json", {"rsn": RSN, "updated": now.isoformat(), "bosses": bosses})
+
+    if clues:
+        save_json(DATA_DIR / "clues.json", {"rsn": RSN, "updated": now.isoformat(), "clues": clues})
 
     # Load and save collection log
     print("Loading collection log from YAML...")
