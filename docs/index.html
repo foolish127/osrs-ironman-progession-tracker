@@ -85,6 +85,16 @@
         .progress-bar { height: 12px; background: var(--border); border-radius: 6px; overflow: hidden; }
         .progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent-gold-dim), var(--accent-gold)); border-radius: 6px; transition: width 0.5s ease; }
         .progress-percentage { font-family: 'Fira Code', monospace; font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem; text-align: center; }
+        .tier-rewards { font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--border); }
+        .rewards-label { color: var(--text-muted); margin-right: 0.5rem; }
+        .tier-overview { margin: 1.5rem 0; }
+        .tier-overview-title { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .tier-overview-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0.5rem; }
+        .tier-badge { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 0.75rem; text-align: center; position: relative; opacity: 0.5; }
+        .tier-badge.unlocked { opacity: 1; background: rgba(255,255,255,0.03); }
+        .tier-badge-name { display: block; font-weight: 600; font-size: 0.85rem; margin-bottom: 0.25rem; }
+        .tier-badge-points { font-family: 'Fira Code', monospace; font-size: 0.75rem; color: var(--text-muted); }
+        .tier-badge-check { position: absolute; top: 0.25rem; right: 0.5rem; color: var(--accent-green); font-size: 0.75rem; }
         .search-filter { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
         .search-input { flex: 1; min-width: 200px; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); font-size: 0.9rem; }
         .search-input:focus { outline: none; border-color: var(--accent-gold); }
@@ -474,14 +484,82 @@
             const pct = ((caData.total_points / caData.max_points) * 100).toFixed(1);
             const tierColors = { Easy: '#3fb950', Medium: '#58a6ff', Hard: '#a371f7', Elite: '#d4a84b', Master: '#f85149', Grandmaster: '#ff7b72' };
             
+            // CA tier unlock thresholds
+            const tierUnlocks = [
+                { name: 'Easy', points: 33, rewards: ['Ghommal\'s hilt 1', 'Antique lamp (easy CA)'] },
+                { name: 'Medium', points: 115, rewards: ['Ghommal\'s hilt 2', '5% Slayer point boost'] },
+                { name: 'Hard', points: 304, rewards: ['Ghommal\'s hilt 3', '10% Slayer point boost', 'Free instance costs'] },
+                { name: 'Elite', points: 820, rewards: ['Ghommal\'s hilt 4', 'Faster boss respawns', '15% Slayer boost'] },
+                { name: 'Master', points: 1465, rewards: ['Ghommal\'s hilt 5', 'Red slayer helmet recolor'] },
+                { name: 'Grandmaster', points: 2005, rewards: ['Ghommal\'s hilt 6', 'Green slayer helmet recolor'] }
+            ];
+            
+            // Find current and next tier
+            let currentTier = null;
+            let nextTier = null;
+            for (let i = 0; i < tierUnlocks.length; i++) {
+                if (caData.total_points >= tierUnlocks[i].points) {
+                    currentTier = tierUnlocks[i];
+                } else {
+                    nextTier = tierUnlocks[i];
+                    break;
+                }
+            }
+            
             let html = `
                 <div class="progress-section">
                     <div class="progress-header">
-                        <span class="progress-title">Combat Achievements Progress</span>
+                        <span class="progress-title">Overall Progress</span>
                         <span class="progress-stats"><span class="obtained">${caData.total_points}</span> <span class="total">/ ${caData.max_points} points</span></span>
                     </div>
                     <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>
                     <div class="progress-percentage">${pct}% · ${caData.total_completed}/${caData.total_tasks} tasks</div>
+                </div>`;
+            
+            // Tier unlock progress
+            if (nextTier) {
+                const prevPoints = currentTier ? currentTier.points : 0;
+                const pointsInTier = caData.total_points - prevPoints;
+                const pointsNeeded = nextTier.points - prevPoints;
+                const tierPct = ((pointsInTier / pointsNeeded) * 100).toFixed(1);
+                const pointsRemaining = nextTier.points - caData.total_points;
+                
+                html += `
+                <div class="progress-section" style="margin-top: 1rem;">
+                    <div class="progress-header">
+                        <span class="progress-title">Next Unlock: <span style="color:${tierColors[nextTier.name]}">${nextTier.name} Tier</span></span>
+                        <span class="progress-stats"><span class="obtained">${caData.total_points}</span> <span class="total">/ ${nextTier.points} points</span></span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" style="width:${tierPct}%;background:${tierColors[nextTier.name]}"></div></div>
+                    <div class="progress-percentage">${pointsRemaining} points to go</div>
+                    <div class="tier-rewards">
+                        <span class="rewards-label">Unlocks:</span> ${nextTier.rewards.join(' · ')}
+                    </div>
+                </div>`;
+            } else {
+                html += `
+                <div class="progress-section" style="margin-top: 1rem; border-color: var(--accent-gold);">
+                    <div class="progress-header">
+                        <span class="progress-title" style="color: var(--accent-gold);">🏆 Grandmaster Tier Unlocked!</span>
+                    </div>
+                    <div class="tier-rewards">All Combat Achievement rewards unlocked</div>
+                </div>`;
+            }
+            
+            // Tier overview
+            html += `
+                <div class="tier-overview">
+                    <div class="tier-overview-title">Tier Unlocks</div>
+                    <div class="tier-overview-grid">
+                        ${tierUnlocks.map(tier => {
+                            const unlocked = caData.total_points >= tier.points;
+                            return `<div class="tier-badge ${unlocked ? 'unlocked' : ''}" style="border-color:${tierColors[tier.name]}">
+                                <span class="tier-badge-name" style="color:${unlocked ? tierColors[tier.name] : 'var(--text-muted)'}">${tier.name}</span>
+                                <span class="tier-badge-points">${tier.points} pts</span>
+                                ${unlocked ? '<span class="tier-badge-check">✓</span>' : ''}
+                            </div>`;
+                        }).join('')}
+                    </div>
                 </div>`;
             
             // Recent activity
