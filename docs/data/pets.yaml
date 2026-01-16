@@ -1,95 +1,75 @@
 # FoolinSlays Pet Tracker
-# Format: Pet Name: YYYY-MM-DD (or null if not obtained)
-# Update the date when you get a pet!
+# Format: name | YYYY-MM-DD (date is optional)
+# Example: Rocky | 2024-03-15
+# Total: 2 / 58 pets
 
-# ===================
-# OBTAINED PETS
-# ===================
-Rocky: 2024-01-15  # Update with actual date!
-Phoenix: 2024-02-20  # Update with actual date!
+obtained:
+  - Phoenix |
+  - Rocky |
 
-# ===================
-# SKILLING PETS
-# ===================
-Heron: null
-Beaver: null
-Rock golem: null
-Tangleroot: null
-Giant squirrel: null
-Rift guardian: null
-Baby chinchompa: null
-Soup: null
-
-# ===================
-# BOSS PETS
-# ===================
-# Slayer Bosses
-Abyssal orphan: null
-Hellpuppy: null
-Ikkle hydra: null
-Pet kraken: null
-Pet smoke devil: null
-Noon: null
-Skotos: null
-
-# Regular Bosses
-Baby mole: null
-Kalphite princess: null
-Prince black dragon: null
-Pet chaos elemental: null
-Scorpia's offspring: null
-Callisto cub: null
-Venenatis spiderling: null
-Vet'ion jr.: null
-Pet snakeling: null
-Vorki: null
-Sraracha: null
-Scurry: null
-Tiny tempor: null
-Smolcano: null
-
-# GWD Pets
-Pet general graardor: null
-Pet zilyana: null
-Pet kree'arra: null
-Pet k'ril tsutsaroth: null
-Nexling: null
-
-# Raid Pets
-Olmlet: null
-Lil' zik: null
-Tumeken's guardian: null
-
-# DT2 Pets
-Muphin: null
-Wisp: null
-Lil'viathan: null
-Baron: null
-Butch: null
-
-# Wilderness Pets
-Artio: null
-Spindel: null
-Calvar'ion: null
-
-# Other Pets
-Tzrek-jad: null
-Jal-nib-rek: null
-Pet dark core: null
-Bloodhound: null
-Lil' creator: null
-Pet penance queen: null
-Youngllef: null
-Chompy chick: null
-Herbi: null
-Abyssal protector: null
-Nid: null
-Smol heredit: null
-Little nightmare: null
-Huberte: null
-Moxi: null
-Dom: null
-Yami: null
-Bran: null
-Gull: null
-Tiny pearl: null
+missing:
+  - Abyssal orphan (Abyssal Sire)
+  - Abyssal protector (Guardians of the Rift)
+  - Baby chinchompa (Hunter)
+  - Baby mole (Giant Mole)
+  - Baron (Duke Sucellus)
+  - Beaver (Woodcutting)
+  - Bloodhound (Master Clues)
+  - Bran (Royal Titans)
+  - Butch (Vardorvis)
+  - Callisto cub (Callisto/Artio)
+  - Chompy chick (Chompy Hunting)
+  - Dom (Doom of Mokhaiotl)
+  - Giant squirrel (Agility)
+  - Gull (Shellbane Gryphon)
+  - Hellpuppy (Cerberus)
+  - Herbi (Herbiboar)
+  - Heron (Fishing)
+  - Huberte (The Hueycoatl)
+  - Ikkle hydra (Alchemical Hydra)
+  - Jal-nib-rek (The Inferno)
+  - Kalphite princess (Kalphite Queen)
+  - Lil' creator (Soul Wars)
+  - Lil' zik (Theatre of Blood)
+  - Lil'viathan (The Leviathan)
+  - Little nightmare (The Nightmare)
+  - Moxi (Amoxliatl)
+  - Muphin (Phantom Muspah)
+  - Nexling (Nex)
+  - Nid (Araxxor)
+  - Noon (Grotesque Guardians)
+  - Olmlet (Chambers of Xeric)
+  - Pet chaos elemental (Chaos Elemental)
+  - Pet dagannoth prime (Dagannoth Kings)
+  - Pet dagannoth rex (Dagannoth Kings)
+  - Pet dagannoth supreme (Dagannoth Kings)
+  - Pet dark core (Corporeal Beast)
+  - Pet general graardor (General Graardor)
+  - Pet k'ril tsutsaroth (K'ril Tsutsaroth)
+  - Pet kraken (Kraken)
+  - Pet kree'arra (Kree'arra)
+  - Pet penance queen (Barbarian Assault)
+  - Pet smoke devil (Thermonuclear)
+  - Pet snakeling (Zulrah)
+  - Pet zilyana (Commander Zilyana)
+  - Prince black dragon (King Black Dragon)
+  - Quetzin (Hunter Guild)
+  - Rift guardian (Runecraft)
+  - Rock golem (Mining)
+  - Scorpia's offspring (Scorpia)
+  - Scurry (Scurrius)
+  - Skotos (Skotizo)
+  - Smol heredit (Fortis Colosseum)
+  - Smolcano (Zalcano)
+  - Soup (Cooking)
+  - Sraracha (Sarachnis)
+  - Tangleroot (Farming)
+  - Tiny tempor (Tempoross)
+  - Tumeken's guardian (Tombs of Amascut)
+  - Tzrek-jad (Fight Caves)
+  - Venenatis spiderling (Venenatis/Spindel)
+  - Vet'ion jr. (Vet'ion/Calvar'ion)
+  - Vorki (Vorkath)
+  - Wisp (The Whisperer)
+  - Yami (Yama)
+  - Youngllef (The Gauntlet)
