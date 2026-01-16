@@ -181,6 +181,7 @@
             <div class="stat-card"><div class="stat-label">CA Tasks</div><div class="stat-value" id="caTasks">—</div></div>
             <div class="stat-card"><div class="stat-label">Pets</div><div class="stat-value purple" id="petCount">—</div></div>
             <div class="stat-card"><div class="stat-label">Clues</div><div class="stat-value" id="clueCount">—</div></div>
+            <div class="stat-card"><div class="stat-label">Quests</div><div class="stat-value green" id="questCount">—</div></div>
         </div>
 
         <nav class="nav-tabs">
@@ -190,6 +191,7 @@
             <button class="nav-tab" data-tab="clog">Collection Log</button>
             <button class="nav-tab" data-tab="ca">Combat Achievements</button>
             <button class="nav-tab" data-tab="pets">Pets</button>
+            <button class="nav-tab" data-tab="quests">Quests</button>
             <button class="nav-tab" data-tab="goals">Goals</button>
         </nav>
 
@@ -215,6 +217,10 @@
 
         <div id="pets" class="tab-content">
             <div id="petsContainer">Loading...</div>
+        </div>
+
+        <div id="quests" class="tab-content">
+            <div id="questsContainer">Loading...</div>
         </div>
 
         <div id="goals" class="tab-content">
@@ -256,15 +262,17 @@
         let caData = null;
         let petsData = null;
         let cluesData = null;
+        let questsData = null;
 
         async function loadData() {
-            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, goalsRes] = await Promise.all([
+            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, goalsRes] = await Promise.all([
                 fetch('./data/skills.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/bosses.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/clues.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/collection_log.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/combat_achievements.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/pets.json').then(r=>r.json()).catch(()=>null),
+                fetch('./data/quests.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/goals.yaml').then(r=>r.text()).catch(()=>null)
             ]);
 
@@ -303,12 +311,18 @@
                 document.getElementById('clueCount').textContent = totalClues.toLocaleString();
             }
 
+            if (questsRes?.quests) {
+                questsData = questsRes.quests;
+                document.getElementById('questCount').textContent = `${questsData.total_completed}/${questsData.total_quests}`;
+            }
+
             if (skillsRes?.skills) renderSkills(skillsRes.skills);
             if (bossesRes?.bosses) renderBosses(bossesRes.bosses);
             renderClues();
             renderCollectionLog();
             renderCombatAchievements();
             renderPets();
+            renderQuests();
             if (goalsRes) renderGoals(goalsRes);
         }
 
@@ -717,6 +731,119 @@
                     ${p.date ? `<div class="pet-date">${formatShortDate(p.date)}</div>` : ''}
                 </div>
             `).join('') || '<div class="empty-state">No pets match your search</div>';
+        }
+
+        function renderQuests() {
+            const container = document.getElementById('questsContainer');
+            if (!questsData) {
+                container.innerHTML = '<div class="empty-state">Quest data not available</div>';
+                return;
+            }
+
+            const pct = ((questsData.total_completed / questsData.total_quests) * 100).toFixed(1);
+            const qpPct = ((questsData.quest_points / questsData.max_quest_points) * 100).toFixed(1);
+            
+            let html = `
+                <div class="progress-section">
+                    <div class="progress-header">
+                        <span class="progress-title">📜 Quest Progress</span>
+                        <span class="progress-stats"><span class="obtained">${questsData.total_completed}</span> <span class="total">/ ${questsData.total_quests}</span></span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>
+                    <div class="progress-percentage">${pct}%</div>
+                </div>
+                <div class="progress-section">
+                    <div class="progress-header">
+                        <span class="progress-title">⭐ Quest Points</span>
+                        <span class="progress-stats"><span class="obtained">${questsData.quest_points}</span> <span class="total">/ ${questsData.max_quest_points}</span></span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" style="width:${qpPct}%"></div></div>
+                    <div class="progress-percentage">${qpPct}%</div>
+                </div>
+                <div class="search-filter">
+                    <input type="text" class="search-input" id="questSearch" placeholder="Search quests...">
+                    <select class="filter-select" id="questFilter">
+                        <option value="all">All Quests</option>
+                        <option value="completed">Completed</option>
+                        <option value="incomplete">Not Completed</option>
+                        <option value="f2p">Free-to-play</option>
+                        <option value="members">Members</option>
+                        <option value="miniquests">Miniquests</option>
+                    </select>
+                </div>
+                <div id="questsList"></div>`;
+            
+            container.innerHTML = html;
+            
+            document.getElementById('questSearch').addEventListener('input', renderQuestList);
+            document.getElementById('questFilter').addEventListener('change', renderQuestList);
+            
+            renderQuestList();
+        }
+
+        function renderQuestList() {
+            const list = document.getElementById('questsList');
+            const search = document.getElementById('questSearch').value.toLowerCase();
+            const filter = document.getElementById('questFilter').value;
+            
+            const categories = ['Free-to-play', 'Members', 'Miniquests'];
+            let html = '';
+            
+            categories.forEach(cat => {
+                const catData = questsData.categories[cat];
+                if (!catData) return;
+                
+                // Filter by category
+                if (filter === 'f2p' && cat !== 'Free-to-play') return;
+                if (filter === 'members' && cat !== 'Members') return;
+                if (filter === 'miniquests' && cat !== 'Miniquests') return;
+                
+                let quests = [];
+                
+                if (filter === 'all' || filter === 'completed' || filter === 'f2p' || filter === 'members' || filter === 'miniquests') {
+                    quests = quests.concat((catData.completed || []).map(q => ({...q, completed: true})));
+                }
+                if (filter === 'all' || filter === 'incomplete' || filter === 'f2p' || filter === 'members' || filter === 'miniquests') {
+                    quests = quests.concat((catData.not_completed || []).map(q => ({...q, completed: false})));
+                }
+                
+                // Filter by search
+                if (search) {
+                    quests = quests.filter(q => q.name.toLowerCase().includes(search));
+                }
+                
+                if (quests.length === 0) return;
+                
+                // Sort: completed first (by date), then incomplete
+                quests.sort((a, b) => {
+                    if (a.completed !== b.completed) return b.completed - a.completed;
+                    if (a.completed && b.completed && a.date && b.date) return a.date.localeCompare(b.date);
+                    return a.name.localeCompare(b.name);
+                });
+                
+                const completedCount = quests.filter(q => q.completed).length;
+                
+                html += `
+                    <div class="collection">
+                        <div class="collection-header" onclick="this.parentElement.classList.toggle('expanded')">
+                            <span class="collection-name">${cat}</span>
+                            <span class="collection-count"><span class="obtained">${completedCount}</span> <span class="total">/ ${catData.completed.length + catData.not_completed.length}</span></span>
+                        </div>
+                        <div class="collection-items">
+                            <div class="item-list">
+                                ${quests.map(q => `
+                                    <div class="item ${q.completed ? 'obtained' : 'missing'}">
+                                        <span class="item-check">${q.completed ? '✓' : '○'}</span>
+                                        <span class="item-name">${q.name}</span>
+                                        ${q.date ? `<span class="item-date">${formatShortDate(q.date)}</span>` : ''}
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    </div>`;
+            });
+            
+            list.innerHTML = html || '<div class="empty-state">No quests match your search</div>';
         }
 
         function renderGoals(yaml) {

@@ -246,6 +246,98 @@ def parse_pets_yaml(content):
     
     return result
 
+def parse_quests_yaml(content):
+    """Parse the quests.yaml structure"""
+    result = {}
+    current_category = None
+    current_section = None
+    
+    for line in content.split('\n'):
+        if not line or line.startswith('#'):
+            continue
+        
+        stripped = line.strip()
+        indent = len(line) - len(stripped)
+        
+        # Top level category (Free-to-play:, Members:, Miniquests:)
+        if indent == 0 and stripped.endswith(':'):
+            current_category = stripped[:-1]
+            result[current_category] = {'completed': [], 'not_completed': []}
+            current_section = None
+        # Sub-section (completed:, not_completed:)
+        elif indent == 2 and stripped.endswith(':'):
+            current_section = stripped[:-1]
+        # Quest item
+        elif stripped.startswith('- ') and current_category and current_section:
+            item_text = stripped[2:]
+            # Parse "name | date" or "name |" or "name"
+            if ' | ' in item_text:
+                parts = item_text.split(' | ', 1)
+                name = parts[0].strip()
+                date = parts[1].strip() if parts[1].strip() else None
+            elif item_text.endswith(' |'):
+                name = item_text[:-2].strip()
+                date = None
+            else:
+                name = item_text.strip()
+                date = None
+            
+            result[current_category][current_section].append({'name': name, 'date': date})
+    
+    return result
+
+def load_quests():
+    """Load quests from YAML file with date support"""
+    yaml_path = DATA_DIR / "quests.yaml"
+    if not yaml_path.exists():
+        print(f"Quests YAML not found: {yaml_path}")
+        return None
+    
+    with open(yaml_path, 'r') as f:
+        content = f.read()
+    
+    data = parse_quests_yaml(content)
+    
+    categories = {}
+    total_completed = 0
+    total_quests = 0
+    miniquest_completed = 0
+    miniquest_total = 0
+    
+    for cat_name in ['Free-to-play', 'Members', 'Miniquests']:
+        if cat_name not in data:
+            continue
+        
+        completed = data[cat_name].get('completed', [])
+        not_completed = data[cat_name].get('not_completed', [])
+        
+        categories[cat_name] = {
+            'completed': completed,
+            'not_completed': [item['name'] if isinstance(item, dict) else item for item in not_completed]
+        }
+        
+        cat_total = len(completed) + len(not_completed)
+        
+        if cat_name == 'Miniquests':
+            miniquest_completed = len(completed)
+            miniquest_total = cat_total
+        else:
+            total_completed += len(completed)
+            total_quests += cat_total
+    
+    # Quest points - 314 is max as of late 2025
+    quest_points = 314 if total_completed == total_quests else 0
+    
+    return {
+        'categories': categories,
+        'total_completed': total_completed,
+        'total_quests': total_quests,
+        'quest_points': quest_points,
+        'max_quest_points': 314,
+        'miniquests_completed': miniquest_completed,
+        'total_miniquests': miniquest_total
+    }
+
 def load_pets():
     """Load pets from YAML file with date support"""
     yaml_path = DATA_DIR / "pets.yaml"
@@ -376,6 +468,15 @@ def main():
             "rsn": RSN, "updated": now.isoformat(), "pets": pets
         })
         print(f"Pets: {pets['total_obtained']}/{pets['total_pets']} pets")
+
+    # Load and save quests
+    print("Loading quests from YAML...")
+    quests = load_quests()
+    if quests:
+        save_json(DATA_DIR / "quests.json", {
+            "rsn": RSN, "updated": now.isoformat(), "quests": quests
+        })
+        print(f"Quests: {quests['total_completed']}/{quests['total_quests']} ({quests['quest_points']} QP)")
 
     print("-" * 50)
     print("Update complete!")
