@@ -1,6 +1,7 @@
 # FoolinSlays Collection Log Tracker
-# Format for obtained items: "Item Name: YYYY-MM-DD" or "Item Name: null" for unknown date
-# Format for missing items: just "- Item Name"
+# Format: item name | YYYY-MM-DD (date optional)
+# Example: Abyssal whip | 2024-06-15
+# Total: 425 / 1692 items
 
 Abyssal Sire:
   obtained:
@@ -16,7 +17,7 @@ Abyssal Sire, All Pets:
   - Abyssal orphan
 Abyssal Sire, Slayer:
   obtained:
-    Abyssal whip: null
+  - Abyssal whip |
   missing:
   - Abyssal dagger
   - Abyssal head
@@ -41,7 +42,7 @@ Alchemical Hydra, All Pets:
   - Ikkle hydra
 Alchemical Hydra, Slayer:
   obtained:
-    Dragon thrownaxe: null
+  - Dragon thrownaxe |
   missing:
   - Dragon knife
   - Hydra tail
@@ -62,7 +63,7 @@ All Pets, Miscellaneous:
   - Herbi
 All Pets, Skilling Pets:
   obtained:
-    Rocky: null
+  - Rocky |
   missing:
   - Baby chinchompa (grey)
   - Beaver
@@ -77,8 +78,8 @@ Amoxliatl, All Pets:
   - Moxi
 Amoxliatl, Slayer:
   obtained:
-    Frozen tear: null
-    Pendant of ates (inert): null
+  - Frozen tear |
+  - Pendant of ates (inert) |
   missing:
   - Glacial temotli
 Araxxor:
@@ -119,34 +120,34 @@ Barbarian Assault, Slayer:
   - Granite helm
 Barracuda Trials:
   obtained:
-    Barrel stand: null
-    Captured wind mote: null
-    Fetid key: null
-    Ralph's fabric roll: null
-    Serrated key: null
-    Stormy key: null
+  - Barrel stand |
+  - Captured wind mote |
+  - Fetid key |
+  - Ralph's fabric roll |
+  - Serrated key |
+  - Stormy key |
   missing:
   - Gurtob's fabric roll
   - Gwyna's fabric roll
   - Heart of ithell
 Barrows Chests:
   obtained:
-    Ahrim's robeskirt: null
-    Ahrim's robetop: null
-    Ahrim's staff: null
-    Dharok's greataxe: null
-    Dharok's platelegs: null
-    Guthan's chainskirt: null
-    Guthan's platebody: null
-    Karil's coif: null
-    Karil's crossbow: null
-    Karil's leathertop: null
-    Torag's hammers: null
-    Torag's helm: null
-    Torag's platebody: null
-    Verac's flail: null
-    Verac's helm: null
-    Verac's plateskirt: null
+  - Ahrim's robeskirt |
+  - Ahrim's robetop |
+  - Ahrim's staff |
+  - Dharok's greataxe |
+  - Dharok's platelegs |
+  - Guthan's chainskirt |
+  - Guthan's platebody |
+  - Karil's coif |
+  - Karil's crossbow |
+  - Karil's leathertop |
+  - Torag's hammers |
+  - Torag's helm |
+  - Torag's platebody |
+  - Verac's flail |
+  - Verac's helm |
+  - Verac's plateskirt |
   missing:
   - Ahrim's hood
   - Bolt rack
@@ -159,17 +160,17 @@ Barrows Chests:
   - Verac's brassard
 Beginner Treasure Trails:
   obtained:
-    Bear feet: null
-    Demon feet: null
-    Frog slippers: null
-    Jester cape: null
-    Mole slippers: null
-    Monk's robe (t): null
-    Monk's robe top (t): null
-    Rune scimitar ornament kit (guthix): null
-    Sandwich lady bottom: null
-    Sandwich lady hat: null
-    Shoulder parrot: null
+  - Bear feet |
+  - Demon feet |
+  - Frog slippers |
+  - Jester cape |
+  - Mole slippers |
+  - Monk's robe (t) |
+  - Monk's robe top (t) |
+  - Rune scimitar ornament kit (guthix) |
+  - Sandwich lady bottom |
+  - Sandwich lady hat |
+  - Shoulder parrot |
   missing:
   - Amulet of defence (t)
   - Rune scimitar ornament kit (saradomin)
@@ -177,11 +178,11 @@ Beginner Treasure Trails:
   - Sandwich lady top
 Beginner Treasure Trails, Easy Treasure Trails:
   obtained:
-    Black pickaxe: null
+  - Black pickaxe |
   missing:
 Boat Paints:
   obtained:
-    Shark paint: null
+  - Shark paint |
   missing:
   - Angler's paint
   - Armadylean paint
@@ -195,8 +196,8 @@ Boat Paints:
   - Zamorakian paint
 Brimhaven Agility Arena:
   obtained:
-    Agility arena ticket: null
-    Brimhaven voucher: null
+  - Agility arena ticket |
+  - Brimhaven voucher |
   missing:
   - Graceful boots (Agility Arena)
   - Graceful cape (Agility Arena)
@@ -221,7 +222,7 @@ Callisto and Artio, All Pets:
   - Callisto cub
 Callisto and Artio, Chaos Elemental, Kalphite Queen, King Black Dragon, Venenatis and Spindel, Vet'ion and Calvar'ion:
   obtained:
-    Dragon pickaxe: null
+  - Dragon pickaxe |
   missing:
 Callisto and Artio, Chaos Elemental, Kalphite Queen, Scorpia, Venenatis and Spindel, Vet'ion and Calvar'ion:
   obtained:
@@ -284,8 +285,8 @@ Castle Wars:
   - Zamorak halo
 Cerberus:
   obtained:
-    Key master teleport: null
-    Smouldering stone: null
+  - Key master teleport |
+  - Smouldering stone |
   missing:
   - Eternal crystal
   - Jar of souls
@@ -326,11 +327,11 @@ Chambers of Xeric, All Pets:
   - Olmlet
 Champion's Challenge:
   obtained:
+  - Giant champion scroll |
   missing:
   - Champion's cape
   - Earth warrior champion scroll
   - Ghoul champion scroll
-  - Giant champion scroll
   - Goblin champion scroll
   - Hobgoblin champion scroll
   - Imp champion scroll
@@ -349,13 +350,13 @@ Chaos Fanatic:
   - Odium shard 1
 Chompy Bird Hunting:
   obtained:
-    Chompy bird hat (bowman): null
-    Chompy bird hat (marksman): null
-    Chompy bird hat (ogre bowman): null
-    Chompy bird hat (ogre marksman): null
-    Chompy bird hat (ogre woodsman): null
-    Chompy bird hat (ogre yeoman): null
-    Chompy bird hat (yeoman): null
+  - Chompy bird hat (bowman) |
+  - Chompy bird hat (marksman) |
+  - Chompy bird hat (ogre bowman) |
+  - Chompy bird hat (ogre marksman) |
+  - Chompy bird hat (ogre woodsman) |
+  - Chompy bird hat (ogre yeoman) |
+  - Chompy bird hat (yeoman) |
   missing:
   - Chompy bird hat (bowmaster)
   - Chompy bird hat (dragon archer)
@@ -411,14 +412,14 @@ Corporeal Beast, All Pets:
   - Pet dark core
 Crazy Archaeologist:
   obtained:
-    Fedora: null
-    Malediction shard 2: null
+  - Fedora |
+  - Malediction shard 2 |
   missing:
   - Odium shard 2
 Creature Creation:
   obtained:
-    Red satchel: null
-    Tea flask: null
+  - Red satchel |
+  - Tea flask |
   missing:
   - Black satchel
   - Gold satchel
@@ -427,18 +428,18 @@ Creature Creation:
   - Rune satchel
 Cyclopes:
   obtained:
-    Adamant defender: null
-    Black defender: null
-    Bronze defender: null
-    Dragon defender: null
-    Iron defender: null
-    Mithril defender: null
-    Rune defender: null
-    Steel defender: null
+  - Adamant defender |
+  - Black defender |
+  - Bronze defender |
+  - Dragon defender |
+  - Iron defender |
+  - Mithril defender |
+  - Rune defender |
+  - Steel defender |
   missing:
 Dagannoth Kings:
   obtained:
-    Berserker ring: null
+  - Berserker ring |
   missing:
   - Archers ring
   - Mud battlestaff
@@ -453,7 +454,7 @@ Dagannoth Kings, All Pets:
   - Pet dagannoth supreme
 Dagannoth Kings, Wintertodt:
   obtained:
-    Dragon axe: null
+  - Dragon axe |
   missing:
 Deranged archaeologist:
   obtained:
@@ -492,18 +493,18 @@ Duke Sucellus, The Leviathan, Vardorvis, The Whisperer:
   - Virtus robe top
 Easy Treasure Trails:
   obtained:
-    Ancient robe legs: null
-    Black helm (h1): null
-    Black helm (h5): null
-    Black wizard hat (t): null
-    Blue elegant legs: null
-    Blue skirt (t): null
-    Blue wizard hat (g): null
-    Bob's black shirt: null
-    Bronze full helm (g): null
-    Iron platebody (t): null
-    Iron plateskirt (g): null
-    Zamorak robe legs: null
+  - Ancient robe legs |
+  - Black helm (h1) |
+  - Black helm (h5) |
+  - Black wizard hat (t) |
+  - Blue elegant legs |
+  - Blue skirt (t) |
+  - Blue wizard hat (g) |
+  - Bob's black shirt |
+  - Bronze full helm (g) |
+  - Iron platebody (t) |
+  - Iron plateskirt (g) |
+  - Zamorak robe legs |
   missing:
   - A powdered wig
   - Amulet of magic (t)
@@ -631,11 +632,11 @@ Elder Chaos Druids:
   - Elder chaos top
 Elite Treasure Trails:
   obtained:
-    Bronze dragon mask: null
-    Bucket helm: null
-    Dragon scimitar ornament kit: null
-    Royal sceptre: null
-    Steel dragon mask: null
+  - Bronze dragon mask |
+  - Bucket helm |
+  - Dragon scimitar ornament kit |
+  - Royal sceptre |
+  - Steel dragon mask |
   missing:
   - Adamant dragon mask
   - Afro
@@ -717,23 +718,23 @@ Elite Treasure Trails, Master Treasure Trails:
   - Ring of 3rd age
 Fishing Trawler, Aerial Fishing:
   obtained:
-    Angler boots: null
-    Angler hat: null
-    Angler top: null
-    Angler waders: null
+  - Angler boots |
+  - Angler hat |
+  - Angler top |
+  - Angler waders |
   missing:
 Forestry:
   obtained:
-    Cape pouch: null
-    Felling axe handle: null
-    Fox whistle: null
-    Log basket: null
-    Log brace: null
-    Pheasant boots: null
-    Pheasant cape: null
-    Pheasant hat: null
-    Pheasant legs: null
-    Sturdy beehive parts: null
+  - Cape pouch |
+  - Felling axe handle |
+  - Fox whistle |
+  - Log basket |
+  - Log brace |
+  - Pheasant boots |
+  - Pheasant cape |
+  - Pheasant hat |
+  - Pheasant legs |
+  - Sturdy beehive parts |
   missing:
   - Clothes pouch blueprint
   - Forestry boots
@@ -746,7 +747,7 @@ Forestry:
   - Twitcher's gloves
 Fortis Colosseum:
   obtained:
-    Sunfire splinters: null
+  - Sunfire splinters |
   missing:
   - Dizana's quiver (uncharged)
   - Echo crystal
@@ -788,8 +789,8 @@ General Graardor, All Pets:
   - Pet general graardor
 Giant Mole:
   obtained:
-    Mole claw: null
-    Mole skin: null
+  - Mole claw |
+  - Mole skin |
   missing:
 Giant Mole, All Pets:
   obtained:
@@ -797,8 +798,8 @@ Giant Mole, All Pets:
   - Baby mole
 Giants' Foundry:
   obtained:
-    Double ammo mould: null
-    Smiths gloves: null
+  - Double ammo mould |
+  - Smiths gloves |
   missing:
   - Colossal blade
   - Kovac's grog
@@ -809,11 +810,11 @@ Giants' Foundry:
   - Smiths tunic
 Glough's Experiments:
   obtained:
-    Ballista limbs: null
-    Ballista spring: null
-    Light frame: null
-    Monkey tail: null
-    Zenyte shard: null
+  - Ballista limbs |
+  - Ballista spring |
+  - Light frame |
+  - Monkey tail |
+  - Zenyte shard |
   missing:
   - Heavy frame
 Gnome Restaurant:
@@ -825,8 +826,8 @@ Gnome Restaurant:
   - Mint cake
 Grotesque Guardians:
   obtained:
-    Granite dust: null
-    Granite gloves: null
+  - Granite dust |
+  - Granite gloves |
   missing:
   - Black tourmaline core
   - Granite hammer
@@ -838,13 +839,13 @@ Grotesque Guardians, All Pets:
   - Noon
 Guardians of the Rift:
   obtained:
-    Abyssal lantern: null
-    Abyssal pearls: null
-    Boots of the eye: null
-    Catalytic talisman: null
-    Intricate pouch: null
-    Lost bag: null
-    Robe bottoms of the eye: null
+  - Abyssal lantern |
+  - Abyssal pearls |
+  - Boots of the eye |
+  - Catalytic talisman |
+  - Intricate pouch |
+  - Lost bag |
+  - Robe bottoms of the eye |
   missing:
   - Abyssal blue dye
   - Abyssal green dye
@@ -880,52 +881,53 @@ Hallowed Sepulchre:
   - Strange old lockpick (full)
 Hard Treasure Trails:
   obtained:
-    Ancient bracers: null
-    Ancient full helm: null
-    Ancient kiteshield: null
-    Ancient plateskirt: null
-    Armadyl d'hide body: null
-    Armadyl kiteshield: null
-    Armadyl platelegs: null
-    Bandos chaps: null
-    Bandos coif: null
-    Bandos d'hide body: null
-    Bandos full helm: null
-    Bandos platebody: null
-    Blue d'hide chaps (g): null
-    Dragon boots ornament kit: null
-    Explorer backpack: null
-    Guthix chaps: null
-    Guthix d'hide body: null
-    Guthix platelegs: null
-    Guthix plateskirt: null
-    Guthix stole: null
-    Magic comp bow: null
-    Pirate's hat: null
-    Red cavalier: null
-    Red d'hide body (g): null
-    Red d'hide chaps (t): null
-    Red dragon mask: null
-    Robin hood hat: null
-    Rune defender ornament kit: null
-    Rune full helm (g): null
-    Rune helm (h2): null
-    Rune helm (h3): null
-    Rune helm (h5): null
-    Rune kiteshield (g): null
-    Rune platebody (g): null
-    Rune platebody (t): null
-    Rune platelegs (g): null
-    Rune shield (h1): null
-    Saradomin bracers: null
-    Saradomin full helm: null
-    Saradomin platebody: null
-    Saradomin platelegs: null
-    Tan cavalier: null
-    Tzhaar-ket-om ornament kit: null
-    Zamorak bracers: null
-    Zamorak d'hide body: null
-    Zamorak d'hide boots: null
+  - Ancient bracers |
+  - Ancient full helm |
+  - Ancient kiteshield |
+  - Ancient plateskirt |
+  - Armadyl d'hide body |
+  - Armadyl kiteshield |
+  - Armadyl platelegs |
+  - Bandos chaps |
+  - Bandos coif |
+  - Bandos d'hide body |
+  - Bandos full helm |
+  - Bandos platebody |
+  - Blue d'hide chaps (g) |
+  - Dragon boots ornament kit |
+  - Enchanted top |
+  - Explorer backpack |
+  - Guthix chaps |
+  - Guthix d'hide body |
+  - Guthix platelegs |
+  - Guthix plateskirt |
+  - Guthix stole |
+  - Magic comp bow |
+  - Pirate's hat |
+  - Red cavalier |
+  - Red d'hide body (g) |
+  - Red d'hide chaps (t) |
+  - Red dragon mask |
+  - Robin hood hat |
+  - Rune defender ornament kit |
+  - Rune full helm (g) |
+  - Rune helm (h2) |
+  - Rune helm (h3) |
+  - Rune helm (h5) |
+  - Rune kiteshield (g) |
+  - Rune platebody (g) |
+  - Rune platebody (t) |
+  - Rune platelegs (g) |
+  - Rune shield (h1) |
+  - Saradomin bracers |
+  - Saradomin full helm |
+  - Saradomin platebody |
+  - Saradomin platelegs |
+  - Tan cavalier |
+  - Tzhaar-ket-om ornament kit |
+  - Zamorak bracers |
+  - Zamorak d'hide body |
+  - Zamorak d'hide boots |
   missing:
   - Amulet of glory (t4)
   - Ancient chaps
@@ -961,7 +963,6 @@ Hard Treasure Trails:
   - Dual sai
   - Enchanted hat
   - Enchanted robe
-  - Enchanted top
   - Green dragon mask
   - Guthix bracers
   - Guthix coif
@@ -1044,15 +1045,15 @@ Hard Treasure Trails (Rare), Elite Treasure Trails (Rare), Master Treasure Trail
   - Gilded sq shield
 Hespori:
   obtained:
-    Attas seed: null
-    Bottomless compost bucket: null
-    Iasor seed: null
-    Kronos seed: null
+  - Attas seed |
+  - Bottomless compost bucket |
+  - Iasor seed |
+  - Kronos seed |
   missing:
 Hunter Guild:
   obtained:
-    Guild hunter headwear: null
-    Guild hunter top: null
+  - Guild hunter headwear |
+  - Guild hunter top |
   missing:
   - Guild hunter boots
   - Guild hunter legs
@@ -1095,7 +1096,7 @@ King Black Dragon, Vorkath, Slayer:
   - Draconic visage
 Kraken:
   obtained:
-    Trident of the seas (full): null
+  - Trident of the seas (full) |
   missing:
   - Jar of dirt
 Kraken, All Pets:
@@ -1104,7 +1105,7 @@ Kraken, All Pets:
   - Pet kraken
 Kraken, Slayer:
   obtained:
-    Kraken tentacle: null
+  - Kraken tentacle |
   missing:
 Kree'arra:
   obtained:
@@ -1154,10 +1155,10 @@ Last Man Standing:
   - Yellow dark bow paint
 Lost Schematics:
   obtained:
-    Dragon cannon schematic: null
-    Eternal brazier schematic: null
-    Rosewood hull schematic: null
-    Salvaging station schematic: null
+  - Dragon cannon schematic |
+  - Eternal brazier schematic |
+  - Rosewood hull schematic |
+  - Salvaging station schematic |
   missing:
   - Dragon helm schematic
   - Dragon keel schematic
@@ -1167,7 +1168,7 @@ Lost Schematics:
   - Rosewood cargo hold schematic
 Magic Training Arena:
   obtained:
-    Infinity boots: null
+  - Infinity boots |
   missing:
   - Apprentice wand
   - Beginner wand
@@ -1181,12 +1182,12 @@ Magic Training Arena:
   - Teacher wand
 Mahogany Homes:
   obtained:
-    Amy's saw: null
-    Carpenter's boots: null
-    Carpenter's helmet: null
-    Carpenter's shirt: null
-    Carpenter's trousers: null
-    Plank sack: null
+  - Amy's saw |
+  - Carpenter's boots |
+  - Carpenter's helmet |
+  - Carpenter's shirt |
+  - Carpenter's trousers |
+  - Plank sack |
   missing:
   - Hosidius blueprints
   - Supply crate
@@ -1257,8 +1258,8 @@ Master Treasure Trails, All Pets:
   - Bloodhound
 Mastering Mixology:
   obtained:
-    Alchemist's amulet: null
-    Prescription goggles: null
+  - Alchemist's amulet |
+  - Prescription goggles |
   missing:
   - Alchemist gloves
   - Alchemist labcoat
@@ -1267,22 +1268,22 @@ Mastering Mixology:
   - Reagent pouch
 Medium Treasure Trails:
   obtained:
-    Adamant full helm (t): null
-    Adamant shield (h2): null
-    Adamant shield (h3): null
-    Adamant shield (h4): null
-    Armadyl cloak: null
-    Armadyl mitre: null
-    Bandos crozier: null
-    Black headband: null
-    Blue boater: null
-    Gold elegant skirt: null
-    Green boater: null
-    Green d'hide chaps (g): null
-    Lovakengj banner: null
-    Mithril platelegs (t): null
-    Strength amulet (t): null
-    White headband: null
+  - Adamant full helm (t) |
+  - Adamant shield (h2) |
+  - Adamant shield (h3) |
+  - Adamant shield (h4) |
+  - Armadyl cloak |
+  - Armadyl mitre |
+  - Bandos crozier |
+  - Black headband |
+  - Blue boater |
+  - Gold elegant skirt |
+  - Green boater |
+  - Green d'hide chaps (g) |
+  - Lovakengj banner |
+  - Mithril platelegs (t) |
+  - Strength amulet (t) |
+  - White headband |
   missing:
   - Adamant cane
   - Adamant full helm (g)
@@ -1385,26 +1386,26 @@ Medium Treasure Trails:
   - Zamorak mitre
 Miscellaneous:
   obtained:
-    Big shark: null
-    Bottom of sceptre: null
-    Broken zombie axe: null
-    Curved bone: null
-    Dark totem base: null
-    Dark totem middle: null
-    Dark totem top: null
-    Dragon spear: null
-    Dragon warhammer: null
-    Fresh crab claw: null
-    Giant key: null
-    Hespori seed: null
-    Left skull half: null
-    Long bone: null
-    Mossy key: null
-    Pharaoh's sceptre (uncharged): null
-    Right skull half: null
-    Shield left half: null
-    Top of sceptre: null
-    Xeric's talisman (inert): null
+  - Big shark |
+  - Bottom of sceptre |
+  - Broken zombie axe |
+  - Curved bone |
+  - Dark totem base |
+  - Dark totem middle |
+  - Dark totem top |
+  - Dragon spear |
+  - Dragon warhammer |
+  - Fresh crab claw |
+  - Giant key |
+  - Hespori seed |
+  - Left skull half |
+  - Long bone |
+  - Mossy key |
+  - Pharaoh's sceptre (uncharged) |
+  - Right skull half |
+  - Shield left half |
+  - Top of sceptre |
+  - Xeric's talisman (inert) |
   missing:
   - Amulet of eternal glory
   - Big bass
@@ -1456,31 +1457,31 @@ Monkey Backpacks:
   - Zombie monkey (item)
 Moons of Peril:
   obtained:
-    Atlatl dart: null
-    Blood moon chestplate: null
-    Blood moon helm: null
-    Blood moon tassets: null
-    Blue moon chestplate: null
-    Blue moon helm: null
-    Blue moon spear: null
-    Blue moon tassets: null
-    Dual macuahuitl: null
-    Eclipse atlatl: null
-    Eclipse moon chestplate: null
-    Eclipse moon helm: null
-    Eclipse moon tassets: null
+  - Atlatl dart |
+  - Blood moon chestplate |
+  - Blood moon helm |
+  - Blood moon tassets |
+  - Blue moon chestplate |
+  - Blue moon helm |
+  - Blue moon spear |
+  - Blue moon tassets |
+  - Dual macuahuitl |
+  - Eclipse atlatl |
+  - Eclipse moon chestplate |
+  - Eclipse moon helm |
+  - Eclipse moon tassets |
   missing:
 Motherlode Mine:
   obtained:
-    Coal bag: null
+  - Coal bag |
   missing:
   - Gem bag
 Motherlode Mine, Volcanic Mine:
   obtained:
-    Prospector boots: null
-    Prospector helmet: null
-    Prospector jacket: null
-    Prospector legs: null
+  - Prospector boots |
+  - Prospector helmet |
+  - Prospector jacket |
+  - Prospector legs |
   missing:
 My Notes:
   obtained:
@@ -1545,12 +1546,12 @@ Ocean Encounters:
   - Tiny pearl
 Pest Control:
   obtained:
-    Elite void robe: null
-    Elite void top: null
-    Void knight gloves: null
-    Void knight robe: null
-    Void knight top: null
-    Void ranger helm: null
+  - Elite void robe |
+  - Elite void top |
+  - Void knight gloves |
+  - Void knight robe |
+  - Void knight top |
+  - Void ranger helm |
   missing:
   - Void knight mace
   - Void mage helm
@@ -1570,28 +1571,28 @@ Phantom Muspah, All Pets:
   - Muphin
 Random Events:
   obtained:
-    Beekeeper's boots: null
-    Beekeeper's gloves: null
-    Beekeeper's hat: null
-    Beekeeper's legs: null
-    Beekeeper's top: null
-    Camo bottoms: null
-    Camo helmet: null
-    Camo top: null
-    Frog token: null
-    Lederhosen hat: null
-    Lederhosen shorts: null
-    Lederhosen top: null
-    Mime boots: null
-    Mime gloves: null
-    Mime legs: null
-    Mime mask: null
-    Mime top: null
-    Zombie boots: null
-    Zombie gloves: null
-    Zombie mask: null
-    Zombie shirt: null
-    Zombie trousers: null
+  - Beekeeper's boots |
+  - Beekeeper's gloves |
+  - Beekeeper's hat |
+  - Beekeeper's legs |
+  - Beekeeper's top |
+  - Camo bottoms |
+  - Camo helmet |
+  - Camo top |
+  - Frog token |
+  - Lederhosen hat |
+  - Lederhosen shorts |
+  - Lederhosen top |
+  - Mime boots |
+  - Mime gloves |
+  - Mime legs |
+  - Mime mask |
+  - Mime top |
+  - Zombie boots |
+  - Zombie gloves |
+  - Zombie mask |
+  - Zombie shirt |
+  - Zombie trousers |
   missing:
   - Stale baguette
 Revenants:
@@ -1613,16 +1614,16 @@ Revenants:
   - Viggora's chainmace (u)
 Rogues' Den:
   obtained:
-    Rogue boots: null
-    Rogue gloves: null
-    Rogue mask: null
-    Rogue top: null
-    Rogue trousers: null
+  - Rogue boots |
+  - Rogue gloves |
+  - Rogue mask |
+  - Rogue top |
+  - Rogue trousers |
   missing:
 Rooftop Agility:
   obtained:
-    Graceful legs: null
-    Mark of grace: null
+  - Graceful legs |
+  - Mark of grace |
   missing:
   - Graceful boots
   - Graceful cape
@@ -1631,12 +1632,12 @@ Rooftop Agility:
   - Graceful top
 Royal Titans:
   obtained:
-    Deadeye prayer scroll: null
-    Desiccated page: null
-    Fire element staff crown: null
-    Giantsoul amulet: null
-    Ice element staff crown: null
-    Mystic vigour prayer scroll: null
+  - Deadeye prayer scroll |
+  - Desiccated page |
+  - Fire element staff crown |
+  - Giantsoul amulet |
+  - Ice element staff crown |
+  - Mystic vigour prayer scroll |
   missing:
 Royal Titans, All Pets:
   obtained:
@@ -1644,9 +1645,9 @@ Royal Titans, All Pets:
   - Bran
 Sailing Miscellaneous:
   obtained:
-    Boat bottle (empty): null
-    Dragon cannonball: null
-    Dragon nails: null
+  - Boat bottle (empty) |
+  - Dragon cannonball |
+  - Dragon nails |
   missing:
   - Bottled storm
   - Broken dragon hook
@@ -1657,11 +1658,11 @@ Sailing Miscellaneous:
   - Swift albatross feather
 Sailing Miscellaneous, Slayer:
   obtained:
+  - Dragon metal sheet |
   missing:
-  - Dragon metal sheet
 Sarachnis:
   obtained:
-    Giant egg sac(full): null
+  - Giant egg sac(full) |
   missing:
   - Jar of eyes
   - Sarachnis cudgel
@@ -1680,10 +1681,10 @@ Scorpia, All Pets:
   - Scorpia's offspring
 Scroll Cases:
   obtained:
-    Major beginner scroll case: null
-    Mimic scroll case: null
-    Minor beginner scroll case: null
-    Minor hard scroll case: null
+  - Major beginner scroll case |
+  - Mimic scroll case |
+  - Minor beginner scroll case |
+  - Minor hard scroll case |
   missing:
   - Major easy scroll case
   - Major elite scroll case
@@ -1696,7 +1697,7 @@ Scroll Cases:
   - Minor medium scroll case
 Scurrius:
   obtained:
-    Scurrius' spine: null
+  - Scurrius' spine |
   missing:
 Scurrius, All Pets:
   obtained:
@@ -1704,12 +1705,12 @@ Scurrius, All Pets:
   - Scurry
 Sea Treasures:
   obtained:
-    Broken sextant: null
-    Dull knife: null
-    Mouldy doll: null
-    Rusty coin: null
-    Sailors' amulet (inert): null
-    Smashed mirror: null
+  - Broken sextant |
+  - Dull knife |
+  - Mouldy doll |
+  - Rusty coin |
+  - Sailors' amulet (inert) |
+  - Smashed mirror |
   missing:
   - Broken compass
   - Medallion fragment
@@ -1722,7 +1723,7 @@ Sea Treasures:
   - Medallion fragment
   - Mouldy block
   - Rusty locket
-Shades of Mort'ton:
+Shades of Mort'ton:
   obtained:
   missing:
   - Amulet of the damned (full)
@@ -1741,49 +1742,49 @@ Shades of Mort'ton:
   - Zealot's robe top
 Shared Treasure Trails Rewards:
   obtained:
-    Ancient page 2: null
-    Ancient page 3: null
-    Ancient page 4: null
-    Armadyl page 1: null
-    Armadyl page 2: null
-    Armadyl page 3: null
-    Armadyl page 4: null
-    Bandos page 1: null
-    Bandos page 2: null
-    Bandos page 3: null
-    Bandos page 4: null
-    Blue firelighter: null
-    Charge dragonstone jewellery scroll: null
-    Digsite teleport: null
-    Feldip hills teleport: null
-    Green firelighter: null
-    Guthix page 1: null
-    Guthix page 2: null
-    Guthix page 3: null
-    Guthix page 4: null
-    Holy blessing: null
-    Honourable blessing: null
-    Iorwerth camp teleport: null
-    Lumberyard teleport: null
-    Lunar isle teleport: null
-    Master scroll book (empty): null
-    Mort'ton teleport: null
-    Mos le'harmless teleport: null
-    Nardah teleport: null
-    Pest control teleport: null
-    Piscatoris teleport: null
-    Purple firelighter: null
-    Purple sweets: null
-    Red firelighter: null
-    Saradomin page 1: null
-    Saradomin page 2: null
-    Saradomin page 4: null
-    Tai bwo wannai teleport: null
-    Unholy blessing: null
-    War blessing: null
-    White firelighter: null
-    Zamorak page 2: null
-    Zamorak page 3: null
+  - Ancient page 2 |
+  - Ancient page 3 |
+  - Ancient page 4 |
+  - Armadyl page 1 |
+  - Armadyl page 2 |
+  - Armadyl page 3 |
+  - Armadyl page 4 |
+  - Bandos page 1 |
+  - Bandos page 2 |
+  - Bandos page 3 |
+  - Bandos page 4 |
+  - Blue firelighter |
+  - Charge dragonstone jewellery scroll |
+  - Digsite teleport |
+  - Feldip hills teleport |
+  - Green firelighter |
+  - Guthix page 1 |
+  - Guthix page 2 |
+  - Guthix page 3 |
+  - Guthix page 4 |
+  - Holy blessing |
+  - Honourable blessing |
+  - Iorwerth camp teleport |
+  - Lumberyard teleport |
+  - Lunar isle teleport |
+  - Master scroll book (empty) |
+  - Mort'ton teleport |
+  - Mos le'harmless teleport |
+  - Nardah teleport |
+  - Pest control teleport |
+  - Piscatoris teleport |
+  - Purple firelighter |
+  - Purple sweets |
+  - Red firelighter |
+  - Saradomin page 1 |
+  - Saradomin page 2 |
+  - Saradomin page 4 |
+  - Tai bwo wannai teleport |
+  - Unholy blessing |
+  - War blessing |
+  - White firelighter |
+  - Zamorak page 2 |
+  - Zamorak page 3 |
   missing:
   - Ancient blessing
   - Ancient page 1
@@ -1793,31 +1794,31 @@ Shared Treasure Trails Rewards:
   - Zamorak page 4
 Shayzien Armour:
   obtained:
-    Shayzien body (5): null
-    Shayzien boots (1): null
-    Shayzien boots (2): null
-    Shayzien boots (3): null
-    Shayzien boots (4): null
-    Shayzien boots (5): null
-    Shayzien gloves (1): null
-    Shayzien gloves (2): null
-    Shayzien gloves (3): null
-    Shayzien gloves (4): null
-    Shayzien gloves (5): null
-    Shayzien greaves (1): null
-    Shayzien greaves (2): null
-    Shayzien greaves (3): null
-    Shayzien greaves (4): null
-    Shayzien greaves (5): null
-    Shayzien helm (1): null
-    Shayzien helm (2): null
-    Shayzien helm (3): null
-    Shayzien helm (4): null
-    Shayzien helm (5): null
-    Shayzien platebody (1): null
-    Shayzien platebody (2): null
-    Shayzien platebody (3): null
-    Shayzien platebody (4): null
+  - Shayzien body (5) |
+  - Shayzien boots (1) |
+  - Shayzien boots (2) |
+  - Shayzien boots (3) |
+  - Shayzien boots (4) |
+  - Shayzien boots (5) |
+  - Shayzien gloves (1) |
+  - Shayzien gloves (2) |
+  - Shayzien gloves (3) |
+  - Shayzien gloves (4) |
+  - Shayzien gloves (5) |
+  - Shayzien greaves (1) |
+  - Shayzien greaves (2) |
+  - Shayzien greaves (3) |
+  - Shayzien greaves (4) |
+  - Shayzien greaves (5) |
+  - Shayzien helm (1) |
+  - Shayzien helm (2) |
+  - Shayzien helm (3) |
+  - Shayzien helm (4) |
+  - Shayzien helm (5) |
+  - Shayzien platebody (1) |
+  - Shayzien platebody (2) |
+  - Shayzien platebody (3) |
+  - Shayzien platebody (4) |
   missing:
 Shellbane Gryphon:
   obtained:
@@ -1830,11 +1831,11 @@ Shellbane Gryphon, All Pets:
   - Gull (pet)
 Shellbane Gryphon, Slayer:
   obtained:
-    Gryphon feather: null
+  - Gryphon feather |
   missing:
 Shooting Stars:
   obtained:
-    Celestial ring (uncharged): null
+  - Celestial ring (uncharged) |
   missing:
   - Star fragment
 Skilling Pets, All Pets:
@@ -1843,8 +1844,8 @@ Skilling Pets, All Pets:
   - Soup
 Skotizo:
   obtained:
-    Ancient shard: null
-    Jar of darkness: null
+  - Ancient shard |
+  - Jar of darkness |
   missing:
   - Dark claw
   - Dark totem
@@ -1854,29 +1855,29 @@ Skotizo, All Pets:
   - Skotos
 Slayer:
   obtained:
-    Adamant boots: null
-    Aquanite tendon: null
-    Basilisk head: null
-    Black boots: null
-    Black mask (10): null
-    Bronze boots: null
-    Dragon boots: null
-    Dragon sword: null
-    Dust battlestaff: null
-    Flippers: null
-    Granite legs: null
-    Granite longsword: null
-    Granite maul: null
-    Imbued heart: null
-    Leaf-bladed battleaxe: null
-    Leaf-bladed sword: null
-    Mudskipper hat: null
-    Mystic hat (light): null
-    Mystic robe bottom (dark): null
-    Mystic robe bottom (light): null
-    Mystic robe top (dark): null
-    Mystic robe top (light): null
-    Rune boots: null
+  - Adamant boots |
+  - Aquanite tendon |
+  - Basilisk head |
+  - Black boots |
+  - Black mask (10) |
+  - Bronze boots |
+  - Dragon boots |
+  - Dragon sword |
+  - Dust battlestaff |
+  - Flippers |
+  - Granite legs |
+  - Granite longsword |
+  - Granite maul |
+  - Imbued heart |
+  - Leaf-bladed battleaxe |
+  - Leaf-bladed sword |
+  - Mudskipper hat |
+  - Mystic hat (light) |
+  - Mystic robe bottom (dark) |
+  - Mystic robe bottom (light) |
+  - Mystic robe top (dark) |
+  - Mystic robe top (light) |
+  - Rune boots |
   missing:
   - Alchemist's signet
   - Ancient ceremonial boots
@@ -1934,17 +1935,17 @@ Soul Wars, All Pets:
   - Lil' creator
 Temple Trekking, Forestry:
   obtained:
-    Lumberjack boots: null
-    Lumberjack hat: null
-    Lumberjack legs: null
-    Lumberjack top: null
+  - Lumberjack boots |
+  - Lumberjack hat |
+  - Lumberjack legs |
+  - Lumberjack top |
   missing:
 Tempoross:
   obtained:
-    Fish barrel: null
-    Soaked page: null
-    Spirit flakes: null
-    Tackle box: null
+  - Fish barrel |
+  - Soaked page |
+  - Spirit flakes |
+  - Tackle box |
   missing:
   - Big harpoonfish
   - Spirit angler boots
@@ -1962,7 +1963,7 @@ Tempoross, Slayer:
   - Dragon harpoon
 The Fight Caves:
   obtained:
-    Fire cape: null
+  - Fire cape |
   missing:
 The Fight Caves, All Pets:
   obtained:
@@ -1970,9 +1971,9 @@ The Fight Caves, All Pets:
   - Tzrek-jad
 The Gauntlet:
   obtained:
-    Crystal armour seed: null
-    Crystal weapon seed: null
-    Gauntlet cape: null
+  - Crystal armour seed |
+  - Crystal weapon seed |
+  - Gauntlet cape |
   missing:
   - Enhanced crystal weapon seed
 The Gauntlet, All Pets:
@@ -1981,8 +1982,8 @@ The Gauntlet, All Pets:
   - Youngllef
 The Hueycoatl:
   obtained:
-    Huasca seed: null
-    Soiled page: null
+  - Huasca seed |
+  - Soiled page |
   missing:
   - Dragon hunter wand
   - Hueycoatl hide
@@ -2077,8 +2078,8 @@ Thermonuclear Smoke Devil, Slayer:
   - Occult necklace
 Tithe Farm:
   obtained:
-    Herb sack: null
-    Seed box: null
+  - Herb sack |
+  - Seed box |
   missing:
   - Farmer's boots
   - Farmer's boro trousers
@@ -2120,9 +2121,9 @@ Tombs of Amascut, All Pets:
   - Tumeken's guardian
 Tormented Demons:
   obtained:
-    Burning claw: null
-    Guthixian temple teleport: null
-    Tormented synapse: null
+  - Burning claw |
+  - Guthixian temple teleport |
+  - Tormented synapse |
   missing:
 Trouble Brewing:
   obtained:
@@ -2170,12 +2171,12 @@ TzHaar:
   - Toktz-xil-ek
   - Toktz-xil-ul
   - Tzhaar-ket-om
-Vale Totems:
+Vale Totems:
   obtained:
-    Bow string spool: null
-    Ent branch: null
-    Fletching knife: null
-    Greenman mask: null
+  - Bow string spool |
+  - Ent branch |
+  - Fletching knife |
+  - Greenman mask |
   missing:
 Vardorvis:
   obtained:
@@ -2217,7 +2218,7 @@ Volcanic Mine:
   - Volcanic mine teleport
 Vorkath:
   obtained:
-    Vorkath's head: null
+  - Vorkath's head |
   missing:
   - Dragonbone necklace
   - Jar of decay
@@ -2228,18 +2229,18 @@ Vorkath, All Pets:
   - Vorki
 Wintertodt:
   obtained:
-    Bruma torch: null
-    Burnt page: null
-    Pyromancer boots: null
-    Pyromancer garb: null
-    Pyromancer hood: null
-    Pyromancer robe: null
-    Tome of fire (empty): null
-    Warm gloves: null
+  - Bruma torch |
+  - Burnt page |
+  - Pyromancer boots |
+  - Pyromancer garb |
+  - Pyromancer hood |
+  - Pyromancer robe |
+  - Tome of fire (empty) |
+  - Warm gloves |
   missing:
 Wintertodt, All Pets:
   obtained:
-    Phoenix: null
+  - Phoenix |
   missing:
 Yama:
   obtained:
@@ -2269,7 +2270,7 @@ Zalcano, All Pets:
   - Smolcano
 Zulrah:
   obtained:
-    Zulrah's scales: null
+  - Zulrah's scales |
   missing:
   - Jar of swamp
   - Magic fang

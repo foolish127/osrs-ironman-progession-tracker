@@ -5,19 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FoolinSlays - Progress Editor</title>
     <style>
-        :root { --bg-dark: #0d1117; --bg-card: #161b22; --border: #30363d; --text-primary: #e6edf3; --text-secondary: #8b949e; --accent-gold: #d4a84b; --accent-green: #3fb950; --accent-red: #f85149; --accent-purple: #a371f7; }
+        :root {
+            --bg-dark: #0d1117;
+            --bg-card: #161b22;
+            --border: #30363d;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent-gold: #d4a84b;
+            --accent-green: #3fb950;
+            --accent-red: #f85149;
+            --accent-purple: #a371f7;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg-dark); color: var(--text-primary); min-height: 100vh; padding: 2rem; }
         .container { max-width: 1000px; margin: 0 auto; }
         h1 { color: var(--accent-gold); margin-bottom: 0.5rem; }
         .subtitle { color: var(--text-secondary); margin-bottom: 2rem; }
         .tabs { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
-        .tab { padding: 0.75rem 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; color: var(--text-secondary); cursor: pointer; font-size: 0.9rem; }
+        .tab { padding: 0.75rem 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; color: var(--text-secondary); cursor: pointer; font-size: 0.9rem; }
         .tab:hover { border-color: var(--text-secondary); }
         .tab.active { background: var(--accent-gold); color: var(--bg-dark); border-color: var(--accent-gold); font-weight: 600; }
-        .search-box { width: 100%; padding: 1rem; font-size: 1rem; background: var(--bg-card); border: 2px solid var(--border); border-radius: 8px; color: var(--text-primary); margin-bottom: 1rem; }
+        .search-box { width: 100%; padding: 1rem; font-size: 1.1rem; background: var(--bg-card); border: 2px solid var(--border); border-radius: 8px; color: var(--text-primary); margin-bottom: 1rem; }
         .search-box:focus { outline: none; border-color: var(--accent-gold); }
-        .filters { display: flex; gap: 0.75rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .filters { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
         .filter-btn { padding: 0.5rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--text-secondary); cursor: pointer; font-size: 0.85rem; }
         .filter-btn:hover { border-color: var(--text-secondary); }
         .filter-btn.active { background: var(--border); color: var(--text-primary); }
@@ -26,16 +36,16 @@
         .stat-value { font-size: 1.5rem; font-weight: 600; color: var(--accent-green); }
         .stat-label { font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; }
         .items-list { display: flex; flex-direction: column; gap: 0.5rem; max-height: 400px; overflow-y: auto; padding-right: 0.5rem; margin-bottom: 1.5rem; }
-        .item { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; cursor: pointer; transition: all 0.15s; }
+        .item { display: flex; align-items: center; gap: 1rem; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; transition: all 0.15s; }
         .item:hover { border-color: var(--accent-gold); }
         .item.obtained { border-color: var(--accent-green); background: rgba(63, 185, 80, 0.1); }
-        .checkbox { width: 24px; height: 24px; border: 2px solid var(--border); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+        .checkbox { width: 24px; height: 24px; border: 2px solid var(--border); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; cursor: pointer; }
         .item.obtained .checkbox { background: var(--accent-green); border-color: var(--accent-green); color: var(--bg-dark); }
         .item-info { flex: 1; min-width: 0; }
         .item-name { font-weight: 500; }
         .item-category { font-size: 0.8rem; color: var(--text-secondary); }
-        .item-date { font-family: monospace; font-size: 0.8rem; padding: 0.25rem 0.5rem; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 3px; color: var(--text-secondary); width: 110px; }
-        .item-date:focus { outline: none; border-color: var(--accent-gold); color: var(--text-primary); }
+        .item-date-input { padding: 0.4rem 0.6rem; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); font-size: 0.8rem; width: 130px; }
+        .item-date-input:focus { outline: none; border-color: var(--accent-gold); }
         .output-section { margin-top: 1rem; }
         .output-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; gap: 1rem; flex-wrap: wrap; }
         .output-title { font-size: 1rem; color: var(--text-secondary); }
@@ -43,48 +53,52 @@
         .btn:hover { opacity: 0.9; }
         .btn.copied { background: var(--accent-green); }
         .btn.secondary { background: var(--bg-card); color: var(--text-primary); border: 1px solid var(--border); }
-        .output-box { width: 100%; height: 200px; padding: 1rem; font-family: 'Fira Code', Consolas, monospace; font-size: 0.75rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); resize: vertical; }
-        .instructions { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; margin-bottom: 2rem; font-size: 0.9rem; }
-        .instructions h3 { color: var(--accent-gold); margin-bottom: 0.5rem; font-size: 1rem; }
-        .instructions ol { margin-left: 1.5rem; color: var(--text-secondary); }
-        .instructions li { margin-bottom: 0.35rem; }
+        .output-box { width: 100%; height: 250px; padding: 1rem; font-family: 'Fira Code', Consolas, monospace; font-size: 0.8rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); resize: vertical; }
+        .instructions { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem; }
+        .instructions h3 { color: var(--accent-gold); margin-bottom: 0.75rem; font-size: 1rem; }
+        .instructions ol { margin-left: 1.5rem; color: var(--text-secondary); font-size: 0.9rem; }
+        .instructions li { margin-bottom: 0.5rem; }
+        .instructions code { background: var(--bg-dark); padding: 0.2rem 0.5rem; border-radius: 3px; font-size: 0.85rem; }
         .instructions a { color: var(--accent-gold); }
         .no-results { text-align: center; padding: 3rem; color: var(--text-secondary); }
         .change-count { background: var(--accent-gold); color: var(--bg-dark); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
         .loading { text-align: center; padding: 3rem; color: var(--text-secondary); }
         .error { background: rgba(248, 81, 73, 0.1); border: 1px solid var(--accent-red); color: var(--accent-red); padding: 1rem; border-radius: 6px; margin-bottom: 1rem; }
         .btn-group { display: flex; gap: 0.5rem; }
-        .back-link { color: var(--accent-gold); text-decoration: none; display: inline-block; margin-bottom: 1rem; }
-        .today-btn { padding: 0.2rem 0.5rem; background: var(--border); border: none; border-radius: 3px; color: var(--text-secondary); cursor: pointer; font-size: 0.7rem; margin-left: 0.25rem; }
+        .today-btn { padding: 0.3rem 0.5rem; background: var(--border); border: none; border-radius: 3px; color: var(--text-secondary); cursor: pointer; font-size: 0.7rem; }
         .today-btn:hover { background: var(--accent-gold); color: var(--bg-dark); }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-link">← Back to Tracker</a>
         <h1>📝 Progress Editor</h1>
         <p class="subtitle">Toggle items and add dates, then copy the YAML to GitHub</p>
 
         <div class="instructions">
             <h3>How to use:</h3>
             <ol>
-                <li>Search for an item/task/pet you completed</li>
-                <li>Click to toggle status, optionally add a date (or click "Today")</li>
+                <li>Search for an item you completed</li>
+                <li>Click the checkbox to toggle obtained/completed</li>
+                <li>Add a date (click "Today" for quick entry)</li>
                 <li>Click <strong>"Copy YAML"</strong></li>
-                <li>Go to GitHub, edit the YAML file, select all, paste, commit</li>
+                <li>Go to GitHub → edit the appropriate YAML file → paste → commit</li>
             </ol>
         </div>
 
         <div class="tabs">
             <button class="tab active" data-tab="clog">Collection Log</button>
             <button class="tab" data-tab="ca">Combat Achievements</button>
-            <button class="tab" data-tab="pets">Pets</button>
+            <button class="tab" data-tab="pets">Pets 🐾</button>
         </div>
 
         <div id="error" class="error" style="display:none"></div>
-        <input type="text" class="search-box" id="search" placeholder="Search...">
+
+        <input type="text" class="search-box" id="search" placeholder="Search items...">
+
         <div class="filters" id="filters"></div>
+
         <div class="stats" id="stats"><div class="loading">Loading data...</div></div>
+
         <div class="items-list" id="itemsList"><div class="loading">Loading...</div></div>
 
         <div class="output-section">
@@ -101,44 +115,45 @@
 
     <script>
         const GITHUB_BASE = 'https://raw.githubusercontent.com/foolish127/osrs-ironman-progession-tracker/main/data';
-        const TODAY = new Date().toISOString().split('T')[0];
         
         let currentTab = 'clog';
         let currentFilter = 'all';
-        let data = {}, originalData = {};
+        let data = {};
+        let originalData = {};
 
-        function parseYaml(text, type) {
+        function parseYamlWithDates(text) {
             const result = {};
-            let currentKey = null, currentSubkey = null;
+            let currentKey = null;
+            let currentSubkey = null;
             
             for (const line of text.split('\n')) {
                 if (!line || line.startsWith('#')) continue;
-                let cleanLine = line.includes('#') ? line.slice(0, line.indexOf('#')) : line;
-                const stripped = cleanLine.trimEnd();
-                if (!stripped) continue;
-                const indent = stripped.length - stripped.trimStart().length;
-                const content = stripped.trim();
                 
-                if (type === 'pets') {
-                    if (content.includes(':')) {
-                        const [name, val] = content.split(':').map(s => s.trim());
-                        result[name] = val === 'null' ? null : val;
+                const stripped = line.trimStart();
+                const indent = line.length - stripped.length;
+                
+                if (indent === 0 && stripped.endsWith(':')) {
+                    currentKey = stripped.slice(0, -1);
+                    result[currentKey] = {};
+                    currentSubkey = null;
+                } else if (indent === 2 && stripped.endsWith(':')) {
+                    currentSubkey = stripped.slice(0, -1);
+                    result[currentKey][currentSubkey] = [];
+                } else if (stripped.startsWith('- ') && currentKey && currentSubkey) {
+                    const itemText = stripped.slice(2);
+                    let name, date = null;
+                    
+                    if (itemText.includes(' | ')) {
+                        const parts = itemText.split(' | ');
+                        name = parts[0].trim();
+                        date = parts[1]?.trim() || null;
+                    } else if (itemText.endsWith(' |')) {
+                        name = itemText.slice(0, -2).trim();
+                    } else {
+                        name = itemText.trim();
                     }
-                } else {
-                    if (indent === 0 && content.endsWith(':')) {
-                        currentKey = content.slice(0, -1);
-                        result[currentKey] = { obtained: {}, missing: [] };
-                        currentSubkey = null;
-                    } else if (indent === 2 && content.endsWith(':')) {
-                        currentSubkey = content.slice(0, -1);
-                    } else if (currentKey && currentSubkey) {
-                        if (content.startsWith('- ')) {
-                            result[currentKey].missing.push(content.slice(2).trim());
-                        } else if (content.includes(':')) {
-                            const [name, val] = content.split(':').map(s => s.trim());
-                            result[currentKey].obtained[name] = val === 'null' ? null : val;
-                        }
-                    }
+                    
+                    result[currentKey][currentSubkey].push({ name, date });
                 }
             }
             return result;
@@ -146,17 +161,32 @@
 
         async function loadData() {
             try {
-                const files = { clog: 'collection_log.yaml', ca: 'combat_achievements.yaml', pets: 'pets.yaml' };
-                const responses = await Promise.all(
-                    Object.entries(files).map(([k, f]) => 
-                        fetch(`${GITHUB_BASE}/${f}`).then(r => r.ok ? r.text() : '').catch(() => '')
-                    )
+                const files = {
+                    clog: 'collection_log.yaml',
+                    ca: 'combat_achievements.yaml',
+                    pets: 'pets.yaml'
+                };
+                
+                const results = await Promise.all(
+                    Object.entries(files).map(async ([key, file]) => {
+                        try {
+                            const res = await fetch(`${GITHUB_BASE}/${file}`);
+                            if (!res.ok) throw new Error(`Failed to load ${file}`);
+                            const text = await res.text();
+                            return [key, parseYamlWithDates(text)];
+                        } catch (e) {
+                            console.error(e);
+                            return [key, null];
+                        }
+                    })
                 );
                 
-                data.clog = parseYaml(responses[0], 'clog');
-                data.ca = parseYaml(responses[1], 'ca');
-                data.pets = parseYaml(responses[2], 'pets');
-                originalData = JSON.parse(JSON.stringify(data));
+                results.forEach(([key, val]) => {
+                    if (val) {
+                        data[key] = val;
+                        originalData[key] = JSON.parse(JSON.stringify(val));
+                    }
+                });
                 
                 document.getElementById('error').style.display = 'none';
                 render();
@@ -177,10 +207,21 @@
                     render();
                 });
             });
+
             document.getElementById('search').addEventListener('input', render);
             document.getElementById('copyBtn').addEventListener('click', copyYaml);
-            document.getElementById('resetBtn').addEventListener('click', () => { data = JSON.parse(JSON.stringify(originalData)); render(); });
+            document.getElementById('resetBtn').addEventListener('click', resetChanges);
+            
             loadData();
+        }
+
+        function resetChanges() {
+            data[currentTab] = JSON.parse(JSON.stringify(originalData[currentTab]));
+            render();
+        }
+
+        function getToday() {
+            return new Date().toISOString().split('T')[0];
         }
 
         function render() {
@@ -191,187 +232,304 @@
         }
 
         function renderFilters() {
-            const filters = currentTab === 'pets' 
-                ? ['all', 'obtained', 'missing']
-                : ['all', currentTab === 'ca' ? 'completed' : 'obtained', currentTab === 'ca' ? 'not_completed' : 'missing'];
+            const container = document.getElementById('filters');
+            const obtKey = currentTab === 'ca' ? 'completed' : 'obtained';
+            const missKey = currentTab === 'ca' ? 'not_completed' : 'missing';
             
-            document.getElementById('filters').innerHTML = filters.map(f => {
-                const label = f === 'all' ? 'All' : f === 'not_completed' ? 'Remaining' : f.charAt(0).toUpperCase() + f.slice(1);
-                return `<button class="filter-btn ${currentFilter === f ? 'active' : ''}" data-filter="${f}">${label}</button>`;
+            const categories = ['all', obtKey, missKey];
+            
+            container.innerHTML = categories.map(cat => {
+                const label = cat === 'all' ? 'All' : cat === 'not_completed' ? 'Remaining' : cat.charAt(0).toUpperCase() + cat.slice(1);
+                return `<button class="filter-btn ${currentFilter === cat ? 'active' : ''}" data-filter="${cat}">${label}</button>`;
             }).join('');
             
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.addEventListener('click', () => { currentFilter = btn.dataset.filter; render(); });
+            container.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    currentFilter = btn.dataset.filter;
+                    render();
+                });
             });
         }
 
         function renderStats() {
-            let obtained = 0, total = 0;
-            const d = data[currentTab];
+            const container = document.getElementById('stats');
+            const tabData = data[currentTab];
+            
+            if (!tabData) {
+                container.innerHTML = '<div class="loading">Loading...</div>';
+                return;
+            }
+            
+            const obtKey = currentTab === 'ca' ? 'completed' : 'obtained';
+            const missKey = currentTab === 'ca' ? 'not_completed' : 'missing';
+            
+            let obtained = 0, total = 0, changes = 0;
             
             if (currentTab === 'pets') {
-                obtained = Object.values(d).filter(v => v !== null).length;
-                total = Object.keys(d).length;
+                obtained = (tabData.obtained || []).length;
+                total = obtained + (tabData.missing || []).length;
             } else {
-                for (const cat of Object.values(d)) {
-                    obtained += Object.keys(cat.obtained || {}).length;
-                    total += Object.keys(cat.obtained || {}).length + (cat.missing || []).length;
+                for (const [key, items] of Object.entries(tabData)) {
+                    obtained += (items[obtKey] || []).length;
+                    total += (items[obtKey] || []).length + (items[missKey] || []).length;
                 }
+            }
+            
+            // Count changes (simplified)
+            const orig = originalData[currentTab];
+            if (orig && JSON.stringify(tabData) !== JSON.stringify(orig)) {
+                changes = 1; // Just show that there are changes
             }
             
             const pct = total > 0 ? ((obtained / total) * 100).toFixed(1) : 0;
-            document.getElementById('stats').innerHTML = `
-                <div class="stat"><div class="stat-value">${obtained}</div><div class="stat-label">${currentTab === 'ca' ? 'Completed' : 'Obtained'}</div></div>
+            const label = currentTab === 'ca' ? 'Completed' : 'Obtained';
+            
+            container.innerHTML = `
+                <div class="stat"><div class="stat-value">${obtained}</div><div class="stat-label">${label}</div></div>
                 <div class="stat"><div class="stat-value" style="color:var(--text-secondary)">${total}</div><div class="stat-label">Total</div></div>
-                <div class="stat"><div class="stat-value">${pct}%</div><div class="stat-label">Progress</div></div>`;
+                <div class="stat"><div class="stat-value">${pct}%</div><div class="stat-label">Progress</div></div>
+            `;
             
-            // Count changes
-            let changes = 0;
-            const orig = originalData[currentTab];
-            if (currentTab === 'pets') {
-                for (const [k, v] of Object.entries(d)) {
-                    if (v !== orig[k]) changes++;
-                }
-            } else {
-                for (const [cat, items] of Object.entries(d)) {
-                    const o = orig[cat] || { obtained: {}, missing: [] };
-                    for (const k of Object.keys(items.obtained)) if (!o.obtained[k]) changes++;
-                    for (const k of items.missing) if (!o.missing.includes(k)) changes++;
-                }
-            }
-            
-            const cc = document.getElementById('changeCount');
-            cc.textContent = `${changes} change${changes !== 1 ? 's' : ''}`;
-            cc.style.display = changes > 0 ? 'inline' : 'none';
+            const changeCount = document.getElementById('changeCount');
+            changeCount.style.display = changes > 0 ? 'inline' : 'none';
+            changeCount.textContent = 'unsaved changes';
         }
 
         function renderItems() {
             const container = document.getElementById('itemsList');
+            const tabData = data[currentTab];
+            
+            if (!tabData) {
+                container.innerHTML = '<div class="loading">Loading...</div>';
+                return;
+            }
+            
             const search = document.getElementById('search').value.toLowerCase();
-            const d = data[currentTab];
+            const obtKey = currentTab === 'ca' ? 'completed' : 'obtained';
+            const missKey = currentTab === 'ca' ? 'not_completed' : 'missing';
+            
             let html = '';
-
+            
             if (currentTab === 'pets') {
-                for (const [name, date] of Object.entries(d).sort((a, b) => a[0].localeCompare(b[0]))) {
-                    const isObtained = date !== null;
-                    if (search && !name.toLowerCase().includes(search)) continue;
-                    if (currentFilter === 'obtained' && !isObtained) continue;
-                    if (currentFilter === 'missing' && isObtained) continue;
-                    
-                    html += `<div class="item ${isObtained ? 'obtained' : ''}" data-name="${name}">
-                        <div class="checkbox" onclick="togglePet('${name}')">${isObtained ? '✓' : ''}</div>
-                        <div class="item-info"><div class="item-name">${name}</div></div>
-                        <input type="text" class="item-date" value="${date || ''}" placeholder="YYYY-MM-DD" onchange="setPetDate('${name}', this.value)">
-                        <button class="today-btn" onclick="setPetDate('${name}', '${TODAY}')">Today</button>
-                    </div>`;
+                // Pets are flat structure
+                let items = [];
+                
+                if (currentFilter === 'all' || currentFilter === 'obtained') {
+                    items = items.concat((tabData.obtained || []).map(i => ({
+                        ...i,
+                        obtained: true,
+                        category: 'Pets'
+                    })));
+                }
+                if (currentFilter === 'all' || currentFilter === 'missing') {
+                    items = items.concat((tabData.missing || []).map(i => ({
+                        name: i.name,
+                        date: null,
+                        obtained: false,
+                        category: 'Pets'
+                    })));
+                }
+                
+                if (search) {
+                    items = items.filter(i => i.name.toLowerCase().includes(search));
+                }
+                
+                items.sort((a, b) => {
+                    if (a.obtained !== b.obtained) return b.obtained - a.obtained;
+                    return a.name.localeCompare(b.name);
+                });
+                
+                for (const item of items) {
+                    html += renderItemHtml(item, 'pets');
                 }
             } else {
+                // Collection log and CA have nested structure
                 const sortedKeys = currentTab === 'ca' 
-                    ? ['Easy', 'Medium', 'Hard', 'Elite', 'Master', 'Grandmaster'].filter(k => d[k])
-                    : Object.keys(d).sort();
+                    ? ['Easy', 'Medium', 'Hard', 'Elite', 'Master', 'Grandmaster'].filter(k => tabData[k])
+                    : Object.keys(tabData).sort();
                 
                 for (const category of sortedKeys) {
-                    const items = d[category];
+                    const items = tabData[category];
                     if (!items) continue;
                     
-                    const allItems = [
-                        ...Object.entries(items.obtained || {}).map(([name, date]) => ({ name, date, obtained: true, category })),
-                        ...(items.missing || []).map(name => ({ name, date: null, obtained: false, category }))
-                    ];
+                    let allItems = [];
+                    
+                    if (currentFilter === 'all' || currentFilter === obtKey) {
+                        allItems = allItems.concat((items[obtKey] || []).map(i => ({
+                            ...i,
+                            obtained: true,
+                            category
+                        })));
+                    }
+                    if (currentFilter === 'all' || currentFilter === missKey) {
+                        allItems = allItems.concat((items[missKey] || []).map(i => ({
+                            name: i.name || i,
+                            date: null,
+                            obtained: false,
+                            category
+                        })));
+                    }
                     
                     for (const item of allItems) {
                         if (search && !item.name.toLowerCase().includes(search) && !item.category.toLowerCase().includes(search)) continue;
-                        const filterKey = currentTab === 'ca' ? (item.obtained ? 'completed' : 'not_completed') : (item.obtained ? 'obtained' : 'missing');
-                        if (currentFilter !== 'all' && currentFilter !== filterKey) continue;
-                        
-                        html += `<div class="item ${item.obtained ? 'obtained' : ''}" data-category="${item.category}" data-name="${item.name}">
-                            <div class="checkbox" onclick="toggleItem('${item.category}', '${item.name.replace(/'/g, "\\'")}')">${item.obtained ? '✓' : ''}</div>
-                            <div class="item-info">
-                                <div class="item-name">${item.name}</div>
-                                <div class="item-category">${item.category}</div>
-                            </div>
-                            <input type="text" class="item-date" value="${item.date || ''}" placeholder="YYYY-MM-DD" onchange="setItemDate('${item.category}', '${item.name.replace(/'/g, "\\'")}', this.value)">
-                            <button class="today-btn" onclick="setItemDate('${item.category}', '${item.name.replace(/'/g, "\\'")}', '${TODAY}')">Today</button>
-                        </div>`;
+                        html += renderItemHtml(item, currentTab);
                     }
                 }
             }
             
             container.innerHTML = html || '<div class="no-results">No items found</div>';
+            
+            // Add event listeners
+            container.querySelectorAll('.checkbox').forEach(cb => {
+                cb.addEventListener('click', () => toggleItem(cb.dataset.category, cb.dataset.name));
+            });
+            
+            container.querySelectorAll('.item-date-input').forEach(input => {
+                input.addEventListener('change', () => updateDate(input.dataset.category, input.dataset.name, input.value));
+            });
+            
+            container.querySelectorAll('.today-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const input = btn.previousElementSibling;
+                    input.value = getToday();
+                    updateDate(input.dataset.category, input.dataset.name, input.value);
+                });
+            });
         }
 
-        function togglePet(name) {
-            const d = data.pets;
-            d[name] = d[name] === null ? TODAY : null;
-            render();
-        }
-
-        function setPetDate(name, date) {
-            data.pets[name] = date || null;
-            render();
+        function renderItemHtml(item, tab) {
+            return `<div class="item ${item.obtained ? 'obtained' : ''}">
+                <div class="checkbox" data-category="${item.category}" data-name="${item.name}">${item.obtained ? '✓' : ''}</div>
+                <div class="item-info">
+                    <div class="item-name">${item.name}</div>
+                    <div class="item-category">${item.category}</div>
+                </div>
+                ${item.obtained ? `
+                    <input type="date" class="item-date-input" data-category="${item.category}" data-name="${item.name}" value="${item.date || ''}">
+                    <button class="today-btn">Today</button>
+                ` : ''}
+            </div>`;
         }
 
         function toggleItem(category, name) {
-            const d = data[currentTab][category];
-            if (d.obtained[name] !== undefined) {
-                delete d.obtained[name];
-                d.missing.push(name);
+            const tabData = data[currentTab];
+            const obtKey = currentTab === 'ca' ? 'completed' : 'obtained';
+            const missKey = currentTab === 'ca' ? 'not_completed' : 'missing';
+            
+            if (currentTab === 'pets') {
+                const obtIdx = (tabData.obtained || []).findIndex(i => i.name === name);
+                const missIdx = (tabData.missing || []).findIndex(i => i.name === name);
+                
+                if (obtIdx >= 0) {
+                    const item = tabData.obtained.splice(obtIdx, 1)[0];
+                    tabData.missing = tabData.missing || [];
+                    tabData.missing.push({ name: item.name });
+                } else if (missIdx >= 0) {
+                    const item = tabData.missing.splice(missIdx, 1)[0];
+                    tabData.obtained = tabData.obtained || [];
+                    tabData.obtained.push({ name: item.name, date: getToday() });
+                }
             } else {
-                d.missing = d.missing.filter(i => i !== name);
-                d.obtained[name] = TODAY;
+                const items = tabData[category];
+                if (!items) return;
+                
+                const obtIdx = (items[obtKey] || []).findIndex(i => i.name === name);
+                const missIdx = (items[missKey] || []).findIndex(i => (i.name || i) === name);
+                
+                if (obtIdx >= 0) {
+                    const item = items[obtKey].splice(obtIdx, 1)[0];
+                    items[missKey] = items[missKey] || [];
+                    items[missKey].push({ name: item.name });
+                } else if (missIdx >= 0) {
+                    const item = items[missKey].splice(missIdx, 1)[0];
+                    items[obtKey] = items[obtKey] || [];
+                    items[obtKey].push({ name: item.name || item, date: getToday() });
+                }
             }
+            
             render();
         }
 
-        function setItemDate(category, name, date) {
-            const d = data[currentTab][category];
-            if (d.obtained[name] !== undefined) {
-                d.obtained[name] = date || null;
+        function updateDate(category, name, date) {
+            const tabData = data[currentTab];
+            const obtKey = currentTab === 'ca' ? 'completed' : 'obtained';
+            
+            if (currentTab === 'pets') {
+                const item = (tabData.obtained || []).find(i => i.name === name);
+                if (item) item.date = date || null;
+            } else {
+                const items = tabData[category];
+                if (!items) return;
+                const item = (items[obtKey] || []).find(i => i.name === name);
+                if (item) item.date = date || null;
             }
-            render();
+            
+            renderOutput();
         }
 
         function renderOutput() {
-            const d = data[currentTab];
-            let yaml = '';
-
+            const output = document.getElementById('output');
+            const tabData = data[currentTab];
+            
+            if (!tabData) {
+                output.value = '# Loading...';
+                return;
+            }
+            
+            const obtKey = currentTab === 'ca' ? 'completed' : 'obtained';
+            const missKey = currentTab === 'ca' ? 'not_completed' : 'missing';
+            const titles = { clog: 'Collection Log', ca: 'Combat Achievements', pets: 'Pet' };
+            
+            let yaml = `# FoolinSlays ${titles[currentTab]} Tracker\n`;
+            yaml += `# Format: item name | YYYY-MM-DD (date is optional)\n`;
+            yaml += `# Last updated: ${getToday()}\n\n`;
+            
             if (currentTab === 'pets') {
-                yaml = `# FoolinSlays Pet Tracker\n# Format: Pet Name: YYYY-MM-DD (or null if not obtained)\n\n`;
-                for (const [name, date] of Object.entries(d).sort((a, b) => a[0].localeCompare(b[0]))) {
-                    yaml += `${name}: ${date || 'null'}\n`;
+                yaml += `obtained:\n`;
+                for (const item of (tabData.obtained || []).sort((a, b) => a.name.localeCompare(b.name))) {
+                    yaml += `  - ${item.name} |${item.date ? ' ' + item.date : ''}\n`;
+                }
+                yaml += `\nmissing:\n`;
+                for (const item of (tabData.missing || []).sort((a, b) => a.name.localeCompare(b.name))) {
+                    yaml += `  - ${item.name}\n`;
                 }
             } else {
-                const title = currentTab === 'clog' ? 'Collection Log' : 'Combat Achievements';
-                yaml = `# FoolinSlays ${title} Tracker\n\n`;
-                
                 const sortedKeys = currentTab === 'ca' 
-                    ? ['Easy', 'Medium', 'Hard', 'Elite', 'Master', 'Grandmaster'].filter(k => d[k])
-                    : Object.keys(d).sort();
+                    ? ['Easy', 'Medium', 'Hard', 'Elite', 'Master', 'Grandmaster'].filter(k => tabData[k])
+                    : Object.keys(tabData).sort();
                 
                 for (const key of sortedKeys) {
-                    const items = d[key];
-                    yaml += `${key}:\n  ${currentTab === 'ca' ? 'completed' : 'obtained'}:\n`;
-                    for (const [name, date] of Object.entries(items.obtained || {}).sort((a, b) => a[0].localeCompare(b[0]))) {
-                        yaml += `    ${name}: ${date || 'null'}\n`;
+                    const items = tabData[key];
+                    if (!items) continue;
+                    
+                    yaml += `${key}:\n`;
+                    yaml += `  ${obtKey}:\n`;
+                    for (const item of (items[obtKey] || []).sort((a, b) => a.name.localeCompare(b.name))) {
+                        yaml += `  - ${item.name} |${item.date ? ' ' + item.date : ''}\n`;
                     }
-                    yaml += `  ${currentTab === 'ca' ? 'not_completed' : 'missing'}:\n`;
-                    for (const name of (items.missing || []).sort()) {
-                        yaml += `  - ${name}\n`;
+                    yaml += `  ${missKey}:\n`;
+                    for (const item of (items[missKey] || []).sort((a, b) => (a.name || a).localeCompare(b.name || b))) {
+                        yaml += `  - ${item.name || item}\n`;
                     }
                 }
             }
             
-            document.getElementById('output').value = yaml;
+            output.value = yaml;
         }
 
         function copyYaml() {
             const output = document.getElementById('output');
             output.select();
             navigator.clipboard.writeText(output.value);
+            
             const btn = document.getElementById('copyBtn');
             btn.textContent = 'Copied!';
             btn.classList.add('copied');
-            setTimeout(() => { btn.textContent = 'Copy YAML'; btn.classList.remove('copied'); }, 2000);
+            
+            setTimeout(() => {
+                btn.textContent = 'Copy YAML';
+                btn.classList.remove('copied');
+            }, 2000);
         }
 
         init();
