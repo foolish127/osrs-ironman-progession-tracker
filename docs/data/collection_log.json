@@ -1,10 +1,10 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-01-16T16:10:16.430190+00:00",
+  "updated": "2026-01-16T16:46:09.196921+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Bludgeon axon",
           "Bludgeon claw",
@@ -16,7 +16,7 @@
         "total_count": 5
       },
       "Abyssal Sire, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Abyssal orphan"
         ],
@@ -24,9 +24,12 @@
         "total_count": 1
       },
       "Abyssal Sire, Slayer": {
-        "obtained": {
-          "Abyssal whip": null
-        },
+        "obtained": [
+          {
+            "name": "Abyssal whip",
+            "date": null
+          }
+        ],
         "missing": [
           "Abyssal dagger",
           "Abyssal head"
@@ -35,7 +38,7 @@
         "total_count": 3
       },
       "Aerial Fishing": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Fish sack",
           "Golden tench",
@@ -47,7 +50,7 @@
         "total_count": 5
       },
       "Alchemical Hydra": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Alchemical hydra heads",
           "Hydra leather",
@@ -58,7 +61,7 @@
         "total_count": 4
       },
       "Alchemical Hydra, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Ikkle hydra"
         ],
@@ -66,9 +69,12 @@
         "total_count": 1
       },
       "Alchemical Hydra, Slayer": {
-        "obtained": {
-          "Dragon thrownaxe": null
-        },
+        "obtained": [
+          {
+            "name": "Dragon thrownaxe",
+            "date": null
+          }
+        ],
         "missing": [
           "Dragon knife",
           "Hydra tail",
@@ -80,7 +86,7 @@
         "total_count": 6
       },
       "All Pets, Chompy Bird Hunting, Miscellaneous": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Chompy chick"
         ],
@@ -88,7 +94,7 @@
         "total_count": 1
       },
       "All Pets, Hunter Guild": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Quetzin"
         ],
@@ -96,7 +102,7 @@
         "total_count": 1
       },
       "All Pets, Miscellaneous": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Herbi"
         ],
@@ -104,9 +110,12 @@
         "total_count": 1
       },
       "All Pets, Skilling Pets": {
-        "obtained": {
-          "Rocky": null
-        },
+        "obtained": [
+          {
+            "name": "Rocky",
+            "date": null
+          }
+        ],
         "missing": [
           "Baby chinchompa (grey)",
           "Beaver",
@@ -120,7 +129,7 @@
         "total_count": 8
       },
       "Amoxliatl, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Moxi"
         ],
@@ -128,10 +137,16 @@
         "total_count": 1
       },
       "Amoxliatl, Slayer": {
-        "obtained": {
-          "Frozen tear": null,
-          "Pendant of ates (inert)": null
-        },
+        "obtained": [
+          {
+            "name": "Frozen tear",
+            "date": null
+          },
+          {
+            "name": "Pendant of ates (inert)",
+            "date": null
+          }
+        ],
         "missing": [
           "Glacial temotli"
         ],
@@ -139,7 +154,7 @@
         "total_count": 3
       },
       "Araxxor": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Araxyte fang",
           "Araxyte head",
@@ -155,7 +170,7 @@
         "total_count": 9
       },
       "Araxxor, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Nid"
         ],
@@ -163,7 +178,7 @@
         "total_count": 1
       },
       "Barbarian Assault": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Fighter hat",
           "Fighter torso",
@@ -179,7 +194,7 @@
         "total_count": 9
       },
       "Barbarian Assault, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Pet penance queen"
         ],
@@ -187,7 +202,7 @@
         "total_count": 1
       },
       "Barbarian Assault, Slayer": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Granite helm"
         ],
@@ -195,14 +210,32 @@
         "total_count": 1
       },
       "Barracuda Trials": {
-        "obtained": {
-          "Barrel stand": null,
-          "Captured wind mote": null,
-          "Fetid key": null,
-          "Ralph's fabric roll": null,
-          "Serrated key": null,
-          "Stormy key": null
-        },
+        "obtained": [
+          {
+            "name": "Barrel stand",
+            "date": null
+          },
+          {
+            "name": "Captured wind mote",
+            "date": null
+          },
+          {
+            "name": "Fetid key",
+            "date": null
+          },
+          {
+            "name": "Ralph's fabric roll",
+            "date": null
+          },
+          {
+            "name": "Serrated key",
+            "date": null
+          },
+          {
+            "name": "Stormy key",
+            "date": null
+          }
+        ],
         "missing": [
           "Gurtob's fabric roll",
           "Gwyna's fabric roll",
@@ -212,24 +245,72 @@
         "total_count": 9
       },
       "Barrows Chests": {
-        "obtained": {
-          "Ahrim's robeskirt": null,
-          "Ahrim's robetop": null,
-          "Ahrim's staff": null,
-          "Dharok's greataxe": null,
-          "Dharok's platelegs": null,
-          "Guthan's chainskirt": null,
-          "Guthan's platebody": null,
-          "Karil's coif": null,
-          "Karil's crossbow": null,
-          "Karil's leathertop": null,
-          "Torag's hammers": null,
-          "Torag's helm": null,
-          "Torag's platebody": null,
-          "Verac's flail": null,
-          "Verac's helm": null,
-          "Verac's plateskirt": null
-        },
+        "obtained": [
+          {
+            "name": "Ahrim's robeskirt",
+            "date": null
+          },
+          {
+            "name": "Ahrim's robetop",
+            "date": null
+          },
+          {
+            "name": "Ahrim's staff",
+            "date": null
+          },
+          {
+            "name": "Dharok's greataxe",
+            "date": null
+          },
+          {
+            "name": "Dharok's platelegs",
+            "date": null
+          },
+          {
+            "name": "Guthan's chainskirt",
+            "date": null
+          },
+          {
+            "name": "Guthan's platebody",
+            "date": null
+          },
+          {
+            "name": "Karil's coif",
+            "date": null
+          },
+          {
+            "name": "Karil's crossbow",
+            "date": null
+          },
+          {
+            "name": "Karil's leathertop",
+            "date": null
+          },
+          {
+            "name": "Torag's hammers",
+            "date": null
+          },
+          {
+            "name": "Torag's helm",
+            "date": null
+          },
+          {
+            "name": "Torag's platebody",
+            "date": null
+          },
+          {
+            "name": "Verac's flail",
+            "date": null
+          },
+          {
+            "name": "Verac's helm",
+            "date": null
+          },
+          {
+            "name": "Verac's plateskirt",
+            "date": null
+          }
+        ],
         "missing": [
           "Ahrim's hood",
           "Bolt rack",
@@ -245,19 +326,52 @@
         "total_count": 25
       },
       "Beginner Treasure Trails": {
-        "obtained": {
-          "Bear feet": null,
-          "Demon feet": null,
-          "Frog slippers": null,
-          "Jester cape": null,
-          "Mole slippers": null,
-          "Monk's robe (t)": null,
-          "Monk's robe top (t)": null,
-          "Rune scimitar ornament kit (guthix)": null,
-          "Sandwich lady bottom": null,
-          "Sandwich lady hat": null,
-          "Shoulder parrot": null
-        },
+        "obtained": [
+          {
+            "name": "Bear feet",
+            "date": null
+          },
+          {
+            "name": "Demon feet",
+            "date": null
+          },
+          {
+            "name": "Frog slippers",
+            "date": null
+          },
+          {
+            "name": "Jester cape",
+            "date": null
+          },
+          {
+            "name": "Mole slippers",
+            "date": null
+          },
+          {
+            "name": "Monk's robe (t)",
+            "date": null
+          },
+          {
+            "name": "Monk's robe top (t)",
+            "date": null
+          },
+          {
+            "name": "Rune scimitar ornament kit (guthix)",
+            "date": null
+          },
+          {
+            "name": "Sandwich lady bottom",
+            "date": null
+          },
+          {
+            "name": "Sandwich lady hat",
+            "date": null
+          },
+          {
+            "name": "Shoulder parrot",
+            "date": null
+          }
+        ],
         "missing": [
           "Amulet of defence (t)",
           "Rune scimitar ornament kit (saradomin)",
@@ -268,17 +382,23 @@
         "total_count": 15
       },
       "Beginner Treasure Trails, Easy Treasure Trails": {
-        "obtained": {
-          "Black pickaxe": null
-        },
+        "obtained": [
+          {
+            "name": "Black pickaxe",
+            "date": null
+          }
+        ],
         "missing": [],
         "obtained_count": 1,
         "total_count": 1
       },
       "Boat Paints": {
-        "obtained": {
-          "Shark paint": null
-        },
+        "obtained": [
+          {
+            "name": "Shark paint",
+            "date": null
+          }
+        ],
         "missing": [
           "Angler's paint",
           "Armadylean paint",
@@ -295,10 +415,16 @@
         "total_count": 11
       },
       "Brimhaven Agility Arena": {
-        "obtained": {
-          "Agility arena ticket": null,
-          "Brimhaven voucher": null
-        },
+        "obtained": [
+          {
+            "name": "Agility arena ticket",
+            "date": null
+          },
+          {
+            "name": "Brimhaven voucher",
+            "date": null
+          }
+        ],
         "missing": [
           "Graceful boots (Agility Arena)",
           "Graceful cape (Agility Arena)",
@@ -312,7 +438,7 @@
         "total_count": 9
       },
       "Bryophyta": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Bryophyta's essence"
         ],
@@ -320,7 +446,7 @@
         "total_count": 1
       },
       "Callisto and Artio": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Claws of callisto",
           "Tyrannical ring",
@@ -330,7 +456,7 @@
         "total_count": 3
       },
       "Callisto and Artio, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Callisto cub"
         ],
@@ -338,15 +464,18 @@
         "total_count": 1
       },
       "Callisto and Artio, Chaos Elemental, Kalphite Queen, King Black Dragon, Venenatis and Spindel, Vet'ion and Calvar'ion": {
-        "obtained": {
-          "Dragon pickaxe": null
-        },
+        "obtained": [
+          {
+            "name": "Dragon pickaxe",
+            "date": null
+          }
+        ],
         "missing": [],
         "obtained_count": 1,
         "total_count": 1
       },
       "Callisto and Artio, Chaos Elemental, Kalphite Queen, Scorpia, Venenatis and Spindel, Vet'ion and Calvar'ion": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Dragon 2h sword"
         ],
@@ -354,7 +483,7 @@
         "total_count": 1
       },
       "Camdozaal": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Ancient astroscope",
           "Ancient carcanet",
@@ -371,7 +500,7 @@
         "total_count": 10
       },
       "Castle Wars": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Castlewars cloak (Saradomin)",
           "Castlewars cloak (Zamorak)",
@@ -417,10 +546,16 @@
         "total_count": 39
       },
       "Cerberus": {
-        "obtained": {
-          "Key master teleport": null,
-          "Smouldering stone": null
-        },
+        "obtained": [
+          {
+            "name": "Key master teleport",
+            "date": null
+          },
+          {
+            "name": "Smouldering stone",
+            "date": null
+          }
+        ],
         "missing": [
           "Eternal crystal",
           "Jar of souls",
@@ -431,7 +566,7 @@
         "total_count": 6
       },
       "Cerberus, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Hellpuppy"
         ],
@@ -439,7 +574,7 @@
         "total_count": 1
       },
       "Chambers of Xeric": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Ancestral hat",
           "Ancestral robe bottom",
@@ -468,7 +603,7 @@
         "total_count": 22
       },
       "Chambers of Xeric, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Olmlet"
         ],
@@ -476,12 +611,16 @@
         "total_count": 1
       },
       "Champion's Challenge": {
-        "obtained": {},
+        "obtained": [
+          {
+            "name": "Giant champion scroll",
+            "date": null
+          }
+        ],
         "missing": [
           "Champion's cape",
           "Earth warrior champion scroll",
           "Ghoul champion scroll",
-          "Giant champion scroll",
           "Goblin champion scroll",
           "Hobgoblin champion scroll",
           "Imp champion scroll",
@@ -490,11 +629,11 @@
           "Skeleton champion scroll",
           "Zombie champion scroll"
         ],
-        "obtained_count": 0,
+        "obtained_count": 1,
         "total_count": 11
       },
       "Chaos Elemental, Chaos Fanatic, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Pet chaos elemental"
         ],
@@ -502,7 +641,7 @@
         "total_count": 1
       },
       "Chaos Fanatic": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Malediction shard 1",
           "Odium shard 1"
@@ -511,15 +650,36 @@
         "total_count": 2
       },
       "Chompy Bird Hunting": {
-        "obtained": {
-          "Chompy bird hat (bowman)": null,
-          "Chompy bird hat (marksman)": null,
-          "Chompy bird hat (ogre bowman)": null,
-          "Chompy bird hat (ogre marksman)": null,
-          "Chompy bird hat (ogre woodsman)": null,
-          "Chompy bird hat (ogre yeoman)": null,
-          "Chompy bird hat (yeoman)": null
-        },
+        "obtained": [
+          {
+            "name": "Chompy bird hat (bowman)",
+            "date": null
+          },
+          {
+            "name": "Chompy bird hat (marksman)",
+            "date": null
+          },
+          {
+            "name": "Chompy bird hat (ogre bowman)",
+            "date": null
+          },
+          {
+            "name": "Chompy bird hat (ogre marksman)",
+            "date": null
+          },
+          {
+            "name": "Chompy bird hat (ogre woodsman)",
+            "date": null
+          },
+          {
+            "name": "Chompy bird hat (ogre yeoman)",
+            "date": null
+          },
+          {
+            "name": "Chompy bird hat (yeoman)",
+            "date": null
+          }
+        ],
         "missing": [
           "Chompy bird hat (bowmaster)",
           "Chompy bird hat (dragon archer)",
@@ -537,7 +697,7 @@
         "total_count": 18
       },
       "Colossal Wyrm Agility": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Calcified acorn",
           "Colossal wyrm teleport scroll",
@@ -552,7 +712,7 @@
         "total_count": 8
       },
       "Commander Zilyana": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Armadyl crossbow",
           "Saradomin hilt",
@@ -563,7 +723,7 @@
         "total_count": 4
       },
       "Commander Zilyana, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Pet zilyana"
         ],
@@ -571,7 +731,7 @@
         "total_count": 1
       },
       "Commander Zilyana, General Graardor, Kree'arra, K'ril Tsutsaroth": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Godsword shard 1",
           "Godsword shard 2",
@@ -581,7 +741,7 @@
         "total_count": 3
       },
       "Corporeal Beast": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Arcane sigil",
           "Elysian sigil",
@@ -594,7 +754,7 @@
         "total_count": 6
       },
       "Corporeal Beast, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Pet dark core"
         ],
@@ -602,10 +762,16 @@
         "total_count": 1
       },
       "Crazy Archaeologist": {
-        "obtained": {
-          "Fedora": null,
-          "Malediction shard 2": null
-        },
+        "obtained": [
+          {
+            "name": "Fedora",
+            "date": null
+          },
+          {
+            "name": "Malediction shard 2",
+            "date": null
+          }
+        ],
         "missing": [
           "Odium shard 2"
         ],
@@ -613,10 +779,16 @@
         "total_count": 3
       },
       "Creature Creation": {
-        "obtained": {
-          "Red satchel": null,
-          "Tea flask": null
-        },
+        "obtained": [
+          {
+            "name": "Red satchel",
+            "date": null
+          },
+          {
+            "name": "Tea flask",
+            "date": null
+          }
+        ],
         "missing": [
           "Black satchel",
           "Gold satchel",
@@ -628,24 +800,51 @@
         "total_count": 7
       },
       "Cyclopes": {
-        "obtained": {
-          "Adamant defender": null,
-          "Black defender": null,
-          "Bronze defender": null,
-          "Dragon defender": null,
-          "Iron defender": null,
-          "Mithril defender": null,
-          "Rune defender": null,
-          "Steel defender": null
-        },
+        "obtained": [
+          {
+            "name": "Adamant defender",
+            "date": null
+          },
+          {
+            "name": "Black defender",
+            "date": null
+          },
+          {
+            "name": "Bronze defender",
+            "date": null
+          },
+          {
+            "name": "Dragon defender",
+            "date": null
+          },
+          {
+            "name": "Iron defender",
+            "date": null
+          },
+          {
+            "name": "Mithril defender",
+            "date": null
+          },
+          {
+            "name": "Rune defender",
+            "date": null
+          },
+          {
+            "name": "Steel defender",
+            "date": null
+          }
+        ],
         "missing": [],
         "obtained_count": 8,
         "total_count": 8
       },
       "Dagannoth Kings": {
-        "obtained": {
-          "Berserker ring": null
-        },
+        "obtained": [
+          {
+            "name": "Berserker ring",
+            "date": null
+          }
+        ],
         "missing": [
           "Archers ring",
           "Mud battlestaff",
@@ -657,7 +856,7 @@
         "total_count": 6
       },
       "Dagannoth Kings, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Pet dagannoth prime",
           "Pet dagannoth rex",
@@ -667,15 +866,18 @@
         "total_count": 3
       },
       "Dagannoth Kings, Wintertodt": {
-        "obtained": {
-          "Dragon axe": null
-        },
+        "obtained": [
+          {
+            "name": "Dragon axe",
+            "date": null
+          }
+        ],
         "missing": [],
         "obtained_count": 1,
         "total_count": 1
       },
       "Deranged archaeologist": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Steel ring"
         ],
@@ -683,7 +885,7 @@
         "total_count": 1
       },
       "Doom of Mokhaiotl": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Avernic treads",
           "Demon tear",
@@ -695,7 +897,7 @@
         "total_count": 5
       },
       "Doom of Mokhaiotl, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Dom"
         ],
@@ -703,7 +905,7 @@
         "total_count": 1
       },
       "Duke Sucellus": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Eye of the duke",
           "Frozen tablet",
@@ -714,7 +916,7 @@
         "total_count": 4
       },
       "Duke Sucellus, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Baron"
         ],
@@ -722,7 +924,7 @@
         "total_count": 1
       },
       "Duke Sucellus, The Leviathan, Vardorvis, The Whisperer": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Awakener's orb",
           "Chromium ingot",
@@ -734,20 +936,56 @@
         "total_count": 5
       },
       "Easy Treasure Trails": {
-        "obtained": {
-          "Ancient robe legs": null,
-          "Black helm (h1)": null,
-          "Black helm (h5)": null,
-          "Black wizard hat (t)": null,
-          "Blue elegant legs": null,
-          "Blue skirt (t)": null,
-          "Blue wizard hat (g)": null,
-          "Bob's black shirt": null,
-          "Bronze full helm (g)": null,
-          "Iron platebody (t)": null,
-          "Iron plateskirt (g)": null,
-          "Zamorak robe legs": null
-        },
+        "obtained": [
+          {
+            "name": "Ancient robe legs",
+            "date": null
+          },
+          {
+            "name": "Black helm (h1)",
+            "date": null
+          },
+          {
+            "name": "Black helm (h5)",
+            "date": null
+          },
+          {
+            "name": "Black wizard hat (t)",
+            "date": null
+          },
+          {
+            "name": "Blue elegant legs",
+            "date": null
+          },
+          {
+            "name": "Blue skirt (t)",
+            "date": null
+          },
+          {
+            "name": "Blue wizard hat (g)",
+            "date": null
+          },
+          {
+            "name": "Bob's black shirt",
+            "date": null
+          },
+          {
+            "name": "Bronze full helm (g)",
+            "date": null
+          },
+          {
+            "name": "Iron platebody (t)",
+            "date": null
+          },
+          {
+            "name": "Iron plateskirt (g)",
+            "date": null
+          },
+          {
+            "name": "Zamorak robe legs",
+            "date": null
+          }
+        ],
         "missing": [
           "A powdered wig",
           "Amulet of magic (t)",
@@ -872,7 +1110,7 @@
         "total_count": 130
       },
       "Elder Chaos Druids": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Elder chaos hood",
           "Elder chaos robe",
@@ -882,13 +1120,28 @@
         "total_count": 3
       },
       "Elite Treasure Trails": {
-        "obtained": {
-          "Bronze dragon mask": null,
-          "Bucket helm": null,
-          "Dragon scimitar ornament kit": null,
-          "Royal sceptre": null,
-          "Steel dragon mask": null
-        },
+        "obtained": [
+          {
+            "name": "Bronze dragon mask",
+            "date": null
+          },
+          {
+            "name": "Bucket helm",
+            "date": null
+          },
+          {
+            "name": "Dragon scimitar ornament kit",
+            "date": null
+          },
+          {
+            "name": "Royal sceptre",
+            "date": null
+          },
+          {
+            "name": "Steel dragon mask",
+            "date": null
+          }
+        ],
         "missing": [
           "Adamant dragon mask",
           "Afro",
@@ -948,7 +1201,7 @@
         "total_count": 58
       },
       "Elite Treasure Trails (Rare)": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Lava dragon mask",
           "Ring of nature"
@@ -957,7 +1210,7 @@
         "total_count": 2
       },
       "Elite Treasure Trails (Rare), Master Treasure Trails (Rare)": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "3rd age bow",
           "3rd age cloak",
@@ -977,7 +1230,7 @@
         "total_count": 13
       },
       "Elite Treasure Trails, Master Treasure Trails": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Ring of 3rd age"
         ],
@@ -985,29 +1238,71 @@
         "total_count": 1
       },
       "Fishing Trawler, Aerial Fishing": {
-        "obtained": {
-          "Angler boots": null,
-          "Angler hat": null,
-          "Angler top": null,
-          "Angler waders": null
-        },
+        "obtained": [
+          {
+            "name": "Angler boots",
+            "date": null
+          },
+          {
+            "name": "Angler hat",
+            "date": null
+          },
+          {
+            "name": "Angler top",
+            "date": null
+          },
+          {
+            "name": "Angler waders",
+            "date": null
+          }
+        ],
         "missing": [],
         "obtained_count": 4,
         "total_count": 4
       },
       "Forestry": {
-        "obtained": {
-          "Cape pouch": null,
-          "Felling axe handle": null,
-          "Fox whistle": null,
-          "Log basket": null,
-          "Log brace": null,
-          "Pheasant boots": null,
-          "Pheasant cape": null,
-          "Pheasant hat": null,
-          "Pheasant legs": null,
-          "Sturdy beehive parts": null
-        },
+        "obtained": [
+          {
+            "name": "Cape pouch",
+            "date": null
+          },
+          {
+            "name": "Felling axe handle",
+            "date": null
+          },
+          {
+            "name": "Fox whistle",
+            "date": null
+          },
+          {
+            "name": "Log basket",
+            "date": null
+          },
+          {
+            "name": "Log brace",
+            "date": null
+          },
+          {
+            "name": "Pheasant boots",
+            "date": null
+          },
+          {
+            "name": "Pheasant cape",
+            "date": null
+          },
+          {
+            "name": "Pheasant hat",
+            "date": null
+          },
+          {
+            "name": "Pheasant legs",
+            "date": null
+          },
+          {
+            "name": "Sturdy beehive parts",
+            "date": null
+          }
+        ],
         "missing": [
           "Clothes pouch blueprint",
           "Forestry boots",
@@ -1023,9 +1318,12 @@
         "total_count": 19
       },
       "Fortis Colosseum": {
-        "obtained": {
-          "Sunfire splinters": null
-        },
+        "obtained": [
+          {
+            "name": "Sunfire splinters",
+            "date": null
+          }
+        ],
         "missing": [
           "Dizana's quiver (uncharged)",
           "Echo crystal",
@@ -1038,7 +1336,7 @@
         "total_count": 7
       },
       "Fortis Colosseum, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Smol heredit"
         ],
@@ -1046,7 +1344,7 @@
         "total_count": 1
       },
       "Fortis Colosseum, Skotizo, Zalcano, Zulrah, Miscellaneous": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Uncut onyx"
         ],
@@ -1054,7 +1352,7 @@
         "total_count": 1
       },
       "Fossil Island Notes": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Ancient note",
           "Ancient writings",
@@ -1071,7 +1369,7 @@
         "total_count": 10
       },
       "General Graardor": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Bandos boots",
           "Bandos chestplate",
@@ -1082,7 +1380,7 @@
         "total_count": 4
       },
       "General Graardor, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Pet general graardor"
         ],
@@ -1090,16 +1388,22 @@
         "total_count": 1
       },
       "Giant Mole": {
-        "obtained": {
-          "Mole claw": null,
-          "Mole skin": null
-        },
+        "obtained": [
+          {
+            "name": "Mole claw",
+            "date": null
+          },
+          {
+            "name": "Mole skin",
+            "date": null
+          }
+        ],
         "missing": [],
         "obtained_count": 2,
         "total_count": 2
       },
       "Giant Mole, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Baby mole"
         ],
@@ -1107,10 +1411,16 @@
         "total_count": 1
       },
       "Giants' Foundry": {
-        "obtained": {
-          "Double ammo mould": null,
-          "Smiths gloves": null
-        },
+        "obtained": [
+          {
+            "name": "Double ammo mould",
+            "date": null
+          },
+          {
+            "name": "Smiths gloves",
+            "date": null
+          }
+        ],
         "missing": [
           "Colossal blade",
           "Kovac's grog",
@@ -1124,13 +1434,28 @@
         "total_count": 9
       },
       "Glough's Experiments": {
-        "obtained": {
-          "Ballista limbs": null,
-          "Ballista spring": null,
-          "Light frame": null,
-          "Monkey tail": null,
-          "Zenyte shard": null
-        },
+        "obtained": [
+          {
+            "name": "Ballista limbs",
+            "date": null
+          },
+          {
+            "name": "Ballista spring",
+            "date": null
+          },
+          {
+            "name": "Light frame",
+            "date": null
+          },
+          {
+            "name": "Monkey tail",
+            "date": null
+          },
+          {
+            "name": "Zenyte shard",
+            "date": null
+          }
+        ],
         "missing": [
           "Heavy frame"
         ],
@@ -1138,7 +1463,7 @@
         "total_count": 6
       },
       "Gnome Restaurant": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Gnome goggles",
           "Gnome scarf",
@@ -1149,10 +1474,16 @@
         "total_count": 4
       },
       "Grotesque Guardians": {
-        "obtained": {
-          "Granite dust": null,
-          "Granite gloves": null
-        },
+        "obtained": [
+          {
+            "name": "Granite dust",
+            "date": null
+          },
+          {
+            "name": "Granite gloves",
+            "date": null
+          }
+        ],
         "missing": [
           "Black tourmaline core",
           "Granite hammer",
@@ -1163,7 +1494,7 @@
         "total_count": 6
       },
       "Grotesque Guardians, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Noon"
         ],
@@ -1171,15 +1502,36 @@
         "total_count": 1
       },
       "Guardians of the Rift": {
-        "obtained": {
-          "Abyssal lantern": null,
-          "Abyssal pearls": null,
-          "Boots of the eye": null,
-          "Catalytic talisman": null,
-          "Intricate pouch": null,
-          "Lost bag": null,
-          "Robe bottoms of the eye": null
-        },
+        "obtained": [
+          {
+            "name": "Abyssal lantern",
+            "date": null
+          },
+          {
+            "name": "Abyssal pearls",
+            "date": null
+          },
+          {
+            "name": "Boots of the eye",
+            "date": null
+          },
+          {
+            "name": "Catalytic talisman",
+            "date": null
+          },
+          {
+            "name": "Intricate pouch",
+            "date": null
+          },
+          {
+            "name": "Lost bag",
+            "date": null
+          },
+          {
+            "name": "Robe bottoms of the eye",
+            "date": null
+          }
+        ],
         "missing": [
           "Abyssal blue dye",
           "Abyssal green dye",
@@ -1195,7 +1547,7 @@
         "total_count": 16
       },
       "Guardians of the Rift, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Abyssal protector"
         ],
@@ -1203,7 +1555,7 @@
         "total_count": 1
       },
       "Hallowed Sepulchre": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Dark acorn",
           "Dark dye",
@@ -1226,54 +1578,196 @@
         "total_count": 16
       },
       "Hard Treasure Trails": {
-        "obtained": {
-          "Ancient bracers": null,
-          "Ancient full helm": null,
-          "Ancient kiteshield": null,
-          "Ancient plateskirt": null,
-          "Armadyl d'hide body": null,
-          "Armadyl kiteshield": null,
-          "Armadyl platelegs": null,
-          "Bandos chaps": null,
-          "Bandos coif": null,
-          "Bandos d'hide body": null,
-          "Bandos full helm": null,
-          "Bandos platebody": null,
-          "Blue d'hide chaps (g)": null,
-          "Dragon boots ornament kit": null,
-          "Explorer backpack": null,
-          "Guthix chaps": null,
-          "Guthix d'hide body": null,
-          "Guthix platelegs": null,
-          "Guthix plateskirt": null,
-          "Guthix stole": null,
-          "Magic comp bow": null,
-          "Pirate's hat": null,
-          "Red cavalier": null,
-          "Red d'hide body (g)": null,
-          "Red d'hide chaps (t)": null,
-          "Red dragon mask": null,
-          "Robin hood hat": null,
-          "Rune defender ornament kit": null,
-          "Rune full helm (g)": null,
-          "Rune helm (h2)": null,
-          "Rune helm (h3)": null,
-          "Rune helm (h5)": null,
-          "Rune kiteshield (g)": null,
-          "Rune platebody (g)": null,
-          "Rune platebody (t)": null,
-          "Rune platelegs (g)": null,
-          "Rune shield (h1)": null,
-          "Saradomin bracers": null,
-          "Saradomin full helm": null,
-          "Saradomin platebody": null,
-          "Saradomin platelegs": null,
-          "Tan cavalier": null,
-          "Tzhaar-ket-om ornament kit": null,
-          "Zamorak bracers": null,
-          "Zamorak d'hide body": null,
-          "Zamorak d'hide boots": null
-        },
+        "obtained": [
+          {
+            "name": "Ancient bracers",
+            "date": null
+          },
+          {
+            "name": "Ancient full helm",
+            "date": null
+          },
+          {
+            "name": "Ancient kiteshield",
+            "date": null
+          },
+          {
+            "name": "Ancient plateskirt",
+            "date": null
+          },
+          {
+            "name": "Armadyl d'hide body",
+            "date": null
+          },
+          {
+            "name": "Armadyl kiteshield",
+            "date": null
+          },
+          {
+            "name": "Armadyl platelegs",
+            "date": null
+          },
+          {
+            "name": "Bandos chaps",
+            "date": null
+          },
+          {
+            "name": "Bandos coif",
+            "date": null
+          },
+          {
+            "name": "Bandos d'hide body",
+            "date": null
+          },
+          {
+            "name": "Bandos full helm",
+            "date": null
+          },
+          {
+            "name": "Bandos platebody",
+            "date": null
+          },
+          {
+            "name": "Blue d'hide chaps (g)",
+            "date": null
+          },
+          {
+            "name": "Dragon boots ornament kit",
+            "date": null
+          },
+          {
+            "name": "Enchanted top",
+            "date": null
+          },
+          {
+            "name": "Explorer backpack",
+            "date": null
+          },
+          {
+            "name": "Guthix chaps",
+            "date": null
+          },
+          {
+            "name": "Guthix d'hide body",
+            "date": null
+          },
+          {
+            "name": "Guthix platelegs",
+            "date": null
+          },
+          {
+            "name": "Guthix plateskirt",
+            "date": null
+          },
+          {
+            "name": "Guthix stole",
+            "date": null
+          },
+          {
+            "name": "Magic comp bow",
+            "date": null
+          },
+          {
+            "name": "Pirate's hat",
+            "date": null
+          },
+          {
+            "name": "Red cavalier",
+            "date": null
+          },
+          {
+            "name": "Red d'hide body (g)",
+            "date": null
+          },
+          {
+            "name": "Red d'hide chaps (t)",
+            "date": null
+          },
+          {
+            "name": "Red dragon mask",
+            "date": null
+          },
+          {
+            "name": "Robin hood hat",
+            "date": null
+          },
+          {
+            "name": "Rune defender ornament kit",
+            "date": null
+          },
+          {
+            "name": "Rune full helm (g)",
+            "date": null
+          },
+          {
+            "name": "Rune helm (h2)",
+            "date": null
+          },
+          {
+            "name": "Rune helm (h3)",
+            "date": null
+          },
+          {
+            "name": "Rune helm (h5)",
+            "date": null
+          },
+          {
+            "name": "Rune kiteshield (g)",
+            "date": null
+          },
+          {
+            "name": "Rune platebody (g)",
+            "date": null
+          },
+          {
+            "name": "Rune platebody (t)",
+            "date": null
+          },
+          {
+            "name": "Rune platelegs (g)",
+            "date": null
+          },
+          {
+            "name": "Rune shield (h1)",
+            "date": null
+          },
+          {
+            "name": "Saradomin bracers",
+            "date": null
+          },
+          {
+            "name": "Saradomin full helm",
+            "date": null
+          },
+          {
+            "name": "Saradomin platebody",
+            "date": null
+          },
+          {
+            "name": "Saradomin platelegs",
+            "date": null
+          },
+          {
+            "name": "Tan cavalier",
+            "date": null
+          },
+          {
+            "name": "Tzhaar-ket-om ornament kit",
+            "date": null
+          },
+          {
+            "name": "Zamorak bracers",
+            "date": null
+          },
+          {
+            "name": "Zamorak d'hide body",
+            "date": null
+          },
+          {
+            "name": "Zamorak d'hide boots",
+            "date": null
+          }
+        ],
         "missing": [
           "Amulet of glory (t4)",
           "Ancient chaps",
@@ -1309,7 +1803,6 @@
           "Dual sai",
           "Enchanted hat",
           "Enchanted robe",
-          "Enchanted top",
           "Green dragon mask",
           "Guthix bracers",
           "Guthix coif",
@@ -1364,11 +1857,11 @@
           "Zamorak stole",
           "Zombie head"
         ],
-        "obtained_count": 46,
+        "obtained_count": 47,
         "total_count": 134
       },
       "Hard Treasure Trails (Rare), Elite Treasure Trails (Rare), Master Treasure Trails (Rare)": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "3rd age amulet",
           "3rd age full helmet",
@@ -1399,21 +1892,39 @@
         "total_count": 24
       },
       "Hespori": {
-        "obtained": {
-          "Attas seed": null,
-          "Bottomless compost bucket": null,
-          "Iasor seed": null,
-          "Kronos seed": null
-        },
+        "obtained": [
+          {
+            "name": "Attas seed",
+            "date": null
+          },
+          {
+            "name": "Bottomless compost bucket",
+            "date": null
+          },
+          {
+            "name": "Iasor seed",
+            "date": null
+          },
+          {
+            "name": "Kronos seed",
+            "date": null
+          }
+        ],
         "missing": [],
         "obtained_count": 4,
         "total_count": 4
       },
       "Hunter Guild": {
-        "obtained": {
-          "Guild hunter headwear": null,
-          "Guild hunter top": null
-        },
+        "obtained": [
+          {
+            "name": "Guild hunter headwear",
+            "date": null
+          },
+          {
+            "name": "Guild hunter top",
+            "date": null
+          }
+        ],
         "missing": [
           "Guild hunter boots",
           "Guild hunter legs",
@@ -1423,7 +1934,7 @@
         "total_count": 5
       },
       "K'ril Tsutsaroth": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Staff of the dead",
           "Steam battlestaff",
@@ -1434,7 +1945,7 @@
         "total_count": 4
       },
       "K'ril Tsutsaroth, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Pet k'ril tsutsaroth"
         ],
@@ -1442,7 +1953,7 @@
         "total_count": 1
       },
       "Kalphite Queen": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Jar of sand",
           "Kq head"
@@ -1451,7 +1962,7 @@
         "total_count": 2
       },
       "Kalphite Queen, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Kalphite princess"
         ],
@@ -1459,7 +1970,7 @@
         "total_count": 1
       },
       "Kalphite Queen, Thermonuclear Smoke Devil, Slayer": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Dragon chainbody"
         ],
@@ -1467,7 +1978,7 @@
         "total_count": 1
       },
       "King Black Dragon": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Kbd heads"
         ],
@@ -1475,7 +1986,7 @@
         "total_count": 1
       },
       "King Black Dragon, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Prince black dragon"
         ],
@@ -1483,7 +1994,7 @@
         "total_count": 1
       },
       "King Black Dragon, Vorkath, Slayer": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Draconic visage"
         ],
@@ -1491,9 +2002,12 @@
         "total_count": 1
       },
       "Kraken": {
-        "obtained": {
-          "Trident of the seas (full)": null
-        },
+        "obtained": [
+          {
+            "name": "Trident of the seas (full)",
+            "date": null
+          }
+        ],
         "missing": [
           "Jar of dirt"
         ],
@@ -1501,7 +2015,7 @@
         "total_count": 2
       },
       "Kraken, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Pet kraken"
         ],
@@ -1509,15 +2023,18 @@
         "total_count": 1
       },
       "Kraken, Slayer": {
-        "obtained": {
-          "Kraken tentacle": null
-        },
+        "obtained": [
+          {
+            "name": "Kraken tentacle",
+            "date": null
+          }
+        ],
         "missing": [],
         "obtained_count": 1,
         "total_count": 1
       },
       "Kree'arra": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Armadyl chainskirt",
           "Armadyl chestplate",
@@ -1528,7 +2045,7 @@
         "total_count": 4
       },
       "Kree'arra, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Pet kree'arra"
         ],
@@ -1536,7 +2053,7 @@
         "total_count": 1
       },
       "Last Man Standing": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Ancient halo",
           "Armadyl halo",
@@ -1575,12 +2092,24 @@
         "total_count": 32
       },
       "Lost Schematics": {
-        "obtained": {
-          "Dragon cannon schematic": null,
-          "Eternal brazier schematic": null,
-          "Rosewood hull schematic": null,
-          "Salvaging station schematic": null
-        },
+        "obtained": [
+          {
+            "name": "Dragon cannon schematic",
+            "date": null
+          },
+          {
+            "name": "Eternal brazier schematic",
+            "date": null
+          },
+          {
+            "name": "Rosewood hull schematic",
+            "date": null
+          },
+          {
+            "name": "Salvaging station schematic",
+            "date": null
+          }
+        ],
         "missing": [
           "Dragon helm schematic",
           "Dragon keel schematic",
@@ -1593,9 +2122,12 @@
         "total_count": 10
       },
       "Magic Training Arena": {
-        "obtained": {
-          "Infinity boots": null
-        },
+        "obtained": [
+          {
+            "name": "Infinity boots",
+            "date": null
+          }
+        ],
         "missing": [
           "Apprentice wand",
           "Beginner wand",
@@ -1612,14 +2144,32 @@
         "total_count": 11
       },
       "Mahogany Homes": {
-        "obtained": {
-          "Amy's saw": null,
-          "Carpenter's boots": null,
-          "Carpenter's helmet": null,
-          "Carpenter's shirt": null,
-          "Carpenter's trousers": null,
-          "Plank sack": null
-        },
+        "obtained": [
+          {
+            "name": "Amy's saw",
+            "date": null
+          },
+          {
+            "name": "Carpenter's boots",
+            "date": null
+          },
+          {
+            "name": "Carpenter's helmet",
+            "date": null
+          },
+          {
+            "name": "Carpenter's shirt",
+            "date": null
+          },
+          {
+            "name": "Carpenter's trousers",
+            "date": null
+          },
+          {
+            "name": "Plank sack",
+            "date": null
+          }
+        ],
         "missing": [
           "Hosidius blueprints",
           "Supply crate"
@@ -1628,7 +2178,7 @@
         "total_count": 8
       },
       "Master Treasure Trails": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Ale of the gods",
           "Anguish ornament kit",
@@ -1682,7 +2232,7 @@
         "total_count": 47
       },
       "Master Treasure Trails (Rare)": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "3rd age axe",
           "3rd age druidic cloak",
@@ -1697,7 +2247,7 @@
         "total_count": 8
       },
       "Master Treasure Trails, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Bloodhound"
         ],
@@ -1705,10 +2255,16 @@
         "total_count": 1
       },
       "Mastering Mixology": {
-        "obtained": {
-          "Alchemist's amulet": null,
-          "Prescription goggles": null
-        },
+        "obtained": [
+          {
+            "name": "Alchemist's amulet",
+            "date": null
+          },
+          {
+            "name": "Prescription goggles",
+            "date": null
+          }
+        ],
         "missing": [
           "Alchemist gloves",
           "Alchemist labcoat",
@@ -1720,24 +2276,72 @@
         "total_count": 7
       },
       "Medium Treasure Trails": {
-        "obtained": {
-          "Adamant full helm (t)": null,
-          "Adamant shield (h2)": null,
-          "Adamant shield (h3)": null,
-          "Adamant shield (h4)": null,
-          "Armadyl cloak": null,
-          "Armadyl mitre": null,
-          "Bandos crozier": null,
-          "Black headband": null,
-          "Blue boater": null,
-          "Gold elegant skirt": null,
-          "Green boater": null,
-          "Green d'hide chaps (g)": null,
-          "Lovakengj banner": null,
-          "Mithril platelegs (t)": null,
-          "Strength amulet (t)": null,
-          "White headband": null
-        },
+        "obtained": [
+          {
+            "name": "Adamant full helm (t)",
+            "date": null
+          },
+          {
+            "name": "Adamant shield (h2)",
+            "date": null
+          },
+          {
+            "name": "Adamant shield (h3)",
+            "date": null
+          },
+          {
+            "name": "Adamant shield (h4)",
+            "date": null
+          },
+          {
+            "name": "Armadyl cloak",
+            "date": null
+          },
+          {
+            "name": "Armadyl mitre",
+            "date": null
+          },
+          {
+            "name": "Bandos crozier",
+            "date": null
+          },
+          {
+            "name": "Black headband",
+            "date": null
+          },
+          {
+            "name": "Blue boater",
+            "date": null
+          },
+          {
+            "name": "Gold elegant skirt",
+            "date": null
+          },
+          {
+            "name": "Green boater",
+            "date": null
+          },
+          {
+            "name": "Green d'hide chaps (g)",
+            "date": null
+          },
+          {
+            "name": "Lovakengj banner",
+            "date": null
+          },
+          {
+            "name": "Mithril platelegs (t)",
+            "date": null
+          },
+          {
+            "name": "Strength amulet (t)",
+            "date": null
+          },
+          {
+            "name": "White headband",
+            "date": null
+          }
+        ],
         "missing": [
           "Adamant cane",
           "Adamant full helm (g)",
@@ -1843,28 +2447,88 @@
         "total_count": 115
       },
       "Miscellaneous": {
-        "obtained": {
-          "Big shark": null,
-          "Bottom of sceptre": null,
-          "Broken zombie axe": null,
-          "Curved bone": null,
-          "Dark totem base": null,
-          "Dark totem middle": null,
-          "Dark totem top": null,
-          "Dragon spear": null,
-          "Dragon warhammer": null,
-          "Fresh crab claw": null,
-          "Giant key": null,
-          "Hespori seed": null,
-          "Left skull half": null,
-          "Long bone": null,
-          "Mossy key": null,
-          "Pharaoh's sceptre (uncharged)": null,
-          "Right skull half": null,
-          "Shield left half": null,
-          "Top of sceptre": null,
-          "Xeric's talisman (inert)": null
-        },
+        "obtained": [
+          {
+            "name": "Big shark",
+            "date": null
+          },
+          {
+            "name": "Bottom of sceptre",
+            "date": null
+          },
+          {
+            "name": "Broken zombie axe",
+            "date": null
+          },
+          {
+            "name": "Curved bone",
+            "date": null
+          },
+          {
+            "name": "Dark totem base",
+            "date": null
+          },
+          {
+            "name": "Dark totem middle",
+            "date": null
+          },
+          {
+            "name": "Dark totem top",
+            "date": null
+          },
+          {
+            "name": "Dragon spear",
+            "date": null
+          },
+          {
+            "name": "Dragon warhammer",
+            "date": null
+          },
+          {
+            "name": "Fresh crab claw",
+            "date": null
+          },
+          {
+            "name": "Giant key",
+            "date": null
+          },
+          {
+            "name": "Hespori seed",
+            "date": null
+          },
+          {
+            "name": "Left skull half",
+            "date": null
+          },
+          {
+            "name": "Long bone",
+            "date": null
+          },
+          {
+            "name": "Mossy key",
+            "date": null
+          },
+          {
+            "name": "Pharaoh's sceptre (uncharged)",
+            "date": null
+          },
+          {
+            "name": "Right skull half",
+            "date": null
+          },
+          {
+            "name": "Shield left half",
+            "date": null
+          },
+          {
+            "name": "Top of sceptre",
+            "date": null
+          },
+          {
+            "name": "Xeric's talisman (inert)",
+            "date": null
+          }
+        ],
         "missing": [
           "Amulet of eternal glory",
           "Big bass",
@@ -1910,7 +2574,7 @@
         "total_count": 59
       },
       "Monkey Backpacks": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Karamjan monkey (item)",
           "Kruk jr",
@@ -1923,29 +2587,71 @@
         "total_count": 6
       },
       "Moons of Peril": {
-        "obtained": {
-          "Atlatl dart": null,
-          "Blood moon chestplate": null,
-          "Blood moon helm": null,
-          "Blood moon tassets": null,
-          "Blue moon chestplate": null,
-          "Blue moon helm": null,
-          "Blue moon spear": null,
-          "Blue moon tassets": null,
-          "Dual macuahuitl": null,
-          "Eclipse atlatl": null,
-          "Eclipse moon chestplate": null,
-          "Eclipse moon helm": null,
-          "Eclipse moon tassets": null
-        },
+        "obtained": [
+          {
+            "name": "Atlatl dart",
+            "date": null
+          },
+          {
+            "name": "Blood moon chestplate",
+            "date": null
+          },
+          {
+            "name": "Blood moon helm",
+            "date": null
+          },
+          {
+            "name": "Blood moon tassets",
+            "date": null
+          },
+          {
+            "name": "Blue moon chestplate",
+            "date": null
+          },
+          {
+            "name": "Blue moon helm",
+            "date": null
+          },
+          {
+            "name": "Blue moon spear",
+            "date": null
+          },
+          {
+            "name": "Blue moon tassets",
+            "date": null
+          },
+          {
+            "name": "Dual macuahuitl",
+            "date": null
+          },
+          {
+            "name": "Eclipse atlatl",
+            "date": null
+          },
+          {
+            "name": "Eclipse moon chestplate",
+            "date": null
+          },
+          {
+            "name": "Eclipse moon helm",
+            "date": null
+          },
+          {
+            "name": "Eclipse moon tassets",
+            "date": null
+          }
+        ],
         "missing": [],
         "obtained_count": 13,
         "total_count": 13
       },
       "Motherlode Mine": {
-        "obtained": {
-          "Coal bag": null
-        },
+        "obtained": [
+          {
+            "name": "Coal bag",
+            "date": null
+          }
+        ],
         "missing": [
           "Gem bag"
         ],
@@ -1953,18 +2659,30 @@
         "total_count": 2
       },
       "Motherlode Mine, Volcanic Mine": {
-        "obtained": {
-          "Prospector boots": null,
-          "Prospector helmet": null,
-          "Prospector jacket": null,
-          "Prospector legs": null
-        },
+        "obtained": [
+          {
+            "name": "Prospector boots",
+            "date": null
+          },
+          {
+            "name": "Prospector helmet",
+            "date": null
+          },
+          {
+            "name": "Prospector jacket",
+            "date": null
+          },
+          {
+            "name": "Prospector legs",
+            "date": null
+          }
+        ],
         "missing": [],
         "obtained_count": 4,
         "total_count": 4
       },
       "My Notes": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Ancient page (1)",
           "Ancient page (10)",
@@ -1997,7 +2715,7 @@
         "total_count": 26
       },
       "Nex": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Ancient hilt",
           "Nihil horn",
@@ -2011,7 +2729,7 @@
         "total_count": 7
       },
       "Nex, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Nexling"
         ],
@@ -2019,7 +2737,7 @@
         "total_count": 1
       },
       "Obor": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Hill giant club"
         ],
@@ -2027,7 +2745,7 @@
         "total_count": 1
       },
       "Ocean Encounters": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Big pearl",
           "Bright pearl",
@@ -2045,14 +2763,32 @@
         "total_count": 11
       },
       "Pest Control": {
-        "obtained": {
-          "Elite void robe": null,
-          "Elite void top": null,
-          "Void knight gloves": null,
-          "Void knight robe": null,
-          "Void knight top": null,
-          "Void ranger helm": null
-        },
+        "obtained": [
+          {
+            "name": "Elite void robe",
+            "date": null
+          },
+          {
+            "name": "Elite void top",
+            "date": null
+          },
+          {
+            "name": "Void knight gloves",
+            "date": null
+          },
+          {
+            "name": "Void knight robe",
+            "date": null
+          },
+          {
+            "name": "Void knight top",
+            "date": null
+          },
+          {
+            "name": "Void ranger helm",
+            "date": null
+          }
+        ],
         "missing": [
           "Void knight mace",
           "Void mage helm",
@@ -2063,7 +2799,7 @@
         "total_count": 10
       },
       "Phantom Muspah": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Ancient essence",
           "Ancient icon",
@@ -2075,7 +2811,7 @@
         "total_count": 5
       },
       "Phantom Muspah, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Muphin"
         ],
@@ -2083,30 +2819,96 @@
         "total_count": 1
       },
       "Random Events": {
-        "obtained": {
-          "Beekeeper's boots": null,
-          "Beekeeper's gloves": null,
-          "Beekeeper's hat": null,
-          "Beekeeper's legs": null,
-          "Beekeeper's top": null,
-          "Camo bottoms": null,
-          "Camo helmet": null,
-          "Camo top": null,
-          "Frog token": null,
-          "Lederhosen hat": null,
-          "Lederhosen shorts": null,
-          "Lederhosen top": null,
-          "Mime boots": null,
-          "Mime gloves": null,
-          "Mime legs": null,
-          "Mime mask": null,
-          "Mime top": null,
-          "Zombie boots": null,
-          "Zombie gloves": null,
-          "Zombie mask": null,
-          "Zombie shirt": null,
-          "Zombie trousers": null
-        },
+        "obtained": [
+          {
+            "name": "Beekeeper's boots",
+            "date": null
+          },
+          {
+            "name": "Beekeeper's gloves",
+            "date": null
+          },
+          {
+            "name": "Beekeeper's hat",
+            "date": null
+          },
+          {
+            "name": "Beekeeper's legs",
+            "date": null
+          },
+          {
+            "name": "Beekeeper's top",
+            "date": null
+          },
+          {
+            "name": "Camo bottoms",
+            "date": null
+          },
+          {
+            "name": "Camo helmet",
+            "date": null
+          },
+          {
+            "name": "Camo top",
+            "date": null
+          },
+          {
+            "name": "Frog token",
+            "date": null
+          },
+          {
+            "name": "Lederhosen hat",
+            "date": null
+          },
+          {
+            "name": "Lederhosen shorts",
+            "date": null
+          },
+          {
+            "name": "Lederhosen top",
+            "date": null
+          },
+          {
+            "name": "Mime boots",
+            "date": null
+          },
+          {
+            "name": "Mime gloves",
+            "date": null
+          },
+          {
+            "name": "Mime legs",
+            "date": null
+          },
+          {
+            "name": "Mime mask",
+            "date": null
+          },
+          {
+            "name": "Mime top",
+            "date": null
+          },
+          {
+            "name": "Zombie boots",
+            "date": null
+          },
+          {
+            "name": "Zombie gloves",
+            "date": null
+          },
+          {
+            "name": "Zombie mask",
+            "date": null
+          },
+          {
+            "name": "Zombie shirt",
+            "date": null
+          },
+          {
+            "name": "Zombie trousers",
+            "date": null
+          }
+        ],
         "missing": [
           "Stale baguette"
         ],
@@ -2114,7 +2916,7 @@
         "total_count": 23
       },
       "Revenants": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Amulet of avarice",
           "Ancient crystal",
@@ -2135,22 +2937,43 @@
         "total_count": 14
       },
       "Rogues' Den": {
-        "obtained": {
-          "Rogue boots": null,
-          "Rogue gloves": null,
-          "Rogue mask": null,
-          "Rogue top": null,
-          "Rogue trousers": null
-        },
+        "obtained": [
+          {
+            "name": "Rogue boots",
+            "date": null
+          },
+          {
+            "name": "Rogue gloves",
+            "date": null
+          },
+          {
+            "name": "Rogue mask",
+            "date": null
+          },
+          {
+            "name": "Rogue top",
+            "date": null
+          },
+          {
+            "name": "Rogue trousers",
+            "date": null
+          }
+        ],
         "missing": [],
         "obtained_count": 5,
         "total_count": 5
       },
       "Rooftop Agility": {
-        "obtained": {
-          "Graceful legs": null,
-          "Mark of grace": null
-        },
+        "obtained": [
+          {
+            "name": "Graceful legs",
+            "date": null
+          },
+          {
+            "name": "Mark of grace",
+            "date": null
+          }
+        ],
         "missing": [
           "Graceful boots",
           "Graceful cape",
@@ -2162,20 +2985,38 @@
         "total_count": 7
       },
       "Royal Titans": {
-        "obtained": {
-          "Deadeye prayer scroll": null,
-          "Desiccated page": null,
-          "Fire element staff crown": null,
-          "Giantsoul amulet": null,
-          "Ice element staff crown": null,
-          "Mystic vigour prayer scroll": null
-        },
+        "obtained": [
+          {
+            "name": "Deadeye prayer scroll",
+            "date": null
+          },
+          {
+            "name": "Desiccated page",
+            "date": null
+          },
+          {
+            "name": "Fire element staff crown",
+            "date": null
+          },
+          {
+            "name": "Giantsoul amulet",
+            "date": null
+          },
+          {
+            "name": "Ice element staff crown",
+            "date": null
+          },
+          {
+            "name": "Mystic vigour prayer scroll",
+            "date": null
+          }
+        ],
         "missing": [],
         "obtained_count": 6,
         "total_count": 6
       },
       "Royal Titans, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Bran"
         ],
@@ -2183,11 +3024,20 @@
         "total_count": 1
       },
       "Sailing Miscellaneous": {
-        "obtained": {
-          "Boat bottle (empty)": null,
-          "Dragon cannonball": null,
-          "Dragon nails": null
-        },
+        "obtained": [
+          {
+            "name": "Boat bottle (empty)",
+            "date": null
+          },
+          {
+            "name": "Dragon cannonball",
+            "date": null
+          },
+          {
+            "name": "Dragon nails",
+            "date": null
+          }
+        ],
         "missing": [
           "Bottled storm",
           "Broken dragon hook",
@@ -2201,17 +3051,23 @@
         "total_count": 10
       },
       "Sailing Miscellaneous, Slayer": {
-        "obtained": {},
-        "missing": [
-          "Dragon metal sheet"
+        "obtained": [
+          {
+            "name": "Dragon metal sheet",
+            "date": null
+          }
         ],
-        "obtained_count": 0,
+        "missing": [],
+        "obtained_count": 1,
         "total_count": 1
       },
       "Sarachnis": {
-        "obtained": {
-          "Giant egg sac(full)": null
-        },
+        "obtained": [
+          {
+            "name": "Giant egg sac(full)",
+            "date": null
+          }
+        ],
         "missing": [
           "Jar of eyes",
           "Sarachnis cudgel"
@@ -2220,7 +3076,7 @@
         "total_count": 3
       },
       "Sarachnis, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Sraracha"
         ],
@@ -2228,7 +3084,7 @@
         "total_count": 1
       },
       "Scorpia": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Malediction shard 3",
           "Odium shard 3"
@@ -2237,7 +3093,7 @@
         "total_count": 2
       },
       "Scorpia, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Scorpia's offspring"
         ],
@@ -2245,12 +3101,24 @@
         "total_count": 1
       },
       "Scroll Cases": {
-        "obtained": {
-          "Major beginner scroll case": null,
-          "Mimic scroll case": null,
-          "Minor beginner scroll case": null,
-          "Minor hard scroll case": null
-        },
+        "obtained": [
+          {
+            "name": "Major beginner scroll case",
+            "date": null
+          },
+          {
+            "name": "Mimic scroll case",
+            "date": null
+          },
+          {
+            "name": "Minor beginner scroll case",
+            "date": null
+          },
+          {
+            "name": "Minor hard scroll case",
+            "date": null
+          }
+        ],
         "missing": [
           "Major easy scroll case",
           "Major elite scroll case",
@@ -2266,15 +3134,18 @@
         "total_count": 13
       },
       "Scurrius": {
-        "obtained": {
-          "Scurrius' spine": null
-        },
+        "obtained": [
+          {
+            "name": "Scurrius' spine",
+            "date": null
+          }
+        ],
         "missing": [],
         "obtained_count": 1,
         "total_count": 1
       },
       "Scurrius, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Scurry"
         ],
@@ -2282,14 +3153,32 @@
         "total_count": 1
       },
       "Sea Treasures": {
-        "obtained": {
-          "Broken sextant": null,
-          "Dull knife": null,
-          "Mouldy doll": null,
-          "Rusty coin": null,
-          "Sailors' amulet (inert)": null,
-          "Smashed mirror": null
-        },
+        "obtained": [
+          {
+            "name": "Broken sextant",
+            "date": null
+          },
+          {
+            "name": "Dull knife",
+            "date": null
+          },
+          {
+            "name": "Mouldy doll",
+            "date": null
+          },
+          {
+            "name": "Rusty coin",
+            "date": null
+          },
+          {
+            "name": "Sailors' amulet (inert)",
+            "date": null
+          },
+          {
+            "name": "Smashed mirror",
+            "date": null
+          }
+        ],
         "missing": [
           "Broken compass",
           "Medallion fragment",
@@ -2306,8 +3195,8 @@
         "obtained_count": 6,
         "total_count": 17
       },
-      "Shades of\u00a0Mort'ton": {
-        "obtained": {},
+      "Shades of Mort'ton": {
+        "obtained": [],
         "missing": [
           "Amulet of the damned (full)",
           "Black locks",
@@ -2328,51 +3217,180 @@
         "total_count": 14
       },
       "Shared Treasure Trails Rewards": {
-        "obtained": {
-          "Ancient page 2": null,
-          "Ancient page 3": null,
-          "Ancient page 4": null,
-          "Armadyl page 1": null,
-          "Armadyl page 2": null,
-          "Armadyl page 3": null,
-          "Armadyl page 4": null,
-          "Bandos page 1": null,
-          "Bandos page 2": null,
-          "Bandos page 3": null,
-          "Bandos page 4": null,
-          "Blue firelighter": null,
-          "Charge dragonstone jewellery scroll": null,
-          "Digsite teleport": null,
-          "Feldip hills teleport": null,
-          "Green firelighter": null,
-          "Guthix page 1": null,
-          "Guthix page 2": null,
-          "Guthix page 3": null,
-          "Guthix page 4": null,
-          "Holy blessing": null,
-          "Honourable blessing": null,
-          "Iorwerth camp teleport": null,
-          "Lumberyard teleport": null,
-          "Lunar isle teleport": null,
-          "Master scroll book (empty)": null,
-          "Mort'ton teleport": null,
-          "Mos le'harmless teleport": null,
-          "Nardah teleport": null,
-          "Pest control teleport": null,
-          "Piscatoris teleport": null,
-          "Purple firelighter": null,
-          "Purple sweets": null,
-          "Red firelighter": null,
-          "Saradomin page 1": null,
-          "Saradomin page 2": null,
-          "Saradomin page 4": null,
-          "Tai bwo wannai teleport": null,
-          "Unholy blessing": null,
-          "War blessing": null,
-          "White firelighter": null,
-          "Zamorak page 2": null,
-          "Zamorak page 3": null
-        },
+        "obtained": [
+          {
+            "name": "Ancient page 2",
+            "date": null
+          },
+          {
+            "name": "Ancient page 3",
+            "date": null
+          },
+          {
+            "name": "Ancient page 4",
+            "date": null
+          },
+          {
+            "name": "Armadyl page 1",
+            "date": null
+          },
+          {
+            "name": "Armadyl page 2",
+            "date": null
+          },
+          {
+            "name": "Armadyl page 3",
+            "date": null
+          },
+          {
+            "name": "Armadyl page 4",
+            "date": null
+          },
+          {
+            "name": "Bandos page 1",
+            "date": null
+          },
+          {
+            "name": "Bandos page 2",
+            "date": null
+          },
+          {
+            "name": "Bandos page 3",
+            "date": null
+          },
+          {
+            "name": "Bandos page 4",
+            "date": null
+          },
+          {
+            "name": "Blue firelighter",
+            "date": null
+          },
+          {
+            "name": "Charge dragonstone jewellery scroll",
+            "date": null
+          },
+          {
+            "name": "Digsite teleport",
+            "date": null
+          },
+          {
+            "name": "Feldip hills teleport",
+            "date": null
+          },
+          {
+            "name": "Green firelighter",
+            "date": null
+          },
+          {
+            "name": "Guthix page 1",
+            "date": null
+          },
+          {
+            "name": "Guthix page 2",
+            "date": null
+          },
+          {
+            "name": "Guthix page 3",
+            "date": null
+          },
+          {
+            "name": "Guthix page 4",
+            "date": null
+          },
+          {
+            "name": "Holy blessing",
+            "date": null
+          },
+          {
+            "name": "Honourable blessing",
+            "date": null
+          },
+          {
+            "name": "Iorwerth camp teleport",
+            "date": null
+          },
+          {
+            "name": "Lumberyard teleport",
+            "date": null
+          },
+          {
+            "name": "Lunar isle teleport",
+            "date": null
+          },
+          {
+            "name": "Master scroll book (empty)",
+            "date": null
+          },
+          {
+            "name": "Mort'ton teleport",
+            "date": null
+          },
+          {
+            "name": "Mos le'harmless teleport",
+            "date": null
+          },
+          {
+            "name": "Nardah teleport",
+            "date": null
+          },
+          {
+            "name": "Pest control teleport",
+            "date": null
+          },
+          {
+            "name": "Piscatoris teleport",
+            "date": null
+          },
+          {
+            "name": "Purple firelighter",
+            "date": null
+          },
+          {
+            "name": "Purple sweets",
+            "date": null
+          },
+          {
+            "name": "Red firelighter",
+            "date": null
+          },
+          {
+            "name": "Saradomin page 1",
+            "date": null
+          },
+          {
+            "name": "Saradomin page 2",
+            "date": null
+          },
+          {
+            "name": "Saradomin page 4",
+            "date": null
+          },
+          {
+            "name": "Tai bwo wannai teleport",
+            "date": null
+          },
+          {
+            "name": "Unholy blessing",
+            "date": null
+          },
+          {
+            "name": "War blessing",
+            "date": null
+          },
+          {
+            "name": "White firelighter",
+            "date": null
+          },
+          {
+            "name": "Zamorak page 2",
+            "date": null
+          },
+          {
+            "name": "Zamorak page 3",
+            "date": null
+          }
+        ],
         "missing": [
           "Ancient blessing",
           "Ancient page 1",
@@ -2385,39 +3403,114 @@
         "total_count": 49
       },
       "Shayzien Armour": {
-        "obtained": {
-          "Shayzien body (5)": null,
-          "Shayzien boots (1)": null,
-          "Shayzien boots (2)": null,
-          "Shayzien boots (3)": null,
-          "Shayzien boots (4)": null,
-          "Shayzien boots (5)": null,
-          "Shayzien gloves (1)": null,
-          "Shayzien gloves (2)": null,
-          "Shayzien gloves (3)": null,
-          "Shayzien gloves (4)": null,
-          "Shayzien gloves (5)": null,
-          "Shayzien greaves (1)": null,
-          "Shayzien greaves (2)": null,
-          "Shayzien greaves (3)": null,
-          "Shayzien greaves (4)": null,
-          "Shayzien greaves (5)": null,
-          "Shayzien helm (1)": null,
-          "Shayzien helm (2)": null,
-          "Shayzien helm (3)": null,
-          "Shayzien helm (4)": null,
-          "Shayzien helm (5)": null,
-          "Shayzien platebody (1)": null,
-          "Shayzien platebody (2)": null,
-          "Shayzien platebody (3)": null,
-          "Shayzien platebody (4)": null
-        },
+        "obtained": [
+          {
+            "name": "Shayzien body (5)",
+            "date": null
+          },
+          {
+            "name": "Shayzien boots (1)",
+            "date": null
+          },
+          {
+            "name": "Shayzien boots (2)",
+            "date": null
+          },
+          {
+            "name": "Shayzien boots (3)",
+            "date": null
+          },
+          {
+            "name": "Shayzien boots (4)",
+            "date": null
+          },
+          {
+            "name": "Shayzien boots (5)",
+            "date": null
+          },
+          {
+            "name": "Shayzien gloves (1)",
+            "date": null
+          },
+          {
+            "name": "Shayzien gloves (2)",
+            "date": null
+          },
+          {
+            "name": "Shayzien gloves (3)",
+            "date": null
+          },
+          {
+            "name": "Shayzien gloves (4)",
+            "date": null
+          },
+          {
+            "name": "Shayzien gloves (5)",
+            "date": null
+          },
+          {
+            "name": "Shayzien greaves (1)",
+            "date": null
+          },
+          {
+            "name": "Shayzien greaves (2)",
+            "date": null
+          },
+          {
+            "name": "Shayzien greaves (3)",
+            "date": null
+          },
+          {
+            "name": "Shayzien greaves (4)",
+            "date": null
+          },
+          {
+            "name": "Shayzien greaves (5)",
+            "date": null
+          },
+          {
+            "name": "Shayzien helm (1)",
+            "date": null
+          },
+          {
+            "name": "Shayzien helm (2)",
+            "date": null
+          },
+          {
+            "name": "Shayzien helm (3)",
+            "date": null
+          },
+          {
+            "name": "Shayzien helm (4)",
+            "date": null
+          },
+          {
+            "name": "Shayzien helm (5)",
+            "date": null
+          },
+          {
+            "name": "Shayzien platebody (1)",
+            "date": null
+          },
+          {
+            "name": "Shayzien platebody (2)",
+            "date": null
+          },
+          {
+            "name": "Shayzien platebody (3)",
+            "date": null
+          },
+          {
+            "name": "Shayzien platebody (4)",
+            "date": null
+          }
+        ],
         "missing": [],
         "obtained_count": 25,
         "total_count": 25
       },
       "Shellbane Gryphon": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Belle's folly (tarnished)",
           "Jar of feathers"
@@ -2426,7 +3519,7 @@
         "total_count": 2
       },
       "Shellbane Gryphon, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Gull (pet)"
         ],
@@ -2434,17 +3527,23 @@
         "total_count": 1
       },
       "Shellbane Gryphon, Slayer": {
-        "obtained": {
-          "Gryphon feather": null
-        },
+        "obtained": [
+          {
+            "name": "Gryphon feather",
+            "date": null
+          }
+        ],
         "missing": [],
         "obtained_count": 1,
         "total_count": 1
       },
       "Shooting Stars": {
-        "obtained": {
-          "Celestial ring (uncharged)": null
-        },
+        "obtained": [
+          {
+            "name": "Celestial ring (uncharged)",
+            "date": null
+          }
+        ],
         "missing": [
           "Star fragment"
         ],
@@ -2452,7 +3551,7 @@
         "total_count": 2
       },
       "Skilling Pets, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Soup"
         ],
@@ -2460,10 +3559,16 @@
         "total_count": 1
       },
       "Skotizo": {
-        "obtained": {
-          "Ancient shard": null,
-          "Jar of darkness": null
-        },
+        "obtained": [
+          {
+            "name": "Ancient shard",
+            "date": null
+          },
+          {
+            "name": "Jar of darkness",
+            "date": null
+          }
+        ],
         "missing": [
           "Dark claw",
           "Dark totem"
@@ -2472,7 +3577,7 @@
         "total_count": 4
       },
       "Skotizo, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Skotos"
         ],
@@ -2480,31 +3585,100 @@
         "total_count": 1
       },
       "Slayer": {
-        "obtained": {
-          "Adamant boots": null,
-          "Aquanite tendon": null,
-          "Basilisk head": null,
-          "Black boots": null,
-          "Black mask (10)": null,
-          "Bronze boots": null,
-          "Dragon boots": null,
-          "Dragon sword": null,
-          "Dust battlestaff": null,
-          "Flippers": null,
-          "Granite legs": null,
-          "Granite longsword": null,
-          "Granite maul": null,
-          "Imbued heart": null,
-          "Leaf-bladed battleaxe": null,
-          "Leaf-bladed sword": null,
-          "Mudskipper hat": null,
-          "Mystic hat (light)": null,
-          "Mystic robe bottom (dark)": null,
-          "Mystic robe bottom (light)": null,
-          "Mystic robe top (dark)": null,
-          "Mystic robe top (light)": null,
-          "Rune boots": null
-        },
+        "obtained": [
+          {
+            "name": "Adamant boots",
+            "date": null
+          },
+          {
+            "name": "Aquanite tendon",
+            "date": null
+          },
+          {
+            "name": "Basilisk head",
+            "date": null
+          },
+          {
+            "name": "Black boots",
+            "date": null
+          },
+          {
+            "name": "Black mask (10)",
+            "date": null
+          },
+          {
+            "name": "Bronze boots",
+            "date": null
+          },
+          {
+            "name": "Dragon boots",
+            "date": null
+          },
+          {
+            "name": "Dragon sword",
+            "date": null
+          },
+          {
+            "name": "Dust battlestaff",
+            "date": null
+          },
+          {
+            "name": "Flippers",
+            "date": null
+          },
+          {
+            "name": "Granite legs",
+            "date": null
+          },
+          {
+            "name": "Granite longsword",
+            "date": null
+          },
+          {
+            "name": "Granite maul",
+            "date": null
+          },
+          {
+            "name": "Imbued heart",
+            "date": null
+          },
+          {
+            "name": "Leaf-bladed battleaxe",
+            "date": null
+          },
+          {
+            "name": "Leaf-bladed sword",
+            "date": null
+          },
+          {
+            "name": "Mudskipper hat",
+            "date": null
+          },
+          {
+            "name": "Mystic hat (light)",
+            "date": null
+          },
+          {
+            "name": "Mystic robe bottom (dark)",
+            "date": null
+          },
+          {
+            "name": "Mystic robe bottom (light)",
+            "date": null
+          },
+          {
+            "name": "Mystic robe top (dark)",
+            "date": null
+          },
+          {
+            "name": "Mystic robe top (light)",
+            "date": null
+          },
+          {
+            "name": "Rune boots",
+            "date": null
+          }
+        ],
         "missing": [
           "Alchemist's signet",
           "Ancient ceremonial boots",
@@ -2556,7 +3730,7 @@
         "total_count": 68
       },
       "Soul Wars": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Ectoplasmator",
           "Soul cape"
@@ -2565,7 +3739,7 @@
         "total_count": 2
       },
       "Soul Wars, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Lil' creator"
         ],
@@ -2573,23 +3747,47 @@
         "total_count": 1
       },
       "Temple Trekking, Forestry": {
-        "obtained": {
-          "Lumberjack boots": null,
-          "Lumberjack hat": null,
-          "Lumberjack legs": null,
-          "Lumberjack top": null
-        },
+        "obtained": [
+          {
+            "name": "Lumberjack boots",
+            "date": null
+          },
+          {
+            "name": "Lumberjack hat",
+            "date": null
+          },
+          {
+            "name": "Lumberjack legs",
+            "date": null
+          },
+          {
+            "name": "Lumberjack top",
+            "date": null
+          }
+        ],
         "missing": [],
         "obtained_count": 4,
         "total_count": 4
       },
       "Tempoross": {
-        "obtained": {
-          "Fish barrel": null,
-          "Soaked page": null,
-          "Spirit flakes": null,
-          "Tackle box": null
-        },
+        "obtained": [
+          {
+            "name": "Fish barrel",
+            "date": null
+          },
+          {
+            "name": "Soaked page",
+            "date": null
+          },
+          {
+            "name": "Spirit flakes",
+            "date": null
+          },
+          {
+            "name": "Tackle box",
+            "date": null
+          }
+        ],
         "missing": [
           "Big harpoonfish",
           "Spirit angler boots",
@@ -2602,7 +3800,7 @@
         "total_count": 10
       },
       "Tempoross, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Tiny tempor"
         ],
@@ -2610,7 +3808,7 @@
         "total_count": 1
       },
       "Tempoross, Slayer": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Dragon harpoon"
         ],
@@ -2618,15 +3816,18 @@
         "total_count": 1
       },
       "The Fight Caves": {
-        "obtained": {
-          "Fire cape": null
-        },
+        "obtained": [
+          {
+            "name": "Fire cape",
+            "date": null
+          }
+        ],
         "missing": [],
         "obtained_count": 1,
         "total_count": 1
       },
       "The Fight Caves, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Tzrek-jad"
         ],
@@ -2634,11 +3835,20 @@
         "total_count": 1
       },
       "The Gauntlet": {
-        "obtained": {
-          "Crystal armour seed": null,
-          "Crystal weapon seed": null,
-          "Gauntlet cape": null
-        },
+        "obtained": [
+          {
+            "name": "Crystal armour seed",
+            "date": null
+          },
+          {
+            "name": "Crystal weapon seed",
+            "date": null
+          },
+          {
+            "name": "Gauntlet cape",
+            "date": null
+          }
+        ],
         "missing": [
           "Enhanced crystal weapon seed"
         ],
@@ -2646,7 +3856,7 @@
         "total_count": 4
       },
       "The Gauntlet, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Youngllef"
         ],
@@ -2654,10 +3864,16 @@
         "total_count": 1
       },
       "The Hueycoatl": {
-        "obtained": {
-          "Huasca seed": null,
-          "Soiled page": null
-        },
+        "obtained": [
+          {
+            "name": "Huasca seed",
+            "date": null
+          },
+          {
+            "name": "Soiled page",
+            "date": null
+          }
+        ],
         "missing": [
           "Dragon hunter wand",
           "Hueycoatl hide",
@@ -2667,7 +3883,7 @@
         "total_count": 5
       },
       "The Hueycoatl, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Huberte"
         ],
@@ -2675,7 +3891,7 @@
         "total_count": 1
       },
       "The Inferno": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Infernal cape"
         ],
@@ -2683,7 +3899,7 @@
         "total_count": 1
       },
       "The Inferno, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Jal-nib-rek"
         ],
@@ -2691,7 +3907,7 @@
         "total_count": 1
       },
       "The Leviathan": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Leviathan's lure",
           "Scarred tablet",
@@ -2702,7 +3918,7 @@
         "total_count": 4
       },
       "The Leviathan, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Lil'viathan"
         ],
@@ -2710,7 +3926,7 @@
         "total_count": 1
       },
       "The Nightmare": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Eldritch orb",
           "Harmonised orb",
@@ -2728,7 +3944,7 @@
         "total_count": 11
       },
       "The Nightmare, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Little nightmare"
         ],
@@ -2736,7 +3952,7 @@
         "total_count": 1
       },
       "The Whisperer": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Bellator vestige",
           "Shadow quartz",
@@ -2747,7 +3963,7 @@
         "total_count": 4
       },
       "The Whisperer, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Wisp"
         ],
@@ -2755,7 +3971,7 @@
         "total_count": 1
       },
       "Theatre of Blood": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Avernic defender hilt",
           "Ghrazi rapier",
@@ -2778,7 +3994,7 @@
         "total_count": 16
       },
       "Theatre of Blood, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Lil' zik"
         ],
@@ -2786,7 +4002,7 @@
         "total_count": 1
       },
       "Thermonuclear Smoke Devil": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Jar of smoke",
           "Smoke battlestaff"
@@ -2795,7 +4011,7 @@
         "total_count": 2
       },
       "Thermonuclear Smoke Devil, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Pet smoke devil"
         ],
@@ -2803,7 +4019,7 @@
         "total_count": 1
       },
       "Thermonuclear Smoke Devil, Slayer": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Occult necklace"
         ],
@@ -2811,10 +4027,16 @@
         "total_count": 1
       },
       "Tithe Farm": {
-        "obtained": {
-          "Herb sack": null,
-          "Seed box": null
-        },
+        "obtained": [
+          {
+            "name": "Herb sack",
+            "date": null
+          },
+          {
+            "name": "Seed box",
+            "date": null
+          }
+        ],
         "missing": [
           "Farmer's boots",
           "Farmer's boro trousers",
@@ -2826,7 +4048,7 @@
         "total_count": 7
       },
       "Tombs of Amascut": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Ancient remnant",
           "Breach of the scarab",
@@ -2859,7 +4081,7 @@
         "total_count": 26
       },
       "Tombs of Amascut, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Tumeken's guardian"
         ],
@@ -2867,17 +4089,26 @@
         "total_count": 1
       },
       "Tormented Demons": {
-        "obtained": {
-          "Burning claw": null,
-          "Guthixian temple teleport": null,
-          "Tormented synapse": null
-        },
+        "obtained": [
+          {
+            "name": "Burning claw",
+            "date": null
+          },
+          {
+            "name": "Guthixian temple teleport",
+            "date": null
+          },
+          {
+            "name": "Tormented synapse",
+            "date": null
+          }
+        ],
         "missing": [],
         "obtained_count": 3,
         "total_count": 3
       },
       "Trouble Brewing": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Black naval shirt",
           "Black navy slacks",
@@ -2914,7 +4145,7 @@
         "total_count": 30
       },
       "TzHaar": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Obsidian cape",
           "Obsidian helmet",
@@ -2930,19 +4161,31 @@
         "obtained_count": 0,
         "total_count": 10
       },
-      "Vale\u00a0Totems": {
-        "obtained": {
-          "Bow string spool": null,
-          "Ent branch": null,
-          "Fletching knife": null,
-          "Greenman mask": null
-        },
+      "Vale Totems": {
+        "obtained": [
+          {
+            "name": "Bow string spool",
+            "date": null
+          },
+          {
+            "name": "Ent branch",
+            "date": null
+          },
+          {
+            "name": "Fletching knife",
+            "date": null
+          },
+          {
+            "name": "Greenman mask",
+            "date": null
+          }
+        ],
         "missing": [],
         "obtained_count": 4,
         "total_count": 4
       },
       "Vardorvis": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Blood quartz",
           "Executioner's axe head",
@@ -2953,7 +4196,7 @@
         "total_count": 4
       },
       "Vardorvis, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Butch"
         ],
@@ -2961,7 +4204,7 @@
         "total_count": 1
       },
       "Venenatis and Spindel": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Fangs of venenatis",
           "Treasonous ring",
@@ -2971,7 +4214,7 @@
         "total_count": 3
       },
       "Venenatis and Spindel, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Venenatis spiderling"
         ],
@@ -2979,7 +4222,7 @@
         "total_count": 1
       },
       "Vet'ion and Calvar'ion": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Ring of the gods",
           "Skull of vet'ion",
@@ -2989,7 +4232,7 @@
         "total_count": 3
       },
       "Vet'ion and Calvar'ion, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Vet'ion jr."
         ],
@@ -2997,7 +4240,7 @@
         "total_count": 1
       },
       "Volcanic Mine": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Ash covered tome",
           "Dragon pickaxe (broken)",
@@ -3008,9 +4251,12 @@
         "total_count": 4
       },
       "Vorkath": {
-        "obtained": {
-          "Vorkath's head": null
-        },
+        "obtained": [
+          {
+            "name": "Vorkath's head",
+            "date": null
+          }
+        ],
         "missing": [
           "Dragonbone necklace",
           "Jar of decay",
@@ -3020,7 +4266,7 @@
         "total_count": 4
       },
       "Vorkath, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Vorki"
         ],
@@ -3028,30 +4274,57 @@
         "total_count": 1
       },
       "Wintertodt": {
-        "obtained": {
-          "Bruma torch": null,
-          "Burnt page": null,
-          "Pyromancer boots": null,
-          "Pyromancer garb": null,
-          "Pyromancer hood": null,
-          "Pyromancer robe": null,
-          "Tome of fire (empty)": null,
-          "Warm gloves": null
-        },
+        "obtained": [
+          {
+            "name": "Bruma torch",
+            "date": null
+          },
+          {
+            "name": "Burnt page",
+            "date": null
+          },
+          {
+            "name": "Pyromancer boots",
+            "date": null
+          },
+          {
+            "name": "Pyromancer garb",
+            "date": null
+          },
+          {
+            "name": "Pyromancer hood",
+            "date": null
+          },
+          {
+            "name": "Pyromancer robe",
+            "date": null
+          },
+          {
+            "name": "Tome of fire (empty)",
+            "date": null
+          },
+          {
+            "name": "Warm gloves",
+            "date": null
+          }
+        ],
         "missing": [],
         "obtained_count": 8,
         "total_count": 8
       },
       "Wintertodt, All Pets": {
-        "obtained": {
-          "Phoenix": null
-        },
+        "obtained": [
+          {
+            "name": "Phoenix",
+            "date": null
+          }
+        ],
         "missing": [],
         "obtained_count": 1,
         "total_count": 1
       },
       "Yama": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Barrel of demonic tallow (full)",
           "Chasm teleport scroll",
@@ -3068,7 +4341,7 @@
         "total_count": 10
       },
       "Yama, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Yami"
         ],
@@ -3076,7 +4349,7 @@
         "total_count": 1
       },
       "Zalcano": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Crystal tool seed",
           "Zalcano shard"
@@ -3085,7 +4358,7 @@
         "total_count": 2
       },
       "Zalcano, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Smolcano"
         ],
@@ -3093,9 +4366,12 @@
         "total_count": 1
       },
       "Zulrah": {
-        "obtained": {
-          "Zulrah's scales": null
-        },
+        "obtained": [
+          {
+            "name": "Zulrah's scales",
+            "date": null
+          }
+        ],
         "missing": [
           "Jar of swamp",
           "Magic fang",
@@ -3109,7 +4385,7 @@
         "total_count": 8
       },
       "Zulrah, All Pets": {
-        "obtained": {},
+        "obtained": [],
         "missing": [
           "Pet snakeling"
         ],
@@ -3117,7 +4393,8 @@
         "total_count": 1
       }
     },
-    "total_obtained": 422,
-    "total_items": 1692
+    "total_obtained": 425,
+    "total_items": 1692,
+    "recent_items": []
   }
 }
