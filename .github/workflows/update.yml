@@ -9,9 +9,16 @@ on:
       - 'data/*.yaml'      # Any YAML data file changes
       - 'scripts/update_stats.py'  # Script changes
 
+# Prevent duplicate runs
+concurrency:
+  group: update-stats
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
+    # Skip if this was triggered by the GitHub Actions bot's own commit
+    if: github.actor != 'github-actions[bot]'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
