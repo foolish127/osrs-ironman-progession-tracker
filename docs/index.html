@@ -47,79 +47,77 @@
         .tab-content { display: none; }
         .tab-content.active { display: block; }
         .skills-grid { display: grid; grid-template-columns: repeat(3, minmax(160px, 220px)); gap: 0.5rem; justify-content: center; max-width: 720px; margin: 0 auto; }
-        .skill-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 0.6rem 0.75rem; display: flex; align-items: center; gap: 0.6rem; position: relative; }
-        .skill-item.maxed { border-color: var(--accent-gold); background: rgba(212,168,75,0.05); }
-        .skill-item.maxed::after { content: '✦'; position: absolute; top: 0.2rem; right: 0.4rem; color: var(--accent-gold); font-size: 0.6rem; }
-        .skill-icon { width: 24px; height: 24px; image-rendering: pixelated; }
-        .skill-info { flex: 1; }
-        .skill-header { display: flex; justify-content: space-between; align-items: baseline; }
-        .skill-name { font-size: 0.65rem; color: var(--text-secondary); text-transform: uppercase; }
-        .skill-level { font-family: 'Fira Code', monospace; font-size: 1rem; font-weight: 500; }
-        .skill-xp { font-family: 'Fira Code', monospace; font-size: 0.6rem; color: var(--text-muted); }
-        .skill-progress-bar { height: 4px; background: var(--bg-dark); border-radius: 2px; margin-top: 0.3rem; overflow: hidden; }
-        .skill-progress-fill { height: 100%; border-radius: 2px; }
-        .skill-item.overall { grid-column: span 3; justify-content: center; background: linear-gradient(135deg, var(--bg-card) 0%, rgba(212,168,75,0.08) 100%); border-color: var(--accent-gold-dim); }
-        .skill-item.overall .skill-level { font-size: 1.5rem; color: var(--accent-gold); }
-        .bosses-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.75rem; }
-        .boss-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 0.875rem 1rem; display: flex; justify-content: space-between; align-items: center; }
-        .boss-name { font-size: 0.85rem; }
-        .boss-kc { font-family: 'Fira Code', monospace; font-size: 0.95rem; color: var(--accent-blue); }
+        .skill-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 0.6rem 0.75rem; display: flex; align-items: center; gap: 0.6rem; }
+        .skill-item.maxed { border-color: var(--accent-gold); }
+        .skill-icon { width: 24px; height: 24px; object-fit: contain; }
+        .skill-info { flex: 1; min-width: 0; }
+        .skill-name { font-size: 0.75rem; color: var(--text-secondary); }
+        .skill-level { font-family: 'Fira Code', monospace; font-size: 1.1rem; font-weight: 500; }
+        .skill-level.maxed { color: var(--accent-gold); }
+        .skill-xp { font-family: 'Fira Code', monospace; font-size: 0.65rem; color: var(--text-muted); }
+        .skill-progress { height: 4px; background: var(--border); border-radius: 2px; margin-top: 4px; overflow: hidden; }
+        .skill-progress-fill { height: 100%; border-radius: 2px; transition: width 0.5s ease; }
+        .skill-progress-fill.low { background: var(--accent-red); }
+        .skill-progress-fill.mid { background: var(--accent-gold); }
+        .skill-progress-fill.high { background: var(--accent-green); }
+        .boss-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.5rem; }
+        .boss-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 0.6rem 0.75rem; display: flex; justify-content: space-between; align-items: center; }
+        .boss-name { font-size: 0.8rem; color: var(--text-secondary); }
+        .boss-kc { font-family: 'Fira Code', monospace; font-size: 0.9rem; color: var(--accent-gold); }
         .progress-section { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; margin-bottom: 1.5rem; }
         .progress-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
-        .progress-title { font-family: 'Cinzel', serif; font-size: 1.1rem; color: var(--accent-gold); }
-        .progress-stats { font-family: 'Fira Code', monospace; font-size: 1.5rem; }
+        .progress-title { font-size: 1rem; font-weight: 500; }
+        .progress-stats { font-family: 'Fira Code', monospace; font-size: 0.9rem; }
         .progress-stats .obtained { color: var(--accent-green); }
         .progress-stats .total { color: var(--text-muted); }
-        .progress-bar { height: 12px; background: var(--bg-dark); border-radius: 6px; overflow: hidden; margin-top: 0.5rem; }
+        .progress-bar { height: 12px; background: var(--border); border-radius: 6px; overflow: hidden; }
         .progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent-gold-dim), var(--accent-gold)); border-radius: 6px; transition: width 0.5s ease; }
-        .progress-percentage { text-align: right; font-family: 'Fira Code', monospace; font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem; }
-        .ca-tiers { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
-        .ca-tier { background: var(--bg-dark); border: 1px solid var(--border); border-radius: 4px; padding: 1rem; text-align: center; }
-        .ca-tier-name { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; font-weight: 600; }
+        .progress-percentage { font-family: 'Fira Code', monospace; font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem; text-align: center; }
+        .search-filter { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .search-input { flex: 1; min-width: 200px; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); font-size: 0.9rem; }
+        .search-input:focus { outline: none; border-color: var(--accent-gold); }
+        .filter-select { padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); font-size: 0.9rem; }
+        .collection { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
+        .collection-header { padding: 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .collection-header:hover { background: var(--bg-card-hover); }
+        .collection-name { font-weight: 500; font-size: 0.95rem; }
+        .collection-count { font-family: 'Fira Code', monospace; font-size: 0.85rem; }
+        .collection-count .obtained { color: var(--accent-green); }
+        .collection-count .total { color: var(--text-muted); }
+        .collection-items { display: none; padding: 0.75rem 1rem; border-top: 1px solid var(--border); background: var(--bg-dark); }
+        .collection.expanded .collection-items { display: block; }
+        .item-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.25rem; }
+        .item { font-size: 0.8rem; padding: 0.35rem 0.5rem; border-radius: 3px; display: flex; align-items: center; gap: 0.5rem; }
+        .item.obtained { color: var(--accent-green); }
+        .item.missing { color: var(--text-muted); }
+        .item-check { width: 16px; font-size: 0.75rem; }
+        .ca-tier { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
+        .ca-tier-header { padding: 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .ca-tier-header:hover { background: var(--bg-card-hover); }
+        .ca-tier-name { font-weight: 600; text-transform: capitalize; }
         .ca-tier-name.easy { color: #3fb950; }
         .ca-tier-name.medium { color: #58a6ff; }
         .ca-tier-name.hard { color: #a371f7; }
         .ca-tier-name.elite { color: #d4a84b; }
         .ca-tier-name.master { color: #f85149; }
         .ca-tier-name.grandmaster { color: #ff7b72; }
-        .ca-tier-progress { font-family: 'Fira Code', monospace; font-size: 0.85rem; color: var(--text-secondary); }
-        .ca-tier-bar { height: 6px; background: var(--bg-card); border-radius: 3px; margin-top: 0.5rem; overflow: hidden; }
-        .ca-tier-fill { height: 100%; border-radius: 3px; }
-        .clog-filters { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
-        .clog-search { flex: 1; min-width: 200px; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); font-size: 0.9rem; }
-        .clog-search:focus { outline: none; border-color: var(--accent-gold); }
-        .clog-search::placeholder { color: var(--text-muted); }
-        .clog-select { padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); font-size: 0.9rem; min-width: 180px; }
-        .clog-category { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; margin-bottom: 0.75rem; }
-        .clog-category-header { padding: 1rem 1.25rem; background: var(--bg-card-hover); display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
-        .clog-category-name { font-weight: 500; text-transform: capitalize; }
-        .clog-category-count { font-family: 'Fira Code', monospace; font-size: 0.85rem; color: var(--text-secondary); }
-        .clog-category-count .obtained { color: var(--accent-green); }
-        .clog-category-items { display: none; padding: 1rem; gap: 0.5rem; flex-wrap: wrap; }
-        .clog-category.expanded .clog-category-items { display: flex; }
-        .clog-item { display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.6rem; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 4px; font-size: 0.75rem; color: var(--text-muted); }
-        .clog-item.obtained { color: var(--text-primary); border-color: var(--accent-green); background: rgba(63,185,80,0.1); }
-        .clog-item-check { width: 12px; height: 12px; border: 2px solid var(--border); border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 0.5rem; }
-        .clog-item.obtained .clog-item-check { background: var(--accent-green); border-color: var(--accent-green); color: var(--bg-dark); }
-        .goals-section { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
-        .goals-column h3 { font-family: 'Cinzel', serif; font-size: 1rem; color: var(--accent-gold); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
-        .goal-item { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border); }
-        .goal-checkbox { width: 18px; height: 18px; border: 2px solid var(--border); border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; }
-        .goal-checkbox.completed { background: var(--accent-green); border-color: var(--accent-green); color: var(--bg-dark); }
-        .goal-text { font-size: 0.875rem; color: var(--text-secondary); }
-        .goal-item.completed .goal-text { text-decoration: line-through; color: var(--text-muted); }
-        .external-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); flex-wrap: wrap; }
-        .external-link { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; padding: 0.5rem 1rem; border: 1px solid var(--border); border-radius: 4px; }
-        .external-link:hover { color: var(--accent-gold); border-color: var(--accent-gold); }
-        .loading { text-align: center; padding: 3rem; color: var(--text-muted); }
-        .empty-state { text-align: center; padding: 3rem; color: var(--text-muted); background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; }
-        .wikisync-note { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 1rem; margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--text-secondary); }
-        .wikisync-note a { color: var(--accent-blue); }
+        .ca-tier-stats { font-family: 'Fira Code', monospace; font-size: 0.85rem; display: flex; gap: 1.5rem; align-items: center; }
+        .ca-tier-progress { width: 100px; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+        .ca-tier-progress-fill { height: 100%; border-radius: 3px; }
+        .ca-tier-tasks { display: none; padding: 0.75rem 1rem; border-top: 1px solid var(--border); background: var(--bg-dark); }
+        .ca-tier.expanded .ca-tier-tasks { display: block; }
+        .goals-section { margin-bottom: 2rem; }
+        .goals-title { font-size: 1.1rem; font-weight: 500; margin-bottom: 1rem; color: var(--text-secondary); }
+        .goal-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 0.75rem 1rem; margin-bottom: 0.5rem; }
+        .empty-state { text-align: center; padding: 3rem; color: var(--text-muted); }
+        footer { text-align: center; padding: 2rem 0; margin-top: 3rem; border-top: 1px solid var(--border); }
+        footer a { color: var(--text-secondary); text-decoration: none; margin: 0 0.75rem; font-size: 0.85rem; padding: 0.5rem 1rem; border: 1px solid var(--border); border-radius: 4px; transition: all 0.2s; }
+        footer a:hover { color: var(--text-primary); border-color: var(--text-muted); }
         @media (max-width: 768px) {
+            .skills-grid { grid-template-columns: repeat(2, 1fr); }
             .container { padding: 1rem; }
             .player-name { font-size: 2rem; }
-            .skills-grid { grid-template-columns: repeat(2, 1fr); }
-            .skill-item.overall { grid-column: span 2; }
+            .search-filter { flex-direction: column; }
         }
     </style>
 </head>
@@ -127,170 +125,93 @@
     <div class="container">
         <header>
             <h1 class="player-name" id="playerName">FoolinSlays</h1>
-            <span class="account-type">
+            <div class="account-type">
                 <img src="https://oldschool.runescape.wiki/images/Ironman_chat_badge.png" alt="Ironman" class="iron-icon">
                 Ironman
-            </span>
-            <p class="last-updated">Last updated: <span id="lastUpdated">—</span></p>
+            </div>
+            <div class="last-updated">Last updated: <span id="lastUpdated">—</span></div>
         </header>
+
         <div class="stats-overview">
             <div class="stat-card"><div class="stat-label">Total Level</div><div class="stat-value gold" id="totalLevel">—</div></div>
             <div class="stat-card"><div class="stat-label">Total XP</div><div class="stat-value" id="totalXp">—</div></div>
             <div class="stat-card"><div class="stat-label">Combat Level</div><div class="stat-value blue" id="combatLevel">—</div></div>
             <div class="stat-card"><div class="stat-label">99s</div><div class="stat-value green" id="count99s">—</div></div>
-            <div class="stat-card"><div class="stat-label">Collection Log</div><div class="stat-value" id="clogCount">—</div></div>
-            <div class="stat-card"><div class="stat-label">Combat Tasks</div><div class="stat-value" id="caCount">—</div></div>
+            <div class="stat-card"><div class="stat-label">Collection Log</div><div class="stat-value green" id="clogCount">—</div></div>
+            <div class="stat-card"><div class="stat-label">CA Tasks</div><div class="stat-value" id="caTasks">—</div></div>
         </div>
+
         <nav class="nav-tabs">
             <button class="nav-tab active" data-tab="skills">Skills</button>
             <button class="nav-tab" data-tab="bosses">Bosses</button>
-            <button class="nav-tab" data-tab="collection">Collection Log</button>
-            <button class="nav-tab" data-tab="combat">Combat Achievements</button>
+            <button class="nav-tab" data-tab="clog">Collection Log</button>
+            <button class="nav-tab" data-tab="ca">Combat Achievements</button>
             <button class="nav-tab" data-tab="goals">Goals</button>
         </nav>
-        <div id="skills" class="tab-content active"><div class="skills-grid" id="skillsGrid"><div class="loading">Loading...</div></div></div>
-        <div id="bosses" class="tab-content"><div class="bosses-container" id="bossesGrid"><div class="loading">Loading...</div></div></div>
-        <div id="collection" class="tab-content"><div id="clogContainer"><div class="loading">Loading collection log from WikiSync...</div></div></div>
-        <div id="combat" class="tab-content"><div id="caContainer"><div class="loading">Loading combat achievements from WikiSync...</div></div></div>
-        <div id="goals" class="tab-content"><div class="goals-section" id="goalsSection"><div class="loading">Loading...</div></div></div>
-        <div class="external-links">
-            <a href="https://templeosrs.com/player/overview.php?player=FoolinSlays" class="external-link" target="_blank">TempleOSRS</a>
-            <a href="https://secure.runescape.com/m=hiscore_oldschool_ironman/hiscorepersonal?user1=FoolinSlays" class="external-link" target="_blank">Official Hiscores</a>
-            <a href="https://oldschool.runescape.wiki/w/Collection_log/Table" class="external-link" target="_blank">Wiki Collection Log</a>
-            <a href="https://oldschool.runescape.wiki/w/Combat_Achievements/All_tasks" class="external-link" target="_blank">Wiki Combat Achievements</a>
+
+        <div id="skills" class="tab-content active">
+            <div class="skills-grid" id="skillsGrid">Loading...</div>
         </div>
+
+        <div id="bosses" class="tab-content">
+            <div class="boss-grid" id="bossGrid">Loading...</div>
+        </div>
+
+        <div id="clog" class="tab-content">
+            <div id="clogContainer">Loading...</div>
+        </div>
+
+        <div id="ca" class="tab-content">
+            <div id="caContainer">Loading...</div>
+        </div>
+
+        <div id="goals" class="tab-content">
+            <div id="goalsContainer">Loading...</div>
+        </div>
+
+        <footer>
+            <a href="https://templeosrs.com/player/overview.php?player=FoolinSlays" target="_blank">TempleOSRS</a>
+            <a href="https://secure.runescape.com/m=hiscore_oldschool_ironman/hiscorepersonal?user1=FoolinSlays" target="_blank">Official Hiscores</a>
+            <a href="https://oldschool.runescape.wiki/w/Collection_log" target="_blank">Wiki Collection Log</a>
+            <a href="https://oldschool.runescape.wiki/w/Combat_Achievements" target="_blank">Wiki Combat Achievements</a>
+        </footer>
     </div>
+
     <script>
-        const RSN = 'FoolinSlays';
-        const WIKISYNC_API = 'https://sync.runescape.wiki/runelite/player';
-        const SKILL_ICONS = {
-            'Overall': 'https://oldschool.runescape.wiki/images/Stats_icon.png',
-            'Attack': 'https://oldschool.runescape.wiki/images/Attack_icon.png',
-            'Defence': 'https://oldschool.runescape.wiki/images/Defence_icon.png',
-            'Strength': 'https://oldschool.runescape.wiki/images/Strength_icon.png',
-            'Hitpoints': 'https://oldschool.runescape.wiki/images/Hitpoints_icon.png',
-            'Ranged': 'https://oldschool.runescape.wiki/images/Ranged_icon.png',
-            'Prayer': 'https://oldschool.runescape.wiki/images/Prayer_icon.png',
-            'Magic': 'https://oldschool.runescape.wiki/images/Magic_icon.png',
-            'Cooking': 'https://oldschool.runescape.wiki/images/Cooking_icon.png',
-            'Woodcutting': 'https://oldschool.runescape.wiki/images/Woodcutting_icon.png',
-            'Fletching': 'https://oldschool.runescape.wiki/images/Fletching_icon.png',
-            'Fishing': 'https://oldschool.runescape.wiki/images/Fishing_icon.png',
-            'Firemaking': 'https://oldschool.runescape.wiki/images/Firemaking_icon.png',
-            'Crafting': 'https://oldschool.runescape.wiki/images/Crafting_icon.png',
-            'Smithing': 'https://oldschool.runescape.wiki/images/Smithing_icon.png',
-            'Mining': 'https://oldschool.runescape.wiki/images/Mining_icon.png',
-            'Herblore': 'https://oldschool.runescape.wiki/images/Herblore_icon.png',
-            'Agility': 'https://oldschool.runescape.wiki/images/Agility_icon.png',
-            'Thieving': 'https://oldschool.runescape.wiki/images/Thieving_icon.png',
-            'Slayer': 'https://oldschool.runescape.wiki/images/Slayer_icon.png',
-            'Farming': 'https://oldschool.runescape.wiki/images/Farming_icon.png',
-            'Runecraft': 'https://oldschool.runescape.wiki/images/Runecraft_icon.png',
-            'Hunter': 'https://oldschool.runescape.wiki/images/Hunter_icon.png',
-            'Construction': 'https://oldschool.runescape.wiki/images/Construction_icon.png',
-            'Sailing': 'https://oldschool.runescape.wiki/images/Sailing_icon.png'
-        };
-        const SKILL_ORDER = ['Attack','Hitpoints','Mining','Strength','Agility','Smithing','Defence','Herblore','Fishing','Ranged','Thieving','Cooking','Prayer','Crafting','Firemaking','Magic','Fletching','Woodcutting','Runecraft','Slayer','Farming','Construction','Hunter','Sailing','Overall'];
-
-        // Combat Achievement tiers with task counts
-        const CA_TIERS = {
-            easy: { name: 'Easy', total: 46, color: '#3fb950' },
-            medium: { name: 'Medium', total: 94, color: '#58a6ff' },
-            hard: { name: 'Hard', total: 152, color: '#a371f7' },
-            elite: { name: 'Elite', total: 132, color: '#d4a84b' },
-            master: { name: 'Master', total: 141, color: '#f85149' },
-            grandmaster: { name: 'Grandmaster', total: 48, color: '#ff7b72' }
-        };
-
-        let wikiSyncData = null;
-        let clogMasterData = null;
-        let caMasterData = null;
+        const SKILL_ORDER = ['Attack','Hitpoints','Mining','Strength','Agility','Smithing','Defence','Herblore','Fishing','Ranged','Thieving','Cooking','Prayer','Crafting','Firemaking','Magic','Fletching','Woodcutting','Runecraft','Slayer','Farming','Construction','Hunter','Sailing'];
+        const SKILL_ICONS = {};
+        SKILL_ORDER.forEach(s => SKILL_ICONS[s] = `https://oldschool.runescape.wiki/images/${s}_icon.png`);
 
         function formatNumber(n) {
-            if (n >= 1e9) return (n/1e9).toFixed(1)+'B';
-            if (n >= 1e6) return (n/1e6).toFixed(1)+'M';
-            if (n >= 1e3) return (n/1e3).toFixed(1)+'K';
-            return n?.toLocaleString() || '0';
-        }
-        function formatDate(d) { return d ? new Date(d).toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'}) : '—'; }
-        function getProgressColor(p) { return p < 33 ? '#f85149' : p < 66 ? '#d4a84b' : '#3fb950'; }
-
-        // Fetch WikiSync data for player
-        async function fetchWikiSync() {
-            try {
-                const resp = await fetch(`${WIKISYNC_API}/${encodeURIComponent(RSN)}/STANDARD`);
-                if (resp.ok) {
-                    wikiSyncData = await resp.json();
-                    console.log('WikiSync data loaded:', wikiSyncData);
-                    return wikiSyncData;
-                }
-            } catch (e) {
-                console.log('WikiSync fetch failed:', e);
-            }
-            return null;
+            if (n >= 1e9) return (n/1e9).toFixed(1) + 'B';
+            if (n >= 1e6) return (n/1e6).toFixed(1) + 'M';
+            if (n >= 1e3) return (n/1e3).toFixed(1) + 'K';
+            return n.toLocaleString();
         }
 
-        // Fetch collection log master data from wiki
-        async function fetchClogMaster() {
-            try {
-                const resp = await fetch('https://oldschool.runescape.wiki/w/Module:Collection_log/data.json?action=raw');
-                if (resp.ok) {
-                    clogMasterData = await resp.json();
-                    return clogMasterData;
-                }
-            } catch (e) {
-                console.log('Clog master fetch failed:', e);
-            }
-            return null;
+        function formatDate(iso) {
+            if (!iso) return '—';
+            const d = new Date(iso);
+            return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' });
         }
 
-        // Fetch combat achievements master data from wiki
-        async function fetchCAMaster() {
-            try {
-                const resp = await fetch('https://oldschool.runescape.wiki/w/Module:Combat_Achievements/data.json?action=raw');
-                if (resp.ok) {
-                    caMasterData = await resp.json();
-                    return caMasterData;
-                }
-            } catch (e) {
-                console.log('CA master fetch failed:', e);
-            }
-            return null;
-        }
+        let clogData = null;
+        let caData = null;
 
         async function loadData() {
-            console.log('Loading data...');
-            
-            // Load local JSON data
-            const [skillsRes, bossesRes, clogRes, goalsRes] = await Promise.all([
-                fetch('./data/skills.json').then(r=>r.json()).catch(e=>{console.error('skills.json error:', e); return null;}),
-                fetch('./data/bosses.json').then(r=>r.json()).catch(e=>{console.error('bosses.json error:', e); return null;}),
-                fetch('./data/collection_log.json').then(r=>r.json()).catch(e=>{console.error('clog.json error:', e); return null;}),
-                fetch('./data/goals.yaml').then(r=>r.text()).catch(e=>{console.error('goals.yaml error:', e); return null;})
+            const [skillsRes, bossesRes, clogRes, caRes, goalsRes] = await Promise.all([
+                fetch('./data/skills.json').then(r=>r.json()).catch(()=>null),
+                fetch('./data/bosses.json').then(r=>r.json()).catch(()=>null),
+                fetch('./data/collection_log.json').then(r=>r.json()).catch(()=>null),
+                fetch('./data/combat_achievements.json').then(r=>r.json()).catch(()=>null),
+                fetch('./data/goals.yaml').then(r=>r.text()).catch(()=>null)
             ]);
-            
-            console.log('Local data loaded:', {skillsRes, bossesRes, clogRes, goalsRes});
 
-            // Load WikiSync and master data in parallel
-            let wsData = null, clogMaster = null, caMaster = null;
-            try {
-                [wsData, clogMaster, caMaster] = await Promise.all([
-                    fetchWikiSync(),
-                    fetchClogMaster(),
-                    fetchCAMaster()
-                ]);
-                console.log('WikiSync data:', {wsData, clogMaster, caMaster});
-            } catch(e) {
-                console.error('WikiSync fetch error:', e);
-            }
-
-            // Update header
             if (skillsRes?.rsn) {
                 document.getElementById('playerName').textContent = skillsRes.rsn;
                 document.getElementById('lastUpdated').textContent = formatDate(skillsRes.updated);
             }
 
-            // Update overview stats
             if (skillsRes?.milestones) {
                 const m = skillsRes.milestones;
                 document.getElementById('totalLevel').textContent = m.total_level?.toLocaleString() || '—';
@@ -299,232 +220,231 @@
                 document.getElementById('count99s').textContent = `${m.skills_99||0}/${m.num_skills||24}`;
             }
 
-            // Collection log count from hiscores
-            const clogCount = clogRes?.collection_log?.unique_obtained || 0;
-            document.getElementById('clogCount').textContent = clogCount > 0 ? clogCount.toLocaleString() : '—';
-
-            // Boss KC total
-            if (bossesRes?.bosses) {
-                const total = Object.values(bossesRes.bosses).reduce((s,b)=>s+(b.kc||0),0);
-                const bossEl = document.getElementById('totalBossKc');
-                if (bossEl) bossEl.textContent = formatNumber(total);
+            if (clogRes?.collection_log) {
+                clogData = clogRes.collection_log;
+                document.getElementById('clogCount').textContent = `${clogData.total_obtained}/${clogData.total_items}`;
             }
 
-            renderSkills(skillsRes?.skills || {});
-            renderBosses(bossesRes?.bosses || {});
-            renderCollectionLog(wsData, clogMaster, clogCount);
-            renderCombatAchievements(wsData, caMaster);
-            renderGoals(goalsRes);
+            if (caRes?.combat_achievements) {
+                caData = caRes.combat_achievements;
+                document.getElementById('caTasks').textContent = `${caData.total_completed}/${caData.total_tasks}`;
+            }
+
+            if (skillsRes?.skills) renderSkills(skillsRes.skills);
+            if (bossesRes?.bosses) renderBosses(bossesRes.bosses);
+            renderCollectionLog();
+            renderCombatAchievements();
+            if (goalsRes) renderGoals(goalsRes);
         }
 
         function renderSkills(skills) {
             const grid = document.getElementById('skillsGrid');
-            if (!Object.keys(skills).length) { grid.innerHTML='<div class="empty-state">No data</div>'; return; }
             grid.innerHTML = SKILL_ORDER.map(name => {
-                const s = skills[name] || {level:1,xp:0};
-                const isMaxed = name !== 'Overall' && s.level >= 99;
-                const isOverall = name === 'Overall';
-                const progress = s.progress?.progress || 0;
-                return `<div class="skill-item ${isMaxed?'maxed':''} ${isOverall?'overall':''}">
+                const s = skills[name] || { level: 1, xp: 0 };
+                const isMaxed = s.level >= 99;
+                const prog = s.progress?.progress || 0;
+                const progClass = prog < 33 ? 'low' : prog < 66 ? 'mid' : 'high';
+                return `<div class="skill-item ${isMaxed ? 'maxed' : ''}">
                     <img src="${SKILL_ICONS[name]}" alt="${name}" class="skill-icon">
                     <div class="skill-info">
-                        <div class="skill-header"><span class="skill-name">${name}</span><span class="skill-level">${s.level||1}</span></div>
-                        <div class="skill-xp">${formatNumber(s.xp||0)} XP</div>
-                        ${!isOverall && !isMaxed ? `<div class="skill-progress-bar"><div class="skill-progress-fill" style="width:${progress}%;background:${getProgressColor(progress)}"></div></div>` : ''}
+                        <div class="skill-name">${name}</div>
+                        <div class="skill-level ${isMaxed ? 'maxed' : ''}">${s.level}</div>
+                        <div class="skill-xp">${formatNumber(s.xp)} XP</div>
+                        ${!isMaxed ? `<div class="skill-progress"><div class="skill-progress-fill ${progClass}" style="width:${prog}%"></div></div>` : ''}
                     </div>
                 </div>`;
             }).join('');
         }
 
         function renderBosses(bosses) {
-            const c = document.getElementById('bossesGrid');
             const sorted = Object.entries(bosses).filter(([_,d])=>d.kc>0).sort((a,b)=>b[1].kc-a[1].kc);
-            if (!sorted.length) { c.innerHTML='<div class="empty-state">No boss kills</div>'; return; }
-            c.innerHTML = sorted.map(([n,d])=>`<div class="boss-item"><span class="boss-name">${n}</span><span class="boss-kc">${d.kc.toLocaleString()} KC</span></div>`).join('');
+            document.getElementById('bossGrid').innerHTML = sorted.map(([n,d])=>
+                `<div class="boss-item"><span class="boss-name">${n}</span><span class="boss-kc">${d.kc.toLocaleString()} KC</span></div>`
+            ).join('');
         }
 
-        function renderCollectionLog(wsData, masterData, officialCount) {
-            const c = document.getElementById('clogContainer');
-            
-            // Get obtained items from WikiSync
-            let obtainedItems = new Set();
-            if (wsData?.collectionlog?.items) {
-                obtainedItems = new Set(wsData.collectionlog.items.map(String));
+        function renderCollectionLog(searchTerm = '', statusFilter = 'all') {
+            const container = document.getElementById('clogContainer');
+            if (!clogData) {
+                container.innerHTML = '<div class="empty-state">Collection log data not available</div>';
+                return;
             }
 
-            const obtained = obtainedItems.size > 0 ? obtainedItems.size : officialCount;
-            const total = masterData ? Object.values(masterData.categories || {}).reduce((sum, cat) => sum + (cat.items?.length || 0), 0) : 1615;
-            const pct = total > 0 ? ((obtained / total) * 100).toFixed(1) : 0;
-
-            // Update overview stat
-            document.getElementById('clogCount').textContent = obtained > 0 ? obtained.toLocaleString() : '—';
-
+            const pct = ((clogData.total_obtained / clogData.total_items) * 100).toFixed(1);
+            
             let html = `
                 <div class="progress-section">
                     <div class="progress-header">
                         <span class="progress-title">Collection Log Progress</span>
-                        <span class="progress-stats"><span class="obtained">${obtained.toLocaleString()}</span> <span class="total">/ ${total.toLocaleString()}</span></span>
+                        <span class="progress-stats"><span class="obtained">${clogData.total_obtained}</span> <span class="total">/ ${clogData.total_items}</span></span>
                     </div>
                     <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>
                     <div class="progress-percentage">${pct}%</div>
-                </div>`;
-
-            if (obtainedItems.size === 0) {
-                html += `<div class="wikisync-note">
-                    <strong>No WikiSync data found.</strong> To see detailed collection log items:<br>
-                    1. Install the <a href="https://runelite.net/plugin-hub/show/wikisync" target="_blank">WikiSync plugin</a> in RuneLite<br>
-                    2. Open your Collection Log in-game and click the WikiSync button<br>
-                    3. Refresh this page
-                </div>`;
-            } else if (masterData?.categories) {
-                html += `<div class="clog-filters">
-                    <input type="text" class="clog-search" id="clogSearch" placeholder="Search items...">
-                    <select class="clog-select" id="clogCatFilter"><option value="all">All Categories</option></select>
-                    <select class="clog-select" id="clogStatusFilter"><option value="all">All Items</option><option value="obtained">Obtained</option><option value="missing">Missing</option></select>
                 </div>
-                <div id="clogCategories"></div>`;
-            }
-
-            c.innerHTML = html;
-
-            if (obtainedItems.size > 0 && masterData?.categories) {
-                // Populate category filter
-                const catSelect = document.getElementById('clogCatFilter');
-                Object.keys(masterData.categories).sort().forEach(cat => {
-                    catSelect.innerHTML += `<option value="${cat}">${cat.replace(/_/g, ' ')}</option>`;
-                });
-
-                renderClogCategories(masterData.categories, obtainedItems);
-                document.getElementById('clogSearch').addEventListener('input', () => filterClog(masterData.categories, obtainedItems));
-                document.getElementById('clogCatFilter').addEventListener('change', () => filterClog(masterData.categories, obtainedItems));
-                document.getElementById('clogStatusFilter').addEventListener('change', () => filterClog(masterData.categories, obtainedItems));
-            }
-        }
-
-        function renderClogCategories(categories, obtainedSet, search='', catFilter='all', statusFilter='all') {
-            const c = document.getElementById('clogCategories');
-            let html = '';
-            Object.entries(categories).sort((a,b)=>a[0].localeCompare(b[0])).forEach(([catName, catData]) => {
-                if (catFilter !== 'all' && catName !== catFilter) return;
-                let items = (catData.items || []).map(id => ({
-                    id: String(id),
-                    name: catData.itemNames?.[id] || `Item ${id}`,
-                    obtained: obtainedSet.has(String(id))
-                }));
-                if (search) items = items.filter(i => i.name.toLowerCase().includes(search.toLowerCase()));
-                if (statusFilter === 'obtained') items = items.filter(i => i.obtained);
-                else if (statusFilter === 'missing') items = items.filter(i => !i.obtained);
-                if (!items.length) return;
-                const obt = items.filter(i => i.obtained).length;
-                html += `<div class="clog-category">
-                    <div class="clog-category-header" onclick="this.parentElement.classList.toggle('expanded')">
-                        <span class="clog-category-name">${catName.replace(/_/g, ' ')}</span>
-                        <span class="clog-category-count"><span class="obtained">${obt}</span> / ${items.length}</span>
-                    </div>
-                    <div class="clog-category-items">${items.map(i => `<div class="clog-item ${i.obtained?'obtained':''}"><span class="clog-item-check">${i.obtained?'✓':''}</span>${i.name}</div>`).join('')}</div>
-                </div>`;
-            });
-            c.innerHTML = html || '<div class="empty-state">No items match filters</div>';
-        }
-
-        function filterClog(categories, obtainedSet) {
-            renderClogCategories(categories, obtainedSet,
-                document.getElementById('clogSearch').value,
-                document.getElementById('clogCatFilter').value,
-                document.getElementById('clogStatusFilter').value
-            );
-        }
-
-        function renderCombatAchievements(wsData, masterData) {
-            const c = document.getElementById('caContainer');
+                <div class="search-filter">
+                    <input type="text" class="search-input" id="clogSearch" placeholder="Search items or collections..." value="${searchTerm}">
+                    <select class="filter-select" id="clogFilter">
+                        <option value="all" ${statusFilter==='all'?'selected':''}>All Items</option>
+                        <option value="obtained" ${statusFilter==='obtained'?'selected':''}>Obtained Only</option>
+                        <option value="missing" ${statusFilter==='missing'?'selected':''}>Missing Only</option>
+                    </select>
+                </div>
+                <div id="clogList"></div>`;
             
-            // Get completed tasks from WikiSync
-            let completedTasks = new Set();
-            if (wsData?.combat_achievements) {
-                completedTasks = new Set(wsData.combat_achievements.map(String));
-            }
+            container.innerHTML = html;
+            
+            document.getElementById('clogSearch').addEventListener('input', e => renderCollectionLog(e.target.value, document.getElementById('clogFilter').value));
+            document.getElementById('clogFilter').addEventListener('change', e => renderCollectionLog(document.getElementById('clogSearch').value, e.target.value));
+            
+            renderClogList(searchTerm, statusFilter);
+        }
 
-            // Count by tier
-            const tierCounts = { easy: 0, medium: 0, hard: 0, elite: 0, master: 0, grandmaster: 0 };
-            let totalTasks = 0;
-            let totalTotal = Object.values(CA_TIERS).reduce((s, t) => s + t.total, 0);
+        function renderClogList(searchTerm, statusFilter) {
+            const list = document.getElementById('clogList');
+            const search = searchTerm.toLowerCase();
+            let html = '';
 
-            if (masterData?.tasks && completedTasks.size > 0) {
-                Object.entries(masterData.tasks).forEach(([id, task]) => {
-                    const tier = task.tier?.toLowerCase();
-                    if (tier && tierCounts.hasOwnProperty(tier)) {
-                        if (completedTasks.has(String(id))) {
-                            tierCounts[tier]++;
-                            totalTasks++;
-                        }
+            for (const [collName, coll] of Object.entries(clogData.collections).sort((a,b) => a[0].localeCompare(b[0]))) {
+                let obtained = coll.obtained || [];
+                let missing = coll.missing || [];
+                
+                // Apply search filter
+                if (search) {
+                    if (!collName.toLowerCase().includes(search)) {
+                        obtained = obtained.filter(i => i.toLowerCase().includes(search));
+                        missing = missing.filter(i => i.toLowerCase().includes(search));
                     }
-                });
-            } else {
-                totalTasks = completedTasks.size;
+                }
+                
+                // Apply status filter
+                let items = [];
+                if (statusFilter === 'all' || statusFilter === 'obtained') {
+                    items = items.concat(obtained.map(i => ({ name: i, obtained: true })));
+                }
+                if (statusFilter === 'all' || statusFilter === 'missing') {
+                    items = items.concat(missing.map(i => ({ name: i, obtained: false })));
+                }
+                
+                if (items.length === 0) continue;
+                
+                const obtCount = items.filter(i => i.obtained).length;
+                const totalCount = (statusFilter === 'all') ? coll.obtained.length + coll.missing.length : items.length;
+                
+                html += `<div class="collection">
+                    <div class="collection-header" onclick="this.parentElement.classList.toggle('expanded')">
+                        <span class="collection-name">${collName}</span>
+                        <span class="collection-count"><span class="obtained">${coll.obtained.length}</span> <span class="total">/ ${coll.obtained.length + coll.missing.length}</span></span>
+                    </div>
+                    <div class="collection-items">
+                        <div class="item-list">
+                            ${items.map(i => `<div class="item ${i.obtained ? 'obtained' : 'missing'}">
+                                <span class="item-check">${i.obtained ? '✓' : '○'}</span>
+                                ${i.name}
+                            </div>`).join('')}
+                        </div>
+                    </div>
+                </div>`;
+            }
+            
+            list.innerHTML = html || '<div class="empty-state">No items match your search</div>';
+        }
+
+        function renderCombatAchievements(searchTerm = '', statusFilter = 'all') {
+            const container = document.getElementById('caContainer');
+            if (!caData) {
+                container.innerHTML = '<div class="empty-state">Combat achievements data not available</div>';
+                return;
             }
 
-            const pct = totalTotal > 0 ? ((totalTasks / totalTotal) * 100).toFixed(1) : 0;
-
-            // Update overview stat
-            document.getElementById('caCount').textContent = totalTasks > 0 ? `${totalTasks}/${totalTotal}` : '—';
-
+            const pct = ((caData.total_points / caData.max_points) * 100).toFixed(1);
+            const tierColors = { Easy: '#3fb950', Medium: '#58a6ff', Hard: '#a371f7', Elite: '#d4a84b', Master: '#f85149', Grandmaster: '#ff7b72' };
+            
             let html = `
                 <div class="progress-section">
                     <div class="progress-header">
-                        <span class="progress-title">Combat Achievements</span>
-                        <span class="progress-stats"><span class="obtained">${totalTasks}</span> <span class="total">/ ${totalTotal}</span></span>
+                        <span class="progress-title">Combat Achievements Progress</span>
+                        <span class="progress-stats"><span class="obtained">${caData.total_points}</span> <span class="total">/ ${caData.max_points} points</span></span>
                     </div>
                     <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>
-                    <div class="progress-percentage">${pct}%</div>
+                    <div class="progress-percentage">${pct}% · ${caData.total_completed}/${caData.total_tasks} tasks</div>
+                </div>
+                <div class="search-filter">
+                    <input type="text" class="search-input" id="caSearch" placeholder="Search tasks..." value="${searchTerm}">
+                    <select class="filter-select" id="caFilter">
+                        <option value="all" ${statusFilter==='all'?'selected':''}>All Tasks</option>
+                        <option value="completed" ${statusFilter==='completed'?'selected':''}>Completed Only</option>
+                        <option value="not_completed" ${statusFilter==='not_completed'?'selected':''}>Remaining Only</option>
+                    </select>
                 </div>`;
-
-            if (completedTasks.size === 0) {
-                html += `<div class="wikisync-note">
-                    <strong>No WikiSync data found.</strong> To see your combat achievement progress:<br>
-                    1. Install the <a href="https://runelite.net/plugin-hub/show/wikisync" target="_blank">WikiSync plugin</a> in RuneLite<br>
-                    2. Log in with the plugin enabled - your data syncs automatically<br>
-                    3. Refresh this page
+            
+            const search = searchTerm.toLowerCase();
+            
+            for (const [tierName, tier] of Object.entries(caData.tiers)) {
+                let completed = tier.completed || [];
+                let notCompleted = tier.not_completed || [];
+                
+                if (search) {
+                    completed = completed.filter(t => t.toLowerCase().includes(search));
+                    notCompleted = notCompleted.filter(t => t.toLowerCase().includes(search));
+                }
+                
+                let tasks = [];
+                if (statusFilter === 'all' || statusFilter === 'completed') {
+                    tasks = tasks.concat(completed.map(t => ({ name: t, done: true })));
+                }
+                if (statusFilter === 'all' || statusFilter === 'not_completed') {
+                    tasks = tasks.concat(notCompleted.map(t => ({ name: t, done: false })));
+                }
+                
+                if (tasks.length === 0 && search) continue;
+                
+                const tierPct = tier.total_count > 0 ? ((tier.completed_count / tier.total_count) * 100) : 0;
+                const color = tierColors[tierName] || '#888';
+                
+                html += `<div class="ca-tier">
+                    <div class="ca-tier-header" onclick="this.parentElement.classList.toggle('expanded')">
+                        <span class="ca-tier-name ${tierName.toLowerCase()}">${tierName} (${tier.points_per_task} pt${tier.points_per_task > 1 ? 's' : ''})</span>
+                        <div class="ca-tier-stats">
+                            <span><span style="color:${color}">${tier.completed_count}</span> / ${tier.total_count}</span>
+                            <div class="ca-tier-progress"><div class="ca-tier-progress-fill" style="width:${tierPct}%;background:${color}"></div></div>
+                        </div>
+                    </div>
+                    <div class="ca-tier-tasks">
+                        <div class="item-list">
+                            ${tasks.map(t => `<div class="item ${t.done ? 'obtained' : 'missing'}">
+                                <span class="item-check">${t.done ? '✓' : '○'}</span>
+                                ${t.name}
+                            </div>`).join('')}
+                        </div>
+                    </div>
                 </div>`;
-            } else {
-                html += `<div class="ca-tiers">`;
-                Object.entries(CA_TIERS).forEach(([key, tier]) => {
-                    const done = tierCounts[key];
-                    const tierPct = tier.total > 0 ? ((done / tier.total) * 100).toFixed(0) : 0;
-                    html += `<div class="ca-tier">
-                        <div class="ca-tier-name ${key}">${tier.name}</div>
-                        <div class="ca-tier-progress">${done} / ${tier.total}</div>
-                        <div class="ca-tier-bar"><div class="ca-tier-fill" style="width:${tierPct}%;background:${tier.color}"></div></div>
-                    </div>`;
-                });
-                html += `</div>`;
             }
-
-            c.innerHTML = html;
+            
+            container.innerHTML = html;
+            
+            document.getElementById('caSearch').addEventListener('input', e => renderCombatAchievements(e.target.value, document.getElementById('caFilter').value));
+            document.getElementById('caFilter').addEventListener('change', e => renderCombatAchievements(document.getElementById('caSearch').value, e.target.value));
         }
 
         function renderGoals(yaml) {
-            const c = document.getElementById('goalsSection');
-            if (!yaml) { c.innerHTML='<div class="empty-state">No goals configured</div>'; return; }
-            const goals = {short_term:[],long_term:[]};
-            let sec = null, goal = null;
+            const container = document.getElementById('goalsContainer');
+            const goals = { short_term: [], long_term: [] };
+            let current = null;
+            
             yaml.split('\n').forEach(line => {
-                if (line==='short_term:') sec='short_term';
-                else if (line==='long_term:') sec='long_term';
-                else if (line.match(/^\s+-\s+description:/)) {
-                    if (goal && sec) goals[sec].push(goal);
-                    goal = {description: line.split('description:')[1].trim().replace(/"/g,''), completed: false};
-                } else if (line.match(/completed:/) && goal) goal.completed = line.includes('true');
+                if (line.startsWith('short_term:')) current = 'short_term';
+                else if (line.startsWith('long_term:')) current = 'long_term';
+                else if (current && line.trim().startsWith('- ')) {
+                    goals[current].push(line.trim().slice(2));
+                }
             });
-            if (goal && sec) goals[sec].push(goal);
-            c.innerHTML = ['short_term','long_term'].map(key => `
-                <div class="goals-column">
-                    <h3>${key==='short_term'?'Short-Term':'Long-Term'} Goals</h3>
-                    ${goals[key].length ? goals[key].map(g => `
-                        <div class="goal-item ${g.completed?'completed':''}">
-                            <div class="goal-checkbox ${g.completed?'completed':''}">${g.completed?'✓':''}</div>
-                            <div class="goal-text">${g.description}</div>
-                        </div>`).join('') : '<p style="color:var(--text-muted)">No goals set</p>'}
-                </div>`).join('');
+
+            container.innerHTML = ['short_term', 'long_term'].map(key => `
+                <div class="goals-section">
+                    <div class="goals-title">${key === 'short_term' ? '🎯 Short Term Goals' : '🏆 Long Term Goals'}</div>
+                    ${goals[key].length ? goals[key].map(g => `<div class="goal-item">${g}</div>`).join('') : '<div class="empty-state">No goals set</div>'}
+                </div>
+            `).join('');
         }
 
         document.querySelectorAll('.nav-tab').forEach(t => t.addEventListener('click', () => {
