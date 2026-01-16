@@ -8,7 +8,7 @@ import json
 import os
 import urllib.request
 import urllib.parse
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 # Configuration
@@ -17,17 +17,21 @@ DATA_DIR = Path(__file__).parent.parent / "data"
 
 # API URLs
 TEMPLE_STATS_URL = "https://templeosrs.com/api/player_stats.php"
-TEMPLE_COLLECTION_URL = "https://templeosrs.com/api/collection-log/player.php"
+TEMPLE_COLLECTION_URL = "https://templeosrs.com/api/collection-log/player_collection_log.php"
 TEMPLE_GAINS_URL = "https://templeosrs.com/api/player_gains.php"
 HISCORES_URL = "https://secure.runescape.com/m=hiscore_oldschool_ironman/index_lite.json"
 
-# Skill order from official hiscores
+# All 24 skills (including Sailing)
 SKILLS = [
     "Overall", "Attack", "Defence", "Strength", "Hitpoints", "Ranged",
     "Prayer", "Magic", "Cooking", "Woodcutting", "Fletching", "Fishing",
     "Firemaking", "Crafting", "Smithing", "Mining", "Herblore", "Agility",
-    "Thieving", "Slayer", "Farming", "Runecraft", "Hunter", "Construction"
+    "Thieving", "Slayer", "Farming", "Runecraft", "Hunter", "Construction",
+    "Sailing"
 ]
+
+# Number of actual trainable skills (excluding Overall)
+NUM_SKILLS = 24
 
 # Boss list (subset - full list in actual API response)
 BOSSES = [
@@ -72,10 +76,9 @@ def fetch_temple_stats(rsn: str) -> dict | None:
 
 def fetch_temple_collection_log(rsn: str) -> dict | None:
     """Fetch collection log data from TempleOSRS API."""
+    # Use the correct endpoint with categories=all to get summary
     data = fetch_json(TEMPLE_COLLECTION_URL, {"player": rsn})
-    if data and "data" in data:
-        return data["data"]
-    return None
+    return data
 
 
 def fetch_temple_gains(rsn: str, days: int = 30) -> dict | None:
@@ -167,30 +170,56 @@ def update_bosses_data(temple_data: dict, official_data: dict) -> dict:
 
 
 def update_collection_log(temple_clog: dict) -> dict:
-    """Format collection log data."""
+    """Format collection log data from TempleOSRS API response."""
     if not temple_clog:
         return {}
     
-    return {
-        "total_obtained": temple_clog.get("Total Obtained", 0),
-        "total_items": temple_clog.get("Total", 0),
-        "unique_obtained": temple_clog.get("Unique Obtained", 0),
-        "unique_items": temple_clog.get("Unique", 0),
-        "rank": temple_clog.get("Rank", -1),
-        "categories": temple_clog.get("categories", {})
+    # The API returns data in different formats, handle both
+    if "data" in temple_clog:
+        clog_data = temple_clog["data"]
+    else:
+        clog_data = temple_clog
+    
+    # Try to extract the summary info
+    result = {
+        "unique_obtained": clog_data.get("Unique Obtained") or clog_data.get("unique_obtained") or clog_data.get("obtained", 0),
+        "unique_items": clog_data.get("Unique") or clog_data.get("unique_items") or clog_data.get("total", 0),
+        "rank": clog_data.get("Rank") or clog_data.get("rank", -1),
     }
+    
+    # If we got item-level data, count them
+    if "items" in clog_data:
+        result["unique_obtained"] = len(clog_data["items"])
+    
+    return result
 
 
 def calculate_milestones(skills: dict) -> dict:
     """Calculate various account milestones."""
-    total_level = sum(s.get("level", 1) for s in skills.values() if s.get("level"))
-    total_xp = sum(s.get("xp", 0) for s in skills.values() if s.get("xp"))
+    # Use Overall skill's level directly instead of summing
+    overall_skill = skills.get("Overall", {})
+    total_level = overall_skill.get("level", 0)
+    total_xp = overall_skill.get("xp", 0)
     
-    # Count skills at various thresholds
-    skills_99 = sum(1 for s in skills.values() if s.get("level", 0) >= 99)
-    skills_90 = sum(1 for s in skills.values() if s.get("level", 0) >= 90)
-    skills_80 = sum(1 for s in skills.values() if s.get("level", 0) >= 80)
-    skills_70 = sum(1 for s in skills.values() if s.get("level", 0) >= 70)
+    # If Overall isn't available, calculate from individual skills
+    if total_level == 0:
+        total_level = sum(
+            s.get("level", 1) 
+            for name, s in skills.items() 
+            if name != "Overall" and s.get("level")
+        )
+        total_xp = sum(
+            s.get("xp", 0) 
+            for name, s in skills.items() 
+            if name != "Overall" and s.get("xp")
+        )
+    
+    # Count skills at various thresholds (excluding Overall)
+    individual_skills = {k: v for k, v in skills.items() if k != "Overall"}
+    skills_99 = sum(1 for s in individual_skills.values() if s.get("level", 0) >= 99)
+    skills_90 = sum(1 for s in individual_skills.values() if s.get("level", 0) >= 90)
+    skills_80 = sum(1 for s in individual_skills.values() if s.get("level", 0) >= 80)
+    skills_70 = sum(1 for s in individual_skills.values() if s.get("level", 0) >= 70)
     
     # Combat level calculation
     attack = skills.get("Attack", {}).get("level", 1)
@@ -215,13 +244,15 @@ def calculate_milestones(skills: dict) -> dict:
         "skills_90": skills_90,
         "skills_80": skills_80,
         "skills_70": skills_70,
-        "maxed": skills_99 == 23  # All skills except Overall
+        "num_skills": NUM_SKILLS,
+        "maxed": skills_99 == NUM_SKILLS
     }
 
 
 def main():
+    now = datetime.now(timezone.utc)
     print(f"Updating stats for: {RSN}")
-    print(f"Timestamp: {datetime.utcnow().isoformat()}Z")
+    print(f"Timestamp: {now.isoformat()}")
     print("-" * 50)
     
     # Fetch from all sources
@@ -238,7 +269,7 @@ def main():
     if skills:
         save_json(DATA_DIR / "skills.json", {
             "rsn": RSN,
-            "updated": datetime.utcnow().isoformat() + "Z",
+            "updated": now.isoformat(),
             "skills": skills,
             "milestones": calculate_milestones(skills)
         })
@@ -248,7 +279,7 @@ def main():
     if bosses:
         save_json(DATA_DIR / "bosses.json", {
             "rsn": RSN,
-            "updated": datetime.utcnow().isoformat() + "Z",
+            "updated": now.isoformat(),
             "bosses": bosses
         })
     
@@ -257,15 +288,17 @@ def main():
     if clog:
         save_json(DATA_DIR / "collection_log.json", {
             "rsn": RSN,
-            "updated": datetime.utcnow().isoformat() + "Z",
+            "updated": now.isoformat(),
             "collection_log": clog
         })
+    else:
+        print("Note: Collection log data not available. Make sure you've synced via the TempleOSRS RuneLite plugin.")
     
     # Save recent gains for tracking progress
     if temple_gains:
         save_json(DATA_DIR / "recent_gains.json", {
             "rsn": RSN,
-            "updated": datetime.utcnow().isoformat() + "Z",
+            "updated": now.isoformat(),
             "period_days": 30,
             "gains": temple_gains
         })

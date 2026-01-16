@@ -9,26 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-dark: #0a0a0f;
-            --bg-card: #12121a;
-            --bg-card-hover: #1a1a25;
-            --border: #2a2a3a;
-            --text-primary: #e8e6e3;
-            --text-secondary: #8a8a9a;
-            --text-muted: #5a5a6a;
+            --bg-dark: #0d1117;
+            --bg-card: #161b22;
+            --bg-card-hover: #1c2129;
+            --border: #30363d;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --text-muted: #6e7681;
             --accent-gold: #d4a84b;
             --accent-gold-dim: #8a6a2a;
-            --accent-green: #4ade80;
-            --accent-blue: #60a5fa;
-            --accent-purple: #a78bfa;
-            --accent-red: #f87171;
-            --skill-attack: #c41818;
-            --skill-strength: #18c418;
-            --skill-defence: #6090c0;
-            --skill-ranged: #18a018;
-            --skill-prayer: #b8b848;
-            --skill-magic: #4848c8;
-            --skill-hitpoints: #c04040;
+            --accent-green: #3fb950;
+            --accent-blue: #58a6ff;
+            --accent-purple: #a371f7;
+            --accent-red: #f85149;
         }
 
         * {
@@ -38,28 +31,11 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--bg-dark);
             color: var(--text-primary);
             min-height: 100vh;
             line-height: 1.6;
-        }
-
-        /* Runescape-inspired background texture */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(ellipse at 20% 20%, rgba(212, 168, 75, 0.03) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 80%, rgba(96, 165, 250, 0.02) 0%, transparent 50%),
-                url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-            opacity: 0.4;
-            pointer-events: none;
-            z-index: -1;
         }
 
         .container {
@@ -93,7 +69,7 @@
             font-size: 3rem;
             font-weight: 700;
             color: var(--accent-gold);
-            text-shadow: 0 0 40px rgba(212, 168, 75, 0.3);
+            text-shadow: 0 0 40px rgba(212, 168, 75, 0.2);
             letter-spacing: 0.05em;
             margin-bottom: 0.5rem;
         }
@@ -107,26 +83,29 @@
             color: var(--text-secondary);
             padding: 0.25rem 1rem;
             border: 1px solid var(--border);
-            border-radius: 2px;
+            border-radius: 4px;
             background: var(--bg-card);
         }
 
         .account-type .iron-icon {
             width: 16px;
             height: 16px;
-            filter: grayscale(0.2);
         }
 
         .last-updated {
             margin-top: 1rem;
-            font-size: 0.75rem;
-            color: var(--text-muted);
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            background: var(--bg-card);
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
         }
 
         /* Stats Overview */
         .stats-overview {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
             gap: 1rem;
             margin-bottom: 3rem;
         }
@@ -134,11 +113,12 @@
         .stat-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
-            padding: 1.5rem;
+            border-radius: 6px;
+            padding: 1.25rem;
             text-align: center;
             position: relative;
             overflow: hidden;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
         }
 
         .stat-card::before {
@@ -150,12 +130,12 @@
             height: 2px;
             background: var(--accent-gold);
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.2s ease;
         }
 
         .stat-card:hover {
             background: var(--bg-card-hover);
-            transform: translateY(-2px);
+            border-color: var(--accent-gold-dim);
         }
 
         .stat-card:hover::before {
@@ -163,7 +143,7 @@
         }
 
         .stat-label {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
             color: var(--text-muted);
@@ -172,7 +152,7 @@
 
         .stat-value {
             font-family: 'Fira Code', monospace;
-            font-size: 1.75rem;
+            font-size: 1.5rem;
             font-weight: 500;
             color: var(--text-primary);
         }
@@ -187,10 +167,11 @@
             gap: 0;
             margin-bottom: 2rem;
             border-bottom: 1px solid var(--border);
+            overflow-x: auto;
         }
 
         .nav-tab {
-            padding: 1rem 2rem;
+            padding: 1rem 1.5rem;
             font-size: 0.875rem;
             font-weight: 500;
             color: var(--text-secondary);
@@ -199,6 +180,7 @@
             cursor: pointer;
             position: relative;
             transition: color 0.2s ease;
+            white-space: nowrap;
         }
 
         .nav-tab:hover {
@@ -234,21 +216,24 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Skills Grid */
+        /* Skills Grid - OSRS style 3-column layout */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 0.75rem;
+            grid-template-columns: repeat(3, minmax(140px, 200px));
+            gap: 0.5rem;
+            justify-content: center;
+            max-width: 650px;
+            margin: 0 auto;
         }
 
         .skill-item {
             background: var(--bg-card);
             border: 1px solid var(--border);
-            padding: 1rem;
+            border-radius: 4px;
+            padding: 0.75rem;
             display: flex;
-            flex-direction: column;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
             transition: all 0.2s ease;
             position: relative;
         }
@@ -260,7 +245,7 @@
 
         .skill-item.maxed {
             border-color: var(--accent-gold);
-            box-shadow: 0 0 20px rgba(212, 168, 75, 0.1);
+            background: rgba(212, 168, 75, 0.05);
         }
 
         .skill-item.maxed::after {
@@ -269,45 +254,66 @@
             top: 0.25rem;
             right: 0.5rem;
             color: var(--accent-gold);
-            font-size: 0.75rem;
+            font-size: 0.65rem;
         }
 
         .skill-icon {
-            width: 32px;
-            height: 32px;
+            width: 24px;
+            height: 24px;
             image-rendering: pixelated;
+            flex-shrink: 0;
+        }
+
+        .skill-info {
+            flex: 1;
+            min-width: 0;
         }
 
         .skill-name {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: var(--text-secondary);
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.03em;
         }
 
         .skill-level {
             font-family: 'Fira Code', monospace;
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             font-weight: 500;
+            color: var(--text-primary);
         }
 
         .skill-xp {
             font-family: 'Fira Code', monospace;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             color: var(--text-muted);
+        }
+
+        /* Overall skill special styling */
+        .skill-item.overall {
+            grid-column: span 3;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(212, 168, 75, 0.08) 100%);
+            border-color: var(--accent-gold-dim);
+        }
+
+        .skill-item.overall .skill-level {
+            font-size: 1.5rem;
+            color: var(--accent-gold);
         }
 
         /* Bosses Table */
         .bosses-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 0.75rem;
         }
 
         .boss-item {
             background: var(--bg-card);
             border: 1px solid var(--border);
-            padding: 1rem 1.25rem;
+            border-radius: 4px;
+            padding: 0.875rem 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -319,13 +325,13 @@
         }
 
         .boss-name {
-            font-size: 0.875rem;
+            font-size: 0.85rem;
             color: var(--text-primary);
         }
 
         .boss-kc {
             font-family: 'Fira Code', monospace;
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: var(--accent-blue);
         }
 
@@ -333,8 +339,10 @@
         .clog-progress {
             background: var(--bg-card);
             border: 1px solid var(--border);
+            border-radius: 6px;
             padding: 2rem;
-            margin-bottom: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .clog-header {
@@ -346,7 +354,7 @@
 
         .clog-title {
             font-family: 'Cinzel', serif;
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             color: var(--accent-gold);
         }
 
@@ -356,24 +364,30 @@
             color: var(--text-primary);
         }
 
+        .clog-details {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
         .progress-bar {
-            height: 8px;
+            height: 10px;
             background: var(--bg-dark);
-            border-radius: 4px;
+            border-radius: 5px;
             overflow: hidden;
         }
 
         .progress-fill {
             height: 100%;
             background: linear-gradient(90deg, var(--accent-gold-dim), var(--accent-gold));
-            border-radius: 4px;
+            border-radius: 5px;
             transition: width 1s ease;
         }
 
         /* Goals Section */
         .goals-section {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
         }
 
@@ -398,12 +412,13 @@
             width: 18px;
             height: 18px;
             border: 2px solid var(--border);
-            border-radius: 2px;
+            border-radius: 3px;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
             margin-top: 2px;
+            font-size: 0.7rem;
         }
 
         .goal-checkbox.completed {
@@ -433,18 +448,20 @@
         .external-links {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 1.5rem;
             margin-top: 3rem;
             padding-top: 2rem;
             border-top: 1px solid var(--border);
+            flex-wrap: wrap;
         }
 
         .external-link {
             color: var(--text-secondary);
             text-decoration: none;
-            font-size: 0.875rem;
+            font-size: 0.85rem;
             padding: 0.5rem 1rem;
             border: 1px solid var(--border);
+            border-radius: 4px;
             transition: all 0.2s ease;
         }
 
@@ -456,15 +473,15 @@
         /* Loading State */
         .loading {
             text-align: center;
-            padding: 4rem;
+            padding: 3rem;
             color: var(--text-muted);
         }
 
         .loading::after {
             content: '';
             display: inline-block;
-            width: 20px;
-            height: 20px;
+            width: 16px;
+            height: 16px;
             border: 2px solid var(--border);
             border-top-color: var(--accent-gold);
             border-radius: 50%;
@@ -475,6 +492,16 @@
 
         @keyframes spin {
             to { transform: rotate(360deg); }
+        }
+
+        /* Empty state */
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-muted);
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 6px;
         }
 
         /* Responsive */
@@ -491,13 +518,12 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .nav-tabs {
-                overflow-x: auto;
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
-            .nav-tab {
-                padding: 0.75rem 1rem;
-                white-space: nowrap;
+            .skill-item.overall {
+                grid-column: span 2;
             }
 
             .goals-section {
@@ -553,19 +579,19 @@
 
         <div id="skills" class="tab-content active">
             <div class="skills-grid" id="skillsGrid">
-                <div class="loading">Loading skills data</div>
+                <div class="loading">Loading skills</div>
             </div>
         </div>
 
         <div id="bosses" class="tab-content">
             <div class="bosses-container" id="bossesGrid">
-                <div class="loading">Loading boss data</div>
+                <div class="loading">Loading bosses</div>
             </div>
         </div>
 
         <div id="collection" class="tab-content">
             <div class="clog-progress" id="clogProgress">
-                <div class="loading">Loading collection log data</div>
+                <div class="loading">Loading collection log</div>
             </div>
         </div>
 
@@ -607,10 +633,11 @@
             'Farming': 'https://oldschool.runescape.wiki/images/Farming_icon.png',
             'Runecraft': 'https://oldschool.runescape.wiki/images/Runecraft_icon.png',
             'Hunter': 'https://oldschool.runescape.wiki/images/Hunter_icon.png',
-            'Construction': 'https://oldschool.runescape.wiki/images/Construction_icon.png'
+            'Construction': 'https://oldschool.runescape.wiki/images/Construction_icon.png',
+            'Sailing': 'https://oldschool.runescape.wiki/images/Sailing_icon.png'
         };
 
-        // Skill order for display
+        // Skill order for display (OSRS-style 3-column layout)
         const SKILL_ORDER = [
             'Attack', 'Hitpoints', 'Mining',
             'Strength', 'Agility', 'Smithing',
@@ -619,8 +646,11 @@
             'Prayer', 'Crafting', 'Firemaking',
             'Magic', 'Fletching', 'Woodcutting',
             'Runecraft', 'Slayer', 'Farming',
-            'Construction', 'Hunter', 'Overall'
+            'Construction', 'Hunter', 'Sailing',
+            'Overall'
         ];
+
+        const NUM_SKILLS = 24; // Excluding Overall
 
         function formatNumber(n) {
             if (n >= 1000000000) return (n / 1000000000).toFixed(1) + 'B';
@@ -643,7 +673,6 @@
 
         async function loadData() {
             try {
-                // Load all JSON data files
                 const [skillsRes, bossesRes, clogRes, goalsRes] = await Promise.all([
                     fetch('data/skills.json').then(r => r.json()).catch(() => null),
                     fetch('data/bosses.json').then(r => r.json()).catch(() => null),
@@ -657,20 +686,24 @@
                     document.getElementById('lastUpdated').textContent = formatDate(skillsRes.updated);
                 }
 
-                // Update overview stats
+                // Update overview stats from milestones (pre-calculated correctly)
                 if (skillsRes?.milestones) {
                     const m = skillsRes.milestones;
                     document.getElementById('totalLevel').textContent = m.total_level?.toLocaleString() || '—';
                     document.getElementById('totalXp').textContent = formatNumber(m.total_xp || 0);
                     document.getElementById('combatLevel').textContent = m.combat_level || '—';
-                    document.getElementById('count99s').textContent = `${m.skills_99 || 0}/23`;
+                    const numSkills = m.num_skills || NUM_SKILLS;
+                    document.getElementById('count99s').textContent = `${m.skills_99 || 0}/${numSkills}`;
                 }
 
                 // Collection log count
                 if (clogRes?.collection_log) {
                     const clog = clogRes.collection_log;
-                    document.getElementById('clogCount').textContent = 
-                        `${clog.unique_obtained || 0}/${clog.unique_items || '?'}`;
+                    if (clog.unique_obtained > 0) {
+                        document.getElementById('clogCount').textContent = clog.unique_obtained.toLocaleString();
+                    } else {
+                        document.getElementById('clogCount').textContent = '—';
+                    }
                 }
 
                 // Total boss KC
@@ -680,16 +713,9 @@
                     document.getElementById('totalBossKc').textContent = formatNumber(totalKc);
                 }
 
-                // Render skills grid
                 renderSkills(skillsRes?.skills || {});
-
-                // Render bosses
                 renderBosses(bossesRes?.bosses || {});
-
-                // Render collection log
                 renderCollectionLog(clogRes?.collection_log || {});
-
-                // Parse and render goals
                 renderGoals(goalsRes);
 
             } catch (error) {
@@ -701,21 +727,28 @@
             const grid = document.getElementById('skillsGrid');
             
             if (Object.keys(skills).length === 0) {
-                grid.innerHTML = '<p style="color: var(--text-muted); padding: 2rem;">No skills data available yet. Data will appear after the first automated update.</p>';
+                grid.innerHTML = '<div class="empty-state">No skills data available yet. Run the GitHub Action to fetch data.</div>';
                 return;
             }
 
             grid.innerHTML = SKILL_ORDER.map(skillName => {
                 const skill = skills[skillName] || { level: 1, xp: 0 };
-                const isMaxed = skill.level >= 99;
+                const isMaxed = skillName !== 'Overall' && skill.level >= 99;
+                const isOverall = skillName === 'Overall';
                 const icon = SKILL_ICONS[skillName] || '';
                 
+                let classes = 'skill-item';
+                if (isMaxed) classes += ' maxed';
+                if (isOverall) classes += ' overall';
+                
                 return `
-                    <div class="skill-item ${isMaxed ? 'maxed' : ''}">
+                    <div class="${classes}">
                         <img src="${icon}" alt="${skillName}" class="skill-icon">
-                        <span class="skill-name">${skillName}</span>
-                        <span class="skill-level">${skill.level || 1}</span>
-                        <span class="skill-xp">${formatNumber(skill.xp || 0)} XP</span>
+                        <div class="skill-info">
+                            <div class="skill-name">${skillName}</div>
+                            <div class="skill-level">${skill.level || 1}</div>
+                            <div class="skill-xp">${formatNumber(skill.xp || 0)} XP</div>
+                        </div>
                     </div>
                 `;
             }).join('');
@@ -724,13 +757,12 @@
         function renderBosses(bosses) {
             const container = document.getElementById('bossesGrid');
             
-            // Filter and sort bosses by KC
             const sortedBosses = Object.entries(bosses)
                 .filter(([_, data]) => data.kc > 0)
                 .sort((a, b) => b[1].kc - a[1].kc);
 
             if (sortedBosses.length === 0) {
-                container.innerHTML = '<p style="color: var(--text-muted); padding: 2rem;">No boss kills recorded yet.</p>';
+                container.innerHTML = '<div class="empty-state">No boss kills recorded yet.</div>';
                 return;
             }
 
@@ -745,28 +777,31 @@
         function renderCollectionLog(clog) {
             const container = document.getElementById('clogProgress');
             
-            if (!clog.unique_obtained) {
+            if (!clog || !clog.unique_obtained) {
                 container.innerHTML = `
-                    <p style="color: var(--text-muted);">
-                        No collection log data available yet.<br>
-                        Make sure you have the TempleOSRS RuneLite plugin installed and syncing.
-                    </p>
+                    <div class="empty-state">
+                        <p>No collection log data available yet.</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+                            Make sure you have the TempleOSRS RuneLite plugin installed and have synced your collection log.
+                        </p>
+                    </div>
                 `;
                 return;
             }
 
-            const percentage = clog.unique_items > 0 
-                ? ((clog.unique_obtained / clog.unique_items) * 100).toFixed(1)
-                : 0;
+            const obtained = clog.unique_obtained || 0;
+            const total = clog.unique_items || 1615; // Approximate total clog slots
+            const percentage = ((obtained / total) * 100).toFixed(1);
+            const rank = clog.rank;
 
             container.innerHTML = `
                 <div class="clog-header">
-                    <span class="clog-title">Unique Items Obtained</span>
+                    <span class="clog-title">Collection Log Progress</span>
                     <span class="clog-percentage">${percentage}%</span>
                 </div>
-                <p style="color: var(--text-secondary); margin-bottom: 1rem;">
-                    ${clog.unique_obtained?.toLocaleString() || 0} / ${clog.unique_items?.toLocaleString() || '?'} unique items
-                    ${clog.rank > 0 ? `• Rank #${clog.rank.toLocaleString()}` : ''}
+                <p class="clog-details">
+                    <strong>${obtained.toLocaleString()}</strong> / ${total.toLocaleString()} unique items
+                    ${rank && rank > 0 ? ` • Rank <strong>#${rank.toLocaleString()}</strong>` : ''}
                 </p>
                 <div class="progress-bar">
                     <div class="progress-fill" style="width: ${percentage}%"></div>
@@ -778,11 +813,10 @@
             const container = document.getElementById('goalsSection');
             
             if (!yamlText) {
-                container.innerHTML = '<p style="color: var(--text-muted);">No goals configured yet.</p>';
+                container.innerHTML = '<div class="empty-state">No goals configured. Edit data/goals.yaml to add your goals.</div>';
                 return;
             }
 
-            // Simple YAML parser for our format
             const goals = { short_term: [], long_term: [] };
             let currentSection = null;
             let currentGoal = null;
@@ -822,7 +856,7 @@
             container.innerHTML = `
                 <div class="goals-column">
                     <h3>Short-Term Goals</h3>
-                    ${goals.short_term.map(g => `
+                    ${goals.short_term.length ? goals.short_term.map(g => `
                         <div class="goal-item ${g.completed ? 'completed' : ''}">
                             <div class="goal-checkbox ${g.completed ? 'completed' : ''}">
                                 ${g.completed ? '✓' : ''}
@@ -832,11 +866,11 @@
                                 ${g.progress ? `<div class="goal-progress">${g.progress}</div>` : ''}
                             </div>
                         </div>
-                    `).join('')}
+                    `).join('') : '<p style="color: var(--text-muted)">No short-term goals set.</p>'}
                 </div>
                 <div class="goals-column">
                     <h3>Long-Term Goals</h3>
-                    ${goals.long_term.map(g => `
+                    ${goals.long_term.length ? goals.long_term.map(g => `
                         <div class="goal-item ${g.completed ? 'completed' : ''}">
                             <div class="goal-checkbox ${g.completed ? 'completed' : ''}">
                                 ${g.completed ? '✓' : ''}
@@ -846,7 +880,7 @@
                                 ${g.progress ? `<div class="goal-progress">${g.progress}</div>` : ''}
                             </div>
                         </div>
-                    `).join('')}
+                    `).join('') : '<p style="color: var(--text-muted)">No long-term goals set.</p>'}
                 </div>
             `;
         }
@@ -862,7 +896,6 @@
             });
         });
 
-        // Load data on page load
         loadData();
     </script>
 </body>
