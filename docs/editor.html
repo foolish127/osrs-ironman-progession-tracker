@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoolinSlays - Progress Editor</title>
+    <style>
+        :root {
+            --bg-dark: #0d1117;
+            --bg-card: #161b22;
+            --border: #30363d;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent-gold: #d4a84b;
+            --accent-green: #3fb950;
+            --accent-red: #f85149;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg-dark); color: var(--text-primary); min-height: 100vh; padding: 2rem; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        h1 { color: var(--accent-gold); margin-bottom: 0.5rem; }
+        .subtitle { color: var(--text-secondary); margin-bottom: 2rem; }
+        .tabs { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; }
+        .tab { padding: 0.75rem 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; color: var(--text-secondary); cursor: pointer; font-size: 0.9rem; }
+        .tab:hover { border-color: var(--text-secondary); }
+        .tab.active { background: var(--accent-gold); color: var(--bg-dark); border-color: var(--accent-gold); font-weight: 600; }
+        .search-box { width: 100%; padding: 1rem; font-size: 1.1rem; background: var(--bg-card); border: 2px solid var(--border); border-radius: 8px; color: var(--text-primary); margin-bottom: 1rem; }
+        .search-box:focus { outline: none; border-color: var(--accent-gold); }
+        .filters { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .filter-btn { padding: 0.5rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--text-secondary); cursor: pointer; font-size: 0.85rem; }
+        .filter-btn:hover { border-color: var(--text-secondary); }
+        .filter-btn.active { background: var(--border); color: var(--text-primary); }
+        .stats { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.5rem; margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .stat { text-align: center; }
+        .stat-value { font-size: 1.5rem; font-weight: 600; color: var(--accent-green); }
+        .stat-label { font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; }
+        .items-list { display: flex; flex-direction: column; gap: 0.5rem; max-height: 400px; overflow-y: auto; padding-right: 0.5rem; margin-bottom: 1.5rem; }
+        .item { display: flex; align-items: center; gap: 1rem; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; cursor: pointer; transition: all 0.15s; }
+        .item:hover { border-color: var(--accent-gold); }
+        .item.obtained { border-color: var(--accent-green); background: rgba(63, 185, 80, 0.1); }
+        .checkbox { width: 24px; height: 24px; border: 2px solid var(--border); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+        .item.obtained .checkbox { background: var(--accent-green); border-color: var(--accent-green); color: var(--bg-dark); }
+        .item-info { flex: 1; min-width: 0; }
+        .item-name { font-weight: 500; }
+        .item-category { font-size: 0.8rem; color: var(--text-secondary); }
+        .output-section { margin-top: 1rem; }
+        .output-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; gap: 1rem; flex-wrap: wrap; }
+        .output-title { font-size: 1rem; color: var(--text-secondary); }
+        .btn { padding: 0.75rem 1.5rem; background: var(--accent-gold); color: var(--bg-dark); border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 0.9rem; }
+        .btn:hover { opacity: 0.9; }
+        .btn.copied { background: var(--accent-green); }
+        .btn.secondary { background: var(--bg-card); color: var(--text-primary); border: 1px solid var(--border); }
+        .output-box { width: 100%; height: 250px; padding: 1rem; font-family: 'Fira Code', Consolas, monospace; font-size: 0.8rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); resize: vertical; }
+        .instructions { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem; }
+        .instructions h3 { color: var(--accent-gold); margin-bottom: 0.75rem; font-size: 1rem; }
+        .instructions ol { margin-left: 1.5rem; color: var(--text-secondary); font-size: 0.9rem; }
+        .instructions li { margin-bottom: 0.5rem; }
+        .instructions code { background: var(--bg-dark); padding: 0.2rem 0.5rem; border-radius: 3px; font-size: 0.85rem; }
+        .instructions a { color: var(--accent-gold); }
+        .no-results { text-align: center; padding: 3rem; color: var(--text-secondary); }
+        .change-count { background: var(--accent-gold); color: var(--bg-dark); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+        .loading { text-align: center; padding: 3rem; color: var(--text-secondary); }
+        .error { background: rgba(248, 81, 73, 0.1); border: 1px solid var(--accent-red); color: var(--accent-red); padding: 1rem; border-radius: 6px; margin-bottom: 1rem; }
+        .btn-group { display: flex; gap: 0.5rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Progress Editor</h1>
+        <p class="subtitle">Toggle items as you complete them, then copy the YAML to GitHub</p>
+
+        <div class="instructions">
+            <h3>How to use:</h3>
+            <ol>
+                <li>Search for an item or task you just completed</li>
+                <li>Click it to mark as obtained/completed</li>
+                <li>Click <strong>"Copy YAML"</strong></li>
+                <li>Go to GitHub → <a href="https://github.com/foolish127/osrs-ironman-progession-tracker/edit/main/data/collection_log.yaml" target="_blank">data/collection_log.yaml</a> or <a href="https://github.com/foolish127/osrs-ironman-progession-tracker/edit/main/data/combat_achievements.yaml" target="_blank">data/combat_achievements.yaml</a></li>
+                <li>Select all (Ctrl+A), paste (Ctrl+V), commit changes</li>
+            </ol>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" data-tab="clog">Collection Log</button>
+            <button class="tab" data-tab="ca">Combat Achievements</button>
+        </div>
+
+        <div id="error" class="error" style="display:none"></div>
+
+        <input type="text" class="search-box" id="search" placeholder="Search items... (try 'whip', 'zulrah', 'barrows')">
+
+        <div class="filters" id="filters"></div>
+
+        <div class="stats" id="stats"><div class="loading">Loading data...</div></div>
+
+        <div class="items-list" id="itemsList"><div class="loading">Loading...</div></div>
+
+        <div class="output-section">
+            <div class="output-header">
+                <span class="output-title">Generated YAML <span class="change-count" id="changeCount" style="display:none">0 changes</span></span>
+                <div class="btn-group">
+                    <button class="btn secondary" id="resetBtn">Reset Changes</button>
+                    <button class="btn" id="copyBtn">Copy YAML</button>
+                </div>
+            </div>
+            <textarea class="output-box" id="output" readonly></textarea>
+        </div>
+    </div>
+
+    <script>
+        const GITHUB_BASE = 'https://raw.githubusercontent.com/foolish127/osrs-ironman-progession-tracker/main/data';
+        
+        let currentTab = 'clog';
+        let currentFilter = 'all';
+        let clogData = null;
+        let caData = null;
+        let clogOriginal = null;
+        let caOriginal = null;
+
+        function parseYaml(text) {
+            const result = {};
+            let currentKey = null;
+            let currentSubkey = null;
+            
+            for (const line of text.split('\n')) {
+                if (!line || line.startsWith('#')) continue;
+                
+                const stripped = line.trimStart();
+                const indent = line.length - stripped.length;
+                
+                if (indent === 0 && stripped.endsWith(':')) {
+                    currentKey = stripped.slice(0, -1);
+                    result[currentKey] = {};
+                    currentSubkey = null;
+                } else if (indent === 2 && stripped.endsWith(':')) {
+                    currentSubkey = stripped.slice(0, -1);
+                    result[currentKey][currentSubkey] = [];
+                } else if (stripped.startsWith('- ') && currentKey && currentSubkey) {
+                    result[currentKey][currentSubkey].push(stripped.slice(2));
+                }
+            }
+            return result;
+        }
+
+        async function loadData() {
+            try {
+                const [clogRes, caRes] = await Promise.all([
+                    fetch(`${GITHUB_BASE}/collection_log.yaml`).then(r => r.ok ? r.text() : Promise.reject('Failed to load collection_log.yaml')),
+                    fetch(`${GITHUB_BASE}/combat_achievements.yaml`).then(r => r.ok ? r.text() : Promise.reject('Failed to load combat_achievements.yaml'))
+                ]);
+                
+                clogData = parseYaml(clogRes);
+                caData = parseYaml(caRes);
+                clogOriginal = JSON.parse(JSON.stringify(clogData));
+                caOriginal = JSON.parse(JSON.stringify(caData));
+                
+                document.getElementById('error').style.display = 'none';
+                render();
+            } catch (err) {
+                document.getElementById('error').textContent = `Error loading data: ${err}. Make sure the YAML files exist in your repo.`;
+                document.getElementById('error').style.display = 'block';
+                document.getElementById('stats').innerHTML = '';
+                document.getElementById('itemsList').innerHTML = '<div class="no-results">Could not load data</div>';
+            }
+        }
+
+        function init() {
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    currentTab = tab.dataset.tab;
+                    currentFilter = 'all';
+                    document.getElementById('search').value = '';
+                    render();
+                });
+            });
+
+            document.getElementById('search').addEventListener('input', render);
+            document.getElementById('copyBtn').addEventListener('click', copyYaml);
+            document.getElementById('resetBtn').addEventListener('click', resetChanges);
+            
+            loadData();
+        }
+
+        function resetChanges() {
+            if (currentTab === 'clog') {
+                clogData = JSON.parse(JSON.stringify(clogOriginal));
+            } else {
+                caData = JSON.parse(JSON.stringify(caOriginal));
+            }
+            render();
+        }
+
+        function render() {
+            renderFilters();
+            renderStats();
+            renderItems();
+            renderOutput();
+        }
+
+        function renderFilters() {
+            const container = document.getElementById('filters');
+            const categories = currentTab === 'clog' 
+                ? ['all', 'obtained', 'missing']
+                : ['all', 'completed', 'not_completed'];
+            
+            container.innerHTML = categories.map(cat => {
+                const label = cat === 'all' ? 'All' : cat === 'not_completed' ? 'Remaining' : cat.charAt(0).toUpperCase() + cat.slice(1);
+                return `<button class="filter-btn ${currentFilter === cat ? 'active' : ''}" data-filter="${cat}">${label}</button>`;
+            }).join('');
+            
+            container.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    currentFilter = btn.dataset.filter;
+                    render();
+                });
+            });
+        }
+
+        function renderStats() {
+            const container = document.getElementById('stats');
+            const data = currentTab === 'clog' ? clogData : caData;
+            const original = currentTab === 'clog' ? clogOriginal : caOriginal;
+            
+            if (!data) {
+                container.innerHTML = '<div class="loading">Loading...</div>';
+                return;
+            }
+            
+            let obtained = 0, total = 0, changes = 0;
+            const obtKey = currentTab === 'clog' ? 'obtained' : 'completed';
+            const missKey = currentTab === 'clog' ? 'missing' : 'not_completed';
+            
+            for (const [key, items] of Object.entries(data)) {
+                obtained += (items[obtKey] || []).length;
+                total += (items[obtKey] || []).length + (items[missKey] || []).length;
+                
+                const orig = original[key] || { [obtKey]: [], [missKey]: [] };
+                (items[obtKey] || []).forEach(i => { if (!(orig[obtKey] || []).includes(i)) changes++; });
+                (items[missKey] || []).forEach(i => { if (!(orig[missKey] || []).includes(i)) changes++; });
+            }
+            
+            const pct = total > 0 ? ((obtained / total) * 100).toFixed(1) : 0;
+            
+            container.innerHTML = `
+                <div class="stat"><div class="stat-value">${obtained}</div><div class="stat-label">${currentTab === 'clog' ? 'Obtained' : 'Completed'}</div></div>
+                <div class="stat"><div class="stat-value" style="color:var(--text-secondary)">${total}</div><div class="stat-label">Total</div></div>
+                <div class="stat"><div class="stat-value">${pct}%</div><div class="stat-label">Progress</div></div>
+            `;
+            
+            const changeCount = document.getElementById('changeCount');
+            if (changes > 0) {
+                changeCount.textContent = `${changes} change${changes > 1 ? 's' : ''}`;
+                changeCount.style.display = 'inline';
+            } else {
+                changeCount.style.display = 'none';
+            }
+        }
+
+        function renderItems() {
+            const container = document.getElementById('itemsList');
+            const data = currentTab === 'clog' ? clogData : caData;
+            
+            if (!data) {
+                container.innerHTML = '<div class="loading">Loading...</div>';
+                return;
+            }
+            
+            const search = document.getElementById('search').value.toLowerCase();
+            const obtKey = currentTab === 'clog' ? 'obtained' : 'completed';
+            const missKey = currentTab === 'clog' ? 'missing' : 'not_completed';
+            
+            let html = '';
+            const sortedKeys = currentTab === 'ca' 
+                ? ['Easy', 'Medium', 'Hard', 'Elite', 'Master', 'Grandmaster'].filter(k => data[k])
+                : Object.keys(data).sort();
+            
+            for (const category of sortedKeys) {
+                const items = data[category];
+                if (!items) continue;
+                
+                const allItems = [
+                    ...(items[obtKey] || []).map(name => ({ name, obtained: true, category })),
+                    ...(items[missKey] || []).map(name => ({ name, obtained: false, category }))
+                ];
+                
+                for (const item of allItems) {
+                    if (search && !item.name.toLowerCase().includes(search) && !item.category.toLowerCase().includes(search)) continue;
+                    if (currentFilter === obtKey && !item.obtained) continue;
+                    if (currentFilter === missKey && item.obtained) continue;
+                    
+                    html += `<div class="item ${item.obtained ? 'obtained' : ''}" data-category="${item.category}" data-name="${item.name}">
+                        <div class="checkbox">${item.obtained ? '✓' : ''}</div>
+                        <div class="item-info">
+                            <div class="item-name">${item.name}</div>
+                            <div class="item-category">${item.category}</div>
+                        </div>
+                    </div>`;
+                }
+            }
+            
+            container.innerHTML = html || '<div class="no-results">No items found. Try a different search.</div>';
+            
+            container.querySelectorAll('.item').forEach(item => {
+                item.addEventListener('click', () => toggleItem(item));
+            });
+        }
+
+        function toggleItem(element) {
+            const name = element.dataset.name;
+            const category = element.dataset.category;
+            const data = currentTab === 'clog' ? clogData : caData;
+            const obtKey = currentTab === 'clog' ? 'obtained' : 'completed';
+            const missKey = currentTab === 'clog' ? 'missing' : 'not_completed';
+            
+            const items = data[category];
+            if (!items) return;
+            
+            if ((items[obtKey] || []).includes(name)) {
+                items[obtKey] = items[obtKey].filter(i => i !== name);
+                items[missKey] = items[missKey] || [];
+                items[missKey].push(name);
+            } else {
+                items[missKey] = (items[missKey] || []).filter(i => i !== name);
+                items[obtKey] = items[obtKey] || [];
+                items[obtKey].push(name);
+            }
+            
+            render();
+        }
+
+        function renderOutput() {
+            const output = document.getElementById('output');
+            const data = currentTab === 'clog' ? clogData : caData;
+            
+            if (!data) {
+                output.value = '# Loading...';
+                return;
+            }
+            
+            const obtKey = currentTab === 'clog' ? 'obtained' : 'completed';
+            const missKey = currentTab === 'clog' ? 'missing' : 'not_completed';
+            const title = currentTab === 'clog' ? 'Collection Log' : 'Combat Achievements';
+            
+            let yaml = `# FoolinSlays ${title} Tracker\n# Last updated: ${new Date().toISOString().split('T')[0]}\n\n`;
+            
+            const sortedKeys = currentTab === 'ca' 
+                ? ['Easy', 'Medium', 'Hard', 'Elite', 'Master', 'Grandmaster'].filter(k => data[k])
+                : Object.keys(data).sort();
+            
+            for (const key of sortedKeys) {
+                const items = data[key];
+                if (!items) continue;
+                
+                yaml += `${key}:\n`;
+                yaml += `  ${obtKey}:\n`;
+                for (const item of (items[obtKey] || []).sort()) {
+                    yaml += `  - ${item}\n`;
+                }
+                yaml += `  ${missKey}:\n`;
+                for (const item of (items[missKey] || []).sort()) {
+                    yaml += `  - ${item}\n`;
+                }
+            }
+            
+            output.value = yaml;
+        }
+
+        function copyYaml() {
+            const output = document.getElementById('output');
+            output.select();
+            output.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(output.value);
+            
+            const btn = document.getElementById('copyBtn');
+            btn.textContent = 'Copied!';
+            btn.classList.add('copied');
+            
+            setTimeout(() => {
+                btn.textContent = 'Copy YAML';
+                btn.classList.remove('copied');
+            }, 2000);
+        }
+
+        init();
+    </script>
+</body>
+</html>
