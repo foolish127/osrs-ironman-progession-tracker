@@ -1,0 +1,41 @@
+# Combat Achievements Tracker
+# Update this manually as you complete achievements
+# The game doesn't expose this data via API, so manual tracking is required
+
+tiers:
+  easy:
+    completed: false
+    tasks_done: 0
+    tasks_total: 33
+  
+  medium:
+    completed: false
+    tasks_done: 0
+    tasks_total: 41
+  
+  hard:
+    completed: false
+    tasks_done: 0
+    tasks_total: 63
+  
+  elite:
+    completed: false
+    tasks_done: 0
+    tasks_total: 129
+  
+  master:
+    completed: false
+    tasks_done: 0
+    tasks_total: 129
+  
+  grandmaster:
+    completed: false
+    tasks_done: 0
+    tasks_total: 90
+
+# Notable completions - add dates as you complete them
+notable_achievements:
+  # - name: "Task Name"
+  #   tier: "easy/medium/hard/elite/master/grandmaster"
+  #   date: "2024-01-15"
+  #   notes: "Optional notes about the achievement"

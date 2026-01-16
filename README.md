@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎮 FoolinSlays - Ironman Progression Tracker
 
-## Getting Started
+![Last Updated](https://img.shields.io/badge/Last%20Updated-Never-blue)
+![Account Type](https://img.shields.io/badge/Account-Ironman-gray)
 
-First, run the development server:
+Automated tracking of my OSRS Ironman progress using data from [TempleOSRS](https://templeosrs.com/player/overview.php?player=FoolinSlays) and the official hiscores.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Goals
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Short-Term Goals
+- ⬜ Get 85 Slayer for Abyssal Demons
+- ⬜ Complete Song of the Elves
+- ⬜ Get full Void Knight equipment
+- ⬜ Unlock Prifddinas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Long-Term Goals
+- ⬜ Get 77 Prayer for Rigour/Augury
+- ⬜ Max combat stats (99 Att/Str/Def/Range/Mage) (0/5 maxed)
+- ⬜ Complete Chambers of Xeric (0 KC)
+- ⬜ Complete Theatre of Blood (0 KC)
+- ⬜ Complete Tombs of Amascut (0 KC)
+- ⬜ Get Infernal Cape
+- ⬜ Complete all Combat Achievement tiers (Easy tier)
+- ⬜ Max total level (2277) (0/2277)
+- ⬜ Complete Collection Log (all uniques) (0%)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📊 Skills
 
-## Deploy on Vercel
+### Summary
+| Stat | Value |
+|------|-------|
+| Total Level | **N/A** |
+| Total XP | **0** |
+| Combat Level | **N/A** |
+| 99s | **0/23** |
+| 90+ Skills | **0/23** |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### All Skills
+| Skill | Level | XP | Rank |
+|-------|-------|-----|------|
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+---
+
+## ⚔️ Boss Kills
+
+*No boss kills recorded yet.*
+
+
+---
+
+## 📚 Collection Log
+
+| Metric | Progress |
+|--------|----------|
+| Total Slots | **0** / 0 (0.0%) |
+| Unique Items | **0** / 0 (0.0%) |
+| Rank | **#-1** |
+
+
+
+---
+
+## 🔗 Links
+
+- [TempleOSRS Profile](https://templeosrs.com/player/overview.php?player=FoolinSlays)
+- [Official Hiscores](https://secure.runescape.com/m=hiscore_oldschool_ironman/hiscorepersonal?user1=FoolinSlays)
+
+---
+
+<sub>Last automated update: Never</sub>
+<sub>Data sourced from TempleOSRS API and official OSRS Hiscores</sub>
