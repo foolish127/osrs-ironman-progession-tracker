@@ -213,6 +213,39 @@ def load_combat_achievements():
         'recent_tasks': recent_tasks[:20]
     }
 
+def parse_pets_yaml(content):
+    """Parse the flat pets.yaml structure"""
+    result = {'obtained': [], 'missing': []}
+    current_section = None
+    
+    for line in content.split('\n'):
+        if not line or line.startswith('#'):
+            continue
+        
+        stripped = line.strip()
+        
+        if stripped == 'obtained:':
+            current_section = 'obtained'
+        elif stripped == 'missing:':
+            current_section = 'missing'
+        elif stripped.startswith('- ') and current_section:
+            item_text = stripped[2:]
+            # Parse "name | date" or "name |" or "name"
+            if ' | ' in item_text:
+                parts = item_text.split(' | ', 1)
+                name = parts[0].strip()
+                date = parts[1].strip() if parts[1].strip() else None
+            elif item_text.endswith(' |'):
+                name = item_text[:-2].strip()
+                date = None
+            else:
+                name = item_text.strip()
+                date = None
+            
+            result[current_section].append({'name': name, 'date': date})
+    
+    return result
+
 def load_pets():
     """Load pets from YAML file with date support"""
     yaml_path = DATA_DIR / "pets.yaml"
@@ -223,14 +256,14 @@ def load_pets():
     with open(yaml_path, 'r') as f:
         content = f.read()
     
-    data = parse_yaml_with_dates(content)
+    data = parse_pets_yaml(content)
     
     obtained = data.get('obtained', [])
-    missing = data.get('missing', [])
+    missing_raw = data.get('missing', [])
     
     # Parse missing pets (format: "name (source)")
     missing_parsed = []
-    for item in missing:
+    for item in missing_raw:
         name = item['name'] if isinstance(item, dict) else item
         source = None
         if '(' in name and name.endswith(')'):
@@ -243,7 +276,7 @@ def load_pets():
         'obtained': obtained,
         'missing': missing_parsed,
         'total_obtained': len(obtained),
-        'total_pets': len(obtained) + len(missing)
+        'total_pets': len(obtained) + len(missing_raw)
     }
 
 def main():
@@ -296,7 +329,7 @@ def main():
     if official and "activities" in official:
         for a in official["activities"]:
             name, score = a.get("name"), a.get("score", -1)
-            if score > 0 and name not in ["Collections Logged", "Combat Achievements"]:
+            if score > 0 and name not in ["Collections Logged", "Combat Achievements", "PvP Arena"]:
                 bosses[name] = {"kc": score, "rank": a.get("rank", -1)}
 
     if bosses:
