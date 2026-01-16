@@ -313,7 +313,7 @@ def load_quests():
         
         categories[cat_name] = {
             'completed': completed,
-            'not_completed': [item['name'] if isinstance(item, dict) else item for item in not_completed]
+            'not_completed': not_completed  # Keep as objects for consistency
         }
         
         cat_total = len(completed) + len(not_completed)
