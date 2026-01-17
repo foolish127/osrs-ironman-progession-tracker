@@ -1695,8 +1695,18 @@
             
             // Helper to check quest completion
             const hasQuest = (name) => {
-                if (!questsData?.quests) return false;
-                return questsData.quests.some(q => q.name.toLowerCase().includes(name.toLowerCase()) && q.completed);
+                if (!questsData?.categories) return false;
+                const nameLower = name.toLowerCase();
+                for (const cat of Object.values(questsData.categories)) {
+                    if (cat.completed) {
+                        const found = cat.completed.some(q => {
+                            const questName = typeof q === 'string' ? q : q.name;
+                            return questName.toLowerCase().includes(nameLower);
+                        });
+                        if (found) return true;
+                    }
+                }
+                return false;
             };
 
             // Define milestones for each phase
