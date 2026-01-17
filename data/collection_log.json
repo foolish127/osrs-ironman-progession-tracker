@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-01-17T02:09:40.197594+00:00",
+  "updated": "2026-01-17T03:13:24.461920+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -154,11 +154,15 @@
         "total_count": 3
       },
       "Araxxor": {
-        "obtained": [],
+        "obtained": [
+          {
+            "name": "Araxyte venom sack",
+            "date": "2026-01-17"
+          }
+        ],
         "missing": [
           "Araxyte fang",
           "Araxyte head",
-          "Araxyte venom sack",
           "Coagulated venom",
           "Jar of venom",
           "Noxious blade",
@@ -166,7 +170,7 @@
           "Noxious pommel",
           "Spider cave teleport"
         ],
-        "obtained_count": 0,
+        "obtained_count": 1,
         "total_count": 9
       },
       "Araxxor, All Pets": {
@@ -4417,9 +4421,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 433,
+    "total_obtained": 434,
     "total_items": 1692,
     "recent_items": [
+      {
+        "name": "Araxyte venom sack",
+        "date": "2026-01-17",
+        "collection": "Araxxor"
+      },
       {
         "name": "Black wizard hat (t)",
         "date": "2026-01-15",
@@ -4512,11 +4521,6 @@
       },
       {
         "name": "Bandos full helm",
-        "date": "2026-01-09",
-        "collection": "Hard Treasure Trails"
-      },
-      {
-        "name": "Saradomin platelegs",
         "date": "2026-01-09",
         "collection": "Hard Treasure Trails"
       }
