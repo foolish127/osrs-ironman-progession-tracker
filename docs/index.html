@@ -282,6 +282,38 @@
         .category-card.cat-miscellaneous .category-card-name { color: #6b7280; }
         .category-card.cat-quest-items { border-left-color: #8b5cf6; }
         .category-card.cat-quest-items .category-card-name { color: #8b5cf6; }
+        /* Drops Tab */
+        .drops-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+        .drops-stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; text-align: center; }
+        .drops-stat-value { font-family: 'Fira Code', monospace; font-size: 1.5rem; color: var(--accent-gold); }
+        .drops-stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-top: 0.25rem; }
+        .drops-filters { display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
+        .drops-search { flex: 1; min-width: 200px; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); font-size: 0.9rem; }
+        .drops-search:focus { outline: none; border-color: var(--accent-gold); }
+        .drops-filter-select { padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); font-size: 0.9rem; min-width: 150px; }
+        .drops-table-container { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; margin-bottom: 2rem; }
+        .drops-table { width: 100%; border-collapse: collapse; }
+        .drops-table th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-dark); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); border-bottom: 1px solid var(--border); }
+        .drops-table td { padding: 0.6rem 1rem; border-bottom: 1px solid var(--border); font-size: 0.85rem; }
+        .drops-table tr:last-child td { border-bottom: none; }
+        .drops-table tr:hover { background: var(--bg-card-hover); }
+        .drops-table .boss-col { color: var(--text-secondary); }
+        .drops-table .kc-col { font-family: 'Fira Code', monospace; color: var(--text-muted); text-align: right; }
+        .drops-table .item-col { color: var(--accent-gold); font-weight: 500; }
+        .drops-table .date-col { font-family: 'Fira Code', monospace; color: var(--text-muted); font-size: 0.8rem; }
+        .drops-table .date-col.missing { color: var(--accent-red); opacity: 0.6; }
+        .drops-add-section { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; }
+        .drops-add-section h3 { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .drops-add-form { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1rem; }
+        .drops-add-input { padding: 0.75rem 1rem; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); font-size: 0.9rem; }
+        .drops-add-input:focus { outline: none; border-color: var(--accent-gold); }
+        .drops-add-btn { padding: 0.75rem 1.5rem; background: var(--accent-gold); color: var(--bg-dark); border: none; border-radius: 4px; cursor: pointer; font-weight: 500; }
+        .drops-add-btn:hover { background: #e5b95c; }
+        .drops-yaml-output { margin-top: 1rem; }
+        .drops-yaml-output textarea { width: 100%; height: 120px; padding: 1rem; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); font-family: 'Fira Code', monospace; font-size: 0.8rem; resize: vertical; }
+        .drops-yaml-output .copy-btn { margin-top: 0.5rem; padding: 0.5rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--text-secondary); cursor: pointer; font-size: 0.85rem; }
+        .drops-yaml-output .copy-btn:hover { background: var(--bg-card-hover); color: var(--text-primary); }
+        .drops-count { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem; }
         /* Password Modal */
         .password-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; align-items: center; justify-content: center; }
         .password-modal.active { display: flex; }
@@ -343,6 +375,7 @@
             <button class="nav-tab" data-tab="quests">Quests</button>
             <button class="nav-tab" data-tab="diaries">Diaries</button>
             <button class="nav-tab" data-tab="goals">Goals</button>
+            <button class="nav-tab" data-tab="drops">Drops</button>
             <button class="nav-tab" data-tab="bank">Bank</button>
         </nav>
 
@@ -380,6 +413,10 @@
 
         <div id="goals" class="tab-content">
             <div id="goalsContainer">Loading...</div>
+        </div>
+
+        <div id="drops" class="tab-content">
+            <div id="dropsContainer">Loading...</div>
         </div>
 
         <div id="bank" class="tab-content protected-tab">
@@ -456,7 +493,7 @@
         let diariesData = null;
 
         async function loadData() {
-            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, goalsRes, diariesRes, bankRes] = await Promise.all([
+            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, goalsRes, diariesRes, bankRes, dropsRes] = await Promise.all([
                 fetch('./data/skills.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/bosses.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/clues.json').then(r=>r.json()).catch(()=>null),
@@ -466,7 +503,8 @@
                 fetch('./data/quests.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/goals.yaml').then(r=>r.text()).catch(()=>null),
                 fetch('./data/diaries.yaml').then(r=>r.text()).catch(()=>null),
-                fetch('./data/bank.json').then(r=>r.json()).catch(()=>null)
+                fetch('./data/bank.json').then(r=>r.json()).catch(()=>null),
+                fetch('./data/drops.yaml').then(r=>r.text()).catch(()=>null)
             ]);
 
             if (skillsRes?.rsn) {
@@ -518,6 +556,7 @@
             renderQuests();
             if (diariesRes) renderDiaries(diariesRes);
             if (goalsRes) renderGoals(goalsRes);
+            if (dropsRes) renderDrops(dropsRes);
             if (bankRes) renderBank(bankRes);
         }
 
@@ -1281,6 +1320,202 @@
                     `).join('')}
                 </div>
             `;
+        }
+
+        // Drops Tab
+        let dropsData = [];
+        let dropsSearchTerm = '';
+        let dropsBossFilter = 'all';
+        let pendingDrops = [];
+
+        function parseDropsYaml(yaml) {
+            const drops = [];
+            const lines = yaml.split('\n');
+            let currentDrop = null;
+            
+            for (const line of lines) {
+                const trimmed = line.trim();
+                if (trimmed.startsWith('- boss:')) {
+                    if (currentDrop) drops.push(currentDrop);
+                    currentDrop = { boss: trimmed.replace('- boss:', '').trim() };
+                } else if (currentDrop && trimmed.startsWith('kc:')) {
+                    currentDrop.kc = parseInt(trimmed.replace('kc:', '').trim()) || 0;
+                } else if (currentDrop && trimmed.startsWith('item:')) {
+                    currentDrop.item = trimmed.replace('item:', '').trim();
+                } else if (currentDrop && trimmed.startsWith('date:')) {
+                    currentDrop.date = trimmed.replace('date:', '').trim() || '';
+                }
+            }
+            if (currentDrop) drops.push(currentDrop);
+            return drops;
+        }
+
+        function renderDrops(yaml) {
+            dropsData = parseDropsYaml(yaml);
+            const container = document.getElementById('dropsContainer');
+            
+            if (!dropsData.length) {
+                container.innerHTML = '<div class="empty-state">No drops data available.</div>';
+                return;
+            }
+
+            // Get unique bosses for filter
+            const bosses = [...new Set(dropsData.map(d => d.boss))].sort();
+            
+            // Stats
+            const totalDrops = dropsData.length;
+            const uniqueBosses = bosses.length;
+            const withDates = dropsData.filter(d => d.date).length;
+            const missingDates = totalDrops - withDates;
+
+            container.innerHTML = `
+                <div class="drops-summary">
+                    <div class="drops-stat">
+                        <div class="drops-stat-value">${totalDrops}</div>
+                        <div class="drops-stat-label">Total Drops</div>
+                    </div>
+                    <div class="drops-stat">
+                        <div class="drops-stat-value">${uniqueBosses}</div>
+                        <div class="drops-stat-label">Sources</div>
+                    </div>
+                    <div class="drops-stat">
+                        <div class="drops-stat-value">${missingDates}</div>
+                        <div class="drops-stat-label">Missing Dates</div>
+                    </div>
+                </div>
+
+                <div class="drops-filters">
+                    <input type="text" class="drops-search" id="dropsSearch" placeholder="Search items or bosses..." value="${dropsSearchTerm}">
+                    <select class="drops-filter-select" id="dropsBossFilter">
+                        <option value="all">All Sources</option>
+                        ${bosses.map(b => `<option value="${b}" ${dropsBossFilter === b ? 'selected' : ''}>${b}</option>`).join('')}
+                    </select>
+                </div>
+
+                <div class="drops-count" id="dropsCount"></div>
+
+                <div class="drops-table-container">
+                    <table class="drops-table">
+                        <thead>
+                            <tr>
+                                <th>Source</th>
+                                <th style="text-align:right">KC</th>
+                                <th>Item</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dropsTableBody"></tbody>
+                    </table>
+                </div>
+
+                <div class="drops-add-section">
+                    <h3>➕ Add New Drop</h3>
+                    <div class="drops-add-form">
+                        <input type="text" class="drops-add-input" id="newDropBoss" placeholder="Boss/Source" list="bossList">
+                        <datalist id="bossList">
+                            ${bosses.map(b => `<option value="${b}">`).join('')}
+                        </datalist>
+                        <input type="number" class="drops-add-input" id="newDropKc" placeholder="Kill Count">
+                        <input type="text" class="drops-add-input" id="newDropItem" placeholder="Item Name">
+                        <input type="text" class="drops-add-input" id="newDropDate" placeholder="Date (M/D/YYYY)">
+                        <button class="drops-add-btn" id="addDropBtn">Add Drop</button>
+                    </div>
+                    <div class="drops-yaml-output" id="dropsYamlOutput" style="display:none;">
+                        <textarea id="dropsYamlText" readonly></textarea>
+                        <button class="copy-btn" id="copyYamlBtn">📋 Copy YAML</button>
+                    </div>
+                </div>
+            `;
+
+            // Event listeners
+            document.getElementById('dropsSearch').addEventListener('input', (e) => {
+                dropsSearchTerm = e.target.value;
+                filterDrops();
+            });
+
+            document.getElementById('dropsBossFilter').addEventListener('change', (e) => {
+                dropsBossFilter = e.target.value;
+                filterDrops();
+            });
+
+            document.getElementById('addDropBtn').addEventListener('click', addNewDrop);
+            document.getElementById('copyYamlBtn').addEventListener('click', () => {
+                const textarea = document.getElementById('dropsYamlText');
+                textarea.select();
+                document.execCommand('copy');
+                document.getElementById('copyYamlBtn').textContent = '✓ Copied!';
+                setTimeout(() => document.getElementById('copyYamlBtn').textContent = '📋 Copy YAML', 2000);
+            });
+
+            filterDrops();
+        }
+
+        function filterDrops() {
+            const tbody = document.getElementById('dropsTableBody');
+            const countEl = document.getElementById('dropsCount');
+            const searchLower = dropsSearchTerm.toLowerCase();
+
+            let filtered = dropsData.filter(drop => {
+                const matchesSearch = !dropsSearchTerm || 
+                    drop.boss.toLowerCase().includes(searchLower) || 
+                    drop.item.toLowerCase().includes(searchLower);
+                const matchesBoss = dropsBossFilter === 'all' || drop.boss === dropsBossFilter;
+                return matchesSearch && matchesBoss;
+            });
+
+            // Sort by date descending (most recent first), then by KC descending
+            filtered.sort((a, b) => {
+                const dateA = a.date ? new Date(a.date) : new Date(0);
+                const dateB = b.date ? new Date(b.date) : new Date(0);
+                if (dateB - dateA !== 0) return dateB - dateA;
+                return b.kc - a.kc;
+            });
+
+            countEl.textContent = `Showing ${filtered.length} of ${dropsData.length} drops`;
+
+            tbody.innerHTML = filtered.map(drop => `
+                <tr>
+                    <td class="boss-col">${drop.boss}</td>
+                    <td class="kc-col">${drop.kc.toLocaleString()}</td>
+                    <td class="item-col">${drop.item}</td>
+                    <td class="date-col ${drop.date ? '' : 'missing'}">${drop.date || '—'}</td>
+                </tr>
+            `).join('');
+        }
+
+        function addNewDrop() {
+            const boss = document.getElementById('newDropBoss').value.trim();
+            const kc = document.getElementById('newDropKc').value.trim();
+            const item = document.getElementById('newDropItem').value.trim();
+            const date = document.getElementById('newDropDate').value.trim();
+
+            if (!boss || !kc || !item) {
+                alert('Please fill in Boss, KC, and Item');
+                return;
+            }
+
+            const newDrop = { boss, kc: parseInt(kc), item, date };
+            pendingDrops.push(newDrop);
+
+            // Generate YAML
+            const yamlLines = pendingDrops.map(d => `
+  - boss: ${d.boss}
+    kc: ${d.kc}
+    item: ${d.item}
+    date: ${d.date}`).join('\n');
+
+            document.getElementById('dropsYamlText').value = `# Add to data/drops.yaml:\n${yamlLines}`;
+            document.getElementById('dropsYamlOutput').style.display = 'block';
+
+            // Clear inputs
+            document.getElementById('newDropBoss').value = '';
+            document.getElementById('newDropKc').value = '';
+            document.getElementById('newDropItem').value = '';
+            document.getElementById('newDropDate').value = '';
+
+            // Add to displayed data temporarily
+            dropsData.push(newDrop);
+            filterDrops();
         }
 
         let bankData = null;
