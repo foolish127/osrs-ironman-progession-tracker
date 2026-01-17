@@ -1,16 +1,19 @@
 # Notable Drops Log
 # Format: boss, kc, item, date (MM/DD/YYYY or blank)
+# Add 'droprate' to track in luck summary (only needed on first drop of each type)
 
 drops:
   - boss: Dagganoth Rex
     kc: 34
     item: Berserker Ring
     date: 8/16/2025
+    droprate: 128
 
   - boss: Barrows
     kc: 16
     item: Verac Plateskirt
     date: 9/5/2025
+    droprate: 17
 
   - boss: Barrows
     kc: 23
@@ -131,6 +134,7 @@ drops:
     kc: 5
     item: Eclipse Moon Tassets
     date: 8/24/2025
+    droprate: 40
 
   - boss: Perilous Moons
     kc: 32
@@ -196,6 +200,7 @@ drops:
     kc: 19
     item: Mystic vigour prayer scroll
     date: 9/18/2025
+    droprate: 50
 
   - boss: Royal Titans
     kc: 76
@@ -214,88 +219,89 @@ drops:
 
   - boss: Corrupted Gauntlet
     kc: 24
-    item: Crystal armour seed 1
+    item: Crystal armour seed
     date: 9/20/2025
 
   - boss: Corrupted Gauntlet
     kc: 65
-    item: Crystal armour seed 2
+    item: Crystal armour seed
     date: 
 
   - boss: Corrupted Gauntlet
     kc: 82
-    item: Crystal armour seed 3
+    item: Crystal armour seed
     date: 
 
   - boss: Corrupted Gauntlet
     kc: 113
-    item: Crystal armour seed 4
+    item: Crystal armour seed
     date: 
 
   - boss: Corrupted Gauntlet
     kc: 160
-    item: Crystal armour seed 5
+    item: Crystal armour seed
     date: 
 
   - boss: Corrupted Gauntlet
     kc: 185
-    item: Crystal armour seed 6
+    item: Crystal armour seed
     date: 
 
   - boss: Corrupted Gauntlet
     kc: 257
-    item: Crystal armour seed 7
+    item: Crystal armour seed
     date: 
 
   - boss: Corrupted Gauntlet
     kc: 338
-    item: Crystal armour seed 8
+    item: Crystal armour seed
     date: 
 
   - boss: Corrupted Gauntlet
     kc: 376
-    item: Crystal armour seed 9
+    item: Crystal armour seed
     date: 
 
   - boss: Corrupted Gauntlet
     kc: 385
-    item: Crystal armour seed 10
+    item: Crystal armour seed
     date: 
 
   - boss: Corrupted Gauntlet
     kc: 450
-    item: Crystal armour seed 11
+    item: Crystal armour seed
     date: 
 
   - boss: Corrupted Gauntlet
     kc: 537
-    item: Crystal armour seed 12
+    item: Crystal armour seed
     date: 
 
   - boss: Corrupted Gauntlet
     kc: 559
-    item: Crystal armour seed 13
+    item: Crystal armour seed
     date: 
 
   - boss: Corrupted Gauntlet
     kc: 602
-    item: Crystal armour seed 14
+    item: Crystal armour seed
     date: 1/2/2026
 
   - boss: Corrupted Gauntlet
     kc: 610
-    item: Crystal armour seed 15
+    item: Crystal armour seed
     date: 1/5/2026
 
   - boss: Corrupted Gauntlet
     kc: 621
-    item: Crystal armour seed 16
+    item: Crystal armour seed
     date: 1/9/2026
 
   - boss: Hespori
     kc: 23
     item: Bottomless Bucket
     date: 10/15/2025
+    droprate: 35
 
   - boss: Hespori
     kc: 65
@@ -311,11 +317,13 @@ drops:
     kc: 6
     item: Vorkath's Head
     date: 10/30/2025
+    droprate: 50
 
   - boss: Demonic Gorilla
     kc: 400
     item: Zenyte Shard
     date: 11/1/2025
+    droprate: 300
 
   - boss: Demonic Gorilla
     kc: 1292
@@ -336,6 +344,7 @@ drops:
     kc: 17
     item: Tackle box
     date: 11/5/2025
+    droprate: 400
 
   - boss: Tempoross
     kc: 23
@@ -346,6 +355,7 @@ drops:
     kc: 246
     item: Tormented Synapse
     date: 11/10/2025
+    droprate: 500
 
   - boss: Tormented Demons
     kc: 354
@@ -381,6 +391,7 @@ drops:
     kc: 1040
     item: Burning Claw
     date: 12/26/2025
+    droprate: 1000
 
   - boss: Tormented Demons
     kc: 1203
@@ -421,16 +432,19 @@ drops:
     kc: 73
     item: Aquanite Tendon
     date: 12/6/2025
+    droprate: 200
 
   - boss: Frost Dragon
     kc: 50
     item: Dragon Metal Sheet
     date: 
+    droprate: 100
 
   - boss: Pyramid Plunder
     kc: 10
     item: Pharaoh's Sceptre
     date: 12/7/2025
+    droprate: 1000
 
   - boss: Pyramid Plunder
     kc: 88
@@ -441,6 +455,7 @@ drops:
     kc: 337
     item: Abyssal Whip
     date: 12/16/2025
+    droprate: 512
 
   - boss: Abyssal Demons
     kc: 537
@@ -451,26 +466,31 @@ drops:
     kc: 45
     item: Dragon Warhammer
     date: 12/19/2025
+    droprate: 3000
 
   - boss: Calvar'ion
     kc: 59
     item: Dragon Pickaxe
     date: 12/29/2025
+    droprate: 358
 
   - boss: Superior Slayer Creatures
     kc: 78
     item: Imbued Heart
     date: 12/31/2025
+    droprate: 200
 
   - boss: Cerberus
     kc: 168
     item: Smouldering Stone
     date: 1/3/2026
+    droprate: 512
 
   - boss: Kraken
     kc: 548
     item: Kraken tentacle
     date: 1/8/2026
+    droprate: 400
 
   - boss: Kraken
     kc: 1106
@@ -481,13 +501,16 @@ drops:
     kc: 200
     item: Abyssal Lantern
     date: 1/10/2026
+    droprate: 700
 
   - boss: Basilisk Knight
     kc: 789
     item: Basilisk Head
     date: 1/11/2026
+    droprate: 1000
 
   - boss: Skotizo
     kc: 23
     item: Jar of darkness
     date: 1/12/2026
+    droprate: 200

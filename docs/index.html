@@ -1369,6 +1369,8 @@
                     currentDrop.item = trimmed.replace('item:', '').trim();
                 } else if (currentDrop && trimmed.startsWith('date:')) {
                     currentDrop.date = trimmed.replace('date:', '').trim() || '';
+                } else if (currentDrop && trimmed.startsWith('droprate:')) {
+                    currentDrop.droprate = parseInt(trimmed.replace('droprate:', '').trim()) || 0;
                 }
             }
             if (currentDrop) drops.push(currentDrop);
@@ -1390,41 +1392,22 @@
             // Stats
             const totalDrops = dropsData.length;
             const uniqueBosses = bosses.length;
-            const withDates = dropsData.filter(d => d.date).length;
-            const missingDates = totalDrops - withDates;
 
-            // Luck summary data - manually defined key drops with drop rates
-            const luckData = [
-                { activity: "Lizardman Shaman", drop: "Dragon Warhammer", earned: 45, droprate: 5000 },
-                { activity: "Skotizo", drop: "Jar of darkness", earned: 23, droprate: 200 },
-                { activity: "Vorkath", drop: "Vorkath's Head", earned: 6, droprate: 50 },
-                { activity: "Calvar'ion", drop: "Dragon Pickaxe", earned: 59, droprate: 358 },
-                { activity: "Dagganoth Rex", drop: "Berserker Ring", earned: 34, droprate: 128 },
-                { activity: "Guardians of the Rift", drop: "Abyssal Lantern", earned: 200, droprate: 700 },
-                { activity: "Tormented Demons", drop: "Tormented Synapse", earned: 246, droprate: 500 },
-                { activity: "Cerberus", drop: "Smouldering Stone", earned: 168, droprate: 512 },
-                { activity: "Tempoross", drop: "Tackle Box", earned: 17, droprate: 400 },
-                { activity: "Superior Slayer", drop: "Imbued Heart", earned: 78, droprate: 200 },
-                { activity: "Hespori", drop: "Bottomless Bucket", earned: 23, droprate: 35 },
-                { activity: "Abyssal Demons", drop: "Abyssal Whip", earned: 337, droprate: 512 },
-                { activity: "Barrows", drop: "Any Barrows Item", earned: 16, droprate: 17 },
-                { activity: "Demonic Gorilla", drop: "Zenyte Shard", earned: 400, droprate: 300 },
-                { activity: "Perilous Moons", drop: "Any Unique", earned: 5, droprate: 40 },
-                { activity: "Corrupted Gauntlet", drop: "Enhanced Seed", earned: null, droprate: 400, note: "No drop yet" },
-                { activity: "Kraken", drop: "Kraken Tentacle", earned: 548, droprate: 400 },
-                { activity: "Tormented Demons", drop: "Burning Claw", earned: 1040, droprate: 1000 },
-                { activity: "Royal Titans", drop: "Prayer Scroll", earned: 19, droprate: 50 },
-                { activity: "Pyramid Plunder", drop: "Pharaoh's Sceptre", earned: 10, droprate: 1000 },
-            ];
-
-            // Calculate luck and sort
-            const luckSummary = luckData.map(item => {
-                const luck = item.earned ? (item.droprate / item.earned) : 0;
+            // Build luck summary from drops that have droprate defined
+            const dropsWithRates = dropsData.filter(d => d.droprate);
+            const luckSummary = dropsWithRates.map(drop => {
+                const luck = drop.droprate / drop.kc;
                 let status = 'On Rate';
-                if (!item.earned) status = 'In Progress';
-                else if (luck > 1.2) status = 'Spooned';
+                if (luck > 1.2) status = 'Spooned';
                 else if (luck < 0.8) status = 'Dry';
-                return { ...item, luck, status };
+                return {
+                    activity: drop.boss,
+                    drop: drop.item,
+                    droprate: drop.droprate,
+                    earned: drop.kc,
+                    luck,
+                    status
+                };
             }).sort((a, b) => b.luck - a.luck);
 
             // Calculate average luck (excluding nulls)
