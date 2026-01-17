@@ -8,6 +8,7 @@ on:
     paths:
       - 'data/*.yaml'
       - 'scripts/update_stats.py'
+      - 'docs/**'          # Trigger on any docs changes
 
 # Prevent duplicate runs
 concurrency:
