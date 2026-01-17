@@ -339,6 +339,46 @@
         .status-onrate { color: var(--text-secondary); }
         .status-dry { color: #ef4444; }
         .status-pending { color: var(--text-muted); font-style: italic; }
+        /* Progression Tab */
+        .progression-header { text-align: center; margin-bottom: 2rem; }
+        .progression-header h2 { color: var(--accent-gold); margin-bottom: 0.5rem; }
+        .progression-header p { color: var(--text-muted); font-size: 0.9rem; }
+        .progression-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .prog-stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; text-align: center; }
+        .prog-stat-value { font-family: 'Fira Code', monospace; font-size: 1.5rem; color: var(--accent-gold); }
+        .prog-stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-top: 0.25rem; }
+        .progression-phases { display: flex; flex-direction: column; gap: 2rem; }
+        .phase { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+        .phase-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; border-bottom: 1px solid var(--border); }
+        .phase-title { display: flex; align-items: center; gap: 0.75rem; }
+        .phase-icon { font-size: 1.5rem; }
+        .phase-name { font-size: 1.1rem; font-weight: 600; }
+        .phase-name span { font-weight: 400; color: var(--text-muted); font-size: 0.85rem; margin-left: 0.5rem; }
+        .phase-progress { display: flex; align-items: center; gap: 0.75rem; }
+        .phase-progress-bar { width: 120px; height: 8px; background: var(--bg-dark); border-radius: 4px; overflow: hidden; }
+        .phase-progress-fill { height: 100%; border-radius: 4px; transition: width 0.3s; }
+        .phase-progress-text { font-family: 'Fira Code', monospace; font-size: 0.85rem; color: var(--text-secondary); min-width: 45px; }
+        .phase.early .phase-header { background: linear-gradient(90deg, rgba(34, 197, 94, 0.1), transparent); }
+        .phase.early .phase-progress-fill { background: #22c55e; }
+        .phase.mid .phase-header { background: linear-gradient(90deg, rgba(59, 130, 246, 0.1), transparent); }
+        .phase.mid .phase-progress-fill { background: #3b82f6; }
+        .phase.late .phase-header { background: linear-gradient(90deg, rgba(168, 85, 247, 0.1), transparent); }
+        .phase.late .phase-progress-fill { background: #a855f7; }
+        .phase.end .phase-header { background: linear-gradient(90deg, rgba(212, 168, 75, 0.1), transparent); }
+        .phase.end .phase-progress-fill { background: var(--accent-gold); }
+        .phase-content { padding: 1rem 1.5rem; }
+        .milestone-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.75rem; }
+        .milestone { display: flex; align-items: center; gap: 0.75rem; padding: 0.6rem 0.75rem; background: var(--bg-dark); border-radius: 4px; border-left: 3px solid var(--border); }
+        .milestone.complete { border-left-color: #22c55e; }
+        .milestone.complete .milestone-icon { color: #22c55e; }
+        .milestone.incomplete { opacity: 0.5; }
+        .milestone.incomplete .milestone-icon { color: var(--text-muted); }
+        .milestone-icon { font-size: 1rem; width: 20px; text-align: center; }
+        .milestone-info { flex: 1; min-width: 0; }
+        .milestone-name { font-size: 0.85rem; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .milestone-detail { font-size: 0.7rem; color: var(--text-muted); }
+        .milestone-status { font-family: 'Fira Code', monospace; font-size: 0.75rem; color: var(--text-muted); }
+        .milestone-status.done { color: #22c55e; }
         /* Password Modal */
         .password-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; align-items: center; justify-content: center; }
         .password-modal.active { display: flex; }
@@ -401,6 +441,7 @@
             <button class="nav-tab" data-tab="diaries">Diaries</button>
             <button class="nav-tab" data-tab="goals">Goals</button>
             <button class="nav-tab" data-tab="drops">Drops</button>
+            <button class="nav-tab" data-tab="progression">Progression</button>
             <button class="nav-tab" data-tab="bank">Bank</button>
         </nav>
 
@@ -442,6 +483,10 @@
 
         <div id="drops" class="tab-content">
             <div id="dropsContainer">Loading...</div>
+        </div>
+
+        <div id="progression" class="tab-content">
+            <div id="progressionContainer">Loading...</div>
         </div>
 
         <div id="bank" class="tab-content protected-tab">
@@ -516,6 +561,8 @@
         let cluesData = null;
         let questsData = null;
         let diariesData = null;
+        let skillsData = null;
+        let bossesData = null;
 
         async function loadData() {
             const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, goalsRes, diariesRes, bankRes, dropsRes] = await Promise.all([
@@ -572,8 +619,14 @@
                 document.getElementById('questCount').textContent = `${questsData.total_completed}/${questsData.total_quests}`;
             }
 
-            if (skillsRes?.skills) renderSkills(skillsRes.skills);
-            if (bossesRes?.bosses) renderBosses(bossesRes.bosses);
+            if (skillsRes?.skills) {
+                skillsData = skillsRes.skills;
+                renderSkills(skillsRes.skills);
+            }
+            if (bossesRes?.bosses) {
+                bossesData = bossesRes.bosses;
+                renderBosses(bossesRes.bosses);
+            }
             renderClues();
             renderCollectionLog();
             renderCombatAchievements();
@@ -582,6 +635,7 @@
             if (diariesRes) renderDiaries(diariesRes);
             if (goalsRes) renderGoals(goalsRes);
             if (dropsRes) renderDrops(dropsRes);
+            renderProgression(dropsRes);
             if (bankRes) renderBank(bankRes);
         }
 
@@ -1616,6 +1670,200 @@
             // Add to displayed data temporarily
             dropsData.push(newDrop);
             filterDrops();
+        }
+
+        // Progression Tab
+        function renderProgression(dropsYaml) {
+            const container = document.getElementById('progressionContainer');
+            const drops = dropsYaml ? parseDropsYaml(dropsYaml) : [];
+            
+            // Helper to check if we have a drop
+            const hasDrop = (itemName) => drops.some(d => d.item.toLowerCase().includes(itemName.toLowerCase()));
+            const hasAnyDrop = (itemNames) => itemNames.some(n => hasDrop(n));
+            
+            // Helper to check skill level
+            const skillLevel = (name) => skillsData?.[name]?.level || 1;
+            const hasSkillLevel = (name, level) => skillLevel(name) >= level;
+            
+            // Helper to check boss KC
+            const bossKc = (name) => {
+                if (!bossesData) return 0;
+                const boss = Object.entries(bossesData).find(([k]) => k.toLowerCase().includes(name.toLowerCase()));
+                return boss ? boss[1].kc : 0;
+            };
+            const hasBossKc = (name, kc) => bossKc(name) >= kc;
+            
+            // Helper to check quest completion
+            const hasQuest = (name) => {
+                if (!questsData?.quests) return false;
+                return questsData.quests.some(q => q.name.toLowerCase().includes(name.toLowerCase()) && q.completed);
+            };
+
+            // Define milestones for each phase
+            const phases = [
+                {
+                    name: 'Early Game',
+                    phase: 'early',
+                    icon: '🌱',
+                    description: 'Building your foundation',
+                    milestones: [
+                        { name: 'Fire Cape', detail: 'Fight Caves', check: () => hasDrop('Fire Cape'), type: 'drop' },
+                        { name: 'Barrows Gloves', detail: 'Recipe for Disaster', check: () => hasQuest('Recipe for Disaster'), type: 'quest' },
+                        { name: 'Fighter Torso', detail: 'Barbarian Assault', check: () => hasDrop('Fighter Torso') || true, type: 'gear' },
+                        { name: 'Dragon Defender', detail: 'Warriors Guild', check: () => hasDrop('Dragon Defender') || hasSkillLevel('Attack', 70), type: 'gear' },
+                        { name: 'Iban\'s Staff', detail: 'Underground Pass', check: () => hasQuest('Underground Pass') || true, type: 'quest' },
+                        { name: 'Berserker Ring', detail: 'Dagannoth Rex', check: () => hasDrop('Berserker Ring'), type: 'drop' },
+                        { name: '70 Prayer', detail: 'Piety unlocked', check: () => hasSkillLevel('Prayer', 70), type: 'skill' },
+                        { name: '75 Magic', detail: 'Trident access', check: () => hasSkillLevel('Magic', 75), type: 'skill' },
+                        { name: 'Full Barrows Set', detail: 'Any brother', check: () => drops.filter(d => d.boss === 'Barrows').length >= 4, type: 'drop' },
+                        { name: 'Quest Cape', detail: 'All quests done', check: () => questsData?.total_completed >= 158, type: 'quest' },
+                    ]
+                },
+                {
+                    name: 'Mid Game',
+                    phase: 'mid',
+                    icon: '⚔️',
+                    description: 'Gearing up for end game',
+                    milestones: [
+                        { name: 'Trident of the Seas', detail: 'Kraken', check: () => hasDrop('Trident') || hasBossKc('Kraken', 50), type: 'drop' },
+                        { name: 'Abyssal Whip', detail: 'Abyssal Demons', check: () => hasDrop('Abyssal Whip'), type: 'drop' },
+                        { name: 'Dragon Warhammer', detail: 'Lizardman Shamans', check: () => hasDrop('Dragon Warhammer'), type: 'drop' },
+                        { name: 'Zenyte Jewelry', detail: 'Demonic Gorillas', check: () => hasDrop('Zenyte'), type: 'drop' },
+                        { name: 'Occult Necklace', detail: 'Smoke Devils', check: () => hasDrop('Occult') || hasSkillLevel('Slayer', 93), type: 'drop' },
+                        { name: '87 Slayer', detail: 'Kraken unlocked', check: () => hasSkillLevel('Slayer', 87), type: 'skill' },
+                        { name: '91 Slayer', detail: 'Cerberus unlocked', check: () => hasSkillLevel('Slayer', 91), type: 'skill' },
+                        { name: 'Elite Void', detail: 'Pest Control + diaries', check: () => true, type: 'gear' },
+                        { name: 'Dragon Pickaxe', detail: 'Wildy bosses', check: () => hasDrop('Dragon Pickaxe'), type: 'drop' },
+                        { name: 'Imbued Heart', detail: 'Superior Slayer', check: () => hasDrop('Imbued Heart'), type: 'drop' },
+                    ]
+                },
+                {
+                    name: 'Late Game',
+                    phase: 'late',
+                    icon: '🔮',
+                    description: 'High-level PvM unlocks',
+                    milestones: [
+                        { name: 'Blade of Saeldor', detail: 'Corrupted Gauntlet', check: () => hasDrop('Enhanced crystal weapon seed') || hasDrop('Blade of Saeldor'), type: 'drop' },
+                        { name: 'Bowfa', detail: 'Corrupted Gauntlet', check: () => hasDrop('Enhanced crystal weapon seed'), type: 'drop' },
+                        { name: 'Full Crystal Armor', detail: '6 armor seeds', check: () => drops.filter(d => d.item.includes('Crystal armour seed')).length >= 6, type: 'drop' },
+                        { name: 'Primordial Boots', detail: 'Cerberus', check: () => hasDrop('Primordial crystal'), type: 'drop' },
+                        { name: 'Pegasian Boots', detail: 'Cerberus', check: () => hasDrop('Pegasian crystal'), type: 'drop' },
+                        { name: 'Eternal Boots', detail: 'Cerberus', check: () => hasDrop('Eternal crystal'), type: 'drop' },
+                        { name: 'Infernal Cape', detail: 'The Inferno', check: () => hasDrop('Infernal Cape'), type: 'drop' },
+                        { name: 'Tormented Bracelet', detail: 'Zenyte + enchant', check: () => drops.filter(d => d.item.includes('Zenyte')).length >= 2, type: 'gear' },
+                        { name: 'Necklace of Anguish', detail: 'Zenyte + enchant', check: () => drops.filter(d => d.item.includes('Zenyte')).length >= 3, type: 'gear' },
+                        { name: '95+ Slayer', detail: 'Hydra unlocked', check: () => hasSkillLevel('Slayer', 95), type: 'skill' },
+                    ]
+                },
+                {
+                    name: 'End Game',
+                    phase: 'end',
+                    icon: '👑',
+                    description: 'Ultimate goals',
+                    milestones: [
+                        { name: 'Twisted Bow', detail: 'Chambers of Xeric', check: () => hasDrop('Twisted Bow'), type: 'drop' },
+                        { name: 'Scythe of Vitur', detail: 'Theatre of Blood', check: () => hasDrop('Scythe'), type: 'drop' },
+                        { name: 'Tumeken\'s Shadow', detail: 'Tombs of Amascut', check: () => hasDrop('Tumeken'), type: 'drop' },
+                        { name: 'Torva Armor', detail: 'Nex', check: () => hasAnyDrop(['Torva platebody', 'Torva platelegs', 'Torva helm']), type: 'drop' },
+                        { name: 'Masori Armor', detail: 'Tombs of Amascut', check: () => hasAnyDrop(['Masori body', 'Masori chaps', 'Masori mask']), type: 'drop' },
+                        { name: 'Max Cape', detail: 'All 99s', check: () => skillsData && Object.values(skillsData).every(s => s.level >= 99), type: 'skill' },
+                        { name: 'Grandmaster CAs', detail: 'All GM tasks', check: () => caData?.tiers?.Grandmaster?.completed === caData?.tiers?.Grandmaster?.total, type: 'achievement' },
+                        { name: 'All Pets', detail: 'Gotta catch em all', check: () => petsData?.total_obtained >= 50, type: 'collection' },
+                        { name: 'Completionist', detail: 'Collection log', check: () => clogData?.total_obtained >= 1400, type: 'collection' },
+                        { name: 'All Hard Diaries', detail: 'Every region', check: () => true, type: 'achievement' },
+                    ]
+                }
+            ];
+
+            // Calculate stats
+            let totalMilestones = 0;
+            let completedMilestones = 0;
+            phases.forEach(phase => {
+                phase.milestones.forEach(m => {
+                    totalMilestones++;
+                    m.complete = m.check();
+                    if (m.complete) completedMilestones++;
+                });
+                phase.completed = phase.milestones.filter(m => m.complete).length;
+                phase.total = phase.milestones.length;
+                phase.percent = Math.round((phase.completed / phase.total) * 100);
+            });
+
+            // Determine current phase
+            let currentPhase = 'Early Game';
+            if (phases[0].percent >= 80) currentPhase = 'Mid Game';
+            if (phases[1].percent >= 80) currentPhase = 'Late Game';
+            if (phases[2].percent >= 80) currentPhase = 'End Game';
+
+            const overallPercent = Math.round((completedMilestones / totalMilestones) * 100);
+
+            const getTypeIcon = (type) => {
+                const icons = { drop: '💎', skill: '📊', quest: '📜', gear: '🛡️', achievement: '🏆', collection: '📚' };
+                return icons[type] || '✓';
+            };
+
+            container.innerHTML = `
+                <div class="progression-header">
+                    <h2>Ironman Progression</h2>
+                    <p>Currently in: <strong>${currentPhase}</strong></p>
+                </div>
+
+                <div class="progression-stats">
+                    <div class="prog-stat">
+                        <div class="prog-stat-value">${overallPercent}%</div>
+                        <div class="prog-stat-label">Overall</div>
+                    </div>
+                    <div class="prog-stat">
+                        <div class="prog-stat-value">${completedMilestones}/${totalMilestones}</div>
+                        <div class="prog-stat-label">Milestones</div>
+                    </div>
+                    <div class="prog-stat">
+                        <div class="prog-stat-value">${skillsData ? Object.values(skillsData).filter(s => s.level >= 99).length : 0}</div>
+                        <div class="prog-stat-label">99s</div>
+                    </div>
+                    <div class="prog-stat">
+                        <div class="prog-stat-value">${drops.length}</div>
+                        <div class="prog-stat-label">Notable Drops</div>
+                    </div>
+                    <div class="prog-stat">
+                        <div class="prog-stat-value">${petsData?.total_obtained || 0}</div>
+                        <div class="prog-stat-label">Pets</div>
+                    </div>
+                </div>
+
+                <div class="progression-phases">
+                    ${phases.map(phase => `
+                        <div class="phase ${phase.phase}">
+                            <div class="phase-header">
+                                <div class="phase-title">
+                                    <span class="phase-icon">${phase.icon}</span>
+                                    <span class="phase-name">${phase.name}<span>${phase.description}</span></span>
+                                </div>
+                                <div class="phase-progress">
+                                    <div class="phase-progress-bar">
+                                        <div class="phase-progress-fill" style="width: ${phase.percent}%"></div>
+                                    </div>
+                                    <span class="phase-progress-text">${phase.percent}%</span>
+                                </div>
+                            </div>
+                            <div class="phase-content">
+                                <div class="milestone-grid">
+                                    ${phase.milestones.map(m => `
+                                        <div class="milestone ${m.complete ? 'complete' : 'incomplete'}">
+                                            <span class="milestone-icon">${m.complete ? '✓' : getTypeIcon(m.type)}</span>
+                                            <div class="milestone-info">
+                                                <div class="milestone-name">${m.name}</div>
+                                                <div class="milestone-detail">${m.detail}</div>
+                                            </div>
+                                            <span class="milestone-status ${m.complete ? 'done' : ''}">${m.complete ? 'Done' : '—'}</span>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
         }
 
         let bankData = null;
