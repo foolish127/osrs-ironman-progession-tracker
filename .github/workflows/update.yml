@@ -7,7 +7,9 @@ on:
   push:
     paths:
       - 'data/*.yaml'
+      - 'data/bank.txt'
       - 'scripts/update_stats.py'
+      - 'scripts/update_bank.py'
       - 'docs/**'          # Trigger on any docs changes
 
 # Prevent duplicate runs
@@ -41,7 +43,9 @@ jobs:
       - name: Run update script
         env:
           RSN: FoolinSlays
-        run: python scripts/update_stats.py
+        run: |
+          python scripts/update_stats.py
+          python scripts/update_bank.py
       
       - name: Copy data to docs
         run: |
