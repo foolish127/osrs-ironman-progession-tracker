@@ -419,7 +419,7 @@ def main():
     # Items to exclude from boss list
     BOSS_EXCLUSIONS = {
         "Collections Logged", "Combat Achievements", 
-        "PvP Arena", "Colosseum Glory"
+        "PvP Arena", "PvP Arena - Rank", "Colosseum Glory"
     }
     
     # Process bosses and clue scrolls separately
@@ -429,7 +429,8 @@ def main():
         for a in official["activities"]:
             name, score = a.get("name"), a.get("score", -1)
             if score > 0:
-                if name in BOSS_EXCLUSIONS:
+                # Check exclusions (exact match or startswith for PvP Arena variants)
+                if name in BOSS_EXCLUSIONS or name.startswith("PvP Arena"):
                     continue
                 elif "Clue Scrolls" in name:
                     clues[name] = {"count": score, "rank": a.get("rank", -1)}
