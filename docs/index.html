@@ -184,6 +184,25 @@
         .diaries-summary .summary-item { text-align: center; }
         .diaries-summary .summary-value { font-size: 1.5rem; font-weight: 600; }
         .diaries-summary .summary-label { font-size: 0.8rem; color: var(--text-muted); }
+        .remaining-tasks { margin-top: 2rem; }
+        .remaining-tasks-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px 8px 0 0; cursor: pointer; }
+        .remaining-tasks-header:hover { background: var(--bg-dark); }
+        .remaining-tasks-header h3 { margin: 0; font-size: 1rem; }
+        .remaining-tasks-header .toggle { color: var(--text-muted); }
+        .remaining-tasks-list { display: none; border: 1px solid var(--border); border-top: none; border-radius: 0 0 8px 8px; overflow: hidden; }
+        .remaining-tasks.expanded .remaining-tasks-list { display: block; }
+        .remaining-tasks.expanded .toggle { transform: rotate(180deg); }
+        .task-region { border-bottom: 1px solid var(--border); }
+        .task-region:last-child { border-bottom: none; }
+        .task-region-header { padding: 0.75rem 1rem; background: var(--bg-card); font-weight: 600; display: flex; justify-content: space-between; align-items: center; }
+        .task-region-header .task-count { font-size: 0.8rem; font-weight: normal; color: var(--text-muted); }
+        .task-items { background: var(--bg-dark); }
+        .task-item { padding: 0.5rem 1rem 0.5rem 1.5rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; font-size: 0.9rem; }
+        .task-item:last-child { border-bottom: none; }
+        .task-item .task-tier { font-size: 0.75rem; padding: 0.15rem 0.5rem; border-radius: 3px; }
+        .task-item .task-tier.medium { background: rgba(234, 179, 8, 0.2); color: #eab308; }
+        .task-item .task-tier.hard { background: rgba(249, 115, 22, 0.2); color: #f97316; }
+        .task-item .task-tier.elite { background: rgba(6, 182, 212, 0.2); color: #06b6d4; }
         .empty-state { text-align: center; padding: 3rem; color: var(--text-muted); }
         footer { text-align: center; padding: 2rem 0; margin-top: 3rem; border-top: 1px solid var(--border); }
         footer a { color: var(--text-secondary); text-decoration: none; margin: 0 0.75rem; font-size: 0.85rem; padding: 0.5rem 1rem; border: 1px solid var(--border); border-radius: 4px; transition: all 0.2s; }
@@ -897,6 +916,90 @@
             list.innerHTML = html || '<div class="empty-state">No quests match your search</div>';
         }
 
+        function getRemainingTasksHtml() {
+            const tasks = {
+                'Kandarin': [
+                    { tier: 'medium', task: '1 Barbarian Assault Wave' },
+                    { tier: 'hard', task: '1 Barbarian Assault Queen Kill' },
+                    { tier: 'elite', task: '90 Smithing (boost)' },
+                    { tier: 'elite', task: 'Chewed Bones (pyre)' },
+                    { tier: 'elite', task: 'Barbarian Assault Level 5 in all roles' }
+                ],
+                'Lumbridge & Draynor': [
+                    { tier: 'hard', task: 'Bones to Peaches spell' },
+                    { tier: 'elite', task: '88 Smithing (boost)' },
+                    { tier: 'elite', task: '76 Runecraft (boost)' }
+                ],
+                'Ardougne': [
+                    { tier: 'elite', task: 'NMZ Imbue a piece of equipment' },
+                    { tier: 'elite', task: '91 Cooking (boost)' },
+                    { tier: 'elite', task: '90 Agility (boost)' },
+                    { tier: 'elite', task: '91 Smithing (boost)' }
+                ],
+                'Desert': [
+                    { tier: 'elite', task: '91 Thieving' },
+                    { tier: 'elite', task: '85 Prayer' },
+                    { tier: 'elite', task: '95 Fletching (boost)' },
+                    { tier: 'elite', task: 'KQ Head drop' }
+                ],
+                'Falador': [
+                    { tier: 'elite', task: '80 Runecraft (boost)' },
+                    { tier: 'elite', task: '80 Agility (boost)' },
+                    { tier: 'elite', task: 'White 2H Sword (White Knight rank)' }
+                ],
+                'Fremennik': [
+                    { tier: 'elite', task: 'Kill all 3 DKs in one trip' },
+                    { tier: 'elite', task: '82 Runecraft (boost)' },
+                    { tier: 'elite', task: '80 Agility (boost)' },
+                    { tier: 'elite', task: 'Kill any God Wars General' }
+                ],
+                'Karamja': [
+                    { tier: 'elite', task: '91 Runecraft (boost)' }
+                ],
+                'Kourend & Kebos': [
+                    { tier: 'elite', task: '77 Runecraft (boost)' },
+                    { tier: 'elite', task: '90 Woodcutting (boost)' },
+                    { tier: 'elite', task: 'Chambers of Xeric completion' }
+                ],
+                'Morytania': [
+                    { tier: 'elite', task: '96 Fishing (boost)' },
+                    { tier: 'elite', task: 'Equip full Barrows set' }
+                ],
+                'Varrock': [
+                    { tier: 'elite', task: '95 Cooking (boost)' },
+                    { tier: 'elite', task: '89 Smithing (boost)' },
+                    { tier: 'elite', task: '78 Runecraft (boost)' }
+                ],
+                'Western Provinces': [
+                    { tier: 'elite', task: '85 Agility (boost)' },
+                    { tier: 'elite', task: '93 Slayer' },
+                    { tier: 'elite', task: '1,000 Chompy Bird kills' }
+                ],
+                'Wilderness': [
+                    { tier: 'elite', task: '85 Mining / 90 Smithing (boost)' },
+                    { tier: 'elite', task: '90 Cooking / 85 Fishing (boost)' },
+                    { tier: 'elite', task: 'Kill Callisto, Venenatis & Vet\'ion' }
+                ]
+            };
+            
+            return Object.entries(tasks).map(([region, items]) => `
+                <div class="task-region">
+                    <div class="task-region-header">
+                        <span>${region}</span>
+                        <span class="task-count">${items.length} task${items.length > 1 ? 's' : ''}</span>
+                    </div>
+                    <div class="task-items">
+                        ${items.map(item => `
+                            <div class="task-item">
+                                <span>${item.task}</span>
+                                <span class="task-tier ${item.tier}">${item.tier}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('');
+        }
+
         function renderDiaries(yaml) {
             const container = document.getElementById('diariesContainer');
             const regions = {};
@@ -982,6 +1085,16 @@
                             </div>
                         `;
                     }).join('')}
+                </div>
+                
+                <div class="remaining-tasks" id="remainingTasks">
+                    <div class="remaining-tasks-header" onclick="document.getElementById('remainingTasks').classList.toggle('expanded')">
+                        <h3>📋 Remaining Diary Tasks</h3>
+                        <span class="toggle">▼</span>
+                    </div>
+                    <div class="remaining-tasks-list">
+                        ${getRemainingTasksHtml()}
+                    </div>
                 </div>
             `;
             
