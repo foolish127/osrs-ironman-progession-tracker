@@ -40,27 +40,26 @@ Each tab is linkable via URL hash:
 
 ## Bank Tab Security
 
-The bank tab is password-protected and hidden from navigation. The password hash is stored as a GitHub Secret (never in your code).
+The bank tab is password-protected. The password is stored as a GitHub Secret (never in your code).
 
 ### Setting Up Password Protection
 
-1. **Generate your password hash** — Open browser console (F12) and run:
-   ```javascript
-   crypto.subtle.digest('SHA-256', new TextEncoder().encode('YOUR_PASSWORD_HERE')).then(h => console.log(Array.from(new Uint8Array(h)).map(b => b.toString(16).padStart(2, '0')).join('')))
-   ```
+1. **Choose a password** — any text you want (e.g., `MySecretBank123`)
 
-2. **Add the hash as a GitHub Secret:**
+2. **Add it as a GitHub Secret:**
    - Go to your repo → Settings → Secrets and variables → Actions
    - Click "New repository secret"
    - Name: `BANK_PASSWORD_HASH`
-   - Value: paste the hash from step 1
+   - Value: your password (e.g., `MySecretBank123`)
    - Click "Add secret"
 
-3. **Run the workflow** to deploy with the password protection active
+3. **Run the workflow** to deploy with password protection active
 
 ### Accessing the Bank Tab
 
 Click "Bank" in the navigation, or go to: `https://foolish127.github.io/osrs-ironman-progession-tracker/#bank`
+
+Enter your password when prompted.
 
 ### Updating Bank Data
 

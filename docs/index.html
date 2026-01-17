@@ -1577,9 +1577,8 @@
                 return;
             }
             
-            const hash = await hashPassword(input.value);
-            
-            if (hash === BANK_PASSWORD_HASH) {
+            // Direct comparison (no hashing - secret IS the password)
+            if (input.value === BANK_PASSWORD_HASH) {
                 bankUnlocked = true;
                 sessionStorage.setItem('bankUnlocked', 'true');
                 hidePasswordModal();
