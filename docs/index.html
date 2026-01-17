@@ -162,6 +162,28 @@
         .kanban-column.completed .kanban-card { opacity: 0.8; }
         .kanban-column.completed .card-title { text-decoration: line-through; color: var(--text-muted); }
         .kanban-empty { color: var(--text-muted); font-size: 0.85rem; font-style: italic; text-align: center; padding: 2rem 1rem; }
+        
+        /* Diaries */
+        .diaries-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+        .diary-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+        .diary-header { padding: 0.75rem 1rem; font-weight: 600; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+        .diary-header .diary-count { font-size: 0.8rem; font-weight: normal; color: var(--text-muted); }
+        .diary-tiers { display: grid; grid-template-columns: repeat(4, 1fr); }
+        .diary-tier { padding: 0.75rem 0.5rem; text-align: center; border-right: 1px solid var(--border); }
+        .diary-tier:last-child { border-right: none; }
+        .diary-tier .tier-name { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.25rem; }
+        .diary-tier.easy .tier-name { color: #22c55e; }
+        .diary-tier.medium .tier-name { color: #eab308; }
+        .diary-tier.hard .tier-name { color: #f97316; }
+        .diary-tier.elite .tier-name { color: #06b6d4; }
+        .diary-tier .tier-status { font-size: 1.1rem; }
+        .diary-tier.completed { background: rgba(74, 222, 128, 0.1); }
+        .diary-tier.completed .tier-status { color: #4ade80; }
+        .diary-tier:not(.completed) .tier-status { color: var(--text-muted); }
+        .diaries-summary { display: flex; gap: 2rem; justify-content: center; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .diaries-summary .summary-item { text-align: center; }
+        .diaries-summary .summary-value { font-size: 1.5rem; font-weight: 600; }
+        .diaries-summary .summary-label { font-size: 0.8rem; color: var(--text-muted); }
         .empty-state { text-align: center; padding: 3rem; color: var(--text-muted); }
         footer { text-align: center; padding: 2rem 0; margin-top: 3rem; border-top: 1px solid var(--border); }
         footer a { color: var(--text-secondary); text-decoration: none; margin: 0 0.75rem; font-size: 0.85rem; padding: 0.5rem 1rem; border: 1px solid var(--border); border-radius: 4px; transition: all 0.2s; }
@@ -196,6 +218,7 @@
             <div class="stat-card"><div class="stat-label">Pets</div><div class="stat-value purple" id="petCount">—</div></div>
             <div class="stat-card"><div class="stat-label">Clues</div><div class="stat-value" id="clueCount">—</div></div>
             <div class="stat-card"><div class="stat-label">Quests</div><div class="stat-value green" id="questCount">—</div></div>
+            <div class="stat-card"><div class="stat-label">Diaries</div><div class="stat-value" id="diaryCount">—</div></div>
         </div>
 
         <nav class="nav-tabs">
@@ -206,6 +229,7 @@
             <button class="nav-tab" data-tab="ca">Combat Achievements</button>
             <button class="nav-tab" data-tab="pets">Pets</button>
             <button class="nav-tab" data-tab="quests">Quests</button>
+            <button class="nav-tab" data-tab="diaries">Diaries</button>
             <button class="nav-tab" data-tab="goals">Goals</button>
         </nav>
 
@@ -235,6 +259,10 @@
 
         <div id="quests" class="tab-content">
             <div id="questsContainer">Loading...</div>
+        </div>
+
+        <div id="diaries" class="tab-content">
+            <div id="diariesContainer">Loading...</div>
         </div>
 
         <div id="goals" class="tab-content">
@@ -277,9 +305,10 @@
         let petsData = null;
         let cluesData = null;
         let questsData = null;
+        let diariesData = null;
 
         async function loadData() {
-            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, goalsRes] = await Promise.all([
+            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, goalsRes, diariesRes] = await Promise.all([
                 fetch('./data/skills.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/bosses.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/clues.json').then(r=>r.json()).catch(()=>null),
@@ -287,7 +316,8 @@
                 fetch('./data/combat_achievements.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/pets.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/quests.json').then(r=>r.json()).catch(()=>null),
-                fetch('./data/goals.yaml').then(r=>r.text()).catch(()=>null)
+                fetch('./data/goals.yaml').then(r=>r.text()).catch(()=>null),
+                fetch('./data/diaries.yaml').then(r=>r.text()).catch(()=>null)
             ]);
 
             if (skillsRes?.rsn) {
@@ -337,6 +367,7 @@
             renderCombatAchievements();
             renderPets();
             renderQuests();
+            if (diariesRes) renderDiaries(diariesRes);
             if (goalsRes) renderGoals(goalsRes);
         }
 
@@ -864,6 +895,99 @@
             });
             
             list.innerHTML = html || '<div class="empty-state">No quests match your search</div>';
+        }
+
+        function renderDiaries(yaml) {
+            const container = document.getElementById('diariesContainer');
+            const regions = {};
+            let currentRegion = null;
+            
+            // Parse YAML
+            yaml.split('\n').forEach(line => {
+                if (!line || line.startsWith('#')) return;
+                
+                // Region line (no leading spaces, ends with :)
+                if (!line.startsWith(' ') && line.endsWith(':')) {
+                    currentRegion = line.slice(0, -1);
+                    regions[currentRegion] = { easy: null, medium: null, hard: null, elite: null };
+                }
+                // Tier line (has leading spaces)
+                else if (currentRegion && line.trim().includes(':')) {
+                    const [tier, value] = line.trim().split(':').map(s => s.trim());
+                    if (['easy', 'medium', 'hard', 'elite'].includes(tier)) {
+                        regions[currentRegion][tier] = value || null;
+                    }
+                }
+            });
+            
+            // Calculate stats
+            const tiers = ['easy', 'medium', 'hard', 'elite'];
+            let totalCompleted = 0;
+            let totalTasks = 0;
+            const tierCounts = { easy: 0, medium: 0, hard: 0, elite: 0 };
+            
+            Object.values(regions).forEach(region => {
+                tiers.forEach(tier => {
+                    totalTasks++;
+                    if (region[tier]) {
+                        totalCompleted++;
+                        tierCounts[tier]++;
+                    }
+                });
+            });
+            
+            const regionCount = Object.keys(regions).length;
+            
+            // Render
+            container.innerHTML = `
+                <div class="diaries-summary">
+                    <div class="summary-item">
+                        <div class="summary-value" style="color: var(--green)">${totalCompleted}/${totalTasks}</div>
+                        <div class="summary-label">Total Completed</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-value" style="color: #22c55e">${tierCounts.easy}/${regionCount}</div>
+                        <div class="summary-label">Easy</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-value" style="color: #eab308">${tierCounts.medium}/${regionCount}</div>
+                        <div class="summary-label">Medium</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-value" style="color: #f97316">${tierCounts.hard}/${regionCount}</div>
+                        <div class="summary-label">Hard</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-value" style="color: #06b6d4">${tierCounts.elite}/${regionCount}</div>
+                        <div class="summary-label">Elite</div>
+                    </div>
+                </div>
+                <div class="diaries-grid">
+                    ${Object.entries(regions).map(([name, tiers]) => {
+                        const completed = Object.values(tiers).filter(v => v).length;
+                        return `
+                            <div class="diary-card">
+                                <div class="diary-header">
+                                    <span>${name}</span>
+                                    <span class="diary-count">${completed}/4</span>
+                                </div>
+                                <div class="diary-tiers">
+                                    ${['easy', 'medium', 'hard', 'elite'].map(tier => `
+                                        <div class="diary-tier ${tier} ${tiers[tier] ? 'completed' : ''}">
+                                            <div class="tier-name">${tier}</div>
+                                            <div class="tier-status">${tiers[tier] ? '✓' : '○'}</div>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            `;
+            
+            // Store for stat card
+            diariesData = { completed: totalCompleted, total: totalTasks };
+            document.getElementById('diaryCount').textContent = `${totalCompleted}/${totalTasks}`;
         }
 
         function renderGoals(yaml) {

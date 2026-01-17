@@ -71,6 +71,24 @@
         /* Kanban Board Styles */
         .goals-container { display: none; }
         .goals-container.active { display: block; }
+        .diaries-container { display: none; }
+        .diaries-container.active { display: block; }
+        .diaries-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+        .diary-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+        .diary-header { padding: 0.75rem 1rem; font-weight: 600; border-bottom: 1px solid var(--border); }
+        .diary-tiers { display: grid; grid-template-columns: repeat(4, 1fr); }
+        .diary-tier { padding: 0.75rem 0.5rem; text-align: center; border-right: 1px solid var(--border); cursor: pointer; transition: background 0.15s; }
+        .diary-tier:last-child { border-right: none; }
+        .diary-tier:hover { background: var(--border); }
+        .diary-tier .tier-name { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.25rem; }
+        .diary-tier.easy .tier-name { color: #22c55e; }
+        .diary-tier.medium .tier-name { color: #eab308; }
+        .diary-tier.hard .tier-name { color: #f97316; }
+        .diary-tier.elite .tier-name { color: #06b6d4; }
+        .diary-tier .tier-status { font-size: 1.1rem; }
+        .diary-tier.completed { background: rgba(63, 185, 80, 0.15); }
+        .diary-tier.completed .tier-status { color: var(--accent-green); }
+        .diary-tier:not(.completed) .tier-status { color: var(--text-secondary); }
         .kanban-board { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
         @media (max-width: 900px) { .kanban-board { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 500px) { .kanban-board { grid-template-columns: 1fr; } }
@@ -119,6 +137,7 @@
             <button class="tab" data-tab="ca">Combat Achievements</button>
             <button class="tab" data-tab="pets">Pets 🐾</button>
             <button class="tab" data-tab="goals">Goals 📋</button>
+            <button class="tab" data-tab="diaries">Diaries 📜</button>
         </div>
 
         <div id="error" class="error" style="display:none"></div>
@@ -159,6 +178,24 @@
                 <button class="btn" id="downloadGoalsBtn">📥 Download goals.yaml</button>
                 <button class="btn secondary" id="loadGoalsBtn">📤 Load from File</button>
                 <input type="file" id="goalsFileInput" accept=".yaml,.yml" style="display:none">
+            </div>
+        </div>
+        
+        <!-- Diaries Editor -->
+        <div class="diaries-container" id="diariesContainer">
+            <div class="instructions">
+                <h3>How to use the Diaries Editor:</h3>
+                <ol>
+                    <li>Click on a tier to toggle completion (adds today's date)</li>
+                    <li>Click again to mark as incomplete</li>
+                    <li>Click <strong>"Download YAML"</strong> then upload to <code>data/diaries.yaml</code></li>
+                </ol>
+            </div>
+            <div class="diaries-grid" id="diariesGrid"></div>
+            <div class="kanban-actions">
+                <button class="btn" id="downloadDiariesBtn">📥 Download diaries.yaml</button>
+                <button class="btn secondary" id="loadDiariesBtn">📤 Load from File</button>
+                <input type="file" id="diariesFileInput" accept=".yaml,.yml" style="display:none">
             </div>
         </div>
     </div>
@@ -289,10 +326,15 @@
                     currentFilter = 'all';
                     document.getElementById('search').value = '';
                     
-                    // Toggle between goals view and regular editor view
+                    // Toggle between goals/diaries view and regular editor view
                     const goalsContainer = document.getElementById('goalsContainer');
+                    const diariesContainer = document.getElementById('diariesContainer');
                     const regularElements = ['search', 'filters', 'stats', 'itemsList', 'output'].map(id => document.getElementById(id).parentElement || document.getElementById(id));
                     const outputSection = document.querySelector('.output-section');
+                    
+                    // Hide all special containers first
+                    goalsContainer.classList.remove('active');
+                    diariesContainer.classList.remove('active');
                     
                     if (currentTab === 'goals') {
                         goalsContainer.classList.add('active');
@@ -302,8 +344,15 @@
                         document.getElementById('stats').style.display = 'none';
                         document.getElementById('itemsList').style.display = 'none';
                         outputSection.style.display = 'none';
+                    } else if (currentTab === 'diaries') {
+                        diariesContainer.classList.add('active');
+                        document.getElementById('mainInstructions').style.display = 'none';
+                        document.getElementById('search').style.display = 'none';
+                        document.getElementById('filters').style.display = 'none';
+                        document.getElementById('stats').style.display = 'none';
+                        document.getElementById('itemsList').style.display = 'none';
+                        outputSection.style.display = 'none';
                     } else {
-                        goalsContainer.classList.remove('active');
                         document.getElementById('mainInstructions').style.display = '';
                         document.getElementById('search').style.display = '';
                         document.getElementById('filters').style.display = '';
@@ -776,8 +825,96 @@
             if (file) { const r = new FileReader(); r.onload = ev => { parseGoalsYaml(ev.target.result); renderKanbanBoard(); }; r.readAsText(file); }
         });
 
+        // ============ DIARIES EDITOR ============
+        const DIARY_REGIONS = [
+            'Ardougne', 'Desert', 'Falador', 'Fremennik', 'Kandarin', 'Karamja',
+            'Kourend & Kebos', 'Lumbridge & Draynor', 'Morytania', 'Varrock',
+            'Western Provinces', 'Wilderness'
+        ];
+        const DIARY_TIERS = ['easy', 'medium', 'hard', 'elite'];
+        let diariesData = {};
+
+        async function loadDiariesData() {
+            try {
+                const yaml = await fetch('./data/diaries.yaml').then(r => r.text()).catch(() => null);
+                if (yaml) parseDiariesYaml(yaml);
+                else {
+                    // Initialize empty
+                    DIARY_REGIONS.forEach(r => diariesData[r] = { easy: null, medium: null, hard: null, elite: null });
+                }
+                renderDiariesGrid();
+            } catch (e) { console.error('Error loading diaries:', e); }
+        }
+
+        function parseDiariesYaml(yaml) {
+            diariesData = {};
+            let currentRegion = null;
+            yaml.split('\n').forEach(line => {
+                if (!line || line.startsWith('#')) return;
+                if (!line.startsWith(' ') && line.endsWith(':')) {
+                    currentRegion = line.slice(0, -1);
+                    diariesData[currentRegion] = { easy: null, medium: null, hard: null, elite: null };
+                } else if (currentRegion && line.trim().includes(':')) {
+                    const [tier, value] = line.trim().split(':').map(s => s.trim());
+                    if (DIARY_TIERS.includes(tier)) {
+                        diariesData[currentRegion][tier] = value || null;
+                    }
+                }
+            });
+        }
+
+        function renderDiariesGrid() {
+            const grid = document.getElementById('diariesGrid');
+            grid.innerHTML = Object.entries(diariesData).map(([region, tiers]) => `
+                <div class="diary-card">
+                    <div class="diary-header">${region}</div>
+                    <div class="diary-tiers">
+                        ${DIARY_TIERS.map(tier => `
+                            <div class="diary-tier ${tier} ${tiers[tier] ? 'completed' : ''}" 
+                                 onclick="toggleDiary('${region}', '${tier}')">
+                                <div class="tier-name">${tier}</div>
+                                <div class="tier-status">${tiers[tier] ? '✓' : '○'}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function toggleDiary(region, tier) {
+            if (diariesData[region][tier]) {
+                diariesData[region][tier] = null;
+            } else {
+                diariesData[region][tier] = getToday();
+            }
+            renderDiariesGrid();
+        }
+
+        function generateDiariesYaml() {
+            let yaml = '# FoolinSlays Achievement Diaries Tracker\n# Format: tier: YYYY-MM-DD (date optional, leave empty if not completed)\n\n';
+            Object.entries(diariesData).forEach(([region, tiers]) => {
+                yaml += `${region}:\n`;
+                DIARY_TIERS.forEach(tier => {
+                    yaml += `  ${tier}: ${tiers[tier] || ''}\n`;
+                });
+                yaml += '\n';
+            });
+            return yaml;
+        }
+
+        document.getElementById('downloadDiariesBtn').addEventListener('click', () => {
+            const blob = new Blob([generateDiariesYaml()], { type: 'text/yaml' });
+            const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'diaries.yaml'; a.click();
+        });
+        document.getElementById('loadDiariesBtn').addEventListener('click', () => document.getElementById('diariesFileInput').click());
+        document.getElementById('diariesFileInput').addEventListener('change', e => {
+            const file = e.target.files[0];
+            if (file) { const r = new FileReader(); r.onload = ev => { parseDiariesYaml(ev.target.result); renderDiariesGrid(); }; r.readAsText(file); }
+        });
+
         init();
         loadGoalsData();
+        loadDiariesData();
     </script>
 </body>
 </html>
