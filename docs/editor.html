@@ -67,6 +67,35 @@
         .btn-group { display: flex; gap: 0.5rem; }
         .today-btn { padding: 0.3rem 0.5rem; background: var(--border); border: none; border-radius: 3px; color: var(--text-secondary); cursor: pointer; font-size: 0.7rem; }
         .today-btn:hover { background: var(--accent-gold); color: var(--bg-dark); }
+        
+        /* Kanban Board Styles */
+        .goals-container { display: none; }
+        .goals-container.active { display: block; }
+        .kanban-board { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+        @media (max-width: 900px) { .kanban-board { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 500px) { .kanban-board { grid-template-columns: 1fr; } }
+        .kanban-column { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; min-height: 300px; }
+        .kanban-header { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; padding-bottom: 0.75rem; margin-bottom: 0.75rem; border-bottom: 2px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+        .kanban-header .count { background: var(--bg-dark); padding: 0.2rem 0.5rem; border-radius: 10px; font-size: 0.75rem; }
+        .kanban-column.backlog .kanban-header { color: #9ca3af; border-color: #4b5563; }
+        .kanban-column.in-progress .kanban-header { color: #60a5fa; border-color: #3b82f6; }
+        .kanban-column.blocked .kanban-header { color: #f85149; border-color: #f85149; }
+        .kanban-column.completed .kanban-header { color: #3fb950; border-color: #3fb950; }
+        .kanban-card { background: var(--bg-dark); border: 1px solid var(--border); border-radius: 6px; padding: 0.75rem; margin-bottom: 0.5rem; cursor: grab; position: relative; transition: transform 0.1s, box-shadow 0.1s; }
+        .kanban-card:hover { transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-color: var(--accent-gold); }
+        .kanban-card.dragging { opacity: 0.5; cursor: grabbing; }
+        .kanban-card .card-title { font-size: 0.9rem; padding-right: 1.5rem; }
+        .kanban-card .card-date { font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem; }
+        .kanban-card .delete-btn { position: absolute; top: 0.5rem; right: 0.5rem; background: none; border: none; color: var(--text-secondary); cursor: pointer; font-size: 1rem; line-height: 1; }
+        .kanban-card .delete-btn:hover { color: var(--accent-red); }
+        .kanban-column.completed .kanban-card .card-title { text-decoration: line-through; color: var(--text-secondary); }
+        .add-card-form { margin-top: 0.5rem; }
+        .add-card-input { width: 100%; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); padding: 0.5rem; font-size: 0.85rem; margin-bottom: 0.5rem; }
+        .add-card-input:focus { outline: none; border-color: var(--accent-gold); }
+        .add-card-btn { width: 100%; background: transparent; border: 1px dashed var(--border); border-radius: 4px; color: var(--text-secondary); padding: 0.5rem; cursor: pointer; font-size: 0.85rem; }
+        .add-card-btn:hover { border-color: var(--accent-gold); color: var(--text-primary); }
+        .drop-zone { border: 2px dashed var(--accent-gold) !important; background: rgba(212, 168, 75, 0.1); }
+        .kanban-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
     </style>
 </head>
 <body>
@@ -74,7 +103,7 @@
         <h1>📝 Progress Editor</h1>
         <p class="subtitle">Toggle items and add dates, then copy the YAML to GitHub</p>
 
-        <div class="instructions">
+        <div class="instructions" id="mainInstructions">
             <h3>How to use:</h3>
             <ol>
                 <li>Search for an item you completed</li>
@@ -89,6 +118,7 @@
             <button class="tab active" data-tab="clog">Collection Log</button>
             <button class="tab" data-tab="ca">Combat Achievements</button>
             <button class="tab" data-tab="pets">Pets 🐾</button>
+            <button class="tab" data-tab="goals">Goals 📋</button>
         </div>
 
         <div id="error" class="error" style="display:none"></div>
@@ -110,6 +140,26 @@
                 </div>
             </div>
             <textarea class="output-box" id="output" readonly></textarea>
+        </div>
+        
+        <!-- Goals Kanban Board -->
+        <div class="goals-container" id="goalsContainer">
+            <div class="instructions">
+                <h3>How to use the Goals Board:</h3>
+                <ol>
+                    <li>Drag and drop cards between columns to change status</li>
+                    <li>Click <strong>"+ Add Goal"</strong> at the bottom of any column</li>
+                    <li>Click <strong>×</strong> to delete a goal</li>
+                    <li>When you move a goal to Completed, today's date is auto-added</li>
+                    <li>Click <strong>"Download YAML"</strong> then upload to <code>data/goals.yaml</code></li>
+                </ol>
+            </div>
+            <div class="kanban-board" id="kanbanBoard"></div>
+            <div class="kanban-actions">
+                <button class="btn" id="downloadGoalsBtn">📥 Download goals.yaml</button>
+                <button class="btn secondary" id="loadGoalsBtn">📤 Load from File</button>
+                <input type="file" id="goalsFileInput" accept=".yaml,.yml" style="display:none">
+            </div>
         </div>
     </div>
 
@@ -238,7 +288,30 @@
                     currentTab = tab.dataset.tab;
                     currentFilter = 'all';
                     document.getElementById('search').value = '';
-                    render();
+                    
+                    // Toggle between goals view and regular editor view
+                    const goalsContainer = document.getElementById('goalsContainer');
+                    const regularElements = ['search', 'filters', 'stats', 'itemsList', 'output'].map(id => document.getElementById(id).parentElement || document.getElementById(id));
+                    const outputSection = document.querySelector('.output-section');
+                    
+                    if (currentTab === 'goals') {
+                        goalsContainer.classList.add('active');
+                        document.getElementById('mainInstructions').style.display = 'none';
+                        document.getElementById('search').style.display = 'none';
+                        document.getElementById('filters').style.display = 'none';
+                        document.getElementById('stats').style.display = 'none';
+                        document.getElementById('itemsList').style.display = 'none';
+                        outputSection.style.display = 'none';
+                    } else {
+                        goalsContainer.classList.remove('active');
+                        document.getElementById('mainInstructions').style.display = '';
+                        document.getElementById('search').style.display = '';
+                        document.getElementById('filters').style.display = '';
+                        document.getElementById('stats').style.display = '';
+                        document.getElementById('itemsList').style.display = '';
+                        outputSection.style.display = '';
+                        render();
+                    }
                 });
             });
 
@@ -575,7 +648,135 @@
             }, 2000);
         }
 
+        // ============ GOALS KANBAN BOARD ============
+        let goalsData = { backlog: [], in_progress: [], blocked: [], completed: [] };
+        const columnConfig = [
+            { key: 'backlog', label: '📋 Backlog', class: 'backlog' },
+            { key: 'in_progress', label: '🔨 In Progress', class: 'in-progress' },
+            { key: 'blocked', label: '🚫 Blocked', class: 'blocked' },
+            { key: 'completed', label: '✅ Completed', class: 'completed' }
+        ];
+
+        async function loadGoalsData() {
+            try {
+                const yaml = await fetch('./data/goals.yaml').then(r => r.text()).catch(() => null);
+                if (yaml) parseGoalsYaml(yaml);
+                renderKanbanBoard();
+            } catch (e) { console.error('Error loading goals:', e); }
+        }
+
+        function parseGoalsYaml(yaml) {
+            goalsData = { backlog: [], in_progress: [], blocked: [], completed: [] };
+            let current = null;
+            yaml.split('\n').forEach(line => {
+                if (line.startsWith('backlog:')) current = 'backlog';
+                else if (line.startsWith('in_progress:')) current = 'in_progress';
+                else if (line.startsWith('blocked:')) current = 'blocked';
+                else if (line.startsWith('completed:')) current = 'completed';
+                else if (current && line.trim().startsWith('- ')) {
+                    const text = line.trim().slice(2);
+                    const parts = text.split(' | ');
+                    goalsData[current].push({
+                        id: Date.now() + Math.random(),
+                        title: parts[0].trim(),
+                        date: parts[1]?.trim() || null
+                    });
+                }
+            });
+        }
+
+        function renderKanbanBoard() {
+            const board = document.getElementById('kanbanBoard');
+            board.innerHTML = columnConfig.map(col => `
+                <div class="kanban-column ${col.class}" data-column="${col.key}">
+                    <div class="kanban-header">
+                        <span>${col.label}</span>
+                        <span class="count">${goalsData[col.key].length}</span>
+                    </div>
+                    <div class="kanban-cards" data-column="${col.key}">
+                        ${goalsData[col.key].map(g => `
+                            <div class="kanban-card" draggable="true" data-id="${g.id}">
+                                <button class="delete-btn" onclick="deleteGoal('${col.key}', ${g.id})">&times;</button>
+                                <div class="card-title">${escapeHtml(g.title)}</div>
+                                ${g.date ? `<div class="card-date">${g.date}</div>` : ''}
+                            </div>
+                        `).join('')}
+                    </div>
+                    <button class="add-card-btn" onclick="showAddForm('${col.key}')">+ Add Goal</button>
+                    <div class="add-card-form" id="form-${col.key}" style="display:none">
+                        <input type="text" class="add-card-input" id="input-${col.key}" placeholder="Goal title..." onkeypress="if(event.key==='Enter')addGoal('${col.key}')">
+                        ${col.key === 'completed' ? `<input type="date" class="add-card-input" id="date-${col.key}" value="${getToday()}">` : ''}
+                        <div class="btn-group"><button class="btn" onclick="addGoal('${col.key}')">Add</button><button class="btn secondary" onclick="hideAddForm('${col.key}')">Cancel</button></div>
+                    </div>
+                </div>
+            `).join('');
+            setupDragAndDrop();
+        }
+
+        function escapeHtml(t) { const d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
+        function showAddForm(col) { document.getElementById(`form-${col}`).style.display = 'block'; document.getElementById(`input-${col}`).focus(); }
+        function hideAddForm(col) { document.getElementById(`form-${col}`).style.display = 'none'; document.getElementById(`input-${col}`).value = ''; }
+
+        function addGoal(col) {
+            const title = document.getElementById(`input-${col}`).value.trim();
+            if (title) {
+                const goal = { id: Date.now() + Math.random(), title, date: null };
+                if (col === 'completed') goal.date = document.getElementById(`date-${col}`)?.value || getToday();
+                goalsData[col].push(goal);
+                renderKanbanBoard();
+            }
+        }
+
+        function deleteGoal(col, id) { if (confirm('Delete this goal?')) { goalsData[col] = goalsData[col].filter(g => g.id !== id); renderKanbanBoard(); } }
+
+        function moveGoal(cardId, targetCol) {
+            let goal = null, sourceCol = null;
+            for (const col of Object.keys(goalsData)) {
+                const idx = goalsData[col].findIndex(g => g.id === cardId);
+                if (idx !== -1) { goal = goalsData[col].splice(idx, 1)[0]; sourceCol = col; break; }
+            }
+            if (goal) {
+                if (targetCol === 'completed' && !goal.date) goal.date = getToday();
+                if (targetCol !== 'completed' && sourceCol === 'completed') goal.date = null;
+                goalsData[targetCol].push(goal);
+                renderKanbanBoard();
+            }
+        }
+
+        function setupDragAndDrop() {
+            document.querySelectorAll('.kanban-card').forEach(card => {
+                card.addEventListener('dragstart', e => { card.classList.add('dragging'); e.dataTransfer.setData('text/plain', card.dataset.id); });
+                card.addEventListener('dragend', () => { card.classList.remove('dragging'); document.querySelectorAll('.drop-zone').forEach(z => z.classList.remove('drop-zone')); });
+            });
+            document.querySelectorAll('.kanban-cards').forEach(col => {
+                col.addEventListener('dragover', e => { e.preventDefault(); col.classList.add('drop-zone'); });
+                col.addEventListener('dragleave', () => col.classList.remove('drop-zone'));
+                col.addEventListener('drop', e => { e.preventDefault(); col.classList.remove('drop-zone'); moveGoal(parseFloat(e.dataTransfer.getData('text/plain')), col.dataset.column); });
+            });
+        }
+
+        function generateGoalsYaml() {
+            let yaml = '# FoolinSlays Goals Tracker\n# Kanban-style goal tracking\n\n';
+            columnConfig.forEach(col => {
+                yaml += `${col.key}:\n`;
+                goalsData[col.key].forEach(g => yaml += `  - ${g.title}${g.date ? ' | ' + g.date : ''}\n`);
+                yaml += '\n';
+            });
+            return yaml;
+        }
+
+        document.getElementById('downloadGoalsBtn').addEventListener('click', () => {
+            const blob = new Blob([generateGoalsYaml()], { type: 'text/yaml' });
+            const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'goals.yaml'; a.click();
+        });
+        document.getElementById('loadGoalsBtn').addEventListener('click', () => document.getElementById('goalsFileInput').click());
+        document.getElementById('goalsFileInput').addEventListener('change', e => {
+            const file = e.target.files[0];
+            if (file) { const r = new FileReader(); r.onload = ev => { parseGoalsYaml(ev.target.result); renderKanbanBoard(); }; r.readAsText(file); }
+        });
+
         init();
+        loadGoalsData();
     </script>
 </body>
 </html>

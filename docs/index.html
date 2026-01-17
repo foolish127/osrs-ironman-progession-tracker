@@ -145,9 +145,23 @@
         .recent-item-name { color: var(--accent-green); }
         .recent-item-source { font-size: 0.8rem; color: var(--text-muted); }
         .recent-item-date { font-family: 'Fira Code', monospace; font-size: 0.8rem; color: var(--accent-gold); }
-        .goals-section { margin-bottom: 2rem; }
-        .goals-title { font-size: 1.1rem; font-weight: 500; margin-bottom: 1rem; color: var(--text-secondary); }
-        .goal-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 0.75rem 1rem; margin-bottom: 0.5rem; }
+        .kanban-board { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+        @media (max-width: 1000px) { .kanban-board { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .kanban-board { grid-template-columns: 1fr; } }
+        .kanban-column { background: var(--bg-dark); border-radius: 8px; padding: 1rem; min-height: 300px; }
+        .kanban-header { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; padding-bottom: 0.75rem; margin-bottom: 0.75rem; border-bottom: 2px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+        .kanban-header .count { background: var(--bg-card); padding: 0.2rem 0.5rem; border-radius: 10px; font-size: 0.75rem; }
+        .kanban-column.backlog .kanban-header { color: #9ca3af; border-color: #4b5563; }
+        .kanban-column.in-progress .kanban-header { color: #60a5fa; border-color: #3b82f6; }
+        .kanban-column.blocked .kanban-header { color: #f87171; border-color: #ef4444; }
+        .kanban-column.completed .kanban-header { color: #4ade80; border-color: #22c55e; }
+        .kanban-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 0.75rem; margin-bottom: 0.5rem; cursor: default; transition: transform 0.1s, box-shadow 0.1s; }
+        .kanban-card:hover { transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+        .kanban-card .card-title { font-size: 0.9rem; margin-bottom: 0.25rem; }
+        .kanban-card .card-date { font-size: 0.75rem; color: var(--text-muted); }
+        .kanban-column.completed .kanban-card { opacity: 0.8; }
+        .kanban-column.completed .card-title { text-decoration: line-through; color: var(--text-muted); }
+        .kanban-empty { color: var(--text-muted); font-size: 0.85rem; font-style: italic; text-align: center; padding: 2rem 1rem; }
         .empty-state { text-align: center; padding: 3rem; color: var(--text-muted); }
         footer { text-align: center; padding: 2rem 0; margin-top: 3rem; border-top: 1px solid var(--border); }
         footer a { color: var(--text-secondary); text-decoration: none; margin: 0 0.75rem; font-size: 0.85rem; padding: 0.5rem 1rem; border: 1px solid var(--border); border-radius: 4px; transition: all 0.2s; }
@@ -854,23 +868,51 @@
 
         function renderGoals(yaml) {
             const container = document.getElementById('goalsContainer');
-            const goals = { short_term: [], long_term: [] };
+            const columns = { backlog: [], in_progress: [], blocked: [], completed: [] };
             let current = null;
             
             yaml.split('\n').forEach(line => {
-                if (line.startsWith('short_term:')) current = 'short_term';
-                else if (line.startsWith('long_term:')) current = 'long_term';
+                if (line.startsWith('backlog:')) current = 'backlog';
+                else if (line.startsWith('in_progress:')) current = 'in_progress';
+                else if (line.startsWith('blocked:')) current = 'blocked';
+                else if (line.startsWith('completed:')) current = 'completed';
                 else if (current && line.trim().startsWith('- ')) {
-                    goals[current].push(line.trim().slice(2));
+                    const text = line.trim().slice(2);
+                    const parts = text.split(' | ');
+                    columns[current].push({
+                        title: parts[0].trim(),
+                        date: parts[1]?.trim() || null
+                    });
                 }
             });
 
-            container.innerHTML = ['short_term', 'long_term'].map(key => `
-                <div class="goals-section">
-                    <div class="goals-title">${key === 'short_term' ? '🎯 Short Term Goals' : '🏆 Long Term Goals'}</div>
-                    ${goals[key].length ? goals[key].map(g => `<div class="goal-item">${g}</div>`).join('') : '<div class="empty-state">No goals set</div>'}
+            const columnConfig = [
+                { key: 'backlog', label: '📋 Backlog', class: 'backlog' },
+                { key: 'in_progress', label: '🔨 In Progress', class: 'in-progress' },
+                { key: 'blocked', label: '🚫 Blocked', class: 'blocked' },
+                { key: 'completed', label: '✅ Completed', class: 'completed' }
+            ];
+
+            container.innerHTML = `
+                <div class="kanban-board">
+                    ${columnConfig.map(col => `
+                        <div class="kanban-column ${col.class}">
+                            <div class="kanban-header">
+                                <span>${col.label}</span>
+                                <span class="count">${columns[col.key].length}</span>
+                            </div>
+                            <div class="kanban-cards">
+                                ${columns[col.key].length ? columns[col.key].map(goal => `
+                                    <div class="kanban-card">
+                                        <div class="card-title">${goal.title}</div>
+                                        ${goal.date ? `<div class="card-date">${formatShortDate(goal.date)}</div>` : ''}
+                                    </div>
+                                `).join('') : `<div class="kanban-empty">No goals</div>`}
+                            </div>
+                        </div>
+                    `).join('')}
                 </div>
-            `).join('');
+            `;
         }
 
         document.querySelectorAll('.nav-tab').forEach(t => t.addEventListener('click', () => {
