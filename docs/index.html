@@ -62,8 +62,8 @@
         .skill-progress-fill.mid { background: var(--accent-gold); }
         .skill-progress-fill.high { background: var(--accent-green); }
         .boss-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.5rem; }
-        .boss-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 0.6rem 0.75rem; display: flex; justify-content: space-between; align-items: center; }
-        .boss-name { font-size: 0.8rem; color: var(--text-secondary); }
+        .boss-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 0.6rem 0.75rem; display: flex; justify-content: space-between; align-items: center; height: 42px; }
+        .boss-name { font-size: 0.8rem; color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 1; margin-right: 0.5rem; }
         .boss-kc { font-family: 'Fira Code', monospace; font-size: 0.9rem; color: var(--accent-gold); }
         .clues-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.5rem; }
         .clue-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 0.6rem 0.75rem; display: flex; justify-content: space-between; align-items: center; }
