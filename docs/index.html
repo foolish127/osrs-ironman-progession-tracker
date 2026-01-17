@@ -343,8 +343,7 @@
             <button class="nav-tab" data-tab="quests">Quests</button>
             <button class="nav-tab" data-tab="diaries">Diaries</button>
             <button class="nav-tab" data-tab="goals">Goals</button>
-            <!-- Bank tab hidden from nav, access via #vault-9f3k -->
-            <button class="nav-tab" data-tab="vault-9f3k" style="display:none;">Bank</button>
+            <button class="nav-tab" data-tab="bank">Bank</button>
         </nav>
 
         <div id="skills" class="tab-content active">
@@ -383,7 +382,7 @@
             <div id="goalsContainer">Loading...</div>
         </div>
 
-        <div id="vault-9f3k" class="tab-content protected-tab">
+        <div id="bank" class="tab-content protected-tab">
             <div id="bankContainer">Loading...</div>
         </div>
 
@@ -413,7 +412,7 @@
         // Password protection for bank tab
         // Password hash loaded from config file (injected by GitHub Actions)
         let BANK_PASSWORD_HASH = null;
-        const PROTECTED_TAB_ID = 'vault-9f3k';
+        const PROTECTED_TAB_ID = 'bank';
         let bankUnlocked = false;
 
         // Load password hash from config

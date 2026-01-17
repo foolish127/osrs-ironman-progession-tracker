@@ -60,7 +60,7 @@ The bank tab is password-protected and hidden from navigation. The password hash
 
 ### Accessing the Bank Tab
 
-Navigate to: `https://foolish127.github.io/osrs-ironman-progession-tracker/#vault-9f3k`
+Click "Bank" in the navigation, or go to: `https://foolish127.github.io/osrs-ironman-progession-tracker/#bank`
 
 ### Updating Bank Data
 
