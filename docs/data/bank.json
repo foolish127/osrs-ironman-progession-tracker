@@ -1,15 +1,15 @@
 {
-  "updated": "2026-01-17T20:00:11.955727+00:00",
+  "updated": "2026-01-17T20:17:52.546989+00:00",
   "total_items": 1075,
   "total_quantity": 21016146,
-  "total_value": 662859767,
+  "total_value": 662947230,
   "top_items": [
     {
       "id": 29580,
       "name": "Tormented synapse",
       "quantity": 6,
-      "ge_price": 30540665,
-      "total_value": 183243990,
+      "ge_price": 30488991,
+      "total_value": 182933946,
       "category": "Equipment",
       "subcategory": "Amulets & Necklaces"
     },
@@ -17,26 +17,26 @@
       "id": 23956,
       "name": "Crystal armour seed",
       "quantity": 10,
-      "ge_price": 7220698,
-      "total_value": 72206980,
+      "ge_price": 7225764,
+      "total_value": 72257640,
       "category": "Skilling",
       "subcategory": "Seeds"
-    },
-    {
-      "id": 19547,
-      "name": "Necklace of anguish",
-      "quantity": 1,
-      "ge_price": 23707822,
-      "total_value": 23707822,
-      "category": "Equipment",
-      "subcategory": "Amulets & Necklaces"
     },
     {
       "id": 19553,
       "name": "Amulet of torture",
       "quantity": 1,
-      "ge_price": 23608176,
-      "total_value": 23608176,
+      "ge_price": 23855039,
+      "total_value": 23855039,
+      "category": "Equipment",
+      "subcategory": "Amulets & Necklaces"
+    },
+    {
+      "id": 19547,
+      "name": "Necklace of anguish",
+      "quantity": 1,
+      "ge_price": 23697468,
+      "total_value": 23697468,
       "category": "Equipment",
       "subcategory": "Amulets & Necklaces"
     },
@@ -44,8 +44,8 @@
       "id": 19544,
       "name": "Tormented bracelet",
       "quantity": 1,
-      "ge_price": 23337393,
-      "total_value": 23337393,
+      "ge_price": 23316099,
+      "total_value": 23316099,
       "category": "Equipment",
       "subcategory": "Amulets & Necklaces"
     },
@@ -62,8 +62,8 @@
       "id": 13576,
       "name": "Dragon warhammer",
       "quantity": 1,
-      "ge_price": 12839394,
-      "total_value": 12839394,
+      "ge_price": 12865776,
+      "total_value": 12865776,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -71,8 +71,8 @@
       "id": 31996,
       "name": "Dragon metal sheet",
       "quantity": 9,
-      "ge_price": 1160067,
-      "total_value": 10440603,
+      "ge_price": 1179006,
+      "total_value": 10611054,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -98,51 +98,51 @@
   "categories": {
     "Food": {
       "count": 19515,
-      "value": 12692558,
+      "value": 12557450,
       "subcategories": {
         "Cooked Fish": {
           "count": 10599,
-          "value": 3486008
+          "value": 3471788
         },
         "Cooked Meals": {
           "count": 490,
-          "value": 112379
+          "value": 112871
         },
         "Fruit": {
           "count": 5312,
-          "value": 3278301
+          "value": 3286742
         },
         "Other Food": {
           "count": 870,
-          "value": 4080858
+          "value": 3944976
         },
         "Raw Fish": {
           "count": 2244,
-          "value": 1735012
+          "value": 1741073
         }
       }
     },
     "Miscellaneous": {
       "count": 89411,
-      "value": 57505377,
+      "value": 57998424,
       "subcategories": {
         "Other": {
           "count": 76363,
-          "value": 55968905
+          "value": 56461376
         },
         "Containers": {
           "count": 11811,
-          "value": 726711
+          "value": 729248
         },
         "Tools": {
           "count": 1237,
-          "value": 809761
+          "value": 807800
         }
       }
     },
     "Potions": {
       "count": 4701,
-      "value": 16522968,
+      "value": 16521860,
       "subcategories": {
         "Restoration": {
           "count": 8,
@@ -150,21 +150,21 @@
         },
         "Unfinished": {
           "count": 4692,
-          "value": 16506045
+          "value": 16504974
         },
         "Other Potions": {
           "count": 1,
-          "value": 419
+          "value": 382
         }
       }
     },
     "Runes": {
       "count": 603589,
-      "value": 16927325,
+      "value": 17132140,
       "subcategories": {
         "Catalytic": {
           "count": 281038,
-          "value": 14862245
+          "value": 15022311
         },
         "Elemental": {
           "count": 316726,
@@ -172,21 +172,21 @@
         },
         "Combination": {
           "count": 5731,
-          "value": 528069
+          "value": 572108
         },
         "Talismans": {
           "count": 94,
-          "value": 97770
+          "value": 98480
         }
       }
     },
     "Teleportation": {
       "count": 324,
-      "value": 217760,
+      "value": 219473,
       "subcategories": {
         "Jewelry": {
           "count": 126,
-          "value": 115040
+          "value": 116369
         },
         "Other Teleports": {
           "count": 6,
@@ -194,99 +194,99 @@
         },
         "Tablets": {
           "count": 192,
-          "value": 102720
+          "value": 103104
         }
       }
     },
     "Skilling": {
       "count": 249576,
-      "value": 144540398,
+      "value": 144636133,
       "subcategories": {
         "Gems": {
           "count": 14827,
-          "value": 11991700
+          "value": 12011308
         },
         "Essence": {
           "count": 38019,
-          "value": 38019
+          "value": 76038
         },
         "Bars": {
           "count": 11641,
-          "value": 5275767
+          "value": 5243216
         },
         "Hunter": {
           "count": 1264,
-          "value": 452084
+          "value": 449697
         },
         "Herbs": {
           "count": 11108,
-          "value": 22110026
+          "value": 22048305
         },
         "Farming": {
           "count": 3079,
-          "value": 2494984
+          "value": 2635600
         },
         "Seeds": {
           "count": 173,
-          "value": 75297529
+          "value": 75319913
         },
         "Logs": {
           "count": 14389,
-          "value": 3758943
+          "value": 3790925
         },
         "Construction": {
           "count": 2709,
-          "value": 4108775
+          "value": 4075869
         },
         "Ores": {
           "count": 36813,
-          "value": 9642107
+          "value": 9682392
         },
         "Crafting": {
           "count": 77894,
-          "value": 691331
+          "value": 689491
         },
         "Ashes": {
           "count": 1608,
-          "value": 2527608
+          "value": 2473479
         },
         "Fishing": {
           "count": 29242,
-          "value": 641168
+          "value": 645089
         },
         "Planks": {
           "count": 5333,
-          "value": 2978274
+          "value": 2993357
         },
         "Hides & Leather": {
           "count": 143,
-          "value": 183929
+          "value": 183593
         },
         "Bones": {
           "count": 1334,
-          "value": 2348154
+          "value": 2317861
         }
       }
     },
     "Equipment": {
       "count": 6210,
-      "value": 369672109,
+      "value": 369489323,
       "subcategories": {
         "Amulets & Necklaces": {
           "count": 242,
-          "value": 254182303
+          "value": 254086338
         },
         "Boots": {
           "count": 72,
-          "value": 640454
+          "value": 635979
         },
         "Melee Weapons": {
           "count": 1401,
-          "value": 34347539
+          "value": 34284232
         },
         "Shields": {
           "count": 154,
-          "value": 3745972
+          "value": 3769271
         },
         "Capes": {
           "count": 10,
@@ -294,27 +294,27 @@
         },
         "Magic Weapons": {
           "count": 2509,
-          "value": 30253522
+          "value": 30241345
         },
         "Leg Armor": {
           "count": 493,
-          "value": 17910616
+          "value": 17877517
         },
         "Helmets": {
           "count": 455,
-          "value": 10790090
+          "value": 10722548
         },
         "Body Armor": {
           "count": 547,
-          "value": 17327389
+          "value": 17362266
         },
         "Bracelets": {
           "count": 20,
-          "value": 65977
+          "value": 65765
         },
         "Ranged Weapons": {
           "count": 288,
-          "value": 245235
+          "value": 245229
         },
         "Rings": {
           "count": 4,
@@ -322,43 +322,43 @@
         },
         "Gloves": {
           "count": 15,
-          "value": 162679
+          "value": 198500
         }
       }
     },
     "Ammunition": {
       "count": 296597,
-      "value": 41332010,
+      "value": 40939115,
       "subcategories": {
         "Other Ammo": {
           "count": 93261,
-          "value": 5802417
+          "value": 5688855
         },
         "Cannonballs": {
           "count": 9654,
-          "value": 5805200
+          "value": 5747072
         },
         "Bolts": {
           "count": 14612,
-          "value": 4656511
+          "value": 4670186
         },
         "Arrows": {
           "count": 179070,
-          "value": 25067882
+          "value": 24833002
         }
       }
     },
     "Slayer": {
       "count": 381,
-      "value": 283991,
+      "value": 287253,
       "subcategories": {
         "Slayer Equipment": {
           "count": 182,
-          "value": 175482
+          "value": 177484
         },
         "Ensouled Heads": {
           "count": 132,
-          "value": 108509
+          "value": 109769
         },
         "Slayer Drops": {
           "count": 67,
@@ -368,7 +368,7 @@
     },
     "Moon Armor": {
       "count": 9,
-      "value": 395948,
+      "value": 393193,
       "subcategories": {
         "Blood Moon": {
           "count": 3,
@@ -376,7 +376,7 @@
         },
         "Blue Moon": {
           "count": 3,
-          "value": 395948
+          "value": 393193
         },
         "Eclipse Moon": {
           "count": 3,
@@ -386,11 +386,11 @@
     },
     "Barrows": {
       "count": 18,
-      "value": 2506825,
+      "value": 2522112,
       "subcategories": {
         "Torag's": {
           "count": 4,
-          "value": 681318
+          "value": 685891
         },
         "Dharok's": {
           "count": 2,
@@ -402,25 +402,25 @@
         },
         "Verac's": {
           "count": 4,
-          "value": 209315
+          "value": 214304
         },
         "Ahrim's": {
           "count": 4,
-          "value": 281201
+          "value": 286782
         },
         "Karil's": {
           "count": 2,
-          "value": 113211
+          "value": 113355
         }
       }
     },
     "Currency": {
       "count": 19745381,
-      "value": 181030,
+      "value": 181181,
       "subcategories": {
         "Coins & Tokens": {
           "count": 19745381,
-          "value": 181030
+          "value": 181181
         }
       }
     },
@@ -436,11 +436,11 @@
     },
     "Clue Items": {
       "count": 423,
-      "value": 81468,
+      "value": 69573,
       "subcategories": {
         "Clue Rewards": {
           "count": 410,
-          "value": 81468
+          "value": 69573
         },
         "Clue Scrolls": {
           "count": 13,
@@ -454,8 +454,8 @@
       "id": 7060,
       "name": "Tuna potato",
       "quantity": 119,
-      "ge_price": 1257,
-      "total_value": 149583,
+      "ge_price": 1238,
+      "total_value": 147322,
       "category": "Food",
       "subcategory": "Cooked Fish"
     },
@@ -463,8 +463,8 @@
       "id": 385,
       "name": "Shark",
       "quantity": 607,
-      "ge_price": 708,
-      "total_value": 429756,
+      "ge_price": 702,
+      "total_value": 426114,
       "category": "Food",
       "subcategory": "Cooked Fish"
     },
@@ -481,8 +481,8 @@
       "id": 6705,
       "name": "Potato with cheese",
       "quantity": 77,
-      "ge_price": 273,
-      "total_value": 21021,
+      "ge_price": 279,
+      "total_value": 21483,
       "category": "Food",
       "subcategory": "Cooked Meals"
     },
@@ -490,8 +490,8 @@
       "id": 7946,
       "name": "Monkfish",
       "quantity": 2910,
-      "ge_price": 385,
-      "total_value": 1120350,
+      "ge_price": 386,
+      "total_value": 1123260,
       "category": "Food",
       "subcategory": "Cooked Fish"
     },
@@ -499,8 +499,8 @@
       "id": 373,
       "name": "Swordfish",
       "quantity": 571,
-      "ge_price": 233,
-      "total_value": 133043,
+      "ge_price": 231,
+      "total_value": 131901,
       "category": "Food",
       "subcategory": "Cooked Fish"
     },
@@ -508,8 +508,8 @@
       "id": 379,
       "name": "Lobster",
       "quantity": 536,
-      "ge_price": 176,
-      "total_value": 94336,
+      "ge_price": 174,
+      "total_value": 93264,
       "category": "Food",
       "subcategory": "Cooked Fish"
     },
@@ -526,8 +526,8 @@
       "id": 329,
       "name": "Salmon",
       "quantity": 1201,
-      "ge_price": 58,
-      "total_value": 69658,
+      "ge_price": 57,
+      "total_value": 68457,
       "category": "Food",
       "subcategory": "Cooked Fish"
     },
@@ -535,8 +535,8 @@
       "id": 333,
       "name": "Trout",
       "quantity": 1795,
-      "ge_price": 47,
-      "total_value": 84365,
+      "ge_price": 44,
+      "total_value": 78980,
       "category": "Food",
       "subcategory": "Cooked Fish"
     },
@@ -562,8 +562,8 @@
       "id": 5972,
       "name": "Papaya fruit",
       "quantity": 1013,
-      "ge_price": 1325,
-      "total_value": 1342225,
+      "ge_price": 1344,
+      "total_value": 1361472,
       "category": "Food",
       "subcategory": "Fruit"
     },
@@ -571,8 +571,8 @@
       "id": 10476,
       "name": "Purple sweets",
       "quantity": 734,
-      "ge_price": 5314,
-      "total_value": 3900476,
+      "ge_price": 5148,
+      "total_value": 3778632,
       "category": "Food",
       "subcategory": "Other Food"
     },
@@ -580,8 +580,8 @@
       "id": 351,
       "name": "Pike",
       "quantity": 24,
-      "ge_price": 235,
-      "total_value": 5640,
+      "ge_price": 234,
+      "total_value": 5616,
       "category": "Food",
       "subcategory": "Cooked Fish"
     },
@@ -589,8 +589,8 @@
       "id": 349,
       "name": "Raw pike",
       "quantity": 12,
-      "ge_price": 191,
-      "total_value": 2292,
+      "ge_price": 178,
+      "total_value": 2136,
       "category": "Food",
       "subcategory": "Raw Fish"
     },
@@ -643,8 +643,8 @@
       "id": 24589,
       "name": "Blighted manta ray",
       "quantity": 24,
-      "ge_price": 126,
-      "total_value": 3024,
+      "ge_price": 125,
+      "total_value": 3000,
       "category": "Food",
       "subcategory": "Cooked Fish"
     },
@@ -661,8 +661,8 @@
       "id": 327,
       "name": "Raw sardine",
       "quantity": 113,
-      "ge_price": 48,
-      "total_value": 5424,
+      "ge_price": 47,
+      "total_value": 5311,
       "category": "Food",
       "subcategory": "Raw Fish"
     },
@@ -679,8 +679,8 @@
       "id": 391,
       "name": "Manta ray",
       "quantity": 99,
-      "ge_price": 1830,
-      "total_value": 181170,
+      "ge_price": 1850,
+      "total_value": 183150,
       "category": "Food",
       "subcategory": "Cooked Fish"
     },
@@ -688,8 +688,8 @@
       "id": 389,
       "name": "Raw manta ray",
       "quantity": 24,
-      "ge_price": 1591,
-      "total_value": 38184,
+      "ge_price": 1592,
+      "total_value": 38208,
       "category": "Food",
       "subcategory": "Raw Fish"
     },
@@ -697,8 +697,8 @@
       "id": 365,
       "name": "Bass",
       "quantity": 259,
-      "ge_price": 116,
-      "total_value": 30044,
+      "ge_price": 113,
+      "total_value": 29267,
       "category": "Food",
       "subcategory": "Cooked Fish"
     },
@@ -706,8 +706,8 @@
       "id": 13439,
       "name": "Raw anglerfish",
       "quantity": 679,
-      "ge_price": 1616,
-      "total_value": 1097264,
+      "ge_price": 1622,
+      "total_value": 1101338,
       "category": "Food",
       "subcategory": "Raw Fish"
     },
@@ -715,8 +715,8 @@
       "id": 397,
       "name": "Sea turtle",
       "quantity": 125,
-      "ge_price": 1086,
-      "total_value": 135750,
+      "ge_price": 1050,
+      "total_value": 131250,
       "category": "Food",
       "subcategory": "Cooked Fish"
     },
@@ -724,8 +724,8 @@
       "id": 383,
       "name": "Raw shark",
       "quantity": 1316,
-      "ge_price": 428,
-      "total_value": 563248,
+      "ge_price": 430,
+      "total_value": 565880,
       "category": "Food",
       "subcategory": "Raw Fish"
     },
@@ -751,8 +751,8 @@
       "id": 29195,
       "name": "Moonlight moth mix (2)",
       "quantity": 41,
-      "ge_price": 1721,
-      "total_value": 70561,
+      "ge_price": 1950,
+      "total_value": 79950,
       "category": "Food",
       "subcategory": "Other Food"
     },
@@ -760,8 +760,8 @@
       "id": 13441,
       "name": "Anglerfish",
       "quantity": 2,
-      "ge_price": 1815,
-      "total_value": 3630,
+      "ge_price": 1814,
+      "total_value": 3628,
       "category": "Food",
       "subcategory": "Cooked Fish"
     },
@@ -769,8 +769,8 @@
       "id": 11936,
       "name": "Dark crab",
       "quantity": 1,
-      "ge_price": 1323,
-      "total_value": 1323,
+      "ge_price": 1334,
+      "total_value": 1334,
       "category": "Food",
       "subcategory": "Cooked Fish"
     },
@@ -778,8 +778,8 @@
       "id": 24595,
       "name": "Blighted karambwan",
       "quantity": 5,
-      "ge_price": 80,
-      "total_value": 400,
+      "ge_price": 84,
+      "total_value": 420,
       "category": "Food",
       "subcategory": "Cooked Fish"
     },
@@ -814,8 +814,8 @@
       "id": 2313,
       "name": "Pie dish",
       "quantity": 3,
-      "ge_price": 20,
-      "total_value": 60,
+      "ge_price": 23,
+      "total_value": 69,
       "category": "Food",
       "subcategory": "Cooked Meals"
     },
@@ -841,8 +841,8 @@
       "id": 28893,
       "name": "Moonlight moth",
       "quantity": 93,
-      "ge_price": 1169,
-      "total_value": 108717,
+      "ge_price": 917,
+      "total_value": 85281,
       "category": "Food",
       "subcategory": "Other Food"
     },
@@ -868,8 +868,8 @@
       "id": 7944,
       "name": "Raw monkfish",
       "quantity": 100,
-      "ge_price": 286,
-      "total_value": 28600,
+      "ge_price": 282,
+      "total_value": 28200,
       "category": "Food",
       "subcategory": "Raw Fish"
     },
@@ -877,8 +877,8 @@
       "id": 561,
       "name": "Nature rune",
       "quantity": 13472,
-      "ge_price": 87,
-      "total_value": 1172064,
+      "ge_price": 88,
+      "total_value": 1185536,
       "category": "Runes",
       "subcategory": "Catalytic"
     },
@@ -886,8 +886,8 @@
       "id": 564,
       "name": "Cosmic rune",
       "quantity": 21813,
-      "ge_price": 78,
-      "total_value": 1701414,
+      "ge_price": 79,
+      "total_value": 1723227,
       "category": "Runes",
       "subcategory": "Catalytic"
     },
@@ -895,8 +895,8 @@
       "id": 560,
       "name": "Death rune",
       "quantity": 27428,
-      "ge_price": 122,
-      "total_value": 3346216,
+      "ge_price": 120,
+      "total_value": 3291360,
       "category": "Runes",
       "subcategory": "Catalytic"
     },
@@ -913,8 +913,8 @@
       "id": 563,
       "name": "Law rune",
       "quantity": 8315,
-      "ge_price": 116,
-      "total_value": 964540,
+      "ge_price": 118,
+      "total_value": 981170,
       "category": "Runes",
       "subcategory": "Catalytic"
     },
@@ -949,8 +949,8 @@
       "id": 565,
       "name": "Blood rune",
       "quantity": 10495,
-      "ge_price": 214,
-      "total_value": 2245930,
+      "ge_price": 215,
+      "total_value": 2256425,
       "category": "Runes",
       "subcategory": "Catalytic"
     },
@@ -967,8 +967,8 @@
       "id": 558,
       "name": "Mind rune",
       "quantity": 168856,
-      "ge_price": 2,
-      "total_value": 337712,
+      "ge_price": 3,
+      "total_value": 506568,
       "category": "Runes",
       "subcategory": "Catalytic"
     },
@@ -976,8 +976,8 @@
       "id": 562,
       "name": "Chaos rune",
       "quantity": 6905,
-      "ge_price": 55,
-      "total_value": 379775,
+      "ge_price": 54,
+      "total_value": 372870,
       "category": "Runes",
       "subcategory": "Catalytic"
     },
@@ -985,8 +985,8 @@
       "id": 9075,
       "name": "Astral rune",
       "quantity": 2725,
-      "ge_price": 68,
-      "total_value": 185300,
+      "ge_price": 70,
+      "total_value": 190750,
       "category": "Runes",
       "subcategory": "Catalytic"
     },
@@ -994,8 +994,8 @@
       "id": 566,
       "name": "Soul rune",
       "quantity": 14889,
-      "ge_price": 302,
-      "total_value": 4496478,
+      "ge_price": 301,
+      "total_value": 4481589,
       "category": "Runes",
       "subcategory": "Catalytic"
     },
@@ -1003,8 +1003,8 @@
       "id": 4699,
       "name": "Lava rune",
       "quantity": 21,
-      "ge_price": 17,
-      "total_value": 357,
+      "ge_price": 20,
+      "total_value": 420,
       "category": "Runes",
       "subcategory": "Combination"
     },
@@ -1030,8 +1030,8 @@
       "id": 1448,
       "name": "Mind talisman",
       "quantity": 11,
-      "ge_price": 3812,
-      "total_value": 41932,
+      "ge_price": 3817,
+      "total_value": 41987,
       "category": "Runes",
       "subcategory": "Talismans"
     },
@@ -1039,8 +1039,8 @@
       "id": 1440,
       "name": "Earth talisman",
       "quantity": 8,
-      "ge_price": 1425,
-      "total_value": 11400,
+      "ge_price": 1413,
+      "total_value": 11304,
       "category": "Runes",
       "subcategory": "Talismans"
     },
@@ -1057,8 +1057,8 @@
       "id": 1442,
       "name": "Fire talisman",
       "quantity": 5,
-      "ge_price": 1690,
-      "total_value": 8450,
+      "ge_price": 1742,
+      "total_value": 8710,
       "category": "Runes",
       "subcategory": "Talismans"
     },
@@ -1084,8 +1084,8 @@
       "id": 1446,
       "name": "Body talisman",
       "quantity": 11,
-      "ge_price": 1502,
-      "total_value": 16522,
+      "ge_price": 1485,
+      "total_value": 16335,
       "category": "Runes",
       "subcategory": "Talismans"
     },
@@ -1093,8 +1093,8 @@
       "id": 1452,
       "name": "Chaos talisman",
       "quantity": 12,
-      "ge_price": 342,
-      "total_value": 4104,
+      "ge_price": 251,
+      "total_value": 3012,
       "category": "Runes",
       "subcategory": "Talismans"
     },
@@ -1102,8 +1102,8 @@
       "id": 1456,
       "name": "Death talisman",
       "quantity": 1,
-      "ge_price": 1435,
-      "total_value": 1435,
+      "ge_price": 755,
+      "total_value": 755,
       "category": "Runes",
       "subcategory": "Talismans"
     },
@@ -1156,8 +1156,8 @@
       "id": 7936,
       "name": "Pure essence",
       "quantity": 38019,
-      "ge_price": 1,
-      "total_value": 38019,
+      "ge_price": 2,
+      "total_value": 76038,
       "category": "Skilling",
       "subcategory": "Essence"
     },
@@ -1291,8 +1291,8 @@
       "id": 1462,
       "name": "Nature talisman",
       "quantity": 16,
-      "ge_price": 155,
-      "total_value": 2480,
+      "ge_price": 163,
+      "total_value": 2608,
       "category": "Runes",
       "subcategory": "Talismans"
     },
@@ -1300,8 +1300,8 @@
       "id": 4695,
       "name": "Mist rune",
       "quantity": 5449,
-      "ge_price": 93,
-      "total_value": 506757,
+      "ge_price": 101,
+      "total_value": 550349,
       "category": "Runes",
       "subcategory": "Combination"
     },
@@ -1327,8 +1327,8 @@
       "id": 29307,
       "name": "Quetzal feed",
       "quantity": 27,
-      "ge_price": 6646,
-      "total_value": 179442,
+      "ge_price": 6321,
+      "total_value": 170667,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -1336,8 +1336,8 @@
       "id": 4698,
       "name": "Mud rune",
       "quantity": 215,
-      "ge_price": 75,
-      "total_value": 16125,
+      "ge_price": 77,
+      "total_value": 16555,
       "category": "Runes",
       "subcategory": "Combination"
     },
@@ -1354,8 +1354,8 @@
       "id": 29684,
       "name": "Guthixian temple teleport",
       "quantity": 165,
-      "ge_price": 7929,
-      "total_value": 1308285,
+      "ge_price": 8008,
+      "total_value": 1321320,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -1390,8 +1390,8 @@
       "id": 9034,
       "name": "Golden statuette",
       "quantity": 33,
-      "ge_price": 1305,
-      "total_value": 43065,
+      "ge_price": 1474,
+      "total_value": 48642,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -1399,8 +1399,8 @@
       "id": 21166,
       "name": "Burning amulet(5)",
       "quantity": 10,
-      "ge_price": 6823,
-      "total_value": 68230,
+      "ge_price": 6957,
+      "total_value": 69570,
       "category": "Teleportation",
       "subcategory": "Jewelry"
     },
@@ -1453,8 +1453,8 @@
       "id": 4694,
       "name": "Steam rune",
       "quantity": 46,
-      "ge_price": 105,
-      "total_value": 4830,
+      "ge_price": 104,
+      "total_value": 4784,
       "category": "Runes",
       "subcategory": "Combination"
     },
@@ -1480,8 +1480,8 @@
       "id": 21146,
       "name": "Necklace of passage(5)",
       "quantity": 9,
-      "ge_price": 1320,
-      "total_value": 11880,
+      "ge_price": 1318,
+      "total_value": 11862,
       "category": "Teleportation",
       "subcategory": "Jewelry"
     },
@@ -1525,8 +1525,8 @@
       "id": 8013,
       "name": "Teleport to house",
       "quantity": 192,
-      "ge_price": 535,
-      "total_value": 102720,
+      "ge_price": 537,
+      "total_value": 103104,
       "category": "Teleportation",
       "subcategory": "Tablets"
     },
@@ -1534,8 +1534,8 @@
       "id": 5516,
       "name": "Elemental talisman",
       "quantity": 2,
-      "ge_price": 2114,
-      "total_value": 4228,
+      "ge_price": 3275,
+      "total_value": 6550,
       "category": "Runes",
       "subcategory": "Talismans"
     },
@@ -1552,8 +1552,8 @@
       "id": 30634,
       "name": "Twinflame staff",
       "quantity": 1,
-      "ge_price": 6827902,
-      "total_value": 6827902,
+      "ge_price": 6745933,
+      "total_value": 6745933,
       "category": "Equipment",
       "subcategory": "Magic Weapons"
     },
@@ -1597,8 +1597,8 @@
       "id": 807,
       "name": "Iron dart",
       "quantity": 288,
-      "ge_price": 20,
-      "total_value": 5760,
+      "ge_price": 25,
+      "total_value": 7200,
       "category": "Ammunition",
       "subcategory": "Other Ammo"
     },
@@ -1606,8 +1606,8 @@
       "id": 12502,
       "name": "Bandos chaps",
       "quantity": 1,
-      "ge_price": 253500,
-      "total_value": 253500,
+      "ge_price": 236935,
+      "total_value": 236935,
       "category": "Equipment",
       "subcategory": "Leg Armor"
     },
@@ -1615,8 +1615,8 @@
       "id": 1718,
       "name": "Holy symbol",
       "quantity": 1,
-      "ge_price": 789,
-      "total_value": 789,
+      "ge_price": 771,
+      "total_value": 771,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -1624,8 +1624,8 @@
       "id": 4675,
       "name": "Ancient staff",
       "quantity": 2,
-      "ge_price": 60758,
-      "total_value": 121516,
+      "ge_price": 59843,
+      "total_value": 119686,
       "category": "Equipment",
       "subcategory": "Magic Weapons"
     },
@@ -1633,8 +1633,8 @@
       "id": 10828,
       "name": "Helm of neitiznot",
       "quantity": 1,
-      "ge_price": 52002,
-      "total_value": 52002,
+      "ge_price": 50603,
+      "total_value": 50603,
       "category": "Equipment",
       "subcategory": "Helmets"
     },
@@ -1642,8 +1642,8 @@
       "id": 3122,
       "name": "Granite shield",
       "quantity": 1,
-      "ge_price": 36630,
-      "total_value": 36630,
+      "ge_price": 35863,
+      "total_value": 35863,
       "category": "Equipment",
       "subcategory": "Shields"
     },
@@ -1651,8 +1651,8 @@
       "id": 9674,
       "name": "Proselyte hauberk",
       "quantity": 1,
-      "ge_price": 6537,
-      "total_value": 6537,
+      "ge_price": 7209,
+      "total_value": 7209,
       "category": "Equipment",
       "subcategory": "Body Armor"
     },
@@ -1660,8 +1660,8 @@
       "id": 9676,
       "name": "Proselyte cuisse",
       "quantity": 1,
-      "ge_price": 10898,
-      "total_value": 10898,
+      "ge_price": 10626,
+      "total_value": 10626,
       "category": "Equipment",
       "subcategory": "Leg Armor"
     },
@@ -1687,8 +1687,8 @@
       "id": 9185,
       "name": "Rune crossbow",
       "quantity": 6,
-      "ge_price": 9562,
-      "total_value": 57372,
+      "ge_price": 9491,
+      "total_value": 56946,
       "category": "Equipment",
       "subcategory": "Ranged Weapons"
     },
@@ -1705,8 +1705,8 @@
       "id": 2,
       "name": "Steel cannonball",
       "quantity": 2969,
-      "ge_price": 224,
-      "total_value": 665056,
+      "ge_price": 225,
+      "total_value": 668025,
       "category": "Ammunition",
       "subcategory": "Cannonballs"
     },
@@ -1714,8 +1714,8 @@
       "id": 11875,
       "name": "Broad bolts",
       "quantity": 4310,
-      "ge_price": 59,
-      "total_value": 254290,
+      "ge_price": 62,
+      "total_value": 267220,
       "category": "Ammunition",
       "subcategory": "Bolts"
     },
@@ -1732,8 +1732,8 @@
       "id": 9242,
       "name": "Ruby bolts (e)",
       "quantity": 72,
-      "ge_price": 154,
-      "total_value": 11088,
+      "ge_price": 145,
+      "total_value": 10440,
       "category": "Ammunition",
       "subcategory": "Bolts"
     },
@@ -1786,8 +1786,8 @@
       "id": 10034,
       "name": "Red chinchompa",
       "quantity": 188,
-      "ge_price": 976,
-      "total_value": 183488,
+      "ge_price": 983,
+      "total_value": 184804,
       "category": "Ammunition",
       "subcategory": "Other Ammo"
     },
@@ -1795,8 +1795,8 @@
       "id": 29286,
       "name": "Mixed hide boots",
       "quantity": 1,
-      "ge_price": 15651,
-      "total_value": 15651,
+      "ge_price": 16620,
+      "total_value": 16620,
       "category": "Equipment",
       "subcategory": "Boots"
     },
@@ -1840,8 +1840,8 @@
       "id": 28997,
       "name": "Dual macuahuitl",
       "quantity": 1,
-      "ge_price": 6155827,
-      "total_value": 6155827,
+      "ge_price": 6228760,
+      "total_value": 6228760,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -1876,8 +1876,8 @@
       "id": 29000,
       "name": "Eclipse atlatl",
       "quantity": 1,
-      "ge_price": 2384880,
-      "total_value": 2384880,
+      "ge_price": 2255259,
+      "total_value": 2255259,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -1885,8 +1885,8 @@
       "id": 28991,
       "name": "Atlatl dart",
       "quantity": 10324,
-      "ge_price": 199,
-      "total_value": 2054476,
+      "ge_price": 195,
+      "total_value": 2013180,
       "category": "Ammunition",
       "subcategory": "Other Ammo"
     },
@@ -1894,8 +1894,8 @@
       "id": 4749,
       "name": "Torag's platebody",
       "quantity": 1,
-      "ge_price": 313706,
-      "total_value": 313706,
+      "ge_price": 313535,
+      "total_value": 313535,
       "category": "Barrows",
       "subcategory": "Torag's"
     },
@@ -1921,8 +1921,8 @@
       "id": 4753,
       "name": "Verac's helm",
       "quantity": 1,
-      "ge_price": 114100,
-      "total_value": 114100,
+      "ge_price": 116054,
+      "total_value": 116054,
       "category": "Barrows",
       "subcategory": "Verac's"
     },
@@ -1984,8 +1984,8 @@
       "id": 28988,
       "name": "Blue moon spear",
       "quantity": 1,
-      "ge_price": 395948,
-      "total_value": 395948,
+      "ge_price": 393193,
+      "total_value": 393193,
       "category": "Moon Armor",
       "subcategory": "Blue Moon"
     },
@@ -2038,8 +2038,8 @@
       "id": 10364,
       "name": "Strength amulet (t)",
       "quantity": 1,
-      "ge_price": 10050,
-      "total_value": 10050,
+      "ge_price": 10977,
+      "total_value": 10977,
       "category": "Equipment",
       "subcategory": "Amulets & Necklaces"
     },
@@ -2047,8 +2047,8 @@
       "id": 2581,
       "name": "Robin hood hat",
       "quantity": 1,
-      "ge_price": 1694276,
-      "total_value": 1694276,
+      "ge_price": 1693589,
+      "total_value": 1693589,
       "category": "Equipment",
       "subcategory": "Helmets"
     },
@@ -2056,8 +2056,8 @@
       "id": 10378,
       "name": "Guthix d'hide body",
       "quantity": 1,
-      "ge_price": 122827,
-      "total_value": 122827,
+      "ge_price": 125452,
+      "total_value": 125452,
       "category": "Equipment",
       "subcategory": "Body Armor"
     },
@@ -2083,8 +2083,8 @@
       "id": 31032,
       "name": "Ent branch",
       "quantity": 91,
-      "ge_price": 8321,
-      "total_value": 757211,
+      "ge_price": 8174,
+      "total_value": 743834,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -2092,8 +2092,8 @@
       "id": 4162,
       "name": "Rock hammer",
       "quantity": 1,
-      "ge_price": 249,
-      "total_value": 249,
+      "ge_price": 272,
+      "total_value": 272,
       "category": "Slayer",
       "subcategory": "Slayer Equipment"
     },
@@ -2101,8 +2101,8 @@
       "id": 9243,
       "name": "Diamond bolts (e)",
       "quantity": 170,
-      "ge_price": 295,
-      "total_value": 50150,
+      "ge_price": 292,
+      "total_value": 49640,
       "category": "Ammunition",
       "subcategory": "Bolts"
     },
@@ -2137,8 +2137,8 @@
       "id": 4097,
       "name": "Mystic boots",
       "quantity": 1,
-      "ge_price": 6504,
-      "total_value": 6504,
+      "ge_price": 5909,
+      "total_value": 5909,
       "category": "Equipment",
       "subcategory": "Boots"
     },
@@ -2155,8 +2155,8 @@
       "id": 12934,
       "name": "Zulrah's scales",
       "quantity": 16,
-      "ge_price": 174,
-      "total_value": 2784,
+      "ge_price": 172,
+      "total_value": 2752,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -2173,8 +2173,8 @@
       "id": 2572,
       "name": "Ring of wealth",
       "quantity": 1,
-      "ge_price": 12177,
-      "total_value": 12177,
+      "ge_price": 12190,
+      "total_value": 12190,
       "category": "Teleportation",
       "subcategory": "Jewelry"
     },
@@ -2182,8 +2182,8 @@
       "id": 5698,
       "name": "Dragon dagger(p++)",
       "quantity": 1,
-      "ge_price": 22260,
-      "total_value": 22260,
+      "ge_price": 22192,
+      "total_value": 22192,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -2191,8 +2191,8 @@
       "id": 10380,
       "name": "Guthix chaps",
       "quantity": 1,
-      "ge_price": 256404,
-      "total_value": 256404,
+      "ge_price": 256100,
+      "total_value": 256100,
       "category": "Equipment",
       "subcategory": "Leg Armor"
     },
@@ -2200,8 +2200,8 @@
       "id": 10370,
       "name": "Zamorak d'hide body",
       "quantity": 3,
-      "ge_price": 120146,
-      "total_value": 360438,
+      "ge_price": 142293,
+      "total_value": 426879,
       "category": "Equipment",
       "subcategory": "Body Armor"
     },
@@ -2218,8 +2218,8 @@
       "id": 28810,
       "name": "Zombie axe",
       "quantity": 1,
-      "ge_price": 973530,
-      "total_value": 973530,
+      "ge_price": 975598,
+      "total_value": 975598,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -2227,8 +2227,8 @@
       "id": 1540,
       "name": "Anti-dragon shield",
       "quantity": 1,
-      "ge_price": 96,
-      "total_value": 96,
+      "ge_price": 116,
+      "total_value": 116,
       "category": "Equipment",
       "subcategory": "Shields"
     },
@@ -2254,8 +2254,8 @@
       "id": 9143,
       "name": "Adamant bolts",
       "quantity": 773,
-      "ge_price": 195,
-      "total_value": 150735,
+      "ge_price": 200,
+      "total_value": 154600,
       "category": "Ammunition",
       "subcategory": "Bolts"
     },
@@ -2263,8 +2263,8 @@
       "id": 9342,
       "name": "Onyx bolts",
       "quantity": 118,
-      "ge_price": 8583,
-      "total_value": 1012794,
+      "ge_price": 8551,
+      "total_value": 1009018,
       "category": "Ammunition",
       "subcategory": "Bolts"
     },
@@ -2290,8 +2290,8 @@
       "id": 892,
       "name": "Rune arrow",
       "quantity": 42526,
-      "ge_price": 214,
-      "total_value": 9100564,
+      "ge_price": 210,
+      "total_value": 8930460,
       "category": "Ammunition",
       "subcategory": "Arrows"
     },
@@ -2317,8 +2317,8 @@
       "id": 19547,
       "name": "Necklace of anguish",
       "quantity": 1,
-      "ge_price": 23707822,
-      "total_value": 23707822,
+      "ge_price": 23697468,
+      "total_value": 23697468,
       "category": "Equipment",
       "subcategory": "Amulets & Necklaces"
     },
@@ -2362,8 +2362,8 @@
       "id": 4151,
       "name": "Abyssal whip",
       "quantity": 2,
-      "ge_price": 1322812,
-      "total_value": 2645624,
+      "ge_price": 1322746,
+      "total_value": 2645492,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -2398,8 +2398,8 @@
       "id": 9142,
       "name": "Mithril bolts",
       "quantity": 190,
-      "ge_price": 24,
-      "total_value": 4560,
+      "ge_price": 31,
+      "total_value": 5890,
       "category": "Ammunition",
       "subcategory": "Bolts"
     },
@@ -2434,8 +2434,8 @@
       "id": 9337,
       "name": "Sapphire bolts",
       "quantity": 120,
-      "ge_price": 58,
-      "total_value": 6960,
+      "ge_price": 79,
+      "total_value": 9480,
       "category": "Ammunition",
       "subcategory": "Bolts"
     },
@@ -2488,8 +2488,8 @@
       "id": 19544,
       "name": "Tormented bracelet",
       "quantity": 1,
-      "ge_price": 23337393,
-      "total_value": 23337393,
+      "ge_price": 23316099,
+      "total_value": 23316099,
       "category": "Equipment",
       "subcategory": "Amulets & Necklaces"
     },
@@ -2515,8 +2515,8 @@
       "id": 19553,
       "name": "Amulet of torture",
       "quantity": 1,
-      "ge_price": 23608176,
-      "total_value": 23608176,
+      "ge_price": 23855039,
+      "total_value": 23855039,
       "category": "Equipment",
       "subcategory": "Amulets & Necklaces"
     },
@@ -2533,8 +2533,8 @@
       "id": 20727,
       "name": "Leaf-bladed battleaxe",
       "quantity": 1,
-      "ge_price": 60479,
-      "total_value": 60479,
+      "ge_price": 65102,
+      "total_value": 65102,
       "category": "Slayer",
       "subcategory": "Slayer Equipment"
     },
@@ -2542,8 +2542,8 @@
       "id": 29577,
       "name": "Burning claws",
       "quantity": 1,
-      "ge_price": 6020444,
-      "total_value": 6020444,
+      "ge_price": 5956416,
+      "total_value": 5956416,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -2551,8 +2551,8 @@
       "id": 6,
       "name": "Cannon base",
       "quantity": 1,
-      "ge_price": 193547,
-      "total_value": 193547,
+      "ge_price": 253042,
+      "total_value": 253042,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -2560,8 +2560,8 @@
       "id": 10,
       "name": "Cannon barrels",
       "quantity": 1,
-      "ge_price": 170482,
-      "total_value": 170482,
+      "ge_price": 170990,
+      "total_value": 170990,
       "category": "Skilling",
       "subcategory": "Bars"
     },
@@ -2569,8 +2569,8 @@
       "id": 8,
       "name": "Cannon stand",
       "quantity": 1,
-      "ge_price": 192641,
-      "total_value": 192641,
+      "ge_price": 188149,
+      "total_value": 188149,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -2578,8 +2578,8 @@
       "id": 12,
       "name": "Cannon furnace",
       "quantity": 1,
-      "ge_price": 198001,
-      "total_value": 198001,
+      "ge_price": 194167,
+      "total_value": 194167,
       "category": "Skilling",
       "subcategory": "Hunter"
     },
@@ -2605,8 +2605,8 @@
       "id": 19936,
       "name": "Zamorak d'hide boots",
       "quantity": 1,
-      "ge_price": 562277,
-      "total_value": 562277,
+      "ge_price": 560350,
+      "total_value": 560350,
       "category": "Equipment",
       "subcategory": "Boots"
     },
@@ -2614,8 +2614,8 @@
       "id": 13576,
       "name": "Dragon warhammer",
       "quantity": 1,
-      "ge_price": 12839394,
-      "total_value": 12839394,
+      "ge_price": 12865776,
+      "total_value": 12865776,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -2632,8 +2632,8 @@
       "id": 249,
       "name": "Guam leaf",
       "quantity": 397,
-      "ge_price": 320,
-      "total_value": 127040,
+      "ge_price": 317,
+      "total_value": 125849,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -2659,8 +2659,8 @@
       "id": 255,
       "name": "Harralander",
       "quantity": 3199,
-      "ge_price": 567,
-      "total_value": 1813833,
+      "ge_price": 551,
+      "total_value": 1762649,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -2668,8 +2668,8 @@
       "id": 259,
       "name": "Irit leaf",
       "quantity": 2059,
-      "ge_price": 2715,
-      "total_value": 5590185,
+      "ge_price": 2678,
+      "total_value": 5514002,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -2677,8 +2677,8 @@
       "id": 261,
       "name": "Avantoe",
       "quantity": 2442,
-      "ge_price": 3513,
-      "total_value": 8578746,
+      "ge_price": 3525,
+      "total_value": 8608050,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -2686,8 +2686,8 @@
       "id": 265,
       "name": "Cadantine",
       "quantity": 500,
-      "ge_price": 3471,
-      "total_value": 1735500,
+      "ge_price": 3470,
+      "total_value": 1735000,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -2695,8 +2695,8 @@
       "id": 269,
       "name": "Torstol",
       "quantity": 628,
-      "ge_price": 4165,
-      "total_value": 2615620,
+      "ge_price": 4212,
+      "total_value": 2645136,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -2704,8 +2704,8 @@
       "id": 19653,
       "name": "Golovanova fruit top",
       "quantity": 16,
-      "ge_price": 129,
-      "total_value": 2064,
+      "ge_price": 133,
+      "total_value": 2128,
       "category": "Food",
       "subcategory": "Fruit"
     },
@@ -2713,8 +2713,8 @@
       "id": 231,
       "name": "Snape grass",
       "quantity": 1900,
-      "ge_price": 510,
-      "total_value": 969000,
+      "ge_price": 509,
+      "total_value": 967100,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -2722,8 +2722,8 @@
       "id": 5295,
       "name": "Ranarr seed",
       "quantity": 5,
-      "ge_price": 19277,
-      "total_value": 96385,
+      "ge_price": 19547,
+      "total_value": 97735,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -2731,8 +2731,8 @@
       "id": 5998,
       "name": "Yanillian hops",
       "quantity": 14,
-      "ge_price": 432,
-      "total_value": 6048,
+      "ge_price": 460,
+      "total_value": 6440,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -2740,8 +2740,8 @@
       "id": 1951,
       "name": "Redberries",
       "quantity": 6,
-      "ge_price": 56,
-      "total_value": 336,
+      "ge_price": 55,
+      "total_value": 330,
       "category": "Food",
       "subcategory": "Fruit"
     },
@@ -2749,8 +2749,8 @@
       "id": 239,
       "name": "White berries",
       "quantity": 608,
-      "ge_price": 289,
-      "total_value": 175712,
+      "ge_price": 291,
+      "total_value": 176928,
       "category": "Food",
       "subcategory": "Fruit"
     },
@@ -2767,8 +2767,8 @@
       "id": 225,
       "name": "Limpwurt root",
       "quantity": 1148,
-      "ge_price": 261,
-      "total_value": 299628,
+      "ge_price": 259,
+      "total_value": 297332,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -2776,8 +2776,8 @@
       "id": 6018,
       "name": "Poison ivy berries",
       "quantity": 2101,
-      "ge_price": 326,
-      "total_value": 684926,
+      "ge_price": 316,
+      "total_value": 663916,
       "category": "Food",
       "subcategory": "Fruit"
     },
@@ -2785,8 +2785,8 @@
       "id": 5299,
       "name": "Kwuarm seed",
       "quantity": 5,
-      "ge_price": 1180,
-      "total_value": 5900,
+      "ge_price": 1220,
+      "total_value": 6100,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -2794,8 +2794,8 @@
       "id": 6016,
       "name": "Cactus spine",
       "quantity": 73,
-      "ge_price": 2770,
-      "total_value": 202210,
+      "ge_price": 2750,
+      "total_value": 200750,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -2803,8 +2803,8 @@
       "id": 221,
       "name": "Eye of newt",
       "quantity": 3977,
-      "ge_price": 3,
-      "total_value": 11931,
+      "ge_price": 4,
+      "total_value": 15908,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -2821,8 +2821,8 @@
       "id": 5301,
       "name": "Cadantine seed",
       "quantity": 5,
-      "ge_price": 3012,
-      "total_value": 15060,
+      "ge_price": 2860,
+      "total_value": 14300,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -2830,8 +2830,8 @@
       "id": 1755,
       "name": "Chisel",
       "quantity": 3,
-      "ge_price": 81,
-      "total_value": 243,
+      "ge_price": 83,
+      "total_value": 249,
       "category": "Miscellaneous",
       "subcategory": "Tools"
     },
@@ -2839,8 +2839,8 @@
       "id": 753,
       "name": "Cadava berries",
       "quantity": 11,
-      "ge_price": 38,
-      "total_value": 418,
+      "ge_price": 48,
+      "total_value": 528,
       "category": "Food",
       "subcategory": "Fruit"
     },
@@ -2848,8 +2848,8 @@
       "id": 3138,
       "name": "Potato cactus",
       "quantity": 21,
-      "ge_price": 60,
-      "total_value": 1260,
+      "ge_price": 61,
+      "total_value": 1281,
       "category": "Food",
       "subcategory": "Cooked Meals"
     },
@@ -2857,8 +2857,8 @@
       "id": 2970,
       "name": "Mort myre fungus",
       "quantity": 8,
-      "ge_price": 268,
-      "total_value": 2144,
+      "ge_price": 269,
+      "total_value": 2152,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -2875,8 +2875,8 @@
       "id": 5303,
       "name": "Dwarf weed seed",
       "quantity": 5,
-      "ge_price": 1035,
-      "total_value": 5175,
+      "ge_price": 1269,
+      "total_value": 6345,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -2884,8 +2884,8 @@
       "id": 12640,
       "name": "Amylase crystal",
       "quantity": 57,
-      "ge_price": 824,
-      "total_value": 46968,
+      "ge_price": 828,
+      "total_value": 47196,
       "category": "Currency",
       "subcategory": "Coins & Tokens"
     },
@@ -2893,8 +2893,8 @@
       "id": 5304,
       "name": "Torstol seed",
       "quantity": 6,
-      "ge_price": 10589,
-      "total_value": 63534,
+      "ge_price": 10430,
+      "total_value": 62580,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -2911,8 +2911,8 @@
       "id": 5296,
       "name": "Toadflax seed",
       "quantity": 6,
-      "ge_price": 545,
-      "total_value": 3270,
+      "ge_price": 521,
+      "total_value": 3126,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -2938,8 +2938,8 @@
       "id": 5974,
       "name": "Coconut",
       "quantity": 459,
-      "ge_price": 1602,
-      "total_value": 735318,
+      "ge_price": 1621,
+      "total_value": 744039,
       "category": "Food",
       "subcategory": "Fruit"
     },
@@ -2947,8 +2947,8 @@
       "id": 5297,
       "name": "Irit seed",
       "quantity": 5,
-      "ge_price": 77,
-      "total_value": 385,
+      "ge_price": 73,
+      "total_value": 365,
       "category": "Skilling",
       "subcategory": "Seeds"
     },
@@ -2956,8 +2956,8 @@
       "id": 5302,
       "name": "Lantadyme seed",
       "quantity": 5,
-      "ge_price": 105,
-      "total_value": 525,
+      "ge_price": 158,
+      "total_value": 790,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -2965,8 +2965,8 @@
       "id": 5300,
       "name": "Snapdragon seed",
       "quantity": 4,
-      "ge_price": 42372,
-      "total_value": 169488,
+      "ge_price": 42311,
+      "total_value": 169244,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -2974,8 +2974,8 @@
       "id": 5298,
       "name": "Avantoe seed",
       "quantity": 5,
-      "ge_price": 1090,
-      "total_value": 5450,
+      "ge_price": 1076,
+      "total_value": 5380,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -2983,8 +2983,8 @@
       "id": 5294,
       "name": "Harralander seed",
       "quantity": 5,
-      "ge_price": 47,
-      "total_value": 235,
+      "ge_price": 50,
+      "total_value": 250,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -3028,8 +3028,8 @@
       "id": 810,
       "name": "Adamant dart",
       "quantity": 1046,
-      "ge_price": 90,
-      "total_value": 94140,
+      "ge_price": 91,
+      "total_value": 95186,
       "category": "Ammunition",
       "subcategory": "Other Ammo"
     },
@@ -3037,8 +3037,8 @@
       "id": 299,
       "name": "Mithril seeds",
       "quantity": 40,
-      "ge_price": 753,
-      "total_value": 30120,
+      "ge_price": 740,
+      "total_value": 29600,
       "category": "Skilling",
       "subcategory": "Seeds"
     },
@@ -3046,8 +3046,8 @@
       "id": 207,
       "name": "Grimy ranarr weed",
       "quantity": 41,
-      "ge_price": 5199,
-      "total_value": 213159,
+      "ge_price": 5254,
+      "total_value": 215414,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -3055,8 +3055,8 @@
       "id": 211,
       "name": "Grimy avantoe",
       "quantity": 20,
-      "ge_price": 3628,
-      "total_value": 72560,
+      "ge_price": 3590,
+      "total_value": 71800,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -3064,8 +3064,8 @@
       "id": 213,
       "name": "Grimy kwuarm",
       "quantity": 34,
-      "ge_price": 3454,
-      "total_value": 117436,
+      "ge_price": 3523,
+      "total_value": 119782,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -3073,8 +3073,8 @@
       "id": 3051,
       "name": "Grimy snapdragon",
       "quantity": 6,
-      "ge_price": 8394,
-      "total_value": 50364,
+      "ge_price": 8170,
+      "total_value": 49020,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -3091,8 +3091,8 @@
       "id": 199,
       "name": "Grimy guam leaf",
       "quantity": 12,
-      "ge_price": 780,
-      "total_value": 9360,
+      "ge_price": 828,
+      "total_value": 9936,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -3100,8 +3100,8 @@
       "id": 205,
       "name": "Grimy harralander",
       "quantity": 36,
-      "ge_price": 562,
-      "total_value": 20232,
+      "ge_price": 560,
+      "total_value": 20160,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -3109,8 +3109,8 @@
       "id": 201,
       "name": "Grimy marrentill",
       "quantity": 4,
-      "ge_price": 208,
-      "total_value": 832,
+      "ge_price": 175,
+      "total_value": 700,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -3118,8 +3118,8 @@
       "id": 203,
       "name": "Grimy tarromin",
       "quantity": 10,
-      "ge_price": 167,
-      "total_value": 1670,
+      "ge_price": 165,
+      "total_value": 1650,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -3127,8 +3127,8 @@
       "id": 209,
       "name": "Grimy irit leaf",
       "quantity": 90,
-      "ge_price": 2532,
-      "total_value": 227880,
+      "ge_price": 2571,
+      "total_value": 231390,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -3136,8 +3136,8 @@
       "id": 3049,
       "name": "Grimy toadflax",
       "quantity": 70,
-      "ge_price": 2860,
-      "total_value": 200200,
+      "ge_price": 2879,
+      "total_value": 201530,
       "category": "Skilling",
       "subcategory": "Herbs"
     },
@@ -3145,8 +3145,8 @@
       "id": 31484,
       "name": "Pillar coral",
       "quantity": 762,
-      "ge_price": 3899,
-      "total_value": 2971038,
+      "ge_price": 4264,
+      "total_value": 3249168,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -3163,8 +3163,8 @@
       "id": 6034,
       "name": "Supercompost",
       "quantity": 62,
-      "ge_price": 33,
-      "total_value": 2046,
+      "ge_price": 32,
+      "total_value": 1984,
       "category": "Skilling",
       "subcategory": "Farming"
     },
@@ -3199,8 +3199,8 @@
       "id": 109,
       "name": "Dwarf weed potion (unf)",
       "quantity": 1720,
-      "ge_price": 3110,
-      "total_value": 5349200,
+      "ge_price": 3145,
+      "total_value": 5409400,
       "category": "Potions",
       "subcategory": "Unfinished"
     },
@@ -3208,8 +3208,8 @@
       "id": 3004,
       "name": "Snapdragon potion (unf)",
       "quantity": 398,
-      "ge_price": 8999,
-      "total_value": 3581602,
+      "ge_price": 8919,
+      "total_value": 3549762,
       "category": "Potions",
       "subcategory": "Unfinished"
     },
@@ -3253,8 +3253,8 @@
       "id": 3002,
       "name": "Toadflax potion (unf)",
       "quantity": 373,
-      "ge_price": 3095,
-      "total_value": 1154435,
+      "ge_price": 3122,
+      "total_value": 1164506,
       "category": "Potions",
       "subcategory": "Unfinished"
     },
@@ -3262,8 +3262,8 @@
       "id": 2483,
       "name": "Lantadyme potion (unf)",
       "quantity": 119,
-      "ge_price": 2162,
-      "total_value": 257278,
+      "ge_price": 2177,
+      "total_value": 259063,
       "category": "Potions",
       "subcategory": "Unfinished"
     },
@@ -3271,8 +3271,8 @@
       "id": 107,
       "name": "Cadantine potion (unf)",
       "quantity": 328,
-      "ge_price": 3752,
-      "total_value": 1230656,
+      "ge_price": 3785,
+      "total_value": 1241480,
       "category": "Potions",
       "subcategory": "Unfinished"
     },
@@ -3280,8 +3280,8 @@
       "id": 101,
       "name": "Irit potion (unf)",
       "quantity": 1681,
-      "ge_price": 2906,
-      "total_value": 4884986,
+      "ge_price": 2875,
+      "total_value": 4832875,
       "category": "Potions",
       "subcategory": "Unfinished"
     },
@@ -3307,8 +3307,8 @@
       "id": 1519,
       "name": "Willow logs",
       "quantity": 19,
-      "ge_price": 43,
-      "total_value": 817,
+      "ge_price": 45,
+      "total_value": 855,
       "category": "Skilling",
       "subcategory": "Logs"
     },
@@ -3325,8 +3325,8 @@
       "id": 1515,
       "name": "Yew logs",
       "quantity": 223,
-      "ge_price": 167,
-      "total_value": 37241,
+      "ge_price": 161,
+      "total_value": 35903,
       "category": "Skilling",
       "subcategory": "Logs"
     },
@@ -3334,8 +3334,8 @@
       "id": 13573,
       "name": "Dynamite",
       "quantity": 190,
-      "ge_price": 1132,
-      "total_value": 215080,
+      "ge_price": 1124,
+      "total_value": 213560,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -3343,8 +3343,8 @@
       "id": 5354,
       "name": "Filled plant pot",
       "quantity": 4311,
-      "ge_price": 1,
-      "total_value": 4311,
+      "ge_price": 2,
+      "total_value": 8622,
       "category": "Miscellaneous",
       "subcategory": "Containers"
     },
@@ -3352,8 +3352,8 @@
       "id": 3211,
       "name": "Limestone",
       "quantity": 14,
-      "ge_price": 441,
-      "total_value": 6174,
+      "ge_price": 329,
+      "total_value": 4606,
       "category": "Skilling",
       "subcategory": "Construction"
     },
@@ -3361,8 +3361,8 @@
       "id": 2349,
       "name": "Bronze bar",
       "quantity": 27,
-      "ge_price": 84,
-      "total_value": 2268,
+      "ge_price": 83,
+      "total_value": 2241,
       "category": "Skilling",
       "subcategory": "Bars"
     },
@@ -3370,8 +3370,8 @@
       "id": 950,
       "name": "Silk",
       "quantity": 895,
-      "ge_price": 17,
-      "total_value": 15215,
+      "ge_price": 19,
+      "total_value": 17005,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -3379,8 +3379,8 @@
       "id": 453,
       "name": "Coal",
       "quantity": 26428,
-      "ge_price": 276,
-      "total_value": 7294128,
+      "ge_price": 278,
+      "total_value": 7346984,
       "category": "Skilling",
       "subcategory": "Ores"
     },
@@ -3388,8 +3388,8 @@
       "id": 13421,
       "name": "Saltpetre",
       "quantity": 199,
-      "ge_price": 9,
-      "total_value": 1791,
+      "ge_price": 10,
+      "total_value": 1990,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -3415,8 +3415,8 @@
       "id": 447,
       "name": "Mithril ore",
       "quantity": 4257,
-      "ge_price": 95,
-      "total_value": 404415,
+      "ge_price": 94,
+      "total_value": 400158,
       "category": "Skilling",
       "subcategory": "Ores"
     },
@@ -3424,8 +3424,8 @@
       "id": 1601,
       "name": "Diamond",
       "quantity": 1237,
-      "ge_price": 1749,
-      "total_value": 2163513,
+      "ge_price": 1743,
+      "total_value": 2156091,
       "category": "Skilling",
       "subcategory": "Gems"
     },
@@ -3433,8 +3433,8 @@
       "id": 2357,
       "name": "Gold bar",
       "quantity": 8863,
-      "ge_price": 103,
-      "total_value": 912889,
+      "ge_price": 100,
+      "total_value": 886300,
       "category": "Skilling",
       "subcategory": "Bars"
     },
@@ -3442,8 +3442,8 @@
       "id": 449,
       "name": "Adamantite ore",
       "quantity": 1054,
-      "ge_price": 533,
-      "total_value": 561782,
+      "ge_price": 530,
+      "total_value": 558620,
       "category": "Skilling",
       "subcategory": "Ores"
     },
@@ -3451,8 +3451,8 @@
       "id": 2351,
       "name": "Iron bar",
       "quantity": 961,
-      "ge_price": 187,
-      "total_value": 179707,
+      "ge_price": 190,
+      "total_value": 182590,
       "category": "Skilling",
       "subcategory": "Bars"
     },
@@ -3469,8 +3469,8 @@
       "id": 1513,
       "name": "Magic logs",
       "quantity": 607,
-      "ge_price": 1121,
-      "total_value": 680447,
+      "ge_price": 1124,
+      "total_value": 682268,
       "category": "Skilling",
       "subcategory": "Logs"
     },
@@ -3496,8 +3496,8 @@
       "id": 1643,
       "name": "Diamond ring",
       "quantity": 62,
-      "ge_price": 2118,
-      "total_value": 131316,
+      "ge_price": 2079,
+      "total_value": 128898,
       "category": "Skilling",
       "subcategory": "Gems"
     },
@@ -3523,8 +3523,8 @@
       "id": 1635,
       "name": "Gold ring",
       "quantity": 396,
-      "ge_price": 153,
-      "total_value": 60588,
+      "ge_price": 147,
+      "total_value": 58212,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -3532,8 +3532,8 @@
       "id": 1737,
       "name": "Wool",
       "quantity": 4,
-      "ge_price": 22,
-      "total_value": 88,
+      "ge_price": 24,
+      "total_value": 96,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -3559,8 +3559,8 @@
       "id": 36,
       "name": "Candle",
       "quantity": 7,
-      "ge_price": 634,
-      "total_value": 4438,
+      "ge_price": 782,
+      "total_value": 5474,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -3568,8 +3568,8 @@
       "id": 970,
       "name": "Papyrus",
       "quantity": 2,
-      "ge_price": 137,
-      "total_value": 274,
+      "ge_price": 123,
+      "total_value": 246,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -3577,8 +3577,8 @@
       "id": 8790,
       "name": "Bolt of cloth",
       "quantity": 2,
-      "ge_price": 422,
-      "total_value": 844,
+      "ge_price": 468,
+      "total_value": 936,
       "category": "Ammunition",
       "subcategory": "Bolts"
     },
@@ -3586,8 +3586,8 @@
       "id": 6055,
       "name": "Weeds",
       "quantity": 417,
-      "ge_price": 143,
-      "total_value": 59631,
+      "ge_price": 167,
+      "total_value": 69639,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -3640,8 +3640,8 @@
       "id": 1607,
       "name": "Sapphire",
       "quantity": 4183,
-      "ge_price": 281,
-      "total_value": 1175423,
+      "ge_price": 280,
+      "total_value": 1171240,
       "category": "Skilling",
       "subcategory": "Gems"
     },
@@ -3676,8 +3676,8 @@
       "id": 3325,
       "name": "Vampyre dust",
       "quantity": 16,
-      "ge_price": 1382,
-      "total_value": 22112,
+      "ge_price": 1412,
+      "total_value": 22592,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -3694,8 +3694,8 @@
       "id": 960,
       "name": "Plank",
       "quantity": 591,
-      "ge_price": 158,
-      "total_value": 93378,
+      "ge_price": 157,
+      "total_value": 92787,
       "category": "Skilling",
       "subcategory": "Planks"
     },
@@ -3703,8 +3703,8 @@
       "id": 8782,
       "name": "Mahogany plank",
       "quantity": 754,
-      "ge_price": 1864,
-      "total_value": 1405456,
+      "ge_price": 1867,
+      "total_value": 1407718,
       "category": "Skilling",
       "subcategory": "Planks"
     },
@@ -3712,8 +3712,8 @@
       "id": 45,
       "name": "Opal bolt tips",
       "quantity": 82,
-      "ge_price": 32,
-      "total_value": 2624,
+      "ge_price": 31,
+      "total_value": 2542,
       "category": "Ammunition",
       "subcategory": "Bolts"
     },
@@ -3721,8 +3721,8 @@
       "id": 1639,
       "name": "Emerald ring",
       "quantity": 101,
-      "ge_price": 726,
-      "total_value": 73326,
+      "ge_price": 727,
+      "total_value": 73427,
       "category": "Skilling",
       "subcategory": "Gems"
     },
@@ -3757,8 +3757,8 @@
       "id": 1734,
       "name": "Thread",
       "quantity": 32,
-      "ge_price": 7,
-      "total_value": 224,
+      "ge_price": 8,
+      "total_value": 256,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -3775,8 +3775,8 @@
       "id": 10810,
       "name": "Arctic pine logs",
       "quantity": 213,
-      "ge_price": 536,
-      "total_value": 114168,
+      "ge_price": 521,
+      "total_value": 110973,
       "category": "Skilling",
       "subcategory": "Logs"
     },
@@ -3784,8 +3784,8 @@
       "id": 2353,
       "name": "Steel bar",
       "quantity": 3,
-      "ge_price": 543,
-      "total_value": 1629,
+      "ge_price": 554,
+      "total_value": 1662,
       "category": "Skilling",
       "subcategory": "Bars"
     },
@@ -3793,8 +3793,8 @@
       "id": 2359,
       "name": "Mithril bar",
       "quantity": 904,
-      "ge_price": 916,
-      "total_value": 828064,
+      "ge_price": 914,
+      "total_value": 826256,
       "category": "Skilling",
       "subcategory": "Bars"
     },
@@ -3802,8 +3802,8 @@
       "id": 8778,
       "name": "Oak plank",
       "quantity": 3465,
-      "ge_price": 378,
-      "total_value": 1309770,
+      "ge_price": 382,
+      "total_value": 1323630,
       "category": "Skilling",
       "subcategory": "Planks"
     },
@@ -3811,8 +3811,8 @@
       "id": 1749,
       "name": "Red dragonhide",
       "quantity": 33,
-      "ge_price": 2026,
-      "total_value": 66858,
+      "ge_price": 2027,
+      "total_value": 66891,
       "category": "Skilling",
       "subcategory": "Hides & Leather"
     },
@@ -3829,8 +3829,8 @@
       "id": 2361,
       "name": "Adamantite bar",
       "quantity": 181,
-      "ge_price": 1804,
-      "total_value": 326524,
+      "ge_price": 1796,
+      "total_value": 325076,
       "category": "Skilling",
       "subcategory": "Bars"
     },
@@ -3838,8 +3838,8 @@
       "id": 2363,
       "name": "Runite bar",
       "quantity": 227,
-      "ge_price": 12270,
-      "total_value": 2785290,
+      "ge_price": 12250,
+      "total_value": 2780750,
       "category": "Skilling",
       "subcategory": "Bars"
     },
@@ -3847,8 +3847,8 @@
       "id": 8780,
       "name": "Teak plank",
       "quantity": 224,
-      "ge_price": 730,
-      "total_value": 163520,
+      "ge_price": 728,
+      "total_value": 163072,
       "category": "Skilling",
       "subcategory": "Planks"
     },
@@ -3874,8 +3874,8 @@
       "id": 11237,
       "name": "Dragon arrowtips",
       "quantity": 1274,
-      "ge_price": 1865,
-      "total_value": 2376010,
+      "ge_price": 1862,
+      "total_value": 2372188,
       "category": "Ammunition",
       "subcategory": "Arrows"
     },
@@ -3883,8 +3883,8 @@
       "id": 451,
       "name": "Runite ore",
       "quantity": 93,
-      "ge_price": 10155,
-      "total_value": 944415,
+      "ge_price": 10095,
+      "total_value": 938835,
       "category": "Skilling",
       "subcategory": "Ores"
     },
@@ -3892,8 +3892,8 @@
       "id": 5933,
       "name": "Willow branch",
       "quantity": 2,
-      "ge_price": 3599,
-      "total_value": 7198,
+      "ge_price": 3550,
+      "total_value": 7100,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -3937,8 +3937,8 @@
       "id": 1603,
       "name": "Ruby",
       "quantity": 1666,
-      "ge_price": 868,
-      "total_value": 1446088,
+      "ge_price": 874,
+      "total_value": 1456084,
       "category": "Skilling",
       "subcategory": "Gems"
     },
@@ -3946,8 +3946,8 @@
       "id": 11092,
       "name": "Diamond bracelet",
       "quantity": 44,
-      "ge_price": 2087,
-      "total_value": 91828,
+      "ge_price": 2115,
+      "total_value": 93060,
       "category": "Skilling",
       "subcategory": "Gems"
     },
@@ -3955,8 +3955,8 @@
       "id": 1662,
       "name": "Diamond necklace",
       "quantity": 32,
-      "ge_price": 2129,
-      "total_value": 68128,
+      "ge_price": 2097,
+      "total_value": 67104,
       "category": "Skilling",
       "subcategory": "Gems"
     },
@@ -3982,8 +3982,8 @@
       "id": 9463,
       "name": "Adamant crossbow (u)",
       "quantity": 6,
-      "ge_price": 825,
-      "total_value": 4950,
+      "ge_price": 927,
+      "total_value": 5562,
       "category": "Equipment",
       "subcategory": "Ranged Weapons"
     },
@@ -3991,8 +3991,8 @@
       "id": 11232,
       "name": "Dragon dart tip",
       "quantity": 218,
-      "ge_price": 1393,
-      "total_value": 303674,
+      "ge_price": 1401,
+      "total_value": 305418,
       "category": "Ammunition",
       "subcategory": "Other Ammo"
     },
@@ -4000,8 +4000,8 @@
       "id": 25769,
       "name": "Vile ashes",
       "quantity": 216,
-      "ge_price": 90,
-      "total_value": 19440,
+      "ge_price": 87,
+      "total_value": 18792,
       "category": "Skilling",
       "subcategory": "Ashes"
     },
@@ -4009,8 +4009,8 @@
       "id": 1391,
       "name": "Battlestaff",
       "quantity": 547,
-      "ge_price": 8135,
-      "total_value": 4449845,
+      "ge_price": 8210,
+      "total_value": 4490870,
       "category": "Equipment",
       "subcategory": "Magic Weapons"
     },
@@ -4018,8 +4018,8 @@
       "id": 1739,
       "name": "Cowhide",
       "quantity": 37,
-      "ge_price": 164,
-      "total_value": 6068,
+      "ge_price": 166,
+      "total_value": 6142,
       "category": "Skilling",
       "subcategory": "Hides & Leather"
     },
@@ -4027,8 +4027,8 @@
       "id": 536,
       "name": "Dragon bones",
       "quantity": 469,
-      "ge_price": 1558,
-      "total_value": 730702,
+      "ge_price": 1543,
+      "total_value": 723667,
       "category": "Skilling",
       "subcategory": "Bones"
     },
@@ -4036,8 +4036,8 @@
       "id": 526,
       "name": "Bones",
       "quantity": 1,
-      "ge_price": 34,
-      "total_value": 34,
+      "ge_price": 29,
+      "total_value": 29,
       "category": "Skilling",
       "subcategory": "Bones"
     },
@@ -4045,8 +4045,8 @@
       "id": 434,
       "name": "Clay",
       "quantity": 6,
-      "ge_price": 199,
-      "total_value": 1194,
+      "ge_price": 207,
+      "total_value": 1242,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -4063,8 +4063,8 @@
       "id": 532,
       "name": "Big bones",
       "quantity": 415,
-      "ge_price": 295,
-      "total_value": 122425,
+      "ge_price": 281,
+      "total_value": 116615,
       "category": "Skilling",
       "subcategory": "Bones"
     },
@@ -4072,8 +4072,8 @@
       "id": 10101,
       "name": "Tatty kyatt fur",
       "quantity": 6,
-      "ge_price": 15,
-      "total_value": 90,
+      "ge_price": 29,
+      "total_value": 174,
       "category": "Skilling",
       "subcategory": "Hunter"
     },
@@ -4108,8 +4108,8 @@
       "id": 29311,
       "name": "Hunter spear tips",
       "quantity": 777,
-      "ge_price": 3,
-      "total_value": 2331,
+      "ge_price": 2,
+      "total_value": 1554,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -4252,8 +4252,8 @@
       "id": 21504,
       "name": "Giant seaweed",
       "quantity": 153,
-      "ge_price": 216,
-      "total_value": 33048,
+      "ge_price": 214,
+      "total_value": 32742,
       "category": "Skilling",
       "subcategory": "Farming"
     },
@@ -4333,8 +4333,8 @@
       "id": 10127,
       "name": "Dashing kebbit fur",
       "quantity": 89,
-      "ge_price": 57,
-      "total_value": 5073,
+      "ge_price": 74,
+      "total_value": 6586,
       "category": "Skilling",
       "subcategory": "Hunter"
     },
@@ -4387,8 +4387,8 @@
       "id": 1605,
       "name": "Emerald",
       "quantity": 3147,
-      "ge_price": 505,
-      "total_value": 1589235,
+      "ge_price": 510,
+      "total_value": 1604970,
       "category": "Skilling",
       "subcategory": "Gems"
     },
@@ -4432,8 +4432,8 @@
       "id": 1823,
       "name": "Waterskin(4)",
       "quantity": 16,
-      "ge_price": 198,
-      "total_value": 3168,
+      "ge_price": 238,
+      "total_value": 3808,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -4441,8 +4441,8 @@
       "id": 1941,
       "name": "Swamp paste",
       "quantity": 1655,
-      "ge_price": 22,
-      "total_value": 36410,
+      "ge_price": 18,
+      "total_value": 29790,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -4450,8 +4450,8 @@
       "id": 3239,
       "name": "Bark",
       "quantity": 4,
-      "ge_price": 117,
-      "total_value": 468,
+      "ge_price": 106,
+      "total_value": 424,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -4495,8 +4495,8 @@
       "id": 21622,
       "name": "Volcanic ash",
       "quantity": 173,
-      "ge_price": 102,
-      "total_value": 17646,
+      "ge_price": 103,
+      "total_value": 17819,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -4504,8 +4504,8 @@
       "id": 1783,
       "name": "Bucket of sand",
       "quantity": 5,
-      "ge_price": 12,
-      "total_value": 60,
+      "ge_price": 15,
+      "total_value": 75,
       "category": "Miscellaneous",
       "subcategory": "Containers"
     },
@@ -4522,8 +4522,8 @@
       "id": 13484,
       "name": "Ensouled troll head",
       "quantity": 68,
-      "ge_price": 571,
-      "total_value": 38828,
+      "ge_price": 615,
+      "total_value": 41820,
       "category": "Slayer",
       "subcategory": "Ensouled Heads"
     },
@@ -4549,8 +4549,8 @@
       "id": 5341,
       "name": "Rake",
       "quantity": 1,
-      "ge_price": 147,
-      "total_value": 147,
+      "ge_price": 134,
+      "total_value": 134,
       "category": "Miscellaneous",
       "subcategory": "Tools"
     },
@@ -4567,8 +4567,8 @@
       "id": 6333,
       "name": "Teak logs",
       "quantity": 834,
-      "ge_price": 123,
-      "total_value": 102582,
+      "ge_price": 122,
+      "total_value": 101748,
       "category": "Skilling",
       "subcategory": "Logs"
     },
@@ -4594,8 +4594,8 @@
       "id": 22595,
       "name": "Efh salt",
       "quantity": 19,
-      "ge_price": 85,
-      "total_value": 1615,
+      "ge_price": 100,
+      "total_value": 1900,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -4612,8 +4612,8 @@
       "id": 22597,
       "name": "Urt salt",
       "quantity": 2,
-      "ge_price": 120,
-      "total_value": 240,
+      "ge_price": 114,
+      "total_value": 228,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -4621,8 +4621,8 @@
       "id": 22603,
       "name": "Basalt",
       "quantity": 3,
-      "ge_price": 630,
-      "total_value": 1890,
+      "ge_price": 646,
+      "total_value": 1938,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -4639,8 +4639,8 @@
       "id": 19582,
       "name": "Dragon javelin tips",
       "quantity": 2183,
-      "ge_price": 982,
-      "total_value": 2143706,
+      "ge_price": 942,
+      "total_value": 2056386,
       "category": "Ammunition",
       "subcategory": "Other Ammo"
     },
@@ -4648,8 +4648,8 @@
       "id": 19601,
       "name": "Ballista spring",
       "quantity": 1,
-      "ge_price": 29314,
-      "total_value": 29314,
+      "ge_price": 28315,
+      "total_value": 28315,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -4666,8 +4666,8 @@
       "id": 19592,
       "name": "Ballista limbs",
       "quantity": 3,
-      "ge_price": 32500,
-      "total_value": 97500,
+      "ge_price": 31933,
+      "total_value": 95799,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -4684,8 +4684,8 @@
       "id": 1987,
       "name": "Grapes",
       "quantity": 99,
-      "ge_price": 79,
-      "total_value": 7821,
+      "ge_price": 80,
+      "total_value": 7920,
       "category": "Food",
       "subcategory": "Fruit"
     },
@@ -4711,8 +4711,8 @@
       "id": 11932,
       "name": "Malediction shard 2",
       "quantity": 1,
-      "ge_price": 388842,
-      "total_value": 388842,
+      "ge_price": 389152,
+      "total_value": 389152,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -4720,8 +4720,8 @@
       "id": 20238,
       "name": "Charge dragonstone jewellery scroll",
       "quantity": 32,
-      "ge_price": 112,
-      "total_value": 3584,
+      "ge_price": 113,
+      "total_value": 3616,
       "category": "Skilling",
       "subcategory": "Gems"
     },
@@ -4747,8 +4747,8 @@
       "id": 2355,
       "name": "Silver bar",
       "quantity": 470,
-      "ge_price": 140,
-      "total_value": 65800,
+      "ge_price": 137,
+      "total_value": 64390,
       "category": "Skilling",
       "subcategory": "Bars"
     },
@@ -4756,8 +4756,8 @@
       "id": 21143,
       "name": "Dodgy necklace",
       "quantity": 101,
-      "ge_price": 1569,
-      "total_value": 158469,
+      "ge_price": 1549,
+      "total_value": 156449,
       "category": "Equipment",
       "subcategory": "Amulets & Necklaces"
     },
@@ -4810,8 +4810,8 @@
       "id": 31045,
       "name": "Bale of flax",
       "quantity": 321,
-      "ge_price": 70,
-      "total_value": 22470,
+      "ge_price": 75,
+      "total_value": 24075,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -4855,8 +4855,8 @@
       "id": 6051,
       "name": "Magic roots",
       "quantity": 4,
-      "ge_price": 1857,
-      "total_value": 7428,
+      "ge_price": 1808,
+      "total_value": 7232,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -4864,8 +4864,8 @@
       "id": 6812,
       "name": "Wyvern bones",
       "quantity": 77,
-      "ge_price": 1665,
-      "total_value": 128205,
+      "ge_price": 1616,
+      "total_value": 124432,
       "category": "Skilling",
       "subcategory": "Bones"
     },
@@ -4882,8 +4882,8 @@
       "id": 21930,
       "name": "Dragon bolts (unf)",
       "quantity": 77,
-      "ge_price": 3096,
-      "total_value": 238392,
+      "ge_price": 3131,
+      "total_value": 241087,
       "category": "Ammunition",
       "subcategory": "Bolts"
     },
@@ -4891,8 +4891,8 @@
       "id": 9190,
       "name": "Emerald bolt tips",
       "quantity": 28,
-      "ge_price": 55,
-      "total_value": 1540,
+      "ge_price": 57,
+      "total_value": 1596,
       "category": "Ammunition",
       "subcategory": "Bolts"
     },
@@ -4900,8 +4900,8 @@
       "id": 22124,
       "name": "Superior dragon bones",
       "quantity": 24,
-      "ge_price": 22104,
-      "total_value": 530496,
+      "ge_price": 21700,
+      "total_value": 520800,
       "category": "Skilling",
       "subcategory": "Bones"
     },
@@ -4909,8 +4909,8 @@
       "id": 1751,
       "name": "Blue dragonhide",
       "quantity": 12,
-      "ge_price": 1673,
-      "total_value": 20076,
+      "ge_price": 1648,
+      "total_value": 19776,
       "category": "Skilling",
       "subcategory": "Hides & Leather"
     },
@@ -4963,8 +4963,8 @@
       "id": 1929,
       "name": "Bucket of water",
       "quantity": 2,
-      "ge_price": 39,
-      "total_value": 78,
+      "ge_price": 33,
+      "total_value": 66,
       "category": "Miscellaneous",
       "subcategory": "Containers"
     },
@@ -4972,8 +4972,8 @@
       "id": 1619,
       "name": "Uncut ruby",
       "quantity": 164,
-      "ge_price": 1111,
-      "total_value": 182204,
+      "ge_price": 1101,
+      "total_value": 180564,
       "category": "Skilling",
       "subcategory": "Gems"
     },
@@ -4981,8 +4981,8 @@
       "id": 1621,
       "name": "Uncut emerald",
       "quantity": 631,
-      "ge_price": 522,
-      "total_value": 329382,
+      "ge_price": 518,
+      "total_value": 326858,
       "category": "Skilling",
       "subcategory": "Gems"
     },
@@ -4990,8 +4990,8 @@
       "id": 1617,
       "name": "Uncut diamond",
       "quantity": 113,
-      "ge_price": 2557,
-      "total_value": 288941,
+      "ge_price": 2528,
+      "total_value": 285664,
       "category": "Skilling",
       "subcategory": "Gems"
     },
@@ -5017,8 +5017,8 @@
       "id": 25778,
       "name": "Infernal ashes",
       "quantity": 897,
-      "ge_price": 2724,
-      "total_value": 2443428,
+      "ge_price": 2665,
+      "total_value": 2390505,
       "category": "Skilling",
       "subcategory": "Ashes"
     },
@@ -5035,8 +5035,8 @@
       "id": 1623,
       "name": "Uncut sapphire",
       "quantity": 1061,
-      "ge_price": 288,
-      "total_value": 305568,
+      "ge_price": 302,
+      "total_value": 320422,
       "category": "Skilling",
       "subcategory": "Gems"
     },
@@ -5062,8 +5062,8 @@
       "id": 13431,
       "name": "Sandworms",
       "quantity": 4303,
-      "ge_price": 102,
-      "total_value": 438906,
+      "ge_price": 104,
+      "total_value": 447512,
       "category": "Skilling",
       "subcategory": "Fishing"
     },
@@ -5071,8 +5071,8 @@
       "id": 1658,
       "name": "Emerald necklace",
       "quantity": 11,
-      "ge_price": 746,
-      "total_value": 8206,
+      "ge_price": 757,
+      "total_value": 8327,
       "category": "Skilling",
       "subcategory": "Gems"
     },
@@ -5098,8 +5098,8 @@
       "id": 2509,
       "name": "Black dragon leather",
       "quantity": 2,
-      "ge_price": 2876,
-      "total_value": 5752,
+      "ge_price": 2871,
+      "total_value": 5742,
       "category": "Skilling",
       "subcategory": "Hides & Leather"
     },
@@ -5107,8 +5107,8 @@
       "id": 72,
       "name": "Magic shortbow (u)",
       "quantity": 171,
-      "ge_price": 762,
-      "total_value": 130302,
+      "ge_price": 759,
+      "total_value": 129789,
       "category": "Equipment",
       "subcategory": "Ranged Weapons"
     },
@@ -5116,8 +5116,8 @@
       "id": 53,
       "name": "Headless arrow",
       "quantity": 1,
-      "ge_price": 14,
-      "total_value": 14,
+      "ge_price": 13,
+      "total_value": 13,
       "category": "Ammunition",
       "subcategory": "Arrows"
     },
@@ -5125,8 +5125,8 @@
       "id": 1747,
       "name": "Black dragonhide",
       "quantity": 19,
-      "ge_price": 2680,
-      "total_value": 50920,
+      "ge_price": 2673,
+      "total_value": 50787,
       "category": "Skilling",
       "subcategory": "Hides & Leather"
     },
@@ -5134,8 +5134,8 @@
       "id": 70,
       "name": "Magic longbow (u)",
       "quantity": 2,
-      "ge_price": 1140,
-      "total_value": 2280,
+      "ge_price": 1117,
+      "total_value": 2234,
       "category": "Equipment",
       "subcategory": "Ranged Weapons"
     },
@@ -5170,8 +5170,8 @@
       "id": 8794,
       "name": "Saw",
       "quantity": 1,
-      "ge_price": 313,
-      "total_value": 313,
+      "ge_price": 319,
+      "total_value": 319,
       "category": "Miscellaneous",
       "subcategory": "Tools"
     },
@@ -5188,8 +5188,8 @@
       "id": 1615,
       "name": "Dragonstone",
       "quantity": 9,
-      "ge_price": 11417,
-      "total_value": 102753,
+      "ge_price": 11399,
+      "total_value": 102591,
       "category": "Skilling",
       "subcategory": "Gems"
     },
@@ -5206,8 +5206,8 @@
       "id": 401,
       "name": "Seaweed",
       "quantity": 2750,
-      "ge_price": 6,
-      "total_value": 16500,
+      "ge_price": 5,
+      "total_value": 13750,
       "category": "Skilling",
       "subcategory": "Farming"
     },
@@ -5224,8 +5224,8 @@
       "id": 4824,
       "name": "Rune nails",
       "quantity": 281,
-      "ge_price": 801,
-      "total_value": 225081,
+      "ge_price": 807,
+      "total_value": 226767,
       "category": "Skilling",
       "subcategory": "Construction"
     },
@@ -5251,8 +5251,8 @@
       "id": 11076,
       "name": "Emerald bracelet",
       "quantity": 33,
-      "ge_price": 867,
-      "total_value": 28611,
+      "ge_price": 853,
+      "total_value": 28149,
       "category": "Skilling",
       "subcategory": "Gems"
     },
@@ -5269,8 +5269,8 @@
       "id": 2347,
       "name": "Hammer",
       "quantity": 1,
-      "ge_price": 76,
-      "total_value": 76,
+      "ge_price": 94,
+      "total_value": 94,
       "category": "Miscellaneous",
       "subcategory": "Tools"
     },
@@ -5287,8 +5287,8 @@
       "id": 1625,
       "name": "Uncut opal",
       "quantity": 128,
-      "ge_price": 65,
-      "total_value": 8320,
+      "ge_price": 66,
+      "total_value": 8448,
       "category": "Skilling",
       "subcategory": "Gems"
     },
@@ -5350,8 +5350,8 @@
       "id": 442,
       "name": "Silver ore",
       "quantity": 818,
-      "ge_price": 46,
-      "total_value": 37628,
+      "ge_price": 45,
+      "total_value": 36810,
       "category": "Skilling",
       "subcategory": "Ores"
     },
@@ -5368,8 +5368,8 @@
       "id": 1611,
       "name": "Jade",
       "quantity": 312,
-      "ge_price": 300,
-      "total_value": 93600,
+      "ge_price": 281,
+      "total_value": 87672,
       "category": "Skilling",
       "subcategory": "Gems"
     },
@@ -5440,8 +5440,8 @@
       "id": 440,
       "name": "Iron ore",
       "quantity": 1296,
-      "ge_price": 79,
-      "total_value": 102384,
+      "ge_price": 80,
+      "total_value": 103680,
       "category": "Skilling",
       "subcategory": "Ores"
     },
@@ -5449,8 +5449,8 @@
       "id": 31729,
       "name": "Frost dragon bones",
       "quantity": 152,
-      "ge_price": 5257,
-      "total_value": 799064,
+      "ge_price": 5231,
+      "total_value": 795112,
       "category": "Skilling",
       "subcategory": "Bones"
     },
@@ -5458,8 +5458,8 @@
       "id": 9194,
       "name": "Onyx bolt tips",
       "quantity": 193,
-      "ge_price": 8175,
-      "total_value": 1577775,
+      "ge_price": 8155,
+      "total_value": 1573915,
       "category": "Ammunition",
       "subcategory": "Bolts"
     },
@@ -5494,8 +5494,8 @@
       "id": 11943,
       "name": "Lava dragon bones",
       "quantity": 1,
-      "ge_price": 2491,
-      "total_value": 2491,
+      "ge_price": 2531,
+      "total_value": 2531,
       "category": "Skilling",
       "subcategory": "Bones"
     },
@@ -5503,8 +5503,8 @@
       "id": 32307,
       "name": "Fine fish offcuts",
       "quantity": 117,
-      "ge_price": 623,
-      "total_value": 72891,
+      "ge_price": 613,
+      "total_value": 71721,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -5539,8 +5539,8 @@
       "id": 25775,
       "name": "Abyssal ashes",
       "quantity": 18,
-      "ge_price": 1359,
-      "total_value": 24462,
+      "ge_price": 1328,
+      "total_value": 23904,
       "category": "Skilling",
       "subcategory": "Ashes"
     },
@@ -5548,8 +5548,8 @@
       "id": 11940,
       "name": "Dark fishing bait",
       "quantity": 280,
-      "ge_price": 2,
-      "total_value": 560,
+      "ge_price": 3,
+      "total_value": 840,
       "category": "Skilling",
       "subcategory": "Fishing"
     },
@@ -5557,8 +5557,8 @@
       "id": 5075,
       "name": "Bird nest",
       "quantity": 37,
-      "ge_price": 4935,
-      "total_value": 182595,
+      "ge_price": 4934,
+      "total_value": 182558,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -5575,8 +5575,8 @@
       "id": 13496,
       "name": "Ensouled bloodveld head",
       "quantity": 22,
-      "ge_price": 968,
-      "total_value": 21296,
+      "ge_price": 959,
+      "total_value": 21098,
       "category": "Slayer",
       "subcategory": "Ensouled Heads"
     },
@@ -5584,8 +5584,8 @@
       "id": 44,
       "name": "Rune arrowtips",
       "quantity": 61,
-      "ge_price": 303,
-      "total_value": 18483,
+      "ge_price": 296,
+      "total_value": 18056,
       "category": "Ammunition",
       "subcategory": "Arrows"
     },
@@ -5602,8 +5602,8 @@
       "id": 13475,
       "name": "Ensouled giant head",
       "quantity": 13,
-      "ge_price": 238,
-      "total_value": 3094,
+      "ge_price": 120,
+      "total_value": 1560,
       "category": "Slayer",
       "subcategory": "Ensouled Heads"
     },
@@ -5638,8 +5638,8 @@
       "id": 9381,
       "name": "Runite bolts (unf)",
       "quantity": 240,
-      "ge_price": 244,
-      "total_value": 58560,
+      "ge_price": 253,
+      "total_value": 60720,
       "category": "Ammunition",
       "subcategory": "Bolts"
     },
@@ -5692,8 +5692,8 @@
       "id": 22786,
       "name": "Hydra bones",
       "quantity": 1,
-      "ge_price": 6499,
-      "total_value": 6499,
+      "ge_price": 6437,
+      "total_value": 6437,
       "category": "Skilling",
       "subcategory": "Bones"
     },
@@ -5701,8 +5701,8 @@
       "id": 11920,
       "name": "Dragon pickaxe",
       "quantity": 1,
-      "ge_price": 409690,
-      "total_value": 409690,
+      "ge_price": 405095,
+      "total_value": 405095,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -5719,8 +5719,8 @@
       "id": 1511,
       "name": "Logs",
       "quantity": 10,
-      "ge_price": 28,
-      "total_value": 280,
+      "ge_price": 27,
+      "total_value": 270,
       "category": "Skilling",
       "subcategory": "Logs"
     },
@@ -5746,8 +5746,8 @@
       "id": 569,
       "name": "Fire orb",
       "quantity": 56,
-      "ge_price": 760,
-      "total_value": 42560,
+      "ge_price": 739,
+      "total_value": 41384,
       "category": "Skilling",
       "subcategory": "Crafting"
     },
@@ -6016,8 +6016,8 @@
       "id": 7225,
       "name": "Iron spit",
       "quantity": 1,
-      "ge_price": 169,
-      "total_value": 169,
+      "ge_price": 120,
+      "total_value": 120,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -6025,8 +6025,8 @@
       "id": 2866,
       "name": "Ogre arrow",
       "quantity": 45,
-      "ge_price": 263,
-      "total_value": 11835,
+      "ge_price": 246,
+      "total_value": 11070,
       "category": "Ammunition",
       "subcategory": "Arrows"
     },
@@ -6142,8 +6142,8 @@
       "id": 6306,
       "name": "Trading sticks",
       "quantity": 77,
-      "ge_price": 6,
-      "total_value": 462,
+      "ge_price": 5,
+      "total_value": 385,
       "category": "Currency",
       "subcategory": "Coins & Tokens"
     },
@@ -6169,8 +6169,8 @@
       "id": 3216,
       "name": "Barrel",
       "quantity": 2,
-      "ge_price": 858,
-      "total_value": 1716,
+      "ge_price": 867,
+      "total_value": 1734,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -6223,8 +6223,8 @@
       "id": 1887,
       "name": "Cake tin",
       "quantity": 1,
-      "ge_price": 109,
-      "total_value": 109,
+      "ge_price": 118,
+      "total_value": 118,
       "category": "Food",
       "subcategory": "Other Food"
     },
@@ -6232,8 +6232,8 @@
       "id": 2007,
       "name": "Spice",
       "quantity": 724,
-      "ge_price": 76,
-      "total_value": 55024,
+      "ge_price": 72,
+      "total_value": 52128,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -6250,8 +6250,8 @@
       "id": 1923,
       "name": "Bowl",
       "quantity": 1085,
-      "ge_price": 16,
-      "total_value": 17360,
+      "ge_price": 18,
+      "total_value": 19530,
       "category": "Miscellaneous",
       "subcategory": "Containers"
     },
@@ -6385,8 +6385,8 @@
       "id": 890,
       "name": "Adamant arrow",
       "quantity": 39034,
-      "ge_price": 88,
-      "total_value": 3434992,
+      "ge_price": 87,
+      "total_value": 3395958,
       "category": "Ammunition",
       "subcategory": "Arrows"
     },
@@ -6412,8 +6412,8 @@
       "id": 11212,
       "name": "Dragon arrow",
       "quantity": 4357,
-      "ge_price": 1926,
-      "total_value": 8391582,
+      "ge_price": 1921,
+      "total_value": 8369797,
       "category": "Ammunition",
       "subcategory": "Arrows"
     },
@@ -6421,8 +6421,8 @@
       "id": 25578,
       "name": "Soaked page",
       "quantity": 24,
-      "ge_price": 1988,
-      "total_value": 47712,
+      "ge_price": 2024,
+      "total_value": 48576,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -6430,8 +6430,8 @@
       "id": 20718,
       "name": "Burnt page",
       "quantity": 24,
-      "ge_price": 8779,
-      "total_value": 210696,
+      "ge_price": 8851,
+      "total_value": 212424,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -6439,8 +6439,8 @@
       "id": 30068,
       "name": "Soiled page",
       "quantity": 4,
-      "ge_price": 1194,
-      "total_value": 4776,
+      "ge_price": 1189,
+      "total_value": 4756,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -6457,8 +6457,8 @@
       "id": 10826,
       "name": "Neitiznot shield",
       "quantity": 1,
-      "ge_price": 2872,
-      "total_value": 2872,
+      "ge_price": 2815,
+      "total_value": 2815,
       "category": "Equipment",
       "subcategory": "Shields"
     },
@@ -6466,8 +6466,8 @@
       "id": 4156,
       "name": "Mirror shield",
       "quantity": 1,
-      "ge_price": 12623,
-      "total_value": 12623,
+      "ge_price": 9979,
+      "total_value": 9979,
       "category": "Slayer",
       "subcategory": "Slayer Equipment"
     },
@@ -6475,8 +6475,8 @@
       "id": 10033,
       "name": "Chinchompa",
       "quantity": 51,
-      "ge_price": 641,
-      "total_value": 32691,
+      "ge_price": 640,
+      "total_value": 32640,
       "category": "Ammunition",
       "subcategory": "Other Ammo"
     },
@@ -6484,8 +6484,8 @@
       "id": 869,
       "name": "Black knife",
       "quantity": 776,
-      "ge_price": 49,
-      "total_value": 38024,
+      "ge_price": 47,
+      "total_value": 36472,
       "category": "Miscellaneous",
       "subcategory": "Tools"
     },
@@ -6493,8 +6493,8 @@
       "id": 809,
       "name": "Mithril dart",
       "quantity": 1345,
-      "ge_price": 7,
-      "total_value": 9415,
+      "ge_price": 12,
+      "total_value": 16140,
       "category": "Ammunition",
       "subcategory": "Other Ammo"
     },
@@ -6502,8 +6502,8 @@
       "id": 868,
       "name": "Rune knife",
       "quantity": 296,
-      "ge_price": 147,
-      "total_value": 43512,
+      "ge_price": 142,
+      "total_value": 42032,
       "category": "Miscellaneous",
       "subcategory": "Tools"
     },
@@ -6538,8 +6538,8 @@
       "id": 9419,
       "name": "Mith grapple",
       "quantity": 4,
-      "ge_price": 1998,
-      "total_value": 7992,
+      "ge_price": 2345,
+      "total_value": 9380,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -6556,8 +6556,8 @@
       "id": 867,
       "name": "Adamant knife",
       "quantity": 135,
-      "ge_price": 358,
-      "total_value": 48330,
+      "ge_price": 365,
+      "total_value": 49275,
       "category": "Miscellaneous",
       "subcategory": "Tools"
     },
@@ -6574,8 +6574,8 @@
       "id": 233,
       "name": "Pestle and mortar",
       "quantity": 4,
-      "ge_price": 56,
-      "total_value": 224,
+      "ge_price": 74,
+      "total_value": 296,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -6655,8 +6655,8 @@
       "id": 7331,
       "name": "Blue firelighter",
       "quantity": 29,
-      "ge_price": 50,
-      "total_value": 1450,
+      "ge_price": 64,
+      "total_value": 1856,
       "category": "Clue Items",
       "subcategory": "Clue Rewards"
     },
@@ -6664,8 +6664,8 @@
       "id": 1305,
       "name": "Dragon longsword",
       "quantity": 4,
-      "ge_price": 59099,
-      "total_value": 236396,
+      "ge_price": 59199,
+      "total_value": 236796,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -6745,8 +6745,8 @@
       "id": 24607,
       "name": "Blighted ancient ice sack",
       "quantity": 38,
-      "ge_price": 173,
-      "total_value": 6574,
+      "ge_price": 172,
+      "total_value": 6536,
       "category": "Miscellaneous",
       "subcategory": "Containers"
     },
@@ -6799,8 +6799,8 @@
       "id": 7330,
       "name": "Green firelighter",
       "quantity": 103,
-      "ge_price": 100,
-      "total_value": 10300,
+      "ge_price": 52,
+      "total_value": 5356,
       "category": "Clue Items",
       "subcategory": "Clue Rewards"
     },
@@ -6808,8 +6808,8 @@
       "id": 10327,
       "name": "White firelighter",
       "quantity": 78,
-      "ge_price": 63,
-      "total_value": 4914,
+      "ge_price": 64,
+      "total_value": 4992,
       "category": "Clue Items",
       "subcategory": "Clue Rewards"
     },
@@ -6817,8 +6817,8 @@
       "id": 5531,
       "name": "Water tiara",
       "quantity": 1,
-      "ge_price": 206,
-      "total_value": 206,
+      "ge_price": 212,
+      "total_value": 212,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -6826,8 +6826,8 @@
       "id": 1407,
       "name": "Mystic earth staff",
       "quantity": 15,
-      "ge_price": 25193,
-      "total_value": 377895,
+      "ge_price": 25165,
+      "total_value": 377475,
       "category": "Equipment",
       "subcategory": "Magic Weapons"
     },
@@ -6835,8 +6835,8 @@
       "id": 7329,
       "name": "Red firelighter",
       "quantity": 119,
-      "ge_price": 62,
-      "total_value": 7378,
+      "ge_price": 63,
+      "total_value": 7497,
       "category": "Clue Items",
       "subcategory": "Clue Rewards"
     },
@@ -6889,8 +6889,8 @@
       "id": 1035,
       "name": "Zamorak monk top",
       "quantity": 1,
-      "ge_price": 804,
-      "total_value": 804,
+      "ge_price": 1068,
+      "total_value": 1068,
       "category": "Equipment",
       "subcategory": "Body Armor"
     },
@@ -6898,8 +6898,8 @@
       "id": 1478,
       "name": "Amulet of accuracy",
       "quantity": 1,
-      "ge_price": 2034,
-      "total_value": 2034,
+      "ge_price": 2099,
+      "total_value": 2099,
       "category": "Equipment",
       "subcategory": "Amulets & Necklaces"
     },
@@ -6934,8 +6934,8 @@
       "id": 542,
       "name": "Monk's robe",
       "quantity": 1,
-      "ge_price": 643,
-      "total_value": 643,
+      "ge_price": 644,
+      "total_value": 644,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -6952,8 +6952,8 @@
       "id": 4125,
       "name": "Black boots",
       "quantity": 1,
-      "ge_price": 669,
-      "total_value": 669,
+      "ge_price": 500,
+      "total_value": 500,
       "category": "Equipment",
       "subcategory": "Boots"
     },
@@ -6961,8 +6961,8 @@
       "id": 8882,
       "name": "Bone bolts",
       "quantity": 3306,
-      "ge_price": 5,
-      "total_value": 16530,
+      "ge_price": 4,
+      "total_value": 13224,
       "category": "Ammunition",
       "subcategory": "Bolts"
     },
@@ -6970,8 +6970,8 @@
       "id": 861,
       "name": "Magic shortbow",
       "quantity": 22,
-      "ge_price": 880,
-      "total_value": 19360,
+      "ge_price": 898,
+      "total_value": 19756,
       "category": "Equipment",
       "subcategory": "Ranged Weapons"
     },
@@ -6979,8 +6979,8 @@
       "id": 1033,
       "name": "Zamorak monk bottom",
       "quantity": 1,
-      "ge_price": 3178,
-      "total_value": 3178,
+      "ge_price": 3704,
+      "total_value": 3704,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -6988,8 +6988,8 @@
       "id": 10326,
       "name": "Purple firelighter",
       "quantity": 76,
-      "ge_price": 144,
-      "total_value": 10944,
+      "ge_price": 61,
+      "total_value": 4636,
       "category": "Clue Items",
       "subcategory": "Clue Rewards"
     },
@@ -7024,8 +7024,8 @@
       "id": 3107,
       "name": "Spiked boots",
       "quantity": 1,
-      "ge_price": 5950,
-      "total_value": 5950,
+      "ge_price": 6839,
+      "total_value": 6839,
       "category": "Food",
       "subcategory": "Cooked Fish"
     },
@@ -7042,8 +7042,8 @@
       "id": 544,
       "name": "Monk's robe top",
       "quantity": 1,
-      "ge_price": 732,
-      "total_value": 732,
+      "ge_price": 741,
+      "total_value": 741,
       "category": "Equipment",
       "subcategory": "Body Armor"
     },
@@ -7114,8 +7114,8 @@
       "id": 303,
       "name": "Small fishing net",
       "quantity": 1,
-      "ge_price": 82,
-      "total_value": 82,
+      "ge_price": 134,
+      "total_value": 134,
       "category": "Skilling",
       "subcategory": "Fishing"
     },
@@ -7123,8 +7123,8 @@
       "id": 1592,
       "name": "Ring mould",
       "quantity": 1,
-      "ge_price": 435,
-      "total_value": 435,
+      "ge_price": 381,
+      "total_value": 381,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -7132,8 +7132,8 @@
       "id": 1595,
       "name": "Amulet mould",
       "quantity": 1,
-      "ge_price": 197,
-      "total_value": 197,
+      "ge_price": 177,
+      "total_value": 177,
       "category": "Equipment",
       "subcategory": "Amulets & Necklaces"
     },
@@ -7168,8 +7168,8 @@
       "id": 11065,
       "name": "Bracelet mould",
       "quantity": 1,
-      "ge_price": 498,
-      "total_value": 498,
+      "ge_price": 286,
+      "total_value": 286,
       "category": "Equipment",
       "subcategory": "Bracelets"
     },
@@ -7177,8 +7177,8 @@
       "id": 1597,
       "name": "Necklace mould",
       "quantity": 1,
-      "ge_price": 636,
-      "total_value": 636,
+      "ge_price": 572,
+      "total_value": 572,
       "category": "Equipment",
       "subcategory": "Amulets & Necklaces"
     },
@@ -7186,8 +7186,8 @@
       "id": 5523,
       "name": "Tiara mould",
       "quantity": 1,
-      "ge_price": 11,
-      "total_value": 11,
+      "ge_price": 96,
+      "total_value": 96,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -7195,8 +7195,8 @@
       "id": 1733,
       "name": "Needle",
       "quantity": 4,
-      "ge_price": 10,
-      "total_value": 40,
+      "ge_price": 9,
+      "total_value": 36,
       "category": "Miscellaneous",
       "subcategory": "Tools"
     },
@@ -7222,8 +7222,8 @@
       "id": 10012,
       "name": "Butterfly jar",
       "quantity": 46,
-      "ge_price": 4,
-      "total_value": 184,
+      "ge_price": 7,
+      "total_value": 322,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -7267,8 +7267,8 @@
       "id": 311,
       "name": "Harpoon",
       "quantity": 3,
-      "ge_price": 31,
-      "total_value": 93,
+      "ge_price": 32,
+      "total_value": 96,
       "category": "Skilling",
       "subcategory": "Fishing"
     },
@@ -7303,8 +7303,8 @@
       "id": 10008,
       "name": "Box trap",
       "quantity": 6,
-      "ge_price": 76,
-      "total_value": 456,
+      "ge_price": 51,
+      "total_value": 306,
       "category": "Skilling",
       "subcategory": "Hunter"
     },
@@ -7330,8 +7330,8 @@
       "id": 975,
       "name": "Machete",
       "quantity": 1,
-      "ge_price": 962,
-      "total_value": 962,
+      "ge_price": 940,
+      "total_value": 940,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -7339,8 +7339,8 @@
       "id": 590,
       "name": "Tinderbox",
       "quantity": 3,
-      "ge_price": 37,
-      "total_value": 111,
+      "ge_price": 28,
+      "total_value": 84,
       "category": "Miscellaneous",
       "subcategory": "Tools"
     },
@@ -7384,8 +7384,8 @@
       "id": 6317,
       "name": "Red topaz machete",
       "quantity": 1,
-      "ge_price": 12100,
-      "total_value": 12100,
+      "ge_price": 15494,
+      "total_value": 15494,
       "category": "Skilling",
       "subcategory": "Gems"
     },
@@ -7447,8 +7447,8 @@
       "id": 1573,
       "name": "Doogle leaves",
       "quantity": 1,
-      "ge_price": 157,
-      "total_value": 157,
+      "ge_price": 176,
+      "total_value": 176,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -7501,8 +7501,8 @@
       "id": 4600,
       "name": "Willow blackjack",
       "quantity": 1,
-      "ge_price": 190,
-      "total_value": 190,
+      "ge_price": 1467,
+      "total_value": 1467,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -7546,8 +7546,8 @@
       "id": 10822,
       "name": "Yak-hide armour",
       "quantity": 1,
-      "ge_price": 3506,
-      "total_value": 3506,
+      "ge_price": 3256,
+      "total_value": 3256,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -7555,8 +7555,8 @@
       "id": 5529,
       "name": "Mind tiara",
       "quantity": 1,
-      "ge_price": 11,
-      "total_value": 11,
+      "ge_price": 23,
+      "total_value": 23,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -7591,8 +7591,8 @@
       "id": 21736,
       "name": "Granite gloves",
       "quantity": 1,
-      "ge_price": 149179,
-      "total_value": 149179,
+      "ge_price": 185000,
+      "total_value": 185000,
       "category": "Equipment",
       "subcategory": "Gloves"
     },
@@ -7627,8 +7627,8 @@
       "id": 23232,
       "name": "Tzhaar-ket-om ornament kit",
       "quantity": 1,
-      "ge_price": 6760,
-      "total_value": 6760,
+      "ge_price": 5967,
+      "total_value": 5967,
       "category": "Clue Items",
       "subcategory": "Clue Rewards"
     },
@@ -7645,8 +7645,8 @@
       "id": 6809,
       "name": "Granite legs",
       "quantity": 1,
-      "ge_price": 42745,
-      "total_value": 42745,
+      "ge_price": 42832,
+      "total_value": 42832,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -7789,8 +7789,8 @@
       "id": 22231,
       "name": "Dragon boots ornament kit",
       "quantity": 1,
-      "ge_price": 13056,
-      "total_value": 13056,
+      "ge_price": 14968,
+      "total_value": 14968,
       "category": "Clue Items",
       "subcategory": "Clue Rewards"
     },
@@ -7825,8 +7825,8 @@
       "id": 3828,
       "name": "Saradomin page 2",
       "quantity": 1,
-      "ge_price": 811,
-      "total_value": 811,
+      "ge_price": 301,
+      "total_value": 301,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -7852,8 +7852,8 @@
       "id": 3105,
       "name": "Climbing boots",
       "quantity": 14,
-      "ge_price": 797,
-      "total_value": 11158,
+      "ge_price": 681,
+      "total_value": 9534,
       "category": "Equipment",
       "subcategory": "Boots"
     },
@@ -7879,8 +7879,8 @@
       "id": 22994,
       "name": "Bottomless compost bucket",
       "quantity": 2,
-      "ge_price": 1211575,
-      "total_value": 2423150,
+      "ge_price": 1283442,
+      "total_value": 2566884,
       "category": "Skilling",
       "subcategory": "Farming"
     },
@@ -7888,8 +7888,8 @@
       "id": 2366,
       "name": "Shield left half",
       "quantity": 1,
-      "ge_price": 65374,
-      "total_value": 65374,
+      "ge_price": 66300,
+      "total_value": 66300,
       "category": "Equipment",
       "subcategory": "Shields"
     },
@@ -7906,8 +7906,8 @@
       "id": 1434,
       "name": "Dragon mace",
       "quantity": 2,
-      "ge_price": 29486,
-      "total_value": 58972,
+      "ge_price": 29551,
+      "total_value": 59102,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -7915,8 +7915,8 @@
       "id": 12478,
       "name": "Armadyl kiteshield",
       "quantity": 1,
-      "ge_price": 49500,
-      "total_value": 49500,
+      "ge_price": 49396,
+      "total_value": 49396,
       "category": "Equipment",
       "subcategory": "Shields"
     },
@@ -7933,8 +7933,8 @@
       "id": 20220,
       "name": "Holy blessing",
       "quantity": 1,
-      "ge_price": 8285,
-      "total_value": 8285,
+      "ge_price": 3218,
+      "total_value": 3218,
       "category": "Clue Items",
       "subcategory": "Clue Rewards"
     },
@@ -7951,8 +7951,8 @@
       "id": 4109,
       "name": "Mystic hat (light)",
       "quantity": 5,
-      "ge_price": 54445,
-      "total_value": 272225,
+      "ge_price": 54310,
+      "total_value": 271550,
       "category": "Equipment",
       "subcategory": "Helmets"
     },
@@ -7978,8 +7978,8 @@
       "id": 1724,
       "name": "Unholy symbol",
       "quantity": 10,
-      "ge_price": 95,
-      "total_value": 950,
+      "ge_price": 75,
+      "total_value": 750,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -7987,8 +7987,8 @@
       "id": 12514,
       "name": "Explorer backpack",
       "quantity": 1,
-      "ge_price": 13525,
-      "total_value": 13525,
+      "ge_price": 12889,
+      "total_value": 12889,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -8014,8 +8014,8 @@
       "id": 7399,
       "name": "Enchanted top",
       "quantity": 1,
-      "ge_price": 81299,
-      "total_value": 81299,
+      "ge_price": 76999,
+      "total_value": 76999,
       "category": "Equipment",
       "subcategory": "Body Armor"
     },
@@ -8023,8 +8023,8 @@
       "id": 21009,
       "name": "Dragon sword",
       "quantity": 1,
-      "ge_price": 713593,
-      "total_value": 713593,
+      "ge_price": 712274,
+      "total_value": 712274,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -8032,8 +8032,8 @@
       "id": 20849,
       "name": "Dragon thrownaxe",
       "quantity": 122,
-      "ge_price": 451,
-      "total_value": 55022,
+      "ge_price": 486,
+      "total_value": 59292,
       "category": "Ammunition",
       "subcategory": "Other Ammo"
     },
@@ -8041,8 +8041,8 @@
       "id": 4101,
       "name": "Mystic robe top (dark)",
       "quantity": 1,
-      "ge_price": 74656,
-      "total_value": 74656,
+      "ge_price": 72331,
+      "total_value": 72331,
       "category": "Equipment",
       "subcategory": "Body Armor"
     },
@@ -8068,8 +8068,8 @@
       "id": 2663,
       "name": "Saradomin platelegs",
       "quantity": 1,
-      "ge_price": 41762,
-      "total_value": 41762,
+      "ge_price": 44097,
+      "total_value": 44097,
       "category": "Equipment",
       "subcategory": "Leg Armor"
     },
@@ -8095,8 +8095,8 @@
       "id": 12195,
       "name": "Ancient robe legs",
       "quantity": 1,
-      "ge_price": 53602,
-      "total_value": 53602,
+      "ge_price": 57801,
+      "total_value": 57801,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -8104,8 +8104,8 @@
       "id": 12508,
       "name": "Armadyl d'hide body",
       "quantity": 1,
-      "ge_price": 151370,
-      "total_value": 151370,
+      "ge_price": 156274,
+      "total_value": 156274,
       "category": "Equipment",
       "subcategory": "Body Armor"
     },
@@ -8113,8 +8113,8 @@
       "id": 3480,
       "name": "Guthix plateskirt",
       "quantity": 1,
-      "ge_price": 40393,
-      "total_value": 40393,
+      "ge_price": 42217,
+      "total_value": 42217,
       "category": "Equipment",
       "subcategory": "Leg Armor"
     },
@@ -8122,8 +8122,8 @@
       "id": 2617,
       "name": "Rune platelegs (g)",
       "quantity": 1,
-      "ge_price": 57050,
-      "total_value": 57050,
+      "ge_price": 48773,
+      "total_value": 48773,
       "category": "Equipment",
       "subcategory": "Leg Armor"
     },
@@ -8131,8 +8131,8 @@
       "id": 3830,
       "name": "Saradomin page 4",
       "quantity": 1,
-      "ge_price": 330,
-      "total_value": 330,
+      "ge_price": 733,
+      "total_value": 733,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -8140,8 +8140,8 @@
       "id": 10284,
       "name": "Magic comp bow",
       "quantity": 1,
-      "ge_price": 1726,
-      "total_value": 1726,
+      "ge_price": 3123,
+      "total_value": 3123,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -8149,8 +8149,8 @@
       "id": 10306,
       "name": "Black helm (h1)",
       "quantity": 1,
-      "ge_price": 17981,
-      "total_value": 17981,
+      "ge_price": 17984,
+      "total_value": 17984,
       "category": "Equipment",
       "subcategory": "Helmets"
     },
@@ -8158,8 +8158,8 @@
       "id": 20223,
       "name": "Unholy blessing",
       "quantity": 1,
-      "ge_price": 14536,
-      "total_value": 14536,
+      "ge_price": 17238,
+      "total_value": 17238,
       "category": "Clue Items",
       "subcategory": "Clue Rewards"
     },
@@ -8167,8 +8167,8 @@
       "id": 12455,
       "name": "Black wizard hat (t)",
       "quantity": 1,
-      "ge_price": 262500,
-      "total_value": 262500,
+      "ge_price": 263500,
+      "total_value": 263500,
       "category": "Equipment",
       "subcategory": "Helmets"
     },
@@ -8176,8 +8176,8 @@
       "id": 12289,
       "name": "Mithril platelegs (t)",
       "quantity": 1,
-      "ge_price": 1749,
-      "total_value": 1749,
+      "ge_price": 1712,
+      "total_value": 1712,
       "category": "Equipment",
       "subcategory": "Leg Armor"
     },
@@ -8185,8 +8185,8 @@
       "id": 2605,
       "name": "Adamant full helm (t)",
       "quantity": 1,
-      "ge_price": 1756,
-      "total_value": 1756,
+      "ge_price": 1555,
+      "total_value": 1555,
       "category": "Equipment",
       "subcategory": "Helmets"
     },
@@ -8230,8 +8230,8 @@
       "id": 843,
       "name": "Oak shortbow",
       "quantity": 2,
-      "ge_price": 38,
-      "total_value": 76,
+      "ge_price": 46,
+      "total_value": 92,
       "category": "Equipment",
       "subcategory": "Ranged Weapons"
     },
@@ -8239,8 +8239,8 @@
       "id": 1237,
       "name": "Bronze spear",
       "quantity": 2,
-      "ge_price": 500,
-      "total_value": 1000,
+      "ge_price": 300,
+      "total_value": 600,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -8248,8 +8248,8 @@
       "id": 1383,
       "name": "Staff of water",
       "quantity": 1,
-      "ge_price": 1653,
-      "total_value": 1653,
+      "ge_price": 1893,
+      "total_value": 1893,
       "category": "Equipment",
       "subcategory": "Magic Weapons"
     },
@@ -8257,8 +8257,8 @@
       "id": 7445,
       "name": "Rolling pin",
       "quantity": 1,
-      "ge_price": 11629,
-      "total_value": 11629,
+      "ge_price": 14250,
+      "total_value": 14250,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -8266,8 +8266,8 @@
       "id": 1205,
       "name": "Bronze dagger",
       "quantity": 2,
-      "ge_price": 56,
-      "total_value": 112,
+      "ge_price": 24,
+      "total_value": 48,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -8293,8 +8293,8 @@
       "id": 579,
       "name": "Blue wizard hat",
       "quantity": 4,
-      "ge_price": 381,
-      "total_value": 1524,
+      "ge_price": 389,
+      "total_value": 1556,
       "category": "Equipment",
       "subcategory": "Helmets"
     },
@@ -8302,8 +8302,8 @@
       "id": 1211,
       "name": "Adamant dagger",
       "quantity": 3,
-      "ge_price": 328,
-      "total_value": 984,
+      "ge_price": 347,
+      "total_value": 1041,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -8320,8 +8320,8 @@
       "id": 1191,
       "name": "Iron kiteshield",
       "quantity": 1,
-      "ge_price": 38,
-      "total_value": 38,
+      "ge_price": 24,
+      "total_value": 24,
       "category": "Equipment",
       "subcategory": "Shields"
     },
@@ -8329,8 +8329,8 @@
       "id": 577,
       "name": "Blue wizard robe",
       "quantity": 7,
-      "ge_price": 1269,
-      "total_value": 8883,
+      "ge_price": 1209,
+      "total_value": 8463,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -8338,8 +8338,8 @@
       "id": 1125,
       "name": "Black platebody",
       "quantity": 3,
-      "ge_price": 4062,
-      "total_value": 12186,
+      "ge_price": 4457,
+      "total_value": 13371,
       "category": "Equipment",
       "subcategory": "Body Armor"
     },
@@ -8347,8 +8347,8 @@
       "id": 1097,
       "name": "Studded chaps",
       "quantity": 4,
-      "ge_price": 346,
-      "total_value": 1384,
+      "ge_price": 661,
+      "total_value": 2644,
       "category": "Equipment",
       "subcategory": "Leg Armor"
     },
@@ -8356,8 +8356,8 @@
       "id": 1273,
       "name": "Mithril pickaxe",
       "quantity": 1,
-      "ge_price": 478,
-      "total_value": 478,
+      "ge_price": 465,
+      "total_value": 465,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -8365,8 +8365,8 @@
       "id": 1067,
       "name": "Iron platelegs",
       "quantity": 1,
-      "ge_price": 30,
-      "total_value": 30,
+      "ge_price": 64,
+      "total_value": 64,
       "category": "Equipment",
       "subcategory": "Leg Armor"
     },
@@ -8374,8 +8374,8 @@
       "id": 1177,
       "name": "Steel sq shield",
       "quantity": 1,
-      "ge_price": 150,
-      "total_value": 150,
+      "ge_price": 258,
+      "total_value": 258,
       "category": "Equipment",
       "subcategory": "Shields"
     },
@@ -8401,8 +8401,8 @@
       "id": 1359,
       "name": "Rune axe",
       "quantity": 56,
-      "ge_price": 7069,
-      "total_value": 395864,
+      "ge_price": 7636,
+      "total_value": 427616,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -8410,8 +8410,8 @@
       "id": 1267,
       "name": "Iron pickaxe",
       "quantity": 2,
-      "ge_price": 171,
-      "total_value": 342,
+      "ge_price": 155,
+      "total_value": 310,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -8419,8 +8419,8 @@
       "id": 1269,
       "name": "Steel pickaxe",
       "quantity": 3,
-      "ge_price": 1571,
-      "total_value": 4713,
+      "ge_price": 1383,
+      "total_value": 4149,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -8428,8 +8428,8 @@
       "id": 1317,
       "name": "Adamant 2h sword",
       "quantity": 8,
-      "ge_price": 3667,
-      "total_value": 29336,
+      "ge_price": 3742,
+      "total_value": 29936,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -8437,8 +8437,8 @@
       "id": 1696,
       "name": "Emerald amulet",
       "quantity": 1,
-      "ge_price": 757,
-      "total_value": 757,
+      "ge_price": 725,
+      "total_value": 725,
       "category": "Skilling",
       "subcategory": "Gems"
     },
@@ -8446,8 +8446,8 @@
       "id": 1123,
       "name": "Adamant platebody",
       "quantity": 13,
-      "ge_price": 9648,
-      "total_value": 125424,
+      "ge_price": 9443,
+      "total_value": 122759,
       "category": "Equipment",
       "subcategory": "Body Armor"
     },
@@ -8455,8 +8455,8 @@
       "id": 1309,
       "name": "Iron 2h sword",
       "quantity": 1,
-      "ge_price": 55,
-      "total_value": 55,
+      "ge_price": 48,
+      "total_value": 48,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -8464,8 +8464,8 @@
       "id": 1329,
       "name": "Mithril scimitar",
       "quantity": 18,
-      "ge_price": 477,
-      "total_value": 8586,
+      "ge_price": 552,
+      "total_value": 9936,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -8473,8 +8473,8 @@
       "id": 1201,
       "name": "Rune kiteshield",
       "quantity": 36,
-      "ge_price": 32153,
-      "total_value": 1157508,
+      "ge_price": 32396,
+      "total_value": 1166256,
       "category": "Equipment",
       "subcategory": "Shields"
     },
@@ -8482,8 +8482,8 @@
       "id": 1303,
       "name": "Rune longsword",
       "quantity": 38,
-      "ge_price": 18970,
-      "total_value": 720860,
+      "ge_price": 18631,
+      "total_value": 707978,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -8491,8 +8491,8 @@
       "id": 1121,
       "name": "Mithril platebody",
       "quantity": 21,
-      "ge_price": 2991,
-      "total_value": 62811,
+      "ge_price": 2877,
+      "total_value": 60417,
       "category": "Equipment",
       "subcategory": "Body Armor"
     },
@@ -8500,8 +8500,8 @@
       "id": 3053,
       "name": "Lava battlestaff",
       "quantity": 3,
-      "ge_price": 8717,
-      "total_value": 26151,
+      "ge_price": 10213,
+      "total_value": 30639,
       "category": "Equipment",
       "subcategory": "Magic Weapons"
     },
@@ -8518,8 +8518,8 @@
       "id": 1073,
       "name": "Adamant platelegs",
       "quantity": 8,
-      "ge_price": 3628,
-      "total_value": 29024,
+      "ge_price": 3751,
+      "total_value": 30008,
       "category": "Equipment",
       "subcategory": "Leg Armor"
     },
@@ -8527,8 +8527,8 @@
       "id": 1099,
       "name": "Green d'hide chaps",
       "quantity": 2,
-      "ge_price": 2167,
-      "total_value": 4334,
+      "ge_price": 2148,
+      "total_value": 4296,
       "category": "Equipment",
       "subcategory": "Leg Armor"
     },
@@ -8536,8 +8536,8 @@
       "id": 845,
       "name": "Oak longbow",
       "quantity": 3,
-      "ge_price": 63,
-      "total_value": 189,
+      "ge_price": 65,
+      "total_value": 195,
       "category": "Equipment",
       "subcategory": "Ranged Weapons"
     },
@@ -8545,8 +8545,8 @@
       "id": 851,
       "name": "Maple longbow",
       "quantity": 19,
-      "ge_price": 283,
-      "total_value": 5377,
+      "ge_price": 281,
+      "total_value": 5339,
       "category": "Equipment",
       "subcategory": "Ranged Weapons"
     },
@@ -8554,8 +8554,8 @@
       "id": 1247,
       "name": "Rune spear",
       "quantity": 4,
-      "ge_price": 12042,
-      "total_value": 48168,
+      "ge_price": 11359,
+      "total_value": 45436,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -8563,8 +8563,8 @@
       "id": 630,
       "name": "Blue boots",
       "quantity": 1,
-      "ge_price": 1420,
-      "total_value": 1420,
+      "ge_price": 564,
+      "total_value": 564,
       "category": "Equipment",
       "subcategory": "Boots"
     },
@@ -8572,8 +8572,8 @@
       "id": 1135,
       "name": "Green d'hide body",
       "quantity": 10,
-      "ge_price": 4308,
-      "total_value": 43080,
+      "ge_price": 4315,
+      "total_value": 43150,
       "category": "Equipment",
       "subcategory": "Body Armor"
     },
@@ -8581,8 +8581,8 @@
       "id": 2497,
       "name": "Black d'hide chaps",
       "quantity": 21,
-      "ge_price": 5869,
-      "total_value": 123249,
+      "ge_price": 5573,
+      "total_value": 117033,
       "category": "Equipment",
       "subcategory": "Leg Armor"
     },
@@ -8599,8 +8599,8 @@
       "id": 1523,
       "name": "Lockpick",
       "quantity": 35,
-      "ge_price": 250,
-      "total_value": 8750,
+      "ge_price": 389,
+      "total_value": 13615,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -8635,8 +8635,8 @@
       "id": 1169,
       "name": "Coif",
       "quantity": 3,
-      "ge_price": 22,
-      "total_value": 66,
+      "ge_price": 21,
+      "total_value": 63,
       "category": "Equipment",
       "subcategory": "Helmets"
     },
@@ -8653,8 +8653,8 @@
       "id": 1187,
       "name": "Dragon sq shield",
       "quantity": 1,
-      "ge_price": 306711,
-      "total_value": 306711,
+      "ge_price": 306648,
+      "total_value": 306648,
       "category": "Equipment",
       "subcategory": "Shields"
     },
@@ -8662,8 +8662,8 @@
       "id": 1161,
       "name": "Adamant full helm",
       "quantity": 4,
-      "ge_price": 1858,
-      "total_value": 7432,
+      "ge_price": 2024,
+      "total_value": 8096,
       "category": "Equipment",
       "subcategory": "Helmets"
     },
@@ -8671,8 +8671,8 @@
       "id": 1091,
       "name": "Adamant plateskirt",
       "quantity": 3,
-      "ge_price": 3657,
-      "total_value": 10971,
+      "ge_price": 3663,
+      "total_value": 10989,
       "category": "Equipment",
       "subcategory": "Leg Armor"
     },
@@ -8689,8 +8689,8 @@
       "id": 839,
       "name": "Longbow",
       "quantity": 7,
-      "ge_price": 29,
-      "total_value": 203,
+      "ge_price": 25,
+      "total_value": 175,
       "category": "Equipment",
       "subcategory": "Ranged Weapons"
     },
@@ -8698,8 +8698,8 @@
       "id": 1183,
       "name": "Adamant sq shield",
       "quantity": 2,
-      "ge_price": 2800,
-      "total_value": 5600,
+      "ge_price": 2731,
+      "total_value": 5462,
       "category": "Equipment",
       "subcategory": "Shields"
     },
@@ -8716,8 +8716,8 @@
       "id": 4734,
       "name": "Karil's crossbow",
       "quantity": 1,
-      "ge_price": 113211,
-      "total_value": 113211,
+      "ge_price": 113355,
+      "total_value": 113355,
       "category": "Barrows",
       "subcategory": "Karil's"
     },
@@ -8725,8 +8725,8 @@
       "id": 4755,
       "name": "Verac's flail",
       "quantity": 1,
-      "ge_price": 95215,
-      "total_value": 95215,
+      "ge_price": 98250,
+      "total_value": 98250,
       "category": "Barrows",
       "subcategory": "Verac's"
     },
@@ -8734,8 +8734,8 @@
       "id": 4747,
       "name": "Torag's hammers",
       "quantity": 2,
-      "ge_price": 96229,
-      "total_value": 192458,
+      "ge_price": 98484,
+      "total_value": 196968,
       "category": "Barrows",
       "subcategory": "Torag's"
     },
@@ -8743,8 +8743,8 @@
       "id": 4745,
       "name": "Torag's helm",
       "quantity": 1,
-      "ge_price": 175154,
-      "total_value": 175154,
+      "ge_price": 175388,
+      "total_value": 175388,
       "category": "Barrows",
       "subcategory": "Torag's"
     },
@@ -8770,8 +8770,8 @@
       "id": 2503,
       "name": "Black d'hide body",
       "quantity": 27,
-      "ge_price": 7247,
-      "total_value": 195669,
+      "ge_price": 7230,
+      "total_value": 195210,
       "category": "Equipment",
       "subcategory": "Body Armor"
     },
@@ -8788,8 +8788,8 @@
       "id": 6739,
       "name": "Dragon axe",
       "quantity": 1,
-      "ge_price": 77211,
-      "total_value": 77211,
+      "ge_price": 77602,
+      "total_value": 77602,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -8797,8 +8797,8 @@
       "id": 1353,
       "name": "Steel axe",
       "quantity": 2,
-      "ge_price": 3,
-      "total_value": 6,
+      "ge_price": 50,
+      "total_value": 100,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -8806,8 +8806,8 @@
       "id": 859,
       "name": "Magic longbow",
       "quantity": 7,
-      "ge_price": 1301,
-      "total_value": 9107,
+      "ge_price": 1304,
+      "total_value": 9128,
       "category": "Equipment",
       "subcategory": "Ranged Weapons"
     },
@@ -8824,8 +8824,8 @@
       "id": 4585,
       "name": "Dragon plateskirt",
       "quantity": 2,
-      "ge_price": 161450,
-      "total_value": 322900,
+      "ge_price": 161539,
+      "total_value": 323078,
       "category": "Equipment",
       "subcategory": "Leg Armor"
     },
@@ -8851,8 +8851,8 @@
       "id": 2495,
       "name": "Red d'hide chaps",
       "quantity": 1,
-      "ge_price": 3414,
-      "total_value": 3414,
+      "ge_price": 3376,
+      "total_value": 3376,
       "category": "Equipment",
       "subcategory": "Leg Armor"
     },
@@ -8860,8 +8860,8 @@
       "id": 4131,
       "name": "Rune boots",
       "quantity": 5,
-      "ge_price": 7197,
-      "total_value": 35985,
+      "ge_price": 7177,
+      "total_value": 35885,
       "category": "Equipment",
       "subcategory": "Boots"
     },
@@ -8878,8 +8878,8 @@
       "id": 1656,
       "name": "Sapphire necklace",
       "quantity": 1,
-      "ge_price": 526,
-      "total_value": 526,
+      "ge_price": 535,
+      "total_value": 535,
       "category": "Skilling",
       "subcategory": "Gems"
     },
@@ -8887,8 +8887,8 @@
       "id": 1645,
       "name": "Dragonstone ring",
       "quantity": 19,
-      "ge_price": 11334,
-      "total_value": 215346,
+      "ge_price": 11496,
+      "total_value": 218424,
       "category": "Skilling",
       "subcategory": "Gems"
     },
@@ -8896,8 +8896,8 @@
       "id": 4129,
       "name": "Adamant boots",
       "quantity": 1,
-      "ge_price": 1250,
-      "total_value": 1250,
+      "ge_price": 1077,
+      "total_value": 1077,
       "category": "Equipment",
       "subcategory": "Boots"
     },
@@ -8905,8 +8905,8 @@
       "id": 1249,
       "name": "Dragon spear",
       "quantity": 2,
-      "ge_price": 38263,
-      "total_value": 76526,
+      "ge_price": 37904,
+      "total_value": 75808,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -8914,8 +8914,8 @@
       "id": 1071,
       "name": "Mithril platelegs",
       "quantity": 1,
-      "ge_price": 1291,
-      "total_value": 1291,
+      "ge_price": 1450,
+      "total_value": 1450,
       "category": "Equipment",
       "subcategory": "Leg Armor"
     },
@@ -8923,8 +8923,8 @@
       "id": 11126,
       "name": "Combat bracelet",
       "quantity": 1,
-      "ge_price": 12383,
-      "total_value": 12383,
+      "ge_price": 12377,
+      "total_value": 12377,
       "category": "Teleportation",
       "subcategory": "Jewelry"
     },
@@ -8932,8 +8932,8 @@
       "id": 1664,
       "name": "Dragon necklace",
       "quantity": 3,
-      "ge_price": 11877,
-      "total_value": 35631,
+      "ge_price": 11869,
+      "total_value": 35607,
       "category": "Equipment",
       "subcategory": "Amulets & Necklaces"
     },
@@ -8941,8 +8941,8 @@
       "id": 4091,
       "name": "Mystic robe top",
       "quantity": 10,
-      "ge_price": 72476,
-      "total_value": 724760,
+      "ge_price": 72472,
+      "total_value": 724720,
       "category": "Equipment",
       "subcategory": "Body Armor"
     },
@@ -8950,8 +8950,8 @@
       "id": 4093,
       "name": "Mystic robe bottom",
       "quantity": 6,
-      "ge_price": 47451,
-      "total_value": 284706,
+      "ge_price": 47469,
+      "total_value": 284814,
       "category": "Equipment",
       "subcategory": "Leg Armor"
     },
@@ -8959,8 +8959,8 @@
       "id": 1347,
       "name": "Rune warhammer",
       "quantity": 18,
-      "ge_price": 24414,
-      "total_value": 439452,
+      "ge_price": 24433,
+      "total_value": 439794,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -8968,8 +8968,8 @@
       "id": 1085,
       "name": "Mithril plateskirt",
       "quantity": 1,
-      "ge_price": 1308,
-      "total_value": 1308,
+      "ge_price": 1493,
+      "total_value": 1493,
       "category": "Equipment",
       "subcategory": "Leg Armor"
     },
@@ -8977,8 +8977,8 @@
       "id": 1159,
       "name": "Mithril full helm",
       "quantity": 2,
-      "ge_price": 849,
-      "total_value": 1698,
+      "ge_price": 969,
+      "total_value": 1938,
       "category": "Equipment",
       "subcategory": "Helmets"
     },
@@ -8995,8 +8995,8 @@
       "id": 1361,
       "name": "Black axe",
       "quantity": 3,
-      "ge_price": 1547,
-      "total_value": 4641,
+      "ge_price": 1563,
+      "total_value": 4689,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -9013,8 +9013,8 @@
       "id": 12275,
       "name": "Bandos crozier",
       "quantity": 1,
-      "ge_price": 2176,
-      "total_value": 2176,
+      "ge_price": 2852,
+      "total_value": 2852,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -9022,8 +9022,8 @@
       "id": 3202,
       "name": "Rune halberd",
       "quantity": 7,
-      "ge_price": 39240,
-      "total_value": 274680,
+      "ge_price": 38138,
+      "total_value": 266966,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -9049,8 +9049,8 @@
       "id": 1079,
       "name": "Rune platelegs",
       "quantity": 185,
-      "ge_price": 38225,
-      "total_value": 7071625,
+      "ge_price": 38179,
+      "total_value": 7063115,
       "category": "Equipment",
       "subcategory": "Leg Armor"
     },
@@ -9058,8 +9058,8 @@
       "id": 1163,
       "name": "Rune full helm",
       "quantity": 399,
-      "ge_price": 20713,
-      "total_value": 8264487,
+      "ge_price": 20539,
+      "total_value": 8195061,
       "category": "Equipment",
       "subcategory": "Helmets"
     },
@@ -9067,8 +9067,8 @@
       "id": 1275,
       "name": "Rune pickaxe",
       "quantity": 144,
-      "ge_price": 19196,
-      "total_value": 2764224,
+      "ge_price": 18976,
+      "total_value": 2732544,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -9076,8 +9076,8 @@
       "id": 3204,
       "name": "Dragon halberd",
       "quantity": 6,
-      "ge_price": 149412,
-      "total_value": 896472,
+      "ge_price": 149432,
+      "total_value": 896592,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -9085,8 +9085,8 @@
       "id": 830,
       "name": "Rune javelin",
       "quantity": 3236,
-      "ge_price": 117,
-      "total_value": 378612,
+      "ge_price": 118,
+      "total_value": 381848,
       "category": "Ammunition",
       "subcategory": "Other Ammo"
     },
@@ -9094,8 +9094,8 @@
       "id": 4710,
       "name": "Ahrim's staff",
       "quantity": 1,
-      "ge_price": 281201,
-      "total_value": 281201,
+      "ge_price": 286782,
+      "total_value": 286782,
       "category": "Barrows",
       "subcategory": "Ahrim's"
     },
@@ -9112,8 +9112,8 @@
       "id": 1113,
       "name": "Rune chainbody",
       "quantity": 205,
-      "ge_price": 29844,
-      "total_value": 6118020,
+      "ge_price": 29702,
+      "total_value": 6088910,
       "category": "Equipment",
       "subcategory": "Body Armor"
     },
@@ -9130,8 +9130,8 @@
       "id": 1405,
       "name": "Mystic air staff",
       "quantity": 33,
-      "ge_price": 26046,
-      "total_value": 859518,
+      "ge_price": 26225,
+      "total_value": 865425,
       "category": "Equipment",
       "subcategory": "Magic Weapons"
     },
@@ -9139,8 +9139,8 @@
       "id": 829,
       "name": "Adamant javelin",
       "quantity": 140,
-      "ge_price": 77,
-      "total_value": 10780,
+      "ge_price": 75,
+      "total_value": 10500,
       "category": "Ammunition",
       "subcategory": "Other Ammo"
     },
@@ -9148,8 +9148,8 @@
       "id": 4153,
       "name": "Granite maul",
       "quantity": 8,
-      "ge_price": 219368,
-      "total_value": 1754944,
+      "ge_price": 219585,
+      "total_value": 1756680,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -9157,8 +9157,8 @@
       "id": 23956,
       "name": "Crystal armour seed",
       "quantity": 10,
-      "ge_price": 7220698,
-      "total_value": 72206980,
+      "ge_price": 7225764,
+      "total_value": 72257640,
       "category": "Skilling",
       "subcategory": "Seeds"
     },
@@ -9166,8 +9166,8 @@
       "id": 4207,
       "name": "Crystal weapon seed",
       "quantity": 8,
-      "ge_price": 382500,
-      "total_value": 3060000,
+      "ge_price": 379033,
+      "total_value": 3032264,
       "category": "Skilling",
       "subcategory": "Seeds"
     },
@@ -9175,8 +9175,8 @@
       "id": 1393,
       "name": "Fire battlestaff",
       "quantity": 410,
-      "ge_price": 8977,
-      "total_value": 3680570,
+      "ge_price": 9025,
+      "total_value": 3700250,
       "category": "Equipment",
       "subcategory": "Magic Weapons"
     },
@@ -9184,8 +9184,8 @@
       "id": 1371,
       "name": "Adamant battleaxe",
       "quantity": 11,
-      "ge_price": 2401,
-      "total_value": 26411,
+      "ge_price": 2398,
+      "total_value": 26378,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -9193,8 +9193,8 @@
       "id": 1213,
       "name": "Rune dagger",
       "quantity": 8,
-      "ge_price": 4493,
-      "total_value": 35944,
+      "ge_price": 4666,
+      "total_value": 37328,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -9202,8 +9202,8 @@
       "id": 1373,
       "name": "Rune battleaxe",
       "quantity": 5,
-      "ge_price": 24744,
-      "total_value": 123720,
+      "ge_price": 24563,
+      "total_value": 122815,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -9211,8 +9211,8 @@
       "id": 1199,
       "name": "Adamant kiteshield",
       "quantity": 6,
-      "ge_price": 3000,
-      "total_value": 18000,
+      "ge_price": 3125,
+      "total_value": 18750,
       "category": "Equipment",
       "subcategory": "Shields"
     },
@@ -9220,8 +9220,8 @@
       "id": 1147,
       "name": "Rune med helm",
       "quantity": 10,
-      "ge_price": 11014,
-      "total_value": 110140,
+      "ge_price": 11305,
+      "total_value": 113050,
       "category": "Equipment",
       "subcategory": "Helmets"
     },
@@ -9229,8 +9229,8 @@
       "id": 1185,
       "name": "Rune sq shield",
       "quantity": 91,
-      "ge_price": 22692,
-      "total_value": 2064972,
+      "ge_price": 22838,
+      "total_value": 2078258,
       "category": "Equipment",
       "subcategory": "Shields"
     },
@@ -9238,8 +9238,8 @@
       "id": 1399,
       "name": "Earth battlestaff",
       "quantity": 9,
-      "ge_price": 8956,
-      "total_value": 80604,
+      "ge_price": 9034,
+      "total_value": 81306,
       "category": "Equipment",
       "subcategory": "Magic Weapons"
     },
@@ -9247,8 +9247,8 @@
       "id": 1215,
       "name": "Dragon dagger",
       "quantity": 7,
-      "ge_price": 17641,
-      "total_value": 123487,
+      "ge_price": 17375,
+      "total_value": 121625,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -9256,8 +9256,8 @@
       "id": 1319,
       "name": "Rune 2h sword",
       "quantity": 9,
-      "ge_price": 37977,
-      "total_value": 341793,
+      "ge_price": 37975,
+      "total_value": 341775,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -9274,8 +9274,8 @@
       "id": 857,
       "name": "Yew shortbow",
       "quantity": 2,
-      "ge_price": 336,
-      "total_value": 672,
+      "ge_price": 335,
+      "total_value": 670,
       "category": "Equipment",
       "subcategory": "Ranged Weapons"
     },
@@ -9319,8 +9319,8 @@
       "id": 1197,
       "name": "Mithril kiteshield",
       "quantity": 2,
-      "ge_price": 959,
-      "total_value": 1918,
+      "ge_price": 1261,
+      "total_value": 2522,
       "category": "Equipment",
       "subcategory": "Shields"
     },
@@ -9328,8 +9328,8 @@
       "id": 1283,
       "name": "Black sword",
       "quantity": 2,
-      "ge_price": 323,
-      "total_value": 646,
+      "ge_price": 394,
+      "total_value": 788,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -9337,8 +9337,8 @@
       "id": 855,
       "name": "Yew longbow",
       "quantity": 1,
-      "ge_price": 508,
-      "total_value": 508,
+      "ge_price": 509,
+      "total_value": 509,
       "category": "Equipment",
       "subcategory": "Ranged Weapons"
     },
@@ -9346,8 +9346,8 @@
       "id": 849,
       "name": "Willow shortbow",
       "quantity": 1,
-      "ge_price": 103,
-      "total_value": 103,
+      "ge_price": 98,
+      "total_value": 98,
       "category": "Equipment",
       "subcategory": "Ranged Weapons"
     },
@@ -9355,8 +9355,8 @@
       "id": 1077,
       "name": "Black platelegs",
       "quantity": 1,
-      "ge_price": 1436,
-      "total_value": 1436,
+      "ge_price": 1509,
+      "total_value": 1509,
       "category": "Equipment",
       "subcategory": "Leg Armor"
     },
@@ -9364,8 +9364,8 @@
       "id": 1331,
       "name": "Adamant scimitar",
       "quantity": 3,
-      "ge_price": 1686,
-      "total_value": 5058,
+      "ge_price": 1766,
+      "total_value": 5298,
       "category": "Equipment",
       "subcategory": "Melee Weapons"
     },
@@ -9373,8 +9373,8 @@
       "id": 29580,
       "name": "Tormented synapse",
       "quantity": 6,
-      "ge_price": 30540665,
-      "total_value": 183243990,
+      "ge_price": 30488991,
+      "total_value": 182933946,
       "category": "Equipment",
       "subcategory": "Amulets & Necklaces"
     },
@@ -9382,8 +9382,8 @@
       "id": 31973,
       "name": "Mahogany repair kit",
       "quantity": 150,
-      "ge_price": 1265,
-      "total_value": 189750,
+      "ge_price": 1255,
+      "total_value": 188250,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -9400,8 +9400,8 @@
       "id": 31910,
       "name": "Mithril cannonball",
       "quantity": 837,
-      "ge_price": 186,
-      "total_value": 155682,
+      "ge_price": 190,
+      "total_value": 159030,
       "category": "Ammunition",
       "subcategory": "Cannonballs"
     },
@@ -9409,8 +9409,8 @@
       "id": 31912,
       "name": "Adamant cannonball",
       "quantity": 2755,
-      "ge_price": 525,
-      "total_value": 1446375,
+      "ge_price": 521,
+      "total_value": 1435355,
       "category": "Ammunition",
       "subcategory": "Cannonballs"
     },
@@ -9418,8 +9418,8 @@
       "id": 31914,
       "name": "Rune cannonball",
       "quantity": 2682,
-      "ge_price": 986,
-      "total_value": 2644452,
+      "ge_price": 981,
+      "total_value": 2631042,
       "category": "Ammunition",
       "subcategory": "Cannonballs"
     },
@@ -9427,8 +9427,8 @@
       "id": 31916,
       "name": "Dragon cannonball",
       "quantity": 316,
-      "ge_price": 2824,
-      "total_value": 892384,
+      "ge_price": 2698,
+      "total_value": 852568,
       "category": "Ammunition",
       "subcategory": "Cannonballs"
     },
@@ -9445,8 +9445,8 @@
       "id": 1775,
       "name": "Molten glass",
       "quantity": 332,
-      "ge_price": 137,
-      "total_value": 45484,
+      "ge_price": 135,
+      "total_value": 44820,
       "category": "Skilling",
       "subcategory": "Crafting"
     },
@@ -9454,8 +9454,8 @@
       "id": 31472,
       "name": "Bolt of linen",
       "quantity": 2,
-      "ge_price": 722,
-      "total_value": 1444,
+      "ge_price": 735,
+      "total_value": 1470,
       "category": "Ammunition",
       "subcategory": "Bolts"
     },
@@ -9463,8 +9463,8 @@
       "id": 32889,
       "name": "Lead bar",
       "quantity": 3,
-      "ge_price": 1038,
-      "total_value": 3114,
+      "ge_price": 987,
+      "total_value": 2961,
       "category": "Skilling",
       "subcategory": "Bars"
     },
@@ -9472,8 +9472,8 @@
       "id": 1539,
       "name": "Steel nails",
       "quantity": 1175,
-      "ge_price": 15,
-      "total_value": 17625,
+      "ge_price": 19,
+      "total_value": 22325,
       "category": "Skilling",
       "subcategory": "Construction"
     },
@@ -9571,8 +9571,8 @@
       "id": 4822,
       "name": "Mithril nails",
       "quantity": 179,
-      "ge_price": 75,
-      "total_value": 13425,
+      "ge_price": 77,
+      "total_value": 13783,
       "category": "Skilling",
       "subcategory": "Construction"
     },
@@ -9580,8 +9580,8 @@
       "id": 32904,
       "name": "Camphor logs",
       "quantity": 2440,
-      "ge_price": 717,
-      "total_value": 1749480,
+      "ge_price": 723,
+      "total_value": 1764120,
       "category": "Skilling",
       "subcategory": "Logs"
     },
@@ -9598,8 +9598,8 @@
       "id": 31908,
       "name": "Iron cannonball",
       "quantity": 43,
-      "ge_price": 17,
-      "total_value": 731,
+      "ge_price": 16,
+      "total_value": 688,
       "category": "Ammunition",
       "subcategory": "Cannonballs"
     },
@@ -9607,8 +9607,8 @@
       "id": 4820,
       "name": "Iron nails",
       "quantity": 8,
-      "ge_price": 3,
-      "total_value": 24,
+      "ge_price": 1,
+      "total_value": 8,
       "category": "Skilling",
       "subcategory": "Construction"
     },
@@ -9616,8 +9616,8 @@
       "id": 31906,
       "name": "Bronze cannonball",
       "quantity": 52,
-      "ge_price": 10,
-      "total_value": 520,
+      "ge_price": 7,
+      "total_value": 364,
       "category": "Ammunition",
       "subcategory": "Cannonballs"
     },
@@ -9625,8 +9625,8 @@
       "id": 4819,
       "name": "Bronze nails",
       "quantity": 82,
-      "ge_price": 1,
-      "total_value": 82,
+      "ge_price": 2,
+      "total_value": 164,
       "category": "Skilling",
       "subcategory": "Construction"
     },
@@ -9706,8 +9706,8 @@
       "id": 4846,
       "name": "Relicym's balm(2)",
       "quantity": 1,
-      "ge_price": 419,
-      "total_value": 419,
+      "ge_price": 382,
+      "total_value": 382,
       "category": "Potions",
       "subcategory": "Other Potions"
     },
@@ -9715,8 +9715,8 @@
       "id": 32907,
       "name": "Ironwood logs",
       "quantity": 4172,
-      "ge_price": 145,
-      "total_value": 604940,
+      "ge_price": 150,
+      "total_value": 625800,
       "category": "Skilling",
       "subcategory": "Logs"
     },
@@ -9733,8 +9733,8 @@
       "id": 9380,
       "name": "Adamant bolts(unf)",
       "quantity": 183,
-      "ge_price": 190,
-      "total_value": 34770,
+      "ge_price": 191,
+      "total_value": 34953,
       "category": "Ammunition",
       "subcategory": "Bolts"
     },
@@ -9742,8 +9742,8 @@
       "id": 43,
       "name": "Adamant arrowtips",
       "quantity": 1058,
-      "ge_price": 96,
-      "total_value": 101568,
+      "ge_price": 97,
+      "total_value": 102626,
       "category": "Ammunition",
       "subcategory": "Arrows"
     },
@@ -9751,8 +9751,8 @@
       "id": 31716,
       "name": "Lead ore",
       "quantity": 5,
-      "ge_price": 421,
-      "total_value": 2105,
+      "ge_price": 411,
+      "total_value": 2055,
       "category": "Skilling",
       "subcategory": "Ores"
     },
@@ -9760,8 +9760,8 @@
       "id": 31989,
       "name": "Boat bottle (empty)",
       "quantity": 6,
-      "ge_price": 20057,
-      "total_value": 120342,
+      "ge_price": 20191,
+      "total_value": 121146,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -9769,8 +9769,8 @@
       "id": 19580,
       "name": "Rune javelin tips",
       "quantity": 732,
-      "ge_price": 614,
-      "total_value": 449448,
+      "ge_price": 608,
+      "total_value": 445056,
       "category": "Ammunition",
       "subcategory": "Other Ammo"
     },
@@ -9787,8 +9787,8 @@
       "id": 32032,
       "name": "Large adamant keel parts",
       "quantity": 16,
-      "ge_price": 43388,
-      "total_value": 694208,
+      "ge_price": 43544,
+      "total_value": 696704,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -9814,8 +9814,8 @@
       "id": 11334,
       "name": "Fish offcuts",
       "quantity": 11146,
-      "ge_price": 6,
-      "total_value": 66876,
+      "ge_price": 8,
+      "total_value": 89168,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -9841,8 +9841,8 @@
       "id": 31406,
       "name": "Dragon nails",
       "quantity": 68,
-      "ge_price": 54392,
-      "total_value": 3698656,
+      "ge_price": 53831,
+      "total_value": 3660508,
       "category": "Skilling",
       "subcategory": "Construction"
     },
@@ -9850,8 +9850,8 @@
       "id": 31996,
       "name": "Dragon metal sheet",
       "quantity": 9,
-      "ge_price": 1160067,
-      "total_value": 10440603,
+      "ge_price": 1179006,
+      "total_value": 10611054,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -9859,8 +9859,8 @@
       "id": 31235,
       "name": "Gryphon feather",
       "quantity": 5020,
-      "ge_price": 32,
-      "total_value": 160640,
+      "ge_price": 31,
+      "total_value": 155620,
       "category": "Skilling",
       "subcategory": "Fishing"
     },
@@ -9877,8 +9877,8 @@
       "id": 1993,
       "name": "Jug of wine",
       "quantity": 711,
-      "ge_price": 4,
-      "total_value": 2844,
+      "ge_price": 5,
+      "total_value": 3555,
       "category": "Miscellaneous",
       "subcategory": "Containers"
     },
@@ -10039,8 +10039,8 @@
       "id": 13233,
       "name": "Smouldering stone",
       "quantity": 1,
-      "ge_price": 2142642,
-      "total_value": 2142642,
+      "ge_price": 2151808,
+      "total_value": 2151808,
       "category": "Miscellaneous",
       "subcategory": "Other"
     },
@@ -10048,8 +10048,8 @@
       "id": 12004,
       "name": "Kraken tentacle",
       "quantity": 2,
-      "ge_price": 339170,
-      "total_value": 678340,
+      "ge_price": 339240,
+      "total_value": 678480,
       "category": "Miscellaneous",
       "subcategory": "Tools"
     },
@@ -10120,8 +10120,8 @@
       "id": 29784,
       "name": "Araxyte venom sack",
       "quantity": 231,
-      "ge_price": 2896,
-      "total_value": 668976,
+      "ge_price": 2876,
+      "total_value": 664356,
       "category": "Miscellaneous",
       "subcategory": "Containers"
     }
