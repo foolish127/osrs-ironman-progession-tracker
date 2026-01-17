@@ -282,6 +282,21 @@
         .category-card.cat-miscellaneous .category-card-name { color: #6b7280; }
         .category-card.cat-quest-items { border-left-color: #8b5cf6; }
         .category-card.cat-quest-items .category-card-name { color: #8b5cf6; }
+        /* Password Modal */
+        .password-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; align-items: center; justify-content: center; }
+        .password-modal.active { display: flex; }
+        .password-modal-content { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; max-width: 400px; width: 90%; text-align: center; }
+        .password-modal-content h3 { color: var(--accent-gold); margin-bottom: 0.5rem; }
+        .password-modal-content p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.9rem; }
+        .password-input { width: 100%; padding: 0.75rem 1rem; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); font-size: 1rem; margin-bottom: 1rem; }
+        .password-input:focus { outline: none; border-color: var(--accent-gold); }
+        .password-modal-buttons { display: flex; gap: 0.75rem; justify-content: center; }
+        .password-btn { padding: 0.75rem 1.5rem; border: 1px solid var(--border); border-radius: 4px; background: var(--bg-card); color: var(--text-secondary); cursor: pointer; font-size: 0.9rem; transition: all 0.2s; }
+        .password-btn:hover { background: var(--bg-card-hover); color: var(--text-primary); }
+        .password-btn.primary { background: var(--accent-gold); color: var(--bg-dark); border-color: var(--accent-gold); }
+        .password-btn.primary:hover { background: #e5b95c; }
+        .password-error { color: var(--accent-red); font-size: 0.85rem; margin-top: 1rem; min-height: 1.2em; }
+        .protected-tab.locked #bankContainer { filter: blur(10px); pointer-events: none; }
         footer { text-align: center; padding: 2rem 0; margin-top: 3rem; border-top: 1px solid var(--border); }
         footer a { color: var(--text-secondary); text-decoration: none; margin: 0 0.75rem; font-size: 0.85rem; padding: 0.5rem 1rem; border: 1px solid var(--border); border-radius: 4px; transition: all 0.2s; }
         footer a:hover { color: var(--text-primary); border-color: var(--text-muted); }
@@ -328,7 +343,8 @@
             <button class="nav-tab" data-tab="quests">Quests</button>
             <button class="nav-tab" data-tab="diaries">Diaries</button>
             <button class="nav-tab" data-tab="goals">Goals</button>
-            <button class="nav-tab" data-tab="bank">Bank</button>
+            <!-- Bank tab hidden from nav, access via #vault-9f3k -->
+            <button class="nav-tab" data-tab="vault-9f3k" style="display:none;">Bank</button>
         </nav>
 
         <div id="skills" class="tab-content active">
@@ -367,8 +383,22 @@
             <div id="goalsContainer">Loading...</div>
         </div>
 
-        <div id="bank" class="tab-content">
+        <div id="vault-9f3k" class="tab-content protected-tab">
             <div id="bankContainer">Loading...</div>
+        </div>
+
+        <!-- Password Modal -->
+        <div id="passwordModal" class="password-modal">
+            <div class="password-modal-content">
+                <h3>🔒 Protected Content</h3>
+                <p>Enter password to view bank contents</p>
+                <input type="password" id="bankPassword" class="password-input" placeholder="Password" autocomplete="off">
+                <div class="password-modal-buttons">
+                    <button id="passwordSubmit" class="password-btn primary">Unlock</button>
+                    <button id="passwordCancel" class="password-btn">Cancel</button>
+                </div>
+                <p id="passwordError" class="password-error"></p>
+            </div>
         </div>
 
         <footer>
@@ -380,6 +410,22 @@
     </div>
 
     <script>
+        // Password protection for bank tab
+        // Password hash loaded from config file (injected by GitHub Actions)
+        let BANK_PASSWORD_HASH = null;
+        const PROTECTED_TAB_ID = 'vault-9f3k';
+        let bankUnlocked = false;
+
+        // Load password hash from config
+        fetch('./data/config.json')
+            .then(r => r.json())
+            .then(config => {
+                BANK_PASSWORD_HASH = config.bankPasswordHash;
+            })
+            .catch(() => {
+                console.warn('Config not found - bank protection disabled');
+            });
+
         const SKILL_ORDER = ['Attack','Hitpoints','Mining','Strength','Agility','Smithing','Defence','Herblore','Fishing','Ranged','Thieving','Cooking','Prayer','Crafting','Firemaking','Magic','Fletching','Woodcutting','Runecraft','Slayer','Farming','Construction','Hunter','Sailing'];
         const SKILL_ICONS = {};
         SKILL_ORDER.forEach(s => SKILL_ICONS[s] = `https://oldschool.runescape.wiki/images/${s}_icon.png`);
@@ -1489,7 +1535,71 @@
             `).join('');
         }
 
-        function switchTab(tabId) {
+        // Password hashing function
+        async function hashPassword(password) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(password);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        // Show password modal
+        function showPasswordModal(targetTabId) {
+            const modal = document.getElementById('passwordModal');
+            const input = document.getElementById('bankPassword');
+            const error = document.getElementById('passwordError');
+            
+            modal.classList.add('active');
+            input.value = '';
+            error.textContent = '';
+            input.focus();
+            
+            // Store target tab for after unlock
+            modal.dataset.targetTab = targetTabId;
+        }
+
+        // Hide password modal
+        function hidePasswordModal() {
+            const modal = document.getElementById('passwordModal');
+            modal.classList.remove('active');
+            modal.dataset.targetTab = '';
+        }
+
+        // Check password and unlock
+        async function checkPassword() {
+            const input = document.getElementById('bankPassword');
+            const error = document.getElementById('passwordError');
+            const modal = document.getElementById('passwordModal');
+            
+            // Check if password protection is configured
+            if (!BANK_PASSWORD_HASH) {
+                error.textContent = 'Password protection not configured';
+                return;
+            }
+            
+            const hash = await hashPassword(input.value);
+            
+            if (hash === BANK_PASSWORD_HASH) {
+                bankUnlocked = true;
+                sessionStorage.setItem('bankUnlocked', 'true');
+                hidePasswordModal();
+                
+                // Switch to the protected tab
+                const targetTab = modal.dataset.targetTab;
+                if (targetTab) {
+                    document.getElementById(targetTab).classList.remove('locked');
+                    switchTabDirect(targetTab);
+                }
+            } else {
+                error.textContent = 'Incorrect password';
+                input.value = '';
+                input.focus();
+            }
+        }
+
+        // Direct tab switch (no password check)
+        function switchTabDirect(tabId) {
             document.querySelectorAll('.nav-tab').forEach(x => x.classList.remove('active'));
             document.querySelectorAll('.tab-content').forEach(x => x.classList.remove('active'));
             const tab = document.querySelector(`.nav-tab[data-tab="${tabId}"]`);
@@ -1498,6 +1608,37 @@
                 document.getElementById(tabId).classList.add('active');
             }
         }
+
+        // Tab switch with password protection
+        function switchTab(tabId) {
+            // Check if this is the protected tab
+            if (tabId === PROTECTED_TAB_ID) {
+                // Check if already unlocked this session
+                if (bankUnlocked || sessionStorage.getItem('bankUnlocked') === 'true') {
+                    bankUnlocked = true;
+                    document.getElementById(tabId).classList.remove('locked');
+                    switchTabDirect(tabId);
+                } else {
+                    // Show password modal
+                    document.getElementById(tabId).classList.add('locked');
+                    showPasswordModal(tabId);
+                }
+            } else {
+                switchTabDirect(tabId);
+            }
+        }
+
+        // Password modal event listeners
+        document.getElementById('passwordSubmit').addEventListener('click', checkPassword);
+        document.getElementById('passwordCancel').addEventListener('click', () => {
+            hidePasswordModal();
+            // Go back to previous tab or skills
+            window.location.hash = 'skills';
+            switchTabDirect('skills');
+        });
+        document.getElementById('bankPassword').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') checkPassword();
+        });
 
         document.querySelectorAll('.nav-tab').forEach(t => t.addEventListener('click', () => {
             const tabId = t.dataset.tab;

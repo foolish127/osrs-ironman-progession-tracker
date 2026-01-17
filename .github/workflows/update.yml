@@ -53,6 +53,12 @@ jobs:
           cp data/*.json docs/data/ 2>/dev/null || true
           cp data/*.yaml docs/data/ 2>/dev/null || true
       
+      - name: Create config with password hash
+        env:
+          BANK_PASSWORD_HASH: ${{ secrets.BANK_PASSWORD_HASH }}
+        run: |
+          echo "{\"bankPasswordHash\": \"$BANK_PASSWORD_HASH\"}" > docs/data/config.json
+      
       - name: Commit and push
         run: |
           git config --local user.email "action@github.com"
