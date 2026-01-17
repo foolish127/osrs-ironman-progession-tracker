@@ -6,33 +6,48 @@ on:
   workflow_dispatch:       # Manual trigger
   push:
     paths:
-      - 'data/*.yaml'      # Any YAML data file changes
-      - 'scripts/update_stats.py'  # Script changes
+      - 'data/*.yaml'
+      - 'scripts/update_stats.py'
 
 # Prevent duplicate runs
 concurrency:
   group: update-stats
   cancel-in-progress: false
 
+# Required for Pages deployment
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
-  update:
+  update-and-deploy:
     runs-on: ubuntu-latest
-    # Skip if this was triggered by the GitHub Actions bot's own commit
+    # Skip if triggered by bot's own commit
     if: github.actor != 'github-actions[bot]'
+    
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
     steps:
       - uses: actions/checkout@v4
+      
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      
       - name: Run update script
         env:
           RSN: FoolinSlays
         run: python scripts/update_stats.py
+      
       - name: Copy data to docs
         run: |
           mkdir -p docs/data
           cp data/*.json docs/data/ 2>/dev/null || true
           cp data/*.yaml docs/data/ 2>/dev/null || true
+      
       - name: Commit and push
         run: |
           git config --local user.email "action@github.com"
@@ -40,3 +55,15 @@ jobs:
           git add -A
           git diff --staged --quiet || git commit -m "Update stats $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './docs'
+      
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
