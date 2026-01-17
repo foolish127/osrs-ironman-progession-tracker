@@ -314,6 +314,31 @@
         .drops-yaml-output .copy-btn { margin-top: 0.5rem; padding: 0.5rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--text-secondary); cursor: pointer; font-size: 0.85rem; }
         .drops-yaml-output .copy-btn:hover { background: var(--bg-card-hover); color: var(--text-primary); }
         .drops-count { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+        /* Luck Summary Table */
+        .luck-table-container { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; margin-bottom: 2rem; }
+        .luck-table-container h3 { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .luck-table { width: 100%; border-collapse: collapse; }
+        .luck-table th { text-align: left; padding: 0.5rem 0.75rem; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); border-bottom: 1px solid var(--border); }
+        .luck-table td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); font-size: 0.8rem; }
+        .luck-table tr:last-child td { border-bottom: none; }
+        .luck-table tr:hover { background: var(--bg-card-hover); }
+        .luck-table .rank-col { color: var(--text-muted); font-family: 'Fira Code', monospace; width: 40px; }
+        .luck-table .activity-col { color: var(--text-secondary); }
+        .luck-table .drop-col { color: var(--text-primary); }
+        .luck-table .kc-col { font-family: 'Fira Code', monospace; color: var(--text-muted); text-align: right; }
+        .luck-table .rate-col { font-family: 'Fira Code', monospace; color: var(--text-muted); text-align: right; font-size: 0.75rem; }
+        .luck-table .luck-col { font-family: 'Fira Code', monospace; text-align: right; font-weight: 500; }
+        .luck-table .status-col { font-size: 0.75rem; font-weight: 500; }
+        .luck-very-spooned { color: #22c55e; }
+        .luck-spooned { color: #84cc16; }
+        .luck-onrate { color: var(--text-secondary); }
+        .luck-dry { color: #f97316; }
+        .luck-very-dry { color: #ef4444; }
+        .luck-pending { color: var(--text-muted); }
+        .status-spooned { color: #22c55e; }
+        .status-onrate { color: var(--text-secondary); }
+        .status-dry { color: #ef4444; }
+        .status-pending { color: var(--text-muted); font-style: italic; }
         /* Password Modal */
         .password-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; align-items: center; justify-content: center; }
         .password-modal.active { display: flex; }
@@ -1368,6 +1393,60 @@
             const withDates = dropsData.filter(d => d.date).length;
             const missingDates = totalDrops - withDates;
 
+            // Luck summary data - manually defined key drops with drop rates
+            const luckData = [
+                { activity: "Lizardman Shaman", drop: "Dragon Warhammer", earned: 45, droprate: 5000 },
+                { activity: "Skotizo", drop: "Jar of darkness", earned: 23, droprate: 200 },
+                { activity: "Vorkath", drop: "Vorkath's Head", earned: 6, droprate: 50 },
+                { activity: "Calvar'ion", drop: "Dragon Pickaxe", earned: 59, droprate: 358 },
+                { activity: "Dagganoth Rex", drop: "Berserker Ring", earned: 34, droprate: 128 },
+                { activity: "Guardians of the Rift", drop: "Abyssal Lantern", earned: 200, droprate: 700 },
+                { activity: "Tormented Demons", drop: "Tormented Synapse", earned: 246, droprate: 500 },
+                { activity: "Cerberus", drop: "Smouldering Stone", earned: 168, droprate: 512 },
+                { activity: "Tempoross", drop: "Tackle Box", earned: 17, droprate: 400 },
+                { activity: "Superior Slayer", drop: "Imbued Heart", earned: 78, droprate: 200 },
+                { activity: "Hespori", drop: "Bottomless Bucket", earned: 23, droprate: 35 },
+                { activity: "Abyssal Demons", drop: "Abyssal Whip", earned: 337, droprate: 512 },
+                { activity: "Barrows", drop: "Any Barrows Item", earned: 16, droprate: 17 },
+                { activity: "Demonic Gorilla", drop: "Zenyte Shard", earned: 400, droprate: 300 },
+                { activity: "Perilous Moons", drop: "Any Unique", earned: 5, droprate: 40 },
+                { activity: "Corrupted Gauntlet", drop: "Enhanced Seed", earned: null, droprate: 400, note: "No drop yet" },
+                { activity: "Kraken", drop: "Kraken Tentacle", earned: 548, droprate: 400 },
+                { activity: "Tormented Demons", drop: "Burning Claw", earned: 1040, droprate: 1000 },
+                { activity: "Royal Titans", drop: "Prayer Scroll", earned: 19, droprate: 50 },
+                { activity: "Pyramid Plunder", drop: "Pharaoh's Sceptre", earned: 10, droprate: 1000 },
+            ];
+
+            // Calculate luck and sort
+            const luckSummary = luckData.map(item => {
+                const luck = item.earned ? (item.droprate / item.earned) : 0;
+                let status = 'On Rate';
+                if (!item.earned) status = 'In Progress';
+                else if (luck > 1.2) status = 'Spooned';
+                else if (luck < 0.8) status = 'Dry';
+                return { ...item, luck, status };
+            }).sort((a, b) => b.luck - a.luck);
+
+            // Calculate average luck (excluding nulls)
+            const validLuck = luckSummary.filter(l => l.luck > 0);
+            const avgLuck = validLuck.length ? (validLuck.reduce((s, l) => s + l.luck, 0) / validLuck.length) : 0;
+
+            const getLuckClass = (luck) => {
+                if (luck === 0) return 'luck-pending';
+                if (luck >= 2) return 'luck-very-spooned';
+                if (luck >= 1.2) return 'luck-spooned';
+                if (luck >= 0.8) return 'luck-onrate';
+                if (luck >= 0.5) return 'luck-dry';
+                return 'luck-very-dry';
+            };
+
+            const getStatusClass = (status) => {
+                if (status === 'Spooned') return 'status-spooned';
+                if (status === 'Dry') return 'status-dry';
+                if (status === 'In Progress') return 'status-pending';
+                return 'status-onrate';
+            };
+
             container.innerHTML = `
                 <div class="drops-summary">
                     <div class="drops-stat">
@@ -1379,9 +1458,47 @@
                         <div class="drops-stat-label">Sources</div>
                     </div>
                     <div class="drops-stat">
-                        <div class="drops-stat-value">${missingDates}</div>
-                        <div class="drops-stat-label">Missing Dates</div>
+                        <div class="drops-stat-value">${avgLuck.toFixed(1)}x</div>
+                        <div class="drops-stat-label">Avg Luck</div>
                     </div>
+                    <div class="drops-stat">
+                        <div class="drops-stat-value">${luckSummary.filter(l => l.status === 'Spooned').length}</div>
+                        <div class="drops-stat-label">Spooned</div>
+                    </div>
+                    <div class="drops-stat">
+                        <div class="drops-stat-value">${luckSummary.filter(l => l.status === 'Dry').length}</div>
+                        <div class="drops-stat-label">Dry</div>
+                    </div>
+                </div>
+
+                <div class="luck-table-container">
+                    <h3>🍀 Luck Summary</h3>
+                    <table class="luck-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Activity</th>
+                                <th>Key Drop</th>
+                                <th style="text-align:right">KC</th>
+                                <th style="text-align:right">Rate</th>
+                                <th style="text-align:right">Luck</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${luckSummary.map((item, i) => `
+                                <tr>
+                                    <td class="rank-col">${i + 1}</td>
+                                    <td class="activity-col">${item.activity}</td>
+                                    <td class="drop-col">${item.drop}</td>
+                                    <td class="kc-col">${item.earned ? item.earned.toLocaleString() : '—'}</td>
+                                    <td class="rate-col">1/${item.droprate.toLocaleString()}</td>
+                                    <td class="luck-col ${getLuckClass(item.luck)}">${item.luck ? item.luck.toFixed(1) + 'x' : '—'}</td>
+                                    <td class="status-col ${getStatusClass(item.status)}">${item.status}</td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
                 </div>
 
                 <div class="drops-filters">
