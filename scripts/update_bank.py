@@ -14,97 +14,105 @@ DATA_DIR = Path(__file__).parent.parent / "data"
 GE_PRICES_URL = "https://prices.runescape.wiki/api/v1/osrs/latest"
 ITEM_MAPPING_URL = "https://prices.runescape.wiki/api/v1/osrs/mapping"
 
-# Item categories based on OSRS Wiki categories and common groupings
-CATEGORIES = {
-    "Food": {
-        "Cooked Fish": ["shark", "monkfish", "lobster", "swordfish", "tuna", "salmon", "trout", "bass", "cod", "pike", "anglerfish", "manta ray", "sea turtle", "dark crab", "karambwan"],
-        "Raw Fish": ["raw shark", "raw monkfish", "raw lobster", "raw swordfish", "raw tuna", "raw salmon", "raw trout", "raw bass", "raw cod", "raw pike", "raw anglerfish", "raw manta ray"],
-        "Cooked Meat": ["cooked", "stew", "pie", "potato"],
-        "Fruit": ["fruit", "berries", "papaya", "coconut", "dragonfruit", "grapes", "watermelon"],
-        "Other Food": ["sweets", "cake", "bread"]
-    },
-    "Potions": {
-        "Combat Potions": ["super combat", "divine", "ranging potion", "magic potion", "super strength", "super attack", "super defence"],
-        "Restoration": ["saradomin brew", "prayer potion", "super restore", "sanfew"],
-        "Skilling Potions": ["stamina", "energy", "agility", "hunter"],
-        "Unfinished": ["potion (unf)"],
-        "Other Potions": ["antifire", "antidote", "antipoison", "antivenom", "relicym"]
-    },
-    "Runes": {
-        "Elemental": ["air rune", "water rune", "earth rune", "fire rune"],
-        "Catalytic": ["mind rune", "body rune", "cosmic rune", "chaos rune", "nature rune", "law rune", "death rune", "blood rune", "soul rune", "astral rune", "wrath rune"],
-        "Combination": ["mist rune", "dust rune", "mud rune", "smoke rune", "steam rune", "lava rune"],
-        "Talismans": ["talisman"]
-    },
-    "Equipment": {
-        "Melee Weapons": ["scimitar", "longsword", "sword", "dagger", "mace", "warhammer", "battleaxe", "2h sword", "halberd", "spear", "whip", "rapier", "hasta", "claws"],
-        "Ranged Weapons": ["shortbow", "longbow", "crossbow", "javelin", "dart", "knife", "thrownaxe", "chinchompa", "blowpipe"],
-        "Magic Weapons": ["staff", "wand", "trident"],
-        "Helmets": ["helm", "hat", "hood", "coif", "mask", "faceguard"],
-        "Body Armor": ["platebody", "chainbody", "body", "top", "torso", "chestplate", "hauberk"],
-        "Leg Armor": ["platelegs", "plateskirt", "chaps", "legs", "tassets", "cuisse", "skirt", "bottoms", "greaves"],
-        "Shields": ["shield", "defender", "kiteshield", "sq shield", "book of"],
-        "Gloves": ["gloves", "vambraces", "bracelet", "gauntlets"],
-        "Boots": ["boots", "sandals", "shoes"],
-        "Capes": ["cape", "cloak", "ava's"],
-        "Amulets & Necklaces": ["amulet", "necklace", "fury", "torture", "anguish", "tormented"],
-        "Rings": ["ring of", "berserker ring", "archers ring", "seers ring", "warrior ring"]
-    },
-    "Ammunition": {
-        "Arrows": ["arrow", "arrowtips"],
-        "Bolts": ["bolt"],
-        "Other Ammo": ["cannonball", "javelin", "dart", "knife", "thrownaxe"]
-    },
-    "Skilling": {
-        "Herbs": ["grimy", "guam", "marrentill", "tarromin", "harralander", "ranarr", "irit", "avantoe", "kwuarm", "cadantine", "lantadyme", "dwarf weed", "torstol", "snapdragon", "toadflax"],
-        "Seeds": ["seed"],
-        "Ores": ["ore", "coal"],
-        "Bars": ["bar"],
-        "Logs": ["logs"],
-        "Planks": ["plank"],
-        "Gems": ["sapphire", "emerald", "ruby", "diamond", "dragonstone", "onyx", "opal", "jade", "topaz", "uncut"],
-        "Hides & Leather": ["dragonhide", "leather", "hide"],
-        "Bones": ["bones", "ashes"],
-        "Essence": ["essence"],
-        "Farming": ["compost", "ultracompost", "supercompost", "bottomless"],
-        "Fishing": ["bait", "feather", "harpoon", "net", "rod"],
-        "Hunter": ["trap", "snare", "box trap", "noose", "fur", "kebbit"],
-        "Construction": ["nail", "bolt of cloth", "limestone", "marble"]
-    },
-    "Teleportation": {
-        "Jewelry": ["games necklace", "ring of dueling", "amulet of glory", "ring of wealth", "necklace of passage", "digsite pendant", "burning amulet", "skills necklace", "combat bracelet"],
-        "Tablets": ["teleport to house", "varrock teleport", "lumbridge teleport", "falador teleport", "camelot teleport"],
-        "Other Teleports": ["ectophial", "royal seed pod", "xeric's talisman", "scroll", "drakan's medallion", "teleport crystal"]
-    },
-    "Clue Items": {
-        "Clue Scrolls": ["clue scroll", "scroll box"],
-        "Clue Rewards": ["firelighter", "blessing", "ornament kit", "page"]
-    },
-    "Barrows": {
-        "Ahrim's": ["ahrim"],
-        "Dharok's": ["dharok"],
-        "Guthan's": ["guthan"],
-        "Karil's": ["karil"],
-        "Torag's": ["torag"],
-        "Verac's": ["verac"]
-    },
-    "Slayer": {
-        "Slayer Equipment": ["slayer helmet", "nose peg", "earmuffs", "face mask", "mirror shield", "rock hammer", "bag of salt", "ice cooler", "witchwood icon", "slayer bell", "fungicide"],
-        "Ensouled Heads": ["ensouled"],
-        "Slayer Drops": ["dark totem", "ancient shard", "brimstone key", "larran's key"]
-    },
-    "Currency": {
-        "Coins & Tokens": ["coins", "platinum token", "tokkul", "trading sticks", "numulite", "golden nugget", "mark of grace", "stardust", "crystal shard", "amylase"]
-    },
-    "Quest Items": {
-        "Quest Items": ["quest", "diary", "scroll"]
-    },
-    "Miscellaneous": {
-        "Tools": ["hammer", "chisel", "knife", "saw", "needle", "tinderbox", "spade", "rake", "trowel", "secateurs", "axe", "pickaxe"],
-        "Containers": ["bucket", "jug", "vial", "pot", "bowl", "basket", "sack"],
-        "Other": []
-    }
-}
+# Categories checked in priority order - more specific categories first
+# Each tuple is (category, subcategory, keywords)
+CATEGORY_RULES = [
+    # Barrows - check first since they contain equipment keywords
+    ("Barrows", "Ahrim's", ["ahrim"]),
+    ("Barrows", "Dharok's", ["dharok"]),
+    ("Barrows", "Guthan's", ["guthan"]),
+    ("Barrows", "Karil's", ["karil"]),
+    ("Barrows", "Torag's", ["torag"]),
+    ("Barrows", "Verac's", ["verac"]),
+    
+    # Moon armor sets - check before general equipment
+    ("Moon Armor", "Blood Moon", ["blood moon"]),
+    ("Moon Armor", "Blue Moon", ["blue moon"]),
+    ("Moon Armor", "Eclipse Moon", ["eclipse moon"]),
+    
+    # Currency - check early for coins
+    ("Currency", "Coins & Tokens", ["coins", "platinum token", "tokkul", "trading sticks", "numulite", "golden nugget", "mark of grace", "stardust", "crystal shard", "amylase", "warrior guild token", "ecto-token"]),
+    
+    # Runes - check before other categories
+    ("Runes", "Elemental", ["air rune", "water rune", "earth rune", "fire rune"]),
+    ("Runes", "Catalytic", ["mind rune", "body rune", "cosmic rune", "chaos rune", "nature rune", "law rune", "death rune", "blood rune", "soul rune", "astral rune", "wrath rune"]),
+    ("Runes", "Combination", ["mist rune", "dust rune", "mud rune", "smoke rune", "steam rune", "lava rune"]),
+    ("Runes", "Talismans", ["talisman"]),
+    
+    # Food - raw fish before cooked to avoid overlap
+    ("Food", "Raw Fish", ["raw shark", "raw monkfish", "raw lobster", "raw swordfish", "raw tuna", "raw salmon", "raw trout", "raw bass", "raw cod", "raw pike", "raw anglerfish", "raw manta ray", "raw karambwan", "raw sardine"]),
+    ("Food", "Cooked Fish", ["shark", "monkfish", "lobster", "swordfish", "tuna", "salmon", "trout", "bass", "cod", "pike", "anglerfish", "manta ray", "sea turtle", "dark crab", "karambwan"]),
+    ("Food", "Cooked Meals", ["stew", "pie", "potato", "pizza"]),
+    ("Food", "Fruit", ["fruit", "berries", "papaya", "coconut", "dragonfruit", "grapes", "watermelon", "calquat"]),
+    ("Food", "Other Food", ["sweets", "cake", "bread", "moth"]),
+    
+    # Potions
+    ("Potions", "Unfinished", ["potion (unf)"]),
+    ("Potions", "Combat Potions", ["super combat", "divine", "ranging potion", "magic potion", "super strength", "super attack", "super defence"]),
+    ("Potions", "Restoration", ["saradomin brew", "prayer potion", "super restore", "sanfew", "guthix rest"]),
+    ("Potions", "Skilling Potions", ["stamina", "energy potion", "agility potion", "hunter potion"]),
+    ("Potions", "Other Potions", ["antifire", "antidote", "antipoison", "antivenom", "relicym", "balm"]),
+    
+    # Slayer - before equipment
+    ("Slayer", "Ensouled Heads", ["ensouled"]),
+    ("Slayer", "Slayer Equipment", ["slayer helmet", "nose peg", "earmuffs", "face mask", "mirror shield", "rock hammer", "bag of salt", "ice cooler", "witchwood icon", "slayer bell", "fungicide", "slayer's staff", "leaf-bladed"]),
+    ("Slayer", "Slayer Drops", ["dark totem", "ancient shard", "brimstone key", "larran's key"]),
+    
+    # Ammunition - before equipment to catch darts/knives
+    ("Ammunition", "Arrows", ["arrow", "arrowtips"]),
+    ("Ammunition", "Bolts", ["bolt"]),
+    ("Ammunition", "Cannonballs", ["cannonball"]),
+    ("Ammunition", "Other Ammo", ["javelin", "dart", "thrownaxe", "chinchompa", "atlatl dart"]),
+    
+    # Teleportation
+    ("Teleportation", "Jewelry", ["games necklace", "ring of dueling", "amulet of glory", "ring of wealth", "necklace of passage", "digsite pendant", "burning amulet", "skills necklace", "combat bracelet"]),
+    ("Teleportation", "Tablets", ["teleport to house", "varrock teleport", "lumbridge teleport", "falador teleport", "camelot teleport"]),
+    ("Teleportation", "Other Teleports", ["ectophial", "royal seed pod", "xeric's talisman", "drakan's medallion", "teleport crystal", "pharaoh's sceptre", "skull sceptre"]),
+    
+    # Clue Items
+    ("Clue Items", "Clue Scrolls", ["clue scroll", "scroll box"]),
+    ("Clue Items", "Clue Rewards", ["firelighter", "blessing", "ornament kit"]),
+    
+    # Skilling materials
+    ("Skilling", "Herbs", ["grimy", "guam leaf", "marrentill", "tarromin", "harralander", "ranarr", "irit leaf", "avantoe", "kwuarm", "cadantine", "lantadyme", "dwarf weed", "torstol", "snapdragon", "toadflax"]),
+    ("Skilling", "Seeds", ["seed"]),
+    ("Skilling", "Ores", [" ore", "coal"]),
+    ("Skilling", "Bars", [" bar"]),
+    ("Skilling", "Logs", ["logs"]),
+    ("Skilling", "Planks", ["plank"]),
+    ("Skilling", "Gems", ["sapphire", "emerald", "ruby", "diamond", "dragonstone", "onyx", "opal", "jade", "topaz", "uncut"]),
+    ("Skilling", "Hides & Leather", ["dragonhide", "leather", "cowhide"]),
+    ("Skilling", "Bones", ["bones"]),
+    ("Skilling", "Ashes", ["ashes"]),
+    ("Skilling", "Essence", ["essence"]),
+    ("Skilling", "Farming", ["compost", "bottomless", "secateurs", "seaweed", "spore"]),
+    ("Skilling", "Fishing", ["bait", "feather", "harpoon", "fishing net", "fishing rod", "sandworms"]),
+    ("Skilling", "Hunter", ["trap", "snare", "box trap", "noose", "fur", "kebbit", "salamander", "chinchompa"]),
+    ("Skilling", "Construction", ["nail", "bolt of cloth", "limestone", "marble"]),
+    ("Skilling", "Crafting", ["molten glass", "glassblowing", "lantern lens", "orb"]),
+    
+    # Equipment - checked last since many items contain these keywords
+    ("Equipment", "Melee Weapons", ["scimitar", "longsword", "sword", "dagger", "mace", "warhammer", "battleaxe", "2h sword", "halberd", "spear", "whip", "rapier", "hasta", "claws", "maul", "axe"]),
+    ("Equipment", "Ranged Weapons", ["shortbow", "longbow", "crossbow", "blowpipe"]),
+    ("Equipment", "Magic Weapons", ["staff", "wand", "trident"]),
+    ("Equipment", "Helmets", ["helm", "hat", "hood", "coif", "mask", "faceguard"]),
+    ("Equipment", "Body Armor", ["platebody", "chainbody", "body", "top", "torso", "chestplate", "hauberk", "robetop"]),
+    ("Equipment", "Leg Armor", ["platelegs", "plateskirt", "chaps", "tassets", "cuisse", "greaves", "robeskirt", "robe bottom"]),
+    ("Equipment", "Shields", ["shield", "defender", "kiteshield", "sq shield", "book of"]),
+    ("Equipment", "Gloves", ["gloves", "vambraces", "gauntlets"]),
+    ("Equipment", "Boots", ["boots", "sandals", "shoes"]),
+    ("Equipment", "Capes", ["cape", "cloak", "ava's"]),
+    ("Equipment", "Amulets & Necklaces", ["amulet", "necklace", "fury", "torture", "anguish", "tormented"]),
+    ("Equipment", "Rings", ["ring of", "berserker ring", "archers ring", "seers ring", "warrior ring", "ring (i)"]),
+    ("Equipment", "Bracelets", ["bracelet"]),
+    
+    # Quest Items - very generic, keep near end
+    ("Quest Items", "Quest Items", ["greegree", "sigil", "seal of passage"]),
+    
+    # Miscellaneous - catchall at the end
+    ("Miscellaneous", "Tools", ["hammer", "chisel", "knife", "saw", "needle", "tinderbox", "spade", "rake", "trowel", "pickaxe"]),
+    ("Miscellaneous", "Containers", ["bucket", "jug", "vial", "pot", "bowl", "basket", "sack", "pouch"]),
+]
 
 
 def fetch_json(url):
@@ -156,14 +164,13 @@ def load_bank_data():
 
 
 def categorize_item(item_name):
-    """Categorize an item based on its name."""
+    """Categorize an item based on its name using priority-ordered rules."""
     name_lower = item_name.lower()
     
-    for category, subcategories in CATEGORIES.items():
-        for subcategory, keywords in subcategories.items():
-            for keyword in keywords:
-                if keyword.lower() in name_lower:
-                    return category, subcategory
+    for category, subcategory, keywords in CATEGORY_RULES:
+        for keyword in keywords:
+            if keyword.lower() in name_lower:
+                return category, subcategory
     
     return "Miscellaneous", "Other"
 
