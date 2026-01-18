@@ -1828,7 +1828,7 @@
                         <div class="prog-stat-label">Milestones</div>
                     </div>
                     <div class="prog-stat">
-                        <div class="prog-stat-value">${skillsData ? Object.values(skillsData).filter(s => s.level >= 99).length : 0}</div>
+                        <div class="prog-stat-value">${skillsData ? Object.entries(skillsData).filter(([k, s]) => k !== 'Overall' && s.level >= 99).length : 0}</div>
                         <div class="prog-stat-label">99s</div>
                     </div>
                     <div class="prog-stat">
