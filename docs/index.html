@@ -203,6 +203,50 @@
         .task-item .task-tier.medium { background: rgba(234, 179, 8, 0.2); color: #eab308; }
         .task-item .task-tier.hard { background: rgba(249, 115, 22, 0.2); color: #f97316; }
         .task-item .task-tier.elite { background: rgba(6, 182, 212, 0.2); color: #06b6d4; }
+        
+        /* B0aty Guide */
+        .boaty-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
+        .boaty-progress { display: flex; gap: 2rem; flex-wrap: wrap; }
+        .boaty-progress .progress-item { text-align: center; }
+        .boaty-progress .progress-value { font-size: 1.5rem; font-weight: 600; }
+        .boaty-progress .progress-label { font-size: 0.8rem; color: var(--text-muted); }
+        .boaty-progress-bar { width: 100%; height: 8px; background: var(--bg-dark); border-radius: 4px; overflow: hidden; margin-top: 0.5rem; }
+        .boaty-progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent-green), #22c55e); border-radius: 4px; transition: width 0.3s; }
+        .boaty-controls { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+        .boaty-search { flex: 1; min-width: 200px; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; color: var(--text-primary); font-size: 0.9rem; }
+        .boaty-search:focus { outline: none; border-color: var(--accent-gold); }
+        .boaty-filters { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .boaty-filter { padding: 0.5rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--text-muted); cursor: pointer; font-size: 0.85rem; }
+        .boaty-filter:hover { border-color: var(--text-muted); }
+        .boaty-filter.active { background: var(--accent-gold); color: var(--bg-dark); border-color: var(--accent-gold); }
+        .boaty-episode { margin-bottom: 1rem; }
+        .boaty-episode-header { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px 8px 0 0; padding: 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .boaty-episode-header:hover { background: var(--bg-card-hover); }
+        .boaty-episode-header h3 { margin: 0; font-size: 1rem; }
+        .boaty-episode-header .episode-stats { display: flex; gap: 1rem; align-items: center; }
+        .boaty-episode-header .episode-progress { font-size: 0.85rem; color: var(--text-muted); }
+        .boaty-episode-header .episode-toggle { color: var(--text-muted); transition: transform 0.2s; }
+        .boaty-episode.expanded .episode-toggle { transform: rotate(180deg); }
+        .boaty-episode-content { display: none; border: 1px solid var(--border); border-top: none; border-radius: 0 0 8px 8px; }
+        .boaty-episode.expanded .boaty-episode-content { display: block; }
+        .boaty-section { border-bottom: 1px solid var(--border); }
+        .boaty-section:last-child { border-bottom: none; }
+        .boaty-section-header { padding: 0.75rem 1rem; background: var(--bg-card); font-weight: 500; display: flex; justify-content: space-between; cursor: pointer; }
+        .boaty-section-header:hover { background: rgba(212, 168, 75, 0.1); }
+        .boaty-section-header .section-count { font-size: 0.8rem; color: var(--text-muted); font-weight: normal; }
+        .boaty-withdraw { padding: 0.5rem 1rem; background: rgba(6, 182, 212, 0.1); font-size: 0.8rem; color: #06b6d4; border-bottom: 1px solid var(--border); }
+        .boaty-steps { background: var(--bg-dark); }
+        .boaty-step { padding: 0.5rem 1rem; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.9rem; cursor: pointer; transition: background 0.15s; }
+        .boaty-step:last-child { border-bottom: none; }
+        .boaty-step:hover { background: var(--bg-card); }
+        .boaty-step.completed { background: rgba(74, 222, 128, 0.05); }
+        .boaty-step .step-checkbox { width: 20px; height: 20px; border: 2px solid var(--border); border-radius: 4px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.8rem; margin-top: 2px; }
+        .boaty-step.completed .step-checkbox { background: var(--accent-green); border-color: var(--accent-green); color: var(--bg-dark); }
+        .boaty-step .step-id { color: var(--text-muted); font-size: 0.75rem; min-width: 35px; margin-top: 2px; }
+        .boaty-step .step-text { flex: 1; }
+        .boaty-step.completed .step-text { text-decoration: line-through; color: var(--text-muted); }
+        .boaty-step .step-date { font-size: 0.75rem; color: var(--text-muted); }
+        .boaty-empty { text-align: center; padding: 2rem; color: var(--text-muted); }
         .empty-state { text-align: center; padding: 3rem; color: var(--text-muted); }
         /* Bank Styles */
         .bank-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
@@ -439,6 +483,7 @@
             <button class="nav-tab" data-tab="pets">Pets</button>
             <button class="nav-tab" data-tab="quests">Quests</button>
             <button class="nav-tab" data-tab="diaries">Diaries</button>
+            <button class="nav-tab" data-tab="boaty">B0aty Guide</button>
             <button class="nav-tab" data-tab="goals">Goals</button>
             <button class="nav-tab" data-tab="drops">Drops</button>
             <button class="nav-tab" data-tab="progression">Progression</button>
@@ -475,6 +520,10 @@
 
         <div id="diaries" class="tab-content">
             <div id="diariesContainer">Loading...</div>
+        </div>
+
+        <div id="boaty" class="tab-content">
+            <div id="boatyContainer">Loading...</div>
         </div>
 
         <div id="goals" class="tab-content">
@@ -563,9 +612,14 @@
         let diariesData = null;
         let skillsData = null;
         let bossesData = null;
+        let boatyGuide = null;
+        let boatyCompleted = new Set();
+        let boatySearchTerm = '';
+        let boatyFilter = 'all';
+        let boatyEpisodeFilter = 'all';
 
         async function loadData() {
-            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, goalsRes, diariesRes, bankRes, dropsRes] = await Promise.all([
+            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, goalsRes, diariesRes, bankRes, dropsRes, boatyGuideRes, boatyProgressRes] = await Promise.all([
                 fetch('./data/skills.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/bosses.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/clues.json').then(r=>r.json()).catch(()=>null),
@@ -576,7 +630,9 @@
                 fetch('./data/goals.yaml').then(r=>r.text()).catch(()=>null),
                 fetch('./data/diaries.yaml').then(r=>r.text()).catch(()=>null),
                 fetch('./data/bank.json').then(r=>r.json()).catch(()=>null),
-                fetch('./data/drops.yaml').then(r=>r.text()).catch(()=>null)
+                fetch('./data/drops.yaml').then(r=>r.text()).catch(()=>null),
+                fetch('./data/boaty_guide.json').then(r=>r.json()).catch(()=>null),
+                fetch('./data/boaty_progress.yaml').then(r=>r.text()).catch(()=>null)
             ]);
 
             if (skillsRes?.rsn) {
@@ -633,6 +689,11 @@
             renderPets();
             renderQuests();
             if (diariesRes) renderDiaries(diariesRes);
+            if (boatyGuideRes) {
+                boatyGuide = boatyGuideRes;
+                if (boatyProgressRes) parseBoatyProgress(boatyProgressRes);
+                renderBoatyGuide();
+            }
             if (goalsRes) renderGoals(goalsRes);
             if (dropsRes) renderDrops(dropsRes);
             renderProgression(dropsRes);
@@ -1350,6 +1411,187 @@
             // Store for stat card
             diariesData = { completed: totalCompleted, total: totalTasks };
             document.getElementById('diaryCount').textContent = `${totalCompleted}/${totalTasks}`;
+        }
+
+        // B0aty Guide Functions
+        function parseBoatyProgress(yaml) {
+            boatyCompleted = new Set();
+            let inCompleted = false;
+            yaml.split('\n').forEach(line => {
+                if (line.trim() === 'completed:') {
+                    inCompleted = true;
+                    return;
+                }
+                if (inCompleted && line.trim().startsWith('- ')) {
+                    const text = line.trim().slice(2);
+                    const parts = text.split(' | ');
+                    const stepId = parseInt(parts[0]);
+                    if (!isNaN(stepId)) {
+                        boatyCompleted.add(stepId);
+                    }
+                }
+            });
+        }
+
+        function renderBoatyGuide() {
+            const container = document.getElementById('boatyContainer');
+            if (!boatyGuide) {
+                container.innerHTML = '<div class="boaty-empty">Guide not loaded</div>';
+                return;
+            }
+
+            const totalSteps = boatyGuide.total_steps;
+            const completedCount = boatyCompleted.size;
+            const percent = totalSteps > 0 ? Math.round((completedCount / totalSteps) * 100) : 0;
+
+            // Filter episodes based on search and filters
+            const filteredEpisodes = filterBoatyEpisodes();
+            const visibleSteps = countVisibleSteps(filteredEpisodes);
+
+            container.innerHTML = `
+                <div class="boaty-header">
+                    <div class="boaty-progress">
+                        <div class="progress-item">
+                            <div class="progress-value" style="color: var(--accent-green)">${completedCount}/${totalSteps}</div>
+                            <div class="progress-label">Steps Complete</div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-value" style="color: var(--accent-gold)">${percent}%</div>
+                            <div class="progress-label">Progress</div>
+                            <div class="boaty-progress-bar"><div class="boaty-progress-fill" style="width: ${percent}%"></div></div>
+                        </div>
+                    </div>
+                    <a href="${boatyGuide.source}" target="_blank" style="color: var(--accent-gold); font-size: 0.85rem;">📖 View Original Guide</a>
+                </div>
+                
+                <div class="boaty-controls">
+                    <input type="text" class="boaty-search" id="boatySearch" placeholder="Search steps..." value="${boatySearchTerm}">
+                    <div class="boaty-filters">
+                        <button class="boaty-filter ${boatyFilter === 'all' ? 'active' : ''}" data-filter="all">All</button>
+                        <button class="boaty-filter ${boatyFilter === 'incomplete' ? 'active' : ''}" data-filter="incomplete">Incomplete</button>
+                        <button class="boaty-filter ${boatyFilter === 'completed' ? 'active' : ''}" data-filter="completed">Completed</button>
+                    </div>
+                    <select class="boaty-search" id="boatyEpisodeFilter" style="flex: 0; min-width: 150px;">
+                        <option value="all" ${boatyEpisodeFilter === 'all' ? 'selected' : ''}>All Episodes</option>
+                        ${boatyGuide.episodes.map(ep => `
+                            <option value="${ep.number}" ${boatyEpisodeFilter == ep.number ? 'selected' : ''}>
+                                ${ep.number === 0 ? 'Pre-Guide' : 'Episode ' + ep.number}
+                            </option>
+                        `).join('')}
+                    </select>
+                </div>
+                
+                ${visibleSteps === 0 ? '<div class="boaty-empty">No steps match your filters</div>' : ''}
+                
+                ${filteredEpisodes.map(ep => {
+                    const epSteps = ep.sections.flatMap(s => s.steps);
+                    const epCompleted = epSteps.filter(s => boatyCompleted.has(s.id)).length;
+                    const epTotal = epSteps.length;
+                    if (epTotal === 0) return '';
+                    
+                    return `
+                        <div class="boaty-episode" data-episode="${ep.number}">
+                            <div class="boaty-episode-header" onclick="toggleBoatyEpisode(${ep.number})">
+                                <h3>${ep.number === 0 ? '🏁 Pre-Guide Setup' : '📺 ' + ep.title}</h3>
+                                <div class="episode-stats">
+                                    <span class="episode-progress">${epCompleted}/${epTotal}</span>
+                                    <span class="episode-toggle">▼</span>
+                                </div>
+                            </div>
+                            <div class="boaty-episode-content">
+                                ${ep.sections.map(section => {
+                                    const sectionSteps = section.steps;
+                                    if (sectionSteps.length === 0) return '';
+                                    const sectionCompleted = sectionSteps.filter(s => boatyCompleted.has(s.id)).length;
+                                    
+                                    return `
+                                        <div class="boaty-section">
+                                            <div class="boaty-section-header">
+                                                <span>${section.name}</span>
+                                                <span class="section-count">${sectionCompleted}/${sectionSteps.length}</span>
+                                            </div>
+                                            ${section.withdraw ? `<div class="boaty-withdraw">📦 ${section.withdraw}</div>` : ''}
+                                            <div class="boaty-steps">
+                                                ${sectionSteps.map(step => `
+                                                    <div class="boaty-step ${boatyCompleted.has(step.id) ? 'completed' : ''}" data-step="${step.id}">
+                                                        <div class="step-checkbox">${boatyCompleted.has(step.id) ? '✓' : ''}</div>
+                                                        <div class="step-id">#${step.id}</div>
+                                                        <div class="step-text">${escapeHtml(step.task)}</div>
+                                                    </div>
+                                                `).join('')}
+                                            </div>
+                                        </div>
+                                    `;
+                                }).join('')}
+                            </div>
+                        </div>
+                    `;
+                }).join('')}
+            `;
+
+            // Add event listeners
+            document.getElementById('boatySearch').addEventListener('input', (e) => {
+                boatySearchTerm = e.target.value;
+                renderBoatyGuide();
+            });
+            
+            document.querySelectorAll('.boaty-filter').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    boatyFilter = btn.dataset.filter;
+                    renderBoatyGuide();
+                });
+            });
+            
+            document.getElementById('boatyEpisodeFilter').addEventListener('change', (e) => {
+                boatyEpisodeFilter = e.target.value;
+                renderBoatyGuide();
+            });
+        }
+
+        function filterBoatyEpisodes() {
+            if (!boatyGuide) return [];
+            
+            return boatyGuide.episodes.map(ep => {
+                // Filter by episode
+                if (boatyEpisodeFilter !== 'all' && ep.number != boatyEpisodeFilter) {
+                    return { ...ep, sections: [] };
+                }
+                
+                const filteredSections = ep.sections.map(section => {
+                    const filteredSteps = section.steps.filter(step => {
+                        // Filter by completion status
+                        if (boatyFilter === 'completed' && !boatyCompleted.has(step.id)) return false;
+                        if (boatyFilter === 'incomplete' && boatyCompleted.has(step.id)) return false;
+                        
+                        // Filter by search term
+                        if (boatySearchTerm) {
+                            const searchLower = boatySearchTerm.toLowerCase();
+                            return step.task.toLowerCase().includes(searchLower) || 
+                                   step.id.toString().includes(searchLower);
+                        }
+                        return true;
+                    });
+                    return { ...section, steps: filteredSteps };
+                }).filter(s => s.steps.length > 0);
+                
+                return { ...ep, sections: filteredSections };
+            }).filter(ep => ep.sections.length > 0);
+        }
+
+        function countVisibleSteps(episodes) {
+            return episodes.reduce((sum, ep) => 
+                sum + ep.sections.reduce((s, sec) => s + sec.steps.length, 0), 0);
+        }
+
+        function toggleBoatyEpisode(epNum) {
+            const ep = document.querySelector(`.boaty-episode[data-episode="${epNum}"]`);
+            if (ep) ep.classList.toggle('expanded');
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
         }
 
         function renderGoals(yaml) {
