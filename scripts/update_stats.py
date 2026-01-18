@@ -168,51 +168,116 @@ def process_temple_clog(temple_data, manual_dates):
     total_items = 0
     recent_items = []
     
-    # Temple returns data in 'data' key with categories
+    # Temple returns data in 'data' key - structure may vary
     clog_data = temple_data.get('data', {})
     
-    for category_name, category_data in clog_data.items():
-        items = category_data.get('items', {})
-        
-        obtained = []
-        missing = []
-        
-        for item_name, item_info in items.items():
-            if item_info.get('obtained', False):
-                # Check for manual date first, then Temple date
-                manual_date = manual_dates.get(item_name.lower())
-                temple_date = item_info.get('date')
+    # Debug: print structure
+    print(f"  Data type: {type(clog_data)}")
+    if isinstance(clog_data, dict):
+        print(f"  Keys sample: {list(clog_data.keys())[:3]}")
+    
+    # Handle different possible structures
+    if isinstance(clog_data, dict):
+        for category_name, category_data in clog_data.items():
+            obtained = []
+            missing = []
+            
+            # Structure 1: category_data is a dict with 'items' key
+            if isinstance(category_data, dict) and 'items' in category_data:
+                items = category_data.get('items', {})
+                for item_name, item_info in items.items():
+                    if isinstance(item_info, dict) and item_info.get('obtained', False):
+                        manual_date = manual_dates.get(item_name.lower())
+                        temple_date = item_info.get('date')
+                        final_date = manual_date or temple_date
+                        
+                        obtained.append({
+                            'name': item_name,
+                            'date': final_date,
+                            'quantity': item_info.get('quantity', 1)
+                        })
+                        
+                        if final_date:
+                            recent_items.append({
+                                'name': item_name,
+                                'date': final_date,
+                                'collection': category_name
+                            })
+                    else:
+                        missing.append(item_name)
+            
+            # Structure 2: category_data is a list of items
+            elif isinstance(category_data, list):
+                for item in category_data:
+                    if isinstance(item, dict):
+                        item_name = item.get('name', item.get('item', str(item)))
+                        if item.get('obtained', True):  # Assume obtained if in list
+                            manual_date = manual_dates.get(item_name.lower())
+                            temple_date = item.get('date')
+                            final_date = manual_date or temple_date
+                            
+                            obtained.append({
+                                'name': item_name,
+                                'date': final_date,
+                                'quantity': item.get('quantity', 1)
+                            })
+                            
+                            if final_date:
+                                recent_items.append({
+                                    'name': item_name,
+                                    'date': final_date,
+                                    'collection': category_name
+                                })
+                    elif isinstance(item, str):
+                        # Just item names
+                        manual_date = manual_dates.get(item.lower())
+                        obtained.append({
+                            'name': item,
+                            'date': manual_date
+                        })
+            
+            # Structure 3: category_data is a simple dict with item_name: obtained/date
+            elif isinstance(category_data, dict):
+                for item_name, item_info in category_data.items():
+                    if isinstance(item_info, bool):
+                        # Simple bool for obtained
+                        if item_info:
+                            manual_date = manual_dates.get(item_name.lower())
+                            obtained.append({'name': item_name, 'date': manual_date})
+                        else:
+                            missing.append(item_name)
+                    elif isinstance(item_info, dict):
+                        if item_info.get('obtained', False):
+                            manual_date = manual_dates.get(item_name.lower())
+                            temple_date = item_info.get('date')
+                            obtained.append({
+                                'name': item_name,
+                                'date': manual_date or temple_date,
+                                'quantity': item_info.get('quantity', 1)
+                            })
+                        else:
+                            missing.append(item_name)
+                    elif isinstance(item_info, str):
+                        # item_info might be a date string
+                        manual_date = manual_dates.get(item_name.lower())
+                        obtained.append({
+                            'name': item_name,
+                            'date': manual_date or item_info
+                        })
+            
+            if obtained or missing:
+                collections[category_name] = {
+                    'obtained': obtained,
+                    'missing': missing,
+                    'obtained_count': len(obtained),
+                    'total_count': len(obtained) + len(missing)
+                }
                 
-                # Prefer manual date if it exists
-                final_date = manual_date or temple_date
-                
-                obtained.append({
-                    'name': item_name,
-                    'date': final_date,
-                    'quantity': item_info.get('quantity', 1)
-                })
-                
-                if final_date:
-                    recent_items.append({
-                        'name': item_name,
-                        'date': final_date,
-                        'collection': category_name
-                    })
-            else:
-                missing.append(item_name)
-        
-        collections[category_name] = {
-            'obtained': obtained,
-            'missing': missing,
-            'obtained_count': len(obtained),
-            'total_count': len(obtained) + len(missing)
-        }
-        
-        total_obtained += len(obtained)
-        total_items += len(obtained) + len(missing)
+                total_obtained += len(obtained)
+                total_items += len(obtained) + len(missing)
     
     # Sort recent items by date
-    recent_items.sort(key=lambda x: x['date'] or '', reverse=True)
+    recent_items.sort(key=lambda x: x.get('date') or '', reverse=True)
     
     return {
         'collections': collections,
