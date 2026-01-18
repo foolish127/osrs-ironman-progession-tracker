@@ -238,8 +238,12 @@ def load_item_names():
         req = urllib.request.Request(url, headers={"User-Agent": "OSRS-Ironman-Tracker/1.0"})
         with urllib.request.urlopen(req, timeout=30) as resp:
             data = json.loads(resp.read().decode())
-            # Returns {id: name, ...}
-            return data if isinstance(data, dict) else {}
+            # Structure is {'items': {'id': 'name', ...}}
+            items = data.get('items', {})
+            if isinstance(items, dict):
+                print(f"  Loaded {len(items)} item names")
+                return items
+            return {}
     except Exception as e:
         print(f"  Warning: Could not load item names: {e}")
         return {}
