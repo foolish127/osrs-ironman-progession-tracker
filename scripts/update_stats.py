@@ -129,8 +129,8 @@ def fetch_temple_collection_log(rsn):
     """Fetch collection log from TempleOSRS API"""
     print(f"Fetching collection log from TempleOSRS for {rsn}...")
     
-    # Fetch all categories
-    data = fetch_json(TEMPLE_CLOG_URL, {"player": rsn})
+    # Request ALL categories
+    data = fetch_json(TEMPLE_CLOG_URL, {"player": rsn, "categories": "all"})
     
     if not data:
         print("Failed to fetch from TempleOSRS")
