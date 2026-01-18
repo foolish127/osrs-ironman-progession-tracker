@@ -62,8 +62,8 @@
         .skill-progress-fill.mid { background: var(--accent-gold); }
         .skill-progress-fill.high { background: var(--accent-green); }
         .boss-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.5rem; }
-        .boss-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 0.6rem 0.75rem; display: flex; justify-content: space-between; align-items: center; height: 42px; }
-        .boss-name { font-size: 0.8rem; color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 1; margin-right: 0.5rem; }
+        .boss-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 0.6rem 0.75rem; display: flex; justify-content: space-between; align-items: center; }
+        .boss-name { font-size: 0.8rem; color: var(--text-secondary); }
         .boss-kc { font-family: 'Fira Code', monospace; font-size: 0.9rem; color: var(--accent-gold); }
         .clues-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.5rem; }
         .clue-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 0.6rem 0.75rem; display: flex; justify-content: space-between; align-items: center; }
@@ -203,197 +203,51 @@
         .task-item .task-tier.medium { background: rgba(234, 179, 8, 0.2); color: #eab308; }
         .task-item .task-tier.hard { background: rgba(249, 115, 22, 0.2); color: #f97316; }
         .task-item .task-tier.elite { background: rgba(6, 182, 212, 0.2); color: #06b6d4; }
+        
+        /* B0aty Guide */
+        .boaty-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
+        .boaty-progress { display: flex; gap: 2rem; flex-wrap: wrap; }
+        .boaty-progress .progress-item { text-align: center; }
+        .boaty-progress .progress-value { font-size: 1.5rem; font-weight: 600; }
+        .boaty-progress .progress-label { font-size: 0.8rem; color: var(--text-muted); }
+        .boaty-progress-bar { width: 100%; height: 8px; background: var(--bg-dark); border-radius: 4px; overflow: hidden; margin-top: 0.5rem; }
+        .boaty-progress-fill { height: 100%; background: linear-gradient(90deg, var(--green), #22c55e); border-radius: 4px; transition: width 0.3s; }
+        .boaty-controls { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+        .boaty-search { flex: 1; min-width: 200px; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; color: var(--text-primary); font-size: 0.9rem; }
+        .boaty-search:focus { outline: none; border-color: var(--gold); }
+        .boaty-filters { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .boaty-filter { padding: 0.5rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--text-muted); cursor: pointer; font-size: 0.85rem; }
+        .boaty-filter:hover { border-color: var(--text-muted); }
+        .boaty-filter.active { background: var(--gold); color: var(--bg-dark); border-color: var(--gold); }
+        .boaty-episode { margin-bottom: 1rem; }
+        .boaty-episode-header { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px 8px 0 0; padding: 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .boaty-episode-header:hover { background: var(--bg-dark); }
+        .boaty-episode-header h3 { margin: 0; font-size: 1rem; }
+        .boaty-episode-header .episode-stats { display: flex; gap: 1rem; align-items: center; }
+        .boaty-episode-header .episode-progress { font-size: 0.85rem; color: var(--text-muted); }
+        .boaty-episode-header .episode-toggle { color: var(--text-muted); transition: transform 0.2s; }
+        .boaty-episode.expanded .episode-toggle { transform: rotate(180deg); }
+        .boaty-episode-content { display: none; border: 1px solid var(--border); border-top: none; border-radius: 0 0 8px 8px; }
+        .boaty-episode.expanded .boaty-episode-content { display: block; }
+        .boaty-section { border-bottom: 1px solid var(--border); }
+        .boaty-section:last-child { border-bottom: none; }
+        .boaty-section-header { padding: 0.75rem 1rem; background: var(--bg-card); font-weight: 500; display: flex; justify-content: space-between; cursor: pointer; }
+        .boaty-section-header:hover { background: rgba(212, 168, 75, 0.1); }
+        .boaty-section-header .section-count { font-size: 0.8rem; color: var(--text-muted); font-weight: normal; }
+        .boaty-withdraw { padding: 0.5rem 1rem; background: rgba(6, 182, 212, 0.1); font-size: 0.8rem; color: #06b6d4; border-bottom: 1px solid var(--border); }
+        .boaty-steps { background: var(--bg-dark); }
+        .boaty-step { padding: 0.5rem 1rem; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.9rem; cursor: pointer; transition: background 0.15s; }
+        .boaty-step:last-child { border-bottom: none; }
+        .boaty-step:hover { background: var(--bg-card); }
+        .boaty-step.completed { background: rgba(74, 222, 128, 0.05); }
+        .boaty-step .step-checkbox { width: 20px; height: 20px; border: 2px solid var(--border); border-radius: 4px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.8rem; margin-top: 2px; }
+        .boaty-step.completed .step-checkbox { background: var(--green); border-color: var(--green); color: var(--bg-dark); }
+        .boaty-step .step-id { color: var(--text-muted); font-size: 0.75rem; min-width: 35px; margin-top: 2px; }
+        .boaty-step .step-text { flex: 1; }
+        .boaty-step.completed .step-text { text-decoration: line-through; color: var(--text-muted); }
+        .boaty-step .step-date { font-size: 0.75rem; color: var(--text-muted); }
+        .boaty-empty { text-align: center; padding: 2rem; color: var(--text-muted); }
         .empty-state { text-align: center; padding: 3rem; color: var(--text-muted); }
-        /* Bank Styles */
-        .bank-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
-        .bank-summary-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem; text-align: center; }
-        .bank-summary-card.highlight { border-color: var(--accent-gold); background: rgba(212, 168, 75, 0.05); }
-        .bank-summary-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.5rem; }
-        .bank-summary-value { font-family: 'Fira Code', monospace; font-size: 1.5rem; font-weight: 500; color: var(--accent-gold); }
-        .bank-summary-value.green { color: var(--accent-green); }
-        .bank-top-items { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; margin-bottom: 2rem; }
-        .bank-top-items h3 { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
-        .top-item { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
-        .top-item:last-child { border-bottom: none; }
-        .top-item-name { font-size: 0.85rem; color: var(--text-primary); }
-        .top-item-qty { font-family: 'Fira Code', monospace; font-size: 0.75rem; color: var(--text-muted); margin-left: 0.5rem; }
-        .top-item-value { font-family: 'Fira Code', monospace; font-size: 0.85rem; color: var(--accent-gold); }
-        .bank-filters { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; align-items: center; }
-        .bank-search { flex: 1; min-width: 200px; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); font-size: 0.9rem; }
-        .bank-search:focus { outline: none; border-color: var(--accent-gold); }
-        .bank-filter-select { padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); font-size: 0.9rem; min-width: 150px; }
-        .bank-categories { margin-bottom: 1.5rem; }
-        .bank-category { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-        .bank-category-header { padding: 0.75rem 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-        .bank-category-header:hover { background: var(--bg-card-hover); }
-        .bank-category-name { font-weight: 500; font-size: 0.9rem; }
-        .bank-category-stats { font-family: 'Fira Code', monospace; font-size: 0.8rem; color: var(--text-muted); }
-        .bank-category-value { color: var(--accent-gold); margin-left: 1rem; }
-        .bank-category-items { display: none; padding: 0.5rem; border-top: 1px solid var(--border); background: var(--bg-dark); }
-        .bank-category.expanded .bank-category-items { display: block; }
-        .bank-items-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.25rem; }
-        .bank-item { font-size: 0.8rem; padding: 0.4rem 0.6rem; border-radius: 3px; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); }
-        .bank-item:hover { background: var(--bg-card-hover); }
-        .bank-item-name { color: var(--text-secondary); flex: 1; }
-        .bank-item-qty { font-family: 'Fira Code', monospace; color: var(--text-muted); margin: 0 0.5rem; }
-        .bank-item-value { font-family: 'Fira Code', monospace; color: var(--accent-gold); min-width: 70px; text-align: right; }
-        .bank-updated { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem; }
-        .bank-all-items { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; }
-        .bank-all-items h3 { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
-        .no-results { text-align: center; padding: 2rem; color: var(--text-muted); }
-        .bank-filter-stats { display: none; margin-bottom: 1rem; }
-        .filter-stats-row { display: flex; gap: 1.5rem; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; font-size: 0.85rem; color: var(--text-secondary); }
-        .filter-stat strong { color: var(--accent-gold); }
-        .bank-category-breakdown { margin-bottom: 2rem; }
-        .bank-category-breakdown h3 { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
-        .category-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.75rem; }
-        .category-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; cursor: pointer; transition: all 0.2s; border-left: 4px solid var(--border); }
-        .category-card:hover { background: var(--bg-card-hover); transform: translateY(-2px); }
-        .category-card.active { border-color: var(--accent-gold); background: rgba(212, 168, 75, 0.05); }
-        .category-card-name { font-size: 0.85rem; font-weight: 500; margin-bottom: 0.5rem; color: var(--text-primary); }
-        .category-card-stats { display: flex; justify-content: space-between; font-family: 'Fira Code', monospace; font-size: 0.75rem; }
-        .category-card-count { color: var(--text-muted); }
-        .category-card-value { color: var(--accent-gold); }
-        .category-card.cat-food { border-left-color: #22c55e; }
-        .category-card.cat-food .category-card-name { color: #22c55e; }
-        .category-card.cat-potions { border-left-color: #3b82f6; }
-        .category-card.cat-potions .category-card-name { color: #3b82f6; }
-        .category-card.cat-runes { border-left-color: #a855f7; }
-        .category-card.cat-runes .category-card-name { color: #a855f7; }
-        .category-card.cat-equipment { border-left-color: #ef4444; }
-        .category-card.cat-equipment .category-card-name { color: #ef4444; }
-        .category-card.cat-ammunition { border-left-color: #f97316; }
-        .category-card.cat-ammunition .category-card-name { color: #f97316; }
-        .category-card.cat-skilling { border-left-color: #eab308; }
-        .category-card.cat-skilling .category-card-name { color: #eab308; }
-        .category-card.cat-teleportation { border-left-color: #06b6d4; }
-        .category-card.cat-teleportation .category-card-name { color: #06b6d4; }
-        .category-card.cat-barrows { border-left-color: #6366f1; }
-        .category-card.cat-barrows .category-card-name { color: #6366f1; }
-        .category-card.cat-moon-armor { border-left-color: #ec4899; }
-        .category-card.cat-moon-armor .category-card-name { color: #ec4899; }
-        .category-card.cat-slayer { border-left-color: #84cc16; }
-        .category-card.cat-slayer .category-card-name { color: #84cc16; }
-        .category-card.cat-currency { border-left-color: #fbbf24; }
-        .category-card.cat-currency .category-card-name { color: #fbbf24; }
-        .category-card.cat-clue-items { border-left-color: #14b8a6; }
-        .category-card.cat-clue-items .category-card-name { color: #14b8a6; }
-        .category-card.cat-miscellaneous { border-left-color: #6b7280; }
-        .category-card.cat-miscellaneous .category-card-name { color: #6b7280; }
-        .category-card.cat-quest-items { border-left-color: #8b5cf6; }
-        .category-card.cat-quest-items .category-card-name { color: #8b5cf6; }
-        /* Drops Tab */
-        .drops-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
-        .drops-stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; text-align: center; }
-        .drops-stat-value { font-family: 'Fira Code', monospace; font-size: 1.5rem; color: var(--accent-gold); }
-        .drops-stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-top: 0.25rem; }
-        .drops-filters { display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
-        .drops-search { flex: 1; min-width: 200px; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); font-size: 0.9rem; }
-        .drops-search:focus { outline: none; border-color: var(--accent-gold); }
-        .drops-filter-select { padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); font-size: 0.9rem; min-width: 150px; }
-        .drops-table-container { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; margin-bottom: 2rem; }
-        .drops-table { width: 100%; border-collapse: collapse; }
-        .drops-table th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-dark); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); border-bottom: 1px solid var(--border); }
-        .drops-table td { padding: 0.6rem 1rem; border-bottom: 1px solid var(--border); font-size: 0.85rem; }
-        .drops-table tr:last-child td { border-bottom: none; }
-        .drops-table tr:hover { background: var(--bg-card-hover); }
-        .drops-table .boss-col { color: var(--text-secondary); }
-        .drops-table .kc-col { font-family: 'Fira Code', monospace; color: var(--text-muted); text-align: right; }
-        .drops-table .item-col { color: var(--accent-gold); font-weight: 500; }
-        .drops-table .date-col { font-family: 'Fira Code', monospace; color: var(--text-muted); font-size: 0.8rem; }
-        .drops-table .date-col.missing { color: var(--accent-red); opacity: 0.6; }
-        .drops-add-section { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; }
-        .drops-add-section h3 { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
-        .drops-add-form { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1rem; }
-        .drops-add-input { padding: 0.75rem 1rem; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); font-size: 0.9rem; }
-        .drops-add-input:focus { outline: none; border-color: var(--accent-gold); }
-        .drops-add-btn { padding: 0.75rem 1.5rem; background: var(--accent-gold); color: var(--bg-dark); border: none; border-radius: 4px; cursor: pointer; font-weight: 500; }
-        .drops-add-btn:hover { background: #e5b95c; }
-        .drops-yaml-output { margin-top: 1rem; }
-        .drops-yaml-output textarea { width: 100%; height: 120px; padding: 1rem; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); font-family: 'Fira Code', monospace; font-size: 0.8rem; resize: vertical; }
-        .drops-yaml-output .copy-btn { margin-top: 0.5rem; padding: 0.5rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--text-secondary); cursor: pointer; font-size: 0.85rem; }
-        .drops-yaml-output .copy-btn:hover { background: var(--bg-card-hover); color: var(--text-primary); }
-        .drops-count { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem; }
-        /* Luck Summary Table */
-        .luck-table-container { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; margin-bottom: 2rem; }
-        .luck-table-container h3 { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
-        .luck-table { width: 100%; border-collapse: collapse; }
-        .luck-table th { text-align: left; padding: 0.5rem 0.75rem; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); border-bottom: 1px solid var(--border); }
-        .luck-table td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); font-size: 0.8rem; }
-        .luck-table tr:last-child td { border-bottom: none; }
-        .luck-table tr:hover { background: var(--bg-card-hover); }
-        .luck-table .rank-col { color: var(--text-muted); font-family: 'Fira Code', monospace; width: 40px; }
-        .luck-table .activity-col { color: var(--text-secondary); }
-        .luck-table .drop-col { color: var(--text-primary); }
-        .luck-table .kc-col { font-family: 'Fira Code', monospace; color: var(--text-muted); text-align: right; }
-        .luck-table .rate-col { font-family: 'Fira Code', monospace; color: var(--text-muted); text-align: right; font-size: 0.75rem; }
-        .luck-table .luck-col { font-family: 'Fira Code', monospace; text-align: right; font-weight: 500; }
-        .luck-table .status-col { font-size: 0.75rem; font-weight: 500; }
-        .luck-very-spooned { color: #22c55e; }
-        .luck-spooned { color: #84cc16; }
-        .luck-onrate { color: var(--text-secondary); }
-        .luck-dry { color: #f97316; }
-        .luck-very-dry { color: #ef4444; }
-        .luck-pending { color: var(--text-muted); }
-        .status-spooned { color: #22c55e; }
-        .status-onrate { color: var(--text-secondary); }
-        .status-dry { color: #ef4444; }
-        .status-pending { color: var(--text-muted); font-style: italic; }
-        /* Progression Tab */
-        .progression-header { text-align: center; margin-bottom: 2rem; }
-        .progression-header h2 { color: var(--accent-gold); margin-bottom: 0.5rem; }
-        .progression-header p { color: var(--text-muted); font-size: 0.9rem; }
-        .progression-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
-        .prog-stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; text-align: center; }
-        .prog-stat-value { font-family: 'Fira Code', monospace; font-size: 1.5rem; color: var(--accent-gold); }
-        .prog-stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-top: 0.25rem; }
-        .progression-phases { display: flex; flex-direction: column; gap: 2rem; }
-        .phase { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
-        .phase-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; border-bottom: 1px solid var(--border); }
-        .phase-title { display: flex; align-items: center; gap: 0.75rem; }
-        .phase-icon { font-size: 1.5rem; }
-        .phase-name { font-size: 1.1rem; font-weight: 600; }
-        .phase-name span { font-weight: 400; color: var(--text-muted); font-size: 0.85rem; margin-left: 0.5rem; }
-        .phase-progress { display: flex; align-items: center; gap: 0.75rem; }
-        .phase-progress-bar { width: 120px; height: 8px; background: var(--bg-dark); border-radius: 4px; overflow: hidden; }
-        .phase-progress-fill { height: 100%; border-radius: 4px; transition: width 0.3s; }
-        .phase-progress-text { font-family: 'Fira Code', monospace; font-size: 0.85rem; color: var(--text-secondary); min-width: 45px; }
-        .phase.early .phase-header { background: linear-gradient(90deg, rgba(34, 197, 94, 0.1), transparent); }
-        .phase.early .phase-progress-fill { background: #22c55e; }
-        .phase.mid .phase-header { background: linear-gradient(90deg, rgba(59, 130, 246, 0.1), transparent); }
-        .phase.mid .phase-progress-fill { background: #3b82f6; }
-        .phase.late .phase-header { background: linear-gradient(90deg, rgba(168, 85, 247, 0.1), transparent); }
-        .phase.late .phase-progress-fill { background: #a855f7; }
-        .phase.end .phase-header { background: linear-gradient(90deg, rgba(212, 168, 75, 0.1), transparent); }
-        .phase.end .phase-progress-fill { background: var(--accent-gold); }
-        .phase-content { padding: 1rem 1.5rem; }
-        .milestone-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.75rem; }
-        .milestone { display: flex; align-items: center; gap: 0.75rem; padding: 0.6rem 0.75rem; background: var(--bg-dark); border-radius: 4px; border-left: 3px solid var(--border); }
-        .milestone.complete { border-left-color: #22c55e; }
-        .milestone.complete .milestone-icon { color: #22c55e; }
-        .milestone.incomplete { opacity: 0.5; }
-        .milestone.incomplete .milestone-icon { color: var(--text-muted); }
-        .milestone-icon { font-size: 1rem; width: 20px; text-align: center; }
-        .milestone-info { flex: 1; min-width: 0; }
-        .milestone-name { font-size: 0.85rem; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .milestone-detail { font-size: 0.7rem; color: var(--text-muted); }
-        .milestone-status { font-family: 'Fira Code', monospace; font-size: 0.75rem; color: var(--text-muted); }
-        .milestone-status.done { color: #22c55e; }
-        /* Password Modal */
-        .password-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; align-items: center; justify-content: center; }
-        .password-modal.active { display: flex; }
-        .password-modal-content { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; max-width: 400px; width: 90%; text-align: center; }
-        .password-modal-content h3 { color: var(--accent-gold); margin-bottom: 0.5rem; }
-        .password-modal-content p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.9rem; }
-        .password-input { width: 100%; padding: 0.75rem 1rem; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); font-size: 1rem; margin-bottom: 1rem; }
-        .password-input:focus { outline: none; border-color: var(--accent-gold); }
-        .password-modal-buttons { display: flex; gap: 0.75rem; justify-content: center; }
-        .password-btn { padding: 0.75rem 1.5rem; border: 1px solid var(--border); border-radius: 4px; background: var(--bg-card); color: var(--text-secondary); cursor: pointer; font-size: 0.9rem; transition: all 0.2s; }
-        .password-btn:hover { background: var(--bg-card-hover); color: var(--text-primary); }
-        .password-btn.primary { background: var(--accent-gold); color: var(--bg-dark); border-color: var(--accent-gold); }
-        .password-btn.primary:hover { background: #e5b95c; }
-        .password-error { color: var(--accent-red); font-size: 0.85rem; margin-top: 1rem; min-height: 1.2em; }
-        .protected-tab.locked #bankContainer { filter: blur(10px); pointer-events: none; }
         footer { text-align: center; padding: 2rem 0; margin-top: 3rem; border-top: 1px solid var(--border); }
         footer a { color: var(--text-secondary); text-decoration: none; margin: 0 0.75rem; font-size: 0.85rem; padding: 0.5rem 1rem; border: 1px solid var(--border); border-radius: 4px; transition: all 0.2s; }
         footer a:hover { color: var(--text-primary); border-color: var(--text-muted); }
@@ -439,10 +293,8 @@
             <button class="nav-tab" data-tab="pets">Pets</button>
             <button class="nav-tab" data-tab="quests">Quests</button>
             <button class="nav-tab" data-tab="diaries">Diaries</button>
+            <button class="nav-tab" data-tab="boaty">B0aty Guide</button>
             <button class="nav-tab" data-tab="goals">Goals</button>
-            <button class="nav-tab" data-tab="drops">Drops</button>
-            <button class="nav-tab" data-tab="progression">Progression</button>
-            <button class="nav-tab" data-tab="bank">Bank</button>
         </nav>
 
         <div id="skills" class="tab-content active">
@@ -477,61 +329,22 @@
             <div id="diariesContainer">Loading...</div>
         </div>
 
+        <div id="boaty" class="tab-content">
+            <div id="boatyContainer">Loading...</div>
+        </div>
+
         <div id="goals" class="tab-content">
             <div id="goalsContainer">Loading...</div>
-        </div>
-
-        <div id="drops" class="tab-content">
-            <div id="dropsContainer">Loading...</div>
-        </div>
-
-        <div id="progression" class="tab-content">
-            <div id="progressionContainer">Loading...</div>
-        </div>
-
-        <div id="bank" class="tab-content protected-tab">
-            <div id="bankContainer">Loading...</div>
-        </div>
-
-        <!-- Password Modal -->
-        <div id="passwordModal" class="password-modal">
-            <div class="password-modal-content">
-                <h3>🔒 Protected Content</h3>
-                <p>Enter password to view bank contents</p>
-                <input type="password" id="bankPassword" class="password-input" placeholder="Password" autocomplete="off">
-                <div class="password-modal-buttons">
-                    <button id="passwordSubmit" class="password-btn primary">Unlock</button>
-                    <button id="passwordCancel" class="password-btn">Cancel</button>
-                </div>
-                <p id="passwordError" class="password-error"></p>
-            </div>
         </div>
 
         <footer>
             <a href="./editor.html">📝 Edit Progress</a>
             <a href="https://templeosrs.com/player/overview.php?player=FoolinSlays" target="_blank">TempleOSRS</a>
             <a href="https://secure.runescape.com/m=hiscore_oldschool_ironman/hiscorepersonal?user1=FoolinSlays" target="_blank">Official Hiscores</a>
-            <a href="https://github.com/foolish127/osrs-ironman-progession-tracker" target="_blank">📖 GitHub</a>
         </footer>
     </div>
 
     <script>
-        // Password protection for bank tab
-        // Password hash loaded from config file (injected by GitHub Actions)
-        let BANK_PASSWORD_HASH = null;
-        const PROTECTED_TAB_ID = 'bank';
-        let bankUnlocked = false;
-
-        // Load password hash from config
-        fetch('./data/config.json')
-            .then(r => r.json())
-            .then(config => {
-                BANK_PASSWORD_HASH = config.bankPasswordHash;
-            })
-            .catch(() => {
-                console.warn('Config not found - bank protection disabled');
-            });
-
         const SKILL_ORDER = ['Attack','Hitpoints','Mining','Strength','Agility','Smithing','Defence','Herblore','Fishing','Ranged','Thieving','Cooking','Prayer','Crafting','Firemaking','Magic','Fletching','Woodcutting','Runecraft','Slayer','Farming','Construction','Hunter','Sailing'];
         const SKILL_ICONS = {};
         SKILL_ORDER.forEach(s => SKILL_ICONS[s] = `https://oldschool.runescape.wiki/images/${s}_icon.png`);
@@ -561,11 +374,11 @@
         let cluesData = null;
         let questsData = null;
         let diariesData = null;
-        let skillsData = null;
-        let bossesData = null;
+        let boatyGuide = null;
+        let boatyCompleted = new Set();
 
         async function loadData() {
-            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, goalsRes, diariesRes, bankRes, dropsRes] = await Promise.all([
+            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, goalsRes, diariesRes, boatyGuideRes, boatyProgressRes] = await Promise.all([
                 fetch('./data/skills.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/bosses.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/clues.json').then(r=>r.json()).catch(()=>null),
@@ -575,8 +388,8 @@
                 fetch('./data/quests.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/goals.yaml').then(r=>r.text()).catch(()=>null),
                 fetch('./data/diaries.yaml').then(r=>r.text()).catch(()=>null),
-                fetch('./data/bank.json').then(r=>r.json()).catch(()=>null),
-                fetch('./data/drops.yaml').then(r=>r.text()).catch(()=>null)
+                fetch('./data/boaty_guide.json').then(r=>r.json()).catch(()=>null),
+                fetch('./data/boaty_progress.yaml').then(r=>r.text()).catch(()=>null)
             ]);
 
             if (skillsRes?.rsn) {
@@ -619,24 +432,20 @@
                 document.getElementById('questCount').textContent = `${questsData.total_completed}/${questsData.total_quests}`;
             }
 
-            if (skillsRes?.skills) {
-                skillsData = skillsRes.skills;
-                renderSkills(skillsRes.skills);
-            }
-            if (bossesRes?.bosses) {
-                bossesData = bossesRes.bosses;
-                renderBosses(bossesRes.bosses);
-            }
+            if (skillsRes?.skills) renderSkills(skillsRes.skills);
+            if (bossesRes?.bosses) renderBosses(bossesRes.bosses);
             renderClues();
             renderCollectionLog();
             renderCombatAchievements();
             renderPets();
             renderQuests();
             if (diariesRes) renderDiaries(diariesRes);
+            if (boatyGuideRes) {
+                boatyGuide = boatyGuideRes;
+                if (boatyProgressRes) parseBoatyProgress(boatyProgressRes);
+                renderBoatyGuide();
+            }
             if (goalsRes) renderGoals(goalsRes);
-            if (dropsRes) renderDrops(dropsRes);
-            renderProgression(dropsRes);
-            if (bankRes) renderBank(bankRes);
         }
 
         function renderSkills(skills) {
@@ -1352,6 +1161,191 @@
             document.getElementById('diaryCount').textContent = `${totalCompleted}/${totalTasks}`;
         }
 
+        // B0aty Guide Functions
+        let boatySearchTerm = '';
+        let boatyFilter = 'all'; // 'all', 'incomplete', 'completed'
+        let boatyEpisodeFilter = 'all';
+
+        function parseBoatyProgress(yaml) {
+            boatyCompleted = new Set();
+            let inCompleted = false;
+            yaml.split('\n').forEach(line => {
+                if (line.trim() === 'completed:') {
+                    inCompleted = true;
+                    return;
+                }
+                if (inCompleted && line.trim().startsWith('- ')) {
+                    const text = line.trim().slice(2);
+                    const parts = text.split(' | ');
+                    const stepId = parseInt(parts[0]);
+                    if (!isNaN(stepId)) {
+                        boatyCompleted.add(stepId);
+                    }
+                }
+            });
+        }
+
+        function renderBoatyGuide() {
+            const container = document.getElementById('boatyContainer');
+            if (!boatyGuide) {
+                container.innerHTML = '<div class="boaty-empty">Guide not loaded</div>';
+                return;
+            }
+
+            const totalSteps = boatyGuide.total_steps;
+            const completedCount = boatyCompleted.size;
+            const percent = totalSteps > 0 ? Math.round((completedCount / totalSteps) * 100) : 0;
+
+            // Filter episodes based on search and filters
+            const filteredEpisodes = filterBoatyEpisodes();
+            const visibleSteps = countVisibleSteps(filteredEpisodes);
+
+            container.innerHTML = `
+                <div class="boaty-header">
+                    <div class="boaty-progress">
+                        <div class="progress-item">
+                            <div class="progress-value" style="color: var(--green)">${completedCount}/${totalSteps}</div>
+                            <div class="progress-label">Steps Complete</div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-value" style="color: var(--gold)">${percent}%</div>
+                            <div class="progress-label">Progress</div>
+                            <div class="boaty-progress-bar"><div class="boaty-progress-fill" style="width: ${percent}%"></div></div>
+                        </div>
+                    </div>
+                    <a href="${boatyGuide.source}" target="_blank" style="color: var(--gold); font-size: 0.85rem;">📖 View Original Guide</a>
+                </div>
+                
+                <div class="boaty-controls">
+                    <input type="text" class="boaty-search" id="boatySearch" placeholder="Search steps..." value="${boatySearchTerm}">
+                    <div class="boaty-filters">
+                        <button class="boaty-filter ${boatyFilter === 'all' ? 'active' : ''}" data-filter="all">All</button>
+                        <button class="boaty-filter ${boatyFilter === 'incomplete' ? 'active' : ''}" data-filter="incomplete">Incomplete</button>
+                        <button class="boaty-filter ${boatyFilter === 'completed' ? 'active' : ''}" data-filter="completed">Completed</button>
+                    </div>
+                    <select class="boaty-search" id="boatyEpisodeFilter" style="flex: 0; min-width: 150px;">
+                        <option value="all" ${boatyEpisodeFilter === 'all' ? 'selected' : ''}>All Episodes</option>
+                        ${boatyGuide.episodes.map(ep => `
+                            <option value="${ep.number}" ${boatyEpisodeFilter == ep.number ? 'selected' : ''}>
+                                ${ep.number === 0 ? 'Pre-Guide' : 'Episode ' + ep.number}
+                            </option>
+                        `).join('')}
+                    </select>
+                </div>
+                
+                ${visibleSteps === 0 ? '<div class="boaty-empty">No steps match your filters</div>' : ''}
+                
+                ${filteredEpisodes.map(ep => {
+                    const epSteps = ep.sections.flatMap(s => s.steps);
+                    const epCompleted = epSteps.filter(s => boatyCompleted.has(s.id)).length;
+                    const epTotal = epSteps.length;
+                    if (epTotal === 0) return '';
+                    
+                    return `
+                        <div class="boaty-episode" data-episode="${ep.number}">
+                            <div class="boaty-episode-header" onclick="toggleBoatyEpisode(${ep.number})">
+                                <h3>${ep.number === 0 ? '🏁 Pre-Guide Setup' : '📺 ' + ep.title}</h3>
+                                <div class="episode-stats">
+                                    <span class="episode-progress">${epCompleted}/${epTotal}</span>
+                                    <span class="episode-toggle">▼</span>
+                                </div>
+                            </div>
+                            <div class="boaty-episode-content">
+                                ${ep.sections.map(section => {
+                                    const sectionSteps = section.steps;
+                                    if (sectionSteps.length === 0) return '';
+                                    const sectionCompleted = sectionSteps.filter(s => boatyCompleted.has(s.id)).length;
+                                    
+                                    return `
+                                        <div class="boaty-section">
+                                            <div class="boaty-section-header">
+                                                <span>${section.name}</span>
+                                                <span class="section-count">${sectionCompleted}/${sectionSteps.length}</span>
+                                            </div>
+                                            ${section.withdraw ? `<div class="boaty-withdraw">📦 ${section.withdraw}</div>` : ''}
+                                            <div class="boaty-steps">
+                                                ${sectionSteps.map(step => `
+                                                    <div class="boaty-step ${boatyCompleted.has(step.id) ? 'completed' : ''}" data-step="${step.id}">
+                                                        <div class="step-checkbox">${boatyCompleted.has(step.id) ? '✓' : ''}</div>
+                                                        <div class="step-id">#${step.id}</div>
+                                                        <div class="step-text">${escapeHtml(step.task)}</div>
+                                                    </div>
+                                                `).join('')}
+                                            </div>
+                                        </div>
+                                    `;
+                                }).join('')}
+                            </div>
+                        </div>
+                    `;
+                }).join('')}
+            `;
+
+            // Add event listeners
+            document.getElementById('boatySearch').addEventListener('input', (e) => {
+                boatySearchTerm = e.target.value;
+                renderBoatyGuide();
+            });
+            
+            document.querySelectorAll('.boaty-filter').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    boatyFilter = btn.dataset.filter;
+                    renderBoatyGuide();
+                });
+            });
+            
+            document.getElementById('boatyEpisodeFilter').addEventListener('change', (e) => {
+                boatyEpisodeFilter = e.target.value;
+                renderBoatyGuide();
+            });
+        }
+
+        function filterBoatyEpisodes() {
+            if (!boatyGuide) return [];
+            
+            return boatyGuide.episodes.map(ep => {
+                // Filter by episode
+                if (boatyEpisodeFilter !== 'all' && ep.number != boatyEpisodeFilter) {
+                    return { ...ep, sections: [] };
+                }
+                
+                const filteredSections = ep.sections.map(section => {
+                    const filteredSteps = section.steps.filter(step => {
+                        // Filter by completion status
+                        if (boatyFilter === 'completed' && !boatyCompleted.has(step.id)) return false;
+                        if (boatyFilter === 'incomplete' && boatyCompleted.has(step.id)) return false;
+                        
+                        // Filter by search term
+                        if (boatySearchTerm) {
+                            const searchLower = boatySearchTerm.toLowerCase();
+                            return step.task.toLowerCase().includes(searchLower) || 
+                                   step.id.toString().includes(searchLower);
+                        }
+                        return true;
+                    });
+                    return { ...section, steps: filteredSteps };
+                }).filter(s => s.steps.length > 0);
+                
+                return { ...ep, sections: filteredSections };
+            }).filter(ep => ep.sections.length > 0);
+        }
+
+        function countVisibleSteps(episodes) {
+            return episodes.reduce((sum, ep) => 
+                sum + ep.sections.reduce((s, sec) => s + sec.steps.length, 0), 0);
+        }
+
+        function toggleBoatyEpisode(epNum) {
+            const ep = document.querySelector(`.boaty-episode[data-episode="${epNum}"]`);
+            if (ep) ep.classList.toggle('expanded');
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
         function renderGoals(yaml) {
             const container = document.getElementById('goalsContainer');
             const columns = { backlog: [], in_progress: [], blocked: [], completed: [] };
@@ -1401,851 +1395,12 @@
             `;
         }
 
-        // Drops Tab
-        let dropsData = [];
-        let dropsSearchTerm = '';
-        let dropsBossFilter = 'all';
-        let pendingDrops = [];
-
-        function parseDropsYaml(yaml) {
-            const drops = [];
-            const lines = yaml.split('\n');
-            let currentDrop = null;
-            
-            for (const line of lines) {
-                const trimmed = line.trim();
-                if (trimmed.startsWith('- boss:')) {
-                    if (currentDrop) drops.push(currentDrop);
-                    currentDrop = { boss: trimmed.replace('- boss:', '').trim() };
-                } else if (currentDrop && trimmed.startsWith('kc:')) {
-                    currentDrop.kc = parseInt(trimmed.replace('kc:', '').trim()) || 0;
-                } else if (currentDrop && trimmed.startsWith('item:')) {
-                    currentDrop.item = trimmed.replace('item:', '').trim();
-                } else if (currentDrop && trimmed.startsWith('date:')) {
-                    currentDrop.date = trimmed.replace('date:', '').trim() || '';
-                } else if (currentDrop && trimmed.startsWith('droprate:')) {
-                    currentDrop.droprate = parseInt(trimmed.replace('droprate:', '').trim()) || 0;
-                }
-            }
-            if (currentDrop) drops.push(currentDrop);
-            return drops;
-        }
-
-        function renderDrops(yaml) {
-            dropsData = parseDropsYaml(yaml);
-            const container = document.getElementById('dropsContainer');
-            
-            if (!dropsData.length) {
-                container.innerHTML = '<div class="empty-state">No drops data available.</div>';
-                return;
-            }
-
-            // Get unique bosses for filter
-            const bosses = [...new Set(dropsData.map(d => d.boss))].sort();
-            
-            // Stats
-            const totalDrops = dropsData.length;
-            const uniqueBosses = bosses.length;
-
-            // Build luck summary from drops that have droprate defined
-            const dropsWithRates = dropsData.filter(d => d.droprate);
-            const luckSummary = dropsWithRates.map(drop => {
-                const luck = drop.droprate / drop.kc;
-                let status = 'On Rate';
-                if (luck > 1.2) status = 'Spooned';
-                else if (luck < 0.8) status = 'Dry';
-                return {
-                    activity: drop.boss,
-                    drop: drop.item,
-                    droprate: drop.droprate,
-                    earned: drop.kc,
-                    luck,
-                    status
-                };
-            }).sort((a, b) => b.luck - a.luck);
-
-            // Calculate average luck (excluding nulls)
-            const validLuck = luckSummary.filter(l => l.luck > 0);
-            const avgLuck = validLuck.length ? (validLuck.reduce((s, l) => s + l.luck, 0) / validLuck.length) : 0;
-
-            const getLuckClass = (luck) => {
-                if (luck === 0) return 'luck-pending';
-                if (luck >= 2) return 'luck-very-spooned';
-                if (luck >= 1.2) return 'luck-spooned';
-                if (luck >= 0.8) return 'luck-onrate';
-                if (luck >= 0.5) return 'luck-dry';
-                return 'luck-very-dry';
-            };
-
-            const getStatusClass = (status) => {
-                if (status === 'Spooned') return 'status-spooned';
-                if (status === 'Dry') return 'status-dry';
-                if (status === 'In Progress') return 'status-pending';
-                return 'status-onrate';
-            };
-
-            container.innerHTML = `
-                <div class="drops-summary">
-                    <div class="drops-stat">
-                        <div class="drops-stat-value">${totalDrops}</div>
-                        <div class="drops-stat-label">Total Drops</div>
-                    </div>
-                    <div class="drops-stat">
-                        <div class="drops-stat-value">${uniqueBosses}</div>
-                        <div class="drops-stat-label">Sources</div>
-                    </div>
-                    <div class="drops-stat">
-                        <div class="drops-stat-value">${avgLuck.toFixed(1)}x</div>
-                        <div class="drops-stat-label">Avg Luck</div>
-                    </div>
-                    <div class="drops-stat">
-                        <div class="drops-stat-value">${luckSummary.filter(l => l.status === 'Spooned').length}</div>
-                        <div class="drops-stat-label">Spooned</div>
-                    </div>
-                    <div class="drops-stat">
-                        <div class="drops-stat-value">${luckSummary.filter(l => l.status === 'Dry').length}</div>
-                        <div class="drops-stat-label">Dry</div>
-                    </div>
-                </div>
-
-                <div class="luck-table-container">
-                    <h3>🍀 Luck Summary</h3>
-                    <table class="luck-table">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Activity</th>
-                                <th>Key Drop</th>
-                                <th style="text-align:right">KC</th>
-                                <th style="text-align:right">Rate</th>
-                                <th style="text-align:right">Luck</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            ${luckSummary.map((item, i) => `
-                                <tr>
-                                    <td class="rank-col">${i + 1}</td>
-                                    <td class="activity-col">${item.activity}</td>
-                                    <td class="drop-col">${item.drop}</td>
-                                    <td class="kc-col">${item.earned ? item.earned.toLocaleString() : '—'}</td>
-                                    <td class="rate-col">1/${item.droprate.toLocaleString()}</td>
-                                    <td class="luck-col ${getLuckClass(item.luck)}">${item.luck ? item.luck.toFixed(1) + 'x' : '—'}</td>
-                                    <td class="status-col ${getStatusClass(item.status)}">${item.status}</td>
-                                </tr>
-                            `).join('')}
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="drops-filters">
-                    <input type="text" class="drops-search" id="dropsSearch" placeholder="Search items or bosses..." value="${dropsSearchTerm}">
-                    <select class="drops-filter-select" id="dropsBossFilter">
-                        <option value="all">All Sources</option>
-                        ${bosses.map(b => `<option value="${b}" ${dropsBossFilter === b ? 'selected' : ''}>${b}</option>`).join('')}
-                    </select>
-                </div>
-
-                <div class="drops-count" id="dropsCount"></div>
-
-                <div class="drops-table-container">
-                    <table class="drops-table">
-                        <thead>
-                            <tr>
-                                <th>Source</th>
-                                <th style="text-align:right">KC</th>
-                                <th>Item</th>
-                                <th>Date</th>
-                            </tr>
-                        </thead>
-                        <tbody id="dropsTableBody"></tbody>
-                    </table>
-                </div>
-
-                <div class="drops-add-section">
-                    <h3>➕ Add New Drop</h3>
-                    <div class="drops-add-form">
-                        <input type="text" class="drops-add-input" id="newDropBoss" placeholder="Boss/Source" list="bossList">
-                        <datalist id="bossList">
-                            ${bosses.map(b => `<option value="${b}">`).join('')}
-                        </datalist>
-                        <input type="number" class="drops-add-input" id="newDropKc" placeholder="Kill Count">
-                        <input type="text" class="drops-add-input" id="newDropItem" placeholder="Item Name">
-                        <input type="text" class="drops-add-input" id="newDropDate" placeholder="Date (M/D/YYYY)">
-                        <button class="drops-add-btn" id="addDropBtn">Add Drop</button>
-                    </div>
-                    <div class="drops-yaml-output" id="dropsYamlOutput" style="display:none;">
-                        <textarea id="dropsYamlText" readonly></textarea>
-                        <button class="copy-btn" id="copyYamlBtn">📋 Copy YAML</button>
-                    </div>
-                </div>
-            `;
-
-            // Event listeners
-            document.getElementById('dropsSearch').addEventListener('input', (e) => {
-                dropsSearchTerm = e.target.value;
-                filterDrops();
-            });
-
-            document.getElementById('dropsBossFilter').addEventListener('change', (e) => {
-                dropsBossFilter = e.target.value;
-                filterDrops();
-            });
-
-            document.getElementById('addDropBtn').addEventListener('click', addNewDrop);
-            document.getElementById('copyYamlBtn').addEventListener('click', () => {
-                const textarea = document.getElementById('dropsYamlText');
-                textarea.select();
-                document.execCommand('copy');
-                document.getElementById('copyYamlBtn').textContent = '✓ Copied!';
-                setTimeout(() => document.getElementById('copyYamlBtn').textContent = '📋 Copy YAML', 2000);
-            });
-
-            filterDrops();
-        }
-
-        function filterDrops() {
-            const tbody = document.getElementById('dropsTableBody');
-            const countEl = document.getElementById('dropsCount');
-            const searchLower = dropsSearchTerm.toLowerCase();
-
-            let filtered = dropsData.filter(drop => {
-                const matchesSearch = !dropsSearchTerm || 
-                    drop.boss.toLowerCase().includes(searchLower) || 
-                    drop.item.toLowerCase().includes(searchLower);
-                const matchesBoss = dropsBossFilter === 'all' || drop.boss === dropsBossFilter;
-                return matchesSearch && matchesBoss;
-            });
-
-            // Sort by date descending (most recent first), then by KC descending
-            filtered.sort((a, b) => {
-                const dateA = a.date ? new Date(a.date) : new Date(0);
-                const dateB = b.date ? new Date(b.date) : new Date(0);
-                if (dateB - dateA !== 0) return dateB - dateA;
-                return b.kc - a.kc;
-            });
-
-            countEl.textContent = `Showing ${filtered.length} of ${dropsData.length} drops`;
-
-            tbody.innerHTML = filtered.map(drop => `
-                <tr>
-                    <td class="boss-col">${drop.boss}</td>
-                    <td class="kc-col">${drop.kc.toLocaleString()}</td>
-                    <td class="item-col">${drop.item}</td>
-                    <td class="date-col ${drop.date ? '' : 'missing'}">${drop.date || '—'}</td>
-                </tr>
-            `).join('');
-        }
-
-        function addNewDrop() {
-            const boss = document.getElementById('newDropBoss').value.trim();
-            const kc = document.getElementById('newDropKc').value.trim();
-            const item = document.getElementById('newDropItem').value.trim();
-            const date = document.getElementById('newDropDate').value.trim();
-
-            if (!boss || !kc || !item) {
-                alert('Please fill in Boss, KC, and Item');
-                return;
-            }
-
-            const newDrop = { boss, kc: parseInt(kc), item, date };
-            pendingDrops.push(newDrop);
-
-            // Generate YAML
-            const yamlLines = pendingDrops.map(d => `
-  - boss: ${d.boss}
-    kc: ${d.kc}
-    item: ${d.item}
-    date: ${d.date}`).join('\n');
-
-            document.getElementById('dropsYamlText').value = `# Add to data/drops.yaml:\n${yamlLines}`;
-            document.getElementById('dropsYamlOutput').style.display = 'block';
-
-            // Clear inputs
-            document.getElementById('newDropBoss').value = '';
-            document.getElementById('newDropKc').value = '';
-            document.getElementById('newDropItem').value = '';
-            document.getElementById('newDropDate').value = '';
-
-            // Add to displayed data temporarily
-            dropsData.push(newDrop);
-            filterDrops();
-        }
-
-        // Progression Tab
-        function renderProgression(dropsYaml) {
-            const container = document.getElementById('progressionContainer');
-            const drops = dropsYaml ? parseDropsYaml(dropsYaml) : [];
-            
-            // Helper to check if we have a drop
-            const hasDrop = (itemName) => drops.some(d => d.item.toLowerCase().includes(itemName.toLowerCase()));
-            const hasAnyDrop = (itemNames) => itemNames.some(n => hasDrop(n));
-            
-            // Helper to check skill level
-            const skillLevel = (name) => skillsData?.[name]?.level || 1;
-            const hasSkillLevel = (name, level) => skillLevel(name) >= level;
-            
-            // Helper to check boss KC
-            const bossKc = (name) => {
-                if (!bossesData) return 0;
-                const boss = Object.entries(bossesData).find(([k]) => k.toLowerCase().includes(name.toLowerCase()));
-                return boss ? boss[1].kc : 0;
-            };
-            const hasBossKc = (name, kc) => bossKc(name) >= kc;
-            
-            // Helper to check quest completion
-            const hasQuest = (name) => {
-                if (!questsData?.categories) return false;
-                const nameLower = name.toLowerCase();
-                for (const cat of Object.values(questsData.categories)) {
-                    if (cat.completed) {
-                        const found = cat.completed.some(q => {
-                            const questName = typeof q === 'string' ? q : q.name;
-                            return questName.toLowerCase().includes(nameLower);
-                        });
-                        if (found) return true;
-                    }
-                }
-                return false;
-            };
-
-            // Define milestones for each phase
-            const phases = [
-                {
-                    name: 'Early Game',
-                    phase: 'early',
-                    icon: '🌱',
-                    description: 'Building your foundation',
-                    milestones: [
-                        { name: 'Fire Cape', detail: 'Fight Caves', check: () => hasDrop('Fire Cape'), type: 'drop' },
-                        { name: 'Barrows Gloves', detail: 'Recipe for Disaster', check: () => hasQuest('Recipe for Disaster'), type: 'quest' },
-                        { name: 'Fighter Torso', detail: 'Barbarian Assault', check: () => hasDrop('Fighter Torso') || true, type: 'gear' },
-                        { name: 'Dragon Defender', detail: 'Warriors Guild', check: () => hasDrop('Dragon Defender') || hasSkillLevel('Attack', 70), type: 'gear' },
-                        { name: 'Iban\'s Staff', detail: 'Underground Pass', check: () => hasQuest('Underground Pass') || true, type: 'quest' },
-                        { name: 'Berserker Ring', detail: 'Dagannoth Rex', check: () => hasDrop('Berserker Ring'), type: 'drop' },
-                        { name: '70 Prayer', detail: 'Piety unlocked', check: () => hasSkillLevel('Prayer', 70), type: 'skill' },
-                        { name: '75 Magic', detail: 'Trident access', check: () => hasSkillLevel('Magic', 75), type: 'skill' },
-                        { name: 'Full Barrows Set', detail: 'Any brother', check: () => drops.filter(d => d.boss === 'Barrows').length >= 4, type: 'drop' },
-                        { name: 'Quest Cape', detail: 'All quests done', check: () => questsData?.total_completed >= 158, type: 'quest' },
-                    ]
-                },
-                {
-                    name: 'Mid Game',
-                    phase: 'mid',
-                    icon: '⚔️',
-                    description: 'Gearing up for end game',
-                    milestones: [
-                        { name: 'Trident of the Seas', detail: 'Kraken', check: () => hasDrop('Trident') || hasBossKc('Kraken', 50), type: 'drop' },
-                        { name: 'Abyssal Whip', detail: 'Abyssal Demons', check: () => hasDrop('Abyssal Whip'), type: 'drop' },
-                        { name: 'Dragon Warhammer', detail: 'Lizardman Shamans', check: () => hasDrop('Dragon Warhammer'), type: 'drop' },
-                        { name: 'Zenyte Jewelry', detail: 'Demonic Gorillas', check: () => hasDrop('Zenyte'), type: 'drop' },
-                        { name: 'Occult Necklace', detail: 'Smoke Devils', check: () => hasDrop('Occult') || hasSkillLevel('Slayer', 93), type: 'drop' },
-                        { name: '87 Slayer', detail: 'Kraken unlocked', check: () => hasSkillLevel('Slayer', 87), type: 'skill' },
-                        { name: '91 Slayer', detail: 'Cerberus unlocked', check: () => hasSkillLevel('Slayer', 91), type: 'skill' },
-                        { name: 'Elite Void', detail: 'Pest Control + diaries', check: () => true, type: 'gear' },
-                        { name: 'Dragon Pickaxe', detail: 'Wildy bosses', check: () => hasDrop('Dragon Pickaxe'), type: 'drop' },
-                        { name: 'Imbued Heart', detail: 'Superior Slayer', check: () => hasDrop('Imbued Heart'), type: 'drop' },
-                    ]
-                },
-                {
-                    name: 'Late Game',
-                    phase: 'late',
-                    icon: '🔮',
-                    description: 'High-level PvM unlocks',
-                    milestones: [
-                        { name: 'Blade of Saeldor', detail: 'Corrupted Gauntlet', check: () => hasDrop('Enhanced crystal weapon seed') || hasDrop('Blade of Saeldor'), type: 'drop' },
-                        { name: 'Bowfa', detail: 'Corrupted Gauntlet', check: () => hasDrop('Enhanced crystal weapon seed'), type: 'drop' },
-                        { name: 'Full Crystal Armor', detail: '6 armor seeds', check: () => drops.filter(d => d.item.includes('Crystal armour seed')).length >= 6, type: 'drop' },
-                        { name: 'Primordial Boots', detail: 'Cerberus', check: () => hasDrop('Primordial crystal'), type: 'drop' },
-                        { name: 'Pegasian Boots', detail: 'Cerberus', check: () => hasDrop('Pegasian crystal'), type: 'drop' },
-                        { name: 'Eternal Boots', detail: 'Cerberus', check: () => hasDrop('Eternal crystal'), type: 'drop' },
-                        { name: 'Infernal Cape', detail: 'The Inferno', check: () => hasDrop('Infernal Cape'), type: 'drop' },
-                        { name: 'Tormented Bracelet', detail: 'Zenyte + enchant', check: () => drops.filter(d => d.item.includes('Zenyte')).length >= 2, type: 'gear' },
-                        { name: 'Necklace of Anguish', detail: 'Zenyte + enchant', check: () => drops.filter(d => d.item.includes('Zenyte')).length >= 3, type: 'gear' },
-                        { name: '95+ Slayer', detail: 'Hydra unlocked', check: () => hasSkillLevel('Slayer', 95), type: 'skill' },
-                    ]
-                },
-                {
-                    name: 'End Game',
-                    phase: 'end',
-                    icon: '👑',
-                    description: 'Ultimate goals',
-                    milestones: [
-                        { name: 'Twisted Bow', detail: 'Chambers of Xeric', check: () => hasDrop('Twisted Bow'), type: 'drop' },
-                        { name: 'Scythe of Vitur', detail: 'Theatre of Blood', check: () => hasDrop('Scythe'), type: 'drop' },
-                        { name: 'Tumeken\'s Shadow', detail: 'Tombs of Amascut', check: () => hasDrop('Tumeken'), type: 'drop' },
-                        { name: 'Torva Armor', detail: 'Nex', check: () => hasAnyDrop(['Torva platebody', 'Torva platelegs', 'Torva helm']), type: 'drop' },
-                        { name: 'Masori Armor', detail: 'Tombs of Amascut', check: () => hasAnyDrop(['Masori body', 'Masori chaps', 'Masori mask']), type: 'drop' },
-                        { name: 'Max Cape', detail: 'All 99s', check: () => skillsData && Object.values(skillsData).every(s => s.level >= 99), type: 'skill' },
-                        { name: 'Grandmaster CAs', detail: 'All GM tasks', check: () => caData?.tiers?.Grandmaster?.completed === caData?.tiers?.Grandmaster?.total, type: 'achievement' },
-                        { name: 'All Pets', detail: 'Gotta catch em all', check: () => petsData?.total_obtained >= 50, type: 'collection' },
-                        { name: 'Completionist', detail: 'Collection log', check: () => clogData?.total_obtained >= 1400, type: 'collection' },
-                        { name: 'All Hard Diaries', detail: 'Every region', check: () => true, type: 'achievement' },
-                    ]
-                }
-            ];
-
-            // Calculate stats
-            let totalMilestones = 0;
-            let completedMilestones = 0;
-            phases.forEach(phase => {
-                phase.milestones.forEach(m => {
-                    totalMilestones++;
-                    m.complete = m.check();
-                    if (m.complete) completedMilestones++;
-                });
-                phase.completed = phase.milestones.filter(m => m.complete).length;
-                phase.total = phase.milestones.length;
-                phase.percent = Math.round((phase.completed / phase.total) * 100);
-            });
-
-            // Determine current phase
-            let currentPhase = 'Early Game';
-            if (phases[0].percent >= 80) currentPhase = 'Mid Game';
-            if (phases[1].percent >= 80) currentPhase = 'Late Game';
-            if (phases[2].percent >= 80) currentPhase = 'End Game';
-
-            const overallPercent = Math.round((completedMilestones / totalMilestones) * 100);
-
-            const getTypeIcon = (type) => {
-                const icons = { drop: '💎', skill: '📊', quest: '📜', gear: '🛡️', achievement: '🏆', collection: '📚' };
-                return icons[type] || '✓';
-            };
-
-            container.innerHTML = `
-                <div class="progression-header">
-                    <h2>Ironman Progression</h2>
-                    <p>Currently in: <strong>${currentPhase}</strong></p>
-                </div>
-
-                <div class="progression-stats">
-                    <div class="prog-stat">
-                        <div class="prog-stat-value">${overallPercent}%</div>
-                        <div class="prog-stat-label">Overall</div>
-                    </div>
-                    <div class="prog-stat">
-                        <div class="prog-stat-value">${completedMilestones}/${totalMilestones}</div>
-                        <div class="prog-stat-label">Milestones</div>
-                    </div>
-                    <div class="prog-stat">
-                        <div class="prog-stat-value">${skillsData ? Object.entries(skillsData).filter(([k, s]) => k !== 'Overall' && s.level >= 99).length : 0}</div>
-                        <div class="prog-stat-label">99s</div>
-                    </div>
-                    <div class="prog-stat">
-                        <div class="prog-stat-value">${drops.length}</div>
-                        <div class="prog-stat-label">Notable Drops</div>
-                    </div>
-                    <div class="prog-stat">
-                        <div class="prog-stat-value">${petsData?.total_obtained || 0}</div>
-                        <div class="prog-stat-label">Pets</div>
-                    </div>
-                </div>
-
-                <div class="progression-phases">
-                    ${phases.map(phase => `
-                        <div class="phase ${phase.phase}">
-                            <div class="phase-header">
-                                <div class="phase-title">
-                                    <span class="phase-icon">${phase.icon}</span>
-                                    <span class="phase-name">${phase.name}<span>${phase.description}</span></span>
-                                </div>
-                                <div class="phase-progress">
-                                    <div class="phase-progress-bar">
-                                        <div class="phase-progress-fill" style="width: ${phase.percent}%"></div>
-                                    </div>
-                                    <span class="phase-progress-text">${phase.percent}%</span>
-                                </div>
-                            </div>
-                            <div class="phase-content">
-                                <div class="milestone-grid">
-                                    ${phase.milestones.map(m => `
-                                        <div class="milestone ${m.complete ? 'complete' : 'incomplete'}">
-                                            <span class="milestone-icon">${m.complete ? '✓' : getTypeIcon(m.type)}</span>
-                                            <div class="milestone-info">
-                                                <div class="milestone-name">${m.name}</div>
-                                                <div class="milestone-detail">${m.detail}</div>
-                                            </div>
-                                            <span class="milestone-status ${m.complete ? 'done' : ''}">${m.complete ? 'Done' : '—'}</span>
-                                        </div>
-                                    `).join('')}
-                                </div>
-                            </div>
-                        </div>
-                    `).join('')}
-                </div>
-            `;
-        }
-
-        let bankData = null;
-        let bankSearchTerm = '';
-        let bankCategoryFilter = 'all';
-        let bankSubcategoryFilter = 'all';
-
-        function renderBank(data) {
-            bankData = data;
-            const container = document.getElementById('bankContainer');
-            
-            const formatGp = (value) => {
-                if (value >= 1000000000) return (value / 1000000000).toFixed(2) + 'B';
-                if (value >= 1000000) return (value / 1000000).toFixed(2) + 'M';
-                if (value >= 1000) return (value / 1000).toFixed(1) + 'K';
-                return value.toLocaleString();
-            };
-
-            if (!data || !data.items) {
-                container.innerHTML = '<div class="empty-state">No bank data available. Update data/bank.txt with your Bank Memory export, then commit and push.</div>';
-                return;
-            }
-
-            // Get unique categories for filter
-            const categories = [...new Set(data.items.map(i => i.category))].sort();
-
-            container.innerHTML = `
-                <div class="bank-updated">Bank data last updated: ${formatDate(data.updated)}</div>
-                
-                <div class="bank-summary">
-                    <div class="bank-summary-card highlight">
-                        <div class="bank-summary-label">Total Bank Value</div>
-                        <div class="bank-summary-value">${formatGp(data.total_value)} gp</div>
-                    </div>
-                    <div class="bank-summary-card">
-                        <div class="bank-summary-label">Unique Items</div>
-                        <div class="bank-summary-value green">${data.total_items.toLocaleString()}</div>
-                    </div>
-                    <div class="bank-summary-card">
-                        <div class="bank-summary-label">Total Quantity</div>
-                        <div class="bank-summary-value">${data.total_quantity.toLocaleString()}</div>
-                    </div>
-                </div>
-
-                <div class="bank-top-items">
-                    <h3>💰 Most Valuable Items</h3>
-                    ${data.top_items.map((item, i) => `
-                        <div class="top-item">
-                            <span class="top-item-name">${i + 1}. ${item.name}<span class="top-item-qty">x${item.quantity.toLocaleString()}</span></span>
-                            <span class="top-item-value">${formatGp(item.total_value)} gp</span>
-                        </div>
-                    `).join('')}
-                </div>
-
-                <div class="bank-category-breakdown">
-                    <h3>📊 Value by Category</h3>
-                    <div class="category-cards" id="categoryCards">
-                        ${generateCategoryCards(data)}
-                    </div>
-                </div>
-
-                <div class="bank-filters">
-                    <input type="text" class="bank-search" id="bankSearch" placeholder="Search items..." value="${bankSearchTerm}">
-                    <select class="bank-filter-select" id="bankCategoryFilter">
-                        <option value="all">All Categories</option>
-                        ${categories.map(cat => `<option value="${cat}" ${bankCategoryFilter === cat ? 'selected' : ''}>${cat}</option>`).join('')}
-                    </select>
-                    <select class="bank-filter-select" id="bankSubcategoryFilter">
-                        <option value="all">All Subcategories</option>
-                    </select>
-                </div>
-
-                <div class="bank-filter-stats" id="bankFilterStats"></div>
-
-                <div class="bank-all-items">
-                    <h3>📦 All Items</h3>
-                    <div class="bank-items-grid" id="bankItemsGrid"></div>
-                </div>
-            `;
-
-            // Add event listeners
-            document.getElementById('bankSearch').addEventListener('input', (e) => {
-                bankSearchTerm = e.target.value;
-                filterBankItems();
-                updateCategoryCardSelection();
-            });
-
-            document.getElementById('bankCategoryFilter').addEventListener('change', (e) => {
-                bankCategoryFilter = e.target.value;
-                bankSubcategoryFilter = 'all';
-                updateSubcategoryFilter();
-                filterBankItems();
-                updateCategoryCardSelection();
-            });
-
-            document.getElementById('bankSubcategoryFilter').addEventListener('change', (e) => {
-                bankSubcategoryFilter = e.target.value;
-                filterBankItems();
-            });
-
-            // Add click listeners for category cards
-            document.querySelectorAll('.category-card').forEach(card => {
-                card.addEventListener('click', () => {
-                    const category = card.dataset.category;
-                    if (bankCategoryFilter === category) {
-                        // Clicking same category deselects it
-                        bankCategoryFilter = 'all';
-                    } else {
-                        bankCategoryFilter = category;
-                    }
-                    bankSubcategoryFilter = 'all';
-                    document.getElementById('bankCategoryFilter').value = bankCategoryFilter;
-                    updateSubcategoryFilter();
-                    filterBankItems();
-                    updateCategoryCardSelection();
-                });
-            });
-
-            updateSubcategoryFilter();
-            filterBankItems();
-            updateCategoryCardSelection();
-        }
-
-        function getCategoryClass(category) {
-            return 'cat-' + category.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-');
-        }
-
-        function generateCategoryCards(data) {
-            const formatGp = (value) => {
-                if (value >= 1000000000) return (value / 1000000000).toFixed(2) + 'B';
-                if (value >= 1000000) return (value / 1000000).toFixed(1) + 'M';
-                if (value >= 1000) return (value / 1000).toFixed(0) + 'K';
-                return value.toLocaleString();
-            };
-
-            // Aggregate by category
-            const categoryStats = {};
-            data.items.forEach(item => {
-                if (!categoryStats[item.category]) {
-                    categoryStats[item.category] = { count: 0, quantity: 0, value: 0 };
-                }
-                categoryStats[item.category].count++;
-                categoryStats[item.category].quantity += item.quantity;
-                categoryStats[item.category].value += item.total_value;
-            });
-
-            // Sort by value descending
-            const sortedCategories = Object.entries(categoryStats)
-                .sort((a, b) => b[1].value - a[1].value);
-
-            return sortedCategories.map(([category, stats]) => `
-                <div class="category-card ${getCategoryClass(category)}" data-category="${category}">
-                    <div class="category-card-name">${category}</div>
-                    <div class="category-card-stats">
-                        <span class="category-card-count">${stats.count} items</span>
-                        <span class="category-card-value">${formatGp(stats.value)}</span>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function updateCategoryCardSelection() {
-            document.querySelectorAll('.category-card').forEach(card => {
-                if (bankCategoryFilter === 'all') {
-                    card.classList.remove('active');
-                } else if (card.dataset.category === bankCategoryFilter) {
-                    card.classList.add('active');
-                } else {
-                    card.classList.remove('active');
-                }
-            });
-        }
-
-        function updateSubcategoryFilter() {
-            if (!bankData) return;
-            
-            const subcatSelect = document.getElementById('bankSubcategoryFilter');
-            let subcategories = [];
-            
-            if (bankCategoryFilter === 'all') {
-                subcategories = [...new Set(bankData.items.map(i => i.subcategory))].sort();
-            } else {
-                subcategories = [...new Set(
-                    bankData.items
-                        .filter(i => i.category === bankCategoryFilter)
-                        .map(i => i.subcategory)
-                )].sort();
-            }
-
-            subcatSelect.innerHTML = `
-                <option value="all">All Subcategories</option>
-                ${subcategories.map(sub => `<option value="${sub}" ${bankSubcategoryFilter === sub ? 'selected' : ''}>${sub}</option>`).join('')}
-            `;
-        }
-
-        function filterBankItems() {
-            if (!bankData) return;
-
-            const grid = document.getElementById('bankItemsGrid');
-            const statsDiv = document.getElementById('bankFilterStats');
-            const searchLower = bankSearchTerm.toLowerCase();
-
-            let filteredItems = bankData.items.filter(item => {
-                const matchesSearch = !bankSearchTerm || item.name.toLowerCase().includes(searchLower);
-                const matchesCategory = bankCategoryFilter === 'all' || item.category === bankCategoryFilter;
-                const matchesSubcategory = bankSubcategoryFilter === 'all' || item.subcategory === bankSubcategoryFilter;
-                return matchesSearch && matchesCategory && matchesSubcategory;
-            });
-
-            // Calculate stats for filtered items
-            const filteredCount = filteredItems.length;
-            const filteredQty = filteredItems.reduce((sum, i) => sum + i.quantity, 0);
-            const filteredValue = filteredItems.reduce((sum, i) => sum + i.total_value, 0);
-
-            // Sort by value descending
-            filteredItems.sort((a, b) => b.total_value - a.total_value);
-
-            const formatGp = (value) => {
-                if (value >= 1000000000) return (value / 1000000000).toFixed(2) + 'B';
-                if (value >= 1000000) return (value / 1000000).toFixed(2) + 'M';
-                if (value >= 1000) return (value / 1000).toFixed(1) + 'K';
-                return value.toLocaleString();
-            };
-
-            // Show filter stats
-            const isFiltered = bankSearchTerm || bankCategoryFilter !== 'all' || bankSubcategoryFilter !== 'all';
-            if (isFiltered) {
-                statsDiv.innerHTML = `
-                    <div class="filter-stats-row">
-                        <span class="filter-stat"><strong>${filteredCount}</strong> items</span>
-                        <span class="filter-stat"><strong>${filteredQty.toLocaleString()}</strong> total qty</span>
-                        <span class="filter-stat"><strong>${formatGp(filteredValue)}</strong> gp value</span>
-                    </div>
-                `;
-                statsDiv.style.display = 'block';
-            } else {
-                statsDiv.style.display = 'none';
-            }
-
-            if (filteredItems.length === 0) {
-                grid.innerHTML = '<div class="no-results">No items found matching your filters.</div>';
-                return;
-            }
-
-            grid.innerHTML = filteredItems.map(item => `
-                <div class="bank-item">
-                    <span class="bank-item-name">${item.name}</span>
-                    <span class="bank-item-qty">x${item.quantity.toLocaleString()}</span>
-                    <span class="bank-item-value">${formatGp(item.total_value)}</span>
-                </div>
-            `).join('');
-        }
-
-        // Password hashing function
-        async function hashPassword(password) {
-            const encoder = new TextEncoder();
-            const data = encoder.encode(password);
-            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-            const hashArray = Array.from(new Uint8Array(hashBuffer));
-            return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-        }
-
-        // Show password modal
-        function showPasswordModal(targetTabId) {
-            const modal = document.getElementById('passwordModal');
-            const input = document.getElementById('bankPassword');
-            const error = document.getElementById('passwordError');
-            
-            modal.classList.add('active');
-            input.value = '';
-            error.textContent = '';
-            input.focus();
-            
-            // Store target tab for after unlock
-            modal.dataset.targetTab = targetTabId;
-        }
-
-        // Hide password modal
-        function hidePasswordModal() {
-            const modal = document.getElementById('passwordModal');
-            modal.classList.remove('active');
-            modal.dataset.targetTab = '';
-        }
-
-        // Check password and unlock
-        async function checkPassword() {
-            const input = document.getElementById('bankPassword');
-            const error = document.getElementById('passwordError');
-            const modal = document.getElementById('passwordModal');
-            
-            // Check if password protection is configured
-            if (!BANK_PASSWORD_HASH) {
-                error.textContent = 'Password protection not configured';
-                return;
-            }
-            
-            // Direct comparison (no hashing - secret IS the password)
-            if (input.value === BANK_PASSWORD_HASH) {
-                bankUnlocked = true;
-                sessionStorage.setItem('bankUnlocked', 'true');
-                hidePasswordModal();
-                
-                // Switch to the protected tab
-                const targetTab = modal.dataset.targetTab;
-                if (targetTab) {
-                    document.getElementById(targetTab).classList.remove('locked');
-                    switchTabDirect(targetTab);
-                }
-            } else {
-                error.textContent = 'Incorrect password';
-                input.value = '';
-                input.focus();
-            }
-        }
-
-        // Direct tab switch (no password check)
-        function switchTabDirect(tabId) {
+        document.querySelectorAll('.nav-tab').forEach(t => t.addEventListener('click', () => {
             document.querySelectorAll('.nav-tab').forEach(x => x.classList.remove('active'));
             document.querySelectorAll('.tab-content').forEach(x => x.classList.remove('active'));
-            const tab = document.querySelector(`.nav-tab[data-tab="${tabId}"]`);
-            if (tab) {
-                tab.classList.add('active');
-                document.getElementById(tabId).classList.add('active');
-            }
-        }
-
-        // Tab switch with password protection
-        function switchTab(tabId) {
-            // Check if this is the protected tab
-            if (tabId === PROTECTED_TAB_ID) {
-                // Check if already unlocked this session
-                if (bankUnlocked || sessionStorage.getItem('bankUnlocked') === 'true') {
-                    bankUnlocked = true;
-                    document.getElementById(tabId).classList.remove('locked');
-                    switchTabDirect(tabId);
-                } else {
-                    // Show password modal
-                    document.getElementById(tabId).classList.add('locked');
-                    showPasswordModal(tabId);
-                }
-            } else {
-                switchTabDirect(tabId);
-            }
-        }
-
-        // Password modal event listeners
-        document.getElementById('passwordSubmit').addEventListener('click', checkPassword);
-        document.getElementById('passwordCancel').addEventListener('click', () => {
-            hidePasswordModal();
-            // Go back to previous tab or skills
-            window.location.hash = 'skills';
-            switchTabDirect('skills');
-        });
-        document.getElementById('bankPassword').addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') checkPassword();
-        });
-
-        document.querySelectorAll('.nav-tab').forEach(t => t.addEventListener('click', () => {
-            const tabId = t.dataset.tab;
-            window.location.hash = tabId;
-            switchTab(tabId);
+            t.classList.add('active');
+            document.getElementById(t.dataset.tab).classList.add('active');
         }));
-
-        // Handle initial load and back/forward navigation
-        function handleHashChange() {
-            const hash = window.location.hash.slice(1);
-            if (hash && document.getElementById(hash)) {
-                switchTab(hash);
-            }
-        }
-        window.addEventListener('hashchange', handleHashChange);
-        window.addEventListener('load', handleHashChange);
 
         loadData();
     </script>
