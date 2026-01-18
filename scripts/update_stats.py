@@ -168,124 +168,81 @@ def process_temple_clog(temple_data, manual_dates):
     total_items = 0
     recent_items = []
     
-    # Temple returns data in 'data' key - structure may vary
-    clog_data = temple_data.get('data', {})
+    # Temple structure: data.items = { category_name: [ {id, count, date}, ... ] }
+    temple_info = temple_data.get('data', {})
+    items_data = temple_info.get('items', {})
     
-    # Debug: print structure
-    print(f"  Data type: {type(clog_data)}")
-    if isinstance(clog_data, dict):
-        print(f"  Keys sample: {list(clog_data.keys())[:3]}")
+    # Get totals from Temple response
+    total_from_temple = temple_info.get('total_collections_finished', 0)
+    total_available = temple_info.get('total_collections_available', 0)
     
-    # Handle different possible structures
-    if isinstance(clog_data, dict):
-        for category_name, category_data in clog_data.items():
-            obtained = []
-            missing = []
-            
-            # Structure 1: category_data is a dict with 'items' key
-            if isinstance(category_data, dict) and 'items' in category_data:
-                items = category_data.get('items', {})
-                for item_name, item_info in items.items():
-                    if isinstance(item_info, dict) and item_info.get('obtained', False):
-                        manual_date = manual_dates.get(item_name.lower())
-                        temple_date = item_info.get('date')
-                        final_date = manual_date or temple_date
-                        
-                        obtained.append({
-                            'name': item_name,
-                            'date': final_date,
-                            'quantity': item_info.get('quantity', 1)
-                        })
-                        
-                        if final_date:
-                            recent_items.append({
-                                'name': item_name,
-                                'date': final_date,
-                                'collection': category_name
-                            })
-                    else:
-                        missing.append(item_name)
-            
-            # Structure 2: category_data is a list of items
-            elif isinstance(category_data, list):
-                for item in category_data:
-                    if isinstance(item, dict):
-                        item_name = item.get('name', item.get('item', str(item)))
-                        if item.get('obtained', True):  # Assume obtained if in list
-                            manual_date = manual_dates.get(item_name.lower())
-                            temple_date = item.get('date')
-                            final_date = manual_date or temple_date
-                            
-                            obtained.append({
-                                'name': item_name,
-                                'date': final_date,
-                                'quantity': item.get('quantity', 1)
-                            })
-                            
-                            if final_date:
-                                recent_items.append({
-                                    'name': item_name,
-                                    'date': final_date,
-                                    'collection': category_name
-                                })
-                    elif isinstance(item, str):
-                        # Just item names
-                        manual_date = manual_dates.get(item.lower())
-                        obtained.append({
-                            'name': item,
-                            'date': manual_date
-                        })
-            
-            # Structure 3: category_data is a simple dict with item_name: obtained/date
-            elif isinstance(category_data, dict):
-                for item_name, item_info in category_data.items():
-                    if isinstance(item_info, bool):
-                        # Simple bool for obtained
-                        if item_info:
-                            manual_date = manual_dates.get(item_name.lower())
-                            obtained.append({'name': item_name, 'date': manual_date})
-                        else:
-                            missing.append(item_name)
-                    elif isinstance(item_info, dict):
-                        if item_info.get('obtained', False):
-                            manual_date = manual_dates.get(item_name.lower())
-                            temple_date = item_info.get('date')
-                            obtained.append({
-                                'name': item_name,
-                                'date': manual_date or temple_date,
-                                'quantity': item_info.get('quantity', 1)
-                            })
-                        else:
-                            missing.append(item_name)
-                    elif isinstance(item_info, str):
-                        # item_info might be a date string
-                        manual_date = manual_dates.get(item_name.lower())
-                        obtained.append({
-                            'name': item_name,
-                            'date': manual_date or item_info
-                        })
-            
-            if obtained or missing:
-                collections[category_name] = {
-                    'obtained': obtained,
-                    'missing': missing,
-                    'obtained_count': len(obtained),
-                    'total_count': len(obtained) + len(missing)
-                }
+    print(f"  Temple reports: {total_from_temple}/{total_available} items")
+    
+    # We need item ID to name mapping - fetch from Temple's items endpoint
+    item_names = load_item_names()
+    
+    for category_name, category_items in items_data.items():
+        obtained = []
+        
+        # category_items is a list of obtained items
+        if isinstance(category_items, list):
+            for item in category_items:
+                item_id = item.get('id')
+                item_name = item_names.get(str(item_id), f"Item {item_id}")
+                temple_date = item.get('date')
+                count = item.get('count', 1)
                 
-                total_obtained += len(obtained)
-                total_items += len(obtained) + len(missing)
+                # Check for manual date
+                manual_date = manual_dates.get(item_name.lower())
+                final_date = manual_date or temple_date
+                
+                obtained.append({
+                    'name': item_name,
+                    'date': final_date,
+                    'quantity': count
+                })
+                
+                if final_date:
+                    recent_items.append({
+                        'name': item_name,
+                        'date': final_date,
+                        'collection': category_name
+                    })
+        
+        if obtained:
+            # Format category name nicely
+            display_name = category_name.replace('_', ' ').title()
+            collections[display_name] = {
+                'obtained': obtained,
+                'missing': [],  # Temple only returns obtained items
+                'obtained_count': len(obtained),
+                'total_count': len(obtained)  # We don't know missing from this endpoint
+            }
+            total_obtained += len(obtained)
     
     # Sort recent items by date
     recent_items.sort(key=lambda x: x.get('date') or '', reverse=True)
     
     return {
         'collections': collections,
-        'total_obtained': total_obtained,
-        'total_items': total_items,
+        'total_obtained': total_from_temple if total_from_temple else total_obtained,
+        'total_items': total_available if total_available else total_obtained,
         'recent_items': recent_items[:20],
         'source': 'templeosrs'
     }
+
+def load_item_names():
+    """Load item ID to name mapping from Temple API"""
+    try:
+        url = "https://templeosrs.com/api/collection-log/items.php"
+        req = urllib.request.Request(url, headers={"User-Agent": "OSRS-Ironman-Tracker/1.0"})
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            data = json.loads(resp.read().decode())
+            # Returns {id: name, ...}
+            return data if isinstance(data, dict) else {}
+    except Exception as e:
+        print(f"  Warning: Could not load item names: {e}")
+        return {}
 
 def load_collection_log_from_yaml():
     """Load collection log from YAML file (fallback)"""
@@ -548,7 +505,7 @@ def load_pets():
     }
 
 def extract_pets_from_clog(clog):
-    """Extract pets from collection log data (categories ending in 'All Pets' or containing pet items)"""
+    """Extract pets from collection log data"""
     if not clog or 'collections' not in clog:
         return None
     
@@ -556,20 +513,22 @@ def extract_pets_from_clog(clog):
     obtained = []
     missing = []
     
-    # Known pet names for matching
-    KNOWN_PETS = {
-        'Abyssal orphan', 'Baby chinchompa', 'Baby mole', 'Beaver', 'Bloodhound',
-        'Callisto cub', 'Cat', 'Chaos elemental jr', 'Chompy chick', 'Giant squirrel',
-        'Hellpuppy', 'Herbi', 'Heron', 'Ikkle hydra', 'Jal-nib-rek', 'Kalphite princess',
-        'Lil\' zik', 'Little nightmare', 'Noon', 'Olmlet', 'Pet chaos elemental',
-        'Pet dagannoth prime', 'Pet dagannoth rex', 'Pet dagannoth supreme', 'Pet dark core',
-        'Pet general graardor', 'Pet k\'ril tsutsaroth', 'Pet kraken', 'Pet penance queen',
-        'Pet smoke devil', 'Pet snakeling', 'Pet zilyana', 'Phoenix', 'Prince black dragon',
-        'Rift guardian', 'Rock golem', 'Rocky', 'Scorpia\'s offspring', 'Skotos',
-        'Smolcano', 'Sraracha', 'Tangleroot', 'Tiny tempor', 'Tumeken\'s guardian',
-        'Tzrek-jad', 'Venenatis spiderling', 'Vet\'ion jr', 'Vorki', 'Youngllef',
-        'Muphin', 'Smol heredit', 'Baron', 'Butch', 'Sol heredit', 'Scurry',
-        'Wisp', 'Lil\'viathan', 'Lil\' maiden', 'Quetzin', 'Nexling'
+    # Pet categories in Temple use names like 'abyssal_sire' which contain the pet
+    # We need to identify pet items by name
+    PET_NAMES = {
+        'abyssal orphan', 'baby chinchompa', 'baby mole', 'beaver', 'bloodhound',
+        'callisto cub', 'chompy chick', 'giant squirrel', 'hellpuppy', 'herbi',
+        'heron', 'ikkle hydra', 'jal-nib-rek', 'kalphite princess', 'little nightmare',
+        'noon', 'midnight', 'olmlet', 'pet chaos elemental', 'pet dagannoth prime',
+        'pet dagannoth rex', 'pet dagannoth supreme', 'pet dark core', 'pet general graardor',
+        "pet k'ril tsutsaroth", 'pet kraken', 'pet penance queen', 'pet smoke devil',
+        'pet snakeling', 'pet zilyana', 'phoenix', 'prince black dragon', 'rift guardian',
+        'rock golem', 'rocky', "scorpia's offspring", 'skotos', 'smolcano', 'sraracha',
+        'tangleroot', 'tiny tempor', "tumeken's guardian", 'tzrek-jad', 'venenatis spiderling',
+        "vet'ion jr", 'vorki', 'youngllef', 'lil creator', 'muphin', 'smol heredit',
+        'baron', 'butch', 'sol heredit', 'scurry', 'wisp', "lil'viathan", 
+        "lil' maiden", 'quetzin', 'nexling', 'puppadile', 'tektiny', 'vanguard',
+        'vasa minirio', 'metamorphic dust'
     }
     
     # Load manual dates from pets.yaml for merging
@@ -583,46 +542,42 @@ def extract_pets_from_clog(clog):
             for pet in data.get('obtained', []):
                 if pet.get('date'):
                     manual_pet_dates[pet['name'].lower()] = pet['date']
-        except:
-            pass
+            # Also get missing pets from YAML for the full list
+            for pet in data.get('missing', []):
+                pet_name = pet.get('name', pet) if isinstance(pet, dict) else pet
+                if pet_name.lower() not in [p.get('name', '').lower() for p in missing]:
+                    # Parse source from "name (source)" format
+                    source = None
+                    if '(' in pet_name and pet_name.endswith(')'):
+                        parts = pet_name.rsplit('(', 1)
+                        pet_name = parts[0].strip()
+                        source = parts[1][:-1].strip()
+                    missing.append({'name': pet_name, 'source': source})
+        except Exception as e:
+            print(f"  Warning: Could not load pets.yaml: {e}")
     
-    # Check for "All Pets" categories and individual pet items
+    # Scan all collections for pet items
     for category_name, category_data in collections.items():
-        is_pets_category = 'All Pets' in category_name or 'Pets' == category_name
-        
-        # Get the source/boss name from category
-        source = category_name.replace(', All Pets', '').replace(' All Pets', '').replace('All Pets', '').strip()
-        if not source:
-            source = 'Unknown'
+        source = category_name.replace('_', ' ').title()
         
         for item in category_data.get('obtained', []):
-            item_name = item.get('name', item) if isinstance(item, dict) else item
+            item_name = item.get('name', '') if isinstance(item, dict) else item
             
-            # Check if it's a pet (either in pets category or matches known pet name)
-            is_pet = is_pets_category or any(pet.lower() in item_name.lower() for pet in KNOWN_PETS)
-            
-            if is_pet and item_name.lower() not in [p.get('name', '').lower() for p in obtained]:
-                # Get date - prefer manual, then clog
-                manual_date = manual_pet_dates.get(item_name.lower())
-                clog_date = item.get('date') if isinstance(item, dict) else None
-                final_date = manual_date or clog_date
-                
-                obtained.append({
-                    'name': item_name,
-                    'date': final_date,
-                    'source': source
-                })
-        
-        # Only add missing from explicit pet categories
-        if is_pets_category:
-            for item_name in category_data.get('missing', []):
-                if item_name.lower() not in [p.get('name', '').lower() for p in missing]:
-                    missing.append({
+            # Check if this is a pet
+            if item_name.lower() in PET_NAMES:
+                # Avoid duplicates
+                if item_name.lower() not in [p.get('name', '').lower() for p in obtained]:
+                    manual_date = manual_pet_dates.get(item_name.lower())
+                    clog_date = item.get('date') if isinstance(item, dict) else None
+                    
+                    obtained.append({
                         'name': item_name,
+                        'date': manual_date or clog_date,
                         'source': source
                     })
     
     if not obtained and not missing:
+        # Fallback to YAML only
         return None
     
     return {
