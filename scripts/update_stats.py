@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 OSRS Ironman Progression Tracker
-Fetches data from official hiscores and reads manual YAML tracking files.
-Supports dates for collection log, combat achievements, and pets.
+Fetches data from official hiscores and TempleOSRS API.
+Preserves manually-entered dates from YAML files.
 """
 
 import json
@@ -16,6 +16,7 @@ RSN = os.environ.get("RSN", "FoolinSlays")
 DATA_DIR = Path(__file__).parent.parent / "data"
 
 HISCORES_URL = "https://secure.runescape.com/m=hiscore_oldschool_ironman/index_lite.json"
+TEMPLE_CLOG_URL = "https://templeosrs.com/api/collection-log/player_collection_log.php"
 
 NUM_SKILLS = 24
 
@@ -103,8 +104,126 @@ def parse_yaml_with_dates(content):
     
     return result
 
+def load_manual_dates():
+    """Load manually-entered dates from collection_log.yaml"""
+    yaml_path = DATA_DIR / "collection_log.yaml"
+    if not yaml_path.exists():
+        return {}
+    
+    with open(yaml_path, 'r') as f:
+        content = f.read()
+    
+    data = parse_yaml_with_dates(content)
+    
+    # Build a lookup: item_name -> date
+    dates = {}
+    for collection_name, items in data.items():
+        for item in items.get('obtained', []):
+            if item.get('date'):
+                # Store by item name (lowercase for matching)
+                dates[item['name'].lower()] = item['date']
+    
+    return dates
+
+def fetch_temple_collection_log(rsn):
+    """Fetch collection log from TempleOSRS API"""
+    print(f"Fetching collection log from TempleOSRS for {rsn}...")
+    
+    # Fetch all categories
+    data = fetch_json(TEMPLE_CLOG_URL, {"player": rsn})
+    
+    if not data:
+        print("Failed to fetch from TempleOSRS")
+        return None
+    
+    if "error" in data:
+        print(f"TempleOSRS error: {data['error']}")
+        return None
+    
+    return data
+
 def load_collection_log():
-    """Load collection log from YAML file with date support"""
+    """
+    Load collection log from TempleOSRS API, preserving manual dates.
+    Falls back to YAML if API fails.
+    """
+    # Load manual dates first
+    manual_dates = load_manual_dates()
+    print(f"Loaded {len(manual_dates)} manual dates from YAML")
+    
+    # Try TempleOSRS API
+    temple_data = fetch_temple_collection_log(RSN)
+    
+    if temple_data and 'data' in temple_data:
+        print("Using TempleOSRS API data")
+        return process_temple_clog(temple_data, manual_dates)
+    else:
+        print("Falling back to YAML collection log")
+        return load_collection_log_from_yaml()
+
+def process_temple_clog(temple_data, manual_dates):
+    """Process TempleOSRS collection log data, merging with manual dates"""
+    collections = {}
+    total_obtained = 0
+    total_items = 0
+    recent_items = []
+    
+    # Temple returns data in 'data' key with categories
+    clog_data = temple_data.get('data', {})
+    
+    for category_name, category_data in clog_data.items():
+        items = category_data.get('items', {})
+        
+        obtained = []
+        missing = []
+        
+        for item_name, item_info in items.items():
+            if item_info.get('obtained', False):
+                # Check for manual date first, then Temple date
+                manual_date = manual_dates.get(item_name.lower())
+                temple_date = item_info.get('date')
+                
+                # Prefer manual date if it exists
+                final_date = manual_date or temple_date
+                
+                obtained.append({
+                    'name': item_name,
+                    'date': final_date,
+                    'quantity': item_info.get('quantity', 1)
+                })
+                
+                if final_date:
+                    recent_items.append({
+                        'name': item_name,
+                        'date': final_date,
+                        'collection': category_name
+                    })
+            else:
+                missing.append(item_name)
+        
+        collections[category_name] = {
+            'obtained': obtained,
+            'missing': missing,
+            'obtained_count': len(obtained),
+            'total_count': len(obtained) + len(missing)
+        }
+        
+        total_obtained += len(obtained)
+        total_items += len(obtained) + len(missing)
+    
+    # Sort recent items by date
+    recent_items.sort(key=lambda x: x['date'] or '', reverse=True)
+    
+    return {
+        'collections': collections,
+        'total_obtained': total_obtained,
+        'total_items': total_items,
+        'recent_items': recent_items[:20],
+        'source': 'templeosrs'
+    }
+
+def load_collection_log_from_yaml():
+    """Load collection log from YAML file (fallback)"""
     yaml_path = DATA_DIR / "collection_log.yaml"
     if not yaml_path.exists():
         print(f"Collection log YAML not found: {yaml_path}")
@@ -134,7 +253,6 @@ def load_collection_log():
         total_obtained += len(obtained)
         total_items += len(obtained) + len(missing)
         
-        # Track items with dates for recent activity
         for item in obtained:
             if item.get('date'):
                 recent_items.append({
@@ -143,14 +261,14 @@ def load_collection_log():
                     'collection': collection_name
                 })
     
-    # Sort recent items by date
     recent_items.sort(key=lambda x: x['date'] or '', reverse=True)
     
     return {
         'collections': collections,
         'total_obtained': total_obtained,
         'total_items': total_items,
-        'recent_items': recent_items[:20]  # Last 20 items
+        'recent_items': recent_items[:20],
+        'source': 'yaml'
     }
 
 def load_combat_achievements():
@@ -230,7 +348,6 @@ def parse_pets_yaml(content):
             current_section = 'missing'
         elif stripped.startswith('- ') and current_section:
             item_text = stripped[2:]
-            # Parse "name | date" or "name |" or "name"
             if ' | ' in item_text:
                 parts = item_text.split(' | ', 1)
                 name = parts[0].strip()
@@ -259,18 +376,14 @@ def parse_quests_yaml(content):
         stripped = line.strip()
         indent = len(line) - len(stripped)
         
-        # Top level category (Free-to-play:, Members:, Miniquests:)
         if indent == 0 and stripped.endswith(':'):
             current_category = stripped[:-1]
             result[current_category] = {'completed': [], 'not_completed': []}
             current_section = None
-        # Sub-section (completed:, not_completed:)
         elif indent == 2 and stripped.endswith(':'):
             current_section = stripped[:-1]
-        # Quest item
         elif stripped.startswith('- ') and current_category and current_section:
             item_text = stripped[2:]
-            # Parse "name | date" or "name |" or "name"
             if ' | ' in item_text:
                 parts = item_text.split(' | ', 1)
                 name = parts[0].strip()
@@ -313,7 +426,7 @@ def load_quests():
         
         categories[cat_name] = {
             'completed': completed,
-            'not_completed': not_completed  # Keep as objects for consistency
+            'not_completed': not_completed
         }
         
         cat_total = len(completed) + len(not_completed)
@@ -325,7 +438,6 @@ def load_quests():
             total_completed += len(completed)
             total_quests += cat_total
     
-    # Quest points - 314 is max as of late 2025
     quest_points = 314 if total_completed == total_quests else 0
     
     return {
@@ -353,7 +465,6 @@ def load_pets():
     obtained = data.get('obtained', [])
     missing_raw = data.get('missing', [])
     
-    # Parse missing pets (format: "name (source)")
     missing_parsed = []
     for item in missing_raw:
         name = item['name'] if isinstance(item, dict) else item
@@ -429,7 +540,6 @@ def main():
         for a in official["activities"]:
             name, score = a.get("name"), a.get("score", -1)
             if score > 0:
-                # Check exclusions (exact match or startswith for PvP Arena variants)
                 if name in BOSS_EXCLUSIONS or name.startswith("PvP Arena"):
                     continue
                 elif "Clue Scrolls" in name:
@@ -443,16 +553,16 @@ def main():
     if clues:
         save_json(DATA_DIR / "clues.json", {"rsn": RSN, "updated": now.isoformat(), "clues": clues})
 
-    # Load and save collection log
-    print("Loading collection log from YAML...")
+    # Load and save collection log (tries Temple API first, falls back to YAML)
+    print("Loading collection log...")
     clog = load_collection_log()
     if clog:
         save_json(DATA_DIR / "collection_log.json", {
             "rsn": RSN, "updated": now.isoformat(), "collection_log": clog
         })
-        print(f"Collection log: {clog['total_obtained']}/{clog['total_items']} items")
+        print(f"Collection log: {clog['total_obtained']}/{clog['total_items']} items (source: {clog.get('source', 'unknown')})")
 
-    # Load and save combat achievements
+    # Load and save combat achievements (YAML only - no API)
     print("Loading combat achievements from YAML...")
     ca = load_combat_achievements()
     if ca:
@@ -461,7 +571,7 @@ def main():
         })
         print(f"Combat achievements: {ca['total_completed']}/{ca['total_tasks']} tasks")
 
-    # Load and save pets
+    # Load and save pets (YAML only)
     print("Loading pets from YAML...")
     pets = load_pets()
     if pets:
@@ -470,7 +580,7 @@ def main():
         })
         print(f"Pets: {pets['total_obtained']}/{pets['total_pets']} pets")
 
-    # Load and save quests
+    # Load and save quests (YAML only)
     print("Loading quests from YAML...")
     quests = load_quests()
     if quests:
