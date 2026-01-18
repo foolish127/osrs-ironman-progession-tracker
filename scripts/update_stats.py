@@ -547,6 +547,92 @@ def load_pets():
         'total_pets': len(obtained) + len(missing_raw)
     }
 
+def extract_pets_from_clog(clog):
+    """Extract pets from collection log data (categories ending in 'All Pets' or containing pet items)"""
+    if not clog or 'collections' not in clog:
+        return None
+    
+    collections = clog['collections']
+    obtained = []
+    missing = []
+    
+    # Known pet names for matching
+    KNOWN_PETS = {
+        'Abyssal orphan', 'Baby chinchompa', 'Baby mole', 'Beaver', 'Bloodhound',
+        'Callisto cub', 'Cat', 'Chaos elemental jr', 'Chompy chick', 'Giant squirrel',
+        'Hellpuppy', 'Herbi', 'Heron', 'Ikkle hydra', 'Jal-nib-rek', 'Kalphite princess',
+        'Lil\' zik', 'Little nightmare', 'Noon', 'Olmlet', 'Pet chaos elemental',
+        'Pet dagannoth prime', 'Pet dagannoth rex', 'Pet dagannoth supreme', 'Pet dark core',
+        'Pet general graardor', 'Pet k\'ril tsutsaroth', 'Pet kraken', 'Pet penance queen',
+        'Pet smoke devil', 'Pet snakeling', 'Pet zilyana', 'Phoenix', 'Prince black dragon',
+        'Rift guardian', 'Rock golem', 'Rocky', 'Scorpia\'s offspring', 'Skotos',
+        'Smolcano', 'Sraracha', 'Tangleroot', 'Tiny tempor', 'Tumeken\'s guardian',
+        'Tzrek-jad', 'Venenatis spiderling', 'Vet\'ion jr', 'Vorki', 'Youngllef',
+        'Muphin', 'Smol heredit', 'Baron', 'Butch', 'Sol heredit', 'Scurry',
+        'Wisp', 'Lil\'viathan', 'Lil\' maiden', 'Quetzin', 'Nexling'
+    }
+    
+    # Load manual dates from pets.yaml for merging
+    manual_pet_dates = {}
+    pets_yaml_path = DATA_DIR / "pets.yaml"
+    if pets_yaml_path.exists():
+        try:
+            with open(pets_yaml_path, 'r') as f:
+                content = f.read()
+            data = parse_pets_yaml(content)
+            for pet in data.get('obtained', []):
+                if pet.get('date'):
+                    manual_pet_dates[pet['name'].lower()] = pet['date']
+        except:
+            pass
+    
+    # Check for "All Pets" categories and individual pet items
+    for category_name, category_data in collections.items():
+        is_pets_category = 'All Pets' in category_name or 'Pets' == category_name
+        
+        # Get the source/boss name from category
+        source = category_name.replace(', All Pets', '').replace(' All Pets', '').replace('All Pets', '').strip()
+        if not source:
+            source = 'Unknown'
+        
+        for item in category_data.get('obtained', []):
+            item_name = item.get('name', item) if isinstance(item, dict) else item
+            
+            # Check if it's a pet (either in pets category or matches known pet name)
+            is_pet = is_pets_category or any(pet.lower() in item_name.lower() for pet in KNOWN_PETS)
+            
+            if is_pet and item_name.lower() not in [p.get('name', '').lower() for p in obtained]:
+                # Get date - prefer manual, then clog
+                manual_date = manual_pet_dates.get(item_name.lower())
+                clog_date = item.get('date') if isinstance(item, dict) else None
+                final_date = manual_date or clog_date
+                
+                obtained.append({
+                    'name': item_name,
+                    'date': final_date,
+                    'source': source
+                })
+        
+        # Only add missing from explicit pet categories
+        if is_pets_category:
+            for item_name in category_data.get('missing', []):
+                if item_name.lower() not in [p.get('name', '').lower() for p in missing]:
+                    missing.append({
+                        'name': item_name,
+                        'source': source
+                    })
+    
+    if not obtained and not missing:
+        return None
+    
+    return {
+        'obtained': obtained,
+        'missing': missing,
+        'total_obtained': len(obtained),
+        'total_pets': len(obtained) + len(missing),
+        'source': 'collection_log'
+    }
+
 def main():
     now = datetime.now(timezone.utc)
     print(f"Updating stats for: {RSN}")
@@ -626,6 +712,24 @@ def main():
             "rsn": RSN, "updated": now.isoformat(), "collection_log": clog
         })
         print(f"Collection log: {clog['total_obtained']}/{clog['total_items']} items (source: {clog.get('source', 'unknown')})")
+        
+        # Extract pets from collection log
+        print("Extracting pets from collection log...")
+        pets = extract_pets_from_clog(clog)
+        if pets:
+            save_json(DATA_DIR / "pets.json", {
+                "rsn": RSN, "updated": now.isoformat(), "pets": pets
+            })
+            print(f"Pets: {pets['total_obtained']}/{pets['total_pets']} pets (from clog)")
+    else:
+        # Fallback to YAML for pets if clog fails
+        print("Loading pets from YAML (fallback)...")
+        pets = load_pets()
+        if pets:
+            save_json(DATA_DIR / "pets.json", {
+                "rsn": RSN, "updated": now.isoformat(), "pets": pets
+            })
+            print(f"Pets: {pets['total_obtained']}/{pets['total_pets']} pets")
 
     # Load and save combat achievements (YAML only - no API)
     print("Loading combat achievements from YAML...")
@@ -635,15 +739,6 @@ def main():
             "rsn": RSN, "updated": now.isoformat(), "combat_achievements": ca
         })
         print(f"Combat achievements: {ca['total_completed']}/{ca['total_tasks']} tasks")
-
-    # Load and save pets (YAML only)
-    print("Loading pets from YAML...")
-    pets = load_pets()
-    if pets:
-        save_json(DATA_DIR / "pets.json", {
-            "rsn": RSN, "updated": now.isoformat(), "pets": pets
-        })
-        print(f"Pets: {pets['total_obtained']}/{pets['total_pets']} pets")
 
     # Load and save quests (YAML only)
     print("Loading quests from YAML...")
