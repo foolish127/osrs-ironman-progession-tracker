@@ -1,7 +1,7 @@
 Item id	Item name	Item quantity
 7060	Tuna potato	119
-385	Shark	611
-3144	Cooked karambwan	1520
+385	Shark	610
+3144	Cooked karambwan	1103
 6705	Potato with cheese	77
 7946	Monkfish	2910
 373	Swordfish	571
@@ -29,10 +29,10 @@ Item id	Item name	Item quantity
 365	Bass	259
 13439	Raw anglerfish	679
 397	Sea turtle	125
-383	Raw shark	1466
+383	Raw shark	1568
 1913	Dwarven stout	1
 7056	Egg potato	12
-29195	Moonlight moth mix (2)	41
+29195	Moonlight moth mix (2)	10
 13441	Anglerfish	2
 11936	Dark crab	1
 24595	Blighted karambwan	5
@@ -41,27 +41,28 @@ Item id	Item name	Item quantity
 7208	Wild pie	5
 2313	Pie dish	3
 7202	Part wild pie	1
-7220	Half a summer pie	1
+7220	Half a summer pie	2
 28893	Moonlight moth	93
 7210	Half a wild pie	1
-29213	Moonlight moth mix (1)	1
 7944	Raw monkfish	200
-10925	Sanfew serum(4)	8
-5321	Watermelon seed	24
-561	Nature rune	13472
-564	Cosmic rune	21813
-560	Death rune	27878
-556	Air rune	44913
-563	Law rune	8315
-555	Water rune	39995
+5321	Watermelon seed	153
+371	Raw swordfish	27
+395	Raw sea turtle	12
+377	Raw lobster	6
+561	Nature rune	13162
+564	Cosmic rune	21679
+560	Death rune	28118
+556	Air rune	48572
+563	Law rune	8700
+555	Water rune	48087
 559	Body rune	6081
-554	Fire rune	144389
-565	Blood rune	10795
+554	Fire rune	133048
+565	Blood rune	13101
 557	Earth rune	89029
 558	Mind rune	168856
-562	Chaos rune	8305
+562	Chaos rune	9477
 9075	Astral rune	2725
-566	Soul rune	15089
+566	Soul rune	15512
 4699	Lava rune	21
 21880	Wrath rune	59
 1438	Air talisman	4
@@ -74,12 +75,12 @@ Item id	Item name	Item quantity
 1446	Body talisman	11
 1452	Chaos talisman	12
 1456	Death talisman	1
-7218	Summer pie	50
+7218	Summer pie	53
 3857	Games necklace(6)	1
 1675	Sapphire amulet (u)	8
 6707	Camulet	1
 13660	Chronicle	1
-7936	Pure essence	38019
+7936	Pure essence	39819
 26792	Abyssal pearls	324
 5514	Giant pouch	1
 5509	Small pouch	1
@@ -95,13 +96,12 @@ Item id	Item name	Item quantity
 13393	Xeric's talisman	1
 26798	Catalytic talisman	3
 1462	Nature talisman	16
-4695	Mist rune	5549
+4695	Mist rune	6656
 30638	Giantsoul amulet	1
 11193	Digsite pendant (4)	1
 29307	Quetzal feed	27
 4698	Mud rune	215
 23183	Strange device	1
-29684	Guthixian temple teleport	165
 19564	Royal seed pod	1
 29893	Pendant of ates	1
 22400	Drakan's medallion	1
@@ -111,7 +111,7 @@ Item id	Item name	Item quantity
 26948	Pharaoh's sceptre	1
 30637	Giantsoul amulet (uncharged)	8
 25818	Book of the dead	1
-6100	Teleport crystal (3)	1
+6101	Teleport crystal (2)	1
 4694	Steam rune	46
 12791	Rune pouch	1
 23512	Tattered sun page	1
@@ -121,16 +121,17 @@ Item id	Item name	Item quantity
 29273	Enhanced quetzal whistle	1
 13126	Explorer's ring 2	1
 13123	Ardougne cloak 3	1
-8013	Teleport to house	192
+8013	Teleport to house	165
 5516	Elemental talisman	2
 2552	Ring of dueling(8)	10
+13249	Key master teleport	3
 30634	Twinflame staff	1
 12658	Iban's staff (u)	1
 22109	Ava's assembler	1
 772	Dramen staff	4
 23037	Boots of stone	1
 20714	Tome of fire	1
-807	Iron dart	288
+807	Iron dart	276
 12502	Bandos chaps	1
 1718	Holy symbol	1
 4675	Ancient staff	2
@@ -138,11 +139,11 @@ Item id	Item name	Item quantity
 3122	Granite shield	1
 9674	Proselyte hauberk	1
 9676	Proselyte cuisse	1
-21183	Bracelet of slaughter	9
+21183	Bracelet of slaughter	3
 21177	Expeditious bracelet	11
 9185	Rune crossbow	6
 28792	Bone mace	1
-2	Steel cannonball	2969
+2	Steel cannonball	3219
 11875	Broad bolts	4310
 6714	Holy wrench	1
 9242	Ruby bolts (e)	72
@@ -166,13 +167,13 @@ Item id	Item name	Item quantity
 29045	Blood moon tassets	1
 26770	Berserker ring (i)	1
 29000	Eclipse atlatl	1
-28991	Atlatl dart	10324
+28991	Atlatl dart	9771
 4749	Torag's platebody	1
-4722	Dharok's platelegs	1
+4898	Dharok's platelegs 100	1
 4730	Guthan's chainskirt	1
 4753	Verac's helm	1
 4916	Guthan's platebody 100	1
-4942	Karil's leathertop 50	1
+4943	Karil's leathertop 25	1
 4886	Dharok's greataxe 100	1
 4871	Ahrim's robetop 25	1
 4862	Ahrim's staff 100	1
@@ -206,7 +207,6 @@ Item id	Item name	Item quantity
 6920	Infinity boots	1
 10380	Guthix chaps	1
 10370	Zamorak d'hide body	3
-22234	Dragon boots (g)	1
 28810	Zombie axe	1
 1540	Anti-dragon shield	1
 29594	Purging staff	1
@@ -244,7 +244,7 @@ Item id	Item name	Item quantity
 19553	Amulet of torture	1
 24125	Crystal halberd	1
 20727	Leaf-bladed battleaxe	1
-11907	Trident of the seas	1
+11905	Trident of the seas (full)	1
 29577	Burning claws	1
 6	Cannon base	1
 10	Cannon barrels	1
@@ -256,6 +256,8 @@ Item id	Item name	Item quantity
 13576	Dragon warhammer	1
 20724	Imbued heart	1
 23962	Crystal shard	6158
+13239	Primordial boots	1
+11907	Trident of the seas	1
 249	Guam leaf	397
 251	Marrentill	337
 253	Tarromin	1140
@@ -265,14 +267,14 @@ Item id	Item name	Item quantity
 265	Cadantine	500
 269	Torstol	628
 19653	Golovanova fruit top	16
-231	Snape grass	1900
+231	Snape grass	1926
 5295	Ranarr seed	5
 5998	Yanillian hops	14
 1951	Redberries	6
 239	White berries	608
 7178	Garden pie	11
 225	Limpwurt root	1148
-6018	Poison ivy berries	2101
+6018	Poison ivy berries	2123
 5299	Kwuarm seed	5
 6016	Cactus spine	73
 221	Eye of newt	3977
@@ -285,36 +287,39 @@ Item id	Item name	Item quantity
 223	Red spiders' eggs	14
 5303	Dwarf weed seed	5
 12640	Amylase crystal	57
+245	Wine of zamorak	75
 5304	Torstol seed	8
 5980	Calquat fruit	567
-5296	Toadflax seed	6
-21490	Seaweed spore	110
-22929	Dragonfruit	309
-5974	Coconut	459
+5296	Toadflax seed	5
+22929	Dragonfruit	315
+5974	Coconut	465
 5297	Irit seed	5
-5302	Lantadyme seed	5
-5300	Snapdragon seed	4
+5302	Lantadyme seed	4
+5300	Snapdragon seed	5
 5298	Avantoe seed	5
 5294	Harralander seed	5
 1975	Chocolate dust	156
 5982	Watermelon	88
 5312	Acorn	116
-22875	Hespori seed	98
+22875	Hespori seed	99
 810	Adamant dart	1046
 299	Mithril seeds	40
-207	Grimy ranarr weed	41
-211	Grimy avantoe	20
-213	Grimy kwuarm	34
-3051	Grimy snapdragon	18
-217	Grimy dwarf weed	32
-199	Grimy guam leaf	12
-205	Grimy harralander	36
-201	Grimy marrentill	4
-203	Grimy tarromin	10
-209	Grimy irit leaf	90
-3049	Grimy toadflax	70
-31484	Pillar coral	762
-31481	Elkhorn coral	2163
+207	Grimy ranarr weed	99
+211	Grimy avantoe	106
+213	Grimy kwuarm	44
+3051	Grimy snapdragon	61
+2485	Grimy lantadyme	7
+217	Grimy dwarf weed	78
+219	Grimy torstol	71
+215	Grimy cadantine	30
+199	Grimy guam leaf	16
+205	Grimy harralander	63
+201	Grimy marrentill	5
+203	Grimy tarromin	13
+209	Grimy irit leaf	198
+3049	Grimy toadflax	131
+31484	Pillar coral	832
+31481	Elkhorn coral	2198
 6034	Supercompost	62
 22997	Bottomless compost bucket	1
 7409	Magic secateurs	1
@@ -324,7 +329,6 @@ Item id	Item name	Item quantity
 27790	Nightshade	12
 9811	Farming cape(t)	1
 24478	Open herb sack	1
-5305	Barley seed	11
 3002	Toadflax potion (unf)	373
 2483	Lantadyme potion (unf)	119
 107	Cadantine potion (unf)	328
@@ -339,26 +343,26 @@ Item id	Item name	Item quantity
 3211	Limestone	14
 2349	Bronze bar	27
 950	Silk	895
-453	Coal	26428
+453	Coal	27028
 13421	Saltpetre	199
 1779	Flax	2462
 444	Gold ore	2831
 447	Mithril ore	4257
 1601	Diamond	1245
 2357	Gold bar	8863
-449	Adamantite ore	1054
+449	Adamantite ore	1055
 2351	Iron bar	961
-567	Unpowered orb	2378
-1513	Magic logs	607
+567	Unpowered orb	2628
+1513	Magic logs	579
 6014	Rosemary	11
 1641	Ruby ring	87
 1643	Diamond ring	62
-592	Ashes	459
+592	Ashes	659
 1935	Jug	542
-1635	Gold ring	396
+1635	Gold ring	403
 1737	Wool	4
 1767	Blue dye	1
-1637	Sapphire ring	370
+1637	Sapphire ring	371
 36	Candle	7
 970	Papyrus	2
 8790	Bolt of cloth	2
@@ -377,7 +381,7 @@ Item id	Item name	Item quantity
 960	Plank	591
 8782	Mahogany plank	754
 45	Opal bolt tips	82
-1639	Emerald ring	101
+1639	Emerald ring	102
 6045	Willow roots	63
 6047	Maple roots	84
 29482	Brimhaven voucher	2
@@ -385,17 +389,17 @@ Item id	Item name	Item quantity
 29480	Agility arena ticket	1
 10810	Arctic pine logs	213
 2353	Steel bar	3
-2359	Mithril bar	904
-8778	Oak plank	3525
+2359	Mithril bar	905
+8778	Oak plank	3585
 1749	Red dragonhide	33
 1944	Egg	1
-2361	Adamantite bar	181
-2363	Runite bar	227
+2361	Adamantite bar	184
+2363	Runite bar	229
 8780	Teak plank	224
 3099	Mithril claws	142
 2126	Dwellberries	21
-11237	Dragon arrowtips	1274
-451	Runite ore	93
+11237	Dragon arrowtips	1305
+451	Runite ore	126
 5933	Willow branch	2
 6049	Yew roots	281
 1613	Red topaz	571
@@ -409,13 +413,13 @@ Item id	Item name	Item quantity
 9463	Adamant crossbow (u)	6
 11232	Dragon dart tip	218
 25769	Vile ashes	216
-1391	Battlestaff	577
+1391	Battlestaff	643
 1739	Cowhide	37
-536	Dragon bones	469
+536	Dragon bones	569
 526	Bones	1
 434	Clay	6
 5521	Binding necklace	29
-532	Big bones	415
+532	Big bones	363
 10101	Tatty kyatt fur	6
 10103	Kyatt fur	1
 10097	Tatty graahk fur	8
@@ -436,7 +440,7 @@ Item id	Item name	Item quantity
 13261	Angler boots	1
 13258	Angler hat	1
 13259	Angler top	1
-21504	Giant seaweed	153
+21504	Giant seaweed	148
 29470	Large fur pouch (open)	1
 29464	Large meat pouch (open)	1
 10150	Noose wand	1
@@ -445,7 +449,7 @@ Item id	Item name	Item quantity
 10107	Long kebbit spike	10
 10121	Common kebbit fur	1
 10149	Swamp lizard	14
-10127	Dashing kebbit fur	89
+10127	Dashing kebbit fur	117
 10115	Dark kebbit fur	82
 10147	Red salamander	64
 28831	Immature tecu salamander	91
@@ -455,11 +459,11 @@ Item id	Item name	Item quantity
 10146	Orange salamander	124
 1781	Soda ash	79
 5078	Bird's egg	12
-5076	Bird's egg	11
+5076	Bird's egg	12
 1823	Waterskin(4)	16
 1941	Swamp paste	1655
 3239	Bark	4
-6664	Fishing explosive	702
+6664	Fishing explosive	469
 1939	Swamp tar	21177
 1761	Soft clay	2111
 29378	Sun-kissed bones	176
@@ -501,7 +505,7 @@ Item id	Item name	Item quantity
 31043	Fletching knife	1
 31045	Bale of flax	321
 31054	Vale offerings	9
-1925	Bucket	1124
+1925	Bucket	1175
 21726	Granite dust	1864
 25539	Celestial ring (uncharged)	1
 6051	Magic roots	4
@@ -509,7 +513,7 @@ Item id	Item name	Item quantity
 9192	Diamond bolt tips	3
 21930	Dragon bolts (unf)	77
 9190	Emerald bolt tips	28
-22124	Superior dragon bones	24
+22124	Superior dragon bones	27
 1751	Blue dragonhide	12
 10941	Lumberjack hat	1
 9040	Gold seal	250
@@ -517,12 +521,12 @@ Item id	Item name	Item quantity
 10933	Lumberjack boots	1
 9625	Crystal saw	1
 1929	Bucket of water	2
-1619	Uncut ruby	164
-1621	Uncut emerald	631
-1617	Uncut diamond	113
+1619	Uncut ruby	166
+1621	Uncut emerald	632
+1617	Uncut diamond	143
 11085	Ruby bracelet	27
 25580	Tackle box	1
-25778	Infernal ashes	897
+25778	Infernal ashes	1010
 25772	Malicious ashes	17
 1623	Uncut sapphire	1061
 25584	Open fish barrel	1
@@ -543,7 +547,7 @@ Item id	Item name	Item quantity
 4823	Adamantite nails	894
 1615	Dragonstone	9
 12012	Golden nugget	4
-401	Seaweed	3000
+401	Seaweed	3500
 22783	Drake bones	8
 4824	Rune nails	281
 4821	Black nails	8
@@ -565,12 +569,12 @@ Item id	Item name	Item quantity
 11992	Lava scale	2
 1585	Oily fishing rod	1
 7484	Orange spice (4)	13
-30900	Shark lure	228
-19677	Ancient shard	65
+30900	Shark lure	263
+19677	Ancient shard	67
 7535	Diving apparatus	1
 7534	Fishbowl helmet	1
 440	Iron ore	1296
-31729	Frost dragon bones	152
+31729	Frost dragon bones	159
 9194	Onyx bolt tips	193
 7489	Brown spice (3)	1
 21564	Unidentified medium fossil	2
@@ -582,16 +586,16 @@ Item id	Item name	Item quantity
 25766	Fiendish ashes	1
 25775	Abyssal ashes	18
 11940	Dark fishing bait	280
-5075	Bird nest	37
-1931	Pot	244
-13496	Ensouled bloodveld head	22
+5075	Bird nest	96
+1931	Pot	296
+13496	Ensouled bloodveld head	43
 44	Rune arrowtips	61
 11849	Mark of grace	40
 13475	Ensouled giant head	13
 776	Goldsmith gauntlets	1
 13508	Ensouled abyssal head	18
 7485	Orange spice (3)	1
-9381	Runite bolts (unf)	240
+9381	Runite bolts (unf)	360
 27012	Double ammo mould	1
 12014	Prospector jacket	1
 12015	Prospector legs	1
@@ -603,11 +607,11 @@ Item id	Item name	Item quantity
 1511	Logs	10
 29177	Sunlight antelope fur	54
 12019	Coal bag	1
-569	Fire orb	56
+569	Fire orb	216
 13502	Ensouled demon head	4
 13493	Ensouled dagannoth head	6
 26842	Abyssal lantern (yew logs)	1
-26997	Ensouled hellhound head	1
+26997	Ensouled hellhound head	11
 28613	Cape pouch	1
 28146	Log brace	1
 294	Glarial's pebble	2
@@ -687,13 +691,13 @@ Item id	Item name	Item quantity
 10033	Chinchompa	51
 869	Black knife	776
 809	Mithril dart	1345
-868	Rune knife	296
+868	Rune knife	312
 817	Rune dart(p)	37
 9144	Runite bolts	4673
 4158	Leaf-bladed spear	1
 9419	Mith grapple	4
 21646	Granite longsword	1
-867	Adamant knife	135
+867	Adamant knife	147
 5558	Rogue kit	3
 233	Pestle and mortar	4
 22114	Mythical cape	1
@@ -753,7 +757,7 @@ Item id	Item name	Item quantity
 2415	Saradomin staff	1
 2416	Guthix staff	1
 2417	Zamorak staff	1
-952	Spade	5
+952	Spade	6
 946	Knife	5
 303	Small fishing net	1
 1592	Ring mould	1
@@ -765,9 +769,9 @@ Item id	Item name	Item quantity
 1597	Necklace mould	1
 5523	Tiara mould	1
 1733	Needle	4
-314	Feather	18404
+314	Feather	19634
 313	Fishing bait	884
-10012	Butterfly jar	46
+10012	Butterfly jar	67
 10006	Bird snare	3
 10010	Butterfly net	4
 4	Ammo mould	1
@@ -829,8 +833,8 @@ Item id	Item name	Item quantity
 31754	Swamp cruiser's shoes	1
 7432	Fungicide	8
 7425	Fungicide spray 6	1
-7114	Pirate boots	34
-22231	Dragon boots ornament kit	1
+7114	Pirate boots	39
+22231	Dragon boots ornament kit	2
 23514	Tattered temple page	1
 23510	Tattered moon page	2
 686	Rusty sword	12
@@ -851,7 +855,7 @@ Item id	Item name	Item quantity
 4109	Mystic hat (light)	5
 10294	Rune helm (h5)	1
 3057	Mime mask	1
-1724	Unholy symbol	10
+1724	Unholy symbol	15
 12514	Explorer backpack	1
 6800	Giant champion scroll	1
 7594	Zombie mask	1
@@ -898,7 +902,7 @@ Item id	Item name	Item quantity
 1177	Steel sq shield	1
 1131	Hardleather body	2
 1019	Black cape	1
-1359	Rune axe	56
+1359	Rune axe	59
 1267	Iron pickaxe	2
 1269	Steel pickaxe	3
 1317	Adamant 2h sword	8
@@ -909,7 +913,7 @@ Item id	Item name	Item quantity
 1201	Rune kiteshield	36
 1303	Rune longsword	38
 1121	Mithril platebody	21
-3053	Lava battlestaff	3
+3053	Lava battlestaff	4
 1345	Adamant warhammer	2
 1073	Adamant platelegs	8
 1099	Green d'hide chaps	2
@@ -939,7 +943,7 @@ Item id	Item name	Item quantity
 4745	Torag's helm	1
 1833	Desert shirt	1
 2491	Black d'hide vambraces	6
-2503	Black d'hide body	27
+2503	Black d'hide body	29
 4928	Karil's coif 100	1
 6739	Dragon axe	1
 1353	Steel axe	2
@@ -952,7 +956,7 @@ Item id	Item name	Item quantity
 4131	Rune boots	5
 11140	Karamja gloves 3	1
 1656	Sapphire necklace	1
-1645	Dragonstone ring	20
+1645	Dragonstone ring	22
 4129	Adamant boots	1
 1249	Dragon spear	2
 1071	Mithril platelegs	1
@@ -967,17 +971,18 @@ Item id	Item name	Item quantity
 1361	Black axe	3
 12610	Book of law	1
 12275	Bandos crozier	1
-3202	Rune halberd	7
+1149	Dragon med helm	1
+3202	Rune halberd	9
 1093	Rune plateskirt	245
-1127	Rune platebody	238
+1127	Rune platebody	239
 1079	Rune platelegs	185
-1163	Rune full helm	399
-1275	Rune pickaxe	144
+1163	Rune full helm	402
+1275	Rune pickaxe	148
 3204	Dragon halberd	6
 830	Rune javelin	3236
 4710	Ahrim's staff	1
 1365	Steel battleaxe	62
-1113	Rune chainbody	205
+1113	Rune chainbody	208
 1395	Water battlestaff	1454
 1405	Mystic air staff	33
 829	Adamant javelin	140
@@ -993,7 +998,7 @@ Item id	Item name	Item quantity
 1185	Rune sq shield	91
 1399	Earth battlestaff	9
 1215	Dragon dagger	7
-1319	Rune 2h sword	9
+1319	Rune 2h sword	10
 1301	Adamant longsword	2
 857	Yew shortbow	2
 1333	Rune scimitar	3
@@ -1009,10 +1014,10 @@ Item id	Item name	Item quantity
 29580	Tormented synapse	6
 31973	Mahogany repair kit	150
 31970	Teak repair kit	133
-31910	Mithril cannonball	837
-31912	Adamant cannonball	2755
-31914	Rune cannonball	2682
-31916	Dragon cannonball	316
+31910	Mithril cannonball	879
+31912	Adamant cannonball	3630
+31914	Rune cannonball	2839
+31916	Dragon cannonball	351
 31475	Bolt of canvas	69
 1775	Molten glass	332
 31472	Bolt of linen	2
@@ -1060,7 +1065,7 @@ Item id	Item name	Item quantity
 31733	Barrel stand	1
 31406	Dragon nails	68
 31996	Dragon metal sheet	9
-31235	Gryphon feather	5020
+31235	Gryphon feather	6650
 5525	Tiara	751
 1993	Jug of wine	711
 31756	Serrated key	1
@@ -1068,25 +1073,29 @@ Item id	Item name	Item quantity
 32386	Medallion of the deep	1
 1785	Glassblowing pipe	1
 32869	Mouldy doll	2
-995	Coins	20077559
+995	Coins	21742422
 20663	Rocky	1
 20693	Phoenix	1
 6560	Wily cat	1
 7581	Overgrown hellcat	1
 30107	Loop half of key	4
 6970	Pyramid top	1
-989	Crystal key	29
+989	Crystal key	33
 19586	Light frame	1
 32422	Lockbox directions (anglers' retreat)	1
-987	Loop half of key	3
 26362	Frozen key piece (zamorak)	1
-13233	Smouldering stone	1
+13233	Smouldering stone	2
 12004	Kraken tentacle	2
 24361	Scroll box (beginner)	5
 24366	Scroll box (master)	1
 19835	Clue scroll (master)	1
 24364	Scroll box (hard)	4
-24363	Scroll box (medium)	1
+24363	Scroll box (medium)	2
 19685	Dark totem	2
-24365	Scroll box (elite)	1
+24365	Scroll box (elite)	3
 29784	Araxyte venom sack	231
+29107	Raw dashing kebbit	44
+19679	Dark totem base	1
+19681	Dark totem middle	1
+5319	Onion seed	1511
+12007	Jar of dirt	1
