@@ -1814,6 +1814,7 @@
                         <input type="number" class="drops-add-input" id="newDropKc" placeholder="Kill Count">
                         <input type="text" class="drops-add-input" id="newDropItem" placeholder="Item Name">
                         <input type="text" class="drops-add-input" id="newDropDate" placeholder="Date (M/D/YYYY)">
+                        <input type="number" class="drops-add-input" id="newDropRate" placeholder="Drop Rate (e.g. 512)">
                         <button class="drops-add-btn" id="addDropBtn">Add Drop</button>
                     </div>
                     <div class="drops-yaml-output" id="dropsYamlOutput" style="display:none;">
@@ -1884,6 +1885,7 @@
             const kc = document.getElementById('newDropKc').value.trim();
             const item = document.getElementById('newDropItem').value.trim();
             const date = document.getElementById('newDropDate').value.trim();
+            const droprate = document.getElementById('newDropRate').value.trim();
 
             if (!boss || !kc || !item) {
                 alert('Please fill in Boss, KC, and Item');
@@ -1891,14 +1893,19 @@
             }
 
             const newDrop = { boss, kc: parseInt(kc), item, date };
+            if (droprate) newDrop.droprate = parseInt(droprate);
             pendingDrops.push(newDrop);
 
             // Generate YAML
-            const yamlLines = pendingDrops.map(d => `
+            const yamlLines = pendingDrops.map(d => {
+                let yaml = `
   - boss: ${d.boss}
     kc: ${d.kc}
     item: ${d.item}
-    date: ${d.date}`).join('\n');
+    date: ${d.date}`;
+                if (d.droprate) yaml += `\n    droprate: ${d.droprate}`;
+                return yaml;
+            }).join('\n');
 
             document.getElementById('dropsYamlText').value = `# Add to data/drops.yaml:\n${yamlLines}`;
             document.getElementById('dropsYamlOutput').style.display = 'block';
@@ -1908,6 +1915,7 @@
             document.getElementById('newDropKc').value = '';
             document.getElementById('newDropItem').value = '';
             document.getElementById('newDropDate').value = '';
+            document.getElementById('newDropRate').value = '';
 
             // Add to displayed data temporarily
             dropsData.push(newDrop);
