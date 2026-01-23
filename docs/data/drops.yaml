@@ -497,6 +497,12 @@ drops:
     droprate: 400
 
   - boss: Kraken
+    kc: 725
+    item: Trident of the seas
+    date: 1/9/2026
+    droprate: 512
+
+  - boss: Kraken
     kc: 1106
     item: Kraken tentacle
     date: 1/14/2026
@@ -535,6 +541,12 @@ drops:
     item: Jar of dirt
     date: 1/18/2026
     droprate: 1000
+
+# Elle - unknown kc
+  - boss: Kraken
+    kc: 1500
+    item: Trident of the seas
+    date: 1/18/2026
 
   - boss: Armoured zombie
     kc: 796
