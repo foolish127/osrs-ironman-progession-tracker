@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-01-26T12:52:11.906239+00:00",
+  "updated": "2026-01-26T18:38:14.273047+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -829,6 +829,11 @@
       "Medium Treasure Trails": {
         "obtained": [
           {
+            "name": "Spiked manacles",
+            "date": "2026-01-26 16:54:44",
+            "quantity": 1
+          },
+          {
             "name": "Adamant full helm (t)",
             "date": "2025-11-12",
             "quantity": 2
@@ -899,6 +904,11 @@
             "quantity": 1
           },
           {
+            "name": "Green headband",
+            "date": "2026-01-26 16:54:44",
+            "quantity": 1
+          },
+          {
             "name": "Lovakengj banner",
             "date": "2025-09-19",
             "quantity": 1
@@ -915,8 +925,8 @@
           }
         ],
         "missing": [],
-        "obtained_count": 17,
-        "total_count": 17
+        "obtained_count": 19,
+        "total_count": 19
       },
       "Hard Treasure Trails": {
         "obtained": [
@@ -1215,6 +1225,11 @@
             "quantity": 2
           },
           {
+            "name": "Ancient page 1",
+            "date": "2026-01-26 16:49:02",
+            "quantity": 1
+          },
+          {
             "name": "Saradomin page 2",
             "date": "2025-12-20",
             "quantity": 1
@@ -1416,8 +1431,8 @@
           }
         ],
         "missing": [],
-        "obtained_count": 44,
-        "total_count": 44
+        "obtained_count": 45,
+        "total_count": 45
       },
       "Scroll Cases": {
         "obtained": [
@@ -2874,9 +2889,24 @@
         "total_count": 20
       }
     },
-    "total_obtained": 440,
+    "total_obtained": 443,
     "total_items": 1692,
     "recent_items": [
+      {
+        "name": "Spiked manacles",
+        "date": "2026-01-26 16:54:44",
+        "collection": "medium_treasure_trails"
+      },
+      {
+        "name": "Green headband",
+        "date": "2026-01-26 16:54:44",
+        "collection": "medium_treasure_trails"
+      },
+      {
+        "name": "Ancient page 1",
+        "date": "2026-01-26 16:49:02",
+        "collection": "shared_treasure_trail_rewards"
+      },
       {
         "name": "Peaceful blessing",
         "date": "2026-01-22 18:49:06",
@@ -2961,21 +2991,6 @@
         "name": "Rune platelegs (g)",
         "date": "2026-01-12",
         "collection": "hard_treasure_trails"
-      },
-      {
-        "name": "Armadyl d'hide body",
-        "date": "2026-01-12",
-        "collection": "hard_treasure_trails"
-      },
-      {
-        "name": "Armadyl page 1",
-        "date": "2026-01-12",
-        "collection": "shared_treasure_trail_rewards"
-      },
-      {
-        "name": "Coal bag",
-        "date": "2026-01-12",
-        "collection": "motherlode_mine"
       }
     ],
     "source": "templeosrs"
