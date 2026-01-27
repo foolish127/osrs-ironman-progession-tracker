@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-01-24T20:46:03.483535+00:00",
+  "updated": "2026-01-27T12:54:05.306080+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -49,7 +49,7 @@
           {
             "name": "Araxyte venom sack",
             "date": "2026-01-16",
-            "quantity": 335
+            "quantity": 702
           }
         ],
         "missing": [],
@@ -318,7 +318,7 @@
           {
             "name": "Kronos seed",
             "date": "2025-08-11",
-            "quantity": 49
+            "quantity": 51
           },
           {
             "name": "Attas seed",
@@ -829,6 +829,11 @@
       "Medium Treasure Trails": {
         "obtained": [
           {
+            "name": "Spiked manacles",
+            "date": "2026-01-26 16:54:44",
+            "quantity": 1
+          },
+          {
             "name": "Adamant full helm (t)",
             "date": "2025-11-12",
             "quantity": 2
@@ -899,6 +904,11 @@
             "quantity": 1
           },
           {
+            "name": "Green headband",
+            "date": "2026-01-26 16:54:44",
+            "quantity": 1
+          },
+          {
             "name": "Lovakengj banner",
             "date": "2025-09-19",
             "quantity": 1
@@ -915,8 +925,8 @@
           }
         ],
         "missing": [],
-        "obtained_count": 17,
-        "total_count": 17
+        "obtained_count": 19,
+        "total_count": 19
       },
       "Hard Treasure Trails": {
         "obtained": [
@@ -1215,6 +1225,11 @@
             "quantity": 2
           },
           {
+            "name": "Ancient page 1",
+            "date": "2026-01-26 16:49:02",
+            "quantity": 1
+          },
+          {
             "name": "Saradomin page 2",
             "date": "2025-12-20",
             "quantity": 1
@@ -1327,7 +1342,7 @@
           {
             "name": "Mos le'harmless teleport",
             "date": "2025-09-03",
-            "quantity": 34
+            "quantity": 46
           },
           {
             "name": "Mort'ton teleport",
@@ -1392,7 +1407,7 @@
           {
             "name": "Blue firelighter",
             "date": "2025-10-09",
-            "quantity": 29
+            "quantity": 38
           },
           {
             "name": "Purple firelighter",
@@ -1412,12 +1427,12 @@
           {
             "name": "Purple sweets",
             "date": "2025-07-24 18:47:10",
-            "quantity": 740
+            "quantity": 752
           }
         ],
         "missing": [],
-        "obtained_count": 44,
-        "total_count": 44
+        "obtained_count": 45,
+        "total_count": 45
       },
       "Scroll Cases": {
         "obtained": [
@@ -2073,7 +2088,7 @@
           {
             "name": "Sturdy beehive parts",
             "date": "2025-10-31",
-            "quantity": 83
+            "quantity": 90
           }
         ],
         "missing": [],
@@ -2692,7 +2707,7 @@
           {
             "name": "Mystic hat (light)",
             "date": "2025-12-31",
-            "quantity": 6
+            "quantity": 7
           },
           {
             "name": "Mystic robe top (light)",
@@ -2717,7 +2732,7 @@
           {
             "name": "Aquanite tendon",
             "date": "2025-12-06",
-            "quantity": 1
+            "quantity": 2
           },
           {
             "name": "Pendant of ates (inert)",
@@ -2781,7 +2796,7 @@
           {
             "name": "Long bone",
             "date": "2025-07-25",
-            "quantity": 21
+            "quantity": 22
           },
           {
             "name": "Curved bone",
@@ -2816,7 +2831,7 @@
           {
             "name": "Dragon spear",
             "date": "2025-08-30",
-            "quantity": 4
+            "quantity": 5
           },
           {
             "name": "Right skull half",
@@ -2851,7 +2866,7 @@
           {
             "name": "Hespori seed",
             "date": "2025-07-21",
-            "quantity": 214
+            "quantity": 215
           },
           {
             "name": "Fresh crab claw",
@@ -2874,9 +2889,24 @@
         "total_count": 20
       }
     },
-    "total_obtained": 440,
+    "total_obtained": 443,
     "total_items": 1692,
     "recent_items": [
+      {
+        "name": "Spiked manacles",
+        "date": "2026-01-26 16:54:44",
+        "collection": "medium_treasure_trails"
+      },
+      {
+        "name": "Green headband",
+        "date": "2026-01-26 16:54:44",
+        "collection": "medium_treasure_trails"
+      },
+      {
+        "name": "Ancient page 1",
+        "date": "2026-01-26 16:49:02",
+        "collection": "shared_treasure_trail_rewards"
+      },
       {
         "name": "Peaceful blessing",
         "date": "2026-01-22 18:49:06",
@@ -2961,21 +2991,6 @@
         "name": "Rune platelegs (g)",
         "date": "2026-01-12",
         "collection": "hard_treasure_trails"
-      },
-      {
-        "name": "Armadyl d'hide body",
-        "date": "2026-01-12",
-        "collection": "hard_treasure_trails"
-      },
-      {
-        "name": "Armadyl page 1",
-        "date": "2026-01-12",
-        "collection": "shared_treasure_trail_rewards"
-      },
-      {
-        "name": "Coal bag",
-        "date": "2026-01-12",
-        "collection": "motherlode_mine"
       }
     ],
     "source": "templeosrs"
