@@ -639,7 +639,7 @@
                         if (typeof item === 'string' && item.includes('|')) {
                             const [name, date] = item.split('|').map(s => s.trim());
                             if (date) {
-                                recentItems.push({ name, date, source: category });
+                                recentItems.push({ name, date, collection: category });
                                 return { name, date };
                             }
                             return { name };
@@ -681,12 +681,115 @@
             }
         }
 
+        // TempleOSRS API integration
+        const TEMPLE_PLAYER = 'Foolinslays';
+        let templeItemsMap = null;
+        let templeCategoriesMap = null;
+
+        async function loadTempleMetadata() {
+            try {
+                const [itemsRes, catsRes] = await Promise.all([
+                    fetch('https://templeosrs.com/api/collection-log/items.php').then(r => r.json()).catch(() => null),
+                    fetch('https://templeosrs.com/api/collection-log/categories.php').then(r => r.json()).catch(() => null)
+                ]);
+                templeItemsMap = itemsRes?.data || null;
+                templeCategoriesMap = catsRes?.data || null;
+                return templeItemsMap && templeCategoriesMap;
+            } catch (e) {
+                console.log('TempleOSRS metadata failed:', e);
+                return false;
+            }
+        }
+
+        async function loadTempleCollectionLog() {
+            try {
+                // First load metadata maps
+                const metaLoaded = await loadTempleMetadata();
+                if (!metaLoaded) return null;
+
+                // Fetch player data and recent items
+                const [playerRes, recentRes] = await Promise.all([
+                    fetch(`https://templeosrs.com/api/collection-log/player_collection_log.php?player=${TEMPLE_PLAYER}&categories=all`).then(r => r.json()).catch(() => null),
+                    fetch(`https://templeosrs.com/api/collection-log/player_recent_items.php?player=${TEMPLE_PLAYER}`).then(r => r.json()).catch(() => null)
+                ]);
+
+                if (!playerRes?.data) return null;
+
+                const collections = {};
+                let totalObtained = 0;
+                let totalItems = 0;
+
+                // Build collections from Temple data
+                for (const [catKey, catData] of Object.entries(templeCategoriesMap)) {
+                    const catName = catData.name || catKey;
+                    const catItemIds = catData.items || [];
+                    const playerCatData = playerRes.data[catKey];
+                    const obtainedIds = playerCatData?.items ? Object.keys(playerCatData.items).map(Number) : [];
+
+                    const obtained = [];
+                    const missing = [];
+
+                    for (const itemId of catItemIds) {
+                        const itemName = templeItemsMap[itemId]?.name || `Item ${itemId}`;
+                        if (obtainedIds.includes(itemId)) {
+                            const itemData = playerCatData.items[itemId];
+                            obtained.push({
+                                name: itemName,
+                                date: itemData?.date || null,
+                                quantity: itemData?.quantity || 1
+                            });
+                        } else {
+                            missing.push(itemName);
+                        }
+                    }
+
+                    if (catItemIds.length > 0) {
+                        collections[catName] = {
+                            obtained,
+                            missing,
+                            obtained_count: obtained.length,
+                            total_count: catItemIds.length
+                        };
+                        totalObtained += obtained.length;
+                        totalItems += catItemIds.length;
+                    }
+                }
+
+                // Build recent items from recentRes
+                const recentItems = [];
+                if (recentRes?.data) {
+                    for (const item of recentRes.data.slice(0, 20)) {
+                        recentItems.push({
+                            name: templeItemsMap[item.item_id]?.name || `Item ${item.item_id}`,
+                            date: item.date,
+                            collection: templeCategoriesMap[item.category]?.name || item.category
+                        });
+                    }
+                }
+
+                console.log(`Loaded from TempleOSRS: ${totalObtained}/${totalItems} items`);
+
+                return {
+                    collection_log: {
+                        total_obtained: totalObtained,
+                        total_items: totalItems,
+                        recent_items: recentItems,
+                        collections,
+                        source: 'templeosrs'
+                    }
+                };
+            } catch (e) {
+                console.log('TempleOSRS API failed:', e);
+                return null;
+            }
+        }
+
         async function loadData() {
             const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, goalsRes, diariesRes, bankRes, dropsRes, boatyGuideRes, boatyProgressRes] = await Promise.all([
                 fetch('./data/skills.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/bosses.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/clues.json').then(r=>r.json()).catch(()=>null),
-                fetch('./data/collection_log.yaml').then(r=>r.text()).catch(()=>null),
+                fetch('./data/collection_log.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/combat_achievements.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/pets.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/quests.json').then(r=>r.json()).catch(()=>null),
@@ -711,12 +814,21 @@
                 document.getElementById('count99s').textContent = `${m.skills_99||0}/${m.num_skills||24}`;
             }
 
-            if (clogRes) {
-                const clogParsed = parseCollectionLogYaml(clogRes);
-                if (clogParsed?.collection_log) {
-                    clogData = clogParsed.collection_log;
+            if (clogRes?.collection_log) {
+                clogData = clogRes.collection_log;
+                document.getElementById('clogCount').textContent = `${clogData.total_obtained}/${clogData.total_items}`;
+            }
+
+            // Try TempleOSRS API (will override YAML data if successful)
+            try {
+                const templeData = await loadTempleCollectionLog();
+                if (templeData?.collection_log) {
+                    clogData = templeData.collection_log;
                     document.getElementById('clogCount').textContent = `${clogData.total_obtained}/${clogData.total_items}`;
+                    console.log('Using TempleOSRS data');
                 }
+            } catch (e) {
+                console.log('TempleOSRS failed, using YAML fallback');
             }
 
             if (caRes?.combat_achievements) {
@@ -877,8 +989,8 @@
             
             container.innerHTML = html;
             
-            document.getElementById('clogSearch').addEventListener('input', e => renderCollectionLog(e.target.value, document.getElementById('clogFilter').value));
-            document.getElementById('clogFilter').addEventListener('change', e => renderCollectionLog(document.getElementById('clogSearch').value, e.target.value));
+            document.getElementById('clogSearch').addEventListener('input', e => renderClogList(e.target.value, document.getElementById('clogFilter').value));
+            document.getElementById('clogFilter').addEventListener('change', e => renderClogList(document.getElementById('clogSearch').value, e.target.value));
             
             renderClogList(searchTerm, statusFilter);
         }
