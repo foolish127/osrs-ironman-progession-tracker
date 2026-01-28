@@ -104,6 +104,17 @@ def parse_yaml_with_dates(content):
     
     return result
 
+def load_yaml_collection_log():
+    """Load the full collection log from YAML including missing items"""
+    yaml_path = DATA_DIR / "collection_log.yaml"
+    if not yaml_path.exists():
+        return {}
+    
+    with open(yaml_path, 'r') as f:
+        content = f.read()
+    
+    return parse_yaml_with_dates(content)
+
 def load_manual_dates():
     """Load manually-entered dates from collection_log.yaml"""
     yaml_path = DATA_DIR / "collection_log.yaml"
@@ -144,25 +155,33 @@ def fetch_temple_collection_log(rsn):
 
 def load_collection_log():
     """
-    Load collection log from TempleOSRS API, preserving manual dates.
+    Load collection log from TempleOSRS API, preserving manual dates AND missing items from YAML.
     Falls back to YAML if API fails.
     """
-    # Load manual dates first
-    manual_dates = load_manual_dates()
-    print(f"Loaded {len(manual_dates)} manual dates from YAML")
+    # Load full YAML data (for manual dates AND missing items)
+    yaml_data = load_yaml_collection_log()
+    print(f"Loaded {len(yaml_data)} categories from YAML")
+    
+    # Build manual dates lookup
+    manual_dates = {}
+    for collection_name, items in yaml_data.items():
+        for item in items.get('obtained', []):
+            if item.get('date'):
+                manual_dates[item['name'].lower()] = item['date']
+    print(f"Loaded {len(manual_dates)} manual dates")
     
     # Try TempleOSRS API
     temple_data = fetch_temple_collection_log(RSN)
     
     if temple_data and 'data' in temple_data:
-        print("Using TempleOSRS API data")
-        return process_temple_clog(temple_data, manual_dates)
+        print("Using TempleOSRS API data (merged with YAML missing items)")
+        return process_temple_clog(temple_data, manual_dates, yaml_data)
     else:
         print("Falling back to YAML collection log")
         return load_collection_log_from_yaml()
 
-def process_temple_clog(temple_data, manual_dates):
-    """Process TempleOSRS collection log data, merging with manual dates"""
+def process_temple_clog(temple_data, manual_dates, yaml_data):
+    """Process TempleOSRS collection log data, merging with manual dates AND missing items from YAML"""
     collections = {}
     total_obtained = 0
     total_items = 0
@@ -180,6 +199,9 @@ def process_temple_clog(temple_data, manual_dates):
     
     # We need item ID to name mapping - fetch from Temple's items endpoint
     item_names = load_item_names()
+    
+    # Build a set of obtained item names from Temple (lowercase for matching)
+    temple_obtained_names = set()
     
     for category_name, category_items in items_data.items():
         obtained = []
@@ -202,6 +224,8 @@ def process_temple_clog(temple_data, manual_dates):
                     'quantity': count
                 })
                 
+                temple_obtained_names.add(item_name.lower())
+                
                 if final_date:
                     recent_items.append({
                         'name': item_name,
@@ -214,11 +238,59 @@ def process_temple_clog(temple_data, manual_dates):
             display_name = category_name.replace('_', ' ').title()
             collections[display_name] = {
                 'obtained': obtained,
-                'missing': [],  # Temple only returns obtained items
+                'missing': [],  # Will be filled from YAML below
                 'obtained_count': len(obtained),
-                'total_count': len(obtained)  # We don't know missing from this endpoint
+                'total_count': len(obtained)  # Will be updated after merging missing
             }
             total_obtained += len(obtained)
+    
+    # Now merge missing items from YAML
+    # We need to match YAML category names to Temple category names
+    yaml_to_temple_map = {}
+    for yaml_cat in yaml_data.keys():
+        # Try exact match first
+        yaml_lower = yaml_cat.lower().replace(' ', '_').replace(',', '')
+        for temple_cat in collections.keys():
+            temple_lower = temple_cat.lower().replace(' ', '_')
+            if yaml_lower == temple_lower or yaml_cat == temple_cat:
+                yaml_to_temple_map[yaml_cat] = temple_cat
+                break
+    
+    # Add missing items from YAML to matching categories
+    missing_added = 0
+    for yaml_cat, yaml_items in yaml_data.items():
+        yaml_missing = yaml_items.get('missing', [])
+        if not yaml_missing:
+            continue
+        
+        # Find matching Temple category or create new one
+        temple_cat = yaml_to_temple_map.get(yaml_cat, yaml_cat)
+        
+        if temple_cat not in collections:
+            collections[temple_cat] = {
+                'obtained': [],
+                'missing': [],
+                'obtained_count': 0,
+                'total_count': 0
+            }
+        
+        # Add missing items that aren't already obtained
+        for item in yaml_missing:
+            item_name = item.get('name', item) if isinstance(item, dict) else item
+            if item_name.lower() not in temple_obtained_names:
+                collections[temple_cat]['missing'].append(item_name)
+                missing_added += 1
+        
+        # Update total_count
+        collections[temple_cat]['total_count'] = (
+            collections[temple_cat]['obtained_count'] + 
+            len(collections[temple_cat]['missing'])
+        )
+    
+    print(f"  Added {missing_added} missing items from YAML")
+    
+    # Recalculate total_items
+    total_items = sum(c['total_count'] for c in collections.values())
     
     # Sort recent items by date
     recent_items.sort(key=lambda x: x.get('date') or '', reverse=True)
@@ -226,7 +298,7 @@ def process_temple_clog(temple_data, manual_dates):
     return {
         'collections': collections,
         'total_obtained': total_from_temple if total_from_temple else total_obtained,
-        'total_items': total_available if total_available else total_obtained,
+        'total_items': total_items,
         'recent_items': recent_items[:20],
         'source': 'templeosrs'
     }
