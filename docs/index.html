@@ -146,6 +146,25 @@
         .recent-item-name { color: var(--accent-green); }
         .recent-item-source { font-size: 0.8rem; color: var(--text-muted); }
         .recent-item-date { font-family: 'Fira Code', monospace; font-size: 0.8rem; color: var(--accent-gold); }
+        /* Collection Log Overview */
+        .clog-overview { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
+        .clog-overview-title { font-family: 'Cinzel', serif; font-size: 1.1rem; color: var(--accent-gold); text-align: center; margin-bottom: 1.25rem; letter-spacing: 0.05em; }
+        .clog-categories { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.75rem; margin-bottom: 1.25rem; }
+        @media (max-width: 768px) { .clog-categories { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 480px) { .clog-categories { grid-template-columns: repeat(2, 1fr); } }
+        .clog-category { background: var(--bg-dark); border: 1px solid var(--border); border-radius: 6px; padding: 0.75rem; text-align: center; }
+        .clog-category-icon { font-size: 1.5rem; margin-bottom: 0.25rem; }
+        .clog-category-name { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
+        .clog-category-count { font-family: 'Fira Code', monospace; font-size: 1rem; color: var(--text-primary); }
+        .clog-category-count .obtained { color: var(--accent-green); }
+        .clog-category-bar { height: 4px; background: var(--border); border-radius: 2px; margin-top: 0.5rem; overflow: hidden; }
+        .clog-category-bar-fill { height: 100%; background: var(--accent-gold); border-radius: 2px; }
+        .clog-total { background: linear-gradient(90deg, var(--accent-green), #22c55e); border-radius: 6px; padding: 0.75rem 1.5rem; text-align: center; margin-bottom: 1.25rem; }
+        .clog-total-text { font-family: 'Fira Code', monospace; font-size: 1.1rem; color: var(--bg-dark); font-weight: 600; }
+        .clog-latest { border-top: 1px solid var(--border); padding-top: 1rem; }
+        .clog-latest-title { font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .clog-latest-items { display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; }
+        .clog-latest-item { background: var(--bg-dark); border: 1px solid var(--border); border-radius: 4px; padding: 0.5rem; font-size: 0.75rem; color: var(--accent-green); max-width: 100px; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
         .kanban-board { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
         @media (max-width: 1000px) { .kanban-board { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 600px) { .kanban-board { grid-template-columns: 1fr; } }
@@ -816,6 +835,7 @@
 
             if (clogRes?.collection_log) {
                 clogData = clogRes.collection_log;
+                clogData.rsn = clogRes.rsn || 'FoolinSlays';
                 document.getElementById('clogCount').textContent = `${clogData.total_obtained}/${clogData.total_items}`;
             }
 
@@ -824,6 +844,7 @@
                 const templeData = await loadTempleCollectionLog();
                 if (templeData?.collection_log) {
                     clogData = templeData.collection_log;
+                    clogData.rsn = templeData.rsn || clogData.rsn || 'FoolinSlays';
                     document.getElementById('clogCount').textContent = `${clogData.total_obtained}/${clogData.total_items}`;
                     console.log('Using TempleOSRS data');
                 }
@@ -950,9 +971,114 @@
                 return;
             }
 
+            // Define category mappings (matching in-game categories)
+            const categoryMappings = {
+                'Bosses': [
+                    'Abyssal Sire', 'Alchemical Hydra', 'Araxxor', 'Barrows Chests', 'Bryophyta',
+                    'Callisto', 'Cerberus', 'Chaos Elemental', 'Chaos Fanatic', 'Commander Zilyana',
+                    'Corporeal Beast', 'Crazy Archaeologist', 'Dagannoth Kings', 'Duke Sucellus',
+                    'General Graardor', 'Giant Mole', 'Grotesque Guardians', 'Hespori', 'Kalphite Queen',
+                    'King Black Dragon', 'Kraken', 'Kree\'arra', 'K\'ril Tsutsaroth', 'Lunar Chests',
+                    'Nex', 'Nightmare', 'Obor', 'Phantom Muspah', 'Sarachnis', 'Scorpia', 'Scurrius',
+                    'Skotizo', 'Sol Heredit', 'Spindel', 'The Hueycoatl', 'The Leviathan', 'The Whisperer',
+                    'Thermonuclear Smoke Devil', 'Vardorvis', 'Venenatis', 'Vet\'ion', 'Vorkath',
+                    'Zulrah', 'Amoxliatl', 'Artio', 'Calvar\'ion', 'Tormented Demons', 'Perilous Moons', 'Yama'
+                ],
+                'Raids': [
+                    'Chambers of Xeric', 'Theatre of Blood', 'Tombs of Amascut', 'Fortis Colosseum',
+                    'The Gauntlet', 'The Inferno', 'The Fight Caves'
+                ],
+                'Clues': [
+                    'Beginner Treasure Trails', 'Easy Treasure Trails', 'Medium Treasure Trails',
+                    'Hard Treasure Trails', 'Elite Treasure Trails', 'Master Treasure Trails',
+                    'Shared Treasure Trail Rewards'
+                ],
+                'Minigames': [
+                    'Barbarian Assault', 'Brimhaven Agility Arena', 'Castle Wars', 'Fishing Trawler',
+                    'Gnome Restaurant', 'Guardians of the Rift', 'Hallowed Sepulchre', 'Last Man Standing',
+                    'Magic Training Arena', 'Mahogany Homes', 'Pest Control', 'Rogues\' Den',
+                    'Shades of Mort\'ton', 'Soul Wars', 'Tempoross', 'Tithe Farm', 'Trouble Brewing',
+                    'Volcanic Mine', 'Wintertodt', 'Colosseum Glory', 'Giants\' Foundry', 'Zalcano'
+                ],
+                'Other': [
+                    'Aerial Fishing', 'All Pets', 'Camdozaal', 'Champion\'s Challenge', 'Chompy Bird Hunting',
+                    'Creature Creation', 'Cyclopes', 'Fossil Island Notes', 'Glough\'s Experiments',
+                    'Monkey Backpacks', 'Motherlode Mine', 'My Notes', 'Random Events', 'Revenants',
+                    'Rooftop Agility', 'Shayzien Armour', 'Shooting Stars', 'Skilling Pets',
+                    'Slayer', 'TzHaar', 'Forestry', 'Hunter Guild', 'Colossal Wyrm Agility',
+                    'Graceful', 'Temple Trekking', 'Barracuda Trials', 'Boat Paints', 'Vale Totems'
+                ]
+            };
+
+            // Calculate category totals
+            function getCategoryStats() {
+                const stats = {
+                    'Bosses': { obtained: 0, total: 0, icon: '⚔️' },
+                    'Raids': { obtained: 0, total: 0, icon: '🏛️' },
+                    'Clues': { obtained: 0, total: 0, icon: '📜' },
+                    'Minigames': { obtained: 0, total: 0, icon: '🎮' },
+                    'Other': { obtained: 0, total: 0, icon: '📦' }
+                };
+
+                for (const [collName, coll] of Object.entries(clogData.collections)) {
+                    let matched = false;
+                    for (const [catName, patterns] of Object.entries(categoryMappings)) {
+                        // Check if collection name contains any pattern
+                        const matchesPattern = patterns.some(p => 
+                            collName.toLowerCase().includes(p.toLowerCase()) ||
+                            p.toLowerCase().includes(collName.toLowerCase())
+                        );
+                        if (matchesPattern) {
+                            stats[catName].obtained += coll.obtained_count || 0;
+                            stats[catName].total += coll.total_count || 0;
+                            matched = true;
+                            break;
+                        }
+                    }
+                    // Default to Other if no match
+                    if (!matched) {
+                        stats['Other'].obtained += coll.obtained_count || 0;
+                        stats['Other'].total += coll.total_count || 0;
+                    }
+                }
+                return stats;
+            }
+
+            const categoryStats = getCategoryStats();
             const pct = ((clogData.total_obtained / clogData.total_items) * 100).toFixed(1);
             
+            // Build overview HTML
             let html = `
+                <div class="clog-overview">
+                    <div class="clog-overview-title">Collection Log – Overview for ${clogData.rsn || 'FoolinSlays'}</div>
+                    <div class="clog-categories">
+                        ${Object.entries(categoryStats).map(([name, stats]) => {
+                            const catPct = stats.total > 0 ? (stats.obtained / stats.total * 100) : 0;
+                            return `
+                            <div class="clog-category">
+                                <div class="clog-category-icon">${stats.icon}</div>
+                                <div class="clog-category-name">${name}</div>
+                                <div class="clog-category-count"><span class="obtained">${stats.obtained}</span>/${stats.total}</div>
+                                <div class="clog-category-bar"><div class="clog-category-bar-fill" style="width:${catPct}%"></div></div>
+                            </div>`;
+                        }).join('')}
+                    </div>
+                    <div class="clog-total">
+                        <div class="clog-total-text">Collections Logged: ${clogData.total_obtained}/${clogData.total_items}</div>
+                    </div>
+                    ${clogData.recent_items?.length > 0 ? `
+                    <div class="clog-latest">
+                        <div class="clog-latest-title">Latest Collections</div>
+                        <div class="clog-latest-items">
+                            ${clogData.recent_items.slice(0, 10).map(item => `
+                                <div class="clog-latest-item" title="${item.name} - ${item.collection}">${item.name}</div>
+                            `).join('')}
+                        </div>
+                    </div>` : ''}
+                </div>`;
+
+            // Progress section
+            html += `
                 <div class="progress-section">
                     <div class="progress-header">
                         <span class="progress-title">Collection Log Progress</span>
@@ -961,21 +1087,6 @@
                     <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>
                     <div class="progress-percentage">${pct}%</div>
                 </div>`;
-            
-            // Recent activity
-            if (clogData.recent_items?.length > 0) {
-                html += `<div class="recent-activity">
-                    <div class="recent-title">🎉 Recent Drops</div>
-                    <div class="recent-list">
-                        ${clogData.recent_items.slice(0, 5).map(item => `
-                            <div class="recent-item">
-                                <div><span class="recent-item-name">${item.name}</span> <span class="recent-item-source">from ${item.collection}</span></div>
-                                <span class="recent-item-date">${formatShortDate(item.date)}</span>
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>`;
-            }
             
             html += `<div class="search-filter">
                     <input type="text" class="search-input" id="clogSearch" placeholder="Search items or collections..." value="${searchTerm}">
