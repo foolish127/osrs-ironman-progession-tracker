@@ -159,12 +159,16 @@
         .clog-category-count .obtained { color: var(--accent-green); }
         .clog-category-bar { height: 4px; background: var(--border); border-radius: 2px; margin-top: 0.5rem; overflow: hidden; }
         .clog-category-bar-fill { height: 100%; background: var(--accent-gold); border-radius: 2px; }
-        .clog-total { background: linear-gradient(90deg, var(--accent-green), #22c55e); border-radius: 6px; padding: 0.75rem 1.5rem; text-align: center; margin-bottom: 1.25rem; }
-        .clog-total-text { font-family: 'Fira Code', monospace; font-size: 1.1rem; color: var(--bg-dark); font-weight: 600; }
+        .clog-total { background: var(--bg-dark); border: 1px solid var(--border); border-radius: 6px; padding: 0.75rem 1.5rem; margin-bottom: 1.25rem; }
+        .clog-total-bar { height: 28px; background: #4a4a4a; border-radius: 4px; overflow: hidden; position: relative; }
+        .clog-total-bar-fill { height: 100%; background: linear-gradient(90deg, #2d8a3e, #3fb950); border-radius: 4px 0 0 4px; }
+        .clog-total-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'Fira Code', monospace; font-size: 0.95rem; color: #fff; font-weight: 600; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); }
         .clog-latest { border-top: 1px solid var(--border); padding-top: 1rem; }
         .clog-latest-title { font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
         .clog-latest-items { display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; }
-        .clog-latest-item { background: var(--bg-dark); border: 1px solid var(--border); border-radius: 4px; padding: 0.5rem; font-size: 0.75rem; color: var(--accent-green); max-width: 100px; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .clog-latest-item { background: var(--bg-dark); border: 1px solid var(--border); border-radius: 4px; padding: 0.4rem; width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; }
+        .clog-latest-item img { max-width: 32px; max-height: 32px; image-rendering: pixelated; }
+        .clog-latest-item:hover { border-color: var(--accent-gold); }
         .kanban-board { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
         @media (max-width: 1000px) { .kanban-board { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 600px) { .kanban-board { grid-template-columns: 1fr; } }
@@ -974,40 +978,32 @@
             // Define category mappings (matching in-game categories)
             const categoryMappings = {
                 'Bosses': [
-                    'Abyssal Sire', 'Alchemical Hydra', 'Araxxor', 'Barrows Chests', 'Bryophyta',
+                    'Abyssal Sire', 'Alchemical Hydra', 'Araxxor', 'Barrows', 'Bryophyta',
                     'Callisto', 'Cerberus', 'Chaos Elemental', 'Chaos Fanatic', 'Commander Zilyana',
-                    'Corporeal Beast', 'Crazy Archaeologist', 'Dagannoth Kings', 'Duke Sucellus',
+                    'Corporeal Beast', 'Crazy Archaeologist', 'Dagannoth', 'Duke Sucellus',
                     'General Graardor', 'Giant Mole', 'Grotesque Guardians', 'Hespori', 'Kalphite Queen',
-                    'King Black Dragon', 'Kraken', 'Kree\'arra', 'K\'ril Tsutsaroth', 'Lunar Chests',
+                    'King Black Dragon', 'Kraken', 'Kree', 'K\'ril', 'Lunar Chests',
                     'Nex', 'Nightmare', 'Obor', 'Phantom Muspah', 'Sarachnis', 'Scorpia', 'Scurrius',
-                    'Skotizo', 'Sol Heredit', 'Spindel', 'The Hueycoatl', 'The Leviathan', 'The Whisperer',
-                    'Thermonuclear Smoke Devil', 'Vardorvis', 'Venenatis', 'Vet\'ion', 'Vorkath',
-                    'Zulrah', 'Amoxliatl', 'Artio', 'Calvar\'ion', 'Tormented Demons', 'Perilous Moons', 'Yama'
+                    'Skotizo', 'Sol Heredit', 'Spindel', 'Hueycoatl', 'Leviathan', 'Whisperer',
+                    'Thermonuclear', 'Smoke Devil', 'Vardorvis', 'Venenatis', 'Vet\'ion', 'Vorkath',
+                    'Zulrah', 'Amoxliatl', 'Artio', 'Calvar', 'Tormented Demons', 'Perilous Moons', 'Yama',
+                    'Gauntlet', 'Inferno', 'Fight Caves', 'Colosseum', 'Fortis'
                 ],
                 'Raids': [
-                    'Chambers of Xeric', 'Theatre of Blood', 'Tombs of Amascut', 'Fortis Colosseum',
-                    'The Gauntlet', 'The Inferno', 'The Fight Caves'
+                    'Chambers of Xeric', 'Theatre of Blood', 'Tombs of Amascut'
                 ],
                 'Clues': [
-                    'Beginner Treasure Trails', 'Easy Treasure Trails', 'Medium Treasure Trails',
-                    'Hard Treasure Trails', 'Elite Treasure Trails', 'Master Treasure Trails',
-                    'Shared Treasure Trail Rewards'
+                    'Treasure Trails', 'Beginner Clue', 'Easy Clue', 'Medium Clue',
+                    'Hard Clue', 'Elite Clue', 'Master Clue', 'Shared Clue', 'Shared Treasure'
                 ],
                 'Minigames': [
-                    'Barbarian Assault', 'Brimhaven Agility Arena', 'Castle Wars', 'Fishing Trawler',
+                    'Barbarian Assault', 'Brimhaven Agility', 'Castle Wars', 'Fishing Trawler',
                     'Gnome Restaurant', 'Guardians of the Rift', 'Hallowed Sepulchre', 'Last Man Standing',
-                    'Magic Training Arena', 'Mahogany Homes', 'Pest Control', 'Rogues\' Den',
-                    'Shades of Mort\'ton', 'Soul Wars', 'Tempoross', 'Tithe Farm', 'Trouble Brewing',
-                    'Volcanic Mine', 'Wintertodt', 'Colosseum Glory', 'Giants\' Foundry', 'Zalcano'
+                    'Magic Training Arena', 'Mahogany Homes', 'Pest Control', 'Rogues',
+                    'Shades of Mort', 'Soul Wars', 'Tempoross', 'Tithe Farm', 'Trouble Brewing',
+                    'Volcanic Mine', 'Wintertodt', 'Giants\' Foundry', 'Zalcano', 'Mage Arena'
                 ],
-                'Other': [
-                    'Aerial Fishing', 'All Pets', 'Camdozaal', 'Champion\'s Challenge', 'Chompy Bird Hunting',
-                    'Creature Creation', 'Cyclopes', 'Fossil Island Notes', 'Glough\'s Experiments',
-                    'Monkey Backpacks', 'Motherlode Mine', 'My Notes', 'Random Events', 'Revenants',
-                    'Rooftop Agility', 'Shayzien Armour', 'Shooting Stars', 'Skilling Pets',
-                    'Slayer', 'TzHaar', 'Forestry', 'Hunter Guild', 'Colossal Wyrm Agility',
-                    'Graceful', 'Temple Trekking', 'Barracuda Trials', 'Boat Paints', 'Vale Totems'
-                ]
+                'Other': [] // Everything else goes here
             };
 
             // Calculate category totals
@@ -1022,12 +1018,14 @@
 
                 for (const [collName, coll] of Object.entries(clogData.collections)) {
                     let matched = false;
+                    const collNameLower = collName.toLowerCase();
+                    
+                    // Check each category (except Other which is the default)
                     for (const [catName, patterns] of Object.entries(categoryMappings)) {
+                        if (catName === 'Other') continue; // Skip Other, it's the default
+                        
                         // Check if collection name contains any pattern
-                        const matchesPattern = patterns.some(p => 
-                            collName.toLowerCase().includes(p.toLowerCase()) ||
-                            p.toLowerCase().includes(collName.toLowerCase())
-                        );
+                        const matchesPattern = patterns.some(p => collNameLower.includes(p.toLowerCase()));
                         if (matchesPattern) {
                             stats[catName].obtained += coll.obtained_count || 0;
                             stats[catName].total += coll.total_count || 0;
@@ -1047,6 +1045,13 @@
             const categoryStats = getCategoryStats();
             const pct = ((clogData.total_obtained / clogData.total_items) * 100).toFixed(1);
             
+            // Helper to get wiki image URL
+            function getItemImageUrl(itemName) {
+                // Use wiki's standard image naming convention
+                const formatted = encodeURIComponent(itemName.replace(/ /g, '_'));
+                return `https://oldschool.runescape.wiki/images/${formatted}.png`;
+            }
+            
             // Build overview HTML
             let html = `
                 <div class="clog-overview">
@@ -1064,15 +1069,22 @@
                         }).join('')}
                     </div>
                     <div class="clog-total">
-                        <div class="clog-total-text">Collections Logged: ${clogData.total_obtained}/${clogData.total_items}</div>
+                        <div class="clog-total-bar">
+                            <div class="clog-total-bar-fill" style="width:${pct}%"></div>
+                            <div class="clog-total-text">Collections Logged: ${clogData.total_obtained}/${clogData.total_items}</div>
+                        </div>
                     </div>
                     ${clogData.recent_items?.length > 0 ? `
                     <div class="clog-latest">
                         <div class="clog-latest-title">Latest Collections</div>
                         <div class="clog-latest-items">
-                            ${clogData.recent_items.slice(0, 10).map(item => `
-                                <div class="clog-latest-item" title="${item.name} - ${item.collection}">${item.name}</div>
-                            `).join('')}
+                            ${clogData.recent_items.slice(0, 10).map(item => {
+                                const safeChar = item.name.charAt(0).replace(/'/g, '');
+                                return `
+                                <div class="clog-latest-item" title="${item.name.replace(/"/g, '&quot;')} - ${(item.collection || '').replace(/"/g, '&quot;')}">
+                                    <img src="${getItemImageUrl(item.name)}" alt="${item.name.replace(/"/g, '&quot;')}" onerror="this.style.display='none'; this.parentElement.innerHTML='${safeChar}';">
+                                </div>`;
+                            }).join('')}
                         </div>
                     </div>` : ''}
                 </div>`;
