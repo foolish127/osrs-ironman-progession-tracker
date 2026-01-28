@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
     <style>
         :root {
             --bg-dark: #0d1117;
@@ -618,12 +619,74 @@
         let boatyFilter = 'all';
         let boatyEpisodeFilter = 'all';
 
+        // Parse collection_log.yaml into the expected JSON structure
+        function parseCollectionLogYaml(yamlText) {
+            try {
+                const data = jsyaml.load(yamlText);
+                const collections = {};
+                let totalObtained = 0;
+                let totalItems = 0;
+                const recentItems = [];
+
+                for (const [category, content] of Object.entries(data)) {
+                    if (!content || typeof content !== 'object') continue;
+
+                    const obtainedRaw = content.obtained || [];
+                    const missingRaw = content.missing || [];
+
+                    // Parse obtained items
+                    const obtained = obtainedRaw.map(item => {
+                        if (typeof item === 'string' && item.includes('|')) {
+                            const [name, date] = item.split('|').map(s => s.trim());
+                            if (date) {
+                                recentItems.push({ name, date, source: category });
+                                return { name, date };
+                            }
+                            return { name };
+                        }
+                        return { name: String(item).trim() };
+                    });
+
+                    // Parse missing items
+                    const missing = missingRaw.map(item => String(item).trim());
+
+                    const obtainedCount = obtained.length;
+                    const missingCount = missing.length;
+
+                    collections[category] = {
+                        obtained,
+                        missing,
+                        obtained_count: obtainedCount,
+                        total_count: obtainedCount + missingCount
+                    };
+
+                    totalObtained += obtainedCount;
+                    totalItems += obtainedCount + missingCount;
+                }
+
+                // Sort recent items by date (newest first)
+                recentItems.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+
+                return {
+                    collection_log: {
+                        total_obtained: totalObtained,
+                        total_items: totalItems,
+                        recent_items: recentItems.slice(0, 20),
+                        collections
+                    }
+                };
+            } catch (e) {
+                console.error('Failed to parse collection_log.yaml:', e);
+                return null;
+            }
+        }
+
         async function loadData() {
             const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, goalsRes, diariesRes, bankRes, dropsRes, boatyGuideRes, boatyProgressRes] = await Promise.all([
                 fetch('./data/skills.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/bosses.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/clues.json').then(r=>r.json()).catch(()=>null),
-                fetch('./data/collection_log.json').then(r=>r.json()).catch(()=>null),
+                fetch('./data/collection_log.yaml').then(r=>r.text()).catch(()=>null),
                 fetch('./data/combat_achievements.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/pets.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/quests.json').then(r=>r.json()).catch(()=>null),
@@ -648,9 +711,12 @@
                 document.getElementById('count99s').textContent = `${m.skills_99||0}/${m.num_skills||24}`;
             }
 
-            if (clogRes?.collection_log) {
-                clogData = clogRes.collection_log;
-                document.getElementById('clogCount').textContent = `${clogData.total_obtained}/${clogData.total_items}`;
+            if (clogRes) {
+                const clogParsed = parseCollectionLogYaml(clogRes);
+                if (clogParsed?.collection_log) {
+                    clogData = clogParsed.collection_log;
+                    document.getElementById('clogCount').textContent = `${clogData.total_obtained}/${clogData.total_items}`;
+                }
             }
 
             if (caRes?.combat_achievements) {
