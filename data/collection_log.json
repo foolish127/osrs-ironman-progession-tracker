@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-01-29T13:00:38.029198+00:00",
+  "updated": "2026-01-29T18:50:48.917483+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -2790,6 +2790,11 @@
             "quantity": 1
           },
           {
+            "name": "Gem bag",
+            "date": "2026-01-29 15:18:33",
+            "quantity": 1
+          },
+          {
             "name": "Prospector helmet",
             "date": "2025-08-27",
             "quantity": 1
@@ -2810,10 +2815,8 @@
             "quantity": 1
           }
         ],
-        "missing": [
-          "Gem bag"
-        ],
-        "obtained_count": 5,
+        "missing": [],
+        "obtained_count": 6,
         "total_count": 6
       },
       "Random Events": {
@@ -5081,9 +5084,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 452,
+    "total_obtained": 453,
     "total_items": 1718,
     "recent_items": [
+      {
+        "name": "Gem bag",
+        "date": "2026-01-29 15:18:33",
+        "collection": "motherlode_mine"
+      },
       {
         "name": "Horn of plenty (Empty)",
         "date": "2026-01-28 20:15:08",
@@ -5178,11 +5186,6 @@
         "name": "Primordial crystal",
         "date": "2026-01-18 02:04:56",
         "collection": "cerberus"
-      },
-      {
-        "name": "Araxyte venom sack",
-        "date": "2026-01-16",
-        "collection": "araxxor"
       }
     ],
     "source": "templeosrs"
