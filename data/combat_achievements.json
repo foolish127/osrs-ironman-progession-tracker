@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-02-01T12:53:09.651732+00:00",
+  "updated": "2026-02-01T15:28:23.529970+00:00",
   "combat_achievements": {
     "tiers": {
       "Easy": {
@@ -388,6 +388,10 @@
       "Hard": {
         "completed": [
           {
+            "name": "\"Theatre of Blood: SM Adept",
+            "date": "2025-11-12\""
+          },
+          {
             "name": "Abyssal Adept",
             "date": "2025-12-26"
           },
@@ -544,10 +548,6 @@
             "date": "2025-09-04"
           },
           {
-            "name": "\"Theatre of Blood: SM Adept",
-            "date": "2025-11-12\""
-          },
-          {
             "name": "They Grow Up Too Fast",
             "date": "2025-12-26"
           },
@@ -586,6 +586,10 @@
           {
             "name": "Yarr No More",
             "date": "2025-12-17"
+          },
+          {
+            "name": "Zulrah Adept",
+            "date": "2026-02-01"
           }
         ],
         "not_completed": [
@@ -619,13 +623,12 @@
           "The Flincher",
           "Titan Killer",
           "Venenatis Adept",
-          "Who Is the King Now?",
-          "Zulrah Adept"
+          "Who Is the King Now?"
         ],
-        "completed_count": 50,
+        "completed_count": 51,
         "total_count": 82,
         "points_per_task": 3,
-        "points_earned": 150
+        "points_earned": 153
       },
       "Elite": {
         "completed": [
@@ -919,8 +922,8 @@
         "not_completed": [
           "'... ''til Dawn'",
           "A Not So Special Lizard",
-          "A Timely Snack",
           "A siphon will solve this",
+          "A Timely Snack",
           "Alchemical Master",
           "Alchemical Speed-Chaser",
           "Alcleanical Hydra",
@@ -1074,8 +1077,8 @@
           "Working Overtime",
           "Yama Speed-Chaser",
           "Yama Veteran",
-          "You Didn't Say Anything About a Bat",
           "You are not prepared",
+          "You Didn't Say Anything About a Bat",
           "Zulrah Master",
           "Zulrah Speed-Chaser"
         ],
@@ -1222,11 +1225,16 @@
         "points_earned": 12
       }
     },
-    "total_completed": 178,
+    "total_completed": 179,
     "total_tasks": 625,
-    "total_points": 455,
+    "total_points": 458,
     "max_points": 2604,
     "recent_tasks": [
+      {
+        "name": "Zulrah Adept",
+        "date": "2026-02-01",
+        "tier": "Hard"
+      },
       {
         "name": "Cerberus Veteran",
         "date": "2026-01-03",
@@ -1319,11 +1327,6 @@
       },
       {
         "name": "Giant Mole Champion",
-        "date": "2025-12-17",
-        "tier": "Medium"
-      },
-      {
-        "name": "King Black Dragon Champion",
         "date": "2025-12-17",
         "tier": "Medium"
       }
