@@ -1,6 +1,6 @@
 # FoolinSlays Combat Achievements Tracker
-# Format: task name | YYYY-MM-DD
-# Total: 178 / 625 tasks
+# Format: item name | YYYY-MM-DD (date is optional)
+# Last updated: 2026-02-01
 
 Easy:
   completed:
@@ -42,7 +42,7 @@ Easy:
   - The Demonic Punching Bag | 2025-08-01
   - The Walking Volcano | 2025-07-13
   - Wintertodt Novice | 2022-11-26
-  not_completed: null
+  not_completed:
 Medium:
   completed:
   - A Frozen Foe from the Past | 2025-08-30
@@ -103,6 +103,7 @@ Medium:
   - Temotli Triumph
 Hard:
   completed:
+  - "Theatre of Blood: SM Adept | 2025-11-12"
   - Abyssal Adept | 2025-12-26
   - Amoxliatl Adept | 2025-10-14
   - Amoxliatl Speed-Trialist | 2025-10-14
@@ -142,7 +143,6 @@ Hard:
   - Skotizo Adept | 2025-11-27
   - Static Awareness | 2025-10-27
   - The Clone Zone | 2025-09-04
-  - "Theatre of Blood: SM Adept | 2025-11-12"
   - They Grow Up Too Fast | 2025-12-26
   - Totally Shattered | 2025-10-14
   - Unnecessary Optimisation | 2025-12-16
@@ -153,6 +153,7 @@ Hard:
   - Why Cook? | 2025-08-13
   - Why Fletch? | 2025-08-23
   - Yarr No More | 2025-12-17
+  - Zulrah Adept | 2026-02-01
   not_completed:
   - Airborne Showdown
   - Callisto Adept
@@ -185,7 +186,6 @@ Hard:
   - Titan Killer
   - Venenatis Adept
   - Who Is the King Now?
-  - Zulrah Adept
 Elite:
   completed:
   - 3, 2, 1 - Mage | 2025-09-19
@@ -362,8 +362,8 @@ Master:
   not_completed:
   - '... ''til Dawn'
   - A Not So Special Lizard
-  - A Timely Snack
   - A siphon will solve this
+  - A Timely Snack
   - Alchemical Master
   - Alchemical Speed-Chaser
   - Alcleanical Hydra
@@ -517,8 +517,8 @@ Master:
   - Working Overtime
   - Yama Speed-Chaser
   - Yama Veteran
-  - You Didn't Say Anything About a Bat
   - You are not prepared
+  - You Didn't Say Anything About a Bat
   - Zulrah Master
   - Zulrah Speed-Chaser
 Grandmaster:
