@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-01-30T18:44:43.711445+00:00",
+  "updated": "2026-02-01T12:53:09.651732+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -60,7 +60,7 @@
           {
             "name": "Araxyte venom sack",
             "date": "2026-01-16",
-            "quantity": 702
+            "quantity": 709
           }
         ],
         "missing": [
@@ -373,7 +373,7 @@
           {
             "name": "Iasor seed",
             "date": "2025-08-28",
-            "quantity": 43
+            "quantity": 44
           },
           {
             "name": "Kronos seed",
@@ -383,7 +383,7 @@
           {
             "name": "Attas seed",
             "date": "2025-07-29",
-            "quantity": 33
+            "quantity": 35
           }
         ],
         "missing": [],
@@ -619,7 +619,7 @@
           {
             "name": "Ancient shard",
             "date": "2025-07-29",
-            "quantity": 100
+            "quantity": 105
           }
         ],
         "missing": [
@@ -767,9 +767,14 @@
       "Zulrah": {
         "obtained": [
           {
+            "name": "Zul-andra teleport",
+            "date": "2026-02-01 04:46:45",
+            "quantity": 4
+          },
+          {
             "name": "Zulrah's scales",
             "date": "2025-10-28",
-            "quantity": 296
+            "quantity": 1531
           }
         ],
         "missing": [
@@ -778,10 +783,9 @@
           "Magma mutagen",
           "Serpentine visage",
           "Tanzanite fang",
-          "Tanzanite mutagen",
-          "Zul-andra teleport"
+          "Tanzanite mutagen"
         ],
-        "obtained_count": 1,
+        "obtained_count": 2,
         "total_count": 8
       },
       "Beginner Treasure Trails": {
@@ -2515,12 +2519,12 @@
           {
             "name": "Tea flask",
             "date": "2025-09-27",
-            "quantity": 32
+            "quantity": 51
           },
           {
             "name": "Red satchel",
             "date": "2025-09-27",
-            "quantity": 41
+            "quantity": 67
           }
         ],
         "missing": [
@@ -3495,17 +3499,17 @@
           {
             "name": "Dark totem base",
             "date": "2025-07-28",
-            "quantity": 30
+            "quantity": 31
           },
           {
             "name": "Dark totem middle",
             "date": "2025-07-29",
-            "quantity": 29
+            "quantity": 31
           },
           {
             "name": "Dark totem top",
             "date": "2025-08-01",
-            "quantity": 29
+            "quantity": 31
           },
           {
             "name": "Shield left half",
@@ -3550,7 +3554,7 @@
           {
             "name": "Hespori seed",
             "date": "2025-07-21",
-            "quantity": 217
+            "quantity": 219
           },
           {
             "name": "Fresh crab claw",
@@ -5084,9 +5088,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 453,
+    "total_obtained": 454,
     "total_items": 1718,
     "recent_items": [
+      {
+        "name": "Zul-andra teleport",
+        "date": "2026-02-01 04:46:45",
+        "collection": "zulrah"
+      },
       {
         "name": "Gem bag",
         "date": "2026-01-29 15:18:33",
@@ -5181,11 +5190,6 @@
         "name": "Jar of dirt",
         "date": "2026-01-19 01:43:58",
         "collection": "kraken"
-      },
-      {
-        "name": "Primordial crystal",
-        "date": "2026-01-18 02:04:56",
-        "collection": "cerberus"
       }
     ],
     "source": "templeosrs"
