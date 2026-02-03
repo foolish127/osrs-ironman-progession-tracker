@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-02-01T18:36:50.558034+00:00",
+  "updated": "2026-02-03T02:13:34.702053+00:00",
   "combat_achievements": {
     "tiers": {
       "Easy": {
@@ -894,6 +894,10 @@
       "Master": {
         "completed": [
           {
+            "name": "Araxxor Master",
+            "date": "2026-02-01"
+          },
+          {
             "name": "Arooo No More",
             "date": "2026-01-02"
           },
@@ -933,7 +937,6 @@
           "All out of medics",
           "Anvil No More",
           "Arachnid Lover",
-          "Araxxor Master",
           "Araxxor Speed-Chaser",
           "Araxyte Betrayal",
           "Ba-Bananza",
@@ -1085,10 +1088,10 @@
           "Zulrah Master",
           "Zulrah Speed-Chaser"
         ],
-        "completed_count": 7,
+        "completed_count": 8,
         "total_count": 168,
         "points_per_task": 5,
-        "points_earned": 35
+        "points_earned": 40
       },
       "Grandmaster": {
         "completed": [
@@ -1228,9 +1231,9 @@
         "points_earned": 12
       }
     },
-    "total_completed": 180,
+    "total_completed": 181,
     "total_tasks": 625,
-    "total_points": 462,
+    "total_points": 467,
     "max_points": 2604,
     "recent_tasks": [
       {
@@ -1242,6 +1245,11 @@
         "name": "Araxxor Veteran",
         "date": "2026-02-01",
         "tier": "Elite"
+      },
+      {
+        "name": "Araxxor Master",
+        "date": "2026-02-01",
+        "tier": "Master"
       },
       {
         "name": "Cerberus Veteran",
@@ -1325,11 +1333,6 @@
       },
       {
         "name": "Giant Mole Novice",
-        "date": "2025-12-17",
-        "tier": "Easy"
-      },
-      {
-        "name": "Sarachnis Novice",
         "date": "2025-12-17",
         "tier": "Easy"
       }
