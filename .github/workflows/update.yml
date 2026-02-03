@@ -1,5 +1,4 @@
 name: Update OSRS Stats
-
 on:
   schedule:
     - cron: '0 */6 * * *'  # Every 6 hours
@@ -11,18 +10,15 @@ on:
       - 'scripts/update_stats.py'
       - 'scripts/update_bank.py'
       - 'docs/**'          # Trigger on any docs changes
-
 # Prevent duplicate runs
 concurrency:
   group: update-stats
   cancel-in-progress: false
-
 # Required for Pages deployment
 permissions:
   contents: write
   pages: write
   id-token: write
-
 jobs:
   update-and-deploy:
     runs-on: ubuntu-latest
@@ -65,6 +61,7 @@ jobs:
           git config --local user.name "GitHub Action"
           git add -A
           git diff --staged --quiet || git commit -m "Update stats $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git pull --rebase origin main
           git push
       
       - name: Setup Pages
