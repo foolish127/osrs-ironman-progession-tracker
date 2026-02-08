@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-02-08T03:42:43.154550+00:00",
+  "updated": "2026-02-08T05:25:37.207022+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -60,12 +60,12 @@
           {
             "name": "Araxyte venom sack",
             "date": "2026-01-16",
-            "quantity": 709
+            "quantity": 840
           },
           {
             "name": "Spider cave teleport",
             "date": "2026-02-01 16:35:59",
-            "quantity": 3
+            "quantity": 42
           },
           {
             "name": "Araxyte fang",
@@ -390,12 +390,12 @@
           {
             "name": "Kronos seed",
             "date": "2025-08-11",
-            "quantity": 51
+            "quantity": 53
           },
           {
             "name": "Attas seed",
             "date": "2025-07-29",
-            "quantity": 35
+            "quantity": 38
           }
         ],
         "missing": [],
@@ -631,7 +631,7 @@
           {
             "name": "Ancient shard",
             "date": "2025-07-29",
-            "quantity": 105
+            "quantity": 108
           }
         ],
         "missing": [
@@ -1702,7 +1702,7 @@
           {
             "name": "Armadyl page 1",
             "date": "2026-01-12",
-            "quantity": 2
+            "quantity": 3
           },
           {
             "name": "Ancient page 1",
@@ -2066,7 +2066,7 @@
           {
             "name": "Abyssal pearls",
             "date": "2025-07-27",
-            "quantity": 975
+            "quantity": 1019
           },
           {
             "name": "Catalytic talisman",
@@ -2097,6 +2097,11 @@
             "name": "Lost bag",
             "date": "2025-10-12",
             "quantity": 1
+          },
+          {
+            "name": "Tarnished locket",
+            "date": "2026-02-08 04:50:49",
+            "quantity": 1
           }
         ],
         "missing": [
@@ -2107,10 +2112,9 @@
           "Guardian's eye",
           "Hat of the eye",
           "Ring of the elements",
-          "Robe top of the eye",
-          "Tarnished locket"
+          "Robe top of the eye"
         ],
-        "obtained_count": 7,
+        "obtained_count": 8,
         "total_count": 16
       },
       "Magic Training Arena": {
@@ -3515,17 +3519,17 @@
           {
             "name": "Dark totem base",
             "date": "2025-07-28",
-            "quantity": 31
+            "quantity": 32
           },
           {
             "name": "Dark totem middle",
             "date": "2025-07-29",
-            "quantity": 31
+            "quantity": 32
           },
           {
             "name": "Dark totem top",
             "date": "2025-08-01",
-            "quantity": 31
+            "quantity": 32
           },
           {
             "name": "Shield left half",
@@ -3570,7 +3574,7 @@
           {
             "name": "Hespori seed",
             "date": "2025-07-21",
-            "quantity": 220
+            "quantity": 229
           },
           {
             "name": "Fresh crab claw",
@@ -5104,9 +5108,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 458,
+    "total_obtained": 459,
     "total_items": 1718,
     "recent_items": [
+      {
+        "name": "Tarnished locket",
+        "date": "2026-02-08 04:50:49",
+        "collection": "guardians_of_the_rift"
+      },
       {
         "name": "Araxyte fang",
         "date": "2026-02-07 06:02:46",
@@ -5201,11 +5210,6 @@
         "name": "Peaceful blessing",
         "date": "2026-01-22 18:49:06",
         "collection": "shared_treasure_trail_rewards"
-      },
-      {
-        "name": "Mithril plateskirt (t)",
-        "date": "2026-01-22 18:42:44",
-        "collection": "medium_treasure_trails"
       }
     ],
     "source": "templeosrs"
