@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-02-08T03:14:13.277954+00:00",
+  "updated": "2026-02-08T03:42:43.154550+00:00",
   "combat_achievements": {
     "tiers": {
       "Easy": {
@@ -134,6 +134,10 @@
             "date": "2025-08-16"
           },
           {
+            "name": "Shellbane Adept",
+            "date": "2026-02-05"
+          },
+          {
             "name": "Sit Rat",
             "date": "2025-08-15"
           },
@@ -158,11 +162,13 @@
             "date": "2022-11-26"
           }
         ],
-        "not_completed": [],
-        "completed_count": 38,
-        "total_count": 38,
+        "not_completed": [
+          "Dry Cleaning"
+        ],
+        "completed_count": 39,
+        "total_count": 40,
         "points_per_task": 1,
-        "points_earned": 38
+        "points_earned": 39
       },
       "Medium": {
         "completed": [
@@ -343,6 +349,10 @@
             "date": "2025-07-28"
           },
           {
+            "name": "Shellbane Veteran",
+            "date": "2026-02-05"
+          },
+          {
             "name": "Sit Back and Relax",
             "date": "2025-09-04"
           },
@@ -378,12 +388,14 @@
         "not_completed": [
           "Dagannoth Prime Champion",
           "Dagannoth Supreme Champion",
+          "Perfect Shellbane",
+          "Shellbane Speedrunner",
           "Temotli Triumph"
         ],
-        "completed_count": 52,
-        "total_count": 55,
+        "completed_count": 53,
+        "total_count": 58,
         "points_per_task": 2,
-        "points_earned": 104
+        "points_earned": 106
       },
       "Hard": {
         "completed": [
@@ -603,6 +615,7 @@
           "Dagannoth Prime Adept",
           "Dagannoth Supreme Adept",
           "Demonic Showdown",
+          "Featherweight Fighter",
           "General Graardor Adept",
           "General Showdown",
           "Guardians No More",
@@ -620,13 +633,14 @@
           "Praying to the Gods",
           "Royal Titan Speed-Runner",
           "Scorpia Adept",
+          "Shellbane Survivor",
           "The Flincher",
           "Titan Killer",
           "Venenatis Adept",
           "Who Is the King Now?"
         ],
         "completed_count": 51,
-        "total_count": 82,
+        "total_count": 84,
         "points_per_task": 3,
         "points_earned": 153
       },
@@ -1234,11 +1248,21 @@
         "points_earned": 12
       }
     },
-    "total_completed": 182,
-    "total_tasks": 625,
-    "total_points": 471,
-    "max_points": 2604,
+    "total_completed": 184,
+    "total_tasks": 632,
+    "total_points": 474,
+    "max_points": 2618,
     "recent_tasks": [
+      {
+        "name": "Shellbane Adept",
+        "date": "2026-02-05",
+        "tier": "Easy"
+      },
+      {
+        "name": "Shellbane Veteran",
+        "date": "2026-02-05",
+        "tier": "Medium"
+      },
       {
         "name": "Araxxor Speed-Trialist",
         "date": "2026-02-02",
@@ -1327,16 +1351,6 @@
       {
         "name": "Respiratory Runner",
         "date": "2025-12-26",
-        "tier": "Elite"
-      },
-      {
-        "name": "Up for the Challenge",
-        "date": "2025-12-26",
-        "tier": "Elite"
-      },
-      {
-        "name": "Reflecting on This Encounter",
-        "date": "2025-12-22",
         "tier": "Elite"
       }
     ]
