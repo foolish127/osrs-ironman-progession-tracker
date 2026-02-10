@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-02-09T20:26:18.506111+00:00",
+  "updated": "2026-02-10T05:51:49.445759+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -281,6 +281,27 @@
         "obtained_count": 2,
         "total_count": 7
       },
+      "Doom Of Mokhaiotl": {
+        "obtained": [
+          {
+            "name": "Mokhaiotl waystone",
+            "date": "2026-02-10 03:26:40",
+            "quantity": 1
+          },
+          {
+            "name": "Demon tear",
+            "date": "2026-02-10 03:26:40",
+            "quantity": 50
+          }
+        ],
+        "missing": [
+          "Avernic treads",
+          "Eye of ayak",
+          "Mokhaiotl cloth"
+        ],
+        "obtained_count": 2,
+        "total_count": 5
+      },
       "The Fight Caves": {
         "obtained": [
           {
@@ -385,7 +406,7 @@
           {
             "name": "Iasor seed",
             "date": "2025-08-28",
-            "quantity": 44
+            "quantity": 46
           },
           {
             "name": "Kronos seed",
@@ -407,12 +428,12 @@
           {
             "name": "Soiled page",
             "date": "2025-08-16",
-            "quantity": 4
+            "quantity": 46
           },
           {
             "name": "Huasca seed",
             "date": "2025-10-14",
-            "quantity": 1
+            "quantity": 3
           }
         ],
         "missing": [],
@@ -2066,7 +2087,7 @@
           {
             "name": "Abyssal pearls",
             "date": "2025-07-27",
-            "quantity": 1455
+            "quantity": 1469
           },
           {
             "name": "Catalytic talisman",
@@ -3542,7 +3563,7 @@
           {
             "name": "Shield left half",
             "date": "2025-09-03",
-            "quantity": 4
+            "quantity": 5
           },
           {
             "name": "Dragon spear",
@@ -3582,7 +3603,7 @@
           {
             "name": "Hespori seed",
             "date": "2025-07-21",
-            "quantity": 230
+            "quantity": 231
           },
           {
             "name": "Fresh crab claw",
@@ -4026,18 +4047,6 @@
         ],
         "obtained_count": 0,
         "total_count": 1
-      },
-      "Doom of Mokhaiotl": {
-        "obtained": [],
-        "missing": [
-          "Avernic treads",
-          "Demon tear",
-          "Eye of ayak",
-          "Mokhaiotl cloth",
-          "Mokhaiotl waystone"
-        ],
-        "obtained_count": 0,
-        "total_count": 5
       },
       "Doom of Mokhaiotl, All Pets": {
         "obtained": [],
@@ -5116,9 +5125,19 @@
         "total_count": 1
       }
     },
-    "total_obtained": 461,
+    "total_obtained": 463,
     "total_items": 1718,
     "recent_items": [
+      {
+        "name": "Mokhaiotl waystone",
+        "date": "2026-02-10 03:26:40",
+        "collection": "doom_of_mokhaiotl"
+      },
+      {
+        "name": "Demon tear",
+        "date": "2026-02-10 03:26:40",
+        "collection": "doom_of_mokhaiotl"
+      },
       {
         "name": "Robe top of the eye",
         "date": "2026-02-09 00:38:05",
@@ -5208,16 +5227,6 @@
         "name": "Squid beak",
         "date": "2026-01-27 15:32:11",
         "collection": "miscellaneous"
-      },
-      {
-        "name": "Spiked manacles",
-        "date": "2026-01-26 16:54:44",
-        "collection": "medium_treasure_trails"
-      },
-      {
-        "name": "Green headband",
-        "date": "2026-01-26 16:54:44",
-        "collection": "medium_treasure_trails"
       }
     ],
     "source": "templeosrs"
