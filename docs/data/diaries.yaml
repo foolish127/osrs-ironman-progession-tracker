@@ -1,5 +1,25 @@
 # FoolinSlays Achievement Diaries Tracker
-# Format: tier: YYYY-MM-DD (date optional, leave empty if not completed)
+# Format: tier: completed_tasks/total_tasks | date (date optional, for tier completion)
+# Or just: tier: completed (if all tasks done)
+# Last updated: 2026-02-12
+
+# IMPORTANT: Update this manually when you complete tasks in-game
+tasks_completed: 458
+tasks_total: 492
+
+# Task counts per diary from OSRS Wiki (492 total)
+# Ardougne: 10 easy, 11 med, 12 hard, 5 elite = 38
+# Desert: 11 easy, 9 med, 7 hard, 6 elite = 33
+# Falador: 11 easy, 8 med, 10 hard, 6 elite = 35
+# Fremennik: 10 easy, 10 med, 12 hard, 7 elite = 39
+# Kandarin: 11 easy, 13 med, 8 hard, 7 elite = 39
+# Karamja: 10 easy, 19 med, 10 hard, 5 elite = 44
+# Kourend & Kebos: 12 easy, 14 med, 13 hard, 7 elite = 46
+# Lumbridge & Draynor: 12 easy, 12 med, 10 hard, 6 elite = 40
+# Morytania: 11 easy, 13 med, 8 hard, 6 elite = 38
+# Varrock: 14 easy, 12 med, 11 hard, 5 elite = 42
+# Western Provinces: 9 easy, 10 med, 11 hard, 7 elite = 37
+# Wilderness: 12 easy, 15 med, 10 hard, 14 elite = 51
 
 Ardougne:
   easy: completed
