@@ -33,8 +33,9 @@
         .account-type { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'Fira Code', monospace; font-size: 0.875rem; color: var(--text-secondary); padding: 0.25rem 1rem; border: 1px solid var(--border); border-radius: 4px; background: var(--bg-card); }
         .account-type .iron-icon { width: 16px; height: 16px; }
         .last-updated { margin-top: 1rem; font-size: 0.8rem; color: var(--text-secondary); background: var(--bg-card); display: inline-block; padding: 0.25rem 0.75rem; border-radius: 4px; }
-        .stats-overview { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-bottom: 3rem; }
-        .stat-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem; text-align: center; min-width: 140px; flex: 0 1 auto; }
+        .stats-overview { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-bottom: 3rem; max-width: 900px; margin-left: auto; margin-right: auto; }
+        .stat-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem; text-align: center; min-width: 140px; flex: 0 1 auto; cursor: pointer; transition: all 0.2s ease; }
+        .stat-card:hover { background: var(--bg-card-hover); border-color: var(--accent-gold); transform: translateY(-2px); }
         .stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.5rem; }
         .stat-value { font-family: 'Fira Code', monospace; font-size: 1.5rem; font-weight: 500; }
         .stat-value.gold { color: var(--accent-gold); }
@@ -465,12 +466,22 @@
         footer { text-align: center; padding: 2rem 0; margin-top: 3rem; border-top: 1px solid var(--border); }
         footer a { color: var(--text-secondary); text-decoration: none; margin: 0 0.75rem; font-size: 0.85rem; padding: 0.5rem 1rem; border: 1px solid var(--border); border-radius: 4px; transition: all 0.2s; }
         footer a:hover { color: var(--text-primary); border-color: var(--text-muted); }
+        @media (max-width: 900px) {
+            .stats-overview { grid-template-columns: repeat(5, 1fr); gap: 0.75rem; }
+        }
         @media (max-width: 768px) {
+            .stats-overview { grid-template-columns: repeat(3, 1fr); gap: 0.5rem; max-width: 100%; }
+            .stat-card { padding: 0.75rem; min-width: auto; }
+            .stat-label { font-size: 0.6rem; }
+            .stat-value { font-size: 1.1rem; }
             .skills-grid { grid-template-columns: repeat(2, 1fr); }
             .container { padding: 1rem; }
             .player-name { font-size: 2rem; }
             .search-filter { flex-direction: column; }
             .item-list { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+            .stats-overview { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
@@ -486,16 +497,16 @@
         </header>
 
         <div class="stats-overview">
-            <div class="stat-card"><div class="stat-label">Total Level</div><div class="stat-value gold" id="totalLevel">—</div></div>
-            <div class="stat-card"><div class="stat-label">Total XP</div><div class="stat-value" id="totalXp">—</div></div>
-            <div class="stat-card"><div class="stat-label">Combat Level</div><div class="stat-value blue" id="combatLevel">—</div></div>
-            <div class="stat-card"><div class="stat-label">99s</div><div class="stat-value green" id="count99s">—</div></div>
-            <div class="stat-card"><div class="stat-label">Collection Log</div><div class="stat-value green" id="clogCount">—</div></div>
-            <div class="stat-card"><div class="stat-label">CA Tasks</div><div class="stat-value" id="caTasks">—</div></div>
-            <div class="stat-card"><div class="stat-label">Pets</div><div class="stat-value purple" id="petCount">—</div></div>
-            <div class="stat-card"><div class="stat-label">Clues</div><div class="stat-value" id="clueCount">—</div></div>
-            <div class="stat-card"><div class="stat-label">Quests</div><div class="stat-value green" id="questCount">—</div></div>
-            <div class="stat-card"><div class="stat-label">Diaries</div><div class="stat-value" id="diaryCount">—</div></div>
+            <div class="stat-card" data-tab="skills"><div class="stat-label">Total Level</div><div class="stat-value gold" id="totalLevel">—</div></div>
+            <div class="stat-card" data-tab="skills"><div class="stat-label">Total XP</div><div class="stat-value" id="totalXp">—</div></div>
+            <div class="stat-card" data-tab="skills"><div class="stat-label">Combat Level</div><div class="stat-value blue" id="combatLevel">—</div></div>
+            <div class="stat-card" data-tab="skills"><div class="stat-label">99s</div><div class="stat-value green" id="count99s">—</div></div>
+            <div class="stat-card" data-tab="clog"><div class="stat-label">Collection Log</div><div class="stat-value green" id="clogCount">—</div></div>
+            <div class="stat-card" data-tab="ca"><div class="stat-label">CA Tasks</div><div class="stat-value" id="caTasks">—</div></div>
+            <div class="stat-card" data-tab="pets"><div class="stat-label">Pets</div><div class="stat-value purple" id="petCount">—</div></div>
+            <div class="stat-card" data-tab="clues"><div class="stat-label">Clues</div><div class="stat-value" id="clueCount">—</div></div>
+            <div class="stat-card" data-tab="quests"><div class="stat-label">Quests</div><div class="stat-value green" id="questCount">—</div></div>
+            <div class="stat-card" data-tab="diaries"><div class="stat-label">Diaries</div><div class="stat-value" id="diaryCount">—</div></div>
         </div>
 
         <nav class="nav-tabs">
@@ -1611,9 +1622,23 @@
             const regions = {};
             let currentRegion = null;
             
+            // Parse tasks_completed and tasks_total from header
+            let tasksCompleted = 0;
+            let tasksTotal = 492;
+            
             // Parse YAML
             yaml.split('\n').forEach(line => {
                 if (!line || line.startsWith('#')) return;
+                
+                // Check for tasks_completed/tasks_total
+                if (line.startsWith('tasks_completed:')) {
+                    tasksCompleted = parseInt(line.split(':')[1].trim()) || 0;
+                    return;
+                }
+                if (line.startsWith('tasks_total:')) {
+                    tasksTotal = parseInt(line.split(':')[1].trim()) || 492;
+                    return;
+                }
                 
                 // Region line (no leading spaces, ends with :)
                 if (!line.startsWith(' ') && line.endsWith(':')) {
@@ -1629,30 +1654,35 @@
                 }
             });
             
-            // Calculate stats
+            // Calculate tier stats
             const tiers = ['easy', 'medium', 'hard', 'elite'];
-            let totalCompleted = 0;
-            let totalTasks = 0;
+            let tiersCompleted = 0;
+            let tiersTotal = 0;
             const tierCounts = { easy: 0, medium: 0, hard: 0, elite: 0 };
             
             Object.values(regions).forEach(region => {
                 tiers.forEach(tier => {
-                    totalTasks++;
+                    tiersTotal++;
                     if (region[tier]) {
-                        totalCompleted++;
+                        tiersCompleted++;
                         tierCounts[tier]++;
                     }
                 });
             });
             
             const regionCount = Object.keys(regions).length;
+            const taskPct = ((tasksCompleted / tasksTotal) * 100).toFixed(1);
             
             // Render
             container.innerHTML = `
                 <div class="diaries-summary">
                     <div class="summary-item">
-                        <div class="summary-value" style="color: var(--green)">${totalCompleted}/${totalTasks}</div>
-                        <div class="summary-label">Total Completed</div>
+                        <div class="summary-value" style="color: var(--accent-gold)">${tasksCompleted}/${tasksTotal}</div>
+                        <div class="summary-label">Tasks (${taskPct}%)</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-value" style="color: var(--accent-green)">${tiersCompleted}/${tiersTotal}</div>
+                        <div class="summary-label">Tiers Complete</div>
                     </div>
                     <div class="summary-item">
                         <div class="summary-value" style="color: #22c55e">${tierCounts.easy}/${regionCount}</div>
@@ -1671,6 +1701,18 @@
                         <div class="summary-label">Elite</div>
                     </div>
                 </div>
+                
+                <div class="progress-section" style="margin-bottom: 1.5rem;">
+                    <div class="progress-header">
+                        <span class="progress-title">Overall Task Progress</span>
+                        <div class="progress-stats"><span class="obtained">${tasksCompleted}</span><span class="total">/${tasksTotal}</span></div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${taskPct}%"></div>
+                    </div>
+                    <div class="progress-percentage">${taskPct}% complete · ${tasksTotal - tasksCompleted} tasks remaining</div>
+                </div>
+                
                 <div class="diaries-grid">
                     ${Object.entries(regions).map(([name, tiers]) => {
                         const completed = Object.values(tiers).filter(v => v).length;
@@ -1704,9 +1746,9 @@
                 </div>
             `;
             
-            // Store for stat card
-            diariesData = { completed: totalCompleted, total: totalTasks };
-            document.getElementById('diaryCount').textContent = `${totalCompleted}/${totalTasks}`;
+            // Store for stat card - now shows tasks, not tiers
+            diariesData = { completed: tasksCompleted, total: tasksTotal };
+            document.getElementById('diaryCount').textContent = `${tasksCompleted}/${tasksTotal}`;
         }
 
         // B0aty Guide Functions
@@ -2779,6 +2821,13 @@
 
         document.querySelectorAll('.nav-tab').forEach(t => t.addEventListener('click', () => {
             const tabId = t.dataset.tab;
+            window.location.hash = tabId;
+            switchTab(tabId);
+        }));
+
+        // Stat card click handlers
+        document.querySelectorAll('.stat-card[data-tab]').forEach(card => card.addEventListener('click', () => {
+            const tabId = card.dataset.tab;
             window.location.hash = tabId;
             switchTab(tabId);
         }));
