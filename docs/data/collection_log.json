@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-02-12T02:25:11.577328+00:00",
+  "updated": "2026-02-12T07:03:37.054178+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -284,22 +284,26 @@
       "Doom Of Mokhaiotl": {
         "obtained": [
           {
+            "name": "Mokhaiotl cloth",
+            "date": "2026-02-12 04:58:11",
+            "quantity": 1
+          },
+          {
             "name": "Mokhaiotl waystone",
             "date": "2026-02-10 03:26:40",
-            "quantity": 2
+            "quantity": 7
           },
           {
             "name": "Demon tear",
             "date": "2026-02-10 03:26:40",
-            "quantity": 210
+            "quantity": 1967
           }
         ],
         "missing": [
           "Avernic treads",
-          "Eye of ayak",
-          "Mokhaiotl cloth"
+          "Eye of ayak"
         ],
-        "obtained_count": 2,
+        "obtained_count": 3,
         "total_count": 5
       },
       "The Fight Caves": {
@@ -406,7 +410,7 @@
           {
             "name": "Iasor seed",
             "date": "2025-08-28",
-            "quantity": 46
+            "quantity": 47
           },
           {
             "name": "Kronos seed",
@@ -3633,7 +3637,7 @@
           {
             "name": "Hespori seed",
             "date": "2025-07-21",
-            "quantity": 233
+            "quantity": 234
           },
           {
             "name": "Fresh crab claw",
@@ -5158,9 +5162,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 471,
+    "total_obtained": 472,
     "total_items": 1719,
     "recent_items": [
+      {
+        "name": "Mokhaiotl cloth",
+        "date": "2026-02-12 04:58:11",
+        "collection": "doom_of_mokhaiotl"
+      },
       {
         "name": "Zamorak page 1",
         "date": "2026-02-11 02:07:39",
@@ -5255,11 +5264,6 @@
         "name": "Gem bag",
         "date": "2026-01-29 15:18:33",
         "collection": "motherlode_mine"
-      },
-      {
-        "name": "Horn of plenty (Empty)",
-        "date": "2026-01-28 20:15:08",
-        "collection": "slayer"
       }
     ],
     "source": "templeosrs"
