@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-02-13T02:26:26.841527+00:00",
+  "updated": "2026-02-13T07:01:06.114396+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -3021,22 +3021,30 @@
           {
             "name": "Mark of grace",
             "date": "2025-07-24",
-            "quantity": 119
+            "quantity": 154
+          },
+          {
+            "name": "Graceful hood",
+            "date": "2026-02-13 04:29:42",
+            "quantity": 1
           },
           {
             "name": "Graceful legs",
             "date": "2025-07-30",
+            "quantity": 1
+          },
+          {
+            "name": "Graceful gloves",
+            "date": "2026-02-13 04:29:54",
             "quantity": 1
           }
         ],
         "missing": [
           "Graceful boots",
           "Graceful cape",
-          "Graceful gloves",
-          "Graceful hood",
           "Graceful top"
         ],
-        "obtained_count": 2,
+        "obtained_count": 4,
         "total_count": 7
       },
       "Sailing Miscellaneous": {
@@ -3637,7 +3645,7 @@
           {
             "name": "Hespori seed",
             "date": "2025-07-21",
-            "quantity": 234
+            "quantity": 235
           },
           {
             "name": "Fresh crab claw",
@@ -5162,9 +5170,19 @@
         "total_count": 1
       }
     },
-    "total_obtained": 472,
+    "total_obtained": 474,
     "total_items": 1719,
     "recent_items": [
+      {
+        "name": "Graceful gloves",
+        "date": "2026-02-13 04:29:54",
+        "collection": "rooftop_agility"
+      },
+      {
+        "name": "Graceful hood",
+        "date": "2026-02-13 04:29:42",
+        "collection": "rooftop_agility"
+      },
       {
         "name": "Mokhaiotl cloth",
         "date": "2026-02-12 04:58:11",
@@ -5254,16 +5272,6 @@
         "name": "Spider cave teleport",
         "date": "2026-02-01 16:35:59",
         "collection": "araxxor"
-      },
-      {
-        "name": "Zul-andra teleport",
-        "date": "2026-02-01 04:46:45",
-        "collection": "zulrah"
-      },
-      {
-        "name": "Gem bag",
-        "date": "2026-01-29 15:18:33",
-        "collection": "motherlode_mine"
       }
     ],
     "source": "templeosrs"
