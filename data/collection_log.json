@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-02-13T14:43:35.080738+00:00",
+  "updated": "2026-02-13T17:14:53.849188+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -284,6 +284,11 @@
       "Doom Of Mokhaiotl": {
         "obtained": [
           {
+            "name": "Avernic treads",
+            "date": "2026-02-13 17:04:43",
+            "quantity": 1
+          },
+          {
             "name": "Mokhaiotl cloth",
             "date": "2026-02-12 04:58:11",
             "quantity": 1
@@ -300,10 +305,9 @@
           }
         ],
         "missing": [
-          "Avernic treads",
           "Eye of ayak"
         ],
-        "obtained_count": 3,
+        "obtained_count": 4,
         "total_count": 5
       },
       "The Fight Caves": {
@@ -5170,9 +5174,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 474,
+    "total_obtained": 475,
     "total_items": 1719,
     "recent_items": [
+      {
+        "name": "Avernic treads",
+        "date": "2026-02-13 17:04:43",
+        "collection": "doom_of_mokhaiotl"
+      },
       {
         "name": "Graceful gloves",
         "date": "2026-02-13 04:29:54",
@@ -5267,11 +5276,6 @@
         "name": "Blood shard",
         "date": "2026-02-03 15:35:54",
         "collection": "slayer"
-      },
-      {
-        "name": "Spider cave teleport",
-        "date": "2026-02-01 16:35:59",
-        "collection": "araxxor"
       }
     ],
     "source": "templeosrs"
