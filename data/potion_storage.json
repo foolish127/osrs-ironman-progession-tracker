@@ -1,177 +1,30 @@
 {
-  "updated": "2026-01-17T20:43:50.796327+00:00",
-  "total_potions": 27,
-  "total_doses": 74363,
-  "sections": {
-    "favourites": {
-      "Energy potion(4)": 11932,
-      "Prayer potion(4)": 1292,
-      "Ranging potion(4)": 2152,
-      "Saradomin brew(4)": 14517,
-      "Super combat potion(4)": 1385,
-      "Super restore(4)": 4172
-    },
-    "potions": {
-      "Anti-venom(4)": 16,
-      "Antidote++(4)": 498,
-      "Antifire potion(4)": 2791,
-      "Attack potion(4)": 64,
-      "Blighted super restore(4)": 21,
-      "Divine magic(4)": 16,
-      "Divine ranging(4)": 11,
-      "Magic potion(4)": 5616,
-      "Restore potion(4)": 28,
-      "Sanfew serum(4)": 404,
-      "Stamina potion(4)": 2,
-      "Strength potion(4)": 13,
-      "Super attack(4)": 12316,
-      "Super defence(4)": 3935,
-      "Super energy(4)": 4399,
-      "Super strength(4)": 8713,
-      "Superantipoison(2)": 3
-    },
-    "unfinished": {
-      "Dwarf weed potion (unf)": 38,
-      "Harralander potion (unf)": 14,
-      "Lantadyme potion (unf)": 8,
-      "Toadflax potion (unf)": 7
-    }
-  },
-  "potions": [
-    {
-      "name": "Saradomin brew(4)",
-      "doses": 14517,
-      "section": "favourites"
-    },
-    {
-      "name": "Super attack(4)",
-      "doses": 12316,
-      "section": "potions"
-    },
-    {
-      "name": "Energy potion(4)",
-      "doses": 11932,
-      "section": "favourites"
-    },
-    {
-      "name": "Super strength(4)",
-      "doses": 8713,
-      "section": "potions"
-    },
-    {
-      "name": "Magic potion(4)",
-      "doses": 5616,
-      "section": "potions"
-    },
-    {
-      "name": "Super energy(4)",
-      "doses": 4399,
-      "section": "potions"
-    },
-    {
-      "name": "Super restore(4)",
-      "doses": 4172,
-      "section": "favourites"
-    },
-    {
-      "name": "Super defence(4)",
-      "doses": 3935,
-      "section": "potions"
-    },
-    {
-      "name": "Antifire potion(4)",
-      "doses": 2791,
-      "section": "potions"
-    },
-    {
-      "name": "Ranging potion(4)",
-      "doses": 2152,
-      "section": "favourites"
-    },
-    {
-      "name": "Super combat potion(4)",
-      "doses": 1385,
-      "section": "favourites"
-    },
-    {
-      "name": "Prayer potion(4)",
-      "doses": 1292,
-      "section": "favourites"
-    },
-    {
-      "name": "Antidote++(4)",
-      "doses": 498,
-      "section": "potions"
-    },
-    {
-      "name": "Sanfew serum(4)",
-      "doses": 404,
-      "section": "potions"
-    },
-    {
-      "name": "Attack potion(4)",
-      "doses": 64,
-      "section": "potions"
-    },
-    {
-      "name": "Dwarf weed potion (unf)",
-      "doses": 38,
-      "section": "unfinished"
-    },
-    {
-      "name": "Restore potion(4)",
-      "doses": 28,
-      "section": "potions"
-    },
-    {
-      "name": "Blighted super restore(4)",
-      "doses": 21,
-      "section": "potions"
-    },
-    {
-      "name": "Anti-venom(4)",
-      "doses": 16,
-      "section": "potions"
-    },
-    {
-      "name": "Divine magic(4)",
-      "doses": 16,
-      "section": "potions"
-    },
-    {
-      "name": "Harralander potion (unf)",
-      "doses": 14,
-      "section": "unfinished"
-    },
-    {
-      "name": "Strength potion(4)",
-      "doses": 13,
-      "section": "potions"
-    },
-    {
-      "name": "Divine ranging(4)",
-      "doses": 11,
-      "section": "potions"
-    },
-    {
-      "name": "Lantadyme potion (unf)",
-      "doses": 8,
-      "section": "unfinished"
-    },
-    {
-      "name": "Toadflax potion (unf)",
-      "doses": 7,
-      "section": "unfinished"
-    },
-    {
-      "name": "Superantipoison(2)",
-      "doses": 3,
-      "section": "potions"
-    },
-    {
-      "name": "Stamina potion(4)",
-      "doses": 2,
-      "section": "potions"
-    }
+  "last_updated": "2026-02-13",
+  "total_vials": 40223,
+  "items": [
+    {"name": "Armadyl brew(4)", "doses": 6591, "vials": 1648, "ge_price": 8500, "category": "Favourites"},
+    {"name": "Extended anti-venom+(4)", "doses": 283, "vials": 71, "ge_price": 12000, "category": "Favourites"},
+    {"name": "Prayer potion(4)", "doses": 506, "vials": 127, "ge_price": 8000, "category": "Favourites"},
+    {"name": "Ranging potion(4)", "doses": 2199, "vials": 550, "ge_price": 600, "category": "Favourites"},
+    {"name": "Saradomin brew(4)", "doses": 16370, "vials": 4093, "ge_price": 8400, "category": "Favourites"},
+    {"name": "Super combat potion(4)", "doses": 4325, "vials": 1082, "ge_price": 8500, "category": "Favourites"},
+    {"name": "Super energy(4)", "doses": 10067, "vials": 2517, "ge_price": 2500, "category": "Favourites"},
+    {"name": "Super restore(4)", "doses": 6074, "vials": 1519, "ge_price": 10700, "category": "Favourites"},
+    {"name": "Antidote++(4)", "doses": 560, "vials": 140, "ge_price": 2000, "category": "Potions"},
+    {"name": "Antifire potion(4)", "doses": 2790, "vials": 698, "ge_price": 1500, "category": "Potions"},
+    {"name": "Attack potion(4)", "doses": 84, "vials": 21, "ge_price": 100, "category": "Potions"},
+    {"name": "Blighted super restore(4)", "doses": 21, "vials": 6, "ge_price": 8000, "category": "Potions"},
+    {"name": "Divine magic(4)", "doses": 16, "vials": 4, "ge_price": 15000, "category": "Potions"},
+    {"name": "Divine ranging(4)", "doses": 52, "vials": 13, "ge_price": 15000, "category": "Potions"},
+    {"name": "Energy potion(4)", "doses": 22518, "vials": 5630, "ge_price": 200, "category": "Potions"},
+    {"name": "Magic potion(4)", "doses": 6287, "vials": 1572, "ge_price": 400, "category": "Potions"},
+    {"name": "Restore potion(4)", "doses": 27, "vials": 7, "ge_price": 500, "category": "Potions"},
+    {"name": "Sanfew serum(4)", "doses": 548, "vials": 137, "ge_price": 15000, "category": "Potions"},
+    {"name": "Stamina potion(4)", "doses": 2, "vials": 1, "ge_price": 6000, "category": "Potions"},
+    {"name": "Strength potion(4)", "doses": 13, "vials": 4, "ge_price": 200, "category": "Potions"},
+    {"name": "Super attack(4)", "doses": 21709, "vials": 5428, "ge_price": 500, "category": "Potions"},
+    {"name": "Super defence(4)", "doses": 3386, "vials": 847, "ge_price": 600, "category": "Potions"},
+    {"name": "Super strength(4)", "doses": 6667, "vials": 1667, "ge_price": 700, "category": "Potions"},
+    {"name": "Superantipoison(4)", "doses": 3, "vials": 1, "ge_price": 500, "category": "Potions"}
   ]
 }

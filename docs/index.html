@@ -306,7 +306,7 @@
         .bank-item-name { color: var(--text-secondary); flex: 1; }
         .bank-item-qty { font-family: 'Fira Code', monospace; color: var(--text-muted); margin: 0 0.5rem; }
         .bank-item-value { font-family: 'Fira Code', monospace; color: var(--accent-gold); min-width: 70px; text-align: right; }
-        .bank-updated { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem; }
+        .bank-updated { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
         .bank-all-items { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; }
         .bank-all-items h3 { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
         .no-results { text-align: center; padding: 2rem; color: var(--text-muted); }
@@ -821,7 +821,7 @@
         }
 
         async function loadData() {
-            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, goalsRes, diariesRes, bankRes, dropsRes, boatyGuideRes, boatyProgressRes] = await Promise.all([
+            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, goalsRes, diariesRes, bankRes, dropsRes, boatyGuideRes, boatyProgressRes, potionStorageRes, seedVaultRes] = await Promise.all([
                 fetch('./data/skills.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/bosses.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/clues.json').then(r=>r.json()).catch(()=>null),
@@ -834,7 +834,9 @@
                 fetch('./data/bank.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/drops.yaml').then(r=>r.text()).catch(()=>null),
                 fetch('./data/boaty_guide.json').then(r=>r.json()).catch(()=>null),
-                fetch('./data/boaty_progress.yaml').then(r=>r.text()).catch(()=>null)
+                fetch('./data/boaty_progress.yaml').then(r=>r.text()).catch(()=>null),
+                fetch('./data/potion_storage.json').then(r=>r.json()).catch(()=>null),
+                fetch('./data/seed_vault.json').then(r=>r.json()).catch(()=>null)
             ]);
 
             if (skillsRes?.rsn) {
@@ -913,7 +915,7 @@
             if (goalsRes) renderGoals(goalsRes);
             if (dropsRes) renderDrops(dropsRes);
             renderProgression(dropsRes);
-            if (bankRes) renderBank(bankRes);
+            if (bankRes) renderBank(bankRes, potionStorageRes, seedVaultRes);
         }
 
         function renderSkills(skills) {
@@ -2481,18 +2483,40 @@
         let bankCategoryFilter = 'all';
         let bankSubcategoryFilter = 'all';
 
-        function renderBank(data) {
+        function renderBank(data, potionStorage, seedVault) {
             bankData = data;
             const container = document.getElementById('bankContainer');
             
-            // Update stat card
+            // Calculate storage values
+            let potionValue = 0;
+            let potionVials = 0;
+            if (potionStorage?.items) {
+                potionStorage.items.forEach(item => {
+                    const vials = Math.floor(item.doses / 4);
+                    potionValue += vials * item.ge_price;
+                    potionVials += vials;
+                });
+            }
+            
+            let seedValue = 0;
+            let seedCount = 0;
+            if (seedVault?.items) {
+                seedVault.items.forEach(item => {
+                    seedValue += item.quantity * item.ge_price;
+                    seedCount += item.quantity;
+                });
+            }
+            
+            const totalCombinedValue = (data?.total_value || 0) + potionValue + seedValue;
+            
+            // Update stat card with combined value
             const formatGpShort = (value) => {
                 if (value >= 1000000000) return (value / 1000000000).toFixed(1) + 'B';
                 if (value >= 1000000) return (value / 1000000).toFixed(0) + 'M';
                 if (value >= 1000) return (value / 1000).toFixed(0) + 'K';
                 return value.toString();
             };
-            document.getElementById('bankValueCard').textContent = formatGpShort(data.total_value);
+            document.getElementById('bankValueCard').textContent = formatGpShort(totalCombinedValue);
             
             const formatGp = (value) => {
                 if (value >= 1000000000) return (value / 1000000000).toFixed(2) + 'B';
@@ -2510,12 +2534,28 @@
             const categories = [...new Set(data.items.map(i => i.category))].sort();
 
             container.innerHTML = `
-                <div class="bank-updated">Bank data last updated: ${formatDate(data.updated)}</div>
+                <div class="bank-updated">
+                    <div>🏦 Bank: ${formatDate(data.updated)}</div>
+                    ${potionStorage ? `<div>🧪 Potion Storage: ${potionStorage.last_updated} (${potionVials.toLocaleString()} vials)</div>` : ''}
+                    ${seedVault ? `<div>🌱 Seed Vault: ${seedVault.last_updated} (${seedCount.toLocaleString()} seeds)</div>` : ''}
+                </div>
                 
                 <div class="bank-summary">
                     <div class="bank-summary-card highlight">
-                        <div class="bank-summary-label">Total Bank Value</div>
+                        <div class="bank-summary-label">Total Combined Value</div>
+                        <div class="bank-summary-value">${formatGp(totalCombinedValue)} gp</div>
+                    </div>
+                    <div class="bank-summary-card">
+                        <div class="bank-summary-label">Bank Value</div>
                         <div class="bank-summary-value">${formatGp(data.total_value)} gp</div>
+                    </div>
+                    <div class="bank-summary-card">
+                        <div class="bank-summary-label">Potion Storage</div>
+                        <div class="bank-summary-value">${formatGp(potionValue)} gp</div>
+                    </div>
+                    <div class="bank-summary-card">
+                        <div class="bank-summary-label">Seed Vault</div>
+                        <div class="bank-summary-value">${formatGp(seedValue)} gp</div>
                     </div>
                     <div class="bank-summary-card">
                         <div class="bank-summary-label">Unique Items</div>
