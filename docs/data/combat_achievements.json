@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-02-15T12:54:11.761053+00:00",
+  "updated": "2026-02-15T16:49:14.286270+00:00",
   "combat_achievements": {
     "tiers": {
       "Easy": {
@@ -781,6 +781,10 @@
           {
             "name": "Wolf Puncher",
             "date": "2025-09-16"
+          },
+          {
+            "name": "Without Ralos' Light",
+            "date": "2026-02-15"
           }
         ],
         "not_completed": [
@@ -904,7 +908,6 @@
           "Vorkath Veteran",
           "Whisperer Adept",
           "Whisperer Speed-Trialist",
-          "Without Ralos' Light",
           "Yama Adept",
           "Yama Speed-Trialist",
           "Zalcano Veteran",
@@ -912,10 +915,10 @@
           "Zulrah Speed-Trialist",
           "Zulrah Veteran"
         ],
-        "completed_count": 34,
+        "completed_count": 35,
         "total_count": 161,
         "points_per_task": 4,
-        "points_earned": 136
+        "points_earned": 140
       },
       "Master": {
         "completed": [
@@ -1257,11 +1260,16 @@
         "points_earned": 12
       }
     },
-    "total_completed": 187,
+    "total_completed": 188,
     "total_tasks": 632,
-    "total_points": 486,
+    "total_points": 490,
     "max_points": 2618,
     "recent_tasks": [
+      {
+        "name": "Without Ralos' Light",
+        "date": "2026-02-15",
+        "tier": "Elite"
+      },
       {
         "name": "Doom Adept",
         "date": "2026-02-09",
@@ -1354,11 +1362,6 @@
       },
       {
         "name": "Abyssal Adept",
-        "date": "2025-12-26",
-        "tier": "Hard"
-      },
-      {
-        "name": "Don't Stop Moving",
         "date": "2025-12-26",
         "tier": "Hard"
       }
