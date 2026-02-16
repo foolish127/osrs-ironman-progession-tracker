@@ -2134,6 +2134,14 @@
                     </div>
                 </div>
 
+                <div class="drops-filters">
+                    <input type="text" class="drops-search" id="dropsSearch" placeholder="Search items or bosses..." value="${dropsSearchTerm}">
+                    <select class="drops-filter-select" id="dropsBossFilter">
+                        <option value="all">All Sources</option>
+                        ${bosses.map(b => `<option value="${b}" ${dropsBossFilter === b ? 'selected' : ''}>${b}</option>`).join('')}
+                    </select>
+                </div>
+
                 <div class="luck-table-container">
                     <h3>🍀 Luck Summary</h3>
                     <table class="luck-table">
@@ -2162,14 +2170,6 @@
                             `).join('')}
                         </tbody>
                     </table>
-                </div>
-
-                <div class="drops-filters">
-                    <input type="text" class="drops-search" id="dropsSearch" placeholder="Search items or bosses..." value="${dropsSearchTerm}">
-                    <select class="drops-filter-select" id="dropsBossFilter">
-                        <option value="all">All Sources</option>
-                        ${bosses.map(b => `<option value="${b}" ${dropsBossFilter === b ? 'selected' : ''}>${b}</option>`).join('')}
-                    </select>
                 </div>
 
                 <div class="drops-count" id="dropsCount"></div>
