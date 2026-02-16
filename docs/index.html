@@ -2029,6 +2029,23 @@
         let dropsData = [];
         let dropsSearchTerm = '';
         let dropsBossFilter = 'all';
+        let luckSummaryData = [];
+
+        const getLuckClass = (luck) => {
+            if (luck === 0) return 'luck-pending';
+            if (luck >= 2) return 'luck-very-spooned';
+            if (luck >= 1.2) return 'luck-spooned';
+            if (luck >= 0.8) return 'luck-onrate';
+            if (luck >= 0.5) return 'luck-dry';
+            return 'luck-very-dry';
+        };
+
+        const getStatusClass = (status) => {
+            if (status === 'Spooned') return 'status-spooned';
+            if (status === 'Dry') return 'status-dry';
+            if (status === 'In Progress') return 'status-pending';
+            return 'status-onrate';
+        };
         let pendingDrops = [];
 
         function parseDropsYaml(yaml) {
@@ -2075,7 +2092,7 @@
 
             // Build luck summary from drops that have droprate defined
             const dropsWithRates = dropsData.filter(d => d.droprate);
-            const luckSummary = dropsWithRates.map(drop => {
+            luckSummaryData = dropsWithRates.map(drop => {
                 const luck = drop.droprate / drop.kc;
                 let status = 'On Rate';
                 if (luck > 1.2) status = 'Spooned';
@@ -2086,29 +2103,14 @@
                     droprate: drop.droprate,
                     earned: drop.kc,
                     luck,
-                    status
+                    status,
+                    notes: drop.notes || ''
                 };
             }).sort((a, b) => b.luck - a.luck);
 
             // Calculate average luck (excluding nulls)
-            const validLuck = luckSummary.filter(l => l.luck > 0);
+            const validLuck = luckSummaryData.filter(l => l.luck > 0);
             const avgLuck = validLuck.length ? (validLuck.reduce((s, l) => s + l.luck, 0) / validLuck.length) : 0;
-
-            const getLuckClass = (luck) => {
-                if (luck === 0) return 'luck-pending';
-                if (luck >= 2) return 'luck-very-spooned';
-                if (luck >= 1.2) return 'luck-spooned';
-                if (luck >= 0.8) return 'luck-onrate';
-                if (luck >= 0.5) return 'luck-dry';
-                return 'luck-very-dry';
-            };
-
-            const getStatusClass = (status) => {
-                if (status === 'Spooned') return 'status-spooned';
-                if (status === 'Dry') return 'status-dry';
-                if (status === 'In Progress') return 'status-pending';
-                return 'status-onrate';
-            };
 
             container.innerHTML = `
                 <div class="drops-summary">
@@ -2125,11 +2127,11 @@
                         <div class="drops-stat-label">Avg Luck</div>
                     </div>
                     <div class="drops-stat">
-                        <div class="drops-stat-value">${luckSummary.filter(l => l.status === 'Spooned').length}</div>
+                        <div class="drops-stat-value">${luckSummaryData.filter(l => l.status === 'Spooned').length}</div>
                         <div class="drops-stat-label">Spooned</div>
                     </div>
                     <div class="drops-stat">
-                        <div class="drops-stat-value">${luckSummary.filter(l => l.status === 'Dry').length}</div>
+                        <div class="drops-stat-value">${luckSummaryData.filter(l => l.status === 'Dry').length}</div>
                         <div class="drops-stat-label">Dry</div>
                     </div>
                 </div>
@@ -2156,19 +2158,7 @@
                                 <th>Status</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            ${luckSummary.map((item, i) => `
-                                <tr>
-                                    <td class="rank-col">${i + 1}</td>
-                                    <td class="activity-col">${item.activity}</td>
-                                    <td class="drop-col">${item.drop}</td>
-                                    <td class="kc-col">${item.earned ? item.earned.toLocaleString() : '—'}</td>
-                                    <td class="rate-col">1/${item.droprate.toLocaleString()}</td>
-                                    <td class="luck-col ${getLuckClass(item.luck)}">${item.luck ? item.luck.toFixed(1) + 'x' : '—'}</td>
-                                    <td class="status-col ${getStatusClass(item.status)}">${item.status}</td>
-                                </tr>
-                            `).join('')}
-                        </tbody>
+                        <tbody id="luckTableBody"></tbody>
                     </table>
                 </div>
 
@@ -2235,9 +2225,11 @@
 
         function filterDrops() {
             const tbody = document.getElementById('dropsTableBody');
+            const luckTbody = document.getElementById('luckTableBody');
             const countEl = document.getElementById('dropsCount');
             const searchLower = dropsSearchTerm.toLowerCase();
 
+            // Filter drops table
             let filtered = dropsData.filter(drop => {
                 const matchesSearch = !dropsSearchTerm || 
                     drop.boss.toLowerCase().includes(searchLower) || 
@@ -2264,6 +2256,31 @@
                     <td class="item-col">${drop.item}</td>
                     <td class="date-col ${drop.date ? '' : 'missing'}">${drop.date || '—'}</td>
                     <td class="notes-col">${drop.notes || ''}</td>
+                </tr>
+            `).join('');
+
+            // Filter luck summary table
+            let filteredLuck = luckSummaryData.filter(item => {
+                const matchesSearch = !dropsSearchTerm || 
+                    item.activity.toLowerCase().includes(searchLower) || 
+                    item.drop.toLowerCase().includes(searchLower) ||
+                    (item.notes && item.notes.toLowerCase().includes(searchLower));
+                const matchesBoss = dropsBossFilter === 'all' || item.activity === dropsBossFilter;
+                return matchesSearch && matchesBoss;
+            });
+
+            // Sort by luck descending
+            filteredLuck.sort((a, b) => b.luck - a.luck);
+
+            luckTbody.innerHTML = filteredLuck.map((item, i) => `
+                <tr>
+                    <td class="rank-col">${i + 1}</td>
+                    <td class="activity-col">${item.activity}</td>
+                    <td class="drop-col">${item.drop}</td>
+                    <td class="kc-col">${item.earned ? item.earned.toLocaleString() : '—'}</td>
+                    <td class="rate-col">1/${item.droprate.toLocaleString()}</td>
+                    <td class="luck-col ${getLuckClass(item.luck)}">${item.luck ? item.luck.toFixed(1) + 'x' : '—'}</td>
+                    <td class="status-col ${getStatusClass(item.status)}">${item.status}</td>
                 </tr>
             `).join('');
         }
