@@ -65,6 +65,13 @@
         .skill-progress-fill.high { background: var(--accent-green); }
         .boss-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.5rem; }
         .boss-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 0.6rem 0.75rem; display: flex; justify-content: space-between; align-items: center; height: 42px; }
+        .boss-bar-chart { margin-bottom: 2rem; }
+        .boss-bar-chart h3 { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .boss-bar { display: flex; align-items: center; margin-bottom: 0.4rem; }
+        .boss-bar-name { width: 180px; font-size: 0.8rem; color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex-shrink: 0; }
+        .boss-bar-track { flex: 1; height: 20px; background: var(--bg-card); border-radius: 3px; overflow: hidden; margin: 0 0.75rem; }
+        .boss-bar-fill { height: 100%; background: linear-gradient(90deg, var(--accent-gold), #e5b95c); border-radius: 3px; transition: width 0.3s ease; }
+        .boss-bar-kc { font-family: 'Fira Code', monospace; font-size: 0.75rem; color: var(--text-muted); width: 70px; text-align: right; flex-shrink: 0; }
         .boss-name { font-size: 0.8rem; color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 1; margin-right: 0.5rem; }
         .boss-kc { font-family: 'Fira Code', monospace; font-size: 0.9rem; color: var(--accent-gold); }
         .clues-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.5rem; }
@@ -371,6 +378,7 @@
         .drops-table .item-col { color: var(--accent-gold); font-weight: 500; }
         .drops-table .date-col { font-family: 'Fira Code', monospace; color: var(--text-muted); font-size: 0.8rem; }
         .drops-table .date-col.missing { color: var(--accent-red); opacity: 0.6; }
+        .drops-table .notes-col { color: var(--text-secondary); font-size: 0.8rem; font-style: italic; max-width: 250px; }
         .drops-add-section { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; }
         .drops-add-section h3 { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
         .drops-add-form { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1rem; }
@@ -532,6 +540,8 @@
         </div>
 
         <div id="bosses" class="tab-content">
+            <div class="boss-bar-chart" id="bossBarChart"></div>
+            <h3 style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">📋 All Bosses</h3>
             <div class="boss-grid" id="bossGrid">Loading...</div>
         </div>
 
@@ -948,6 +958,26 @@
                 return kc.toLocaleString();
             };
             document.getElementById('bossKcCard').textContent = formatKc(totalKc);
+            
+            // Render bar chart (top 15 bosses)
+            const maxKc = sorted.length > 0 ? sorted[0][1].kc : 1;
+            const top15 = sorted.slice(0, 15);
+            const barChartContainer = document.getElementById('bossBarChart');
+            barChartContainer.innerHTML = `
+                <h3>📊 Top Kill Counts</h3>
+                ${top15.map(([name, data]) => {
+                    const percentage = (data.kc / maxKc) * 100;
+                    return `
+                        <div class="boss-bar">
+                            <span class="boss-bar-name" title="${name}">${name}</span>
+                            <div class="boss-bar-track">
+                                <div class="boss-bar-fill" style="width: ${percentage}%"></div>
+                            </div>
+                            <span class="boss-bar-kc">${data.kc.toLocaleString()}</span>
+                        </div>
+                    `;
+                }).join('')}
+            `;
             
             document.getElementById('bossGrid').innerHTML = sorted.map(([n,d])=>
                 `<div class="boss-item"><span class="boss-name">${n}</span><span class="boss-kc">${d.kc.toLocaleString()} KC</span></div>`
@@ -2019,6 +2049,8 @@
                     currentDrop.date = trimmed.replace('date:', '').trim() || '';
                 } else if (currentDrop && trimmed.startsWith('droprate:')) {
                     currentDrop.droprate = parseInt(trimmed.replace('droprate:', '').trim()) || 0;
+                } else if (currentDrop && trimmed.startsWith('notes:')) {
+                    currentDrop.notes = trimmed.replace('notes:', '').trim() || '';
                 }
             }
             if (currentDrop) drops.push(currentDrop);
@@ -2150,6 +2182,7 @@
                                 <th style="text-align:right">KC</th>
                                 <th>Item</th>
                                 <th>Date</th>
+                                <th>Notes</th>
                             </tr>
                         </thead>
                         <tbody id="dropsTableBody"></tbody>
@@ -2167,6 +2200,7 @@
                         <input type="text" class="drops-add-input" id="newDropItem" placeholder="Item Name">
                         <input type="text" class="drops-add-input" id="newDropDate" placeholder="Date (M/D/YYYY)">
                         <input type="number" class="drops-add-input" id="newDropRate" placeholder="Drop Rate (e.g. 512)">
+                        <input type="text" class="drops-add-input" id="newDropNotes" placeholder="Notes (optional)">
                         <button class="drops-add-btn" id="addDropBtn">Add Drop</button>
                     </div>
                     <div class="drops-yaml-output" id="dropsYamlOutput" style="display:none;">
@@ -2207,7 +2241,8 @@
             let filtered = dropsData.filter(drop => {
                 const matchesSearch = !dropsSearchTerm || 
                     drop.boss.toLowerCase().includes(searchLower) || 
-                    drop.item.toLowerCase().includes(searchLower);
+                    drop.item.toLowerCase().includes(searchLower) ||
+                    (drop.notes && drop.notes.toLowerCase().includes(searchLower));
                 const matchesBoss = dropsBossFilter === 'all' || drop.boss === dropsBossFilter;
                 return matchesSearch && matchesBoss;
             });
@@ -2228,6 +2263,7 @@
                     <td class="kc-col">${drop.kc.toLocaleString()}</td>
                     <td class="item-col">${drop.item}</td>
                     <td class="date-col ${drop.date ? '' : 'missing'}">${drop.date || '—'}</td>
+                    <td class="notes-col">${drop.notes || ''}</td>
                 </tr>
             `).join('');
         }
@@ -2238,6 +2274,7 @@
             const item = document.getElementById('newDropItem').value.trim();
             const date = document.getElementById('newDropDate').value.trim();
             const droprate = document.getElementById('newDropRate').value.trim();
+            const notes = document.getElementById('newDropNotes').value.trim();
 
             if (!boss || !kc || !item) {
                 alert('Please fill in Boss, KC, and Item');
@@ -2246,6 +2283,7 @@
 
             const newDrop = { boss, kc: parseInt(kc), item, date };
             if (droprate) newDrop.droprate = parseInt(droprate);
+            if (notes) newDrop.notes = notes;
             pendingDrops.push(newDrop);
 
             // Generate YAML
@@ -2256,6 +2294,7 @@
     item: ${d.item}
     date: ${d.date}`;
                 if (d.droprate) yaml += `\n    droprate: ${d.droprate}`;
+                if (d.notes) yaml += `\n    notes: ${d.notes}`;
                 return yaml;
             }).join('\n');
 
