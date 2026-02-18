@@ -10,20 +10,26 @@ drops:
     date: 2/09/2025
     droprate: 5000
 
-# Per the Phoenix pet screenshot. Was likely a sooner create but could not find screenshot
-
   - boss: Wintertodt
     kc: 118
     item: Dragon axe
     date: 2/09/2025
     droprate: 10000
+    notes: Per the Phoenix pet screenshot. Was likely earlier kc but could not find screenshot
 
-# See crazy arch 15 screenshot - may not be exact
+  - boss: Wintertodt
+    kc: 168
+    item: Tome of fire
+    date: 2/09/2025
+    droprate: 1000
+    notes: Per the 2025-02-09_14-44-19.png screenshot. Obtained between kc 118 and 168
+
   - boss: Cave horror
     kc: 99
     item: Black mask
     date: 7/30/2025
     droprate: 512
+    notes: Per the Crazy Arch 15 screenshot - may not be exact
 
   - boss: Dagganoth Rex
     kc: 26
