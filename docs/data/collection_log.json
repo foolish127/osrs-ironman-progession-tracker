@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-02-23T02:23:09.760767+00:00",
+  "updated": "2026-02-23T07:06:26.562729+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -1109,6 +1109,11 @@
             "quantity": 2
           },
           {
+            "name": "Adamant shield (h1)",
+            "date": "2026-02-23 03:41:37",
+            "quantity": 1
+          },
+          {
             "name": "Adamant shield (h2)",
             "date": "2025-08-29",
             "quantity": 1
@@ -1121,6 +1126,11 @@
           {
             "name": "Adamant shield (h4)",
             "date": "2025-09-29",
+            "quantity": 1
+          },
+          {
+            "name": "Adamant helm (h2)",
+            "date": "2026-02-23 03:41:37",
             "quantity": 1
           },
           {
@@ -1194,6 +1204,11 @@
             "quantity": 1
           },
           {
+            "name": "Pink elegant skirt",
+            "date": "2026-02-23 02:46:03",
+            "quantity": 1
+          },
+          {
             "name": "Gold elegant skirt",
             "date": "2025-11-25 21:20:16",
             "quantity": 1
@@ -1213,7 +1228,6 @@
           "Adamant cane",
           "Adamant full helm (g)",
           "Adamant helm (h1)",
-          "Adamant helm (h2)",
           "Adamant helm (h3)",
           "Adamant helm (h4)",
           "Adamant helm (h5)",
@@ -1230,7 +1244,6 @@
           "Adamant platelegs (t)",
           "Adamant plateskirt (g)",
           "Adamant plateskirt (t)",
-          "Adamant shield (h1)",
           "Adamant shield (h5)",
           "Ancient cloak",
           "Ancient crozier",
@@ -1281,7 +1294,6 @@
           "Pink elegant blouse",
           "Pink elegant legs",
           "Pink elegant shirt",
-          "Pink elegant skirt",
           "Pink headband",
           "Piscarilius banner",
           "Purple boater",
@@ -1304,7 +1316,7 @@
           "Zamorak cloak",
           "Zamorak mitre"
         ],
-        "obtained_count": 22,
+        "obtained_count": 25,
         "total_count": 115
       },
       "Hard Treasure Trails": {
@@ -1832,6 +1844,11 @@
             "quantity": 4
           },
           {
+            "name": "Zamorak page 4",
+            "date": "2026-02-23 04:01:46",
+            "quantity": 1
+          },
+          {
             "name": "Guthix page 4",
             "date": "2025-11-13",
             "quantity": 1
@@ -1973,8 +1990,8 @@
           }
         ],
         "missing": [],
-        "obtained_count": 46,
-        "total_count": 46
+        "obtained_count": 47,
+        "total_count": 47
       },
       "Scroll Cases": {
         "obtained": [
@@ -4758,11 +4775,10 @@
         "obtained": [],
         "missing": [
           "Ancient blessing",
-          "Saradomin page 3",
-          "Zamorak page 4"
+          "Saradomin page 3"
         ],
         "obtained_count": 0,
-        "total_count": 3
+        "total_count": 2
       },
       "Shellbane Gryphon, All Pets": {
         "obtained": [],
@@ -5190,9 +5206,29 @@
         "total_count": 1
       }
     },
-    "total_obtained": 479,
+    "total_obtained": 483,
     "total_items": 1719,
     "recent_items": [
+      {
+        "name": "Zamorak page 4",
+        "date": "2026-02-23 04:01:46",
+        "collection": "shared_treasure_trail_rewards"
+      },
+      {
+        "name": "Adamant shield (h1)",
+        "date": "2026-02-23 03:41:37",
+        "collection": "medium_treasure_trails"
+      },
+      {
+        "name": "Adamant helm (h2)",
+        "date": "2026-02-23 03:41:37",
+        "collection": "medium_treasure_trails"
+      },
+      {
+        "name": "Pink elegant skirt",
+        "date": "2026-02-23 02:46:03",
+        "collection": "medium_treasure_trails"
+      },
       {
         "name": "Bandos kiteshield",
         "date": "2026-02-23 01:36:46",
@@ -5272,26 +5308,6 @@
         "name": "Facility bottle (empty)",
         "date": "2026-02-10 15:36:46",
         "collection": "sailing_miscellaneous"
-      },
-      {
-        "name": "Mokhaiotl waystone",
-        "date": "2026-02-10 03:26:40",
-        "collection": "doom_of_mokhaiotl"
-      },
-      {
-        "name": "Demon tear",
-        "date": "2026-02-10 03:26:40",
-        "collection": "doom_of_mokhaiotl"
-      },
-      {
-        "name": "Robe top of the eye",
-        "date": "2026-02-09 00:38:05",
-        "collection": "guardians_of_the_rift"
-      },
-      {
-        "name": "Hat of the eye",
-        "date": "2026-02-08 17:07:08",
-        "collection": "guardians_of_the_rift"
       }
     ],
     "source": "templeosrs"
