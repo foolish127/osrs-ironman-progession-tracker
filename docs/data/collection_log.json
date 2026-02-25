@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-02-25T03:20:26.605482+00:00",
+  "updated": "2026-02-25T04:57:23.453745+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -2030,6 +2030,27 @@
         "obtained_count": 4,
         "total_count": 13
       },
+      "Barbarian Assault": {
+        "obtained": [
+          {
+            "name": "Granite body",
+            "date": "2026-02-25 04:52:11",
+            "quantity": 1
+          }
+        ],
+        "missing": [
+          "Fighter hat",
+          "Fighter torso",
+          "Healer hat",
+          "Penance gloves",
+          "Penance skirt",
+          "Ranger hat",
+          "Runner boots",
+          "Runner hat"
+        ],
+        "obtained_count": 1,
+        "total_count": 9
+      },
       "Barracuda Trials": {
         "obtained": [
           {
@@ -3854,22 +3875,6 @@
         "obtained_count": 0,
         "total_count": 1
       },
-      "Barbarian Assault": {
-        "obtained": [],
-        "missing": [
-          "Fighter hat",
-          "Fighter torso",
-          "Granite body",
-          "Healer hat",
-          "Penance gloves",
-          "Penance skirt",
-          "Ranger hat",
-          "Runner boots",
-          "Runner hat"
-        ],
-        "obtained_count": 0,
-        "total_count": 9
-      },
       "Barbarian Assault, All Pets": {
         "obtained": [],
         "missing": [
@@ -5210,9 +5215,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 484,
+    "total_obtained": 485,
     "total_items": 1719,
     "recent_items": [
+      {
+        "name": "Granite body",
+        "date": "2026-02-25 04:52:11",
+        "collection": "barbarian_assault"
+      },
       {
         "name": "Abyssal needle",
         "date": "2026-02-24 22:39:48",
@@ -5306,11 +5316,6 @@
       {
         "name": "Gnomish firelighter",
         "date": "2026-02-10 21:59:56",
-        "collection": "medium_treasure_trails"
-      },
-      {
-        "name": "White boater",
-        "date": "2026-02-10 21:56:32",
         "collection": "medium_treasure_trails"
       }
     ],
