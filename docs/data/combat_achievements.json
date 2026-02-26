@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-02-26T02:15:24.264101+00:00",
+  "updated": "2026-02-26T03:04:25.201360+00:00",
   "combat_achievements": {
     "tiers": {
       "Easy": {
@@ -32,6 +32,10 @@
           {
             "name": "Big, Black and Fiery",
             "date": "2025-07-15"
+          },
+          {
+            "name": "Brutus Novice",
+            "date": "2026-02-25"
           },
           {
             "name": "Bryophyta Novice",
@@ -165,10 +169,10 @@
         "not_completed": [
           "Dry Cleaning"
         ],
-        "completed_count": 39,
-        "total_count": 40,
+        "completed_count": 40,
+        "total_count": 41,
         "points_per_task": 1,
-        "points_earned": 39
+        "points_earned": 40
       },
       "Medium": {
         "completed": [
@@ -209,8 +213,16 @@
             "date": "2025-09-05"
           },
           {
+            "name": "Beef vs Beef",
+            "date": "2026-02-25"
+          },
+          {
             "name": "Brutal, Big, Black and Firey",
             "date": "2025-11-13"
+          },
+          {
+            "name": "Brutus Champion",
+            "date": "2026-02-25"
           },
           {
             "name": "Bryophyta Champion",
@@ -392,10 +404,10 @@
           "Shellbane Speedrunner",
           "Temotli Triumph"
         ],
-        "completed_count": 53,
-        "total_count": 58,
+        "completed_count": 55,
+        "total_count": 60,
         "points_per_task": 2,
-        "points_earned": 106
+        "points_earned": 110
       },
       "Hard": {
         "completed": [
@@ -552,6 +564,10 @@
             "date": "2025-11-27"
           },
           {
+            "name": "Smarter than a Cow",
+            "date": "2026-02-25"
+          },
+          {
             "name": "Static Awareness",
             "date": "2025-10-27"
           },
@@ -639,10 +655,10 @@
           "Venenatis Adept",
           "Who Is the King Now?"
         ],
-        "completed_count": 51,
-        "total_count": 84,
+        "completed_count": 52,
+        "total_count": 85,
         "points_per_task": 3,
-        "points_earned": 153
+        "points_earned": 156
       },
       "Elite": {
         "completed": [
@@ -665,6 +681,10 @@
           {
             "name": "Araxxor Veteran",
             "date": "2026-02-01"
+          },
+          {
+            "name": "Brutus Speed-Trialist",
+            "date": "2026-02-25"
           },
           {
             "name": "Cerberus Veteran",
@@ -915,10 +935,10 @@
           "Zulrah Speed-Trialist",
           "Zulrah Veteran"
         ],
-        "completed_count": 35,
-        "total_count": 161,
+        "completed_count": 36,
+        "total_count": 162,
         "points_per_task": 4,
-        "points_earned": 140
+        "points_earned": 144
       },
       "Master": {
         "completed": [
@@ -1263,11 +1283,36 @@
         "points_earned": 12
       }
     },
-    "total_completed": 189,
-    "total_tasks": 632,
-    "total_points": 495,
-    "max_points": 2618,
+    "total_completed": 194,
+    "total_tasks": 637,
+    "total_points": 507,
+    "max_points": 2630,
     "recent_tasks": [
+      {
+        "name": "Brutus Novice",
+        "date": "2026-02-25",
+        "tier": "Easy"
+      },
+      {
+        "name": "Beef vs Beef",
+        "date": "2026-02-25",
+        "tier": "Medium"
+      },
+      {
+        "name": "Brutus Champion",
+        "date": "2026-02-25",
+        "tier": "Medium"
+      },
+      {
+        "name": "Smarter than a Cow",
+        "date": "2026-02-25",
+        "tier": "Hard"
+      },
+      {
+        "name": "Brutus Speed-Trialist",
+        "date": "2026-02-25",
+        "tier": "Elite"
+      },
       {
         "name": "Without Ralos' Light",
         "date": "2026-02-15",
@@ -1341,31 +1386,6 @@
       {
         "name": "Ghost Buster",
         "date": "2026-01-02",
-        "tier": "Elite"
-      },
-      {
-        "name": "Unrequired Antifire",
-        "date": "2026-01-02",
-        "tier": "Elite"
-      },
-      {
-        "name": "Arooo No More",
-        "date": "2026-01-02",
-        "tier": "Master"
-      },
-      {
-        "name": "Mimic Veteran",
-        "date": "2025-12-31",
-        "tier": "Elite"
-      },
-      {
-        "name": "Vet'ion Adept",
-        "date": "2025-12-29",
-        "tier": "Hard"
-      },
-      {
-        "name": "Vet'eran",
-        "date": "2025-12-29",
         "tier": "Elite"
       }
     ]
