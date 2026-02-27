@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-02-27T13:01:59.639368+00:00",
+  "updated": "2026-02-27T17:13:47.162521+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -184,6 +184,18 @@
         ],
         "obtained_count": 16,
         "total_count": 25
+      },
+      "Brutus": {
+        "obtained": [
+          {
+            "name": "Mooleta",
+            "date": "2026-02-27 17:05:47",
+            "quantity": 1
+          }
+        ],
+        "missing": [],
+        "obtained_count": 1,
+        "total_count": 1
       },
       "Callisto And Artio": {
         "obtained": [
@@ -5233,9 +5245,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 488,
-    "total_items": 1721,
+    "total_obtained": 489,
+    "total_items": 1722,
     "recent_items": [
+      {
+        "name": "Mooleta",
+        "date": "2026-02-27 17:05:47",
+        "collection": "brutus"
+      },
       {
         "name": "Minor medium scroll case",
         "date": "2026-02-27 02:32:02",
@@ -5330,11 +5347,6 @@
         "name": "Zamorak page 1",
         "date": "2026-02-11 02:07:39",
         "collection": "shared_treasure_trail_rewards"
-      },
-      {
-        "name": "Fresh crab shell",
-        "date": "2026-02-11 01:41:53",
-        "collection": "miscellaneous"
       }
     ],
     "source": "templeosrs"
