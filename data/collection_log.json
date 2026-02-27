@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-02-27T02:22:58.096915+00:00",
+  "updated": "2026-02-27T13:01:59.639368+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -414,7 +414,7 @@
           {
             "name": "Iasor seed",
             "date": "2025-08-28",
-            "quantity": 52
+            "quantity": 53
           },
           {
             "name": "Kronos seed",
@@ -424,7 +424,7 @@
           {
             "name": "Attas seed",
             "date": "2025-07-29",
-            "quantity": 43
+            "quantity": 44
           }
         ],
         "missing": [],
@@ -1880,7 +1880,7 @@
           {
             "name": "Holy blessing",
             "date": "2025-12-31",
-            "quantity": 1
+            "quantity": 2
           },
           {
             "name": "Unholy blessing",
@@ -1910,12 +1910,12 @@
           {
             "name": "Mos le'harmless teleport",
             "date": "2025-09-03",
-            "quantity": 46
+            "quantity": 55
           },
           {
             "name": "Mort'ton teleport",
             "date": "2025-07-21",
-            "quantity": 29
+            "quantity": 39
           },
           {
             "name": "Feldip hills teleport",
@@ -2015,6 +2015,11 @@
             "quantity": 1
           },
           {
+            "name": "Minor medium scroll case",
+            "date": "2026-02-27 02:32:02",
+            "quantity": 1
+          },
+          {
             "name": "Minor hard scroll case",
             "date": "2025-10-31",
             "quantity": 1
@@ -2033,10 +2038,9 @@
           "Major medium scroll case",
           "Minor easy scroll case",
           "Minor elite scroll case",
-          "Minor master scroll case",
-          "Minor medium scroll case"
+          "Minor master scroll case"
         ],
-        "obtained_count": 4,
+        "obtained_count": 5,
         "total_count": 13
       },
       "Barbarian Assault": {
@@ -2175,7 +2179,7 @@
           {
             "name": "Abyssal pearls",
             "date": "2025-07-27",
-            "quantity": 1595
+            "quantity": 1756
           },
           {
             "name": "Catalytic talisman",
@@ -5229,9 +5233,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 487,
+    "total_obtained": 488,
     "total_items": 1721,
     "recent_items": [
+      {
+        "name": "Minor medium scroll case",
+        "date": "2026-02-27 02:32:02",
+        "collection": "scroll_cases"
+      },
       {
         "name": "Pristine spider silk",
         "date": "2026-02-26 02:09:52",
@@ -5326,11 +5335,6 @@
         "name": "Fresh crab shell",
         "date": "2026-02-11 01:41:53",
         "collection": "miscellaneous"
-      },
-      {
-        "name": "Zamorak platebody",
-        "date": "2026-02-10 22:59:44",
-        "collection": "hard_treasure_trails"
       }
     ],
     "source": "templeosrs"
