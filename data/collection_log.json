@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-03-01T03:23:53.923724+00:00",
+  "updated": "2026-03-01T03:38:43.628605+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -216,6 +216,11 @@
       "Cerberus": {
         "obtained": [
           {
+            "name": "Pegasian crystal",
+            "date": "2026-03-01 03:24:59",
+            "quantity": 1
+          },
+          {
             "name": "Primordial crystal",
             "date": "2026-01-18 02:04:56",
             "quantity": 1
@@ -233,10 +238,9 @@
         ],
         "missing": [
           "Eternal crystal",
-          "Jar of souls",
-          "Pegasian crystal"
+          "Jar of souls"
         ],
-        "obtained_count": 3,
+        "obtained_count": 4,
         "total_count": 6
       },
       "Chaos Elemental": {
@@ -5249,9 +5253,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 490,
+    "total_obtained": 491,
     "total_items": 1722,
     "recent_items": [
+      {
+        "name": "Pegasian crystal",
+        "date": "2026-03-01 03:24:59",
+        "collection": "cerberus"
+      },
       {
         "name": "Saradomin page 3",
         "date": "2026-02-28 22:22:15",
@@ -5346,11 +5355,6 @@
         "name": "Graceful hood",
         "date": "2026-02-13 04:29:42",
         "collection": "rooftop_agility"
-      },
-      {
-        "name": "Mokhaiotl cloth",
-        "date": "2026-02-12 04:58:11",
-        "collection": "doom_of_mokhaiotl"
       }
     ],
     "source": "templeosrs"
