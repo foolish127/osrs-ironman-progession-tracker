@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-02-28T18:34:57.359021+00:00",
+  "updated": "2026-03-01T02:28:35.258956+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -158,7 +158,7 @@
           {
             "name": "Dharok's greataxe",
             "date": "2025-09-06",
-            "quantity": 4
+            "quantity": 5
           },
           {
             "name": "Torag's hammers",
@@ -228,7 +228,7 @@
           {
             "name": "Key master teleport",
             "date": "2026-01-02",
-            "quantity": 28
+            "quantity": 35
           }
         ],
         "missing": [
@@ -308,12 +308,12 @@
           {
             "name": "Mokhaiotl waystone",
             "date": "2026-02-10 03:26:40",
-            "quantity": 35
+            "quantity": 48
           },
           {
             "name": "Demon tear",
             "date": "2026-02-10 03:26:40",
-            "quantity": 13925
+            "quantity": 18420
           }
         ],
         "missing": [
@@ -358,12 +358,12 @@
           {
             "name": "Crystal armour seed",
             "date": "2025-09-20",
-            "quantity": 17
+            "quantity": 18
           },
           {
             "name": "Crystal weapon seed",
             "date": "2025-09-21",
-            "quantity": 13
+            "quantity": 14
           },
           {
             "name": "Gauntlet cape",
@@ -677,7 +677,7 @@
           {
             "name": "Ancient shard",
             "date": "2025-07-29",
-            "quantity": 109
+            "quantity": 112
           }
         ],
         "missing": [
@@ -1835,6 +1835,11 @@
             "quantity": 3
           },
           {
+            "name": "Saradomin page 3",
+            "date": "2026-02-28 22:22:15",
+            "quantity": 1
+          },
+          {
             "name": "Zamorak page 3",
             "date": "2025-09-19",
             "quantity": 5
@@ -2011,8 +2016,8 @@
           }
         ],
         "missing": [],
-        "obtained_count": 47,
-        "total_count": 47
+        "obtained_count": 48,
+        "total_count": 48
       },
       "Scroll Cases": {
         "obtained": [
@@ -3489,7 +3494,7 @@
           {
             "name": "Black boots",
             "date": "2025-08-01",
-            "quantity": 24
+            "quantity": 25
           },
           {
             "name": "Adamant boots",
@@ -3682,17 +3687,17 @@
           {
             "name": "Dark totem base",
             "date": "2025-07-28",
-            "quantity": 34
+            "quantity": 36
           },
           {
             "name": "Dark totem middle",
             "date": "2025-07-29",
-            "quantity": 33
+            "quantity": 35
           },
           {
             "name": "Dark totem top",
             "date": "2025-08-01",
-            "quantity": 33
+            "quantity": 35
           },
           {
             "name": "Shield left half",
@@ -3737,7 +3742,7 @@
           {
             "name": "Hespori seed",
             "date": "2025-07-21",
-            "quantity": 239
+            "quantity": 241
           },
           {
             "name": "Fresh crab claw",
@@ -4813,11 +4818,10 @@
       "Shared Treasure Trails Rewards": {
         "obtained": [],
         "missing": [
-          "Ancient blessing",
-          "Saradomin page 3"
+          "Ancient blessing"
         ],
         "obtained_count": 0,
-        "total_count": 2
+        "total_count": 1
       },
       "Shellbane Gryphon, All Pets": {
         "obtained": [],
@@ -5245,9 +5249,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 489,
+    "total_obtained": 490,
     "total_items": 1722,
     "recent_items": [
+      {
+        "name": "Saradomin page 3",
+        "date": "2026-02-28 22:22:15",
+        "collection": "shared_treasure_trail_rewards"
+      },
       {
         "name": "Mooleta",
         "date": "2026-02-27 17:05:47",
@@ -5342,11 +5351,6 @@
         "name": "Mokhaiotl cloth",
         "date": "2026-02-12 04:58:11",
         "collection": "doom_of_mokhaiotl"
-      },
-      {
-        "name": "Zamorak page 1",
-        "date": "2026-02-11 02:07:39",
-        "collection": "shared_treasure_trail_rewards"
       }
     ],
     "source": "templeosrs"
