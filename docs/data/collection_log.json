@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-03-05T02:10:49.273468+00:00",
+  "updated": "2026-03-05T02:53:17.944663+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -1120,6 +1120,11 @@
       "Medium Treasure Trails": {
         "obtained": [
           {
+            "name": "Ranger boots",
+            "date": "2026-03-05 02:41:42",
+            "quantity": 1
+          },
+          {
             "name": "Wizard boots",
             "date": "2026-03-01 18:50:07",
             "quantity": 1
@@ -1133,6 +1138,11 @@
             "name": "Adamant full helm (t)",
             "date": "2025-11-12",
             "quantity": 2
+          },
+          {
+            "name": "Adamant platebody (t)",
+            "date": "2026-03-05 02:41:42",
+            "quantity": 1
           },
           {
             "name": "Adamant full helm (g)",
@@ -1334,7 +1344,6 @@
           "Adamant platebody (h3)",
           "Adamant platebody (h4)",
           "Adamant platebody (h5)",
-          "Adamant platebody (t)",
           "Adamant platelegs (g)",
           "Adamant platelegs (t)",
           "Adamant plateskirt (t)",
@@ -1387,7 +1396,6 @@
           "Purple elegant legs",
           "Purple elegant shirt",
           "Purple elegant skirt",
-          "Ranger boots",
           "Red headband",
           "Saradomin cloak",
           "Shayzien banner",
@@ -1397,7 +1405,7 @@
           "Wolf mask",
           "Zamorak mitre"
         ],
-        "obtained_count": 40,
+        "obtained_count": 42,
         "total_count": 115
       },
       "Hard Treasure Trails": {
@@ -5319,9 +5327,19 @@
         "total_count": 1
       }
     },
-    "total_obtained": 509,
+    "total_obtained": 511,
     "total_items": 1721,
     "recent_items": [
+      {
+        "name": "Ranger boots",
+        "date": "2026-03-05 02:41:42",
+        "collection": "medium_treasure_trails"
+      },
+      {
+        "name": "Adamant platebody (t)",
+        "date": "2026-03-05 02:41:42",
+        "collection": "medium_treasure_trails"
+      },
       {
         "name": "Bandos mitre",
         "date": "2026-03-05 01:26:41",
@@ -5411,16 +5429,6 @@
         "name": "White elegant blouse",
         "date": "2026-03-01 04:46:43",
         "collection": "medium_treasure_trails"
-      },
-      {
-        "name": "Pegasian crystal",
-        "date": "2026-03-01 03:24:59",
-        "collection": "cerberus"
-      },
-      {
-        "name": "Saradomin page 3",
-        "date": "2026-02-28 22:22:15",
-        "collection": "shared_treasure_trail_rewards"
       }
     ],
     "source": "templeosrs"
