@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-03-04T02:07:27.401408+00:00",
+  "updated": "2026-03-05T02:10:49.273468+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -1220,6 +1220,11 @@
             "quantity": 1
           },
           {
+            "name": "Bandos mitre",
+            "date": "2026-03-05 01:26:41",
+            "quantity": 1
+          },
+          {
             "name": "Bandos crozier",
             "date": "2026-01-13",
             "quantity": 2
@@ -1342,7 +1347,6 @@
           "Armadyl crozier",
           "Armadyl stole",
           "Bandos cloak",
-          "Bandos mitre",
           "Bandos stole",
           "Black boater",
           "Black elegant legs",
@@ -1393,7 +1397,7 @@
           "Wolf mask",
           "Zamorak mitre"
         ],
-        "obtained_count": 39,
+        "obtained_count": 40,
         "total_count": 115
       },
       "Hard Treasure Trails": {
@@ -2961,13 +2965,17 @@
             "name": "Guild hunter top",
             "date": "2025-10-20",
             "quantity": 1
+          },
+          {
+            "name": "Guild hunter legs",
+            "date": "2026-03-04 03:55:45",
+            "quantity": 1
           }
         ],
         "missing": [
-          "Guild hunter boots",
-          "Guild hunter legs"
+          "Guild hunter boots"
         ],
-        "obtained_count": 3,
+        "obtained_count": 4,
         "total_count": 5
       },
       "Lost Schematics": {
@@ -3454,12 +3462,15 @@
             "name": "Celestial ring (uncharged)",
             "date": "2025-07-16",
             "quantity": 1
+          },
+          {
+            "name": "Star fragment",
+            "date": "2026-03-04 17:37:36",
+            "quantity": 1
           }
         ],
-        "missing": [
-          "Star fragment"
-        ],
-        "obtained_count": 1,
+        "missing": [],
+        "obtained_count": 2,
         "total_count": 2
       },
       "Skilling Pets": {
@@ -5308,9 +5319,24 @@
         "total_count": 1
       }
     },
-    "total_obtained": 506,
+    "total_obtained": 509,
     "total_items": 1721,
     "recent_items": [
+      {
+        "name": "Bandos mitre",
+        "date": "2026-03-05 01:26:41",
+        "collection": "medium_treasure_trails"
+      },
+      {
+        "name": "Star fragment",
+        "date": "2026-03-04 17:37:36",
+        "collection": "shooting_stars"
+      },
+      {
+        "name": "Guild hunter legs",
+        "date": "2026-03-04 03:55:45",
+        "collection": "hunter_guild"
+      },
       {
         "name": "Mithril boots",
         "date": "2026-03-03 21:32:03",
@@ -5395,21 +5421,6 @@
         "name": "Saradomin page 3",
         "date": "2026-02-28 22:22:15",
         "collection": "shared_treasure_trail_rewards"
-      },
-      {
-        "name": "Mooleta",
-        "date": "2026-02-27 17:05:47",
-        "collection": "brutus"
-      },
-      {
-        "name": "Minor medium scroll case",
-        "date": "2026-02-27 02:32:02",
-        "collection": "scroll_cases"
-      },
-      {
-        "name": "Pristine spider silk",
-        "date": "2026-02-26 02:09:52",
-        "collection": "sarachnis"
       }
     ],
     "source": "templeosrs"
