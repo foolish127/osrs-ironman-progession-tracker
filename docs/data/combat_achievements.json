@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-03-23T02:26:18.432094+00:00",
+  "updated": "2026-03-23T03:12:59.187394+00:00",
   "combat_achievements": {
     "tiers": {
       "Easy": {
@@ -992,6 +992,10 @@
           {
             "name": "Perfect Crystalline Hunllef",
             "date": "2025-09-17"
+          },
+          {
+            "name": "Unrequired Antipoisons",
+            "date": "2026-03-19"
           }
         ],
         "not_completed": [
@@ -1135,7 +1139,6 @@
           "Two-Down",
           "TzHaar-Ket-Rak's Speed-Chaser",
           "Undying Raider",
-          "Unrequired Antipoisons",
           "Vardorvis Master",
           "Vardorvis Speed-Chaser",
           "Vorkath Master",
@@ -1152,10 +1155,10 @@
           "Zulrah Master",
           "Zulrah Speed-Chaser"
         ],
-        "completed_count": 12,
+        "completed_count": 13,
         "total_count": 168,
         "points_per_task": 5,
-        "points_earned": 60
+        "points_earned": 65
       },
       "Grandmaster": {
         "completed": [
@@ -1298,9 +1301,9 @@
         "points_earned": 18
       }
     },
-    "total_completed": 199,
+    "total_completed": 200,
     "total_tasks": 637,
-    "total_points": 532,
+    "total_points": 537,
     "max_points": 2630,
     "recent_tasks": [
       {
@@ -1315,6 +1318,11 @@
       },
       {
         "name": "Mixing Correctly",
+        "date": "2026-03-19",
+        "tier": "Master"
+      },
+      {
+        "name": "Unrequired Antipoisons",
         "date": "2026-03-19",
         "tier": "Master"
       },
@@ -1397,11 +1405,6 @@
         "name": "Zulrah Adept",
         "date": "2026-02-01",
         "tier": "Hard"
-      },
-      {
-        "name": "Araxxor Veteran",
-        "date": "2026-02-01",
-        "tier": "Elite"
       }
     ]
   }
