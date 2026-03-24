@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-03-24T02:11:15.881744+00:00",
+  "updated": "2026-03-24T02:15:01.567016+00:00",
   "combat_achievements": {
     "tiers": {
       "Easy": {
@@ -671,6 +671,10 @@
             "date": "2025-09-16"
           },
           {
+            "name": "Alchemical Veteran",
+            "date": "2026-03-19"
+          },
+          {
             "name": "Anti-Bite Mechanics",
             "date": "2026-01-02"
           },
@@ -814,7 +818,6 @@
         "not_completed": [
           "A Near Miss!",
           "Abyssal Veteran",
-          "Alchemical Veteran",
           "Amoxliatl Speed-Chaser",
           "Anticoagulants",
           "Appropriate Tools",
@@ -938,10 +941,10 @@
           "Zulrah Speed-Trialist",
           "Zulrah Veteran"
         ],
-        "completed_count": 37,
+        "completed_count": 38,
         "total_count": 162,
         "points_per_task": 4,
-        "points_earned": 148
+        "points_earned": 152
       },
       "Master": {
         "completed": [
@@ -1301,11 +1304,16 @@
         "points_earned": 18
       }
     },
-    "total_completed": 200,
+    "total_completed": 201,
     "total_tasks": 637,
-    "total_points": 537,
+    "total_points": 541,
     "max_points": 2630,
     "recent_tasks": [
+      {
+        "name": "Alchemical Veteran",
+        "date": "2026-03-19",
+        "tier": "Elite"
+      },
       {
         "name": "Don't Flame Me",
         "date": "2026-03-19",
@@ -1400,11 +1408,6 @@
         "name": "Araxxor Speed-Trialist",
         "date": "2026-02-02",
         "tier": "Elite"
-      },
-      {
-        "name": "Zulrah Adept",
-        "date": "2026-02-01",
-        "tier": "Hard"
       }
     ]
   }
