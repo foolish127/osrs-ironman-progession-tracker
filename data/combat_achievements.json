@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-03-25T02:23:58.815285+00:00",
+  "updated": "2026-03-26T02:29:54.788313+00:00",
   "combat_achievements": {
     "tiers": {
       "Easy": {
@@ -949,6 +949,10 @@
       "Master": {
         "completed": [
           {
+            "name": "Alchemical Master",
+            "date": "2026-03-24"
+          },
+          {
             "name": "Araxxor Master",
             "date": "2026-02-01"
           },
@@ -1006,7 +1010,6 @@
           "A Not So Special Lizard",
           "A siphon will solve this",
           "A Timely Snack",
-          "Alchemical Master",
           "Alchemical Speed-Chaser",
           "Alcleanical Hydra",
           "All out of medics",
@@ -1158,10 +1161,10 @@
           "Zulrah Master",
           "Zulrah Speed-Chaser"
         ],
-        "completed_count": 13,
+        "completed_count": 14,
         "total_count": 168,
         "points_per_task": 5,
-        "points_earned": 65
+        "points_earned": 70
       },
       "Grandmaster": {
         "completed": [
@@ -1304,11 +1307,16 @@
         "points_earned": 18
       }
     },
-    "total_completed": 201,
+    "total_completed": 202,
     "total_tasks": 637,
-    "total_points": 541,
+    "total_points": 546,
     "max_points": 2630,
     "recent_tasks": [
+      {
+        "name": "Alchemical Master",
+        "date": "2026-03-24",
+        "tier": "Master"
+      },
       {
         "name": "Alchemical Veteran",
         "date": "2026-03-19",
@@ -1403,11 +1411,6 @@
         "name": "Shellbane Veteran",
         "date": "2026-02-05",
         "tier": "Medium"
-      },
-      {
-        "name": "Araxxor Speed-Trialist",
-        "date": "2026-02-02",
-        "tier": "Elite"
       }
     ]
   }
