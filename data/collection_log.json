@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-03-27T13:09:48.758215+00:00",
+  "updated": "2026-03-27T18:57:39.039348+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -613,6 +613,23 @@
         "missing": [],
         "obtained_count": 13,
         "total_count": 13
+      },
+      "Phantom Muspah": {
+        "obtained": [
+          {
+            "name": "Ancient essence",
+            "date": "2026-03-27 18:01:31",
+            "quantity": 920
+          }
+        ],
+        "missing": [
+          "Ancient icon",
+          "Charged ice",
+          "Frozen cache",
+          "Venator shard"
+        ],
+        "obtained_count": 1,
+        "total_count": 5
       },
       "Royal Titans": {
         "obtained": [
@@ -4845,18 +4862,6 @@
         "obtained_count": 0,
         "total_count": 11
       },
-      "Phantom Muspah": {
-        "obtained": [],
-        "missing": [
-          "Ancient essence",
-          "Ancient icon",
-          "Charged ice",
-          "Frozen cache",
-          "Venator shard"
-        ],
-        "obtained_count": 0,
-        "total_count": 5
-      },
       "Phantom Muspah, All Pets": {
         "obtained": [],
         "missing": [
@@ -5381,9 +5386,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 522,
+    "total_obtained": 523,
     "total_items": 1723,
     "recent_items": [
+      {
+        "name": "Ancient essence",
+        "date": "2026-03-27 18:01:31",
+        "collection": "phantom_muspah"
+      },
       {
         "name": "Hydra's fang",
         "date": "2026-03-26 19:23:46",
@@ -5478,11 +5488,6 @@
         "name": "Mithril boots",
         "date": "2026-03-03 21:32:03",
         "collection": "slayer"
-      },
-      {
-        "name": "Huntsman's kit",
-        "date": "2026-03-01 21:03:11",
-        "collection": "hunter_guild"
       }
     ],
     "source": "templeosrs"
