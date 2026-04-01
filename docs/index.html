@@ -140,10 +140,12 @@
         .ca-tier-tasks { display: none; padding: 0.75rem 1rem; border-top: 1px solid var(--border); background: var(--bg-dark); }
         .ca-tier.expanded .ca-tier-tasks { display: block; }
         .pets-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.75rem; }
-        .pet-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; text-align: center; }
+        .pet-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; text-align: center; position: relative; }
         .pet-card.obtained { border-color: var(--accent-green); background: rgba(63, 185, 80, 0.1); }
         .pet-card.missing { opacity: 0.6; }
-        .pet-card .pet-notes { color: var(--text-secondary); font-size: 0.72rem; font-style: italic; margin-top: 0.25rem; }
+        .pet-card .pet-tooltip { display: none; position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--bg-secondary); border: 1px solid var(--accent-green); border-radius: 6px; padding: 0.5rem 0.75rem; font-size: 0.75rem; color: var(--text-secondary); font-style: italic; white-space: nowrap; z-index: 100; pointer-events: none; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+        .pet-card .pet-tooltip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 6px solid transparent; border-top-color: var(--accent-green); }
+        .pet-card:hover .pet-tooltip { display: block; }
         .pet-name { font-weight: 500; margin-bottom: 0.25rem; }
         .pet-card.obtained .pet-name { color: var(--accent-green); }
         .pet-source { font-size: 0.8rem; color: var(--text-muted); }
@@ -1478,10 +1480,10 @@
             
             grid.innerHTML = pets.map(p => `
                 <div class="pet-card ${p.obtained ? 'obtained' : 'missing'}">
+                    ${p.notes ? `<div class="pet-tooltip">${p.notes}</div>` : ''}
                     <div class="pet-name">${p.name}</div>
                     ${p.source ? `<div class="pet-source">${p.source}</div>` : ''}
                     ${p.date ? `<div class="pet-date">${formatShortDate(p.date)}</div>` : ''}
-                    ${p.notes ? `<div class="pet-notes">${p.notes}</div>` : ''}
                 </div>
             `).join('') || '<div class="empty-state">No pets match your search</div>';
         }
