@@ -917,14 +917,7 @@
             renderPets();
             renderQuests();
             if (diariesRes) renderDiaries(diariesRes);
-            if (boatyGuideRes) {
-                boatyGuide = boatyGuideRes;
-                if (boatyProgressRes) parseBoatyProgress(boatyProgressRes);
-                renderBoatyGuide();
-            }
-            if (goalsRes) renderGoals(goalsRes);
             if (dropsRes) renderDrops(dropsRes);
-            renderProgression(dropsRes);
             if (bankRes) renderBank(bankRes, potionStorageRes, seedVaultRes);
         }
 
