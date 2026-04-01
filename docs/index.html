@@ -74,17 +74,28 @@
         .boss-bar-kc { font-family: 'Fira Code', monospace; font-size: 0.75rem; color: var(--text-muted); width: 70px; text-align: right; flex-shrink: 0; }
         .boss-name { font-size: 0.8rem; color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 1; margin-right: 0.5rem; }
         .boss-kc { font-family: 'Fira Code', monospace; font-size: 0.9rem; color: var(--accent-gold); }
-        .clues-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.5rem; }
-        .clue-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 0.6rem 0.75rem; display: flex; justify-content: space-between; align-items: center; }
-        .clue-item.beginner { border-left: 3px solid #8b8b8b; }
-        .clue-item.easy { border-left: 3px solid #3fb950; }
-        .clue-item.medium { border-left: 3px solid #58a6ff; }
-        .clue-item.hard { border-left: 3px solid #a371f7; }
-        .clue-item.elite { border-left: 3px solid #d4a84b; }
-        .clue-item.master { border-left: 3px solid #f85149; }
-        .clue-item.all { border-left: 3px solid #e6edf3; }
-        .clue-name { font-size: 0.8rem; color: var(--text-secondary); }
-        .clue-count { font-family: 'Fira Code', monospace; font-size: 0.9rem; color: var(--accent-gold); }
+        .clues-grid { display: flex; flex-direction: column; gap: 1rem; }
+        .clue-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; }
+        .clue-card.all { border-left: 4px solid #e6edf3; }
+        .clue-card.beginner { border-left: 4px solid #8b8b8b; }
+        .clue-card.easy { border-left: 4px solid #3fb950; }
+        .clue-card.medium { border-left: 4px solid #58a6ff; }
+        .clue-card.hard { border-left: 4px solid #a371f7; }
+        .clue-card.elite { border-left: 4px solid #d4a84b; }
+        .clue-card.master { border-left: 4px solid #f85149; }
+        .clue-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.6rem; }
+        .clue-icon { font-size: 1.4rem; }
+        .clue-label { font-size: 0.85rem; color: var(--text-secondary); text-transform: capitalize; flex: 1; }
+        .clue-count { font-family: 'Fira Code', monospace; font-size: 1.1rem; color: var(--accent-gold); font-weight: 600; }
+        .clue-bar-track { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+        .clue-bar-fill { height: 100%; border-radius: 3px; transition: width 0.4s ease; }
+        .clue-card.all .clue-bar-fill { background: #e6edf3; }
+        .clue-card.beginner .clue-bar-fill { background: #8b8b8b; }
+        .clue-card.easy .clue-bar-fill { background: #3fb950; }
+        .clue-card.medium .clue-bar-fill { background: #58a6ff; }
+        .clue-card.hard .clue-bar-fill { background: #a371f7; }
+        .clue-card.elite .clue-bar-fill { background: #d4a84b; }
+        .clue-card.master .clue-bar-fill { background: #f85149; }
         .progress-section { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; margin-bottom: 1.5rem; }
         .progress-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
         .progress-title { font-size: 1rem; font-weight: 500; }
@@ -531,10 +542,7 @@
             <button class="nav-tab" data-tab="pets">Pets</button>
             <button class="nav-tab" data-tab="quests">Quests</button>
             <button class="nav-tab" data-tab="diaries">Diaries</button>
-            <button class="nav-tab" data-tab="boaty">B0aty Guide</button>
-            <button class="nav-tab" data-tab="goals">Goals</button>
             <button class="nav-tab" data-tab="drops">Drops</button>
-            <button class="nav-tab" data-tab="progression">Progression</button>
             <button class="nav-tab" data-tab="bank">Bank</button>
         </nav>
 
@@ -572,20 +580,8 @@
             <div id="diariesContainer">Loading...</div>
         </div>
 
-        <div id="boaty" class="tab-content">
-            <div id="boatyContainer">Loading...</div>
-        </div>
-
-        <div id="goals" class="tab-content">
-            <div id="goalsContainer">Loading...</div>
-        </div>
-
         <div id="drops" class="tab-content">
             <div id="dropsContainer">Loading...</div>
-        </div>
-
-        <div id="progression" class="tab-content">
-            <div id="progressionContainer">Loading...</div>
         </div>
 
         <div id="bank" class="tab-content protected-tab">
@@ -650,8 +646,7 @@
 
         function formatShortDate(dateStr) {
             if (!dateStr) return '';
-            const [year, month, day] = dateStr.split('-').map(Number);
-            const d = new Date(year, month - 1, day);
+            const d = new Date(dateStr);
             return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
         }
 
@@ -994,35 +989,32 @@
                 grid.innerHTML = '<div class="empty-state">Clue scroll data not available</div>';
                 return;
             }
-            
-            const order = ['Clue Scrolls (all)', 'Clue Scrolls (beginner)', 'Clue Scrolls (easy)', 
-                          'Clue Scrolls (medium)', 'Clue Scrolls (hard)', 'Clue Scrolls (elite)', 'Clue Scrolls (master)'];
-            
-            const getTier = name => {
-                if (name.includes('beginner')) return 'beginner';
-                if (name.includes('easy')) return 'easy';
-                if (name.includes('medium')) return 'medium';
-                if (name.includes('hard')) return 'hard';
-                if (name.includes('elite')) return 'elite';
-                if (name.includes('master')) return 'master';
-                return 'all';
-            };
-            
-            const sorted = Object.entries(cluesData).sort((a, b) => {
-                const aIdx = order.indexOf(a[0]);
-                const bIdx = order.indexOf(b[0]);
-                if (aIdx >= 0 && bIdx >= 0) return aIdx - bIdx;
-                if (aIdx >= 0) return -1;
-                if (bIdx >= 0) return 1;
-                return b[1].count - a[1].count;
-            });
-            
-            grid.innerHTML = sorted.map(([name, data]) => {
-                const tier = getTier(name);
-                const displayName = name.replace('Clue Scrolls ', '').replace('(', '').replace(')', '');
-                return `<div class="clue-item ${tier}">
-                    <span class="clue-name">${displayName}</span>
-                    <span class="clue-count">${data.count.toLocaleString()}</span>
+
+            const tiers = [
+                { key: 'Clue Scrolls (all)',      tier: 'all',      icon: '🗺️', label: 'All Caskets' },
+                { key: 'Clue Scrolls (beginner)', tier: 'beginner', icon: '📜', label: 'Beginner' },
+                { key: 'Clue Scrolls (easy)',     tier: 'easy',     icon: '🟢', label: 'Easy' },
+                { key: 'Clue Scrolls (medium)',   tier: 'medium',   icon: '🔵', label: 'Medium' },
+                { key: 'Clue Scrolls (hard)',     tier: 'hard',     icon: '🟣', label: 'Hard' },
+                { key: 'Clue Scrolls (elite)',    tier: 'elite',    icon: '🥇', label: 'Elite' },
+                { key: 'Clue Scrolls (master)',   tier: 'master',   icon: '💀', label: 'Master' },
+            ];
+
+            const allCount = cluesData['Clue Scrolls (all)']?.count || 0;
+
+            grid.innerHTML = tiers.map(({ key, tier, icon, label }) => {
+                const count = cluesData[key]?.count || 0;
+                const pct = allCount > 0 ? Math.min(100, (count / allCount) * 100) : 0;
+                return `
+                <div class="clue-card ${tier}">
+                    <div class="clue-header">
+                        <span class="clue-icon">${icon}</span>
+                        <span class="clue-label">${label}</span>
+                        <span class="clue-count">${count.toLocaleString()}</span>
+                    </div>
+                    <div class="clue-bar-track">
+                        <div class="clue-bar-fill" style="width:${tier === 'all' ? 100 : pct}%"></div>
+                    </div>
                 </div>`;
             }).join('');
         }
