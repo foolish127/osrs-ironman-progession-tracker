@@ -143,6 +143,7 @@
         .pet-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; text-align: center; }
         .pet-card.obtained { border-color: var(--accent-green); background: rgba(63, 185, 80, 0.1); }
         .pet-card.missing { opacity: 0.6; }
+        .pet-card .pet-notes { color: var(--text-secondary); font-size: 0.72rem; font-style: italic; margin-top: 0.25rem; }
         .pet-name { font-weight: 500; margin-bottom: 0.25rem; }
         .pet-card.obtained .pet-name { color: var(--accent-green); }
         .pet-source { font-size: 0.8rem; color: var(--text-muted); }
@@ -1406,6 +1407,11 @@
                         <option value="obtained">Obtained Only</option>
                         <option value="missing">Missing Only</option>
                     </select>
+                    <select class="filter-select" id="petSort">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="alpha">A → Z</option>
+                    </select>
                 </div>
                 <div class="pets-grid" id="petsGrid"></div>`;
             
@@ -1413,6 +1419,7 @@
             
             document.getElementById('petSearch').addEventListener('input', renderPetGrid);
             document.getElementById('petFilter').addEventListener('change', renderPetGrid);
+            document.getElementById('petSort').addEventListener('change', renderPetGrid);
             
             renderPetGrid();
         }
@@ -1421,6 +1428,7 @@
             const grid = document.getElementById('petsGrid');
             const search = document.getElementById('petSearch').value.toLowerCase();
             const filter = document.getElementById('petFilter').value;
+            const sort = document.getElementById('petSort').value;
             
             let pets = [];
             
@@ -1429,6 +1437,7 @@
                     name: p.name || p,
                     date: p.date,
                     source: p.source,
+                    notes: p.notes,
                     obtained: true
                 })));
             }
@@ -1444,14 +1453,27 @@
             if (search) {
                 pets = pets.filter(p => 
                     p.name.toLowerCase().includes(search) || 
-                    (p.source && p.source.toLowerCase().includes(search))
+                    (p.source && p.source.toLowerCase().includes(search)) ||
+                    (p.notes && p.notes.toLowerCase().includes(search))
                 );
             }
             
-            // Sort: obtained first, then alphabetically
+            // Sort: obtained always first, then by selected sort within each group
             pets.sort((a, b) => {
                 if (a.obtained !== b.obtained) return b.obtained - a.obtained;
-                return a.name.localeCompare(b.name);
+                if (sort === 'oldest') {
+                    if (!a.date && !b.date) return a.name.localeCompare(b.name);
+                    if (!a.date) return 1;
+                    if (!b.date) return -1;
+                    return a.date.localeCompare(b.date);
+                } else if (sort === 'newest') {
+                    if (!a.date && !b.date) return a.name.localeCompare(b.name);
+                    if (!a.date) return 1;
+                    if (!b.date) return -1;
+                    return b.date.localeCompare(a.date);
+                } else {
+                    return a.name.localeCompare(b.name);
+                }
             });
             
             grid.innerHTML = pets.map(p => `
@@ -1459,6 +1481,7 @@
                     <div class="pet-name">${p.name}</div>
                     ${p.source ? `<div class="pet-source">${p.source}</div>` : ''}
                     ${p.date ? `<div class="pet-date">${formatShortDate(p.date)}</div>` : ''}
+                    ${p.notes ? `<div class="pet-notes">${p.notes}</div>` : ''}
                 </div>
             `).join('') || '<div class="empty-state">No pets match your search</div>';
         }
