@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-04-01T13:25:00.505104+00:00",
+  "updated": "2026-04-01T14:05:25.228385+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -334,12 +334,12 @@
           {
             "name": "Mokhaiotl waystone",
             "date": "2026-02-10 03:26:40",
-            "quantity": 51
+            "quantity": 64
           },
           {
             "name": "Demon tear",
             "date": "2026-02-10 03:26:40",
-            "quantity": 22002
+            "quantity": 28056
           }
         ],
         "missing": [
@@ -384,12 +384,12 @@
           {
             "name": "Crystal armour seed",
             "date": "2025-09-20",
-            "quantity": 21
+            "quantity": 22
           },
           {
             "name": "Crystal weapon seed",
             "date": "2025-09-21",
-            "quantity": 15
+            "quantity": 17
           },
           {
             "name": "Gauntlet cape",
@@ -452,7 +452,7 @@
           {
             "name": "Iasor seed",
             "date": "2025-08-28",
-            "quantity": 60
+            "quantity": 65
           },
           {
             "name": "Kronos seed",
@@ -2694,6 +2694,11 @@
             "quantity": 1
           },
           {
+            "name": "Rock golem",
+            "date": "2026-04-01 13:40:05",
+            "quantity": 1
+          },
+          {
             "name": "Beaver",
             "date": "2026-01-22 01:35:12",
             "quantity": 1
@@ -2705,8 +2710,8 @@
           }
         ],
         "missing": [],
-        "obtained_count": 3,
-        "total_count": 3
+        "obtained_count": 4,
+        "total_count": 4
       },
       "Boat Paints": {
         "obtained": [
@@ -3242,7 +3247,7 @@
           {
             "name": "Mark of grace",
             "date": "2025-07-24",
-            "quantity": 155
+            "quantity": 160
           },
           {
             "name": "Graceful hood",
@@ -3278,7 +3283,7 @@
           {
             "name": "Dragon nails",
             "date": "2025-12-03",
-            "quantity": 105
+            "quantity": 108
           },
           {
             "name": "Dragon cannonball",
@@ -3293,7 +3298,7 @@
           {
             "name": "Facility bottle (empty)",
             "date": "2026-02-10 15:36:46",
-            "quantity": 12
+            "quantity": 13
           }
         ],
         "missing": [
@@ -3537,6 +3542,11 @@
       "Skilling Pets": {
         "obtained": [
           {
+            "name": "Rock golem",
+            "date": "2026-04-01 13:40:05",
+            "quantity": 1
+          },
+          {
             "name": "Beaver",
             "date": "2026-01-22 01:35:12",
             "quantity": 1
@@ -3548,8 +3558,8 @@
           }
         ],
         "missing": [],
-        "obtained_count": 2,
-        "total_count": 2
+        "obtained_count": 3,
+        "total_count": 3
       },
       "Slayer": {
         "obtained": [
@@ -3898,7 +3908,7 @@
           {
             "name": "Hespori seed",
             "date": "2025-07-21",
-            "quantity": 261
+            "quantity": 266
           },
           {
             "name": "Fresh crab claw",
@@ -4031,11 +4041,10 @@
           "Giant squirrel",
           "Heron",
           "Rift guardian (fire)",
-          "Rock golem",
           "Tangleroot"
         ],
         "obtained_count": 0,
-        "total_count": 6
+        "total_count": 5
       },
       "Amoxliatl, All Pets": {
         "obtained": [],
@@ -5386,9 +5395,19 @@
         "total_count": 1
       }
     },
-    "total_obtained": 523,
-    "total_items": 1723,
+    "total_obtained": 524,
+    "total_items": 1724,
     "recent_items": [
+      {
+        "name": "Rock golem",
+        "date": "2026-04-01 13:40:05",
+        "collection": "all_pets"
+      },
+      {
+        "name": "Rock golem",
+        "date": "2026-04-01 13:40:05",
+        "collection": "skilling_pets"
+      },
       {
         "name": "Ancient essence",
         "date": "2026-03-27 18:01:31",
@@ -5478,16 +5497,6 @@
         "name": "Star fragment",
         "date": "2026-03-04 17:37:36",
         "collection": "shooting_stars"
-      },
-      {
-        "name": "Guild hunter legs",
-        "date": "2026-03-04 03:55:45",
-        "collection": "hunter_guild"
-      },
-      {
-        "name": "Mithril boots",
-        "date": "2026-03-03 21:32:03",
-        "collection": "slayer"
       }
     ],
     "source": "templeosrs"
