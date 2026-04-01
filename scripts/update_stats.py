@@ -610,8 +610,9 @@ def extract_pets_from_clog(clog):
         'vasa minirio', 'metamorphic dust'
     }
     
-    # Load manual dates from pets.yaml for merging
+    # Load manual dates and notes from pets.yaml for merging
     manual_pet_dates = {}
+    manual_pet_notes = {}
     pets_yaml_path = DATA_DIR / "pets.yaml"
     if pets_yaml_path.exists():
         try:
@@ -621,6 +622,8 @@ def extract_pets_from_clog(clog):
             for pet in data.get('obtained', []):
                 if pet.get('date'):
                     manual_pet_dates[pet['name'].lower()] = pet['date']
+                if pet.get('notes'):
+                    manual_pet_notes[pet['name'].lower()] = pet['notes']
             # Also get missing pets from YAML for the full list
             for pet in data.get('missing', []):
                 pet_name = pet.get('name', pet) if isinstance(pet, dict) else pet
@@ -652,7 +655,8 @@ def extract_pets_from_clog(clog):
                     obtained.append({
                         'name': item_name,
                         'date': manual_date or clog_date,
-                        'source': source
+                        'source': source,
+                        'notes': manual_pet_notes.get(item_name.lower())
                     })
     
     if not obtained and not missing:
