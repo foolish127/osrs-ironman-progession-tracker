@@ -84,7 +84,7 @@
         .clue-card.elite { border-left: 4px solid #d4a84b; }
         .clue-card.master { border-left: 4px solid #f85149; }
         .clue-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.6rem; }
-        .clue-icon { font-size: 1.4rem; }
+        .clue-icon { width: 36px; height: 36px; object-fit: contain; image-rendering: pixelated; }
         .clue-label { font-size: 0.85rem; color: var(--text-secondary); text-transform: capitalize; flex: 1; }
         .clue-count { font-family: 'Fira Code', monospace; font-size: 1.1rem; color: var(--accent-gold); font-weight: 600; }
         .clue-bar-track { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
@@ -990,14 +990,15 @@
                 return;
             }
 
+            const BASE = 'https://oldschool.runescape.wiki/images/';
             const tiers = [
-                { key: 'Clue Scrolls (all)',      tier: 'all',      icon: '🗺️', label: 'All Caskets' },
-                { key: 'Clue Scrolls (beginner)', tier: 'beginner', icon: '📜', label: 'Beginner' },
-                { key: 'Clue Scrolls (easy)',     tier: 'easy',     icon: '🟢', label: 'Easy' },
-                { key: 'Clue Scrolls (medium)',   tier: 'medium',   icon: '🔵', label: 'Medium' },
-                { key: 'Clue Scrolls (hard)',     tier: 'hard',     icon: '🟣', label: 'Hard' },
-                { key: 'Clue Scrolls (elite)',    tier: 'elite',    icon: '🥇', label: 'Elite' },
-                { key: 'Clue Scrolls (master)',   tier: 'master',   icon: '💀', label: 'Master' },
+                { key: 'Clue Scrolls (all)',      tier: 'all',      icon: BASE + 'Reward_casket_(hard)_detail.png',     label: 'All Caskets' },
+                { key: 'Clue Scrolls (beginner)', tier: 'beginner', icon: BASE + 'Reward_casket_(beginner)_detail.png', label: 'Beginner' },
+                { key: 'Clue Scrolls (easy)',     tier: 'easy',     icon: BASE + 'Reward_casket_(easy)_detail.png',     label: 'Easy' },
+                { key: 'Clue Scrolls (medium)',   tier: 'medium',   icon: BASE + 'Reward_casket_(medium)_detail.png',   label: 'Medium' },
+                { key: 'Clue Scrolls (hard)',     tier: 'hard',     icon: BASE + 'Reward_casket_(hard)_detail.png',     label: 'Hard' },
+                { key: 'Clue Scrolls (elite)',    tier: 'elite',    icon: BASE + 'Reward_casket_(elite)_detail.png',    label: 'Elite' },
+                { key: 'Clue Scrolls (master)',   tier: 'master',   icon: BASE + 'Reward_casket_(master)_detail.png',   label: 'Master' },
             ];
 
             const allCount = cluesData['Clue Scrolls (all)']?.count || 0;
@@ -1008,7 +1009,7 @@
                 return `
                 <div class="clue-card ${tier}">
                     <div class="clue-header">
-                        <span class="clue-icon">${icon}</span>
+                        <img class="clue-icon" src="${icon}" alt="${label}" onerror="this.style.display='none'">
                         <span class="clue-label">${label}</span>
                         <span class="clue-count">${count.toLocaleString()}</span>
                     </div>
