@@ -447,17 +447,20 @@ def parse_pets_yaml(content):
         elif stripped.startswith('- ') and current_section:
             item_text = stripped[2:]
             if ' | ' in item_text:
-                parts = item_text.split(' | ', 1)
+                parts = item_text.split(' | ', 2)
                 name = parts[0].strip()
-                date = parts[1].strip() if parts[1].strip() else None
+                date = parts[1].strip() if len(parts) > 1 and parts[1].strip() else None
+                notes = parts[2].strip() if len(parts) > 2 and parts[2].strip() else None
             elif item_text.endswith(' |'):
                 name = item_text[:-2].strip()
                 date = None
+                notes = None
             else:
                 name = item_text.strip()
                 date = None
+                notes = None
             
-            result[current_section].append({'name': name, 'date': date})
+            result[current_section].append({'name': name, 'date': date, 'notes': notes})
     
     return result
 
