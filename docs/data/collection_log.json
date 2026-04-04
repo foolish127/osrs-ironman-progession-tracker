@@ -1,10 +1,15 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-04-03T20:12:16.837700+00:00",
+  "updated": "2026-04-04T01:11:32.981161+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
         "obtained": [
+          {
+            "name": "Unsired",
+            "date": "2026-04-04 01:04:19",
+            "quantity": 1
+          },
           {
             "name": "Abyssal whip",
             "date": "2025-12-16",
@@ -15,10 +20,9 @@
           "Bludgeon axon",
           "Bludgeon claw",
           "Bludgeon spine",
-          "Jar of miasma",
-          "Unsired"
+          "Jar of miasma"
         ],
-        "obtained_count": 1,
+        "obtained_count": 2,
         "total_count": 6
       },
       "Alchemical Hydra": {
@@ -5395,9 +5399,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 524,
+    "total_obtained": 525,
     "total_items": 1724,
     "recent_items": [
+      {
+        "name": "Unsired",
+        "date": "2026-04-04 01:04:19",
+        "collection": "abyssal_sire"
+      },
       {
         "name": "Rock golem",
         "date": "2026-04-01 13:40:05",
@@ -5492,11 +5501,6 @@
         "name": "Bandos mitre",
         "date": "2026-03-05 01:26:41",
         "collection": "medium_treasure_trails"
-      },
-      {
-        "name": "Star fragment",
-        "date": "2026-03-04 17:37:36",
-        "collection": "shooting_stars"
       }
     ],
     "source": "templeosrs"
