@@ -505,6 +505,52 @@
         @media (max-width: 480px) {
             .stats-overview { grid-template-columns: repeat(2, 1fr); }
         }
+
+        /* ───── Gearing Tab ───── */
+        .gear-style-tabs { display: flex; gap: 8px; margin-bottom: 1.5rem; }
+        .gear-tab { padding: 7px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--text-secondary); cursor: pointer; font-size: 0.875rem; font-weight: 500; transition: all 0.2s; }
+        .gear-tab:hover { color: var(--text-primary); border-color: var(--text-muted); }
+        .gear-tab.active { color: var(--accent-gold); border-color: var(--accent-gold); background: rgba(212,168,75,0.08); }
+        .gear-pane { display: none; }
+        .gear-pane.active { display: block; }
+        .gear-section-label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+        .gear-table-wrap { overflow-x: auto; margin-bottom: 2.5rem; }
+        .gear-table { width: 100%; border-collapse: collapse; min-width: 580px; }
+        .gear-table th { padding: 0.6rem 1rem; background: var(--bg-dark); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 1px solid var(--border); text-align: left; }
+        .gear-table th:first-child { width: 70px; color: var(--text-muted); }
+        .gear-table th.gcur { color: var(--accent-gold); border-bottom: 2px solid var(--accent-gold-dim); }
+        .gear-table th.glate { color: var(--accent-purple); border-bottom: 2px solid var(--accent-purple); }
+        .gear-table th.gend { color: var(--accent-red); border-bottom: 2px solid var(--accent-red); }
+        .gear-table td { padding: 0.5rem 1rem; border-bottom: 1px solid var(--border); font-size: 0.82rem; vertical-align: top; }
+        .gear-table tr:hover { background: rgba(255,255,255,0.02); }
+        .gear-table td:first-child { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); font-weight: 500; white-space: nowrap; }
+        .gear-table td.gcur { background: rgba(212,168,75,0.04); color: var(--text-primary); border-left: 2px solid var(--accent-gold-dim); }
+        .gear-table td.glate, .gear-table td.gend { color: var(--text-secondary); }
+        .gear-table .gdash { color: var(--text-muted); font-size: 0.72rem; }
+        .gear-table .gbis { display: inline-block; font-size: 0.62rem; padding: 1px 4px; border-radius: 2px; background: rgba(212,168,75,0.18); color: var(--accent-gold); margin-left: 4px; vertical-align: middle; }
+        .gear-table .ggap { display: block; font-size: 0.67rem; color: var(--accent-red); margin-top: 2px; opacity: 0.85; }
+        .gear-table .gsub { font-size: 0.7rem; color: var(--text-muted); display: block; margin-top: 2px; }
+        .gear-divider { height: 1px; background: var(--border); margin: 2.5rem 0 2rem; }
+        .gear-upgrade-title { font-family: 'Cinzel', serif; font-size: 1rem; color: var(--accent-gold); margin-bottom: 0.25rem; letter-spacing: 0.03em; }
+        .gear-upgrade-sub { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+        .upg-group { margin-bottom: 0; }
+        .upg-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); padding: 0.6rem 8px 0.3rem; border-bottom: 1px solid var(--border); background: var(--bg-dark); }
+        .upg-row { display: flex; align-items: baseline; gap: 10px; padding: 6px 8px; border-bottom: 0.5px solid var(--border); flex-wrap: wrap; background: var(--bg-card); }
+        .upg-row:hover { background: var(--bg-card-hover); }
+        .upg-gain { font-family: 'Fira Code', monospace; font-size: 0.72rem; font-weight: 600; min-width: 68px; flex-shrink: 0; }
+        .upg-slot { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); min-width: 74px; flex-shrink: 0; }
+        .upg-chain { font-size: 0.8rem; color: var(--text-primary); flex: 1; min-width: 140px; }
+        .upg-src { font-size: 0.7rem; color: var(--text-muted); display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+        .updot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
+        .updot.now { background: #3fb950; }
+        .updot.soon { background: #d4a84b; }
+        .updot.late { background: #a371f7; }
+        .updot.end { background: #f85149; }
+        .upg-flag { font-size: 0.62rem; padding: 1px 5px; border-radius: 2px; font-weight: 600; margin-left: 4px; }
+        .upg-flag.do-first { background: rgba(248,81,73,0.15); color: #f85149; }
+        .upg-flag.free { background: rgba(63,185,80,0.15); color: #3fb950; }
+        .upg-flag.active { background: rgba(212,168,75,0.2); color: var(--accent-gold); }
+        .upg-flag.bis { background: rgba(212,168,75,0.12); color: var(--accent-gold-dim); }
     </style>
 </head>
 <body>
@@ -544,6 +590,7 @@
             <button class="nav-tab" data-tab="diaries">Diaries</button>
             <button class="nav-tab" data-tab="drops">Drops</button>
             <button class="nav-tab" data-tab="bank">Bank</button>
+            <button class="nav-tab" data-tab="gearing">Gearing</button>
         </nav>
 
         <div id="skills" class="tab-content active">
@@ -588,6 +635,260 @@
             <div id="bankContainer">Loading...</div>
         </div>
 
+
+        <div id="gearing" class="tab-content">
+
+            <!-- ── style switcher (shared across both sections) ── -->
+            <div class="gear-style-tabs" id="gearStyleTabs">
+                <button class="gear-tab active" data-style="melee" onclick="switchGearStyle('melee')">⚔️ Melee</button>
+                <button class="gear-tab" data-style="ranged" onclick="switchGearStyle('ranged')">🏹 Ranged</button>
+                <button class="gear-tab" data-style="magic" onclick="switchGearStyle('magic')">🔮 Magic</button>
+            </div>
+
+            <!-- ══ SECTION 1: Gear progression table ══ -->
+            <div class="gear-section-label">Current gear &amp; upgrade targets</div>
+
+            <!-- MELEE TABLE -->
+            <div class="gear-pane active" id="gpane-melee">
+            <div class="gear-table-wrap">
+            <table class="gear-table">
+            <thead><tr>
+                <th>Slot</th>
+                <th class="gcur">Current</th>
+                <th class="glate">Late game (70–90)</th>
+                <th class="gend">End game (90+)</th>
+            </tr></thead>
+            <tbody>
+            <tr><td>Head</td>
+                <td class="gcur">Helm of Neitiznot<span class="ggap">↑ no faceguard — no basilisk jaw yet</span></td>
+                <td class="glate">Neitiznot faceguard<span class="gsub">Basilisk jaw 1/1,000</span></td>
+                <td class="gend">Torva full helm<span class="gsub">Nex</span></td></tr>
+            <tr><td>Cape</td>
+                <td class="gcur">Fire cape</td>
+                <td class="glate"><span class="gdash">—</span></td>
+                <td class="gend">Infernal cape<span class="gsub">The Inferno</span></td></tr>
+            <tr><td>Neck</td>
+                <td class="gcur">Amulet of rancour <span class="gbis">BiS</span></td>
+                <td class="glate"><span class="gdash">—</span></td>
+                <td class="gend"><span class="gdash">—</span></td></tr>
+            <tr><td>Weapon</td>
+                <td class="gcur">Abyssal tentacle<span class="gsub">+ DWH spec &amp; Burning claws</span></td>
+                <td class="glate">Ghrazi rapier<span class="gsub">or Blade of saeldor — ToB / CoX</span></td>
+                <td class="gend">Scythe of vitur<span class="gsub">Theatre of Blood</span></td></tr>
+            <tr><td>Offhand</td>
+                <td class="gcur">Dragon defender</td>
+                <td class="glate">Avernic defender<span class="gsub">ToB hilt drop</span></td>
+                <td class="gend"><span class="gdash">—</span></td></tr>
+            <tr><td>Body</td>
+                <td class="gcur">Blood moon chestplate<span class="ggap">↑ no Bandos — GWD locked</span></td>
+                <td class="glate">Bandos chestplate<span class="gsub">GWD — General Graardor</span></td>
+                <td class="gend">Torva platebody<span class="gsub">Nex</span></td></tr>
+            <tr><td>Legs</td>
+                <td class="gcur">Blood moon tassets</td>
+                <td class="glate">Bandos tassets<span class="gsub">GWD — General Graardor</span></td>
+                <td class="gend">Torva platelegs<span class="gsub">Nex</span></td></tr>
+            <tr><td>Hands</td>
+                <td class="gcur">Barrows gloves<span class="ggap">↑ ferocious gloves next — hydra leather</span></td>
+                <td class="glate">Ferocious gloves<span class="gsub">Hydra leather craft</span></td>
+                <td class="gend"><span class="gdash">—</span></td></tr>
+            <tr><td>Feet</td>
+                <td class="gcur">Avernic treads (pr) <span class="gbis">BiS</span></td>
+                <td class="glate"><span class="gdash">—</span></td>
+                <td class="gend"><span class="gdash">—</span></td></tr>
+            <tr><td>Ring</td>
+                <td class="gcur">Berserker ring (i)</td>
+                <td class="glate">Ultor ring<span class="gsub">DT2 — Whisperer</span></td>
+                <td class="gend"><span class="gdash">—</span></td></tr>
+            </tbody></table>
+            </div><!-- gear-table-wrap -->
+            </div><!-- gpane-melee -->
+
+            <!-- RANGED TABLE -->
+            <div class="gear-pane" id="gpane-ranged">
+            <div class="gear-table-wrap">
+            <table class="gear-table">
+            <thead><tr>
+                <th>Slot</th>
+                <th class="gcur">Current</th>
+                <th class="glate">Late game (70–85)</th>
+                <th class="gend">End game (85+)</th>
+            </tr></thead>
+            <tbody>
+            <tr><td>Head</td>
+                <td class="gcur">Hueycoatl hide coif<span class="gsub">or Ancient coif (god dhide equiv.)</span></td>
+                <td class="glate">Masori mask<span class="gsub">ToA</span></td>
+                <td class="gend">Masori mask (f)<span class="gsub">ToA + fortify kit</span></td></tr>
+            <tr><td>Cape</td>
+                <td class="gcur">Ava's assembler</td>
+                <td class="glate"><span class="gdash">—</span></td>
+                <td class="gend">Dizana's quiver<span class="gsub">Fortis Colosseum</span></td></tr>
+            <tr><td>Neck</td>
+                <td class="gcur">Necklace of anguish <span class="gbis">BiS</span></td>
+                <td class="glate"><span class="gdash">—</span></td>
+                <td class="gend"><span class="gdash">—</span></td></tr>
+            <tr><td>Weapon</td>
+                <td class="gcur">Eclipse atlatl<span class="ggap">↑ no Bowfa — active CG grind</span></td>
+                <td class="glate">Bow of faerdhinen<span class="gsub">CG enhanced seed</span></td>
+                <td class="gend">Twisted bow<span class="gsub">CoX</span></td></tr>
+            <tr><td>Offhand</td>
+                <td class="gcur">— (atlatl is 2h)<span class="gsub">Crystal shield available (24 seeds)</span></td>
+                <td class="glate">Twisted buckler<span class="gsub">CoX — use with xbow / non-Bowfa setups</span></td>
+                <td class="gend"><span class="gdash">—</span></td></tr>
+            <tr><td>Body</td>
+                <td class="gcur">Eclipse Moon chestplate<span class="gsub">Elite void swaps in on Bowfa</span></td>
+                <td class="glate">Armadyl chestplate<span class="gsub">GWD — Kree'arra</span></td>
+                <td class="gend">Masori body (f)<span class="gsub">ToA + fortify kit</span></td></tr>
+            <tr><td>Legs</td>
+                <td class="gcur">Eclipse Moon tassets</td>
+                <td class="glate">Armadyl chainskirt<span class="gsub">GWD — Kree'arra</span></td>
+                <td class="gend">Masori chaps (f)<span class="gsub">ToA + fortify kit</span></td></tr>
+            <tr><td>Hands</td>
+                <td class="gcur">Barrows gloves</td>
+                <td class="glate">Zaryte vambraces<span class="gsub">Nex</span></td>
+                <td class="gend"><span class="gdash">—</span></td></tr>
+            <tr><td>Feet</td>
+                <td class="gcur">Avernic treads (pe) <span class="gbis">BiS</span></td>
+                <td class="glate"><span class="gdash">—</span></td>
+                <td class="gend"><span class="gdash">—</span></td></tr>
+            <tr><td>Ring</td>
+                <td class="gcur">—<span class="ggap">↑ no archer ring confirmed</span></td>
+                <td class="glate">Archer's ring (i)<span class="gsub">Dag Rex + NMZ imbue</span></td>
+                <td class="gend">Venator ring<span class="gsub">DT2 — Whisperer</span></td></tr>
+            </tbody></table>
+            </div>
+            </div><!-- gpane-ranged -->
+
+            <!-- MAGIC TABLE -->
+            <div class="gear-pane" id="gpane-magic">
+            <div class="gear-table-wrap">
+            <table class="gear-table">
+            <thead><tr>
+                <th>Slot</th>
+                <th class="gcur">Current</th>
+                <th class="glate">Late game (75–85)</th>
+                <th class="gend">End game (85+)</th>
+            </tr></thead>
+            <tbody>
+            <tr><td>Head</td>
+                <td class="gcur">Blue moon helm<span class="gsub">Perilous Moons — no Ahrim's hood yet</span></td>
+                <td class="glate">Virtus mask<span class="gsub">DT2 bosses +2% dmg (+5% ancient)</span></td>
+                <td class="gend">Ancestral hat<span class="gsub">CoX +3% total dmg</span></td></tr>
+            <tr><td>Cape</td>
+                <td class="gcur">Imbued god cape <span class="gbis">BiS</span></td>
+                <td class="glate"><span class="gdash">—</span></td>
+                <td class="gend"><span class="gdash">—</span></td></tr>
+            <tr><td>Neck</td>
+                <td class="gcur">Amulet of fury<span class="ggap">↑ occult necklace — DO THIS FIRST (+5%)</span></td>
+                <td class="glate">Occult necklace <span class="gbis">BiS</span><span class="gsub">Smoke Devil ~580k</span></td>
+                <td class="gend"><span class="gdash">—</span></td></tr>
+            <tr><td>Weapon</td>
+                <td class="gcur">Trident of the seas</td>
+                <td class="glate">Trident of swamp<span class="gsub">Zulrah magic fang</span></td>
+                <td class="gend">Tumeken's shadow<span class="gsub">ToA — or Sanguinesti (ToB)</span></td></tr>
+            <tr><td>Offhand</td>
+                <td class="gcur">Tome of fire<span class="gsub">Works for fire surge — neutral with Trident</span></td>
+                <td class="glate">Elidinis' ward +3%<span class="gsub">Nex — better with Trident</span></td>
+                <td class="gend">Elidinis' ward (f) +5%<span class="gsub">Nex + fortify kit</span></td></tr>
+            <tr><td>Body</td>
+                <td class="gcur">Ahrim's robe top</td>
+                <td class="glate">Virtus robe top +2%<span class="gsub">DT2 bosses (+5% ancient)</span></td>
+                <td class="gend">Ancestral robe top +3%<span class="gsub">CoX (+1% over Virtus)</span></td></tr>
+            <tr><td>Legs</td>
+                <td class="gcur">Ahrim's robe skirt</td>
+                <td class="glate">Virtus robe bottom +2%<span class="gsub">DT2 bosses</span></td>
+                <td class="gend">Ancestral robe bottom +3%<span class="gsub">CoX</span></td></tr>
+            <tr><td>Hands</td>
+                <td class="gcur">Barrows gloves<span class="ggap">↑ tormented bracelet +5% — zenyte craft</span></td>
+                <td class="glate">Tormented bracelet +5%<span class="gsub">98 crafting + zenyte shard</span></td>
+                <td class="gend">Confliction gauntlets +7%<span class="gsub">Yama</span></td></tr>
+            <tr><td>Feet</td>
+                <td class="gcur">Infinity boots +1%</td>
+                <td class="glate">Eternal boots +1%<span class="gsub">Cerberus eternal crystal</span></td>
+                <td class="gend">Avernic treads (et) +2%<span class="gsub">DoM — need eternal crystal</span></td></tr>
+            <tr><td>Ring</td>
+                <td class="gcur">—</td>
+                <td class="glate">Seers ring (i) +0.5%<span class="gsub">Dag Prime + NMZ imbue</span></td>
+                <td class="gend">Magus ring +2%<span class="gsub">DT2 — Whisperer</span></td></tr>
+            </tbody></table>
+            </div>
+            </div><!-- gpane-magic -->
+
+            <div class="gear-divider"></div>
+
+            <!-- ══ SECTION 2: Upgrade priority lists ══ -->
+            <div class="gear-upgrade-title">Upgrade Priority</div>
+            <div class="gear-upgrade-sub">All upgrade steps across all slots, ordered by marginal stat gain (small → large). Green = available now.</div>
+
+            <!-- MELEE UPGRADES -->
+            <div class="gear-pane active" id="gupg-melee">
+            <div class="upg-label">+2 str bonus per step</div>
+            <div class="upg-row"><span class="upg-gain" style="color:#3fb950">+2 str</span><span class="upg-slot">hands</span><span class="upg-chain">Barrows gloves → Ferocious gloves</span><span class="upg-src"><span class="updot now"></span>Hydra leather — currently farming</span></div>
+            <div class="upg-row"><span class="upg-gain" style="color:#3fb950">+2 str</span><span class="upg-slot">offhand</span><span class="upg-chain">Dragon defender → Avernic defender</span><span class="upg-src"><span class="updot late"></span>Theatre of Blood hilt</span></div>
+            <div class="upg-row"><span class="upg-gain" style="color:#3fb950">+2 str</span><span class="upg-slot">legs ①</span><span class="upg-chain">Blood moon tassets → Bandos tassets</span><span class="upg-src"><span class="updot soon"></span>GWD — General Graardor</span></div>
+            <div class="upg-row"><span class="upg-gain" style="color:#3fb950">+2 str</span><span class="upg-slot">body ①</span><span class="upg-chain">Blood moon chestplate → Bandos chestplate</span><span class="upg-src"><span class="updot soon"></span>GWD — General Graardor</span></div>
+            <div class="upg-row"><span class="upg-gain" style="color:#3fb950">+2 str</span><span class="upg-slot">head ②</span><span class="upg-chain">Neitiznot faceguard → Torva full helm</span><span class="upg-src"><span class="updot end"></span>Nex (req. faceguard first)</span></div>
+            <div class="upg-row"><span class="upg-gain" style="color:#3fb950">+2 str</span><span class="upg-slot">legs ②</span><span class="upg-chain">Bandos tassets → Torva platelegs</span><span class="upg-src"><span class="updot end"></span>Nex (req. Bandos first)</span></div>
+            <div class="upg-label">+3 str bonus</div>
+            <div class="upg-row"><span class="upg-gain" style="color:#d4a84b">+3 str</span><span class="upg-slot">head ①</span><span class="upg-chain">Helm of Neitiznot → Neitiznot faceguard</span><span class="upg-src"><span class="updot now"></span>Basilisk jaw — 1/1,000 drop</span></div>
+            <div class="upg-label">+4 str bonus</div>
+            <div class="upg-row"><span class="upg-gain" style="color:#f85149">+4 str</span><span class="upg-slot">ring</span><span class="upg-chain">Berserker ring (i) → Ultor ring</span><span class="upg-src"><span class="updot late"></span>DT2 — Whisperer / Vardorvis</span></div>
+            <div class="upg-row"><span class="upg-gain" style="color:#f85149">+4 str</span><span class="upg-slot">cape</span><span class="upg-chain">Fire cape → Infernal cape</span><span class="upg-src"><span class="updot end"></span>The Inferno</span></div>
+            <div class="upg-label">dps unlocks — not str-quantifiable</div>
+            <div class="upg-row"><span class="upg-gain" style="color:#a371f7">DPS ①</span><span class="upg-slot">weapon</span><span class="upg-chain">Abyssal tentacle → Ghrazi rapier</span><span class="upg-src"><span class="updot late"></span>Theatre of Blood (~32M)</span></div>
+            <div class="upg-row"><span class="upg-gain" style="color:#a371f7">DPS ②</span><span class="upg-slot">weapon</span><span class="upg-chain">Ghrazi rapier → Blade of saeldor</span><span class="upg-src"><span class="updot late"></span>CoX + crystal shards to charge</span></div>
+            <div class="upg-row"><span class="upg-gain" style="color:#a371f7">DPS ③</span><span class="upg-slot">weapon</span><span class="upg-chain">Blade of saeldor → Scythe of vitur</span><span class="upg-src"><span class="updot end"></span>Theatre of Blood (1.6B)</span></div>
+            </div><!-- gupg-melee -->
+
+            <!-- RANGED UPGRADES -->
+            <div class="gear-pane" id="gupg-ranged">
+            <div class="upg-label">+1 ranged str</div>
+            <div class="upg-row"><span class="upg-gain" style="color:#8b949e">+1 rng str</span><span class="upg-slot">cape</span><span class="upg-chain">Ava's assembler → Dizana's quiver</span><span class="upg-src"><span class="updot end"></span>Fortis Colosseum reward</span></div>
+            <div class="upg-label">+2 ranged str</div>
+            <div class="upg-row"><span class="upg-gain" style="color:#3fb950">+2 rng str</span><span class="upg-slot">ring ①</span><span class="upg-chain">None → Archer's ring (i)</span><span class="upg-src"><span class="updot now"></span>Dagannoth Rex + NMZ imbue</span></div>
+            <div class="upg-row"><span class="upg-gain" style="color:#3fb950">+2 rng str</span><span class="upg-slot">legs ①</span><span class="upg-chain">Eclipse Moon tassets → Armadyl chainskirt</span><span class="upg-src"><span class="updot soon"></span>GWD — Kree'arra</span></div>
+            <div class="upg-row"><span class="upg-gain" style="color:#3fb950">+2 rng str</span><span class="upg-slot">hands</span><span class="upg-chain">Barrows gloves → Zaryte vambraces</span><span class="upg-src"><span class="updot end"></span>Nex</span></div>
+            <div class="upg-row"><span class="upg-gain" style="color:#3fb950">+2 rng str</span><span class="upg-slot">ring ②</span><span class="upg-chain">Archer's ring (i) → Venator ring</span><span class="upg-src"><span class="updot late"></span>DT2 — Whisperer (req. archer ring first)</span></div>
+            <div class="upg-label">+4 ranged str</div>
+            <div class="upg-row"><span class="upg-gain" style="color:#f85149">+4 rng str</span><span class="upg-slot">body ①</span><span class="upg-chain">Eclipse Moon chestplate → Armadyl chestplate</span><span class="upg-src"><span class="updot soon"></span>GWD — Kree'arra</span></div>
+            <div class="upg-label">accuracy upgrades — no str gain</div>
+            <div class="upg-row"><span class="upg-gain" style="color:#58a6ff">+acc</span><span class="upg-slot">head ①</span><span class="upg-chain">Hueycoatl coif → Masori mask</span><span class="upg-src"><span class="updot late"></span>Tombs of Amascut</span></div>
+            <div class="upg-row"><span class="upg-gain" style="color:#58a6ff">+acc</span><span class="upg-slot">body ②</span><span class="upg-chain">Armadyl chestplate → Masori body (f)</span><span class="upg-src"><span class="updot late"></span>ToA + fortify kit</span></div>
+            <div class="upg-row"><span class="upg-gain" style="color:#58a6ff">+acc</span><span class="upg-slot">legs ②</span><span class="upg-chain">Armadyl chainskirt → Masori chaps (f)</span><span class="upg-src"><span class="updot late"></span>ToA + fortify kit</span></div>
+            <div class="upg-label">dps unlock — weapon</div>
+            <div class="upg-row"><span class="upg-gain" style="color:#d4a84b">DPS ① <span class="upg-flag active">ACTIVE GRIND</span></span><span class="upg-slot">weapon</span><span class="upg-chain">Eclipse atlatl → Bow of faerdhinen</span><span class="upg-src"><span class="updot now"></span>CG enhanced seed — currently farming</span></div>
+            <div class="upg-row"><span class="upg-gain" style="color:#a371f7">DPS ②</span><span class="upg-slot">weapon</span><span class="upg-chain">Bow of faerdhinen → Twisted bow</span><span class="upg-src"><span class="updot end"></span>CoX — 1.6B</span></div>
+            </div><!-- gupg-ranged -->
+
+            <!-- MAGIC UPGRADES -->
+            <div class="gear-pane" id="gupg-magic">
+            <div class="upg-label">+0.5% magic dmg</div>
+            <div class="upg-row"><span class="upg-gain" style="color:#8b949e">+0.5%</span><span class="upg-slot">ring</span><span class="upg-chain">None → Seers ring (i)</span><span class="upg-src"><span class="updot now"></span>Dagannoth Prime + NMZ imbue</span></div>
+            <div class="upg-label">+1% magic dmg</div>
+            <div class="upg-row"><span class="upg-gain" style="color:#3fb950">+1%</span><span class="upg-slot">feet</span><span class="upg-chain">Infinity boots → Eternal boots</span><span class="upg-src"><span class="updot now"></span>Cerberus eternal crystal</span></div>
+            <div class="upg-row"><span class="upg-gain" style="color:#3fb950">+1%</span><span class="upg-slot">head ②</span><span class="upg-chain">Virtus mask → Ancestral hat</span><span class="upg-src"><span class="updot late"></span>CoX (req. Virtus first)</span></div>
+            <div class="upg-row"><span class="upg-gain" style="color:#3fb950">+1%</span><span class="upg-slot">body ②</span><span class="upg-chain">Virtus robe top → Ancestral robe top</span><span class="upg-src"><span class="updot late"></span>CoX (req. Virtus first)</span></div>
+            <div class="upg-row"><span class="upg-gain" style="color:#3fb950">+1%</span><span class="upg-slot">legs ②</span><span class="upg-chain">Virtus robe bottom → Ancestral robe bottom</span><span class="upg-src"><span class="updot late"></span>CoX (req. Virtus first)</span></div>
+            <div class="upg-label">+2% magic dmg</div>
+            <div class="upg-row"><span class="upg-gain" style="color:#d4a84b">+2%</span><span class="upg-slot">head ①</span><span class="upg-chain">Blue moon helm → Virtus mask</span><span class="upg-src"><span class="updot late"></span>DT2 bosses (+5% for ancient)</span></div>
+            <div class="upg-row"><span class="upg-gain" style="color:#d4a84b">+2%</span><span class="upg-slot">body ①</span><span class="upg-chain">Ahrim's robe top → Virtus robe top</span><span class="upg-src"><span class="updot late"></span>DT2 bosses (+5% for ancient)</span></div>
+            <div class="upg-row"><span class="upg-gain" style="color:#d4a84b">+2%</span><span class="upg-slot">legs ①</span><span class="upg-chain">Ahrim's robe skirt → Virtus robe bottom</span><span class="upg-src"><span class="updot late"></span>DT2 bosses (+5% for ancient)</span></div>
+            <div class="upg-row"><span class="upg-gain" style="color:#d4a84b">+2%</span><span class="upg-slot">hands ②</span><span class="upg-chain">Tormented bracelet → Confliction gauntlets</span><span class="upg-src"><span class="updot end"></span>Yama (req. Tormented first)</span></div>
+            <div class="upg-row"><span class="upg-gain" style="color:#d4a84b">+2%</span><span class="upg-slot">offhand ②</span><span class="upg-chain">Elidinis' ward → Elidinis' ward (f)</span><span class="upg-src"><span class="updot end"></span>Nex + fortify kit</span></div>
+            <div class="upg-label">+3% magic dmg</div>
+            <div class="upg-row"><span class="upg-gain" style="color:#f97316">+3%</span><span class="upg-slot">offhand ①</span><span class="upg-chain">Tome of fire → Elidinis' ward</span><span class="upg-src"><span class="updot end"></span>Nex — better with Trident / non-fire spells</span></div>
+            <div class="upg-label">+5% magic dmg — do these first</div>
+            <div class="upg-row"><span class="upg-gain" style="color:#f85149">+5% <span class="upg-flag do-first">DO FIRST</span></span><span class="upg-slot">neck</span><span class="upg-chain">Amulet of fury → Occult necklace</span><span class="upg-src"><span class="updot soon"></span>Thermonuclear Smoke Devil — ~580k</span></div>
+            <div class="upg-row"><span class="upg-gain" style="color:#f85149">+5%</span><span class="upg-slot">hands ①</span><span class="upg-chain">Barrows gloves → Tormented bracelet</span><span class="upg-src"><span class="updot now"></span>98 crafting + zenyte shard</span></div>
+            <div class="upg-label">accuracy upgrade — no dmg%</div>
+            <div class="upg-row"><span class="upg-gain" style="color:#58a6ff">+acc</span><span class="upg-slot">head (acc)</span><span class="upg-chain">Blue moon helm → Ahrim's hood</span><span class="upg-src"><span class="updot now"></span>Barrows chest — hood still missing from clog</span></div>
+            <div class="upg-label">dps unlock — weapon</div>
+            <div class="upg-row"><span class="upg-gain" style="color:#d4a84b">DPS ①</span><span class="upg-slot">weapon</span><span class="upg-chain">Trident of the seas → Trident of the swamp</span><span class="upg-src"><span class="updot soon"></span>Zulrah — magic fang drop</span></div>
+            <div class="upg-row"><span class="upg-gain" style="color:#a371f7">DPS ②</span><span class="upg-slot">weapon</span><span class="upg-chain">Trident of swamp → Sanguinesti staff</span><span class="upg-src"><span class="updot late"></span>Theatre of Blood (~19M)</span></div>
+            <div class="upg-row"><span class="upg-gain" style="color:#f85149">DPS ③</span><span class="upg-slot">weapon</span><span class="upg-chain">Sanguinesti staff → Tumeken's shadow</span><span class="upg-src"><span class="updot end"></span>ToA — ~910M</span></div>
+            </div><!-- gupg-magic -->
+
+        </div><!-- #gearing tab-content -->
+
         <!-- Password Modal -->
         <div id="passwordModal" class="password-modal">
             <div class="password-modal-content">
@@ -611,6 +912,20 @@
     </div>
 
     <script>
+
+        function switchGearStyle(style) {
+            document.querySelectorAll('#gearing .gear-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('#gearing .gear-tab[data-style="' + style + '"]').forEach(t => t.classList.add('active'));
+            ['gpane-melee','gpane-ranged','gpane-magic'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.classList.toggle('active', id === 'gpane-' + style);
+            });
+            ['gupg-melee','gupg-ranged','gupg-magic'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.classList.toggle('active', id === 'gupg-' + style);
+            });
+        }
+
         // Password protection for bank tab
         // Password hash loaded from config file (injected by GitHub Actions)
         let BANK_PASSWORD_HASH = null;
