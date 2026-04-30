@@ -591,6 +591,7 @@
             <button class="nav-tab" data-tab="drops">Drops</button>
             <button class="nav-tab" data-tab="bank">Bank</button>
             <button class="nav-tab" data-tab="gearing">Gearing</button>
+            <button class="nav-tab" data-tab="targets">Targets</button>
         </nav>
 
         <div id="skills" class="tab-content active">
@@ -887,6 +888,10 @@
 
         </div><!-- #gearing tab-content -->
 
+        <div id="targets" class="tab-content">
+            <div id="targetsContainer"></div>
+        </div><!-- #targets tab-content -->
+
         <!-- Password Modal -->
         <div id="passwordModal" class="password-modal">
             <div class="password-modal-content">
@@ -972,6 +977,7 @@
         let diariesData = null;
         let skillsData = null;
         let bossesData = null;
+        let wikiCompData = null;
         let boatyGuide = null;
         let boatyCompleted = new Set();
         let boatySearchTerm = '';
@@ -1144,7 +1150,7 @@
         }
 
         async function loadData() {
-            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, goalsRes, diariesRes, bankRes, dropsRes, boatyGuideRes, boatyProgressRes, potionStorageRes, seedVaultRes] = await Promise.all([
+            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, goalsRes, diariesRes, bankRes, dropsRes, boatyGuideRes, boatyProgressRes, potionStorageRes, seedVaultRes, wikiCompRes] = await Promise.all([
                 fetch('./data/skills.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/bosses.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/clues.json').then(r=>r.json()).catch(()=>null),
@@ -1159,7 +1165,8 @@
                 fetch('./data/boaty_guide.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/boaty_progress.yaml').then(r=>r.text()).catch(()=>null),
                 fetch('./data/potion_storage.json').then(r=>r.json()).catch(()=>null),
-                fetch('./data/seed_vault.json').then(r=>r.json()).catch(()=>null)
+                fetch('./data/seed_vault.json').then(r=>r.json()).catch(()=>null),
+                fetch('./data/wiki_comp_rates.json').then(r=>r.json()).catch(()=>null)
             ]);
 
             if (skillsRes?.rsn) {
@@ -1232,6 +1239,8 @@
             if (diariesRes) renderDiaries(diariesRes);
             if (dropsRes) renderDrops(dropsRes);
             if (bankRes) renderBank(bankRes, potionStorageRes, seedVaultRes);
+            wikiCompData = wikiCompRes;
+            renderTargets();
         }
 
         function renderSkills(skills) {
@@ -3202,6 +3211,359 @@
                 input.value = '';
                 input.focus();
             }
+        }
+
+        // Direct tab switch (no password check)
+        function switchTabDirect(tabId) {
+            document.querySelectorAll('.nav-tab').forEach(x => x.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(x => x.classList.remove('active'));
+            const tab = document.querySelector(`.nav-tab[data-tab="${tabId}"]`);
+            if (tab) {
+                tab.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            }
+        }
+
+        // ============== Targets tab ==============
+        const TARGETS_TIER_ORDER = ['Easy','Medium','Hard','Elite','Master','Grandmaster'];
+        let targetsState = {
+            mode: 'clog',           // 'clog' | 'ca'
+            clogSearch: '',
+            clogSource: '',
+            clogSort: 'pct-desc',   // pct-desc | pct-asc | name-asc
+            clogHideNA: false,
+            caSearch: '',
+            caTier: '',
+            caSort: 'tier-asc',     // tier-asc | tier-desc | name-asc
+        };
+
+        function buildTargetsClogRows() {
+            if (!clogData || !wikiCompData?.items) return [];
+            const norm = s => (s || '').toLowerCase().trim();
+            const obtained = new Set();
+            for (const c of Object.values(clogData.collections || {})) {
+                for (const it of (c.obtained || [])) obtained.add(norm(it.name));
+            }
+            const seen = new Set();
+            const rows = [];
+            for (const it of wikiCompData.items) {
+                if (obtained.has(norm(it.name))) continue;
+                const key = norm(it.name) + '|' + (it.source_display || '');
+                if (seen.has(key)) continue;
+                seen.add(key);
+                rows.push({
+                    name: it.name,
+                    sourceDisplay: it.source_display || (it.sources || ['Unknown']).join(', '),
+                    pct: it.comp_pct,
+                    wikiUrl: 'https://oldschool.runescape.wiki/w/' + encodeURIComponent(it.name.replace(/ /g, '_')),
+                });
+            }
+            return rows;
+        }
+
+        function buildTargetsCARows() {
+            if (!caData?.tiers) return [];
+            const rows = [];
+            for (const tierName of TARGETS_TIER_ORDER) {
+                const t = caData.tiers[tierName];
+                if (!t) continue;
+                const pts = t.points_per_task ?? null;
+                for (const entry of (t.not_completed || [])) {
+                    const name = typeof entry === 'string' ? entry : entry?.name;
+                    if (!name) continue;
+                    rows.push({ name, tier: tierName, points: pts });
+                }
+            }
+            return rows;
+        }
+
+        function fmtTargetsPct(p) {
+            if (p == null) return 'N/A';
+            return (p < 1 ? p.toFixed(2) : p.toFixed(1)) + '%';
+        }
+
+        function targetsPctClass(p) {
+            if (p == null) return '';
+            if (p >= 25) return 'targets-pct-easy';
+            if (p >= 5)  return 'targets-pct-mid';
+            return 'targets-pct-rare';
+        }
+
+        function escapeTargets(s) {
+            return String(s ?? '').replace(/[&<>"']/g, c => (
+                {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]
+            ));
+        }
+
+        function renderTargets() {
+            const container = document.getElementById('targetsContainer');
+            if (!container) return;
+
+            // Inject once: small per-tab styles. Only first call.
+            if (!document.getElementById('targets-styles')) {
+                const s = document.createElement('style');
+                s.id = 'targets-styles';
+                s.textContent = `
+                    .targets-sub { display:flex; gap:0; margin-bottom:1.25rem; border-bottom:1px solid var(--border); }
+                    .targets-sub-tab { padding:0.6rem 1.1rem; font-size:0.85rem; font-weight:500; color:var(--text-secondary); background:transparent; border:0; cursor:pointer; position:relative; }
+                    .targets-sub-tab:hover { color:var(--text-primary); }
+                    .targets-sub-tab.active { color:var(--accent-gold); }
+                    .targets-sub-tab.active::after { content:''; position:absolute; bottom:-1px; left:0; right:0; height:2px; background:var(--accent-gold); }
+                    .targets-controls { display:flex; flex-wrap:wrap; gap:0.75rem; margin-bottom:1rem; align-items:center; }
+                    .targets-controls .search-input { flex:1; min-width:220px; }
+                    .targets-controls label { display:inline-flex; align-items:center; gap:0.4rem; color:var(--text-secondary); font-size:0.85rem; white-space:nowrap; }
+                    .targets-summary { color:var(--text-secondary); font-size:0.85rem; margin-bottom:0.75rem; }
+                    .targets-summary a { color:var(--accent-gold); text-decoration:none; }
+                    .targets-summary a:hover { text-decoration:underline; }
+                    .targets-table { width:100%; border-collapse:collapse; font-size:0.9rem; background:var(--bg-card); border:1px solid var(--border); border-radius:6px; overflow:hidden; }
+                    .targets-table thead th { text-align:left; padding:0.7rem 0.9rem; font-weight:600; color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.08em; border-bottom:1px solid var(--border); background:var(--bg-card); cursor:pointer; user-select:none; }
+                    .targets-table thead th:hover { color:var(--text-primary); }
+                    .targets-table thead th.sorted { color:var(--accent-gold); }
+                    .targets-table tbody td { padding:0.55rem 0.9rem; border-bottom:1px solid var(--border); vertical-align:top; }
+                    .targets-table tbody tr:last-child td { border-bottom:0; }
+                    .targets-table tbody tr:hover { background:var(--bg-card-hover); }
+                    .targets-table tbody td a { color:var(--accent-blue); text-decoration:none; }
+                    .targets-table tbody td a:hover { text-decoration:underline; color:var(--accent-gold); }
+                    .targets-src { color:var(--text-secondary); font-size:0.85rem; }
+                    .targets-pct { font-family:'Fira Code', monospace; text-align:right; white-space:nowrap; font-weight:500; }
+                    .targets-pct-easy { color:var(--accent-green); }
+                    .targets-pct-mid  { color:var(--accent-gold); }
+                    .targets-pct-rare { color:var(--accent-red); }
+                    .targets-tier-pill { display:inline-block; padding:0.15rem 0.6rem; border-radius:999px; font-size:0.75rem; font-weight:600; }
+                    .targets-tier-Easy        { background:rgba(63,185,80,0.15);  color:var(--accent-green); }
+                    .targets-tier-Medium      { background:rgba(212,168,75,0.15); color:var(--accent-gold);  }
+                    .targets-tier-Hard        { background:rgba(212,168,75,0.20); color:#e8b86a; }
+                    .targets-tier-Elite       { background:rgba(248,81,73,0.15);  color:var(--accent-red);   }
+                    .targets-tier-Master      { background:rgba(163,113,247,0.15);color:var(--accent-purple);}
+                    .targets-tier-Grandmaster { background:rgba(88,166,255,0.15); color:var(--accent-blue);  }
+                    .targets-empty { color:var(--text-secondary); padding:2rem; text-align:center; background:var(--bg-card); border:1px dashed var(--border); border-radius:6px; }
+                `;
+                document.head.appendChild(s);
+            }
+
+            const updatedNote = wikiCompData?.updated
+                ? ` Wiki data updated ${new Date(wikiCompData.updated).toLocaleDateString()} (${(wikiCompData.item_count || wikiCompData.items?.length || 0).toLocaleString()} items).`
+                : '';
+
+            container.innerHTML = `
+                <div class="targets-sub">
+                    <button class="targets-sub-tab ${targetsState.mode==='clog'?'active':''}" data-mode="clog">Collection log</button>
+                    <button class="targets-sub-tab ${targetsState.mode==='ca'  ?'active':''}" data-mode="ca">Combat achievements</button>
+                </div>
+                <div class="targets-summary">
+                    Items and CAs you haven't done yet, sorted by ease.
+                    Comp% = % of all WikiSync players who own the item
+                    (<a href="https://oldschool.runescape.wiki/w/Collection_log/Table" target="_blank" rel="noopener">source</a>).
+                    ${escapeTargets(updatedNote)}
+                </div>
+                <div id="targetsBody"></div>
+            `;
+
+            container.querySelectorAll('.targets-sub-tab').forEach(b => {
+                b.addEventListener('click', () => {
+                    targetsState.mode = b.dataset.mode;
+                    renderTargets();
+                });
+            });
+
+            if (targetsState.mode === 'clog') renderTargetsClog();
+            else renderTargetsCA();
+        }
+
+        function renderTargetsClog() {
+            const body = document.getElementById('targetsBody');
+            if (!body) return;
+
+            if (!wikiCompData?.items) {
+                body.innerHTML = `<div class="targets-empty">
+                    Missing <code>data/wiki_comp_rates.json</code>. Run
+                    <code>scrape_wiki_comp_rates.py</code> to generate it.
+                </div>`;
+                return;
+            }
+            if (!clogData) {
+                body.innerHTML = `<div class="targets-empty">Collection log data not loaded.</div>`;
+                return;
+            }
+
+            const allRows = buildTargetsClogRows();
+
+            // Source dropdown options (count desc, name asc tiebreak)
+            const counts = new Map();
+            for (const r of allRows) counts.set(r.sourceDisplay, (counts.get(r.sourceDisplay)||0)+1);
+            const sourceOpts = [...counts.entries()]
+                .sort((a,b) => b[1]-a[1] || a[0].localeCompare(b[0]))
+                .map(([n,k]) => `<option value="${escapeTargets(n)}" ${targetsState.clogSource===n?'selected':''}>${escapeTargets(n)} (${k})</option>`)
+                .join('');
+
+            // Apply filters
+            const q = targetsState.clogSearch.trim().toLowerCase();
+            let rows = allRows.filter(r => {
+                if (targetsState.clogHideNA && r.pct == null) return false;
+                if (targetsState.clogSource && r.sourceDisplay !== targetsState.clogSource) return false;
+                if (q && !r.name.toLowerCase().includes(q)) return false;
+                return true;
+            });
+
+            // Sort
+            const sortKey = targetsState.clogSort;
+            rows.sort((a,b) => {
+                if (sortKey === 'pct-desc' || sortKey === 'pct-asc') {
+                    const dir = sortKey === 'pct-desc' ? -1 : 1;
+                    const na = a.pct == null, nb = b.pct == null;
+                    if (na && nb) return a.name.localeCompare(b.name);
+                    if (na) return 1;
+                    if (nb) return -1;
+                    return (a.pct - b.pct) * dir || a.name.localeCompare(b.name);
+                }
+                return a.name.localeCompare(b.name);
+            });
+
+            const sortedKey =
+                sortKey === 'pct-desc' || sortKey === 'pct-asc' ? 'pct'
+                : 'name';
+            const arrow = sortKey === 'pct-asc' ? ' ▲' : sortKey === 'pct-desc' ? ' ▼' : ' ▲';
+
+            body.innerHTML = `
+                <div class="targets-controls">
+                    <input type="text" class="search-input" id="targetsClogSearch"
+                           placeholder="Search item name…" value="${escapeTargets(targetsState.clogSearch)}">
+                    <select class="filter-select" id="targetsClogSource">
+                        <option value="">All sources</option>
+                        ${sourceOpts}
+                    </select>
+                    <select class="filter-select" id="targetsClogSort">
+                        <option value="pct-desc" ${sortKey==='pct-desc'?'selected':''}>Easiest first (Comp% desc)</option>
+                        <option value="pct-asc"  ${sortKey==='pct-asc' ?'selected':''}>Rarest first (Comp% asc)</option>
+                        <option value="name-asc" ${sortKey==='name-asc'?'selected':''}>Name A→Z</option>
+                    </select>
+                    <label>
+                        <input type="checkbox" id="targetsClogHideNA" ${targetsState.clogHideNA?'checked':''}>
+                        hide N/A
+                    </label>
+                </div>
+                <div class="targets-summary">
+                    ${rows.length.toLocaleString()} missing of ${allRows.length.toLocaleString()} tracked items.
+                </div>
+                ${rows.length === 0
+                    ? `<div class="targets-empty">No matching items.</div>`
+                    : `<table class="targets-table">
+                        <thead><tr>
+                            <th data-sort="name" class="${sortedKey==='name'?'sorted':''}">Item${sortedKey==='name'?arrow:''}</th>
+                            <th data-sort="source">Source</th>
+                            <th data-sort="pct" class="targets-pct ${sortedKey==='pct'?'sorted':''}">Comp%${sortedKey==='pct'?arrow:''}</th>
+                        </tr></thead>
+                        <tbody>
+                            ${rows.map(r => `<tr>
+                                <td><a href="${r.wikiUrl}" target="_blank" rel="noopener">${escapeTargets(r.name)}</a></td>
+                                <td class="targets-src">${escapeTargets(r.sourceDisplay)}</td>
+                                <td class="targets-pct ${targetsPctClass(r.pct)}">${fmtTargetsPct(r.pct)}</td>
+                            </tr>`).join('')}
+                        </tbody>
+                    </table>`
+                }
+            `;
+
+            document.getElementById('targetsClogSearch').addEventListener('input', e => {
+                targetsState.clogSearch = e.target.value; renderTargetsClog();
+            });
+            document.getElementById('targetsClogSource').addEventListener('change', e => {
+                targetsState.clogSource = e.target.value; renderTargetsClog();
+            });
+            document.getElementById('targetsClogSort').addEventListener('change', e => {
+                targetsState.clogSort = e.target.value; renderTargetsClog();
+            });
+            document.getElementById('targetsClogHideNA').addEventListener('change', e => {
+                targetsState.clogHideNA = e.target.checked; renderTargetsClog();
+            });
+            // Header click sort toggles
+            body.querySelectorAll('.targets-table thead th').forEach(th => {
+                th.addEventListener('click', () => {
+                    const k = th.dataset.sort;
+                    if (k === 'pct') {
+                        targetsState.clogSort = targetsState.clogSort === 'pct-desc' ? 'pct-asc' : 'pct-desc';
+                    } else if (k === 'name') {
+                        targetsState.clogSort = 'name-asc';
+                    }
+                    renderTargetsClog();
+                });
+            });
+        }
+
+        function renderTargetsCA() {
+            const body = document.getElementById('targetsBody');
+            if (!body) return;
+
+            if (!caData) {
+                body.innerHTML = `<div class="targets-empty">Combat achievements data not loaded.</div>`;
+                return;
+            }
+
+            const allRows = buildTargetsCARows();
+            const q = targetsState.caSearch.trim().toLowerCase();
+            let rows = allRows.filter(r => {
+                if (targetsState.caTier && r.tier !== targetsState.caTier) return false;
+                if (q && !r.name.toLowerCase().includes(q)) return false;
+                return true;
+            });
+            const sortKey = targetsState.caSort;
+            rows.sort((a,b) => {
+                if (sortKey === 'tier-asc' || sortKey === 'tier-desc') {
+                    const dir = sortKey === 'tier-asc' ? 1 : -1;
+                    const ai = TARGETS_TIER_ORDER.indexOf(a.tier);
+                    const bi = TARGETS_TIER_ORDER.indexOf(b.tier);
+                    return (ai - bi) * dir || a.name.localeCompare(b.name);
+                }
+                return a.name.localeCompare(b.name);
+            });
+
+            body.innerHTML = `
+                <div class="targets-controls">
+                    <input type="text" class="search-input" id="targetsCaSearch"
+                           placeholder="Search task name…" value="${escapeTargets(targetsState.caSearch)}">
+                    <select class="filter-select" id="targetsCaTier">
+                        <option value="">All tiers</option>
+                        ${TARGETS_TIER_ORDER.map(t =>
+                            `<option value="${t}" ${targetsState.caTier===t?'selected':''}>${t}</option>`
+                        ).join('')}
+                    </select>
+                    <select class="filter-select" id="targetsCaSort">
+                        <option value="tier-asc"  ${sortKey==='tier-asc' ?'selected':''}>Easy → Grandmaster</option>
+                        <option value="tier-desc" ${sortKey==='tier-desc'?'selected':''}>Grandmaster → Easy</option>
+                        <option value="name-asc"  ${sortKey==='name-asc' ?'selected':''}>Name A→Z</option>
+                    </select>
+                </div>
+                <div class="targets-summary">
+                    ${rows.length.toLocaleString()} uncompleted of ${allRows.length.toLocaleString()} remaining tasks.
+                </div>
+                ${rows.length === 0
+                    ? `<div class="targets-empty">Nothing to show.</div>`
+                    : `<table class="targets-table">
+                        <thead><tr>
+                            <th>Task</th>
+                            <th>Tier</th>
+                            <th class="targets-pct">Pts</th>
+                        </tr></thead>
+                        <tbody>
+                            ${rows.map(r => `<tr>
+                                <td>${escapeTargets(r.name)}</td>
+                                <td><span class="targets-tier-pill targets-tier-${r.tier}">${r.tier}</span></td>
+                                <td class="targets-pct">${r.points ?? ''}</td>
+                            </tr>`).join('')}
+                        </tbody>
+                    </table>`
+                }
+            `;
+
+            document.getElementById('targetsCaSearch').addEventListener('input', e => {
+                targetsState.caSearch = e.target.value; renderTargetsCA();
+            });
+            document.getElementById('targetsCaTier').addEventListener('change', e => {
+                targetsState.caTier = e.target.value; renderTargetsCA();
+            });
+            document.getElementById('targetsCaSort').addEventListener('change', e => {
+                targetsState.caSort = e.target.value; renderTargetsCA();
+            });
         }
 
         // Direct tab switch (no password check)
