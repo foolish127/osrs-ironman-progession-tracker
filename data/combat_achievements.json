@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-05-16T19:06:06.116341+00:00",
+  "updated": "2026-05-16T21:13:51.543495+00:00",
   "combat_achievements": {
     "tiers": {
       "Easy": {
@@ -56,6 +56,10 @@
           {
             "name": "Deranged Archaeologist Novice",
             "date": "2025-07-30"
+          },
+          {
+            "name": "Dry Cleaning",
+            "date": "2026-05-16"
           },
           {
             "name": "Elemental Company",
@@ -166,13 +170,11 @@
             "date": "2022-11-26"
           }
         ],
-        "not_completed": [
-          "Dry Cleaning"
-        ],
-        "completed_count": 40,
+        "not_completed": [],
+        "completed_count": 41,
         "total_count": 41,
         "points_per_task": 1,
-        "points_earned": 40
+        "points_earned": 41
       },
       "Medium": {
         "completed": [
@@ -333,6 +335,10 @@
             "date": "2025-07-28"
           },
           {
+            "name": "Perfect Shellbane",
+            "date": "2026-05-16"
+          },
+          {
             "name": "Perilous Novice",
             "date": "2025-08-24"
           },
@@ -359,6 +365,10 @@
           {
             "name": "Scurrius Champion",
             "date": "2025-07-28"
+          },
+          {
+            "name": "Shellbane Speedrunner",
+            "date": "2026-05-16"
           },
           {
             "name": "Shellbane Veteran",
@@ -400,14 +410,12 @@
         "not_completed": [
           "Dagannoth Prime Champion",
           "Dagannoth Supreme Champion",
-          "Perfect Shellbane",
-          "Shellbane Speedrunner",
           "Temotli Triumph"
         ],
-        "completed_count": 55,
+        "completed_count": 57,
         "total_count": 60,
         "points_per_task": 2,
-        "points_earned": 110
+        "points_earned": 114
       },
       "Hard": {
         "completed": [
@@ -470,6 +478,10 @@
           {
             "name": "Fat of the Land",
             "date": "2025-09-07"
+          },
+          {
+            "name": "Featherweight Fighter",
+            "date": "2026-05-16"
           },
           {
             "name": "Fortified",
@@ -564,6 +576,10 @@
             "date": "2025-12-17"
           },
           {
+            "name": "Shellbane Survivor",
+            "date": "2026-05-16"
+          },
+          {
             "name": "Skotizo Adept",
             "date": "2025-11-27"
           },
@@ -635,7 +651,6 @@
           "Dagannoth Prime Adept",
           "Dagannoth Supreme Adept",
           "Demonic Showdown",
-          "Featherweight Fighter",
           "General Graardor Adept",
           "General Showdown",
           "Guardians No More",
@@ -652,16 +667,15 @@
           "Praying to the Gods",
           "Royal Titan Speed-Runner",
           "Scorpia Adept",
-          "Shellbane Survivor",
           "The Flincher",
           "Titan Killer",
           "Venenatis Adept",
           "Who Is the King Now?"
         ],
-        "completed_count": 53,
+        "completed_count": 55,
         "total_count": 85,
         "points_per_task": 3,
-        "points_earned": 159
+        "points_earned": 165
       },
       "Elite": {
         "completed": [
@@ -1316,11 +1330,36 @@
         "points_earned": 18
       }
     },
-    "total_completed": 205,
+    "total_completed": 210,
     "total_tasks": 637,
-    "total_points": 557,
+    "total_points": 568,
     "max_points": 2630,
     "recent_tasks": [
+      {
+        "name": "Dry Cleaning",
+        "date": "2026-05-16",
+        "tier": "Easy"
+      },
+      {
+        "name": "Perfect Shellbane",
+        "date": "2026-05-16",
+        "tier": "Medium"
+      },
+      {
+        "name": "Shellbane Speedrunner",
+        "date": "2026-05-16",
+        "tier": "Medium"
+      },
+      {
+        "name": "Featherweight Fighter",
+        "date": "2026-05-16",
+        "tier": "Hard"
+      },
+      {
+        "name": "Shellbane Survivor",
+        "date": "2026-05-16",
+        "tier": "Hard"
+      },
       {
         "name": "Abyssal Veteran",
         "date": "2026-04-03",
@@ -1394,31 +1433,6 @@
       {
         "name": "Brutus Speed-Trialist",
         "date": "2026-02-25",
-        "tier": "Elite"
-      },
-      {
-        "name": "Hespori Speed-Trialist",
-        "date": "2026-02-25",
-        "tier": "Elite"
-      },
-      {
-        "name": "Without Ralos' Light",
-        "date": "2026-02-15",
-        "tier": "Elite"
-      },
-      {
-        "name": "Corrupted Warrior",
-        "date": "2026-02-15",
-        "tier": "Master"
-      },
-      {
-        "name": "Doom Adept",
-        "date": "2026-02-09",
-        "tier": "Elite"
-      },
-      {
-        "name": "Exposed Doom",
-        "date": "2026-02-09",
         "tier": "Elite"
       }
     ]
