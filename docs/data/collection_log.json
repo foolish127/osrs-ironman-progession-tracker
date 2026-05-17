@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-05-17T13:22:33.706249+00:00",
+  "updated": "2026-05-17T18:38:39.415503+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -889,6 +889,11 @@
       "Zulrah": {
         "obtained": [
           {
+            "name": "Magic fang",
+            "date": "2026-05-17 18:31:38",
+            "quantity": 1
+          },
+          {
             "name": "Zul-andra teleport",
             "date": "2026-02-01 04:46:45",
             "quantity": 16
@@ -901,13 +906,12 @@
         ],
         "missing": [
           "Jar of swamp",
-          "Magic fang",
           "Magma mutagen",
           "Serpentine visage",
           "Tanzanite fang",
           "Tanzanite mutagen"
         ],
-        "obtained_count": 2,
+        "obtained_count": 3,
         "total_count": 8
       },
       "Beginner Treasure Trails": {
@@ -5433,9 +5437,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 533,
+    "total_obtained": 534,
     "total_items": 1727,
     "recent_items": [
+      {
+        "name": "Magic fang",
+        "date": "2026-05-17 18:31:38",
+        "collection": "zulrah"
+      },
       {
         "name": "Enhanced crystal weapon seed",
         "date": "2026-05-17 02:54:32",
@@ -5530,11 +5539,6 @@
         "name": "Adamant kiteshield (t)",
         "date": "2026-03-20 01:52:45",
         "collection": "medium_treasure_trails"
-      },
-      {
-        "name": "Noxious point",
-        "date": "2026-03-19 18:09:34",
-        "collection": "araxxor"
       }
     ],
     "source": "templeosrs"
