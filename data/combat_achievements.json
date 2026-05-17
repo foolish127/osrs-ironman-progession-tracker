@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-05-17T19:33:36.340691+00:00",
+  "updated": "2026-05-17T19:53:48.342796+00:00",
   "combat_achievements": {
     "tiers": {
       "Easy": {
@@ -840,6 +840,10 @@
             "date": "2026-02-15"
           },
           {
+            "name": "Zulrah Speed-Trialist",
+            "date": "2026-05-17"
+          },
+          {
             "name": "Zulrah Veteran",
             "date": "2026-05-17"
           }
@@ -964,13 +968,12 @@
           "Yama Adept",
           "Yama Speed-Trialist",
           "Zalcano Veteran",
-          "Zombie Destroyer",
-          "Zulrah Speed-Trialist"
+          "Zombie Destroyer"
         ],
-        "completed_count": 41,
+        "completed_count": 42,
         "total_count": 162,
         "points_per_task": 4,
-        "points_earned": 164
+        "points_earned": 168
       },
       "Master": {
         "completed": [
@@ -1333,11 +1336,16 @@
         "points_earned": 18
       }
     },
-    "total_completed": 211,
+    "total_completed": 212,
     "total_tasks": 637,
-    "total_points": 572,
+    "total_points": 576,
     "max_points": 2630,
     "recent_tasks": [
+      {
+        "name": "Zulrah Speed-Trialist",
+        "date": "2026-05-17",
+        "tier": "Elite"
+      },
       {
         "name": "Zulrah Veteran",
         "date": "2026-05-17",
@@ -1432,11 +1440,6 @@
         "name": "Brutus Champion",
         "date": "2026-02-25",
         "tier": "Medium"
-      },
-      {
-        "name": "Smarter than a Cow",
-        "date": "2026-02-25",
-        "tier": "Hard"
       }
     ]
   }
