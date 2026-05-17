@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-05-17T19:11:16.082313+00:00",
+  "updated": "2026-05-17T19:33:36.340691+00:00",
   "combat_achievements": {
     "tiers": {
       "Easy": {
@@ -838,6 +838,10 @@
           {
             "name": "Without Ralos' Light",
             "date": "2026-02-15"
+          },
+          {
+            "name": "Zulrah Veteran",
+            "date": "2026-05-17"
           }
         ],
         "not_completed": [
@@ -961,13 +965,12 @@
           "Yama Speed-Trialist",
           "Zalcano Veteran",
           "Zombie Destroyer",
-          "Zulrah Speed-Trialist",
-          "Zulrah Veteran"
+          "Zulrah Speed-Trialist"
         ],
-        "completed_count": 40,
+        "completed_count": 41,
         "total_count": 162,
         "points_per_task": 4,
-        "points_earned": 160
+        "points_earned": 164
       },
       "Master": {
         "completed": [
@@ -1330,11 +1333,16 @@
         "points_earned": 18
       }
     },
-    "total_completed": 210,
+    "total_completed": 211,
     "total_tasks": 637,
-    "total_points": 568,
+    "total_points": 572,
     "max_points": 2630,
     "recent_tasks": [
+      {
+        "name": "Zulrah Veteran",
+        "date": "2026-05-17",
+        "tier": "Elite"
+      },
       {
         "name": "Dry Cleaning",
         "date": "2026-05-16",
@@ -1429,11 +1437,6 @@
         "name": "Smarter than a Cow",
         "date": "2026-02-25",
         "tier": "Hard"
-      },
-      {
-        "name": "Brutus Speed-Trialist",
-        "date": "2026-02-25",
-        "tier": "Elite"
       }
     ]
   }
