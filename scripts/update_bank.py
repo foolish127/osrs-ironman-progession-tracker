@@ -10,6 +10,8 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
+from untradeable_values import UNTRADEABLE_VALUES
+
 DATA_DIR = Path(__file__).parent.parent / "data"
 GE_PRICES_URL = "https://prices.runescape.wiki/api/v1/osrs/latest"
 ITEM_MAPPING_URL = "https://prices.runescape.wiki/api/v1/osrs/mapping"
@@ -243,6 +245,10 @@ def main():
         high_price = price_data.get("high", 0) or 0
         low_price = price_data.get("low", 0) or 0
         avg_price = (high_price + low_price) // 2 if high_price and low_price else high_price or low_price
+        
+        # Fall back to manual override for untradeables (ge_price == 0)
+        if avg_price == 0:
+            avg_price = UNTRADEABLE_VALUES.get(int(item_id) if item_id.isdigit() else 0, 0)
         
         item_value = avg_price * item["quantity"]
         total_value += item_value
