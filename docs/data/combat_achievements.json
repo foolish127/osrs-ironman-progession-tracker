@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-05-19T15:25:48.246492+00:00",
+  "updated": "2026-05-21T19:54:30.440520+00:00",
   "combat_achievements": {
     "tiers": {
       "Easy": {
@@ -1032,6 +1032,10 @@
           {
             "name": "Unrequired Antipoisons",
             "date": "2026-03-19"
+          },
+          {
+            "name": "Zulrah Master",
+            "date": "2026-05-18"
           }
         ],
         "not_completed": [
@@ -1187,13 +1191,12 @@
           "Yama Veteran",
           "You are not prepared",
           "You Didn't Say Anything About a Bat",
-          "Zulrah Master",
           "Zulrah Speed-Chaser"
         ],
-        "completed_count": 14,
+        "completed_count": 15,
         "total_count": 168,
         "points_per_task": 5,
-        "points_earned": 70
+        "points_earned": 75
       },
       "Grandmaster": {
         "completed": [
@@ -1336,11 +1339,16 @@
         "points_earned": 18
       }
     },
-    "total_completed": 212,
+    "total_completed": 213,
     "total_tasks": 637,
-    "total_points": 576,
+    "total_points": 581,
     "max_points": 2630,
     "recent_tasks": [
+      {
+        "name": "Zulrah Master",
+        "date": "2026-05-18",
+        "tier": "Master"
+      },
       {
         "name": "Zulrah Speed-Trialist",
         "date": "2026-05-17",
@@ -1433,11 +1441,6 @@
       },
       {
         "name": "Beef vs Beef",
-        "date": "2026-02-25",
-        "tier": "Medium"
-      },
-      {
-        "name": "Brutus Champion",
         "date": "2026-02-25",
         "tier": "Medium"
       }
