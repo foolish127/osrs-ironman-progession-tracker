@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-05-23T13:27:03.443645+00:00",
+  "updated": "2026-05-23T18:43:06.753177+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -101,6 +101,11 @@
             "quantity": 1
           },
           {
+            "name": "Noxious pommel",
+            "date": "2026-05-23 18:10:37",
+            "quantity": 1
+          },
+          {
             "name": "Araxyte head",
             "date": "2026-02-05 22:21:46",
             "quantity": 4
@@ -112,10 +117,9 @@
           }
         ],
         "missing": [
-          "Coagulated venom",
-          "Noxious pommel"
+          "Coagulated venom"
         ],
-        "obtained_count": 7,
+        "obtained_count": 8,
         "total_count": 9
       },
       "Barrows Chests": {
@@ -5437,9 +5441,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 534,
+    "total_obtained": 535,
     "total_items": 1727,
     "recent_items": [
+      {
+        "name": "Noxious pommel",
+        "date": "2026-05-23 18:10:37",
+        "collection": "araxxor"
+      },
       {
         "name": "Magic fang",
         "date": "2026-05-17 18:31:38",
@@ -5534,11 +5543,6 @@
         "name": "Jar of venom",
         "date": "2026-03-20 22:39:45",
         "collection": "araxxor"
-      },
-      {
-        "name": "Adamant kiteshield (t)",
-        "date": "2026-03-20 01:52:45",
-        "collection": "medium_treasure_trails"
       }
     ],
     "source": "templeosrs"
