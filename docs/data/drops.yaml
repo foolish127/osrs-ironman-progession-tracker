@@ -1,0 +1,984 @@
+# Notable Drops Log
+# Format: boss, kc, item, date (MM/DD/YYYY or blank)
+# Add 'droprate' to track in luck summary (only needed on first drop of each type)
+
+drops:
+
+  - boss: Wintertodt
+    kc: 118
+    item: Phoenix
+    date: 2/09/2025
+    droprate: 5000
+
+  - boss: Wintertodt
+    kc: 118
+    item: Dragon axe
+    date: 2/09/2025
+    droprate: 10000
+    notes: Per the Phoenix pet screenshot. Was likely earlier kc but could not find screenshot
+
+  - boss: Wintertodt
+    kc: 168
+    item: Tome of fire
+    date: 2/09/2025
+    droprate: 1000
+    notes: Per the 2025-02-09_14-44-19.png screenshot. Obtained between kc 118 and 168
+
+  - boss: Cave horror
+    kc: 99
+    item: Black mask
+    date: 7/30/2025
+    droprate: 512
+    notes: Per the Crazy Arch 15 screenshot - may not be exact
+
+  - boss: Dagganoth Rex
+    kc: 26
+    item: Dragon axe
+    date: 8/16/2025
+    droprate: 128
+
+  - boss: Dagganoth Rex
+    kc: 34
+    item: Berserker Ring
+    date: 8/16/2025
+    droprate: 128
+
+  - boss: Barrows
+    kc: 16
+    item: Verac Plateskirt
+    date: 9/5/2025
+    droprate: 17
+
+  - boss: Barrows
+    kc: 23
+    item: Verac Plateskirt
+    date: 9/5/2025
+
+  - boss: Barrows
+    kc: 37
+    item: Guthan's Platebody
+    date: 9/5/2025
+
+  - boss: Barrows
+    kc: 55
+    item: Ahrim's Robetop
+    date: 9/6/2025
+
+  - boss: Barrows
+    kc: 56
+    item: Torag's Platebody
+    date: 9/6/2025
+
+  - boss: Barrows
+    kc: 78
+    item: Dharok's Greataxe
+    date: 9/6/2025
+
+  - boss: Barrows
+    kc: 79
+    item: Torag's Helm
+    date: 9/6/2025
+
+  - boss: Barrows
+    kc: 86
+    item: Karil's Coif
+    date: 9/6/2025
+
+  - boss: Barrows
+    kc: 98
+    item: Dharok's Platelegs
+    date: 9/6/2025
+
+  - boss: Barrows
+    kc: 109
+    item: Guthan's Chainskirt
+    date: 9/6/2025
+
+  - boss: Barrows
+    kc: 130
+    item: Verac's Helm
+    date: 9/7/2025
+
+  - boss: Barrows
+    kc: 138
+    item: Dharok's Platelegs
+    date: 9/7/2025
+
+  - boss: Barrows
+    kc: 141
+    item: Dharok's Greataxe
+    date: 9/7/2025
+
+  - boss: Barrows
+    kc: 177
+    item: Ahrim's Staff
+    date: 9/8/2025
+
+  - boss: Barrows
+    kc: 220
+    item: Torag's Hammers
+    date: 9/9/2025
+
+  - boss: Barrows
+    kc: 251
+    item: Dharok's Greataxe
+    date: 9/9/2025
+
+  - boss: Barrows
+    kc: 269
+    item: Verac's Helm
+    date: 9/9/2025
+
+  - boss: Barrows
+    kc: 273
+    item: Karil's Leathertop
+    date: 9/9/2025
+
+  - boss: Barrows
+    kc: 301
+    item: Verac's Flail
+    date: 9/12/2025
+
+  - boss: Barrows
+    kc: 322
+    item: Karil's Crossbow
+    date: 9/12/2025
+
+  - boss: Barrows
+    kc: 333
+    item: Ahrim's Staff
+    date: 9/13/2025
+
+  - boss: Barrows
+    kc: 335
+    item: Torag's Hammers
+    date: 9/13/2025
+
+  - boss: Barrows
+    kc: 338
+    item: Ahrim's Robeskirt
+    date: 9/13/2025
+
+  - boss: Barrows
+    kc: 339
+    item: Dharok's Greataxe
+    date: 9/13/2025
+
+  - boss: Perilous Moons
+    kc: 5
+    item: Eclipse Moon Tassets
+    date: 8/24/2025
+    droprate: 56
+
+  - boss: Perilous Moons
+    kc: 32
+    item: Eclipse Atlatl
+    date: 9/7/2025
+
+  - boss: Perilous Moons
+    kc: 120
+    item: Blue Moon Chestplate
+    date: 9/11/2025
+
+  - boss: Perilous Moons
+    kc: 120
+    item: Eclipse Moon Helm
+    date: 9/11/2025
+
+  - boss: Perilous Moons
+    kc: 138
+    item: Dual Macuahuitl
+    date: 9/11/2025
+
+  - boss: Perilous Moons
+    kc: 149
+    item: Eclipse Moon Chestplate
+    date: 9/11/2025
+
+  - boss: Perilous Moons
+    kc: 215
+    item: Blue Moon Spear
+    date: 9/13/2025
+
+  - boss: Perilous Moons
+    kc: 264
+    item: Blood Moon Helm
+    date: 9/14/2025
+
+  - boss: Perilous Moons
+    kc: 330
+    item: Blood Moon Chestplate
+    date: 9/17/2025
+
+  - boss: Perilous Moons
+    kc: 342
+    item: Blue Moon Helm
+    date: 9/17/2025
+
+  - boss: Perilous Moons
+    kc: 347
+    item: Blue Moon Tassets
+    date: 9/17/2025
+
+  - boss: Perilous Moons
+    kc: 414
+    item: Blood Moon Tassets
+    date: 9/18/2025
+
+  - boss: Fight Caves
+    kc: 1
+    item: Fire Cape
+    date: 9/13/2025
+
+  - boss: Royal Titans
+    kc: 19
+    item: Mystic vigour prayer scroll
+    date: 9/18/2025
+    droprate: 75
+
+  - boss: Royal Titans
+    kc: 76
+    item: Deadeye prayer scroll
+    date: 9/19/2025
+    droprate: 75
+
+  - boss: Royal Titans
+    kc: 190
+    item: Ice element staff crown
+    date: 10/7/2025
+    droprate: 75
+
+  - boss: Amoxliatl
+    kc: 16
+    item: Pendant of ates
+    date: 10/14/2025
+    droprate: 25
+    
+  - boss: Royal Titans
+    kc: 496
+    item: Fire element staff crown
+    date: 11/6/2025
+    droprate: 75
+
+  - boss: Corrupted Gauntlet
+    kc: 24
+    item: Crystal armour seed
+    date: 9/20/2025
+    droprate: 50
+    notes: 1st
+
+  - boss: Corrupted Gauntlet
+    kc: 65
+    item: Crystal armour seed
+    date: 
+    notes: 2nd
+
+  - boss: Corrupted Gauntlet
+    kc: 82
+    item: Crystal armour seed
+    date: 
+    notes: 3rd
+
+  - boss: Corrupted Gauntlet
+    kc: 113
+    item: Crystal armour seed
+    date: 
+    notes: 4th
+
+  - boss: Corrupted Gauntlet
+    kc: 160
+    item: Crystal armour seed
+    date: 
+    notes: 5th
+
+  - boss: Corrupted Gauntlet
+    kc: 185
+    item: Crystal armour seed
+    date: 
+    notes: 6th
+
+  - boss: Corrupted Gauntlet
+    kc: 257
+    item: Crystal armour seed
+    date: 
+    notes: 7th
+
+  - boss: Corrupted Gauntlet
+    kc: 338
+    item: Crystal armour seed
+    date: 
+    notes: 8th
+
+  - boss: Corrupted Gauntlet
+    kc: 376
+    item: Crystal armour seed
+    date: 
+    notes: 9th
+
+  - boss: Corrupted Gauntlet
+    kc: 385
+    item: Crystal armour seed
+    date: 
+    notes: 10th
+
+  - boss: Corrupted Gauntlet
+    kc: 450
+    item: Crystal armour seed
+    date: 
+    notes: 11th
+
+  - boss: Corrupted Gauntlet
+    kc: 537
+    item: Crystal armour seed
+    date: 
+    notes: 12th
+
+  - boss: Corrupted Gauntlet
+    kc: 559
+    item: Crystal armour seed
+    date: 
+    notes: 13th
+
+  - boss: Corrupted Gauntlet
+    kc: 602
+    item: Crystal armour seed
+    date: 1/2/2026
+    notes: 14th
+
+  - boss: Corrupted Gauntlet
+    kc: 610
+    item: Crystal armour seed
+    date: 1/5/2026
+    notes: 15th
+
+  - boss: Corrupted Gauntlet
+    kc: 621
+    item: Crystal armour seed
+    date: 1/9/2026
+    notes: 16th
+
+  - boss: Hespori
+    kc: 23
+    item: Bottomless Bucket
+    date: 10/15/2025
+    droprate: 35
+
+  - boss: Hespori
+    kc: 65
+    item: Bottomless Bucket
+    date: 12/28/2025
+
+  - boss: Hespori
+    kc: 77
+    item: Bottomless Bucket
+    date: 1/14/2026
+
+  - boss: Vorkath
+    kc: 6
+    item: Vorkath's Head
+    date: 10/30/2025
+    droprate: 50
+
+  - boss: Demonic Gorilla
+    kc: 400
+    item: Zenyte Shard
+    date: 11/1/2025
+    droprate: 300
+
+  - boss: Demonic Gorilla
+    kc: 1292
+    item: Zenyte Shard
+    date: 
+
+  - boss: Demonic Gorilla
+    kc: 1411
+    item: Zenyte Shard
+    date: 
+
+  - boss: Demonic Gorilla
+    kc: 1483
+    item: Zenyte Shard
+    date: 
+
+  - boss: Tempoross
+    kc: 17
+    item: Tackle box
+    date: 11/5/2025
+    droprate: 400
+
+  - boss: Tempoross
+    kc: 23
+    item: Fish Barrel (146 permits)
+    date: 11/5/2025
+
+  - boss: Tormented Demons
+    kc: 246
+    item: Tormented Synapse
+    date: 11/10/2025
+    droprate: 500
+
+  - boss: Tormented Demons
+    kc: 354
+    item: Tormented Synapse
+    date: 
+
+  - boss: Tormented Demons
+    kc: 364
+    item: Magic longbow (u)
+    date: 
+
+  - boss: Tormented Demons
+    kc: 441
+    item: Tormented Synapse
+    date: 
+
+  - boss: Tormented Demons
+    kc: 509
+    item: Tormented Synapse
+    date: 
+
+  - boss: Tormented Demons
+    kc: 603
+    item: Tormented Synapse
+    date: 
+
+  - boss: Tormented Demons
+    kc: 809
+    item: Tormented Synapse
+    date: 
+
+  - boss: Tormented Demons
+    kc: 1040
+    item: Burning Claw
+    date: 12/26/2025
+    droprate: 1000
+
+  - boss: Tormented Demons
+    kc: 1203
+    item: Tormented Synapse
+    date: 
+
+  - boss: Tormented Demons
+    kc: 1256
+    item: Tormented Synapse
+    date: 
+
+  - boss: Tormented Demons
+    kc: 1260
+    item: Tormented Synapse
+    date: 
+
+  - boss: Tormented Demons
+    kc: 1486
+    item: Tormented Synapse
+    date: 1/3/2026
+
+  - boss: Tormented Demons
+    kc: 1515
+    item: Magic longbow (u)
+    date: 1/12/2026
+
+  - boss: Tormented Demons
+    kc: 1530
+    item: Magic longbow (u)
+    date: 1/12/2026
+
+  - boss: Tormented Demons
+    kc: 1590
+    item: Burning Claw
+    date: 1/12/2026
+
+  - boss: Aquanite
+    kc: 73
+    item: Aquanite Tendon
+    date: 12/6/2025
+    droprate: 200
+
+  - boss: Frost Dragon
+    kc: 50
+    item: Dragon Metal Sheet
+    date: 
+    droprate: 100
+
+  - boss: Pyramid Plunder
+    kc: 10
+    item: Pharaoh's Sceptre
+    date: 12/7/2025
+    droprate: 100
+
+  - boss: Pyramid Plunder
+    kc: 88
+    item: Pharaoh's Sceptre
+    date: 
+
+  - boss: Abyssal Demons
+    kc: 337
+    item: Abyssal Whip
+    date: 12/16/2025
+    droprate: 512
+
+  - boss: Abyssal Demons
+    kc: 537
+    item: Abyssal Whip
+    notes: Abyssal whip 2
+
+  - boss: Lizardman Shaman
+    kc: 45
+    item: Dragon Warhammer
+    date: 12/19/2025
+    droprate: 3000
+
+  - boss: Calvar'ion
+    kc: 59
+    item: Dragon Pickaxe
+    date: 12/29/2025
+    droprate: 358
+
+  - boss: Superior Slayer Creatures
+    kc: 78
+    item: Imbued Heart
+    date: 12/31/2025
+    droprate: 200
+
+  - boss: Cerberus
+    kc: 168
+    item: Smouldering Stone
+    date: 1/3/2026
+    droprate: 520
+
+  - boss: Kraken
+    kc: 548
+    item: Kraken tentacle
+    date: 1/8/2026
+    droprate: 400
+
+  - boss: Kraken
+    kc: 725
+    item: Trident of the seas
+    date: 1/9/2026
+    droprate: 512
+
+  - boss: Kraken
+    kc: 1106
+    item: Kraken tentacle
+    date: 1/14/2026
+    notes: Tentacle 2
+
+  - boss: Guardians of the Rift
+    kc: 200
+    item: Abyssal Lantern
+    date: 1/10/2026
+    droprate: 700
+
+  - boss: Basilisk Knight
+    kc: 789
+    item: Basilisk Head
+    date: 1/11/2026
+    droprate: 1000
+
+  - boss: Skotizo
+    kc: 23
+    item: Jar of darkness
+    date: 1/12/2026
+    droprate: 200
+
+  - boss: Cerberus
+    kc: 204
+    item: Primordial crystal
+    date: 1/18/2026
+    droprate: 520
+
+  - boss: Cerberus
+    kc: 308
+    item: Smouldering Stone
+    date: 1/18/2026
+    notes: 2nd drop
+    
+  - boss: Kraken
+    kc: 1556
+    item: Jar of dirt
+    date: 1/18/2026
+    droprate: 1000
+
+# Elle - unknown kc
+  - boss: Kraken
+    kc: 1500
+    item: Trident of the seas
+    date: 1/18/2026
+
+  - boss: Armoured zombie
+    kc: 796
+    item: Zombie axe
+    date: 8/15/2025
+    droprate: 800
+
+  - boss: Forestry (Pheasant Control)
+    kc: 1040
+    item: Golden pheasant egg
+    date: 1/21/2026
+    droprate: 1500
+
+  - boss: Kraken
+    kc: 1760
+    item: Kraken tentacle
+    date: 1/23/2026
+    notes: Tentacle 3
+
+  - boss: Aquanite
+    kc: 227
+    item: Aquanite Tendon
+    date: 1/23/2026
+
+  - boss: Gryphon
+    kc: 420
+    item: Horn of plenty
+    date: 1/24/2026
+    droprate: 1000
+
+  - boss: Squids
+    kc: 1851
+    item: Squid beak
+    date: 1/27/2026
+    droprate: 1024
+
+  - boss: Vyrewatch Sentinel
+    kc: 437
+    item: Blood shard
+    date: 2/3/2026
+    droprate: 1500
+
+  - boss: Araxxor
+    kc: 162
+    item: Araxyte head
+    date: 2/05/2026
+    droprate: 250
+
+  - boss: Araxxor
+    kc: 235
+    item: Araxyte fang
+    date: 2/7/2026
+    droprate: 600
+
+  - boss: Guardians of the Rift
+    kc: 15
+    item: Tarnished locket
+    date: 2/07/2026
+    droprate: 40
+
+  - boss: Guardians of the Rift
+    kc: 463
+    item: Abyssal lantern
+    date: 2/08/2026
+    droprate: 700
+    notes: Abyssal lantern 2
+
+  - boss: Guardians of the Rift
+    kc: 563
+    item: Abyssal lantern
+    date: 2/08/2026
+    droprate: 700
+    notes: Abyssal lantern 3
+
+  - boss: Doom of Mokhaiotl
+    kc: 82
+    item: Mokhaiotl cloth
+    date: 2/11/2026
+    droprate: 2103
+    notes: 9th wave 4, 82 eligible waves, 126 total delves
+
+  - boss: Doom of Mokhaiotl
+    kc: 19
+    item: Avernic treads
+    date: 2/13/2026
+    droprate: 1350
+    notes: 19th wave 4, no 4+, 172 total delves
+
+  - boss: Corrupted Gauntlet
+    kc: 693
+    item: Crystal armour seed
+    date: 2/16/2026
+    notes: 17th
+
+  - boss: Hunter rumors
+    kc: 56
+    item: Perfected quetzal whistle blueprint
+    date: 2/20/2026
+    droprate: 50
+
+  - boss: Dagganoth Supreme
+    kc: 1
+    item: Dragon axe
+    date: 2/21/2026
+    droprate: 128
+
+  - boss: Guardians of the Rift
+    kc: 623
+    item: Abyssal needle
+    date: 2/21/2026
+    droprate: 300
+    notes: 623 rift searches
+
+  - boss: Sarachnis
+    kc: 22
+    item: Pristine spider silk
+    date: 2/25/2026
+    droprate: 50
+    notes: 47 overall kills, 25 pre-silk added
+
+  - boss: Brutus
+    kc: 38
+    item: Mooleta
+    date: 2/27/2026
+    droprate: 30
+
+  - boss: Corrupted Gauntlet
+    kc: 755
+    item: Crystal armour seed
+    date: 2/27/2026
+    notes: 18th
+
+  - boss: Barrows
+    kc: 352
+    item: Dharok's Greataxe
+    date: 2/27/2026
+
+  - boss: Cerberus
+    kc: 386
+    item: Primordial crystal
+    date: 2/28/2026
+    notes: 2nd drop
+
+  - boss: Cerberus
+    kc: 398
+    item: Pegasian crystal
+    date: 2/28/2026
+    droprate: 520
+
+  - boss: Hunter rumors
+    kc: 61
+    item: Huntsman's kit
+    date: 3/01/2026
+    droprate: 50
+    notes: Unknown number of adept hunter sacks
+
+  - boss: Hunter rumors
+    kc: 128
+    item: Guild hunter legs
+    date: 3/03/2026
+    droprate: 50
+    notes: Unknown number of adept hunter sacks    
+
+  - boss: Reward casket (medium)
+    kc: 147
+    item: Ranger boots
+    date: 3/04/2026
+    droprate: 283.6
+
+  - boss: Reward casket (medium)
+    kc: 149
+    item: Ranger boots
+    date: 3/04/2026
+    droprate: 283.6
+
+  - boss: Abyssal Demons
+    kc: 2250
+    item: Abyssal Whip
+    date: 3/05/2025
+    notes: Abyssal whip 3
+
+  - boss: Hueycoatl
+    kc: 28
+    item: Hueycoatl hide
+    date: 3/06/2026
+    droprate: 86
+    notes: Total kc 111, trios from kc 84 (1/3 contrib)
+
+  - boss: Hueycoatl
+    kc: 47
+    item: Hueycoatl hide
+    date: 3/06/2026
+    droprate: 86
+    notes: Total kc 130, trios from kc 84 (1/3 contrib)
+
+  - boss: Corrupted Gauntlet
+    kc: 782
+    item: Crystal armour seed
+    date: 3/08/2026
+    notes: 19th
+
+  - boss: Corrupted Gauntlet
+    kc: 796
+    item: Crystal armour seed
+    date: 3/16/2026
+    notes: 20th
+
+  - boss: Araxxor
+    kc: 266
+    item: Noxious point
+    date: 3/19/2026
+    droprate: 200
+
+  - boss: Araxxor
+    kc: 356
+    item: Jar of venom
+    date: 3/20/2026
+    droprate: 1500
+
+  - boss: Araxxor
+    kc: 378
+    item: Araxyte head
+    date: 3/20/2026
+    notes: 2nd drop
+
+  - boss: Araxxor
+    kc: 443
+    item: Araxyte head
+    date: 3/20/2026
+    notes: 3rd drop
+
+  - boss: Alchemical Hydra
+    kc: 118
+    item: Hydra's eye
+    date: 3/24/2026
+    droprate: 181
+
+  - boss: Alchemical Hydra
+    kc: 175
+    item: Alchemical hydra heads
+    date: 3/25/2026
+    droprate: 256
+
+  - boss: Alchemical Hydra
+    kc: 203
+    item: Hydra's fang
+    date: 3/26/2026
+    droprate: 181
+
+  - boss: Corrupted Gauntlet
+    kc: 819
+    item: Crystal armour seed
+    date: 3/26/2026
+    notes: 21st
+
+  - boss: Doom of Mokhaiotl
+    kc: 499
+    item: Mokhaiotl cloth
+    date: 3/28/2026
+    droprate: 1545
+    notes: 159th wave 2, 660 total delves
+
+  - boss: Corrupted Gauntlet
+    kc: 896
+    item: Crystal armour seed
+    date: 3/31/2026
+    notes: 22nd
+
+  - boss: Corrupted Gauntlet
+    kc: 917
+    item: Crystal armour seed
+    date: 4/02/2026
+    notes: 23rd
+
+  - boss: Corrupted Gauntlet
+    kc: 932
+    item: Crystal armour seed
+    date: 4/02/2026
+    notes: 24th
+
+  - boss: Abyssal Sire
+    kc: 79
+    item: Unsired
+    date: 4/03/2026
+    droprate: 100
+    notes: Abyssal whip 4
+
+  - boss: Kraken
+    kc: 2224
+    item: Kraken tentacle
+    date: 4/14/2026
+    notes: Tentacle 4
+
+  - boss: Guardians of the Rift
+    kc: 729
+    item: Abyssal blue dye
+    date: 4/29/2026
+    droprate: 1200
+
+  - boss: Guardians of the Rift
+    kc: 829
+    item: Abyssal Lantern
+    date: 5/02/2026
+    notes: Abyssal Lantern 4
+
+  - boss: Araxxor
+    kc: 504
+    item: Araxyte fang
+    date: 5/10/2026
+    notes: 2nd drop
+
+  - boss: Araxxor
+    kc: 527
+    item: Noxious blade
+    date: 5/11/2026
+    droprate: 200
+
+  - boss: Giant Mole
+    kc: 21
+    item: Immaculate mole skin
+    date: 5/13/2026
+    droprate: 50
+    notes: 46 overall kills, 25 pre-mole skin added
+
+  - boss: Araxxor
+    kc: 681
+    item: Araxyte head
+    date: 5/14/2026
+    notes: 4th drop
+
+  - boss: Cerberus
+    kc: 505
+    item: Smouldering Stone
+    date: 5/15/2026
+    notes: 3rd drop
+
+  - boss: Corrupted Gauntlet
+    kc: 971
+    item: Enhanced crystal weapon seed
+    date: 5/16/2026
+    droprate: 400
+
+  - boss: Zulrah
+    kc: 59
+    item: Magic fang
+    date: 5/17/2026
+    droprate: 512
+
+  - boss: Araxxor
+    kc: 693
+    item: Araxyte head
+    date: 5/21/2026
+    notes: 5th drop
+
+  - boss: Araxxor
+    kc: 714
+    item: Araxyte head
+    date: 5/22/2026
+    notes: 6th drop
+
+  - boss: Araxxor
+    kc: 740
+    item: Araxyte head
+    date: 5/22/2026
+    notes: 7th drop
+
+  - boss: Araxxor
+    kc: 803
+    item: Noxious pommel
+    date: 5/23/2026
+    droprate: 200
+
+  - boss: Dagganoth Rex
+    kc: 35
+    item: Warrior ring
+    date: 5/23/2026
+    droprate: 128
