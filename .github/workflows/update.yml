@@ -1,77 +1,80 @@
 name: Update OSRS Stats
+
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Every 6 hours
-  workflow_dispatch:       # Manual trigger
+    - cron: '0 */6 * * *'   # Every 6 hours
+  workflow_dispatch:        # Manual trigger
   push:
     paths:
       - 'data/*.yaml'
       - 'data/bank.txt'
+      - 'index.html'
       - 'scripts/update_stats.py'
       - 'scripts/update_bank.py'
-      - 'docs/**'          # Trigger on any docs changes
+      - '.github/workflows/update.yml'
+
 # Prevent duplicate runs
 concurrency:
   group: update-stats
   cancel-in-progress: false
+
 # Required for Pages deployment
 permissions:
   contents: write
   pages: write
   id-token: write
+
 jobs:
   update-and-deploy:
     runs-on: ubuntu-latest
     # Skip if triggered by bot's own commit
     if: github.actor != 'github-actions[bot]'
-    
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    
+
     steps:
       - uses: actions/checkout@v4
-      
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      
-      - name: Run update script
+
+      - name: Run update scripts
         env:
           RSN: FoolinSlays
         run: |
           python scripts/update_stats.py
           python scripts/update_bank.py
-      
-      - name: Copy data to docs
-        run: |
-          mkdir -p docs/data
-          cp data/*.json docs/data/ 2>/dev/null || true
-          cp data/*.yaml docs/data/ 2>/dev/null || true
-      
-      - name: Create config with password hash
-        env:
-          BANK_PASSWORD_HASH: ${{ secrets.BANK_PASSWORD_HASH }}
-        run: |
-          echo "{\"bankPasswordHash\": \"$BANK_PASSWORD_HASH\"}" > docs/data/config.json
-      
-      - name: Commit and push
+
+      - name: Commit data changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add -A
+          git add data/
           git diff --staged --quiet || git commit -m "Update stats $(date -u +'%Y-%m-%d %H:%M UTC')"
           git pull --rebase origin main
           git push
-      
+
+      - name: Stage Pages artifact
+        env:
+          BANK_PASSWORD_HASH: ${{ secrets.BANK_PASSWORD_HASH }}
+        run: |
+          mkdir -p _site/data
+          cp index.html _site/
+          cp data/*.json _site/data/ 2>/dev/null || true
+          cp data/*.yaml _site/data/ 2>/dev/null || true
+          echo "{\"bankPasswordHash\": \"$BANK_PASSWORD_HASH\"}" > _site/data/config.json
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
-      
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './docs'
-      
+          path: './_site'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
