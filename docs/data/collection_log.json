@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-05-24T01:49:59.002536+00:00",
+  "updated": "2026-05-24T03:06:22.412758+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -641,6 +641,25 @@
         "missing": [],
         "obtained_count": 13,
         "total_count": 13
+      },
+      "Nex": {
+        "obtained": [
+          {
+            "name": "Nihil shard",
+            "date": "2026-05-24 02:17:11",
+            "quantity": 5
+          }
+        ],
+        "missing": [
+          "Ancient hilt",
+          "Nihil horn",
+          "Torva full helm (damaged)",
+          "Torva platebody (damaged)",
+          "Torva platelegs (damaged)",
+          "Zaryte vambraces"
+        ],
+        "obtained_count": 1,
+        "total_count": 7
       },
       "Phantom Muspah": {
         "obtained": [
@@ -4877,20 +4896,6 @@
         "obtained_count": 0,
         "total_count": 26
       },
-      "Nex": {
-        "obtained": [],
-        "missing": [
-          "Ancient hilt",
-          "Nihil horn",
-          "Nihil shard",
-          "Torva full helm (damaged)",
-          "Torva platebody (damaged)",
-          "Torva platelegs (damaged)",
-          "Zaryte vambraces"
-        ],
-        "obtained_count": 0,
-        "total_count": 7
-      },
       "Nex, All Pets": {
         "obtained": [],
         "missing": [
@@ -5449,9 +5454,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 537,
+    "total_obtained": 538,
     "total_items": 1727,
     "recent_items": [
+      {
+        "name": "Nihil shard",
+        "date": "2026-05-24 02:17:11",
+        "collection": "nex"
+      },
       {
         "name": "Warrior ring",
         "date": "2026-05-24 00:31:43",
@@ -5545,11 +5555,6 @@
       {
         "name": "Alchemical hydra heads",
         "date": "2026-03-26 02:12:47",
-        "collection": "alchemical_hydra"
-      },
-      {
-        "name": "Hydra's eye",
-        "date": "2026-03-24 20:25:27",
         "collection": "alchemical_hydra"
       }
     ],
