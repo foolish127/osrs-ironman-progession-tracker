@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-05-24T20:17:59.175712+00:00",
+  "updated": "2026-05-25T03:56:43.554010+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -78,12 +78,12 @@
           {
             "name": "Araxyte venom sack",
             "date": "2026-01-16",
-            "quantity": 1117
+            "quantity": 1319
           },
           {
             "name": "Spider cave teleport",
             "date": "2026-02-01 16:35:59",
-            "quantity": 171
+            "quantity": 195
           },
           {
             "name": "Araxyte fang",
@@ -108,7 +108,7 @@
           {
             "name": "Araxyte head",
             "date": "2026-02-05 22:21:46",
-            "quantity": 4
+            "quantity": 7
           },
           {
             "name": "Jar of venom",
@@ -647,7 +647,7 @@
           {
             "name": "Nihil shard",
             "date": "2026-05-24 02:17:11",
-            "quantity": 5
+            "quantity": 16
           }
         ],
         "missing": [
@@ -927,12 +927,12 @@
           {
             "name": "Zul-andra teleport",
             "date": "2026-02-01 04:46:45",
-            "quantity": 68
+            "quantity": 88
           },
           {
             "name": "Zulrah's scales",
             "date": "2025-10-28",
-            "quantity": 27112
+            "quantity": 32841
           }
         ],
         "missing": [
@@ -3148,6 +3148,11 @@
             "name": "Dragon cannon schematic",
             "date": "2025-11-30",
             "quantity": 1
+          },
+          {
+            "name": "Bosun's workbench schematic",
+            "date": "2026-05-24 20:18:55",
+            "quantity": 1
           }
         ],
         "missing": [
@@ -3156,8 +3161,8 @@
           "Gale catcher schematic",
           "Rosewood & cotton sails schematic"
         ],
-        "obtained_count": 6,
-        "total_count": 10
+        "obtained_count": 7,
+        "total_count": 11
       },
       "Motherlode Mine": {
         "obtained": [
@@ -5454,9 +5459,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 538,
-    "total_items": 1727,
+    "total_obtained": 539,
+    "total_items": 1728,
     "recent_items": [
+      {
+        "name": "Bosun's workbench schematic",
+        "date": "2026-05-24 20:18:55",
+        "collection": "lost_schematics"
+      },
       {
         "name": "Nihil shard",
         "date": "2026-05-24 02:17:11",
@@ -5551,11 +5561,6 @@
         "name": "Hydra's fang",
         "date": "2026-03-26 19:23:46",
         "collection": "slayer"
-      },
-      {
-        "name": "Alchemical hydra heads",
-        "date": "2026-03-26 02:12:47",
-        "collection": "alchemical_hydra"
       }
     ],
     "source": "templeosrs"
