@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-06-07T19:24:00.222441+00:00",
+  "updated": "2026-06-08T04:06:36.298004+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -944,6 +944,44 @@
         ],
         "obtained_count": 3,
         "total_count": 8
+      },
+      "Tombs Of Amascut": {
+        "obtained": [
+          {
+            "name": "Thread of elidinis",
+            "date": "2026-06-08 03:32:30",
+            "quantity": 1
+          }
+        ],
+        "missing": [
+          "Ancient remnant",
+          "Breach of the scarab",
+          "Cache of runes",
+          "Cursed phalanx",
+          "Elidinis' ward",
+          "Eye of the corruptor",
+          "Icthlarin's shroud (tier 1)",
+          "Icthlarin's shroud (tier 2)",
+          "Icthlarin's shroud (tier 3)",
+          "Icthlarin's shroud (tier 4)",
+          "Icthlarin's shroud (tier 5)",
+          "Jewel of amascut",
+          "Jewel of the sun",
+          "Lightbearer",
+          "Masori body",
+          "Masori chaps",
+          "Masori crafting kit",
+          "Masori mask",
+          "Menaphite ornament kit",
+          "Osmumten's fang",
+          "Remnant of akkha",
+          "Remnant of ba-ba",
+          "Remnant of kephri",
+          "Remnant of zebak",
+          "Tumeken's shadow (uncharged)"
+        ],
+        "obtained_count": 1,
+        "total_count": 26
       },
       "Beginner Treasure Trails": {
         "obtained": [
@@ -5260,39 +5298,6 @@
         "obtained_count": 0,
         "total_count": 1
       },
-      "Tombs of Amascut": {
-        "obtained": [],
-        "missing": [
-          "Ancient remnant",
-          "Breach of the scarab",
-          "Cache of runes",
-          "Cursed phalanx",
-          "Elidinis' ward",
-          "Eye of the corruptor",
-          "Icthlarin's shroud (tier 1)",
-          "Icthlarin's shroud (tier 2)",
-          "Icthlarin's shroud (tier 3)",
-          "Icthlarin's shroud (tier 4)",
-          "Icthlarin's shroud (tier 5)",
-          "Jewel of amascut",
-          "Jewel of the sun",
-          "Lightbearer",
-          "Masori body",
-          "Masori chaps",
-          "Masori crafting kit",
-          "Masori mask",
-          "Menaphite ornament kit",
-          "Osmumten's fang",
-          "Remnant of akkha",
-          "Remnant of ba-ba",
-          "Remnant of kephri",
-          "Remnant of zebak",
-          "Thread of elidinis",
-          "Tumeken's shadow (uncharged)"
-        ],
-        "obtained_count": 0,
-        "total_count": 26
-      },
       "Tombs of Amascut, All Pets": {
         "obtained": [],
         "missing": [
@@ -5459,9 +5464,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 539,
+    "total_obtained": 540,
     "total_items": 1728,
     "recent_items": [
+      {
+        "name": "Thread of elidinis",
+        "date": "2026-06-08 03:32:30",
+        "collection": "tombs_of_amascut"
+      },
       {
         "name": "Bosun's workbench schematic",
         "date": "2026-05-24 20:18:55",
@@ -5556,11 +5566,6 @@
         "name": "Hydra's fang",
         "date": "2026-03-26 19:23:46",
         "collection": "alchemical_hydra"
-      },
-      {
-        "name": "Hydra's fang",
-        "date": "2026-03-26 19:23:46",
-        "collection": "slayer"
       }
     ],
     "source": "templeosrs"
