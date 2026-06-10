@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-06-09T20:07:41.529077+00:00",
+  "updated": "2026-06-10T01:49:19.963549+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -953,15 +953,23 @@
             "quantity": 1
           },
           {
+            "name": "Breach of the scarab",
+            "date": "2026-06-10 01:45:20",
+            "quantity": 1
+          },
+          {
             "name": "Jewel of amascut",
             "date": "2026-06-09 01:41:12",
+            "quantity": 1
+          },
+          {
+            "name": "Cache of runes",
+            "date": "2026-06-10 01:45:20",
             "quantity": 1
           }
         ],
         "missing": [
           "Ancient remnant",
-          "Breach of the scarab",
-          "Cache of runes",
           "Cursed phalanx",
           "Elidinis' ward",
           "Eye of the corruptor",
@@ -984,7 +992,7 @@
           "Remnant of zebak",
           "Tumeken's shadow (uncharged)"
         ],
-        "obtained_count": 2,
+        "obtained_count": 4,
         "total_count": 26
       },
       "Beginner Treasure Trails": {
@@ -5468,9 +5476,19 @@
         "total_count": 1
       }
     },
-    "total_obtained": 541,
+    "total_obtained": 543,
     "total_items": 1728,
     "recent_items": [
+      {
+        "name": "Breach of the scarab",
+        "date": "2026-06-10 01:45:20",
+        "collection": "tombs_of_amascut"
+      },
+      {
+        "name": "Cache of runes",
+        "date": "2026-06-10 01:45:20",
+        "collection": "tombs_of_amascut"
+      },
       {
         "name": "Jewel of amascut",
         "date": "2026-06-09 01:41:12",
@@ -5560,16 +5578,6 @@
         "name": "Rock golem",
         "date": "2026-04-01 13:40:05",
         "collection": "all_pets"
-      },
-      {
-        "name": "Rock golem",
-        "date": "2026-04-01 13:40:05",
-        "collection": "skilling_pets"
-      },
-      {
-        "name": "Ancient essence",
-        "date": "2026-03-27 18:01:31",
-        "collection": "phantom_muspah"
       }
     ],
     "source": "templeosrs"
