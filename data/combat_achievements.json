@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-06-12T16:19:39.128897+00:00",
+  "updated": "2026-06-12T17:32:19.310048+00:00",
   "combat_achievements": {
     "tiers": {
       "Easy": {
@@ -1086,6 +1086,10 @@
             "date": "2026-05-23"
           },
           {
+            "name": "Tomb Looter",
+            "date": "2026-06-12"
+          },
+          {
             "name": "Unrequired Antipoisons",
             "date": "2026-03-19"
           },
@@ -1223,7 +1227,6 @@
           "Theatre of Blood Master",
           "Theatre of Blood: SM Speed-Chaser",
           "Three Times the Thrashing",
-          "Tomb Looter",
           "Tomb Raider",
           "Tombs Speed Runner",
           "Two-Down",
@@ -1244,10 +1247,10 @@
           "You Didn't Say Anything About a Bat",
           "Zulrah Speed-Chaser"
         ],
-        "completed_count": 20,
+        "completed_count": 21,
         "total_count": 168,
         "points_per_task": 5,
-        "points_earned": 100
+        "points_earned": 105
       },
       "Grandmaster": {
         "completed": [
@@ -1396,11 +1399,16 @@
         "points_earned": 30
       }
     },
-    "total_completed": 232,
+    "total_completed": 233,
     "total_tasks": 637,
-    "total_points": 660,
+    "total_points": 665,
     "max_points": 2630,
     "recent_tasks": [
+      {
+        "name": "Tomb Looter",
+        "date": "2026-06-12",
+        "tier": "Master"
+      },
       {
         "name": "Novice Tomb Looter",
         "date": "2026-06-11",
@@ -1495,11 +1503,6 @@
         "name": "Perfect Nex",
         "date": "2026-05-23",
         "tier": "Grandmaster"
-      },
-      {
-        "name": "Zulrah Master",
-        "date": "2026-05-18",
-        "tier": "Master"
       }
     ]
   }
