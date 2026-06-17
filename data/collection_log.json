@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-06-17T15:33:14.228539+00:00",
+  "updated": "2026-06-17T20:12:45.974083+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -772,7 +772,7 @@
           {
             "name": "Ancient shard",
             "date": "2025-07-29",
-            "quantity": 118
+            "quantity": 119
           }
         ],
         "missing": [
@@ -927,12 +927,12 @@
           {
             "name": "Zul-andra teleport",
             "date": "2026-02-01 04:46:45",
-            "quantity": 88
+            "quantity": 140
           },
           {
             "name": "Zulrah's scales",
             "date": "2025-10-28",
-            "quantity": 32841
+            "quantity": 53083
           }
         ],
         "missing": [
@@ -950,11 +950,16 @@
           {
             "name": "Thread of elidinis",
             "date": "2026-06-08 03:32:30",
-            "quantity": 1
+            "quantity": 3
           },
           {
             "name": "Breach of the scarab",
             "date": "2026-06-10 01:45:20",
+            "quantity": 1
+          },
+          {
+            "name": "Eye of the corruptor",
+            "date": "2026-06-17 17:29:35",
             "quantity": 1
           },
           {
@@ -965,19 +970,18 @@
           {
             "name": "Jewel of amascut",
             "date": "2026-06-09 01:41:12",
-            "quantity": 1
+            "quantity": 2
           },
           {
             "name": "Cache of runes",
             "date": "2026-06-10 01:45:20",
-            "quantity": 1
+            "quantity": 4
           }
         ],
         "missing": [
           "Ancient remnant",
           "Cursed phalanx",
           "Elidinis' ward",
-          "Eye of the corruptor",
           "Icthlarin's shroud (tier 1)",
           "Icthlarin's shroud (tier 2)",
           "Icthlarin's shroud (tier 3)",
@@ -996,7 +1000,7 @@
           "Remnant of zebak",
           "Tumeken's shadow (uncharged)"
         ],
-        "obtained_count": 5,
+        "obtained_count": 6,
         "total_count": 26
       },
       "Beginner Treasure Trails": {
@@ -3379,7 +3383,7 @@
           {
             "name": "Mark of grace",
             "date": "2025-07-24",
-            "quantity": 162
+            "quantity": 163
           },
           {
             "name": "Graceful hood",
@@ -3778,7 +3782,7 @@
           {
             "name": "Rune boots",
             "date": "2025-11-13",
-            "quantity": 26
+            "quantity": 28
           },
           {
             "name": "Dragon boots",
@@ -3970,17 +3974,17 @@
           {
             "name": "Dark totem base",
             "date": "2025-07-28",
-            "quantity": 39
+            "quantity": 40
           },
           {
             "name": "Dark totem middle",
             "date": "2025-07-29",
-            "quantity": 38
+            "quantity": 40
           },
           {
             "name": "Dark totem top",
             "date": "2025-08-01",
-            "quantity": 38
+            "quantity": 39
           },
           {
             "name": "Shield left half",
@@ -4040,7 +4044,7 @@
           {
             "name": "Hespori seed",
             "date": "2025-07-21",
-            "quantity": 268
+            "quantity": 269
           },
           {
             "name": "Fresh crab claw",
@@ -5480,9 +5484,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 544,
+    "total_obtained": 545,
     "total_items": 1728,
     "recent_items": [
+      {
+        "name": "Eye of the corruptor",
+        "date": "2026-06-17 17:29:35",
+        "collection": "tombs_of_amascut"
+      },
       {
         "name": "Jewel of the sun",
         "date": "2026-06-12 17:27:51",
@@ -5577,11 +5586,6 @@
         "name": "Chompy bird hat",
         "date": "2026-04-05 15:49:41",
         "collection": "chompy_bird_hunting"
-      },
-      {
-        "name": "Unsired",
-        "date": "2026-04-04 01:04:19",
-        "collection": "abyssal_sire"
       }
     ],
     "source": "templeosrs"
