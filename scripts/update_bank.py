@@ -94,7 +94,10 @@ CATEGORY_RULES = [
     ("Skilling", "Crafting", ["molten glass", "glassblowing", "lantern lens", "orb"]),
     
     # Equipment - checked last since many items contain these keywords
-    ("Equipment", "Melee Weapons", ["scimitar", "longsword", "sword", "dagger", "mace", "warhammer", "battleaxe", "2h sword", "halberd", "spear", "whip", "rapier", "hasta", "claws", "maul", "axe"]),
+    # NOTE: no bare "axe" keyword here — it would swallow pickaxes and woodcutting
+    # axes (tools). "battleaxe" covers the actual melee weapon; throwing axes are
+    # caught earlier under Ammunition ("thrownaxe").
+    ("Equipment", "Melee Weapons", ["scimitar", "longsword", "sword", "dagger", "mace", "warhammer", "battleaxe", "2h sword", "halberd", "spear", "whip", "rapier", "hasta", "claws", "maul"]),
     ("Equipment", "Ranged Weapons", ["shortbow", "longbow", "crossbow", "blowpipe"]),
     ("Equipment", "Magic Weapons", ["staff", "wand", "trident"]),
     ("Equipment", "Helmets", ["helm", "hat", "hood", "coif", "mask", "faceguard"]),
@@ -112,7 +115,7 @@ CATEGORY_RULES = [
     ("Quest Items", "Quest Items", ["greegree", "sigil", "seal of passage"]),
     
     # Miscellaneous - catchall at the end
-    ("Miscellaneous", "Tools", ["hammer", "chisel", "knife", "saw", "needle", "tinderbox", "spade", "rake", "trowel", "pickaxe"]),
+    ("Miscellaneous", "Tools", ["hammer", "chisel", "knife", "saw", "needle", "tinderbox", "spade", "rake", "trowel", "axe"]),
     ("Miscellaneous", "Containers", ["bucket", "jug", "vial", "pot", "bowl", "basket", "sack", "pouch"]),
 ]
 

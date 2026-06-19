@@ -470,21 +470,6 @@
         .milestone-detail { font-size: 0.7rem; color: var(--text-muted); }
         .milestone-status { font-family: 'Fira Code', monospace; font-size: 0.75rem; color: var(--text-muted); }
         .milestone-status.done { color: #22c55e; }
-        /* Password Modal */
-        .password-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; align-items: center; justify-content: center; }
-        .password-modal.active { display: flex; }
-        .password-modal-content { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; max-width: 400px; width: 90%; text-align: center; }
-        .password-modal-content h3 { color: var(--accent-gold); margin-bottom: 0.5rem; }
-        .password-modal-content p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.9rem; }
-        .password-input { width: 100%; padding: 0.75rem 1rem; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); font-size: 1rem; margin-bottom: 1rem; }
-        .password-input:focus { outline: none; border-color: var(--accent-gold); }
-        .password-modal-buttons { display: flex; gap: 0.75rem; justify-content: center; }
-        .password-btn { padding: 0.75rem 1.5rem; border: 1px solid var(--border); border-radius: 4px; background: var(--bg-card); color: var(--text-secondary); cursor: pointer; font-size: 0.9rem; transition: all 0.2s; }
-        .password-btn:hover { background: var(--bg-card-hover); color: var(--text-primary); }
-        .password-btn.primary { background: var(--accent-gold); color: var(--bg-dark); border-color: var(--accent-gold); }
-        .password-btn.primary:hover { background: #e5b95c; }
-        .password-error { color: var(--accent-red); font-size: 0.85rem; margin-top: 1rem; min-height: 1.2em; }
-        .protected-tab.locked #bankContainer { filter: blur(10px); pointer-events: none; }
         footer { text-align: center; padding: 2rem 0; margin-top: 3rem; border-top: 1px solid var(--border); }
         footer a { color: var(--text-secondary); text-decoration: none; margin: 0 0.75rem; font-size: 0.85rem; padding: 0.5rem 1rem; border: 1px solid var(--border); border-radius: 4px; transition: all 0.2s; }
         footer a:hover { color: var(--text-primary); border-color: var(--text-muted); }
@@ -632,7 +617,7 @@
             <div id="dropsContainer">Loading...</div>
         </div>
 
-        <div id="bank" class="tab-content protected-tab">
+        <div id="bank" class="tab-content">
             <div id="bankContainer">Loading...</div>
         </div>
 
@@ -891,20 +876,6 @@
             <div id="targetsContainer"></div>
         </div><!-- #targets tab-content -->
 
-        <!-- Password Modal -->
-        <div id="passwordModal" class="password-modal">
-            <div class="password-modal-content">
-                <h3>🔒 Protected Content</h3>
-                <p>Enter password to view bank contents</p>
-                <input type="password" id="bankPassword" class="password-input" placeholder="Password" autocomplete="off">
-                <div class="password-modal-buttons">
-                    <button id="passwordSubmit" class="password-btn primary">Unlock</button>
-                    <button id="passwordCancel" class="password-btn">Cancel</button>
-                </div>
-                <p id="passwordError" class="password-error"></p>
-            </div>
-        </div>
-
         <footer>
             <a href="https://templeosrs.com/player/overview.php?player=FoolinSlays" target="_blank">TempleOSRS</a>
             <a href="https://secure.runescape.com/m=hiscore_oldschool_ironman/hiscorepersonal?user1=FoolinSlays" target="_blank">Official Hiscores</a>
@@ -927,21 +898,9 @@
             });
         }
 
-        // Password protection for bank tab
-        // Password hash loaded from config file (injected by GitHub Actions)
-        let BANK_PASSWORD_HASH = null;
-        const PROTECTED_TAB_ID = 'bank';
-        let bankUnlocked = false;
-
-        // Load password hash from config
-        fetch('./data/config.json')
-            .then(r => r.json())
-            .then(config => {
-                BANK_PASSWORD_HASH = config.bankPasswordHash;
-            })
-            .catch(() => {
-                console.warn('Config not found - bank protection disabled');
-            });
+        // Bank data is intentionally kept private: bank.json is never published
+        // to the live site, so the Bank tab only has data when index.html is
+        // opened locally alongside the data/ folder.
 
         const SKILL_ORDER = ['Attack','Hitpoints','Mining','Strength','Agility','Smithing','Defence','Herblore','Fishing','Ranged','Thieving','Cooking','Prayer','Crafting','Firemaking','Magic','Fletching','Woodcutting','Runecraft','Slayer','Farming','Construction','Hunter','Sailing'];
         const SKILL_ICONS = {};
@@ -1149,7 +1108,7 @@
         }
 
         async function loadData() {
-            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, goalsRes, diariesRes, bankRes, dropsRes, boatyGuideRes, boatyProgressRes, potionStorageRes, seedVaultRes, wikiCompRes, wikiCATableRes] = await Promise.all([
+            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, diariesRes, bankRes, dropsRes, boatyGuideRes, boatyProgressRes, potionStorageRes, seedVaultRes, wikiCompRes, wikiCATableRes] = await Promise.all([
                 fetch('./data/skills.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/bosses.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/clues.json').then(r=>r.json()).catch(()=>null),
@@ -1157,7 +1116,6 @@
                 fetch('./data/combat_achievements.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/pets.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/quests.json').then(r=>r.json()).catch(()=>null),
-                fetch('./data/goals.yaml').then(r=>r.text()).catch(()=>null),
                 fetch('./data/diaries.yaml').then(r=>r.text()).catch(()=>null),
                 fetch('./data/bank.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/drops.yaml').then(r=>r.text()).catch(()=>null),
@@ -1238,7 +1196,14 @@
             renderQuests();
             if (diariesRes) renderDiaries(diariesRes);
             if (dropsRes) renderDrops(dropsRes);
-            if (bankRes) renderBank(bankRes, potionStorageRes, seedVaultRes);
+            if (bankRes) {
+                renderBank(bankRes, potionStorageRes, seedVaultRes);
+            } else {
+                document.getElementById('bankContainer').innerHTML =
+                    `<div class="empty-state">🔒 Bank data is private.<br>` +
+                    `It is not published to the live site &mdash; only visible when ` +
+                    `viewing this dashboard locally.</div>`;
+            }
             wikiCompData = wikiCompRes;
             wikiCATableData = wikiCATableRes;
             renderTargets();
@@ -2287,55 +2252,6 @@
             return div.innerHTML;
         }
 
-        function renderGoals(yaml) {
-            const container = document.getElementById('goalsContainer');
-            const columns = { backlog: [], in_progress: [], blocked: [], completed: [] };
-            let current = null;
-            
-            yaml.split('\n').forEach(line => {
-                if (line.startsWith('backlog:')) current = 'backlog';
-                else if (line.startsWith('in_progress:')) current = 'in_progress';
-                else if (line.startsWith('blocked:')) current = 'blocked';
-                else if (line.startsWith('completed:')) current = 'completed';
-                else if (current && line.trim().startsWith('- ')) {
-                    const text = line.trim().slice(2);
-                    const parts = text.split(' | ');
-                    columns[current].push({
-                        title: parts[0].trim(),
-                        date: parts[1]?.trim() || null
-                    });
-                }
-            });
-
-            const columnConfig = [
-                { key: 'backlog', label: '📋 Backlog', class: 'backlog' },
-                { key: 'in_progress', label: '🔨 In Progress', class: 'in-progress' },
-                { key: 'blocked', label: '🚫 Blocked', class: 'blocked' },
-                { key: 'completed', label: '✅ Completed', class: 'completed' }
-            ];
-
-            container.innerHTML = `
-                <div class="kanban-board">
-                    ${columnConfig.map(col => `
-                        <div class="kanban-column ${col.class}">
-                            <div class="kanban-header">
-                                <span>${col.label}</span>
-                                <span class="count">${columns[col.key].length}</span>
-                            </div>
-                            <div class="kanban-cards">
-                                ${columns[col.key].length ? columns[col.key].map(goal => `
-                                    <div class="kanban-card">
-                                        <div class="card-title">${goal.title}</div>
-                                        ${goal.date ? `<div class="card-date">${formatShortDate(goal.date)}</div>` : ''}
-                                    </div>
-                                `).join('') : `<div class="kanban-empty">No goals</div>`}
-                            </div>
-                        </div>
-                    `).join('')}
-                </div>
-            `;
-        }
-
         // Drops Tab
         let dropsData = [];
         let dropsSearchTerm = '';
@@ -3143,69 +3059,7 @@
             `).join('');
         }
 
-        // Password hashing function
-        async function hashPassword(password) {
-            const encoder = new TextEncoder();
-            const data = encoder.encode(password);
-            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-            const hashArray = Array.from(new Uint8Array(hashBuffer));
-            return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-        }
-
-        // Show password modal
-        function showPasswordModal(targetTabId) {
-            const modal = document.getElementById('passwordModal');
-            const input = document.getElementById('bankPassword');
-            const error = document.getElementById('passwordError');
-            
-            modal.classList.add('active');
-            input.value = '';
-            error.textContent = '';
-            input.focus();
-            
-            // Store target tab for after unlock
-            modal.dataset.targetTab = targetTabId;
-        }
-
-        // Hide password modal
-        function hidePasswordModal() {
-            const modal = document.getElementById('passwordModal');
-            modal.classList.remove('active');
-            modal.dataset.targetTab = '';
-        }
-
-        // Check password and unlock
-        async function checkPassword() {
-            const input = document.getElementById('bankPassword');
-            const error = document.getElementById('passwordError');
-            const modal = document.getElementById('passwordModal');
-            
-            // Check if password protection is configured
-            if (!BANK_PASSWORD_HASH) {
-                error.textContent = 'Password protection not configured';
-                return;
-            }
-            
-            // Direct comparison (no hashing - secret IS the password)
-            if (input.value === BANK_PASSWORD_HASH) {
-                bankUnlocked = true;
-                sessionStorage.setItem('bankUnlocked', 'true');
-                hidePasswordModal();
-                
-                // Switch to the protected tab
-                const targetTab = modal.dataset.targetTab;
-                if (targetTab) {
-                    document.getElementById(targetTab).classList.remove('locked');
-                    switchTabDirect(targetTab);
-                }
-            } else {
-                error.textContent = 'Incorrect password';
-                input.value = '';
-                input.focus();
-            }
-        }
-
-        // Direct tab switch (no password check)
+        // Direct tab switch
         function switchTabDirect(tabId) {
             document.querySelectorAll('.nav-tab').forEach(x => x.classList.remove('active'));
             document.querySelectorAll('.tab-content').forEach(x => x.classList.remove('active'));
@@ -3673,47 +3527,10 @@
             });
         }
 
-        // Direct tab switch (no password check)
-        function switchTabDirect(tabId) {
-            document.querySelectorAll('.nav-tab').forEach(x => x.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(x => x.classList.remove('active'));
-            const tab = document.querySelector(`.nav-tab[data-tab="${tabId}"]`);
-            if (tab) {
-                tab.classList.add('active');
-                document.getElementById(tabId).classList.add('active');
-            }
-        }
-
-        // Tab switch with password protection
+        // Tab switch (all tabs are open; bank data is simply absent when private)
         function switchTab(tabId) {
-            // Check if this is the protected tab
-            if (tabId === PROTECTED_TAB_ID) {
-                // Check if already unlocked this session
-                if (bankUnlocked || sessionStorage.getItem('bankUnlocked') === 'true') {
-                    bankUnlocked = true;
-                    document.getElementById(tabId).classList.remove('locked');
-                    switchTabDirect(tabId);
-                } else {
-                    // Show password modal
-                    document.getElementById(tabId).classList.add('locked');
-                    showPasswordModal(tabId);
-                }
-            } else {
-                switchTabDirect(tabId);
-            }
+            switchTabDirect(tabId);
         }
-
-        // Password modal event listeners
-        document.getElementById('passwordSubmit').addEventListener('click', checkPassword);
-        document.getElementById('passwordCancel').addEventListener('click', () => {
-            hidePasswordModal();
-            // Go back to previous tab or skills
-            window.location.hash = 'skills';
-            switchTabDirect('skills');
-        });
-        document.getElementById('bankPassword').addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') checkPassword();
-        });
 
         document.querySelectorAll('.nav-tab').forEach(t => t.addEventListener('click', () => {
             const tabId = t.dataset.tab;

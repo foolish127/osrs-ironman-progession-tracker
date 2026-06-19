@@ -46,7 +46,9 @@ jobs:
           RSN: FoolinSlays
         run: |
           python scripts/update_stats.py
-          python scripts/update_bank.py
+          # update_bank.py is intentionally NOT run in CI:
+          # bank.txt is private (gitignored) so it can't produce real bank data
+          # here, and bank.json is kept local-only. Run it locally instead.
 
       - name: Commit data changes
         run: |
@@ -58,14 +60,13 @@ jobs:
           git push
 
       - name: Stage Pages artifact
-        env:
-          BANK_PASSWORD_HASH: ${{ secrets.BANK_PASSWORD_HASH }}
         run: |
           mkdir -p _site/data
           cp index.html _site/
           cp data/*.json _site/data/ 2>/dev/null || true
           cp data/*.yaml _site/data/ 2>/dev/null || true
-          echo "{\"bankPasswordHash\": \"$BANK_PASSWORD_HASH\"}" > _site/data/config.json
+          # Bank data is private — never publish it to the live site
+          rm -f _site/data/bank.json
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
