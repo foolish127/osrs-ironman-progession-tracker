@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
     <style>
         :root {
             --bg-dark: #0d1117;
@@ -911,170 +910,11 @@
         let wikiCATableData = null;
         let milestonesData = null;
 
-        // Parse collection_log.yaml into the expected JSON structure
-        function parseCollectionLogYaml(yamlText) {
-            try {
-                const data = jsyaml.load(yamlText);
-                const collections = {};
-                let totalObtained = 0;
-                let totalItems = 0;
-                const recentItems = [];
-
-                for (const [category, content] of Object.entries(data)) {
-                    if (!content || typeof content !== 'object') continue;
-
-                    const obtainedRaw = content.obtained || [];
-                    const missingRaw = content.missing || [];
-
-                    // Parse obtained items
-                    const obtained = obtainedRaw.map(item => {
-                        if (typeof item === 'string' && item.includes('|')) {
-                            const [name, date] = item.split('|').map(s => s.trim());
-                            if (date) {
-                                recentItems.push({ name, date, collection: category });
-                                return { name, date };
-                            }
-                            return { name };
-                        }
-                        return { name: String(item).trim() };
-                    });
-
-                    // Parse missing items
-                    const missing = missingRaw.map(item => String(item).trim());
-
-                    const obtainedCount = obtained.length;
-                    const missingCount = missing.length;
-
-                    collections[category] = {
-                        obtained,
-                        missing,
-                        obtained_count: obtainedCount,
-                        total_count: obtainedCount + missingCount
-                    };
-
-                    totalObtained += obtainedCount;
-                    totalItems += obtainedCount + missingCount;
-                }
-
-                // Sort recent items by date (newest first)
-                recentItems.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
-
-                return {
-                    collection_log: {
-                        total_obtained: totalObtained,
-                        total_items: totalItems,
-                        recent_items: recentItems.slice(0, 20),
-                        collections
-                    }
-                };
-            } catch (e) {
-                console.error('Failed to parse collection_log.yaml:', e);
-                return null;
-            }
-        }
-
-        // TempleOSRS API integration
-        const TEMPLE_PLAYER = 'Foolinslays';
-        let templeItemsMap = null;
-        let templeCategoriesMap = null;
-
-        async function loadTempleMetadata() {
-            try {
-                const [itemsRes, catsRes] = await Promise.all([
-                    fetch('https://templeosrs.com/api/collection-log/items.php').then(r => r.json()).catch(() => null),
-                    fetch('https://templeosrs.com/api/collection-log/categories.php').then(r => r.json()).catch(() => null)
-                ]);
-                templeItemsMap = itemsRes?.data || null;
-                templeCategoriesMap = catsRes?.data || null;
-                return templeItemsMap && templeCategoriesMap;
-            } catch (e) {
-                console.log('TempleOSRS metadata failed:', e);
-                return false;
-            }
-        }
-
-        async function loadTempleCollectionLog() {
-            try {
-                // First load metadata maps
-                const metaLoaded = await loadTempleMetadata();
-                if (!metaLoaded) return null;
-
-                // Fetch player data and recent items
-                const [playerRes, recentRes] = await Promise.all([
-                    fetch(`https://templeosrs.com/api/collection-log/player_collection_log.php?player=${TEMPLE_PLAYER}&categories=all`).then(r => r.json()).catch(() => null),
-                    fetch(`https://templeosrs.com/api/collection-log/player_recent_items.php?player=${TEMPLE_PLAYER}`).then(r => r.json()).catch(() => null)
-                ]);
-
-                if (!playerRes?.data) return null;
-
-                const collections = {};
-                let totalObtained = 0;
-                let totalItems = 0;
-
-                // Build collections from Temple data
-                for (const [catKey, catData] of Object.entries(templeCategoriesMap)) {
-                    const catName = catData.name || catKey;
-                    const catItemIds = catData.items || [];
-                    const playerCatData = playerRes.data[catKey];
-                    const obtainedIds = playerCatData?.items ? Object.keys(playerCatData.items).map(Number) : [];
-
-                    const obtained = [];
-                    const missing = [];
-
-                    for (const itemId of catItemIds) {
-                        const itemName = templeItemsMap[itemId]?.name || `Item ${itemId}`;
-                        if (obtainedIds.includes(itemId)) {
-                            const itemData = playerCatData.items[itemId];
-                            obtained.push({
-                                name: itemName,
-                                date: itemData?.date || null,
-                                quantity: itemData?.quantity || 1
-                            });
-                        } else {
-                            missing.push(itemName);
-                        }
-                    }
-
-                    if (catItemIds.length > 0) {
-                        collections[catName] = {
-                            obtained,
-                            missing,
-                            obtained_count: obtained.length,
-                            total_count: catItemIds.length
-                        };
-                        totalObtained += obtained.length;
-                        totalItems += catItemIds.length;
-                    }
-                }
-
-                // Build recent items from recentRes
-                const recentItems = [];
-                if (recentRes?.data) {
-                    for (const item of recentRes.data.slice(0, 20)) {
-                        recentItems.push({
-                            name: templeItemsMap[item.item_id]?.name || `Item ${item.item_id}`,
-                            date: item.date,
-                            collection: templeCategoriesMap[item.category]?.name || item.category
-                        });
-                    }
-                }
-
-                console.log(`Loaded from TempleOSRS: ${totalObtained}/${totalItems} items`);
-
-                return {
-                    collection_log: {
-                        total_obtained: totalObtained,
-                        total_items: totalItems,
-                        recent_items: recentItems,
-                        collections,
-                        source: 'templeosrs'
-                    }
-                };
-            } catch (e) {
-                console.log('TempleOSRS API failed:', e);
-                return null;
-            }
-        }
+        // Collection-log data comes from data/collection_log.json, which CI builds
+        // from the TempleOSRS API (server-side, every 6h + on push) and merges with
+        // manually-entered dates from collection_log.yaml. Calling Temple directly
+        // from the browser was removed: it is blocked by CORS, and when it did run
+        // it discarded the manual dates.
 
         async function loadData() {
             const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, diariesRes, bankRes, dropsRes, potionStorageRes, seedVaultRes, wikiCompRes, wikiCATableRes] = await Promise.all([
@@ -1112,19 +952,6 @@
                 clogData = clogRes.collection_log;
                 clogData.rsn = clogRes.rsn || 'FoolinSlays';
                 document.getElementById('clogCount').textContent = `${clogData.total_obtained}/${clogData.total_items}`;
-            }
-
-            // Try TempleOSRS API (will override YAML data if successful)
-            try {
-                const templeData = await loadTempleCollectionLog();
-                if (templeData?.collection_log) {
-                    clogData = templeData.collection_log;
-                    clogData.rsn = templeData.rsn || clogData.rsn || 'FoolinSlays';
-                    document.getElementById('clogCount').textContent = `${clogData.total_obtained}/${clogData.total_items}`;
-                    console.log('Using TempleOSRS data');
-                }
-            } catch (e) {
-                console.log('TempleOSRS failed, using YAML fallback');
             }
 
             if (caRes?.combat_achievements) {
