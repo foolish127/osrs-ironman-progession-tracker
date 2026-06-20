@@ -883,13 +883,18 @@
 
         function formatDate(iso) {
             if (!iso) return '—';
-            const d = new Date(iso);
+            // TempleOSRS uses "YYYY-MM-DD HH:MM:SS"; normalize the space to 'T' so
+            // browsers don't return Invalid Date.
+            const d = new Date(String(iso).replace(' ', 'T'));
+            if (isNaN(d)) return String(iso);
             return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' });
         }
 
         function formatShortDate(dateStr) {
             if (!dateStr) return '';
-            const [year, month, day] = dateStr.split('-').map(Number);
+            // Take just the date part (drop any " HH:MM:SS" from TempleOSRS timestamps).
+            const [year, month, day] = String(dateStr).split(' ')[0].split('-').map(Number);
+            if (!year || !month || !day) return String(dateStr);
             const d = new Date(year, month - 1, day);
             return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
         }
@@ -2100,12 +2105,22 @@
             return drops;
         }
 
-        // Recently obtained collection-log items not yet logged in drops.yaml.
-        // Self-clears once you add them. Built live from the collection log.
+        // An item still needs logging if it isn't in drops.yaml AND hasn't been
+        // manually dated in collection_log.yaml. Manual dates are date-only
+        // ("2026-06-09"); TempleOSRS auto-dates carry a time ("... 15:49:41"), so
+        // a ":" in the date means it's still just a raw Temple obtain = unlogged.
+        function isUnloggedRecent(it, logged) {
+            return it.name
+                && !logged.has(it.name.toLowerCase())
+                && String(it.date || '').includes(':');
+        }
+
+        // Recently obtained collection-log items not yet logged anywhere.
+        // Self-clears once you add them to drops.yaml or date them in collection_log.yaml.
         function buildDropsToLogBanner() {
             if (!clogData || !Array.isArray(clogData.recent_items)) return '';
             const logged = new Set(dropsData.map(d => (d.item || '').toLowerCase()));
-            const todo = clogData.recent_items.filter(it => it.name && !logged.has(it.name.toLowerCase()));
+            const todo = clogData.recent_items.filter(it => isUnloggedRecent(it, logged));
             if (!todo.length) return '';
             return `
                 <div class="drops-tolog">
@@ -2129,7 +2144,7 @@
             if (!tab) return;
             const logged = new Set(dropsData.map(d => (d.item || '').toLowerCase()));
             const count = (clogData && Array.isArray(clogData.recent_items) ? clogData.recent_items : [])
-                .filter(it => it.name && !logged.has(it.name.toLowerCase())).length;
+                .filter(it => isUnloggedRecent(it, logged)).length;
             tab.innerHTML = 'Drops' + (count ? ` <span class="tab-badge">${count}</span>` : '');
         }
 
