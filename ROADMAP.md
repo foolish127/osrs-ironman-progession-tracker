@@ -9,7 +9,26 @@ is cleared. Most of the original plan is already built — this file tracks what
 
 ## Unbuilt feature ideas
 
-### 1. Historical snapshots / progress over time  *(wanted)*
+### 1. Leagues-style master task checklist — all regions  *(wanted — primary idea)*
+Import the full **OSRS Leagues task list** as a permanent account-progression
+checklist you can tick off. Key difference from an actual league: in a league
+you pick only a few regions, but on the main account **every region is in
+scope**, so include all zones/areas at once.
+
+- **Data:** a new `league_tasks.yaml` grouped by **region/area** and **tier**
+  (Easy / Medium / Hard / Elite / Master), each task with name, points, and a
+  done flag. Source from the OSRS Wiki Leagues task tables — reuse the scraping
+  pattern in `scripts/update_wiki_refs.py`.
+- **Auto vs manual:** auto-complete what the existing data already proves —
+  boss KC, skill levels, notable drops, CA completions, quest completions —
+  using the same `check: () => …` helper pattern the Gearing tab already has;
+  leave the rest as manual checkboxes (like the CA tab).
+- **UI:** a new "Leagues" / "Tasks" tab mirroring the Combat Achievements tab —
+  totals (tasks done + points), with per-region and per-tier breakdowns.
+- **Note:** Leagues task sets change each league; pick one comprehensive recent
+  league (e.g. the latest Trailblazer/Raging Echoes list) as the base.
+
+### 2. Historical snapshots / progress over time  *(wanted)*
 Show account progression over time (e.g. a timeline or trend), not just the
 current snapshot.
 
@@ -22,7 +41,7 @@ current snapshot.
 - Optional later: a lightweight periodic snapshot of headline numbers
   (total level, CA points, clog count) committed by CI for true trend lines.
 
-### 2. Settings / include–exclude page  *(idea — uncertain, low priority)*
+### 3. Settings / include–exclude page  *(idea — uncertain, low priority)*
 A settings view to include/exclude content from progress calculations
 (e.g. "I don't PvP" / "I'm skipping the Inferno") so completion % reflects only
 the content you actually intend to do. Noted for consideration; not committed.
