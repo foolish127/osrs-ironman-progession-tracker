@@ -299,6 +299,20 @@ def main():
     print("-" * 50)
     print(f"Total items: {len(processed_items)}")
     print(f"Total value: {total_value:,} gp")
+
+    # Surface items that fell through to the catch-all so you can add keyword
+    # rules for them (these are the ones whose categorization is just a guess).
+    uncategorized = sorted(
+        {i["name"] for i in processed_items
+         if i["category"] == "Miscellaneous" and i["subcategory"] == "Other"}
+    )
+    if uncategorized:
+        print("-" * 50)
+        print(f"{len(uncategorized)} uncategorized item(s) -> Miscellaneous/Other:")
+        for name in uncategorized:
+            print(f"  - {name}")
+        print("Add keywords to CATEGORY_RULES in update_bank.py to classify these.")
+
     print("Update complete!")
 
 

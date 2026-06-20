@@ -58,8 +58,25 @@ def fetch_json(url, params=None):
         print(f"Error fetching {url}: {e}")
         return None
 
+def _strip_updated(obj):
+    """Copy of a dict without its top-level 'updated' timestamp, for change checks."""
+    if isinstance(obj, dict):
+        return {k: v for k, v in obj.items() if k != "updated"}
+    return obj
+
+
 def save_json(path, data):
     path.parent.mkdir(parents=True, exist_ok=True)
+    # Skip the rewrite if only the 'updated' timestamp would change, so CI commits
+    # (and history diffs) are limited to real data changes instead of every run.
+    if path.exists():
+        try:
+            old = json.loads(path.read_text(encoding="utf-8"))
+            if _strip_updated(old) == _strip_updated(data):
+                print(f"Unchanged: {path}")
+                return
+        except Exception:
+            pass
     with open(path, "w") as f:
         json.dump(data, f, indent=2)
     print(f"Saved: {path}")
@@ -130,8 +147,13 @@ def load_yaml_collection_log():
     
     with open(yaml_path, 'r') as f:
         content = f.read()
-    
-    return parse_yaml_with_dates(content)
+
+    data = parse_yaml_with_dates(content)
+    parsed = sum(len(items) for cat in data.values() for items in cat.values())
+    # Warn (don't hard-fail) here: collection_log.yaml is large and mostly machine
+    # -maintained, so a non-blocking notice is safer than failing the whole run.
+    _check_no_dropped_items(content, parsed, "collection_log.yaml", strict=False)
+    return data
 
 def load_manual_dates():
     """Load manually-entered dates from collection_log.yaml"""

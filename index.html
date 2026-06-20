@@ -917,7 +917,7 @@
         // it discarded the manual dates.
 
         async function loadData() {
-            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, diariesRes, bankRes, dropsRes, potionStorageRes, seedVaultRes, wikiCompRes, wikiCATableRes] = await Promise.all([
+            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, diariesRes, bankRes, dropsRes, potionStorageRes, seedVaultRes] = await Promise.all([
                 fetch('./data/skills.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/bosses.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/clues.json').then(r=>r.json()).catch(()=>null),
@@ -929,9 +929,7 @@
                 fetch('./data/bank.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/drops.yaml').then(r=>r.text()).catch(()=>null),
                 fetch('./data/potion_storage.json').then(r=>r.json()).catch(()=>null),
-                fetch('./data/seed_vault.json').then(r=>r.json()).catch(()=>null),
-                fetch('./data/wiki_comp_rates.json').then(r=>r.json()).catch(()=>null),
-                fetch('./data/wiki_ca_table.json').then(r=>r.json()).catch(()=>null)
+                fetch('./data/seed_vault.json').then(r=>r.json()).catch(()=>null)
             ]);
 
             if (skillsRes?.rsn) {
@@ -999,8 +997,8 @@
                     `It is not published to the live site &mdash; only visible when ` +
                     `viewing this dashboard locally.</div>`;
             }
-            wikiCompData = wikiCompRes;
-            wikiCATableData = wikiCATableRes;
+            // Targets reference data (wiki_comp_rates/wiki_ca_table) is loaded
+            // lazily on first Targets-tab open — see ensureTargetsData().
             renderTargets();
         }
 
@@ -3204,9 +3202,25 @@
             });
         }
 
+        // The Targets tab's reference tables (~1,700 items + 637 tasks) are large
+        // and only used here, so fetch them lazily the first time the tab opens.
+        let targetsDataLoaded = false;
+        async function ensureTargetsData() {
+            if (targetsDataLoaded) return;
+            targetsDataLoaded = true;
+            const [comp, ca] = await Promise.all([
+                fetch('./data/wiki_comp_rates.json').then(r => r.json()).catch(() => null),
+                fetch('./data/wiki_ca_table.json').then(r => r.json()).catch(() => null)
+            ]);
+            wikiCompData = comp;
+            wikiCATableData = ca;
+            renderTargets();
+        }
+
         // Tab switch (all tabs are open; bank data is simply absent when private)
         function switchTab(tabId) {
             switchTabDirect(tabId);
+            if (tabId === 'targets') ensureTargetsData();
         }
 
         document.querySelectorAll('.nav-tab').forEach(t => t.addEventListener('click', () => {
