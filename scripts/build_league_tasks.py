@@ -24,9 +24,10 @@ from html.parser import HTMLParser
 from osrs_utils import DATA_DIR
 
 WIKI_API = "https://oldschool.runescape.wiki/api.php"
-TASKS_PAGE = "Trailblazer_Reloaded_League/Tasks"
+TASKS_PAGE = "Demonic_Pacts_League/Tasks"
 
-TIER_BY_POINTS = {10: "easy", 40: "medium", 80: "hard", 200: "elite", 400: "master"}
+# Demonic Pacts (Leagues VI) tier point values.
+TIER_BY_POINTS = {10: "easy", 30: "medium", 80: "hard", 200: "elite", 400: "master"}
 TIER_ORDER = ["easy", "medium", "hard", "elite", "master"]
 
 
@@ -157,6 +158,22 @@ def load_account():
     quests = (_load("quests.json") or {}).get("quests", {})
     acc["quests_all_done"] = quests.get("total_completed", 0) >= quests.get("total_quests", 1) > 0
 
+    # Achievement diaries: region -> set of completed tiers.
+    acc["diaries"] = {}
+    dpath = DATA_DIR / "diaries.yaml"
+    if dpath.exists():
+        region = None
+        for line in dpath.read_text(encoding="utf-8").splitlines():
+            if not line.strip() or line.strip().startswith("#"):
+                continue
+            if not line.startswith(" ") and line.rstrip().endswith(":"):
+                region = line.strip()[:-1].lower()
+                acc["diaries"][region] = set()
+            elif region and ":" in line:
+                k, _, v = line.strip().partition(":")
+                if k.strip().lower() in ("easy", "medium", "hard", "elite") and v.strip():
+                    acc["diaries"][region].add(k.strip().lower())
+
     return acc
 
 
@@ -166,59 +183,83 @@ ACQUIRE = (r"(?:obtain|receive|equip|wield|wear|unlock|create|build|craft|make|"
            r"loot|collect|purchase|buy|fill|assemble|fletch|smith|brew|mix)")
 
 
+# Phrases that mean a task has a special restriction KC/ownership can't prove
+# (challenge/speed/no-supply variants), so we must NOT auto-complete them.
+RESTRICTED = re.compile(
+    r"\b(under|without|no food|no prayer|no supplies|only|solo|sub-?\d|"
+    r"\d+ ?(?:minute|second)|challenge mode|hard mode|\bcm\b|flawless|perfect|"
+    r"untouchable|unattuned|trio|duo|hardcore|pet)\b"
+)
+
+# Item qualifiers that can appear between an acquisition verb and the item name.
+QUAL = (r"(?:a |an |the |some |your |full |a full |a set of |any |a piece of |"
+        r"the superior |complete |your first |\d+ )*")
+
+
 def is_done(task, acc):
     """Return (done, reason) — only True on strong, specific evidence."""
     t = f"{task['name']} {task['desc']}".lower()
+    restricted = bool(RESTRICTED.search(t))
 
-    # Clues — numeric, exact.
+    # Clues — numeric.
     m = re.search(r"(\d+)\s*(beginner|easy|medium|hard|elite|master)\s+clue", t)
     if m and acc["clues"].get(m.group(2), 0) >= int(m.group(1)):
         return True, "clue"
-    m = re.search(r"\b(?:a|an|one)\b[^.]*?(beginner|easy|medium|hard|elite|master)\s+clue", t)
+    m = re.search(r"\b(?:a|an|one|your first)\b[^.]*?(beginner|easy|medium|hard|elite|master)\s+clue", t)
     if m and acc["clues"].get(m.group(1), 0) >= 1:
         return True, "clue"
 
-    # Levels — numeric, exact.
-    m = re.search(r"total level of (\d[\d,]*)", t)
+    # Levels / combat — numeric.
+    m = re.search(r"total level (?:of )?(\d[\d,]{2,})", t)
     if m:
         return (acc["total_level"] >= int(m.group(1).replace(",", "")), "level")
     if "maximum total level" in t:
         return (acc["total_level"] >= 2277, "level")
-    m = re.search(r"combat level of (\d+)", t)
+    m = re.search(r"combat level (?:of )?(\d+)", t)
     if m:
         return (acc["combat_level"] >= int(m.group(1)), "level")
     m = re.search(r"first level (\d+)", t)
     if m and acc["skills"]:
         return (max(acc["skills"].values()) >= int(m.group(1)), "level")
-    m = re.search(r"reach (?:a )?level (\d+)(?: in)? ([a-z]+)", t)
-    if m and m.group(2) in acc["skills"]:
-        return (acc["skills"][m.group(2)] >= int(m.group(1)), "level")
-    m = re.search(r"reach (?:a |an )?([a-z]+) level of (\d+)", t)
-    if m and m.group(1) in acc["skills"]:
-        return (acc["skills"][m.group(1)] >= int(m.group(2)), "level")
+    for pat in (r"reach (?:a )?level (\d+)(?: in)? ([a-z]+)",
+                r"reach (?:a |an )?([a-z]+) level of (\d+)",
+                r"reach (\d+) ([a-z]+)\b",
+                r"(\d+) ([a-z]+) level\b"):
+        m = re.search(pat, t)
+        if m:
+            a, b = m.group(1), m.group(2)
+            (n, sk) = (int(a), b) if a.isdigit() else (int(b), a)
+            if sk in acc["skills"]:
+                return (acc["skills"][sk] >= n, "level")
 
-    # Quests — all regular quests are done, so quest-completion tasks are done.
-    if acc["quests_all_done"] and re.search(r"complete (?:the )?[\w '\-]+ quest", t):
+    # Quests — all regular quests done, so quest-completion tasks are done.
+    if acc["quests_all_done"] and re.search(r"complete (?:the )?[\w '\-&]+ quest", t):
         return True, "quest"
 
-    # Boss kills — KC meets the required count, with a kill/defeat/raid verb.
-    if re.search(r"\b(kill|defeat|slay|raid|finish|complete a|open)\b", t):
+    # Diaries — region + tier completed.
+    if "diary" in t:
+        for region, tiers in acc["diaries"].items():
+            if region and region in t:
+                for tier in ("easy", "medium", "hard", "elite"):
+                    if tier in t and tier in tiers:
+                        return True, "diary"
+
+    # Boss kills — plain KC tasks only (skip restricted/challenge variants).
+    if not restricted and re.search(r"\b(kill|defeat|slay|raid|finish|complete)\b", t):
         for bname, kc in acc["boss_kc"].items():
             if len(bname) >= 4 and re.search(r"\b" + re.escape(bname) + r"\b", t):
-                mm = re.search(r"(\d+)", t)
-                need = int(mm.group(1)) if mm else 1
+                mn = re.search(r"(?:kill|defeat|slay)\s+(\d+)|(\d+)\s*(?:kills|kill count|times|kc)", t)
+                need = int(next(g for g in mn.groups() if g)) if mn else 1
                 if kc >= need:
                     return True, "kc"
 
-    # Owned items — acquisition verb directly followed by an item you own.
+    # Owned items — acquisition verb then (qualifiers) an item you own.
     for item in acc["items"]:
-        if len(item) >= 5 and re.search(
-            ACQUIRE + r"\s+(?:a |an |the |some |your |full |a full |a set of )?" + re.escape(item) + r"\b", t
-        ):
+        if len(item) >= 5 and re.search(ACQUIRE + r"\s+" + QUAL + re.escape(item) + r"\b", t):
             return True, "item"
 
-    # Exact combat-achievement name match.
-    if task["name"].lower() in acc["ca"]:
+    # Exact combat-achievement name match (skip restricted phrasing).
+    if not restricted and task["name"].lower() in acc["ca"]:
         return True, "ca"
 
     return False, None
@@ -231,7 +272,7 @@ def clean(text):
 
 
 def main():
-    print("Fetching Trailblazer Reloaded task list from the wiki...")
+    print("Fetching Demonic Pacts (Leagues VI) task list from the wiki...")
     tasks = scrape_tasks()
     print(f"  scraped {len(tasks)} tasks")
 
@@ -250,10 +291,10 @@ def main():
     # Group: General first, then regions alphabetically; tasks under tier.
     regions = sorted({t["area"] for t in tasks}, key=lambda a: (a != "General", a))
     lines = [
-        "# Leagues Task Tracker — Trailblazer Reloaded task list, ALL regions.",
+        "# Leagues Task Tracker — Demonic Pacts (Leagues VI) task list, ALL regions.",
         "# Auto-generated by scripts/build_league_tasks.py (re-run to refresh).",
         "# Auto-completions are best-effort; mark/clear by adding or removing",
-        "# ' | done' (optionally a date) after a task. Points: Easy 10, Medium 40,",
+        "# ' | done' (optionally a date) after a task. Points: Easy 10, Medium 30,",
         "# Hard 80, Elite 200, Master 400.",
         "",
     ]
