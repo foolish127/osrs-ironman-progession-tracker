@@ -29,5 +29,8 @@ data/seed_vault.json
 # Local dev scratch / working notes
 Temporary/
 
+# Wiki-refresh review artifacts (best-effort scrape output, review before using)
+data/*.new.json
+
 # GitHub Pages staging directory (built fresh on every workflow run)
 _site/
