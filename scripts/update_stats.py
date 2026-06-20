@@ -705,6 +705,16 @@ def main():
     print("Fetching from official hiscores...")
     official = fetch_json(HISCORES_URL, {"player": RSN})
 
+    # Pull Combat Achievement points and collection-log count straight from the
+    # hiscores so the headline numbers stay current without any manual edits.
+    ca_points = ca_rank = collections_logged = collections_rank = None
+    for a in (official.get("activities", []) if official else []):
+        name, score = a.get("name"), a.get("score", -1)
+        if name == "Combat Achievements" and score > 0:
+            ca_points, ca_rank = score, a.get("rank", -1)
+        elif name == "Collections Logged" and score > 0:
+            collections_logged, collections_rank = score, a.get("rank", -1)
+
     # Process skills
     skills = {}
     if official and "skills" in official:
@@ -736,7 +746,9 @@ def main():
                 "total_level": overall.get("level", 0),
                 "total_xp": overall.get("xp", 0),
                 "combat_level": round(combat, 2),
-                "skills_99": n99, "num_skills": NUM_SKILLS
+                "skills_99": n99, "num_skills": NUM_SKILLS,
+                "ca_points": ca_points, "ca_rank": ca_rank,
+                "collections_logged": collections_logged, "collections_rank": collections_rank
             }
         })
 

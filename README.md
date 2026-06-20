@@ -19,11 +19,27 @@ These update automatically - **no action needed** from you:
 | **Clue Scrolls** | Official Hiscores | Completion counts |
 | **Collection Log** | TempleOSRS API | Items obtained/missing |
 | **Pets** | TempleOSRS API | Extracted from collection log |
+| **CA points** | Official Hiscores | Live Combat Achievement point total + rank (task list stays manual) |
+| **Collections logged** | Official Hiscores | Unique collection slots + rank |
 
 **Requirements for Collection Log/Pets automation:**
 - Install **TempleOSRS plugin** in RuneLite
 - Enable **auto-sync** in plugin settings
 - Sync your collection log at least once
+
+> **Note on quests / diaries / CA tasks:** there is no clean public OSRS API for
+> task-level data (the only source, WikiSync, asks not to be used by third
+> parties), so those stay manually edited. Only the CA **point total** is
+> automated, from the hiscores.
+
+### 🛠️ Helper scripts
+
+- **`scripts/suggest_drops.py`** — lists recently obtained collection-log items
+  not yet in `data/drops.yaml` so you don't forget to log notable drops. Runs in
+  CI (prints to the Actions log) and locally. Never auto-edits your data.
+- **`scripts/update_bank_local.ps1`** — refreshes your private bank values
+  locally; can be scheduled via Windows Task Scheduler (instructions inside the
+  file) to keep `bank.json` current hands-off without ever touching the cloud.
 
 ### 🔒 Local-only (Private — never published)
 
