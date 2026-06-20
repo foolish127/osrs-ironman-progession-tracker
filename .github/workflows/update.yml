@@ -46,9 +46,6 @@ jobs:
           RSN: FoolinSlays
         run: |
           python scripts/update_stats.py
-          # Surface recently obtained collection-log items not yet in drops.yaml
-          # (prints to this log only; never commits or auto-edits drops.yaml).
-          python scripts/suggest_drops.py
           # update_bank.py is intentionally NOT run in CI:
           # bank.txt is private (gitignored) so it can't produce real bank data
           # here, and bank.json is kept local-only. Run it locally instead.

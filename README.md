@@ -34,9 +34,10 @@ These update automatically - **no action needed** from you:
 
 ### 🛠️ Helper scripts
 
-- **`scripts/suggest_drops.py`** — lists recently obtained collection-log items
-  not yet in `data/drops.yaml` so you don't forget to log notable drops. Runs in
-  CI (prints to the Actions log) and locally. Never auto-edits your data.
+- **Drops "to log" callout** — the **Drops tab** shows a live banner (and a count
+  badge on the Drops nav tab) listing recently obtained collection-log items not
+  yet in `data/drops.yaml`. It self-clears once you log them. `scripts/suggest_drops.py`
+  is an optional CLI version of the same check. Nothing is ever auto-added.
 - **`scripts/update_bank_local.ps1`** — refreshes your private bank values
   locally; can be scheduled via Windows Task Scheduler (instructions inside the
   file) to keep `bank.json` current hands-off without ever touching the cloud.

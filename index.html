@@ -362,6 +362,17 @@
         .drops-yaml-output .copy-btn { margin-top: 0.5rem; padding: 0.5rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--text-secondary); cursor: pointer; font-size: 0.85rem; }
         .drops-yaml-output .copy-btn:hover { background: var(--bg-card-hover); color: var(--text-primary); }
         .drops-count { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+        /* Drops "to log" callout */
+        .drops-tolog { background: rgba(88, 166, 255, 0.08); border: 1px solid var(--accent-blue); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; }
+        .drops-tolog-header { font-weight: 600; color: var(--accent-blue); margin-bottom: 0.75rem; }
+        .drops-tolog-items { display: flex; flex-direction: column; gap: 0.35rem; }
+        .drops-tolog-item { display: flex; align-items: center; gap: 0.75rem; font-size: 0.85rem; padding: 0.3rem 0.5rem; background: var(--bg-card); border-radius: 4px; }
+        .drops-tolog-name { color: var(--accent-gold); font-weight: 500; flex: 1; }
+        .drops-tolog-src { color: var(--text-secondary); font-size: 0.8rem; }
+        .drops-tolog-date { font-family: 'Fira Code', monospace; color: var(--text-muted); font-size: 0.75rem; min-width: 70px; text-align: right; }
+        .drops-tolog-hint { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.75rem; }
+        .drops-tolog-hint code { background: var(--bg-dark); padding: 0.1rem 0.35rem; border-radius: 3px; color: var(--text-secondary); }
+        .nav-tab .tab-badge { display: inline-block; background: var(--accent-blue); color: var(--bg-dark); font-size: 0.65rem; font-weight: 700; border-radius: 999px; padding: 0.05rem 0.4rem; margin-left: 0.4rem; vertical-align: middle; }
         /* Luck Summary Table */
         .luck-table-container { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; margin-bottom: 2rem; }
         .luck-table-container h3 { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
@@ -2089,12 +2100,48 @@
             return drops;
         }
 
+        // Recently obtained collection-log items not yet logged in drops.yaml.
+        // Self-clears once you add them. Built live from the collection log.
+        function buildDropsToLogBanner() {
+            if (!clogData || !Array.isArray(clogData.recent_items)) return '';
+            const logged = new Set(dropsData.map(d => (d.item || '').toLowerCase()));
+            const todo = clogData.recent_items.filter(it => it.name && !logged.has(it.name.toLowerCase()));
+            if (!todo.length) return '';
+            return `
+                <div class="drops-tolog">
+                    <div class="drops-tolog-header">📦 ${todo.length} recently obtained item${todo.length > 1 ? 's' : ''} not yet logged</div>
+                    <div class="drops-tolog-items">
+                        ${todo.map(it => `
+                            <div class="drops-tolog-item">
+                                <span class="drops-tolog-name">${escapeTargets(it.name)}</span>
+                                <span class="drops-tolog-src">${escapeTargets((it.collection || '').replace(/_/g, ' '))}</span>
+                                <span class="drops-tolog-date">${it.date ? formatShortDate(it.date) : ''}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div class="drops-tolog-hint">Add the notable ones to <code>data/drops.yaml</code> with KC + droprate to track luck.</div>
+                </div>`;
+        }
+
+        // Show a count badge on the Drops nav tab when items await logging.
+        function updateDropsBadge() {
+            const tab = document.querySelector('.nav-tab[data-tab="drops"]');
+            if (!tab) return;
+            const logged = new Set(dropsData.map(d => (d.item || '').toLowerCase()));
+            const count = (clogData && Array.isArray(clogData.recent_items) ? clogData.recent_items : [])
+                .filter(it => it.name && !logged.has(it.name.toLowerCase())).length;
+            tab.innerHTML = 'Drops' + (count ? ` <span class="tab-badge">${count}</span>` : '');
+        }
+
         function renderDrops(yaml) {
             dropsData = parseDropsYaml(yaml);
             const container = document.getElementById('dropsContainer');
-            
+            const toLogBanner = buildDropsToLogBanner();
+            updateDropsBadge();
+
             if (!dropsData.length) {
-                container.innerHTML = '<div class="empty-state">No drops data available.</div>';
+                container.innerHTML = toLogBanner +
+                    '<div class="empty-state">No drops logged yet.</div>';
                 return;
             }
 
@@ -2127,7 +2174,7 @@
             const validLuck = luckSummaryData.filter(l => l.luck > 0);
             const avgLuck = validLuck.length ? (validLuck.reduce((s, l) => s + l.luck, 0) / validLuck.length) : 0;
 
-            container.innerHTML = `
+            container.innerHTML = toLogBanner + `
                 <div class="drops-summary">
                     <div class="drops-stat">
                         <div class="drops-stat-value">${totalDrops}</div>
