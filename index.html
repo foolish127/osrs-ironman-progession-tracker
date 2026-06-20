@@ -1756,9 +1756,9 @@
             
             grid.innerHTML = pets.map(p => `
                 <div class="pet-card ${p.obtained ? 'obtained' : 'missing'}">
-                    ${p.notes ? `<div class="pet-tooltip">${p.notes}</div>` : ''}
-                    <div class="pet-name">${p.name}</div>
-                    ${p.source ? `<div class="pet-source">${p.source}</div>` : ''}
+                    ${p.notes ? `<div class="pet-tooltip">${escapeTargets(p.notes)}</div>` : ''}
+                    <div class="pet-name">${escapeTargets(p.name)}</div>
+                    ${p.source ? `<div class="pet-source">${escapeTargets(p.source)}</div>` : ''}
                     ${p.date ? `<div class="pet-date">${formatShortDate(p.date)}</div>` : ''}
                 </div>
             `).join('') || '<div class="empty-state">No pets match your search</div>';
@@ -2480,11 +2480,11 @@
 
             tbody.innerHTML = filtered.map(drop => `
                 <tr>
-                    <td class="boss-col">${drop.boss}</td>
+                    <td class="boss-col">${escapeTargets(drop.boss)}</td>
                     <td class="kc-col">${drop.kc.toLocaleString()}</td>
-                    <td class="item-col">${drop.item}</td>
-                    <td class="date-col ${drop.date ? '' : 'missing'}">${drop.date || '—'}</td>
-                    <td class="notes-col">${drop.notes || ''}</td>
+                    <td class="item-col">${escapeTargets(drop.item)}</td>
+                    <td class="date-col ${drop.date ? '' : 'missing'}">${escapeTargets(drop.date || '—')}</td>
+                    <td class="notes-col">${escapeTargets(drop.notes || '')}</td>
                 </tr>
             `).join('');
 
@@ -2504,8 +2504,8 @@
             luckTbody.innerHTML = filteredLuck.map((item, i) => `
                 <tr>
                     <td class="rank-col">${i + 1}</td>
-                    <td class="activity-col">${item.activity}</td>
-                    <td class="drop-col">${item.drop}</td>
+                    <td class="activity-col">${escapeTargets(item.activity)}</td>
+                    <td class="drop-col">${escapeTargets(item.drop)}</td>
                     <td class="kc-col">${item.earned ? item.earned.toLocaleString() : '—'}</td>
                     <td class="rate-col">1/${item.droprate.toLocaleString()}</td>
                     <td class="luck-col ${getLuckClass(item.luck)}">${item.luck ? item.luck.toFixed(1) + 'x' : '—'}</td>

@@ -64,6 +64,24 @@ def save_json(path, data):
         json.dump(data, f, indent=2)
     print(f"Saved: {path}")
 
+def _check_no_dropped_items(content, parsed_count, source, strict=True):
+    """Fail loudly if a hand-edited YAML file has list items that didn't parse.
+
+    Counts raw '- ' list lines and compares against how many items were parsed.
+    A mismatch means a line was silently dropped (usually a bad indent or a
+    missing 'section:'/'subsection:' heading), which would otherwise vanish
+    from the dashboard with no warning at all.
+    """
+    raw_count = sum(1 for ln in content.split('\n') if ln.lstrip().startswith('- '))
+    if raw_count != parsed_count:
+        msg = (f"{source}: found {raw_count} '- ' list lines but only parsed "
+               f"{parsed_count} of them — {raw_count - parsed_count} item(s) were "
+               f"dropped. Check indentation and the section/subsection headings.")
+        if strict:
+            raise ValueError(msg)
+        print(f"  WARNING: {msg}")
+
+
 def parse_item_with_date(line):
     """Parse 'item name | 2024-01-15' or 'item name |' or 'item name'"""
     line = line.strip()
@@ -380,7 +398,9 @@ def load_combat_achievements():
         content = f.read()
     
     data = parse_yaml_with_dates(content)
-    
+    parsed_count = sum(len(items) for tier in data.values() for items in tier.values())
+    _check_no_dropped_items(content, parsed_count, "combat_achievements.yaml")
+
     tier_points = {'Easy': 1, 'Medium': 2, 'Hard': 3, 'Elite': 4, 'Master': 5, 'Grandmaster': 6}
     
     tiers = {}
@@ -511,7 +531,9 @@ def load_quests():
         content = f.read()
     
     data = parse_quests_yaml(content)
-    
+    parsed_count = sum(len(items) for cat in data.values() for items in cat.values())
+    _check_no_dropped_items(content, parsed_count, "quests.yaml")
+
     categories = {}
     total_completed = 0
     total_quests = 0
@@ -562,7 +584,9 @@ def load_pets():
         content = f.read()
     
     data = parse_pets_yaml(content)
-    
+    _check_no_dropped_items(
+        content, len(data.get('obtained', [])) + len(data.get('missing', [])), "pets.yaml")
+
     obtained = data.get('obtained', [])
     missing_raw = data.get('missing', [])
     
