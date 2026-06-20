@@ -1772,8 +1772,10 @@
             }
 
             const pct = ((questsData.total_completed / questsData.total_quests) * 100).toFixed(1);
-            const qpPct = ((questsData.quest_points / questsData.max_quest_points) * 100).toFixed(1);
-            
+            const mqPct = questsData.total_miniquests
+                ? ((questsData.miniquests_completed / questsData.total_miniquests) * 100).toFixed(1)
+                : '0.0';
+
             let html = `
                 <div class="progress-section">
                     <div class="progress-header">
@@ -1785,11 +1787,11 @@
                 </div>
                 <div class="progress-section">
                     <div class="progress-header">
-                        <span class="progress-title">⭐ Quest Points</span>
-                        <span class="progress-stats"><span class="obtained">${questsData.quest_points}</span> <span class="total">/ ${questsData.max_quest_points}</span></span>
+                        <span class="progress-title">📖 Miniquests</span>
+                        <span class="progress-stats"><span class="obtained">${questsData.miniquests_completed}</span> <span class="total">/ ${questsData.total_miniquests}</span></span>
                     </div>
-                    <div class="progress-bar"><div class="progress-fill" style="width:${qpPct}%"></div></div>
-                    <div class="progress-percentage">${qpPct}%</div>
+                    <div class="progress-bar"><div class="progress-fill" style="width:${mqPct}%"></div></div>
+                    <div class="progress-percentage">${mqPct}%</div>
                 </div>
                 <div class="search-filter">
                     <input type="text" class="search-input" id="questSearch" placeholder="Search quests...">

@@ -539,14 +539,14 @@ def load_quests():
             total_completed += len(completed)
             total_quests += cat_total
     
-    quest_points = 314 if total_completed == total_quests else 0
-    
+    # NOTE: quest points are intentionally NOT computed here. QP is not exposed by
+    # any API, the max changes with every new quest (335 as of Oct 2025), and a
+    # hardcoded per-quest table would be error-prone and quickly go stale. The
+    # dashboard shows accurate quest + miniquest completion counts instead.
     return {
         'categories': categories,
         'total_completed': total_completed,
         'total_quests': total_quests,
-        'quest_points': quest_points,
-        'max_quest_points': 314,
         'miniquests_completed': miniquest_completed,
         'total_miniquests': miniquest_total
     }
@@ -785,7 +785,8 @@ def main():
         save_json(DATA_DIR / "quests.json", {
             "rsn": RSN, "updated": now.isoformat(), "quests": quests
         })
-        print(f"Quests: {quests['total_completed']}/{quests['total_quests']} ({quests['quest_points']} QP)")
+        print(f"Quests: {quests['total_completed']}/{quests['total_quests']} "
+              f"(+{quests['miniquests_completed']}/{quests['total_miniquests']} miniquests)")
 
     print("-" * 50)
     print("Update complete!")

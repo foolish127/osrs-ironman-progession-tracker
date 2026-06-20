@@ -65,8 +65,8 @@ jobs:
           cp index.html _site/
           cp data/*.json _site/data/ 2>/dev/null || true
           cp data/*.yaml _site/data/ 2>/dev/null || true
-          # Bank data is private — never publish it to the live site
-          rm -f _site/data/bank.json
+          # Private wealth data — never publish it to the live site
+          rm -f _site/data/bank.json _site/data/potion_storage.json _site/data/potion_storage.yaml _site/data/seed_vault.json
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

@@ -19,9 +19,12 @@ Thumbs.db
 # Local testing
 *.local.json
 
-# Bank data - keep private, never commit or publish
+# Private wealth data - keep private, never commit or publish
 data/bank.txt
 data/bank.json
+data/potion_storage.json
+data/potion_storage.yaml
+data/seed_vault.json
 
 # Local dev scratch / working notes
 Temporary/
