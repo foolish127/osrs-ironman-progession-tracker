@@ -53,6 +53,7 @@
         let diariesData = null;
         let skillsData = null;
         let bossesData = null;
+        let leaguesData = null;
         let wikiCompData = null;
         let wikiCATableData = null;
         let milestonesData = null;
@@ -64,7 +65,7 @@
         // it discarded the manual dates.
 
         async function loadData() {
-            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, diariesRes, bankRes, dropsRes, potionStorageRes, seedVaultRes] = await Promise.all([
+            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, diariesRes, bankRes, dropsRes, potionStorageRes, seedVaultRes, leaguesRes] = await Promise.all([
                 fetch('./data/skills.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/bosses.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/clues.json').then(r=>r.json()).catch(()=>null),
@@ -76,7 +77,8 @@
                 fetch('./data/bank.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/drops.yaml').then(r=>r.text()).catch(()=>null),
                 fetch('./data/potion_storage.json').then(r=>r.json()).catch(()=>null),
-                fetch('./data/seed_vault.json').then(r=>r.json()).catch(()=>null)
+                fetch('./data/seed_vault.json').then(r=>r.json()).catch(()=>null),
+                fetch('./data/league_tasks.yaml').then(r=>r.text()).catch(()=>null)
             ]);
 
             if (skillsRes?.rsn) {
@@ -135,6 +137,7 @@
             renderPets();
             renderQuests();
             if (diariesRes) renderDiaries(diariesRes);
+            if (leaguesRes) { leaguesData = parseLeagueYaml(leaguesRes); renderLeagues(); }
             if (dropsRes) renderDrops(dropsRes);
             if (bankRes) {
                 renderBank(bankRes, potionStorageRes, seedVaultRes);
@@ -613,6 +616,160 @@
             
             document.getElementById('caSearch').addEventListener('input', e => renderCombatAchievements(e.target.value, document.getElementById('caFilter').value));
             document.getElementById('caFilter').addEventListener('change', e => renderCombatAchievements(document.getElementById('caSearch').value, e.target.value));
+        }
+
+        // ── Leagues task tracker ──────────────────────────────────────────
+        const LEAGUE_TIERS = ['easy', 'medium', 'hard', 'elite', 'master'];
+        const LEAGUE_TIER_POINTS = { easy: 10, medium: 40, hard: 80, elite: 150, master: 500 };
+        const LEAGUE_TIER_COLORS = { easy: '#3fb950', medium: '#58a6ff', hard: '#a371f7', elite: '#d4a84b', master: '#f85149' };
+
+        function parseLeagueYaml(yaml) {
+            // Flat list of { region, tier, name, done, date }. A task is marked
+            // done with a trailing "| done" (optionally "| done 2026-01-15").
+            const tasks = [];
+            let region = null;
+            let tier = null;
+            yaml.split('\n').forEach(line => {
+                const text = line.trim();
+                if (!text || text.startsWith('#')) return;
+                const indent = line.length - line.trimStart().length;
+                if (indent === 0 && text.endsWith(':')) {
+                    region = text.slice(0, -1).trim();
+                    tier = null;
+                } else if (indent > 0 && text.endsWith(':') &&
+                           LEAGUE_TIERS.includes(text.slice(0, -1).trim().toLowerCase())) {
+                    tier = text.slice(0, -1).trim().toLowerCase();
+                } else if (text.startsWith('- ') && region && tier) {
+                    let body = text.slice(2).trim();
+                    let done = false, date = null;
+                    const parts = body.split('|');
+                    if (parts.length > 1) {
+                        body = parts[0].trim();
+                        const m = parts[1].trim().match(/^done\b\s*(.*)$/i);
+                        if (m) { done = true; date = m[1].trim() || null; }
+                    }
+                    if (body) tasks.push({ region, tier, name: body, done, date });
+                }
+            });
+            return tasks;
+        }
+
+        function renderLeagues() {
+            const container = document.getElementById('leaguesContainer');
+            if (!leaguesData || leaguesData.length === 0) {
+                container.innerHTML = '<div class="empty-state">No league tasks found. Add some to data/league_tasks.yaml</div>';
+                document.getElementById('leagueCount').textContent = '—';
+                return;
+            }
+
+            const tasks = leaguesData;
+            const totalTasks = tasks.length;
+            const doneTasks = tasks.filter(t => t.done).length;
+            const totalPoints = tasks.reduce((s, t) => s + (t.done ? LEAGUE_TIER_POINTS[t.tier] : 0), 0);
+            const maxPoints = tasks.reduce((s, t) => s + LEAGUE_TIER_POINTS[t.tier], 0);
+            const pct = maxPoints > 0 ? ((totalPoints / maxPoints) * 100).toFixed(1) : '0.0';
+
+            const tierStats = {};
+            LEAGUE_TIERS.forEach(t => tierStats[t] = { done: 0, total: 0 });
+            tasks.forEach(t => { tierStats[t.tier].total++; if (t.done) tierStats[t.tier].done++; });
+
+            const regions = [...new Set(tasks.map(t => t.region))];
+
+            container.innerHTML = `
+                <div class="progress-section">
+                    <div class="progress-header">
+                        <span class="progress-title">🏅 League Points</span>
+                        <span class="progress-stats"><span class="obtained">${totalPoints.toLocaleString()}</span> <span class="total">/ ${maxPoints.toLocaleString()} pts</span></span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>
+                    <div class="progress-percentage">${pct}% · ${doneTasks}/${totalTasks} tasks complete</div>
+                </div>
+
+                <div class="tier-overview">
+                    <div class="tier-overview-title">Tiers</div>
+                    <div class="tier-overview-grid">
+                        ${LEAGUE_TIERS.map(t => {
+                            const s = tierStats[t];
+                            const allDone = s.total > 0 && s.done === s.total;
+                            return `<div class="tier-badge ${allDone ? 'unlocked' : ''}" style="border-color:${LEAGUE_TIER_COLORS[t]}">
+                                <span class="tier-badge-name" style="color:${LEAGUE_TIER_COLORS[t]}">${t.charAt(0).toUpperCase() + t.slice(1)}</span>
+                                <span class="tier-badge-points">${s.done}/${s.total} · ${LEAGUE_TIER_POINTS[t]} pts</span>
+                                ${allDone ? '<span class="tier-badge-check">✓</span>' : ''}
+                            </div>`;
+                        }).join('')}
+                    </div>
+                </div>
+
+                <div class="search-filter">
+                    <input type="text" class="search-input" id="leagueSearch" placeholder="Search tasks...">
+                    <select class="filter-select" id="leagueRegion">
+                        <option value="all">All Regions</option>
+                        ${regions.map(r => `<option value="${escapeTargets(r)}">${escapeTargets(r)}</option>`).join('')}
+                    </select>
+                    <select class="filter-select" id="leagueStatus">
+                        <option value="all">All Tasks</option>
+                        <option value="done">Completed Only</option>
+                        <option value="todo">Remaining Only</option>
+                    </select>
+                </div>
+
+                <div id="leagueList"></div>`;
+
+            document.getElementById('leagueCount').textContent = `${doneTasks}/${totalTasks}`;
+
+            document.getElementById('leagueSearch').addEventListener('input', renderLeagueList);
+            document.getElementById('leagueRegion').addEventListener('change', renderLeagueList);
+            document.getElementById('leagueStatus').addEventListener('change', renderLeagueList);
+
+            renderLeagueList();
+        }
+
+        function renderLeagueList() {
+            const listEl = document.getElementById('leagueList');
+            if (!listEl || !leaguesData) return;
+            const search = document.getElementById('leagueSearch').value.toLowerCase();
+            const region = document.getElementById('leagueRegion').value;
+            const status = document.getElementById('leagueStatus').value;
+
+            let tasks = leaguesData.slice();
+            if (region !== 'all') tasks = tasks.filter(t => t.region === region);
+            if (status === 'done') tasks = tasks.filter(t => t.done);
+            if (status === 'todo') tasks = tasks.filter(t => !t.done);
+            if (search) tasks = tasks.filter(t =>
+                t.name.toLowerCase().includes(search) || t.region.toLowerCase().includes(search));
+
+            if (tasks.length === 0) {
+                listEl.innerHTML = '<div class="empty-state">No tasks match your filters</div>';
+                return;
+            }
+
+            let html = '';
+            LEAGUE_TIERS.forEach(tier => {
+                const tierTasks = tasks.filter(t => t.tier === tier);
+                if (tierTasks.length === 0) return;
+                const done = tierTasks.filter(t => t.done).length;
+                const color = LEAGUE_TIER_COLORS[tier];
+                const tierPct = (done / tierTasks.length) * 100;
+                html += `<div class="ca-tier expanded">
+                    <div class="ca-tier-header" onclick="this.parentElement.classList.toggle('expanded')">
+                        <span class="ca-tier-name ${tier}">${tier.charAt(0).toUpperCase() + tier.slice(1)} (${LEAGUE_TIER_POINTS[tier]} pts)</span>
+                        <div class="ca-tier-stats">
+                            <span><span style="color:${color}">${done}</span> / ${tierTasks.length}</span>
+                            <div class="ca-tier-progress"><div class="ca-tier-progress-fill" style="width:${tierPct}%;background:${color}"></div></div>
+                        </div>
+                    </div>
+                    <div class="ca-tier-tasks">
+                        <div class="item-list">
+                            ${tierTasks.map(t => `<div class="item ${t.done ? 'obtained' : 'missing'}">
+                                <span class="item-check">${t.done ? '✓' : '○'}</span>
+                                <span class="item-name">${escapeTargets(t.name)} <span style="color:var(--text-muted);font-size:0.75rem;">· ${escapeTargets(t.region)}</span></span>
+                                ${t.date ? `<span class="item-date">${formatShortDate(t.date)}</span>` : ''}
+                            </div>`).join('')}
+                        </div>
+                    </div>
+                </div>`;
+            });
+            listEl.innerHTML = html;
         }
 
         function renderPets() {

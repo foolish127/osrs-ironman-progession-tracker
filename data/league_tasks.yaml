@@ -1,0 +1,113 @@
+# Leagues Task Tracker — personal account progression across ALL regions.
+#
+# Unlike an actual League (where you pick only a few regions), this tracks every
+# region at once, so the whole task list is always in scope.
+#
+# FORMAT
+#   Region:                 <- no indentation, ends with ':'
+#     easy:                 <- 2-space indent, one of: easy / medium / hard / elite / master
+#       - Task description           <- not done
+#       - Task description | done    <- done, no date
+#       - Task description | done 2026-01-15   <- done, with date
+#
+# Points per tier: Easy 10, Medium 40, Hard 80, Elite 150, Master 500.
+#
+# This is a STARTER set — expand each region from the OSRS Wiki Leagues task
+# tables (https://oldschool.runescape.wiki/w/Trailblazer_Reloaded_League/Tasks).
+
+General:
+  easy:
+    - Open the Collection Log interface | done
+    - Equip a full set of Graceful | done 2026-01-10
+    - Reach a total level of 750 | done
+    - Complete a beginner clue scroll | done
+  medium:
+    - Reach a total level of 1250 | done
+    - Complete a medium clue scroll
+    - Unlock a god book
+  hard:
+    - Reach a total level of 1750
+    - Obtain a Fire cape | done
+    - Complete a hard clue scroll
+  elite:
+    - Reach a total level of 2000
+    - Achieve a base combat stat of 90
+  master:
+    - Reach the maximum total level (2277)
+    - Complete a master clue scroll
+
+Misthalin:
+  easy:
+    - Kill a Giant rat in the Lumbridge swamp | done
+    - Pickpocket a man or woman in Lumbridge | done
+    - Mine some copper or tin ore | done
+  medium:
+    - Kill the Barrows brother Ahrim | done
+    - Complete the Cook's Assistant quest | done
+  hard:
+    - Loot 25 Barrows chests
+    - Defeat Obor the Hill Giant boss | done
+  elite:
+    - Loot 100 Barrows chests
+  master:
+    - Complete a Barrows chest with no brother dealing damage
+
+Karamja:
+  easy:
+    - Catch a karambwanji | done
+    - Mine gold ore in the Brimhaven mine | done
+  medium:
+    - Kill a Steel dragon
+    - Complete the Fight Caves once | done
+  hard:
+    - Defeat TzTok-Jad and claim a Fire cape | done
+    - Kill 50 Steel dragons
+  elite:
+    - Complete the Inferno
+  master:
+    - Obtain an Infernal cape
+
+Asgarnia:
+  easy:
+    - Kill a Hill Giant in the Edgeville dungeon | done
+    - Smith a bronze platebody | done
+  medium:
+    - Defeat the Giant Mole | done
+    - Kill all six God Wars Dungeon generals once
+  hard:
+    - Kill 50 Giant Mole
+    - Obtain a Bandos chestplate
+  elite:
+    - Obtain a full Bandos armour set
+  master:
+    - Defeat Nex
+
+Fremennik:
+  easy:
+    - Kill a Rock Crab | done
+    - Catch a raw shark
+  medium:
+    - Kill each of the three Dagannoth Kings once | done
+    - Obtain a Berserker ring | done
+  hard:
+    - Obtain a Dragon axe
+    - Kill 100 Dagannoth Rex
+  elite:
+    - Obtain a pet from the Dagannoth Kings
+  master:
+    - Complete a Fremennik elite diary task without food
+
+Kandarin:
+  easy:
+    - Complete a game of Pest Control | done
+    - Pickpocket a Master Farmer
+  medium:
+    - Obtain a full Void Knight set | done
+    - Kill a Zulrah
+  hard:
+    - Obtain a Toxic blowpipe
+    - Kill 100 Zulrah
+  elite:
+    - Obtain a Magic fang and a Tanzanite fang
+  master:
+    - Obtain the Pet snakeling from Zulrah
