@@ -5,7 +5,6 @@ from datetime import date
 
 import osrs_utils as U
 
-
 # --- date handling -------------------------------------------------------
 
 def test_parse_date_iso():

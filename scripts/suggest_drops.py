@@ -52,10 +52,10 @@ def main():
     for it in suggestions:
         source = (it.get("collection") or "").replace("_", " ").title()
         print(f"  - boss: {source}")
-        print(f"    kc:")
+        print("    kc:")
         print(f"    item: {it.get('name', '')}")
         print(f"    date: {it.get('date') or ''}")
-        print(f"    droprate:")
+        print("    droprate:")
         print()
 
 

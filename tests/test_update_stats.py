@@ -2,7 +2,6 @@
 
 import update_stats as S
 
-
 # --- xp / level math -----------------------------------------------------
 
 def test_xp_for_level_bounds():
