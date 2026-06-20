@@ -528,7 +528,6 @@
             <div class="stat-card" data-tab="bosses"><div class="stat-label">Boss KC</div><div class="stat-value" id="bossKcCard">—</div></div>
             <div class="stat-card" data-tab="quests"><div class="stat-label">Quests</div><div class="stat-value green" id="questCount">—</div></div>
             <div class="stat-card" data-tab="diaries"><div class="stat-label">Diaries</div><div class="stat-value" id="diaryCount">—</div></div>
-            <div class="stat-card" data-tab="bank"><div class="stat-label">Bank Value</div><div class="stat-value gold" id="bankValueCard">—</div></div>
         </div>
 
         <nav class="nav-tabs">
@@ -2466,16 +2465,7 @@
             }
             
             const totalCombinedValue = (data?.total_value || 0) + potionValue + seedValue;
-            
-            // Update stat card with combined value
-            const formatGpShort = (value) => {
-                if (value >= 1000000000) return (value / 1000000000).toFixed(1) + 'B';
-                if (value >= 1000000) return (value / 1000000).toFixed(0) + 'M';
-                if (value >= 1000) return (value / 1000).toFixed(0) + 'K';
-                return value.toString();
-            };
-            document.getElementById('bankValueCard').textContent = formatGpShort(totalCombinedValue);
-            
+
             const formatGp = (value) => {
                 if (value >= 1000000000) return (value / 1000000000).toFixed(2) + 'B';
                 if (value >= 1000000) return (value / 1000000).toFixed(2) + 'M';
