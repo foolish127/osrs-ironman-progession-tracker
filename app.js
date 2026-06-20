@@ -620,7 +620,7 @@
 
         // ── Leagues task tracker ──────────────────────────────────────────
         const LEAGUE_TIERS = ['easy', 'medium', 'hard', 'elite', 'master'];
-        const LEAGUE_TIER_POINTS = { easy: 10, medium: 40, hard: 80, elite: 150, master: 500 };
+        const LEAGUE_TIER_POINTS = { easy: 10, medium: 40, hard: 80, elite: 200, master: 400 };
         const LEAGUE_TIER_COLORS = { easy: '#3fb950', medium: '#58a6ff', hard: '#a371f7', elite: '#d4a84b', master: '#f85149' };
 
         function parseLeagueYaml(yaml) {
