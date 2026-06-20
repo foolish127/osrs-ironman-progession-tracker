@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-06-20T00:23:54.109947+00:00",
+  "updated": "2026-06-20T00:38:57.237939+00:00",
   "quests": {
     "categories": {
       "Free-to-play": {
@@ -730,14 +730,9 @@
         "not_completed": []
       },
       "Miniquests": {
-        "completed": [],
-        "not_completed": [
+        "completed": [
           {
             "name": "Alfred Grimhand's Barcrawl",
-            "date": null
-          },
-          {
-            "name": "Barbarian Training",
             "date": null
           },
           {
@@ -808,12 +803,18 @@
             "name": "Vale Totems",
             "date": null
           }
+        ],
+        "not_completed": [
+          {
+            "name": "Barbarian Training",
+            "date": null
+          }
         ]
       }
     },
     "total_completed": 179,
     "total_quests": 179,
-    "miniquests_completed": 0,
+    "miniquests_completed": 18,
     "total_miniquests": 19
   }
 }
