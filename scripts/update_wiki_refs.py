@@ -19,8 +19,8 @@ It is intentionally NOT wired into the GitHub Actions workflow.
 
 import json
 import re
-import urllib.request
 import urllib.parse
+import urllib.request
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path

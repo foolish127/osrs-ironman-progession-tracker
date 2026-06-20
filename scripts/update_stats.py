@@ -5,18 +5,29 @@ Fetches data from official hiscores and TempleOSRS API.
 Preserves manually-entered dates from YAML files.
 """
 
-import json
 import os
-import urllib.request
-import urllib.parse
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
-from pathlib import Path
+
+from osrs_config import BOSS_EXCLUSIONS, PET_NAMES
+from osrs_utils import (
+    DATA_DIR,
+    check_no_dropped_items,
+    count_items,
+    date_sort_key,
+    fetch_json,
+    names_lower,
+    normalize_date,
+    parse_yaml_with_dates,
+    read_data_file,
+    save_json,
+)
 
 RSN = os.environ.get("RSN", "FoolinSlays")
-DATA_DIR = Path(__file__).parent.parent / "data"
 
 HISCORES_URL = "https://secure.runescape.com/m=hiscore_oldschool_ironman/index_lite.json"
 TEMPLE_CLOG_URL = "https://templeosrs.com/api/collection-log/player_collection_log.php"
+TEMPLE_ITEMS_URL = "https://templeosrs.com/api/collection-log/items.php"
 
 NUM_SKILLS = 24
 
@@ -47,205 +58,91 @@ def get_level_progress(xp, level):
     prog = ((xp - curr) / (nxt - curr) * 100) if (nxt - curr) > 0 else 100
     return {"progress": round(prog, 1), "xp_to_level": nxt - xp}
 
-def fetch_json(url, params=None):
-    if params:
-        url = f"{url}?{urllib.parse.urlencode(params)}"
-    try:
-        req = urllib.request.Request(url, headers={"User-Agent": "OSRS-Ironman-Tracker/1.0"})
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            return json.loads(resp.read().decode())
-    except Exception as e:
-        print(f"Error fetching {url}: {e}")
-        return None
-
-def _strip_updated(obj):
-    """Copy of a dict without its top-level 'updated' timestamp, for change checks."""
-    if isinstance(obj, dict):
-        return {k: v for k, v in obj.items() if k != "updated"}
-    return obj
-
-
-def save_json(path, data):
-    path.parent.mkdir(parents=True, exist_ok=True)
-    # Skip the rewrite if only the 'updated' timestamp would change, so CI commits
-    # (and history diffs) are limited to real data changes instead of every run.
-    if path.exists():
-        try:
-            old = json.loads(path.read_text(encoding="utf-8"))
-            if _strip_updated(old) == _strip_updated(data):
-                print(f"Unchanged: {path}")
-                return
-        except Exception:
-            pass
-    with open(path, "w") as f:
-        json.dump(data, f, indent=2)
-    print(f"Saved: {path}")
-
-def _check_no_dropped_items(content, parsed_count, source, strict=True):
-    """Fail loudly if a hand-edited YAML file has list items that didn't parse.
-
-    Counts raw '- ' list lines and compares against how many items were parsed.
-    A mismatch means a line was silently dropped (usually a bad indent or a
-    missing 'section:'/'subsection:' heading), which would otherwise vanish
-    from the dashboard with no warning at all.
-    """
-    raw_count = sum(1 for ln in content.split('\n') if ln.lstrip().startswith('- '))
-    if raw_count != parsed_count:
-        msg = (f"{source}: found {raw_count} '- ' list lines but only parsed "
-               f"{parsed_count} of them — {raw_count - parsed_count} item(s) were "
-               f"dropped. Check indentation and the section/subsection headings.")
-        if strict:
-            raise ValueError(msg)
-        print(f"  WARNING: {msg}")
-
-
-def parse_item_with_date(line):
-    """Parse 'item name | 2024-01-15' or 'item name |' or 'item name'"""
-    line = line.strip()
-    if ' | ' in line:
-        parts = line.split(' | ', 1)
-        name = parts[0].strip()
-        date = parts[1].strip() if len(parts) > 1 and parts[1].strip() else None
-        return {'name': name, 'date': date}
-    elif line.endswith(' |'):
-        return {'name': line[:-2].strip(), 'date': None}
-    else:
-        return {'name': line, 'date': None}
-
-def parse_yaml_with_dates(content):
-    """Parse YAML with optional date support (item | date format)"""
-    result = {}
-    current_key = None
-    current_subkey = None
-    
-    for line in content.split('\n'):
-        if not line or line.startswith('#'):
-            continue
-        
-        stripped = line.lstrip()
-        indent = len(line) - len(stripped)
-        
-        if indent == 0 and stripped.endswith(':'):
-            current_key = stripped[:-1]
-            result[current_key] = {}
-            current_subkey = None
-        elif indent == 2 and stripped.endswith(':'):
-            current_subkey = stripped[:-1]
-            result[current_key][current_subkey] = []
-        elif stripped.startswith('- ') and current_key and current_subkey:
-            item_text = stripped[2:]
-            item = parse_item_with_date(item_text)
-            result[current_key][current_subkey].append(item)
-    
-    return result
-
 def load_yaml_collection_log():
     """Load the full collection log from YAML including missing items"""
-    yaml_path = DATA_DIR / "collection_log.yaml"
-    if not yaml_path.exists():
+    content = read_data_file("collection_log.yaml")
+    if content is None:
         return {}
-    
-    with open(yaml_path, 'r') as f:
-        content = f.read()
 
     data = parse_yaml_with_dates(content)
-    parsed = sum(len(items) for cat in data.values() for items in cat.values())
     # Warn (don't hard-fail) here: collection_log.yaml is large and mostly machine
     # -maintained, so a non-blocking notice is safer than failing the whole run.
-    _check_no_dropped_items(content, parsed, "collection_log.yaml", strict=False)
+    check_no_dropped_items(content, count_items(data), "collection_log.yaml", strict=False)
     return data
-
-def load_manual_dates():
-    """Load manually-entered dates from collection_log.yaml"""
-    yaml_path = DATA_DIR / "collection_log.yaml"
-    if not yaml_path.exists():
-        return {}
-    
-    with open(yaml_path, 'r') as f:
-        content = f.read()
-    
-    data = parse_yaml_with_dates(content)
-    
-    # Build a lookup: item_name -> date
-    dates = {}
-    for collection_name, items in data.items():
-        for item in items.get('obtained', []):
-            if item.get('date'):
-                # Store by item name (lowercase for matching)
-                dates[item['name'].lower()] = item['date']
-    
-    return dates
 
 def fetch_temple_collection_log(rsn):
     """Fetch collection log from TempleOSRS API"""
     print(f"Fetching collection log from TempleOSRS for {rsn}...")
-    
+
     # Request ALL categories
     data = fetch_json(TEMPLE_CLOG_URL, {"player": rsn, "categories": "all"})
-    
+
     if not data:
         print("Failed to fetch from TempleOSRS")
         return None
-    
+
     if "error" in data:
         print(f"TempleOSRS error: {data['error']}")
         return None
-    
+
     return data
 
-def load_collection_log():
+def load_item_names():
+    """Load item ID to name mapping from Temple API"""
+    data = fetch_json(TEMPLE_ITEMS_URL)
+    # Structure is {'items': {'id': 'name', ...}}
+    items = (data or {}).get('items', {})
+    if isinstance(items, dict):
+        print(f"  Loaded {len(items)} item names")
+        return items
+    return {}
+
+def load_collection_log(temple_data, item_names):
     """
-    Load collection log from TempleOSRS API, preserving manual dates AND missing items from YAML.
-    Falls back to YAML if API fails.
+    Build the collection log from pre-fetched TempleOSRS data, preserving manual
+    dates AND missing items from YAML. Falls back to YAML if the API data is absent.
     """
     # Load full YAML data (for manual dates AND missing items)
     yaml_data = load_yaml_collection_log()
     print(f"Loaded {len(yaml_data)} categories from YAML")
-    
+
     # Build manual dates lookup
     manual_dates = {}
-    for collection_name, items in yaml_data.items():
+    for items in yaml_data.values():
         for item in items.get('obtained', []):
             if item.get('date'):
                 manual_dates[item['name'].lower()] = item['date']
     print(f"Loaded {len(manual_dates)} manual dates")
-    
-    # Try TempleOSRS API
-    temple_data = fetch_temple_collection_log(RSN)
-    
+
     if temple_data and 'data' in temple_data:
         print("Using TempleOSRS API data (merged with YAML missing items)")
-        return process_temple_clog(temple_data, manual_dates, yaml_data)
+        return process_temple_clog(temple_data, manual_dates, yaml_data, item_names)
     else:
         print("Falling back to YAML collection log")
         return load_collection_log_from_yaml()
 
-def process_temple_clog(temple_data, manual_dates, yaml_data):
+def process_temple_clog(temple_data, manual_dates, yaml_data, item_names):
     """Process TempleOSRS collection log data, merging with manual dates AND missing items from YAML"""
     collections = {}
     total_obtained = 0
-    total_items = 0
     recent_items = []
-    
+
     # Temple structure: data.items = { category_name: [ {id, count, date}, ... ] }
     temple_info = temple_data.get('data', {})
     items_data = temple_info.get('items', {})
-    
+
     # Get totals from Temple response
     total_from_temple = temple_info.get('total_collections_finished', 0)
     total_available = temple_info.get('total_collections_available', 0)
-    
+
     print(f"  Temple reports: {total_from_temple}/{total_available} items")
-    
-    # We need item ID to name mapping - fetch from Temple's items endpoint
-    item_names = load_item_names()
-    
+
     # Build a set of obtained item names from Temple (lowercase for matching)
     temple_obtained_names = set()
-    
+
     for category_name, category_items in items_data.items():
         obtained = []
-        
+
         # category_items is a list of obtained items
         if isinstance(category_items, list):
             for item in category_items:
@@ -253,26 +150,27 @@ def process_temple_clog(temple_data, manual_dates, yaml_data):
                 item_name = item_names.get(str(item_id), f"Item {item_id}")
                 temple_date = item.get('date')
                 count = item.get('count', 1)
-                
-                # Check for manual date
+
+                # Manual date wins over Temple's; normalize both to ISO so they
+                # sort and display consistently regardless of source format.
                 manual_date = manual_dates.get(item_name.lower())
-                final_date = manual_date or temple_date
-                
+                final_date = normalize_date(manual_date or temple_date)
+
                 obtained.append({
                     'name': item_name,
                     'date': final_date,
                     'quantity': count
                 })
-                
+
                 temple_obtained_names.add(item_name.lower())
-                
+
                 if final_date:
                     recent_items.append({
                         'name': item_name,
                         'date': final_date,
                         'collection': category_name
                     })
-        
+
         if obtained:
             # Format category name nicely
             display_name = category_name.replace('_', ' ').title()
@@ -283,7 +181,7 @@ def process_temple_clog(temple_data, manual_dates, yaml_data):
                 'total_count': len(obtained)  # Will be updated after merging missing
             }
             total_obtained += len(obtained)
-    
+
     # Now merge missing items from YAML
     # We need to match YAML category names to Temple category names
     yaml_to_temple_map = {}
@@ -295,17 +193,17 @@ def process_temple_clog(temple_data, manual_dates, yaml_data):
             if yaml_lower == temple_lower or yaml_cat == temple_cat:
                 yaml_to_temple_map[yaml_cat] = temple_cat
                 break
-    
+
     # Add missing items from YAML to matching categories
     missing_added = 0
     for yaml_cat, yaml_items in yaml_data.items():
         yaml_missing = yaml_items.get('missing', [])
         if not yaml_missing:
             continue
-        
+
         # Find matching Temple category or create new one
         temple_cat = yaml_to_temple_map.get(yaml_cat, yaml_cat)
-        
+
         if temple_cat not in collections:
             collections[temple_cat] = {
                 'obtained': [],
@@ -313,28 +211,29 @@ def process_temple_clog(temple_data, manual_dates, yaml_data):
                 'obtained_count': 0,
                 'total_count': 0
             }
-        
+
         # Add missing items that aren't already obtained
         for item in yaml_missing:
             item_name = item.get('name', item) if isinstance(item, dict) else item
             if item_name.lower() not in temple_obtained_names:
                 collections[temple_cat]['missing'].append(item_name)
                 missing_added += 1
-        
+
         # Update total_count
         collections[temple_cat]['total_count'] = (
-            collections[temple_cat]['obtained_count'] + 
+            collections[temple_cat]['obtained_count'] +
             len(collections[temple_cat]['missing'])
         )
-    
+
     print(f"  Added {missing_added} missing items from YAML")
-    
+
     # Recalculate total_items
     total_items = sum(c['total_count'] for c in collections.values())
-    
-    # Sort recent items by date
-    recent_items.sort(key=lambda x: x.get('date') or '', reverse=True)
-    
+
+    # Sort recent items chronologically (newest first), parsing dates so mixed
+    # formats order correctly instead of lexicographically.
+    recent_items.sort(key=lambda x: date_sort_key(x.get('date')), reverse=True)
+
     return {
         'collections': collections,
         'total_obtained': total_from_temple if total_from_temple else total_obtained,
@@ -343,54 +242,36 @@ def process_temple_clog(temple_data, manual_dates, yaml_data):
         'source': 'templeosrs'
     }
 
-def load_item_names():
-    """Load item ID to name mapping from Temple API"""
-    try:
-        url = "https://templeosrs.com/api/collection-log/items.php"
-        req = urllib.request.Request(url, headers={"User-Agent": "OSRS-Ironman-Tracker/1.0"})
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            data = json.loads(resp.read().decode())
-            # Structure is {'items': {'id': 'name', ...}}
-            items = data.get('items', {})
-            if isinstance(items, dict):
-                print(f"  Loaded {len(items)} item names")
-                return items
-            return {}
-    except Exception as e:
-        print(f"  Warning: Could not load item names: {e}")
-        return {}
-
 def load_collection_log_from_yaml():
     """Load collection log from YAML file (fallback)"""
-    yaml_path = DATA_DIR / "collection_log.yaml"
-    if not yaml_path.exists():
-        print(f"Collection log YAML not found: {yaml_path}")
+    content = read_data_file("collection_log.yaml")
+    if content is None:
         return None
-    
-    with open(yaml_path, 'r') as f:
-        content = f.read()
-    
+
     data = parse_yaml_with_dates(content)
-    
+
     collections = {}
     total_obtained = 0
     total_items = 0
     recent_items = []
-    
+
     for collection_name, items in data.items():
         obtained = items.get('obtained', [])
         missing = items.get('missing', [])
-        
+
+        for item in obtained:
+            item['date'] = normalize_date(item.get('date'))
+
         collections[collection_name] = {
             'obtained': obtained,
             'missing': [m['name'] if isinstance(m, dict) else m for m in missing],
             'obtained_count': len(obtained),
             'total_count': len(obtained) + len(missing)
         }
-        
+
         total_obtained += len(obtained)
         total_items += len(obtained) + len(missing)
-        
+
         for item in obtained:
             if item.get('date'):
                 recent_items.append({
@@ -398,9 +279,9 @@ def load_collection_log_from_yaml():
                     'date': item['date'],
                     'collection': collection_name
                 })
-    
-    recent_items.sort(key=lambda x: x['date'] or '', reverse=True)
-    
+
+    recent_items.sort(key=lambda x: date_sort_key(x.get('date')), reverse=True)
+
     return {
         'collections': collections,
         'total_obtained': total_obtained,
@@ -411,34 +292,32 @@ def load_collection_log_from_yaml():
 
 def load_combat_achievements():
     """Load combat achievements from YAML file with date support"""
-    yaml_path = DATA_DIR / "combat_achievements.yaml"
-    if not yaml_path.exists():
-        print(f"Combat achievements YAML not found: {yaml_path}")
+    content = read_data_file("combat_achievements.yaml")
+    if content is None:
         return None
-    
-    with open(yaml_path, 'r') as f:
-        content = f.read()
-    
+
     data = parse_yaml_with_dates(content)
-    parsed_count = sum(len(items) for tier in data.values() for items in tier.values())
-    _check_no_dropped_items(content, parsed_count, "combat_achievements.yaml")
+    check_no_dropped_items(content, count_items(data), "combat_achievements.yaml")
 
     tier_points = {'Easy': 1, 'Medium': 2, 'Hard': 3, 'Elite': 4, 'Master': 5, 'Grandmaster': 6}
-    
+
     tiers = {}
     total_completed = 0
     total_tasks = 0
     total_points = 0
     recent_tasks = []
-    
+
     for tier_name in ['Easy', 'Medium', 'Hard', 'Elite', 'Master', 'Grandmaster']:
         if tier_name not in data:
             continue
-        
+
         completed = data[tier_name].get('completed', [])
         not_completed = data[tier_name].get('not_completed', [])
         points = tier_points.get(tier_name, 1)
-        
+
+        for task in completed:
+            task['date'] = normalize_date(task.get('date'))
+
         tiers[tier_name] = {
             'completed': completed,
             'not_completed': [m['name'] if isinstance(m, dict) else m for m in not_completed],
@@ -447,11 +326,11 @@ def load_combat_achievements():
             'points_per_task': points,
             'points_earned': len(completed) * points
         }
-        
+
         total_completed += len(completed)
         total_tasks += len(completed) + len(not_completed)
         total_points += len(completed) * points
-        
+
         for task in completed:
             if task.get('date'):
                 recent_tasks.append({
@@ -459,9 +338,9 @@ def load_combat_achievements():
                     'date': task['date'],
                     'tier': tier_name
                 })
-    
-    recent_tasks.sort(key=lambda x: x['date'] or '', reverse=True)
-    
+
+    recent_tasks.sort(key=lambda x: date_sort_key(x.get('date')), reverse=True)
+
     return {
         'tiers': tiers,
         'total_completed': total_completed,
@@ -475,13 +354,13 @@ def parse_pets_yaml(content):
     """Parse the flat pets.yaml structure"""
     result = {'obtained': [], 'missing': []}
     current_section = None
-    
+
     for line in content.split('\n'):
         if not line or line.startswith('#'):
             continue
-        
+
         stripped = line.strip()
-        
+
         if stripped == 'obtained:':
             current_section = 'obtained'
         elif stripped == 'missing:':
@@ -501,9 +380,9 @@ def parse_pets_yaml(content):
                 name = item_text.strip()
                 date = None
                 notes = None
-            
+
             result[current_section].append({'name': name, 'date': date, 'notes': notes})
-    
+
     return result
 
 def parse_quests_yaml(content):
@@ -511,14 +390,14 @@ def parse_quests_yaml(content):
     result = {}
     current_category = None
     current_section = None
-    
+
     for line in content.split('\n'):
         if not line or line.startswith('#'):
             continue
-        
+
         stripped = line.strip()
         indent = len(line) - len(stripped)
-        
+
         if indent == 0 and stripped.endswith(':'):
             current_category = stripped[:-1]
             result[current_category] = {'completed': [], 'not_completed': []}
@@ -537,52 +416,48 @@ def parse_quests_yaml(content):
             else:
                 name = item_text.strip()
                 date = None
-            
+
             result[current_category][current_section].append({'name': name, 'date': date})
-    
+
     return result
 
 def load_quests():
     """Load quests from YAML file with date support"""
-    yaml_path = DATA_DIR / "quests.yaml"
-    if not yaml_path.exists():
-        print(f"Quests YAML not found: {yaml_path}")
+    content = read_data_file("quests.yaml")
+    if content is None:
         return None
-    
-    with open(yaml_path, 'r') as f:
-        content = f.read()
-    
+
     data = parse_quests_yaml(content)
     parsed_count = sum(len(items) for cat in data.values() for items in cat.values())
-    _check_no_dropped_items(content, parsed_count, "quests.yaml")
+    check_no_dropped_items(content, parsed_count, "quests.yaml")
 
     categories = {}
     total_completed = 0
     total_quests = 0
     miniquest_completed = 0
     miniquest_total = 0
-    
+
     for cat_name in ['Free-to-play', 'Members', 'Miniquests']:
         if cat_name not in data:
             continue
-        
+
         completed = data[cat_name].get('completed', [])
         not_completed = data[cat_name].get('not_completed', [])
-        
+
         categories[cat_name] = {
             'completed': completed,
             'not_completed': not_completed
         }
-        
+
         cat_total = len(completed) + len(not_completed)
-        
+
         if cat_name == 'Miniquests':
             miniquest_completed = len(completed)
             miniquest_total = cat_total
         else:
             total_completed += len(completed)
             total_quests += cat_total
-    
+
     # NOTE: quest points are intentionally NOT computed here. QP is not exposed by
     # any API, the max changes with every new quest (335 as of Oct 2025), and a
     # hardcoded per-quest table would be error-prone and quickly go stale. The
@@ -597,21 +472,17 @@ def load_quests():
 
 def load_pets():
     """Load pets from YAML file with date support"""
-    yaml_path = DATA_DIR / "pets.yaml"
-    if not yaml_path.exists():
-        print(f"Pets YAML not found: {yaml_path}")
+    content = read_data_file("pets.yaml")
+    if content is None:
         return None
-    
-    with open(yaml_path, 'r') as f:
-        content = f.read()
-    
+
     data = parse_pets_yaml(content)
-    _check_no_dropped_items(
+    check_no_dropped_items(
         content, len(data.get('obtained', [])) + len(data.get('missing', [])), "pets.yaml")
 
     obtained = data.get('obtained', [])
     missing_raw = data.get('missing', [])
-    
+
     missing_parsed = []
     for item in missing_raw:
         name = item['name'] if isinstance(item, dict) else item
@@ -621,7 +492,7 @@ def load_pets():
             name = parts[0].strip()
             source = parts[1][:-1].strip()
         missing_parsed.append({'name': name, 'source': source})
-    
+
     return {
         'obtained': obtained,
         'missing': missing_parsed,
@@ -633,82 +504,61 @@ def extract_pets_from_clog(clog):
     """Extract pets from collection log data"""
     if not clog or 'collections' not in clog:
         return None
-    
+
     collections = clog['collections']
     obtained = []
     missing = []
-    
-    # Pet categories in Temple use names like 'abyssal_sire' which contain the pet
-    # We need to identify pet items by name
-    PET_NAMES = {
-        'abyssal orphan', 'baby chinchompa', 'baby mole', 'beaver', 'bloodhound',
-        'callisto cub', 'chompy chick', 'giant squirrel', 'hellpuppy', 'herbi',
-        'heron', 'ikkle hydra', 'jal-nib-rek', 'kalphite princess', 'little nightmare',
-        'noon', 'midnight', 'olmlet', 'pet chaos elemental', 'pet dagannoth prime',
-        'pet dagannoth rex', 'pet dagannoth supreme', 'pet dark core', 'pet general graardor',
-        "pet k'ril tsutsaroth", 'pet kraken', 'pet penance queen', 'pet smoke devil',
-        'pet snakeling', 'pet zilyana', 'phoenix', 'prince black dragon', 'rift guardian',
-        'rock golem', 'rocky', "scorpia's offspring", 'skotos', 'smolcano', 'sraracha',
-        'tangleroot', 'tiny tempor', "tumeken's guardian", 'tzrek-jad', 'venenatis spiderling',
-        "vet'ion jr", 'vorki', 'youngllef', 'lil creator', 'muphin', 'smol heredit',
-        'baron', 'butch', 'sol heredit', 'scurry', 'wisp', "lil'viathan", 
-        "lil' maiden", 'quetzin', 'nexling', 'puppadile', 'tektiny', 'vanguard',
-        'vasa minirio', 'metamorphic dust'
-    }
-    
+
     # Load manual dates and notes from pets.yaml for merging
     manual_pet_dates = {}
     manual_pet_notes = {}
-    pets_yaml_path = DATA_DIR / "pets.yaml"
-    if pets_yaml_path.exists():
-        try:
-            with open(pets_yaml_path, 'r') as f:
-                content = f.read()
-            data = parse_pets_yaml(content)
-            for pet in data.get('obtained', []):
-                if pet.get('date'):
-                    manual_pet_dates[pet['name'].lower()] = pet['date']
-                if pet.get('notes'):
-                    manual_pet_notes[pet['name'].lower()] = pet['notes']
-            # Also get missing pets from YAML for the full list
-            for pet in data.get('missing', []):
-                pet_name = pet.get('name', pet) if isinstance(pet, dict) else pet
-                if pet_name.lower() not in [p.get('name', '').lower() for p in missing]:
-                    # Parse source from "name (source)" format
-                    source = None
-                    if '(' in pet_name and pet_name.endswith(')'):
-                        parts = pet_name.rsplit('(', 1)
-                        pet_name = parts[0].strip()
-                        source = parts[1][:-1].strip()
-                    missing.append({'name': pet_name, 'source': source})
-        except Exception as e:
-            print(f"  Warning: Could not load pets.yaml: {e}")
-    
+    content = read_data_file("pets.yaml")
+    if content is not None:
+        data = parse_pets_yaml(content)
+        for pet in data.get('obtained', []):
+            if pet.get('date'):
+                manual_pet_dates[pet['name'].lower()] = pet['date']
+            if pet.get('notes'):
+                manual_pet_notes[pet['name'].lower()] = pet['notes']
+        # Also get missing pets from YAML for the full list
+        missing_names = names_lower(missing)
+        for pet in data.get('missing', []):
+            pet_name = pet.get('name', pet) if isinstance(pet, dict) else pet
+            if pet_name.lower() not in missing_names:
+                # Parse source from "name (source)" format
+                source = None
+                if '(' in pet_name and pet_name.endswith(')'):
+                    parts = pet_name.rsplit('(', 1)
+                    pet_name = parts[0].strip()
+                    source = parts[1][:-1].strip()
+                missing.append({'name': pet_name, 'source': source})
+                missing_names.add(pet_name.lower())
+
     # Scan all collections for pet items
+    obtained_names = set()
     for category_name, category_data in collections.items():
         source = category_name.replace('_', ' ').title()
-        
+
         for item in category_data.get('obtained', []):
             item_name = item.get('name', '') if isinstance(item, dict) else item
-            
-            # Check if this is a pet
-            if item_name.lower() in PET_NAMES:
-                # Avoid duplicates
-                if item_name.lower() not in [p.get('name', '').lower() for p in obtained]:
-                    manual_date = manual_pet_dates.get(item_name.lower())
-                    clog_date = item.get('date') if isinstance(item, dict) else None
-                    
-                    obtained.append({
-                        'name': item_name,
-                        'date': manual_date or clog_date,
-                        'source': source,
-                        'notes': manual_pet_notes.get(item_name.lower())
-                    })
-    
+
+            # Check if this is a pet (avoid duplicates)
+            if item_name.lower() in PET_NAMES and item_name.lower() not in obtained_names:
+                manual_date = manual_pet_dates.get(item_name.lower())
+                clog_date = item.get('date') if isinstance(item, dict) else None
+
+                obtained.append({
+                    'name': item_name,
+                    'date': normalize_date(manual_date or clog_date),
+                    'source': source,
+                    'notes': manual_pet_notes.get(item_name.lower())
+                })
+                obtained_names.add(item_name.lower())
+
     if not obtained and not missing:
         # Fallback to YAML only
         return None
-    
+
     return {
         'obtained': obtained,
         'missing': missing,
@@ -723,9 +573,16 @@ def main():
     print(f"Timestamp: {now.isoformat()}")
     print("-" * 50)
 
-    # Fetch official hiscores
-    print("Fetching from official hiscores...")
-    official = fetch_json(HISCORES_URL, {"player": RSN})
+    # Fetch the three independent network sources concurrently — they don't
+    # depend on each other, so there's no reason to wait for them in series.
+    print("Fetching hiscores, collection log and item names...")
+    with ThreadPoolExecutor(max_workers=3) as pool:
+        f_official = pool.submit(fetch_json, HISCORES_URL, {"player": RSN})
+        f_temple = pool.submit(fetch_temple_collection_log, RSN)
+        f_items = pool.submit(load_item_names)
+        official = f_official.result()
+        temple_data = f_temple.result()
+        item_names = f_items.result()
 
     # Pull Combat Achievement points and collection-log count straight from the
     # hiscores so the headline numbers stay current without any manual edits.
@@ -751,7 +608,7 @@ def main():
     overall = skills.get("Overall", {})
     indiv = {k: v for k, v in skills.items() if k != "Overall"}
     n99 = sum(1 for s in indiv.values() if s.get("level", 0) >= 99)
-    
+
     att = skills.get("Attack", {}).get("level", 1)
     str_ = skills.get("Strength", {}).get("level", 1)
     def_ = skills.get("Defence", {}).get("level", 1)
@@ -774,12 +631,6 @@ def main():
             }
         })
 
-    # Items to exclude from boss list
-    BOSS_EXCLUSIONS = {
-        "Collections Logged", "Combat Achievements", 
-        "PvP Arena", "PvP Arena - Rank", "Colosseum Glory"
-    }
-    
     # Process bosses and clue scrolls separately
     bosses = {}
     clues = {}
@@ -800,15 +651,15 @@ def main():
     if clues:
         save_json(DATA_DIR / "clues.json", {"rsn": RSN, "updated": now.isoformat(), "clues": clues})
 
-    # Load and save collection log (tries Temple API first, falls back to YAML)
+    # Build collection log from pre-fetched Temple data (falls back to YAML)
     print("Loading collection log...")
-    clog = load_collection_log()
+    clog = load_collection_log(temple_data, item_names)
     if clog:
         save_json(DATA_DIR / "collection_log.json", {
             "rsn": RSN, "updated": now.isoformat(), "collection_log": clog
         })
         print(f"Collection log: {clog['total_obtained']}/{clog['total_items']} items (source: {clog.get('source', 'unknown')})")
-        
+
         # Extract pets from collection log
         print("Extracting pets from collection log...")
         pets = extract_pets_from_clog(clog)

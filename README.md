@@ -91,10 +91,19 @@ Your manually-entered dates in YAML files are **never overwritten** by automatio
 │   ├── collection_log.yaml     # Manual (for dates only)
 │   ├── potion_storage.yaml     # Manual
 │   └── bank.txt                # Manual, LOCAL-ONLY (git-ignored, private)
-├── index.html                  # Dashboard (deployed to GitHub Pages by the workflow)
-└── scripts/
-    ├── update_stats.py         # Main update script (runs in CI)
-    └── update_bank.py          # Bank processing script (run locally only)
+├── index.html                  # Dashboard markup (deployed to GitHub Pages)
+├── styles.css                  # Dashboard styles (extracted from index.html)
+├── app.js                      # Dashboard logic (extracted from index.html)
+├── pyproject.toml              # Ruff + pytest config (stdlib-only runtime)
+├── scripts/
+│   ├── update_stats.py         # Main update script (runs in CI)
+│   ├── update_bank.py          # Bank processing script (run locally only)
+│   ├── osrs_utils.py           # Shared helpers (HTTP+retry, dates, YAML parsing)
+│   ├── osrs_config.py          # Config tables (categories, pet names, exclusions)
+│   ├── validate_data.py        # Validates generated JSON shape (CI gate)
+│   ├── suggest_drops.py        # Suggests drops.yaml entries (log only)
+│   └── update_wiki_refs.py     # Experimental wiki scraper (not in CI)
+└── tests/                      # pytest unit tests for the parsing/merge logic
 ```
 
 ---
@@ -137,6 +146,23 @@ Ardougne:
 > Bank data is intentionally never pushed or published. GitHub Pages is static
 > and can't do server-side auth, so the only way to keep a bank truly private is
 > to not publish it.
+
+---
+
+## Development
+
+The runtime uses only the Python standard library — no install needed to run the
+scripts. For linting and tests:
+
+```bash
+pip install ruff pytest      # or: pip install -e ".[dev]"
+ruff check scripts tests     # lint
+pytest -q                    # unit tests
+```
+
+CI runs `ruff` + `pytest` on every push and **blocks deployment if either fails**,
+then runs `update_stats.py`, validates the generated JSON, and deploys the
+dashboard (`index.html` + `styles.css` + `app.js`) to GitHub Pages.
 
 ---
 

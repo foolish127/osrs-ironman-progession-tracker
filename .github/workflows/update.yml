@@ -9,8 +9,11 @@ on:
       - 'data/*.yaml'
       - 'data/bank.txt'
       - 'index.html'
-      - 'scripts/update_stats.py'
-      - 'scripts/update_bank.py'
+      - 'styles.css'
+      - 'app.js'
+      - 'scripts/**.py'
+      - 'pyproject.toml'
+      - 'tests/**.py'
       - '.github/workflows/update.yml'
 
 # Prevent duplicate runs
@@ -25,8 +28,28 @@ permissions:
   id-token: write
 
 jobs:
+  # Lint + unit tests. Deployment depends on this so we never publish broken code.
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dev tools
+        run: pip install ruff pytest
+
+      - name: Ruff lint
+        run: ruff check scripts tests
+
+      - name: Run tests
+        run: pytest -q
+
   update-and-deploy:
     runs-on: ubuntu-latest
+    needs: lint-and-test
     # Skip if triggered by bot's own commit
     if: github.actor != 'github-actions[bot]'
 
@@ -50,6 +73,12 @@ jobs:
           # bank.txt is private (gitignored) so it can't produce real bank data
           # here, and bank.json is kept local-only. Run it locally instead.
 
+      - name: Validate generated data
+        run: python scripts/validate_data.py
+
+      - name: Suggest new drops (log only)
+        run: python scripts/suggest_drops.py
+
       - name: Commit data changes
         run: |
           git config --local user.email "action@github.com"
@@ -63,6 +92,8 @@ jobs:
         run: |
           mkdir -p _site/data
           cp index.html _site/
+          cp styles.css _site/
+          cp app.js _site/
           cp data/*.json _site/data/ 2>/dev/null || true
           cp data/*.yaml _site/data/ 2>/dev/null || true
           # Private wealth data — never publish it to the live site

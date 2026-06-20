@@ -1,0 +1,31 @@
+[project]
+name = "osrs-ironman-tracker"
+version = "1.0.0"
+description = "OSRS Ironman progression tracker — fetches hiscores/collection-log data and renders a static dashboard."
+requires-python = ">=3.11"
+# Runtime uses only the Python standard library; no third-party deps.
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["ruff>=0.6", "pytest>=8"]
+
+[tool.ruff]
+# scripts/ import each other as top-level modules (run as `python scripts/x.py`),
+# so treat scripts as first-party for import sorting.
+src = ["scripts"]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "C4"]
+ignore = [
+    "E501",  # long lines: the keyword/data tables are intentionally wide
+    "E701",  # multiple statements on one line: used in the compact xp helpers
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["osrs_utils", "osrs_config", "untradeable_values"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["scripts"]
