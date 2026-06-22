@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-06-22T01:36:36.258634+00:00",
+  "updated": "2026-06-22T03:59:56.392487+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -78,7 +78,7 @@
           {
             "name": "Araxyte venom sack",
             "date": "2026-01-16",
-            "quantity": 1890
+            "quantity": 2750
           },
           {
             "name": "Spider cave teleport",
@@ -108,7 +108,7 @@
           {
             "name": "Araxyte head",
             "date": "2026-02-05",
-            "quantity": 7
+            "quantity": 8
           },
           {
             "name": "Jar of venom",
@@ -252,7 +252,7 @@
           {
             "name": "Pegasian crystal",
             "date": "2026-03-01",
-            "quantity": 1
+            "quantity": 2
           },
           {
             "name": "Primordial crystal",
@@ -267,7 +267,7 @@
           {
             "name": "Key master teleport",
             "date": "2026-01-02",
-            "quantity": 56
+            "quantity": 98
           }
         ],
         "missing": [
@@ -354,12 +354,12 @@
           {
             "name": "Mokhaiotl waystone",
             "date": "2026-02-10",
-            "quantity": 64
+            "quantity": 80
           },
           {
             "name": "Demon tear",
             "date": "2026-02-10",
-            "quantity": 28056
+            "quantity": 34866
           }
         ],
         "missing": [
@@ -755,16 +755,20 @@
       "Shellbane Gryphon": {
         "obtained": [
           {
+            "name": "Belle's folly (tarnished)",
+            "date": "2026-06-22",
+            "quantity": 1
+          },
+          {
             "name": "Gryphon feather",
             "date": "2025-12-11",
             "quantity": 250
           }
         ],
         "missing": [
-          "Belle's folly (tarnished)",
           "Jar of feathers"
         ],
-        "obtained_count": 1,
+        "obtained_count": 2,
         "total_count": 3
       },
       "Skotizo": {
@@ -957,7 +961,7 @@
           {
             "name": "Zul-andra teleport",
             "date": "2026-02-01",
-            "quantity": 140
+            "quantity": 188
           },
           {
             "name": "Uncut onyx",
@@ -967,7 +971,7 @@
           {
             "name": "Zulrah's scales",
             "date": "2025-10-28",
-            "quantity": 53083
+            "quantity": 65535
           }
         ],
         "missing": [
@@ -3448,12 +3452,12 @@
           {
             "name": "Dragon metal sheet",
             "date": "2025-12-07",
-            "quantity": 17
+            "quantity": 22
           },
           {
             "name": "Dragon nails",
             "date": "2025-12-03",
-            "quantity": 157
+            "quantity": 250
           },
           {
             "name": "Dragon cannonball",
@@ -3901,7 +3905,7 @@
           {
             "name": "Dragon metal sheet",
             "date": "2025-12-07",
-            "quantity": 17
+            "quantity": 22
           },
           {
             "name": "Horn of plenty (Empty)",
@@ -4052,7 +4056,7 @@
           {
             "name": "Right skull half",
             "date": "2025-07-11",
-            "quantity": 1
+            "quantity": 2
           },
           {
             "name": "Left skull half",
@@ -4082,7 +4086,7 @@
           {
             "name": "Hespori seed",
             "date": "2025-07-21",
-            "quantity": 269
+            "quantity": 270
           },
           {
             "name": "Fresh crab claw",
@@ -5516,13 +5520,18 @@
         "total_count": 1
       }
     },
-    "total_obtained": 548,
+    "total_obtained": 549,
     "total_items": 1732,
     "recent_items": [
       {
         "name": "Uncut onyx",
         "date": "2026-06-22",
         "collection": "fortis_colosseum"
+      },
+      {
+        "name": "Belle's folly (tarnished)",
+        "date": "2026-06-22",
+        "collection": "shellbane_gryphon"
       },
       {
         "name": "Uncut onyx",
@@ -5613,11 +5622,6 @@
         "name": "Enhanced crystal weapon seed",
         "date": "2026-05-17",
         "collection": "the_gauntlet"
-      },
-      {
-        "name": "Magic fang",
-        "date": "2026-05-17",
-        "collection": "zulrah"
       }
     ],
     "source": "templeosrs"
