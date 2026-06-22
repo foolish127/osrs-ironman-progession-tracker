@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-06-22T01:20:15.729566+00:00",
+  "updated": "2026-06-22T01:36:36.258634+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -386,6 +386,11 @@
             "name": "Sunfire splinters",
             "date": "2025-08-16",
             "quantity": 250
+          },
+          {
+            "name": "Uncut onyx",
+            "date": "2026-06-22",
+            "quantity": 1
           }
         ],
         "missing": [
@@ -396,8 +401,8 @@
           "Sunfire fanatic helm",
           "Tonalztics of ralos (uncharged)"
         ],
-        "obtained_count": 1,
-        "total_count": 7
+        "obtained_count": 2,
+        "total_count": 8
       },
       "The Gauntlet": {
         "obtained": [
@@ -770,6 +775,11 @@
             "quantity": 1
           },
           {
+            "name": "Uncut onyx",
+            "date": "2026-06-22",
+            "quantity": 1
+          },
+          {
             "name": "Ancient shard",
             "date": "2025-07-29",
             "quantity": 119
@@ -779,8 +789,8 @@
           "Dark claw",
           "Dark totem"
         ],
-        "obtained_count": 2,
-        "total_count": 4
+        "obtained_count": 3,
+        "total_count": 5
       },
       "Tempoross": {
         "obtained": [
@@ -917,6 +927,21 @@
         "obtained_count": 10,
         "total_count": 10
       },
+      "Zalcano": {
+        "obtained": [
+          {
+            "name": "Uncut onyx",
+            "date": "2026-06-22",
+            "quantity": 1
+          }
+        ],
+        "missing": [
+          "Crystal tool seed",
+          "Zalcano shard"
+        ],
+        "obtained_count": 1,
+        "total_count": 3
+      },
       "Zulrah": {
         "obtained": [
           {
@@ -935,6 +960,11 @@
             "quantity": 140
           },
           {
+            "name": "Uncut onyx",
+            "date": "2026-06-22",
+            "quantity": 1
+          },
+          {
             "name": "Zulrah's scales",
             "date": "2025-10-28",
             "quantity": 53083
@@ -946,8 +976,8 @@
           "Tanzanite fang",
           "Tanzanite mutagen"
         ],
-        "obtained_count": 4,
-        "total_count": 8
+        "obtained_count": 5,
+        "total_count": 9
       },
       "Tombs Of Amascut": {
         "obtained": [
@@ -4070,6 +4100,11 @@
             "quantity": 2
           },
           {
+            "name": "Uncut onyx",
+            "date": "2026-06-22",
+            "quantity": 1
+          },
+          {
             "name": "Broken zombie axe",
             "date": "2025-08-15",
             "quantity": 1
@@ -4116,8 +4151,8 @@
           "Shaman mask",
           "Swift marlin"
         ],
-        "obtained_count": 25,
-        "total_count": 59
+        "obtained_count": 26,
+        "total_count": 60
       },
       "Abyssal Sire, All Pets": {
         "obtained": [],
@@ -4575,11 +4610,9 @@
       },
       "Fortis Colosseum, Skotizo, Zalcano, Zulrah, Miscellaneous": {
         "obtained": [],
-        "missing": [
-          "Uncut onyx"
-        ],
+        "missing": [],
         "obtained_count": 0,
-        "total_count": 1
+        "total_count": 0
       },
       "Fossil Island Notes": {
         "obtained": [],
@@ -5466,15 +5499,6 @@
         "obtained_count": 0,
         "total_count": 1
       },
-      "Zalcano": {
-        "obtained": [],
-        "missing": [
-          "Crystal tool seed",
-          "Zalcano shard"
-        ],
-        "obtained_count": 0,
-        "total_count": 2
-      },
       "Zalcano, All Pets": {
         "obtained": [],
         "missing": [
@@ -5492,13 +5516,38 @@
         "total_count": 1
       }
     },
-    "total_obtained": 547,
-    "total_items": 1728,
+    "total_obtained": 548,
+    "total_items": 1732,
     "recent_items": [
+      {
+        "name": "Uncut onyx",
+        "date": "2026-06-22",
+        "collection": "fortis_colosseum"
+      },
+      {
+        "name": "Uncut onyx",
+        "date": "2026-06-22",
+        "collection": "skotizo"
+      },
+      {
+        "name": "Uncut onyx",
+        "date": "2026-06-22",
+        "collection": "zalcano"
+      },
       {
         "name": "Serpentine visage",
         "date": "2026-06-22",
         "collection": "zulrah"
+      },
+      {
+        "name": "Uncut onyx",
+        "date": "2026-06-22",
+        "collection": "zulrah"
+      },
+      {
+        "name": "Uncut onyx",
+        "date": "2026-06-22",
+        "collection": "miscellaneous"
       },
       {
         "name": "Aranea boots",
@@ -5569,31 +5618,6 @@
         "name": "Magic fang",
         "date": "2026-05-17",
         "collection": "zulrah"
-      },
-      {
-        "name": "Immaculate mole skin",
-        "date": "2026-05-14",
-        "collection": "giant_mole"
-      },
-      {
-        "name": "Noxious blade",
-        "date": "2026-05-12",
-        "collection": "araxxor"
-      },
-      {
-        "name": "Abyssal blue dye",
-        "date": "2026-04-30",
-        "collection": "guardians_of_the_rift"
-      },
-      {
-        "name": "Ring of the elements",
-        "date": "2026-04-29",
-        "collection": "guardians_of_the_rift"
-      },
-      {
-        "name": "Shayzien banner",
-        "date": "2026-04-05",
-        "collection": "medium_treasure_trails"
       }
     ],
     "source": "templeosrs"
