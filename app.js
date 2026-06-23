@@ -174,14 +174,19 @@
             const chart = document.getElementById('skillXpChart');
             if (chart) {
                 const sorted = SKILL_ORDER
-                    .map(name => ({ name, xp: skills[name]?.xp || 0 }))
+                    .map(name => ({ name, xp: skills[name]?.xp || 0, level: skills[name]?.level || 1 }))
                     .sort((a, b) => b.xp - a.xp);
                 const maxXp = sorted[0]?.xp || 1;
+                // Colour each bar by level on a red->yellow->green scale,
+                // normalised across the account's own min/max levels.
+                const levels = sorted.map(s => s.level);
+                const minLvl = Math.min(...levels), maxLvl = Math.max(...levels);
+                const hue = lvl => (maxLvl > minLvl ? (lvl - minLvl) / (maxLvl - minLvl) : 1) * 120;
                 chart.innerHTML = '<h3>📈 Experience by Skill</h3>' + sorted.map(s => `
                     <div class="skill-bar">
                         <img src="${SKILL_ICONS[s.name]}" alt="${s.name}" class="skill-bar-icon">
                         <span class="skill-bar-name">${s.name}</span>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" style="width:${(s.xp / maxXp) * 100}%"></div></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" style="width:${(s.xp / maxXp) * 100}%;background:hsl(${hue(s.level)},65%,45%)"></div></div>
                         <span class="skill-bar-xp">${formatNumber(s.xp)}</span>
                     </div>`).join('');
             }
