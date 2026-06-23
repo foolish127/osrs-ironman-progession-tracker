@@ -111,6 +111,7 @@
             if (clogRes?.collection_log) {
                 clogData = clogRes.collection_log;
                 clogData.rsn = clogRes.rsn || 'FoolinSlays';
+                clogData.collections = mergeClogCollections(clogData.collections);
                 document.getElementById('clogCount').textContent = `${clogData.total_obtained}/${clogData.total_items}`;
             }
 
@@ -279,6 +280,31 @@
             }).join('');
         }
 
+        function mergeClogCollections(collections) {
+            // TempleOSRS splits multi-tag items into their own categories
+            // (e.g. "Abyssal Sire, All Pets", "Abyssal Sire, Slayer"). Group each
+            // under its first tag so a boss's pet/slayer items share one collapsible.
+            const merged = {};
+            for (const [name, coll] of Object.entries(collections || {})) {
+                const primary = name.split(',')[0].trim();
+                const m = merged[primary] || (merged[primary] = { obtained: [], missing: [], _o: new Set(), _m: new Set() });
+                for (const it of (coll.obtained || [])) {
+                    const k = (it.name || '').toLowerCase();
+                    if (!m._o.has(k)) { m._o.add(k); m.obtained.push(it); }
+                }
+                for (const it of (coll.missing || [])) {
+                    const k = (typeof it === 'string' ? it : it.name || '').toLowerCase();
+                    if (!m._m.has(k)) { m._m.add(k); m.missing.push(it); }
+                }
+            }
+            for (const m of Object.values(merged)) {
+                m.obtained_count = m.obtained.length;
+                m.total_count = m.obtained_count + m.missing.length;
+                delete m._o; delete m._m;
+            }
+            return merged;
+        }
+
         function renderCollectionLog(searchTerm = '', statusFilter = 'all') {
             const container = document.getElementById('clogContainer');
             if (!clogData) {
@@ -353,7 +379,12 @@
                 return stats;
             }
 
-            const categoryStats = getCategoryStats();
+            // Prefer the exact in-game counts from data/clog_categories.yaml;
+            // fall back to the pattern-matched estimate when it isn't present.
+            const CAT_ICONS = { Bosses: '⚔️', Raids: '🏛️', Clues: '📜', Minigames: '🎮', Other: '📦' };
+            const categoryStats = clogCategories?.length
+                ? Object.fromEntries(clogCategories.map(c => [c.name, { obtained: c.obtained, total: c.total, icon: CAT_ICONS[c.name] || '📦' }]))
+                : getCategoryStats();
             const pct = ((clogData.total_obtained / clogData.total_items) * 100).toFixed(1);
             
             // Helper to get wiki image URL
@@ -411,16 +442,6 @@
                     <div class="progress-percentage">${pct}%</div>
                 </div>`;
             
-            if (clogCategories?.length) {
-                html += `<div class="clog-categories">${clogCategories.map(c => {
-                    const cpct = c.total ? ((c.obtained / c.total) * 100).toFixed(1) : 0;
-                    return `<div class="clog-cat">
-                        <div class="clog-cat-head"><span>${c.name}</span><span class="clog-cat-count">${c.obtained}/${c.total}</span></div>
-                        <div class="progress-bar"><div class="progress-fill" style="width:${cpct}%"></div></div>
-                    </div>`;
-                }).join('')}</div>`;
-            }
-
             html += `<div class="search-filter">
                     <input type="text" class="search-input" id="clogSearch" placeholder="Search items or collections..." value="${searchTerm}">
                     <select class="filter-select" id="clogFilter">

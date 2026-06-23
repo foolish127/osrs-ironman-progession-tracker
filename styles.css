@@ -71,11 +71,6 @@
         .skill-bar-track { flex: 1; height: 18px; background: var(--bg-card); border-radius: 3px; overflow: hidden; margin: 0 0.75rem; }
         .skill-bar-fill { height: 100%; background: linear-gradient(90deg, var(--accent-green), #7ee2a8); border-radius: 3px; transition: width 0.3s ease; }
         .skill-bar-xp { font-family: 'Fira Code', monospace; font-size: 0.75rem; color: var(--text-muted); width: 70px; text-align: right; flex-shrink: 0; }
-
-        .clog-categories { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.75rem; margin-bottom: 1.5rem; }
-        .clog-cat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 0.6rem 0.75rem; }
-        .clog-cat-head { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.4rem; }
-        .clog-cat-count { font-family: 'Fira Code', monospace; color: var(--text-muted); }
         .boss-kc { font-family: 'Fira Code', monospace; font-size: 0.9rem; color: var(--accent-gold); }
         .clues-grid { display: flex; flex-direction: column; gap: 1rem; }
         .clue-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; }
