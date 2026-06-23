@@ -169,6 +169,22 @@
                     </div>
                 </div>`;
             }).join('');
+
+            // XP bar chart beneath the grid: every skill, highest XP first.
+            const chart = document.getElementById('skillXpChart');
+            if (chart) {
+                const sorted = SKILL_ORDER
+                    .map(name => ({ name, xp: skills[name]?.xp || 0 }))
+                    .sort((a, b) => b.xp - a.xp);
+                const maxXp = sorted[0]?.xp || 1;
+                chart.innerHTML = '<h3>📈 Experience by Skill</h3>' + sorted.map(s => `
+                    <div class="skill-bar">
+                        <img src="${SKILL_ICONS[s.name]}" alt="${s.name}" class="skill-bar-icon">
+                        <span class="skill-bar-name">${s.name}</span>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" style="width:${(s.xp / maxXp) * 100}%"></div></div>
+                        <span class="skill-bar-xp">${formatNumber(s.xp)}</span>
+                    </div>`).join('');
+            }
         }
 
         function renderBosses(bosses) {
