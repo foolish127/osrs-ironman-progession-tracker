@@ -76,6 +76,23 @@ def test_process_temple_clog_merges_yaml_missing():
     assert cat["total_count"] == 2
 
 
+def test_dedup_recent_items_collapses_multi_source():
+    items = [
+        {"name": "Uncut onyx", "date": "2026-06-22", "collection": "skotizo"},
+        {"name": "Uncut onyx", "date": "2026-06-22", "collection": "zulrah"},
+        {"name": "Basilisk jaw", "date": "2026-06-23", "collection": "slayer"},
+    ]
+    out = S.dedup_recent_items(items, {"uncut onyx": "Zulrah"})
+    # newest first, one entry per item
+    assert [o["name"] for o in out] == ["Basilisk jaw", "Uncut onyx"]
+    # multi-source item re-attributed from drops.yaml
+    onyx = next(o for o in out if o["name"] == "Uncut onyx")
+    assert onyx["collection"] == "zulrah"
+    # single-source item keeps its original category
+    jaw = next(o for o in out if o["name"] == "Basilisk jaw")
+    assert jaw["collection"] == "slayer"
+
+
 # --- pet extraction ------------------------------------------------------
 
 def test_extract_pets_from_clog_finds_pets(monkeypatch):

@@ -6,6 +6,7 @@ Preserves manually-entered dates from YAML files.
 """
 
 import os
+from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 
@@ -121,6 +122,51 @@ def load_collection_log(temple_data, item_names):
         print("Falling back to YAML collection log")
         return load_collection_log_from_yaml()
 
+def load_drops_sources():
+    """Map lowercased item name -> source boss from drops.yaml.
+
+    Used to attribute collection-log items that fill several Temple category
+    logs at once (e.g. Uncut onyx) to the source the player actually recorded.
+    """
+    content = read_data_file("drops.yaml")
+    if content is None:
+        return {}
+    sources = {}
+    current_boss = None
+    for line in content.split('\n'):
+        s = line.strip()
+        if s.startswith('- '):
+            s = s[2:].strip()
+        if s.startswith('boss:'):
+            current_boss = s.split(':', 1)[1].strip()
+        elif s.startswith('item:') and current_boss:
+            item = s.split(':', 1)[1].strip().strip('"\'')
+            if item:
+                sources.setdefault(item.lower(), current_boss)
+    return sources
+
+
+def dedup_recent_items(items, drops_sources=None):
+    """Sort newest-first and keep a single entry per item name.
+
+    One obtained item can fill the collection-log slot under every boss that
+    drops it (all at the same timestamp), which would list it many times. When
+    such a multi-source item is in drops.yaml, attribute it to that real source.
+    """
+    items = sorted(items, key=lambda x: date_sort_key(x.get('date')), reverse=True)
+    name_counts = Counter(it['name'].lower() for it in items)
+    seen, out = set(), []
+    for it in items:
+        key = it['name'].lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        if drops_sources and name_counts[key] > 1 and key in drops_sources:
+            it = {**it, 'collection': drops_sources[key].lower().replace(' ', '_')}
+        out.append(it)
+    return out
+
+
 def process_temple_clog(temple_data, manual_dates, yaml_data, item_names):
     """Process TempleOSRS collection log data, merging with manual dates AND missing items from YAML"""
     collections = {}
@@ -230,9 +276,9 @@ def process_temple_clog(temple_data, manual_dates, yaml_data, item_names):
     # Recalculate total_items
     total_items = sum(c['total_count'] for c in collections.values())
 
-    # Sort recent items chronologically (newest first), parsing dates so mixed
-    # formats order correctly instead of lexicographically.
-    recent_items.sort(key=lambda x: date_sort_key(x.get('date')), reverse=True)
+    # Newest first, then collapse items that filled several category logs at
+    # once into a single entry attributed to their real source (via drops.yaml).
+    recent_items = dedup_recent_items(recent_items, load_drops_sources())
 
     return {
         'collections': collections,
@@ -280,7 +326,7 @@ def load_collection_log_from_yaml():
                     'collection': collection_name
                 })
 
-    recent_items.sort(key=lambda x: date_sort_key(x.get('date')), reverse=True)
+    recent_items = dedup_recent_items(recent_items, load_drops_sources())
 
     return {
         'collections': collections,
