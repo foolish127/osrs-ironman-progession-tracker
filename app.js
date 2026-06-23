@@ -54,6 +54,7 @@
         let skillsData = null;
         let bossesData = null;
         let leaguesData = null;
+        let clogCategories = null;
         let wikiCompData = null;
         let wikiCATableData = null;
         let milestonesData = null;
@@ -65,7 +66,7 @@
         // it discarded the manual dates.
 
         async function loadData() {
-            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, diariesRes, bankRes, dropsRes, potionStorageRes, seedVaultRes, leaguesRes] = await Promise.all([
+            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, diariesRes, bankRes, dropsRes, potionStorageRes, seedVaultRes, leaguesRes, clogCatRes] = await Promise.all([
                 fetch('./data/skills.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/bosses.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/clues.json').then(r=>r.json()).catch(()=>null),
@@ -78,8 +79,20 @@
                 fetch('./data/drops.yaml').then(r=>r.text()).catch(()=>null),
                 fetch('./data/potion_storage.json').then(r=>r.json()).catch(()=>null),
                 fetch('./data/seed_vault.json').then(r=>r.json()).catch(()=>null),
-                fetch('./data/league_tasks.yaml').then(r=>r.text()).catch(()=>null)
+                fetch('./data/league_tasks.yaml').then(r=>r.text()).catch(()=>null),
+                fetch('./data/clog_categories.yaml').then(r=>r.text()).catch(()=>null)
             ]);
+
+            if (clogCatRes) {
+                clogCategories = clogCatRes.split('\n')
+                    .map(l => l.trim())
+                    .filter(l => l && !l.startsWith('#') && l.includes(':'))
+                    .map(l => {
+                        const [name, val] = l.split(':');
+                        const [obt, tot] = (val || '').split('/').map(n => parseInt(n.trim(), 10) || 0);
+                        return { name: name.trim(), obtained: obt, total: tot };
+                    });
+            }
 
             if (skillsRes?.rsn) {
                 document.getElementById('playerName').textContent = skillsRes.rsn;
@@ -376,7 +389,7 @@
                     <div class="clog-latest">
                         <div class="clog-latest-title">Latest Collections</div>
                         <div class="clog-latest-items">
-                            ${clogData.recent_items.slice(0, 10).map(item => {
+                            ${clogData.recent_items.slice(0, 12).map(item => {
                                 const safeChar = item.name.charAt(0).replace(/'/g, '');
                                 return `
                                 <div class="clog-latest-item" title="${item.name.replace(/"/g, '&quot;')} - ${(item.collection || '').replace(/"/g, '&quot;')}">
@@ -398,6 +411,16 @@
                     <div class="progress-percentage">${pct}%</div>
                 </div>`;
             
+            if (clogCategories?.length) {
+                html += `<div class="clog-categories">${clogCategories.map(c => {
+                    const cpct = c.total ? ((c.obtained / c.total) * 100).toFixed(1) : 0;
+                    return `<div class="clog-cat">
+                        <div class="clog-cat-head"><span>${c.name}</span><span class="clog-cat-count">${c.obtained}/${c.total}</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width:${cpct}%"></div></div>
+                    </div>`;
+                }).join('')}</div>`;
+            }
+
             html += `<div class="search-filter">
                     <input type="text" class="search-input" id="clogSearch" placeholder="Search items or collections..." value="${searchTerm}">
                     <select class="filter-select" id="clogFilter">
