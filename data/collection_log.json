@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-06-23T14:47:02.560645+00:00",
+  "updated": "2026-06-24T01:42:38.328026+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -43,6 +43,11 @@
             "quantity": 929
           },
           {
+            "name": "Jar of chemicals",
+            "date": "2026-06-24",
+            "quantity": 1
+          },
+          {
             "name": "Alchemical hydra heads",
             "date": "2026-03-26",
             "quantity": 1
@@ -50,10 +55,9 @@
         ],
         "missing": [
           "Hydra leather",
-          "Hydra's claw",
-          "Jar of chemicals"
+          "Hydra's claw"
         ],
-        "obtained_count": 4,
+        "obtained_count": 5,
         "total_count": 7
       },
       "Amoxliatl": {
@@ -5524,9 +5528,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 550,
+    "total_obtained": 551,
     "total_items": 1732,
     "recent_items": [
+      {
+        "name": "Jar of chemicals",
+        "date": "2026-06-24",
+        "collection": "alchemical_hydra"
+      },
       {
         "name": "Basilisk jaw",
         "date": "2026-06-23",
@@ -5621,11 +5630,6 @@
         "name": "Immaculate mole skin",
         "date": "2026-05-14",
         "collection": "giant_mole"
-      },
-      {
-        "name": "Noxious blade",
-        "date": "2026-05-12",
-        "collection": "araxxor"
       }
     ],
     "source": "templeosrs"
