@@ -71,6 +71,21 @@
         .skill-bar-track { flex: 1; height: 18px; background: var(--bg-card); border-radius: 3px; overflow: hidden; margin: 0 0.75rem; }
         .skill-bar-fill { height: 100%; background: linear-gradient(90deg, var(--accent-green), #7ee2a8); border-radius: 3px; transition: width 0.3s ease; }
         .skill-bar-xp { font-family: 'Fira Code', monospace; font-size: 0.75rem; color: var(--text-muted); width: 70px; text-align: right; flex-shrink: 0; }
+
+        .prog-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0.75rem; margin-bottom: 1rem; }
+        .prog-legend { display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: 0.78rem; color: var(--text-muted); margin-bottom: 1rem; }
+        .prog-legend span { display: flex; align-items: center; }
+        .prog-dot { width: 10px; height: 10px; border-radius: 2px; margin-right: 0.4rem; display: inline-block; }
+        .prog-dot.clog, .prog-fill.clog { background: #3fb950; }
+        .prog-dot.ca, .prog-fill.ca { background: #58a6ff; }
+        .prog-dot.drop, .prog-fill.drop { background: var(--accent-gold); }
+        .prog-row { display: flex; align-items: center; padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
+        .prog-month { width: 90px; font-size: 0.8rem; color: var(--text-secondary); flex-shrink: 0; }
+        .prog-bars { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+        .prog-line { display: flex; align-items: center; }
+        .prog-track { flex: 1; height: 12px; background: var(--bg-card); border-radius: 3px; overflow: hidden; margin-right: 0.6rem; }
+        .prog-fill { height: 100%; border-radius: 3px; transition: width 0.3s ease; }
+        .prog-num { font-family: 'Fira Code', monospace; font-size: 0.72rem; color: var(--text-muted); width: 28px; text-align: right; flex-shrink: 0; }
         .boss-kc { font-family: 'Fira Code', monospace; font-size: 0.9rem; color: var(--accent-gold); }
         .clues-grid { display: flex; flex-direction: column; gap: 1rem; }
         .clue-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; }

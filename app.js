@@ -164,6 +164,88 @@
             // Targets reference data (wiki_comp_rates/wiki_ca_table) is loaded
             // lazily on first Targets-tab open — see ensureTargetsData().
             renderTargets();
+            renderProgress();
+        }
+
+        // Year-month key ("2026-06") from an ISO or M/D/YYYY date string.
+        function ymKey(s) {
+            if (!s) return null;
+            s = String(s).trim();
+            let m = s.match(/^(\d{4})-(\d{1,2})/);
+            if (m) return `${m[1]}-${String(+m[2]).padStart(2, '0')}`;
+            m = s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+            if (m) return `${m[3]}-${String(+m[1]).padStart(2, '0')}`;
+            return null;
+        }
+
+        function renderProgress() {
+            const container = document.getElementById('progressContainer');
+            if (!container) return;
+
+            const TIER_PTS = { Easy: 1, Medium: 2, Hard: 3, Elite: 4, Master: 5, Grandmaster: 6 };
+            const clog = {}, ca = {}, caPts = {}, drop = {};
+
+            if (clogData?.collections) {
+                for (const coll of Object.values(clogData.collections)) {
+                    for (const it of (coll.obtained || [])) {
+                        const k = ymKey(it.date);
+                        if (k) clog[k] = (clog[k] || 0) + 1;
+                    }
+                }
+            }
+            if (caData?.tiers) {
+                for (const [tier, t] of Object.entries(caData.tiers)) {
+                    for (const task of (t.completed || [])) {
+                        const k = ymKey(task.date);
+                        if (k) { ca[k] = (ca[k] || 0) + 1; caPts[k] = (caPts[k] || 0) + (TIER_PTS[tier] || 1); }
+                    }
+                }
+            }
+            for (const d of (dropsData || [])) {
+                const k = ymKey(d.date);
+                if (k) drop[k] = (drop[k] || 0) + 1;
+            }
+
+            const months = [...new Set([...Object.keys(clog), ...Object.keys(ca), ...Object.keys(drop)])].sort();
+            if (months.length === 0) {
+                container.innerHTML = '<div class="empty-state">No dated progress data yet.</div>';
+                return;
+            }
+
+            const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+            const label = k => { const [y, m] = k.split('-'); return `${MON[+m - 1]} ${y}`; };
+            const maxClog = Math.max(1, ...months.map(m => clog[m] || 0));
+            const maxCa = Math.max(1, ...months.map(m => ca[m] || 0));
+            const maxDrop = Math.max(1, ...months.map(m => drop[m] || 0));
+            const sum = o => Object.values(o).reduce((a, b) => a + b, 0);
+
+            const bar = (val, max, cls) =>
+                `<div class="prog-track"><div class="prog-fill ${cls}" style="width:${(val / max) * 100}%"></div></div><span class="prog-num">${val}</span>`;
+
+            let html = `
+                <div class="prog-summary">
+                    <div class="summary-item"><div class="summary-value" style="color:#3fb950">${sum(clog)}</div><div class="summary-label">Clog slots</div></div>
+                    <div class="summary-item"><div class="summary-value" style="color:#58a6ff">${sum(ca)}</div><div class="summary-label">CAs (${sum(caPts)} pts)</div></div>
+                    <div class="summary-item"><div class="summary-value" style="color:var(--accent-gold)">${sum(drop)}</div><div class="summary-label">Notable drops</div></div>
+                    <div class="summary-item"><div class="summary-value">${months.length}</div><div class="summary-label">Months tracked</div></div>
+                </div>
+                <div class="prog-legend">
+                    <span><span class="prog-dot clog"></span>Collection log</span>
+                    <span><span class="prog-dot ca"></span>Combat achievements</span>
+                    <span><span class="prog-dot drop"></span>Notable drops</span>
+                </div>`;
+
+            html += months.map(m => `
+                <div class="prog-row">
+                    <div class="prog-month">${label(m)}</div>
+                    <div class="prog-bars">
+                        <div class="prog-line">${bar(clog[m] || 0, maxClog, 'clog')}</div>
+                        <div class="prog-line">${bar(ca[m] || 0, maxCa, 'ca')}</div>
+                        <div class="prog-line">${bar(drop[m] || 0, maxDrop, 'drop')}</div>
+                    </div>
+                </div>`).join('');
+
+            container.innerHTML = html;
         }
 
         function renderSkills(skills) {
