@@ -32,7 +32,7 @@ PET_NAMES = {
     "vet'ion jr", 'vorki', 'youngllef', 'lil creator', 'muphin', 'smol heredit',
     'baron', 'butch', 'sol heredit', 'scurry', 'wisp', "lil'viathan",
     "lil' maiden", 'quetzin', 'nexling', 'puppadile', 'tektiny', 'vanguard',
-    'vasa minirio', 'metamorphic dust',
+    'vasa minirio', 'metamorphic dust', 'dom', 'bran',
 }
 
 # ---------------------------------------------------------------------------

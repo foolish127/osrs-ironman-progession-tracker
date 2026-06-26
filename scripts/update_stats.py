@@ -559,26 +559,25 @@ def extract_pets_from_clog(clog):
     manual_pet_dates = {}
     manual_pet_notes = {}
     content = read_data_file("pets.yaml")
-    if content is not None:
-        data = parse_pets_yaml(content)
-        for pet in data.get('obtained', []):
-            if pet.get('date'):
-                manual_pet_dates[pet['name'].lower()] = pet['date']
-            if pet.get('notes'):
-                manual_pet_notes[pet['name'].lower()] = pet['notes']
-        # Also get missing pets from YAML for the full list
-        missing_names = names_lower(missing)
-        for pet in data.get('missing', []):
-            pet_name = pet.get('name', pet) if isinstance(pet, dict) else pet
-            if pet_name.lower() not in missing_names:
-                # Parse source from "name (source)" format
-                source = None
-                if '(' in pet_name and pet_name.endswith(')'):
-                    parts = pet_name.rsplit('(', 1)
-                    pet_name = parts[0].strip()
-                    source = parts[1][:-1].strip()
-                missing.append({'name': pet_name, 'source': source})
-                missing_names.add(pet_name.lower())
+    data = parse_pets_yaml(content) if content is not None else {'obtained': [], 'missing': []}
+    for pet in data.get('obtained', []):
+        if pet.get('date'):
+            manual_pet_dates[pet['name'].lower()] = pet['date']
+        if pet.get('notes'):
+            manual_pet_notes[pet['name'].lower()] = pet['notes']
+    # Also get missing pets from YAML for the full list
+    missing_names = names_lower(missing)
+    for pet in data.get('missing', []):
+        pet_name = pet.get('name', pet) if isinstance(pet, dict) else pet
+        if pet_name.lower() not in missing_names:
+            # Parse source from "name (source)" format
+            source = None
+            if '(' in pet_name and pet_name.endswith(')'):
+                parts = pet_name.rsplit('(', 1)
+                pet_name = parts[0].strip()
+                source = parts[1][:-1].strip()
+            missing.append({'name': pet_name, 'source': source})
+            missing_names.add(pet_name.lower())
 
     # Scan all collections for pet items
     obtained_names = set()
@@ -600,6 +599,19 @@ def extract_pets_from_clog(clog):
                     'notes': manual_pet_notes.get(item_name.lower())
                 })
                 obtained_names.add(item_name.lower())
+
+    # Pets recorded in pets.yaml's obtained list but not yet synced into the
+    # collection log (e.g. a freshly obtained pet) — count them as obtained too.
+    for pet in data.get('obtained', []):
+        name = pet['name']
+        if name.lower() not in obtained_names:
+            obtained.append({
+                'name': name,
+                'date': normalize_date(pet.get('date')),
+                'source': None,
+                'notes': pet.get('notes'),
+            })
+            obtained_names.add(name.lower())
 
     if not obtained and not missing:
         # Fallback to YAML only
