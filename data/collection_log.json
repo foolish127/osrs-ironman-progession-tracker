@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-06-25T23:43:52.967051+00:00",
+  "updated": "2026-06-26T00:25:12.580413+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -30,6 +30,11 @@
           {
             "name": "Hydra tail",
             "date": "2026-06-25",
+            "quantity": 1
+          },
+          {
+            "name": "Hydra leather",
+            "date": "2026-06-26",
             "quantity": 1
           },
           {
@@ -64,10 +69,9 @@
           }
         ],
         "missing": [
-          "Hydra leather",
           "Hydra's claw"
         ],
-        "obtained_count": 7,
+        "obtained_count": 8,
         "total_count": 9
       },
       "Amoxliatl": {
@@ -5546,9 +5550,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 553,
+    "total_obtained": 554,
     "total_items": 1734,
     "recent_items": [
+      {
+        "name": "Hydra leather",
+        "date": "2026-06-26",
+        "collection": "alchemical_hydra"
+      },
       {
         "name": "Hydra tail",
         "date": "2026-06-25",
@@ -5643,11 +5652,6 @@
         "name": "Bosun's workbench schematic",
         "date": "2026-05-20",
         "collection": "lost_schematics"
-      },
-      {
-        "name": "Enhanced crystal weapon seed",
-        "date": "2026-05-17",
-        "collection": "the_gauntlet"
       }
     ],
     "source": "templeosrs"
