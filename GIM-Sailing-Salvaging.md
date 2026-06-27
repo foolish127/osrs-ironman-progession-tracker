@@ -10,7 +10,7 @@
 | ~~21~~ | ~~Iron salvaging hook~~ | ~~9~~ | ~~4 oak planks · 16 iron nails · 6 iron bars · 1 rope~~ |
 | ~~26~~ | ~~Fisherman's shipwreck (17 xp) — Catherby Bay~~ | — | — |
 | 27 ✅ | Steel salvaging hook | 18 ✅ | 4 teak planks · 16 steel nails · 6 steel bars · 3 lead bars · 1 rope |
-| 29 ❌ | Teak cargo hold (Skiff 60) | 21 ✅ | 8 teak planks · 32 steel nails · 3 lead bars |
+| 29 ✅ | Teak cargo hold (Skiff 60) | 21 ✅ | 8 teak planks · 32 steel nails · 3 lead bars |
 | 35 ❌ | Barracuda shipwreck (31 xp) — The Storm Tempor | — | — |
 | 42 ❌ | 🔑 Salvaging Station — AFK at sea (schematic on Chinchompa Island) | 34 ❌ | 4 teak planks · 16 steel nails |
 | 44 ❌ | Mithril salvaging hook | 30 ✅ | 4 mahogany planks · 16 mithril nails · 6 mithril bars · 3 lead bars · 1 rope |
