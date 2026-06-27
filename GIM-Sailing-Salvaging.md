@@ -6,26 +6,26 @@
 
 | Sailing | Unlock | Con | Materials |
 |:---:|---|:---:|---|
-| **15** | **Small shipwreck** (10 xp) · Skiff · **Bronze hook** ✅ | 1 | 4 planks · 16 bronze nails · 6 bronze bars · 1 rope |
-| 18 | **Oak cargo hold** (Skiff 45) | 11 | 8 oak planks · 32 iron nails |
-| 21 | **Iron hook** | 9 | 4 oak planks · 16 iron nails · 6 iron bars · 1 rope |
-| 26 | **Fisherman's shipwreck** (17 xp) | — | — |
-| 27 | **Steel hook** | 18 | 4 teak planks · 16 steel nails · 6 steel bars · 3 lead bars · 1 rope |
-| 29 | **Teak cargo hold** (Skiff 60) | 21 | 8 teak planks · 32 steel nails · 3 lead bars |
-| 35 | **Barracuda shipwreck** (31 xp) | — | — |
-| **42** | **🔑 Salvaging Station** — AFK at sea (schematic on Chinchompa Island) | 34 | 4 teak planks · 16 steel nails |
-| 44 | **Mithril hook** | 30 | 4 mahogany planks · 16 mithril nails · 6 mithril bars · 3 lead bars · 1 rope |
-| 46 | **Mahogany cargo hold** (Skiff 90) | 41 | 8 mahogany planks · 32 mithril nails · 3 lead bars |
-| 53 | **Large shipwreck** (48 xp) | — | — |
-| 59 | **Adamant hook** | 52 | 4 camphor planks · 16 adamantite nails · 6 adamantite bars · 3 lead bars · 1 rope |
-| 60 | **Camphor cargo hold** (Skiff 120) | 53 | 8 camphor planks · 32 adamantite nails · 3 lead bars |
-| 64 | **Pirate shipwreck** (76 xp) | — | — |
-| 73 | **Mercenary shipwreck** (138 xp) | — | — |
-| 74 | **Rune hook** | 66 | 4 ironwood planks · 16 rune nails · 6 runite bars · 4 lead bars · 4 cupronickel bars · 1 rope |
-| 80 | **Fremennik shipwreck** (162 xp) · **Ironwood cargo hold** (Skiff 150) | 77 | Hold: 8 ironwood planks · 32 rune nails · 3 cupronickel bars |
-| 86 | **Dragon hook** | 78 | 4 rosewood planks · 16 dragon nails · 6 dragon metal sheets · 1 broken dragon hook · 4 cupronickel bars · 1 rope |
-| 87 | **Merchant shipwreck** (200 xp) | — | — |
-| 89 | **Rosewood cargo hold** (Skiff 180) | 84 | 8 rosewood planks · 32 dragon nails · 3 cupronickel bars |
+| 15 ✅ | ~~Small shipwreck (10 xp)~~ · Skiff · Bronze hook ✅ | 1 ✅ | ~~4 planks · 16 bronze nails · 6 bronze bars · 1 rope~~ |
+| 18 ✅ | Oak cargo hold (Skiff 45) | 11 ✅ | 8 oak planks · 32 iron nails |
+| 21 ❌ | Iron hook | 9 ✅ | 4 oak planks · 16 iron nails · 6 iron bars · 1 rope |
+| 26 ❌ | Fisherman's shipwreck (17 xp) | — | — |
+| 27 ❌ | Steel hook | 18 ✅ | 4 teak planks · 16 steel nails · 6 steel bars · 3 lead bars · 1 rope |
+| 29 ❌ | Teak cargo hold (Skiff 60) | 21 ✅ | 8 teak planks · 32 steel nails · 3 lead bars |
+| 35 ❌ | Barracuda shipwreck (31 xp) | — | — |
+| 42 ❌ | 🔑 Salvaging Station — AFK at sea (schematic on Chinchompa Island) | 34 ❌ | 4 teak planks · 16 steel nails |
+| 44 ❌ | Mithril hook | 30 ✅ | 4 mahogany planks · 16 mithril nails · 6 mithril bars · 3 lead bars · 1 rope |
+| 46 ❌ | Mahogany cargo hold (Skiff 90) | 41 ❌ | 8 mahogany planks · 32 mithril nails · 3 lead bars |
+| 53 ❌ | Large shipwreck (48 xp) | — | — |
+| 59 ❌ | Adamant hook | 52 ❌ | 4 camphor planks · 16 adamantite nails · 6 adamantite bars · 3 lead bars · 1 rope |
+| 60 ❌ | Camphor cargo hold (Skiff 120) | 53 ❌ | 8 camphor planks · 32 adamantite nails · 3 lead bars |
+| 64 ❌ | Pirate shipwreck (76 xp) | — | — |
+| 73 ❌ | Mercenary shipwreck (138 xp) | — | — |
+| 74 ❌ | Rune hook | 66 ❌ | 4 ironwood planks · 16 rune nails · 6 runite bars · 4 lead bars · 4 cupronickel bars · 1 rope |
+| 80 ❌ | Fremennik shipwreck (162 xp) · Ironwood cargo hold (Skiff 150) | 77 ❌ | Hold: 8 ironwood planks · 32 rune nails · 3 cupronickel bars |
+| 86 ❌ | Dragon hook | 78 ❌ | 4 rosewood planks · 16 dragon nails · 6 dragon metal sheets · 1 broken dragon hook · 4 cupronickel bars · 1 rope |
+| 87 ❌ | Merchant shipwreck (200 xp) | — | — |
+| 89 ❌ | Rosewood cargo hold (Skiff 180) | 84 ❌ | 8 rosewood planks · 32 dragon nails · 3 cupronickel bars |
 
 **Profit scales hard:** ~22.6k gp/hr at lvl 15 → ~259k gp/hr at lvl 87 (wiki estimate).
 
@@ -36,41 +36,6 @@
 - **Materials:** 4 teak planks · 16 steel nails (~3.7k gp)
 - **Schematic:** read the *Salvaging station schematic* (found on **Chinchompa Island**) to unlock the build.
 - **Effect:** sort/drop salvage at sea → stay at a shipwreck **indefinitely**. This is what turns salvaging into true AFK GP/supplies. Before 42, prioritise the cargo hold; after 42, prioritise hooks + pools.
-
----
-
-## Plan by phase (for the GIM)
-
-**Now → 42 (the grind to AFK):**
-1. ✅ Bronze hook (have it).
-2. **18:** Oak cargo hold (Con 11) — more capacity per trip.
-3. **21:** Iron hook → **27:** Steel hook (success rate).
-4. **26 → 35:** move up to Fisherman's then Barracuda shipwreck.
-5. **29:** Teak cargo hold.
-6. **🎯 42: Salvaging Station** — grab the schematic on Chinchompa Island first. After this it's genuinely AFK.
-
-**42 → 74 (scaling GP):**
-- **44:** Mithril hook · **46:** Mahogany hold · **53:** Large shipwreck · **59/60:** Adamant hook + Camphor hold · **64/73:** Pirate → Mercenary shipwrecks · **74:** Rune hook.
-
-**74 → 90 (end game):**
-- **80:** Fremennik shipwreck + Ironwood hold · **86/87:** Dragon hook + Merchant shipwreck · **89:** Rosewood hold.
-
----
-
-## Materials to stockpile (GIM gathering)
-Salvaging upgrades mostly eat **bars**, **planks**, **nails**, and **rope**:
-- **Bars (Smithing):** bronze → iron → steel → mithril → adamant → rune, plus
-  **lead bars** (steel hook+) and **cupronickel bars** (rune+). Dragon hook needs
-  **dragon metal sheets** + a **broken dragon hook**.
-- **Planks (WC → sawmill):** regular → oak → teak → mahogany → camphor → ironwood
-  → rosewood. *(Teak planks are the recurring one early — needed for steel hook,
-  teak hold, and the station.)*
-- **Nails (Smithing):** matching tier each step (bronze → dragon).
-- **Rope:** 1 per hook (Crafting from yak hair / buyable-equivalent).
-
-**Near-term shopping list (to ~42):** oak + teak planks, iron/steel/mithril bars
-+ nails, several lead bars, rope ×3–4, and 4 teak planks + 16 steel nails for the
-station.
 
 ---
 
