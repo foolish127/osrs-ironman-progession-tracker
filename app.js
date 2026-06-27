@@ -74,6 +74,15 @@
 
         async function loadData() {
             const D = currentAccount.dir;  // account-specific data folder
+
+            // Reset per-account state first, so switching to an account that is
+            // missing a data file shows "—"/empty rather than the prior account's values.
+            clogData = caData = petsData = cluesData = questsData = diariesData = null;
+            skillsData = bossesData = milestonesData = leaguesData = clogCategories = bankData = null;
+            dropsData = [];
+            ['totalLevel', 'totalXp', 'combatLevel', 'count99s', 'clogCount', 'caTasks',
+             'petCount', 'clueCount', 'bossKcCard', 'questCount', 'diaryCount', 'leagueCount']
+                .forEach(id => { const el = document.getElementById(id); if (el) el.textContent = '—'; });
             const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, diariesRes, bankRes, dropsRes, potionStorageRes, seedVaultRes, leaguesRes, clogCatRes] = await Promise.all([
                 fetch(`${D}/skills.json`).then(r=>r.json()).catch(()=>null),
                 fetch(`${D}/bosses.json`).then(r=>r.json()).catch(()=>null),
@@ -158,9 +167,10 @@
             renderCombatAchievements();
             renderPets();
             renderQuests();
-            if (diariesRes) renderDiaries(diariesRes);
-            if (leaguesRes) { leaguesData = parseLeagueYaml(leaguesRes); renderLeagues(); }
-            if (dropsRes) renderDrops(dropsRes);
+            renderDiaries(diariesRes);
+            if (leaguesRes) leaguesData = parseLeagueYaml(leaguesRes);
+            renderLeagues();
+            renderDrops(dropsRes);
             if (bankRes) {
                 renderBank(bankRes, potionStorageRes, seedVaultRes);
             } else {
@@ -1208,6 +1218,11 @@
 
         function renderDiaries(yaml) {
             const container = document.getElementById('diariesContainer');
+            if (!yaml) {
+                container.innerHTML = '<div class="empty-state">No diary data yet.</div>';
+                document.getElementById('diaryCount').textContent = '—';
+                return;
+            }
             const regions = {};
             let currentRegion = null;
             
@@ -1433,8 +1448,14 @@
         }
 
         function renderDrops(yaml) {
-            dropsData = parseDropsYaml(yaml);
             const container = document.getElementById('dropsContainer');
+            if (!yaml) {
+                dropsData = [];
+                container.innerHTML = '<div class="empty-state">No drops logged yet.</div>';
+                updateDropsBadge();
+                return;
+            }
+            dropsData = parseDropsYaml(yaml);
             const toLogBanner = buildDropsToLogBanner();
             updateDropsBadge();
 
