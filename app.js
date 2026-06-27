@@ -1268,6 +1268,15 @@
                 });
             });
             
+            // Derive task completion from the per-account remaining list, so the count
+            // lives in one place (delete a task from diary_tasks.yaml -> count goes up).
+            if (diaryTasksData) {
+                const remaining = Object.values(diaryTasksData)
+                    .reduce((sum, t) => sum + Object.values(t).reduce((a, arr) => a + arr.length, 0), 0);
+                tasksTotal = 492;
+                tasksCompleted = tasksTotal - remaining;
+            }
+
             const regionCount = Object.keys(regions).length;
             const taskPct = ((tasksCompleted / tasksTotal) * 100).toFixed(1);
             

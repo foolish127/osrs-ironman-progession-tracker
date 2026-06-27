@@ -1,9 +1,7 @@
 # GIM Foolin Achievement Diaries Tracker
-# Format: tier: completed (mark a tier 'completed' once all its tasks are done)
-# Update tasks_completed manually as you finish individual tasks.
-
-tasks_completed: 25
-tasks_total: 492
+# Format: tier: completed (mark a tier 'completed' once all its tasks are done).
+# The task count is auto-derived from diary_tasks.yaml (delete a task there as you
+# finish it) - no manual count to keep in sync.
 
 Ardougne:
   easy:
