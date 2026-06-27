@@ -1,28 +1,5 @@
 # GIM Salvaging Plan (Sailing for GP + Supplies)
 
-**Goal:** AFK shipwreck salvaging on the group ironman to train Sailing while
-generating GP and extra supplies. Low-intensity, mostly idle — the real prize is
-the loot/supplies, with Sailing XP as a bonus.
-
-**Current state:** 15 Sailing · Skiff · Bronze salvaging hook.
-
-> Note: salvaging facilities (hooks, cargo holds, station) are **boat
-> Construction facilities**, so each upgrade has a **Construction** requirement
-> too — keep Con moving alongside Sailing. Levels/materials below are from the
-> OSRS Wiki (sources at bottom). The Sloop unlock level wasn't confirmed —
-> verify in-game; Skiff is the boat you're on now.
-
----
-
-## How salvaging works (the loop)
-1. Sail to a shipwreck site at or below your Sailing level.
-2. Deploy your **salvaging hook** — you + crewmates pull up salvage.
-3. Salvage fills your **cargo hold**; when full you must bank — **unless** you
-   have a **Salvaging Station** (lvl 42), which lets you sort/drop loot at sea
-   and **AFK indefinitely**. This is the single biggest upgrade for AFK GP.
-4. Better hooks = better success rate (more loot/hr). Bigger cargo hold = longer
-   between banking trips. Higher shipwrecks = more XP + GP per salvage.
-
 ---
 
 ## Level-by-level milestones (Sailing)
