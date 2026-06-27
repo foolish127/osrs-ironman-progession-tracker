@@ -1,4 +1,4 @@
-# GIM Salvaging Plan (Sailing for GP + Supplies)
+# Salvaging Hooks
 
 ---
 
