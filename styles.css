@@ -21,6 +21,7 @@
         .player-name { font-family: 'Cinzel', serif; font-size: 3rem; font-weight: 700; color: var(--accent-gold); letter-spacing: 0.05em; margin-bottom: 0.5rem; }
         .account-type { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'Fira Code', monospace; font-size: 0.875rem; color: var(--text-secondary); padding: 0.25rem 1rem; border: 1px solid var(--border); border-radius: 4px; background: var(--bg-card); }
         .account-type .iron-icon { width: 16px; height: 16px; }
+        .account-select { margin-left: 0.5rem; background: var(--bg-card); color: var(--text-primary); border: 1px solid var(--border); border-radius: 4px; padding: 0.3rem 0.6rem; font-family: 'Fira Code', monospace; font-size: 0.8rem; cursor: pointer; }
         .last-updated { margin-top: 1rem; font-size: 0.8rem; color: var(--text-secondary); background: var(--bg-card); display: inline-block; padding: 0.25rem 0.75rem; border-radius: 4px; }
         .stats-overview { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; margin-bottom: 3rem; max-width: 1050px; margin-left: auto; margin-right: auto; }
         .stat-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem; text-align: center; min-width: 120px; flex: 0 1 auto; cursor: pointer; transition: all 0.2s ease; }

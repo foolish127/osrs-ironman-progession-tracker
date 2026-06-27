@@ -10,10 +10,12 @@ Exit code 0 = all present files valid, 1 = at least one problem.
 """
 
 import json
+import os
 import sys
 from pathlib import Path
 
-DATA_DIR = Path(__file__).parent.parent / "data"
+# Respects OSRS_DATA_DIR (e.g. "data/gim") so CI can validate each account.
+DATA_DIR = Path(os.environ["OSRS_DATA_DIR"]) if os.environ.get("OSRS_DATA_DIR") else (Path(__file__).parent.parent / "data")
 
 # filename -> list of (key_path, expected_type). A key_path like
 # "collection_log.collections" means data["collection_log"]["collections"].

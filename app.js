@@ -45,6 +45,13 @@
             return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
         }
 
+        // Accounts you can switch between (each has its own data folder).
+        const ACCOUNTS = [
+            { id: 'main', label: 'FoolinSlays', dir: './data', type: 'Ironman', badge: 'https://oldschool.runescape.wiki/images/Ironman_chat_badge.png' },
+            { id: 'gim', label: 'GIM Foolin', dir: './data/gim', type: 'Group Ironman', badge: 'https://oldschool.runescape.wiki/images/Group_ironman_chat_badge.png' },
+        ];
+        let currentAccount = ACCOUNTS.find(a => a.id === localStorage.getItem('account')) || ACCOUNTS[0];
+
         let clogData = null;
         let caData = null;
         let petsData = null;
@@ -66,21 +73,22 @@
         // it discarded the manual dates.
 
         async function loadData() {
+            const D = currentAccount.dir;  // account-specific data folder
             const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, diariesRes, bankRes, dropsRes, potionStorageRes, seedVaultRes, leaguesRes, clogCatRes] = await Promise.all([
-                fetch('./data/skills.json').then(r=>r.json()).catch(()=>null),
-                fetch('./data/bosses.json').then(r=>r.json()).catch(()=>null),
-                fetch('./data/clues.json').then(r=>r.json()).catch(()=>null),
-                fetch('./data/collection_log.json').then(r=>r.json()).catch(()=>null),
-                fetch('./data/combat_achievements.json').then(r=>r.json()).catch(()=>null),
-                fetch('./data/pets.json').then(r=>r.json()).catch(()=>null),
-                fetch('./data/quests.json').then(r=>r.json()).catch(()=>null),
-                fetch('./data/diaries.yaml').then(r=>r.text()).catch(()=>null),
-                fetch('./data/bank.json').then(r=>r.json()).catch(()=>null),
-                fetch('./data/drops.yaml').then(r=>r.text()).catch(()=>null),
-                fetch('./data/potion_storage.json').then(r=>r.json()).catch(()=>null),
-                fetch('./data/seed_vault.json').then(r=>r.json()).catch(()=>null),
-                fetch('./data/league_tasks.yaml').then(r=>r.text()).catch(()=>null),
-                fetch('./data/clog_categories.yaml').then(r=>r.text()).catch(()=>null)
+                fetch(`${D}/skills.json`).then(r=>r.json()).catch(()=>null),
+                fetch(`${D}/bosses.json`).then(r=>r.json()).catch(()=>null),
+                fetch(`${D}/clues.json`).then(r=>r.json()).catch(()=>null),
+                fetch(`${D}/collection_log.json`).then(r=>r.json()).catch(()=>null),
+                fetch(`${D}/combat_achievements.json`).then(r=>r.json()).catch(()=>null),
+                fetch(`${D}/pets.json`).then(r=>r.json()).catch(()=>null),
+                fetch(`${D}/quests.json`).then(r=>r.json()).catch(()=>null),
+                fetch(`${D}/diaries.yaml`).then(r=>r.text()).catch(()=>null),
+                fetch(`${D}/bank.json`).then(r=>r.json()).catch(()=>null),
+                fetch(`${D}/drops.yaml`).then(r=>r.text()).catch(()=>null),
+                fetch(`${D}/potion_storage.json`).then(r=>r.json()).catch(()=>null),
+                fetch(`${D}/seed_vault.json`).then(r=>r.json()).catch(()=>null),
+                fetch(`${D}/league_tasks.yaml`).then(r=>r.text()).catch(()=>null),
+                fetch(`${D}/clog_categories.yaml`).then(r=>r.text()).catch(()=>null)
             ]);
 
             if (clogCatRes) {
@@ -2687,5 +2695,29 @@
         }
         window.addEventListener('hashchange', handleHashChange);
         window.addEventListener('load', handleHashChange);
+
+        // ── Account switcher ──────────────────────────────────────────────
+        function applyAccountChrome() {
+            const badge = document.getElementById('accountBadge');
+            const type = document.getElementById('accountType');
+            if (badge) { badge.src = currentAccount.badge; badge.alt = currentAccount.type; }
+            if (type) type.textContent = currentAccount.type;
+            document.getElementById('playerName').textContent = currentAccount.label;
+        }
+        function setAccount(id) {
+            const acct = ACCOUNTS.find(a => a.id === id);
+            if (!acct) return;
+            currentAccount = acct;
+            localStorage.setItem('account', id);
+            applyAccountChrome();
+            loadData();
+        }
+        const accountSelect = document.getElementById('accountSelect');
+        if (accountSelect) {
+            accountSelect.innerHTML = ACCOUNTS.map(a => `<option value="${a.id}">${a.label}</option>`).join('');
+            accountSelect.value = currentAccount.id;
+            accountSelect.addEventListener('change', e => setAccount(e.target.value));
+        }
+        applyAccountChrome();
 
         loadData();

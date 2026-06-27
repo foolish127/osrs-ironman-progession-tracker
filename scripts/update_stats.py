@@ -26,7 +26,10 @@ from osrs_utils import (
 
 RSN = os.environ.get("RSN", "FoolinSlays")
 
-HISCORES_URL = "https://secure.runescape.com/m=hiscore_oldschool_ironman/index_lite.json"
+# Hiscores leaderboard variant. Default is the ironman board; group-ironman
+# accounts (e.g. GIM Foolin) aren't on it, so set HISCORES_VARIANT=hiscore_oldschool.
+HISCORES_VARIANT = os.environ.get("HISCORES_VARIANT", "hiscore_oldschool_ironman")
+HISCORES_URL = f"https://secure.runescape.com/m={HISCORES_VARIANT}/index_lite.json"
 TEMPLE_CLOG_URL = "https://templeosrs.com/api/collection-log/player_collection_log.php"
 TEMPLE_ITEMS_URL = "https://templeosrs.com/api/collection-log/items.php"
 

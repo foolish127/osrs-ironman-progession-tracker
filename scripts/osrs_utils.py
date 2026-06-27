@@ -8,6 +8,7 @@ hand-rolled YAML-ish parsing used for the manually-edited data files.
 """
 
 import json
+import os
 import time
 import urllib.parse
 import urllib.request
@@ -16,7 +17,9 @@ from datetime import date, datetime
 from pathlib import Path
 from typing import Any
 
-DATA_DIR = Path(__file__).parent.parent / "data"
+# Data directory. Override with OSRS_DATA_DIR to point at a specific account
+# (e.g. "data/gim") so the same scripts can build multiple accounts.
+DATA_DIR = Path(os.environ["OSRS_DATA_DIR"]) if os.environ.get("OSRS_DATA_DIR") else (Path(__file__).parent.parent / "data")
 
 USER_AGENT = "OSRS-Ironman-Tracker/1.0 (github.com/foolish127)"
 

@@ -64,7 +64,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Run update scripts
+      - name: Run update scripts (main ironman)
         env:
           RSN: FoolinSlays
         run: |
@@ -73,8 +73,17 @@ jobs:
           # bank.txt is private (gitignored) so it can't produce real bank data
           # here, and bank.json is kept local-only. Run it locally instead.
 
+      - name: Run update scripts (GIM Foolin)
+        env:
+          RSN: GIM Foolin
+          HISCORES_VARIANT: hiscore_oldschool   # GIM accounts aren't on the ironman board
+          OSRS_DATA_DIR: data/gim
+        run: python scripts/update_stats.py
+
       - name: Validate generated data
-        run: python scripts/validate_data.py
+        run: |
+          python scripts/validate_data.py
+          OSRS_DATA_DIR=data/gim python scripts/validate_data.py
 
       - name: Suggest new drops (log only)
         run: python scripts/suggest_drops.py
@@ -90,14 +99,17 @@ jobs:
 
       - name: Stage Pages artifact
         run: |
-          mkdir -p _site/data
+          mkdir -p _site/data _site/data/gim
           cp index.html _site/
           cp styles.css _site/
           cp app.js _site/
           cp data/*.json _site/data/ 2>/dev/null || true
           cp data/*.yaml _site/data/ 2>/dev/null || true
-          # Private wealth data — never publish it to the live site
+          cp data/gim/*.json _site/data/gim/ 2>/dev/null || true
+          cp data/gim/*.yaml _site/data/gim/ 2>/dev/null || true
+          # Private wealth data — never publish it to the live site (both accounts)
           rm -f _site/data/bank.json _site/data/potion_storage.json _site/data/potion_storage.yaml _site/data/seed_vault.json
+          rm -f _site/data/gim/bank.json _site/data/gim/potion_storage.json _site/data/gim/potion_storage.yaml _site/data/gim/seed_vault.json
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
