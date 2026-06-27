@@ -62,6 +62,7 @@
         let bossesData = null;
         let leaguesData = null;
         let clogCategories = null;
+        let diaryTasksData = null;
         let wikiCompData = null;
         let wikiCATableData = null;
         let milestonesData = null;
@@ -79,11 +80,12 @@
             // missing a data file shows "—"/empty rather than the prior account's values.
             clogData = caData = petsData = cluesData = questsData = diariesData = null;
             skillsData = bossesData = milestonesData = leaguesData = clogCategories = bankData = null;
+            diaryTasksData = null;
             dropsData = [];
             ['totalLevel', 'totalXp', 'combatLevel', 'count99s', 'clogCount', 'caTasks',
              'petCount', 'clueCount', 'bossKcCard', 'questCount', 'diaryCount', 'leagueCount']
                 .forEach(id => { const el = document.getElementById(id); if (el) el.textContent = '—'; });
-            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, diariesRes, bankRes, dropsRes, potionStorageRes, seedVaultRes, leaguesRes, clogCatRes] = await Promise.all([
+            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, diariesRes, bankRes, dropsRes, potionStorageRes, seedVaultRes, leaguesRes, clogCatRes, diaryTasksRes] = await Promise.all([
                 fetch(`${D}/skills.json`).then(r=>r.json()).catch(()=>null),
                 fetch(`${D}/bosses.json`).then(r=>r.json()).catch(()=>null),
                 fetch(`${D}/clues.json`).then(r=>r.json()).catch(()=>null),
@@ -97,8 +99,10 @@
                 fetch(`${D}/potion_storage.json`).then(r=>r.json()).catch(()=>null),
                 fetch(`${D}/seed_vault.json`).then(r=>r.json()).catch(()=>null),
                 fetch(`${D}/league_tasks.yaml`).then(r=>r.text()).catch(()=>null),
-                fetch(`${D}/clog_categories.yaml`).then(r=>r.text()).catch(()=>null)
+                fetch(`${D}/clog_categories.yaml`).then(r=>r.text()).catch(()=>null),
+                fetch(`${D}/diary_tasks.yaml`).then(r=>r.text()).catch(()=>null)
             ]);
+            diaryTasksData = parseDiaryTasks(diaryTasksRes);
 
             if (clogCatRes) {
                 clogCategories = clogCatRes.split('\n')
@@ -1162,43 +1166,33 @@
             list.innerHTML = html || '<div class="empty-state">No quests match your search</div>';
         }
 
+        // Parse data/<account>/diary_tasks.yaml -> { region: { tier: [tasks] } }.
+        function parseDiaryTasks(yaml) {
+            if (!yaml) return null;
+            const out = {};
+            let region = null, tier = null;
+            for (const raw of yaml.split('\n')) {
+                const s = raw.trim();
+                if (!s || s.startsWith('#')) continue;
+                const indent = raw.length - raw.trimStart().length;
+                if (indent === 0 && s.endsWith(':')) { region = s.slice(0, -1); out[region] = {}; tier = null; }
+                else if (indent === 2 && s.endsWith(':') && region) { tier = s.slice(0, -1).toLowerCase(); out[region][tier] = []; }
+                else if (s.startsWith('- ') && region && tier) { out[region][tier].push(s.slice(2).trim()); }
+            }
+            return out;
+        }
+
         function getRemainingTasksHtml() {
-            const tasks = {
-                'Kandarin': [
-                    { tier: 'elite', task: '90 Smithing (boost)' },
-                    { tier: 'elite', task: 'Chewed Bones (pyre)' },
-                    { tier: 'elite', task: 'Barbarian Assault Level 5 in all roles' }
-                ],
-                'Ardougne': [
-                    { tier: 'elite', task: '90 Agility (boost)' },
-                    { tier: 'elite', task: '91 Smithing (boost)' }
-                ],
-                'Desert': [
-                    { tier: 'elite', task: '91 Thieving' },
-                    { tier: 'elite', task: '85 Prayer' },
-                    { tier: 'elite', task: 'KQ Head drop' }
-                ],
-                'Falador': [
-                    { tier: 'elite', task: 'White 2H Sword (White Knight rank)' }
-                ],
-                'Kourend & Kebos': [
-                    { tier: 'elite', task: 'Chambers of Xeric completion' }
-                ],
-                'Morytania': [
-                    { tier: 'elite', task: '96 Fishing (boost)' },
-                    { tier: 'elite', task: 'Equip full Barrows set' }
-                ],
-                'Western Provinces': [
-                    { tier: 'elite', task: '85 Agility (boost)' },
-                    { tier: 'elite', task: '1,000 Chompy Bird kills' }
-                ],
-                'Wilderness': [
-                    { tier: 'elite', task: '85 Mining / 90 Smithing (boost)' },
-                    { tier: 'elite', task: 'Kill Callisto, Venenatis & Vet\'ion' }
-                ]
-            };
-            
-            return Object.entries(tasks).map(([region, items]) => `
+            if (!diaryTasksData || !Object.keys(diaryTasksData).length) {
+                return '<div class="empty-state">No remaining diary tasks listed.</div>';
+            }
+            return Object.entries(diaryTasksData).map(([region, tiers]) => {
+                const items = [];
+                for (const tier of ['easy', 'medium', 'hard', 'elite']) {
+                    for (const task of (tiers[tier] || [])) items.push({ tier, task });
+                }
+                if (!items.length) return '';
+                return `
                 <div class="task-region">
                     <div class="task-region-header">
                         <span>${region}</span>
@@ -1207,13 +1201,13 @@
                     <div class="task-items">
                         ${items.map(item => `
                             <div class="task-item">
-                                <span>${item.task}</span>
+                                <span>${escapeTargets(item.task)}</span>
                                 <span class="task-tier ${item.tier}">${item.tier}</span>
                             </div>
                         `).join('')}
                     </div>
-                </div>
-            `).join('');
+                </div>`;
+            }).join('');
         }
 
         function renderDiaries(yaml) {
