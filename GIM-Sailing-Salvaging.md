@@ -6,8 +6,8 @@
 
 | Sailing | Unlock | Con | Materials |
 |:---:|---|:---:|---|
-| 15 ✅ | ~~Small shipwreck (10 xp)~~ · Skiff · Bronze hook ✅ | 1 ✅ | ~~4 planks · 16 bronze nails · 6 bronze bars · 1 rope~~ |
-| 18 ✅ | Oak cargo hold (Skiff 45) | 11 ✅ | 8 oak planks · 32 iron nails |
+| ~~15~~ | ~~Small shipwreck (10 xp) · Skiff · Bronze hook~~ | ~~1~~ | ~~4 planks · 16 bronze nails · 6 bronze bars · 1 rope~~ |
+| ~~18~~ | ~~Oak cargo hold (Skiff 45)~~ | ~~11~~ | ~~8 oak planks · 32 iron nails~~ |
 | 21 ❌ | Iron hook | 9 ✅ | 4 oak planks · 16 iron nails · 6 iron bars · 1 rope |
 | 26 ❌ | Fisherman's shipwreck (17 xp) | — | — |
 | 27 ❌ | Steel hook | 18 ✅ | 4 teak planks · 16 steel nails · 6 steel bars · 3 lead bars · 1 rope |
