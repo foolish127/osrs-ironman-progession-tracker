@@ -35,18 +35,17 @@
 
 ## Shipwreck locations
 
-| Shipwreck | Sailing | Spawn areas | Needs |
+| Shipwreck | Sailing | Spawn areas (best for resupply in **bold**) | Needs |
 |---|:---:|---|---|
-| Small | 15 | Kharidian Sea · Shipwreck Cove | — |
-| Fisherman's | 26 | Catherby Bay · Gu'tanoth Bay · Gulf of Kourend | — |
-| Barracuda | 35 | The Storm Tempor *(1 spot basic gear)* · Sea Spirit Dock · Backwater · Myths' Guild · Tirannwn Bight · Ynysdail · Angler's Retreat | iron helm + oak mast (most spots) |
+| Fisherman's | 26 | **Catherby Bay** (bank + dock) · Gu'tanoth Bay · Gulf of Kourend | — |
+| Barracuda | 35 | **The Storm Tempor** *(no helm/mast needed)* · Sea Spirit Dock · Backwater · Myths' Guild · Tirannwn Bight · Ynysdail · Angler's Retreat | iron helm + oak mast (other spots) |
 | Large | 53 | S of Shimmering Atoll · N of Isle of Serpents · S of The Lonely Sea · SW of Grimstone · S of The Little Pearl | — |
-| Pirate | 64 | S of Pest Control · Aureum Coast · SE of Buccaneers' Haven · Pirates' Cove | — |
+| Pirate | 64 | **SE of Buccaneers' Haven** (dock + bank) · S of Pest Control · Aureum Coast · Pirates' Cove | — |
 | Mercenary | 73 | W of Isle of Serpents · SW Southern Expanse · SW of Sunbleak Island | adamant helm |
 | Fremennik | 80 | Everwinter Sea · N of Ungael · Stoneheart Sea (Northern Ocean) | eternal brazier |
-| Merchant | 87 | Southern Expanse (S of Isle of Serpents) · Dusk's Maw (W of Aldarin) · Winter's Edge (SW of Brittle Isle) | adamant helm (S) / eternal brazier (N) |
+| Merchant | 87 | **Dusk's Maw** (W of Aldarin — dock) · Southern Expanse (S of Isle of Serpents) · Winter's Edge (SW of Brittle Isle) | adamant helm (S) / eternal brazier (N) |
 
-*Tip: park between two close wrecks so you can salvage both, or world-hop to refresh a wreck instead of moving the boat.*
+*Bold = the spot to use — a no-requirement spot if one exists, otherwise the closest to a dock/bank for restocking. Dock proximity matters most before the lvl-42 Salvaging Station; after that you AFK at sea, so park between two close wrecks or world-hop to refresh one. Large / Mercenary / Fremennik are open-sea with no clear dock-side spot.*
 
 ---
 
