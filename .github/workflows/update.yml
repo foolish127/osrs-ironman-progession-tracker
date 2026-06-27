@@ -6,7 +6,7 @@ on:
   workflow_dispatch:        # Manual trigger
   push:
     paths:
-      - 'data/*.yaml'
+      - 'data/**/*.yaml'   # includes per-account folders like data/gim/
       - 'data/bank.txt'
       - 'index.html'
       - 'styles.css'
