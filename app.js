@@ -98,9 +98,9 @@
                 fetch(`${D}/drops.yaml`).then(r=>r.text()).catch(()=>null),
                 fetch(`${D}/potion_storage.json`).then(r=>r.json()).catch(()=>null),
                 fetch(`${D}/seed_vault.json`).then(r=>r.json()).catch(()=>null),
-                fetch(`${D}/league_tasks.yaml`).then(r=>r.text()).catch(()=>null),
-                fetch(`${D}/clog_categories.yaml`).then(r=>r.text()).catch(()=>null),
-                fetch(`${D}/diary_tasks.yaml`).then(r=>r.text()).catch(()=>null)
+                fetch(`${D}/league_tasks.yaml`).then(r=>r.ok?r.text():null).catch(()=>null),
+                fetch(`${D}/clog_categories.yaml`).then(r=>r.ok?r.text():null).catch(()=>null),
+                fetch(`${D}/diary_tasks.yaml`).then(r=>r.ok?r.text():null).catch(()=>null)
             ]);
             diaryTasksData = parseDiaryTasks(diaryTasksRes);
 
@@ -448,28 +448,30 @@
             };
 
             // Calculate category totals
+            // Fallback when data/<account>/clog_categories.yaml isn't present:
+            // count obtained from the clog data, but use the game-wide category
+            // totals (they're the same for every account) so the bars are meaningful.
             function getCategoryStats() {
                 const stats = {
-                    'Bosses': { obtained: 0, total: 0, icon: '⚔️' },
-                    'Raids': { obtained: 0, total: 0, icon: '🏛️' },
-                    'Clues': { obtained: 0, total: 0, icon: '📜' },
-                    'Minigames': { obtained: 0, total: 0, icon: '🎮' },
-                    'Other': { obtained: 0, total: 0, icon: '📦' }
+                    'Bosses': { obtained: 0, total: 333, icon: '⚔️' },
+                    'Raids': { obtained: 0, total: 67, icon: '🏛️' },
+                    'Clues': { obtained: 0, total: 611, icon: '📜' },
+                    'Minigames': { obtained: 0, total: 257, icon: '🎮' },
+                    'Other': { obtained: 0, total: 433, icon: '📦' }
                 };
 
                 for (const [collName, coll] of Object.entries(clogData.collections)) {
                     let matched = false;
                     const collNameLower = collName.toLowerCase();
-                    
+
                     // Check each category (except Other which is the default)
                     for (const [catName, patterns] of Object.entries(categoryMappings)) {
                         if (catName === 'Other') continue; // Skip Other, it's the default
-                        
+
                         // Check if collection name contains any pattern
                         const matchesPattern = patterns.some(p => collNameLower.includes(p.toLowerCase()));
                         if (matchesPattern) {
                             stats[catName].obtained += coll.obtained_count || 0;
-                            stats[catName].total += coll.total_count || 0;
                             matched = true;
                             break;
                         }
@@ -477,7 +479,6 @@
                     // Default to Other if no match
                     if (!matched) {
                         stats['Other'].obtained += coll.obtained_count || 0;
-                        stats['Other'].total += coll.total_count || 0;
                     }
                 }
                 return stats;
@@ -1637,7 +1638,7 @@
             tbody.innerHTML = filtered.map(drop => `
                 <tr>
                     <td class="boss-col">${escapeTargets(drop.boss)}</td>
-                    <td class="kc-col">${drop.kc.toLocaleString()}</td>
+                    <td class="kc-col">${drop.kc ? drop.kc.toLocaleString() : '—'}</td>
                     <td class="item-col">${escapeTargets(drop.item)}</td>
                     <td class="date-col ${drop.date ? '' : 'missing'}">${escapeTargets(drop.date || '—')}</td>
                     <td class="notes-col">${escapeTargets(drop.notes || '')}</td>

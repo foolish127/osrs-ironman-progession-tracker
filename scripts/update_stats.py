@@ -276,8 +276,11 @@ def process_temple_clog(temple_data, manual_dates, yaml_data, item_names):
 
     print(f"  Added {missing_added} missing items from YAML")
 
-    # Recalculate total_items
-    total_items = sum(c['total_count'] for c in collections.values())
+    # Recalculate total_items. With a YAML scaffold the per-category totals are
+    # authoritative; without one (e.g. a freshly-synced account) fall back to
+    # Temple's reported total so the headline isn't just the obtained count.
+    computed_total = sum(c['total_count'] for c in collections.values())
+    total_items = total_available if (total_available and not yaml_data) else computed_total
 
     # Newest first, then collapse items that filled several category logs at
     # once into a single entry attributed to their real source (via drops.yaml).
