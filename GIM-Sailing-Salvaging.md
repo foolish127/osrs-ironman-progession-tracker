@@ -23,7 +23,7 @@
 | Sailing | Unlock | Con | Materials |
 |:---:|---|:---:|---|
 | 31 ✅ | Teak hull — HP 30→60, **speed 1.5→2**, def 30 | 23 ✅ | 50 teak planks |
-| 44 ❌ | Mithril salvaging hook | 30 ✅ | 4 mahogany planks · 16 mithril nails · 6 mithril bars · 3 lead bars · 1 rope |
+| 44 ✅ | Mithril salvaging hook | 30 ✅ | 4 mahogany planks · 16 mithril nails · 6 mithril bars · 3 lead bars · 1 rope |
 | 46 ❌ | Mahogany cargo hold (Skiff 90) | 41 ❌ | 8 mahogany planks · 32 mithril nails · 3 lead bars |
 | 48 ❌ | Mahogany hull — HP 75, speed 2 (no change), def 40 | 41 ❌ | 50 mahogany planks |
 | 53 ❌ | Large shipwreck (48 xp) | — | — |
