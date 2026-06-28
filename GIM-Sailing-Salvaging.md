@@ -12,7 +12,7 @@
 | Ship | Skiff | Sloop (Sailing 50) = more facility slots + crew |
 | Hull | Wooden *(default)* | Upgrade for HP + speed |
 | Keel | Bronze *(default)* | Armour only — **no location gate, skip unless you want hazard damage reduction** |
-| Mast & sails | Wooden *(default)* | Storm resistance — **Camphor (Sailing 68) fully negates Storm Tempor damage** |
+| Mast & sails | Oak (linen sails) | Partial storm resistance — **Camphor (Sailing 68) fully negates Storm Tempor damage** |
 | Helm | Bronze *(default)* | Rapids resist — **Adamant helm (Sailing 72) REQUIRED to unlock Southern hazardous waters (later shipwrecks)** |
 
 ---
