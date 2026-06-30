@@ -1,5 +1,8 @@
 
+        let currentGearStyle = 'melee';
+
         function switchGearStyle(style) {
+            currentGearStyle = style;
             document.querySelectorAll('#gearing .gear-tab').forEach(t => t.classList.remove('active'));
             document.querySelectorAll('#gearing .gear-tab[data-style="' + style + '"]').forEach(t => t.classList.add('active'));
             ['gpane-melee','gpane-ranged','gpane-magic'].forEach(id => {
@@ -10,6 +13,69 @@
                 const el = document.getElementById(id);
                 if (el) el.classList.toggle('active', id === 'gupg-' + style);
             });
+            if (typeof currentAccount !== 'undefined' && currentAccount && currentAccount.id === 'gim') renderGimGearing(style);
+        }
+
+        // GIM gear progression targets, by combat style and game stage. Shown on the
+        // Gearing tab only for the GIM account (which has no live gear); the Ironman
+        // keeps its own static gear tables in #gear-im.
+        const GIM_GEAR = {
+            melee: {
+                slots: ['Head','Cape','Neck','Weapon','Shield','Body','Legs','Hands','Feet','Ring'],
+                low:  { Head:'Helm of neitiznot', Cape:'Obsidian cape', Neck:'Amulet of glory', Weapon:'Dragon scimitar', Shield:'Rune defender', Body:'Rune platebody / Fighter torso', Legs:'Rune platelegs', Hands:'Combat bracelet', Feet:'Dragon boots', Ring:'Warrior ring (i)' },
+                mid:  { Head:'Serpentine helm', Cape:'Fire cape', Neck:'Amulet of fury', Weapon:'Abyssal whip / tentacle', Shield:'Dragon defender', Body:'Fighter torso', Legs:'Obsidian platelegs', Hands:'Barrows gloves', Feet:'Dragon boots', Ring:'Berserker ring (i)' },
+                end:  { Head:'Neitiznot faceguard', Cape:'Infernal cape', Neck:'Amulet of torture', Weapon:'Ghrazi rapier', Shield:'Avernic defender', Body:'Bandos chestplate', Legs:'Bandos tassets', Hands:'Ferocious gloves', Feet:'Primordial boots', Ring:'Ultor ring' },
+                late: { Head:'Torva full helm', Cape:'Infernal cape', Neck:'Amulet of rancour', Weapon:'Scythe of vitur', Shield:'Avernic defender', Body:'Torva platebody', Legs:'Torva platelegs', Hands:'Ferocious gloves', Feet:'Primordial boots', Ring:'Ultor ring' },
+            },
+            ranged: {
+                slots: ['Head','Cape','Neck','Weapon','Ammo','Body','Legs','Hands','Feet','Ring'],
+                low:  { Head:'Archer helm', Cape:"Ava's accumulator", Neck:'Amulet of glory', Weapon:'Magic shortbow (i)', Ammo:'Rune / amethyst arrows', Body:"Black d'hide body", Legs:"Black d'hide chaps", Hands:"Black d'hide vambraces", Feet:'Snakeskin boots', Ring:'Archers ring (i)' },
+                mid:  { Head:"Karil's coif", Cape:"Ava's assembler", Neck:'Amulet of fury', Weapon:'Toxic blowpipe / Rune crossbow', Ammo:'Dragon darts / ruby+diamond bolts (e)', Body:'Armadyl chestplate', Legs:'Armadyl chainskirt', Hands:'Barrows gloves', Feet:'Ranger boots', Ring:'Archers ring (i)' },
+                end:  { Head:'Armadyl helmet', Cape:"Ava's assembler", Neck:'Necklace of anguish', Weapon:'Toxic blowpipe + Zaryte crossbow', Ammo:'Dragon darts / dragon bolts (e)', Body:'Armadyl chestplate', Legs:'Armadyl chainskirt', Hands:'Zaryte vambraces', Feet:'Pegasian boots', Ring:'Venator ring' },
+                late: { Head:'Masori mask (f)', Cape:"Dizana's quiver", Neck:'Necklace of anguish', Weapon:'Twisted bow', Ammo:'Dragon arrows', Body:'Masori body (f)', Legs:'Masori chaps (f)', Hands:'Zaryte vambraces', Feet:'Pegasian boots', Ring:'Venator ring' },
+            },
+            magic: {
+                slots: ['Head','Cape','Neck','Weapon','Shield','Body','Legs','Hands','Feet','Ring'],
+                low:  { Head:'Farseer helm / Mystic hat', Cape:'God cape', Neck:'Amulet of magic', Weapon:'Trident of the seas', Shield:'Unholy book', Body:'Mystic robe top', Legs:'Mystic robe bottom', Hands:'Combat bracelet', Feet:'Infinity boots', Ring:'Seers ring (i)' },
+                mid:  { Head:"Ahrim's hood", Cape:'Imbued god cape', Neck:'Occult necklace', Weapon:'Trident of the swamp', Shield:"Mage's book / Tome of fire", Body:"Ahrim's robetop", Legs:"Ahrim's robeskirt", Hands:'Barrows gloves', Feet:'Eternal boots', Ring:'Seers ring (i)' },
+                end:  { Head:'Ancestral hat', Cape:'Imbued god cape', Neck:'Occult necklace', Weapon:'Sanguinesti staff', Shield:"Elidinis' ward", Body:'Ancestral robe top', Legs:'Ancestral robe bottom', Hands:'Tormented bracelet', Feet:'Eternal boots', Ring:'Magus ring' },
+                late: { Head:'Ancestral hat', Cape:'Imbued god cape', Neck:'Occult necklace', Weapon:"Tumeken's shadow", Shield:"Elidinis' ward (f)", Body:'Ancestral robe top', Legs:'Ancestral robe bottom', Hands:'Tormented bracelet', Feet:'Eternal boots', Ring:'Magus ring' },
+            },
+        };
+
+        function renderGimGearing(style) {
+            currentGearStyle = style || currentGearStyle;
+            const host = document.getElementById('gear-gim');
+            if (!host) return;
+            const g = GIM_GEAR[currentGearStyle];
+            if (!g) { host.innerHTML = ''; return; }
+            const stages = [['low','Low level'],['mid','Midgame'],['end','Endgame'],['late','Late game']];
+            const esc = (typeof escapeTargets === 'function') ? escapeTargets : (s => s);
+            const rows = g.slots.map(slot => {
+                const cells = stages.map(([k]) => {
+                    const v = g[k] && g[k][slot];
+                    return `<td>${v ? esc(v) : '<span class="gdash">-</span>'}</td>`;
+                }).join('');
+                return `<tr><td>${slot}</td>${cells}</tr>`;
+            }).join('');
+            const label = currentGearStyle.charAt(0).toUpperCase() + currentGearStyle.slice(1);
+            host.innerHTML = `
+                <div class="gear-section-label">Gear progression targets - ${label}</div>
+                <div class="gear-table-wrap">
+                <table class="gear-table">
+                <thead><tr><th>Slot</th>${stages.map(([,l]) => `<th>${l}</th>`).join('')}</tr></thead>
+                <tbody>${rows}</tbody>
+                </table>
+                </div>`;
+        }
+
+        function applyGearAccountView() {
+            const im = document.getElementById('gear-im');
+            const gim = document.getElementById('gear-gim');
+            const isGim = (typeof currentAccount !== 'undefined' && currentAccount && currentAccount.id === 'gim');
+            if (im) im.style.display = isGim ? 'none' : '';
+            if (gim) gim.style.display = isGim ? '' : 'none';
+            if (isGim) renderGimGearing(currentGearStyle);
         }
 
         // Bank data is intentionally kept private: bank.json is never published
@@ -60,7 +126,6 @@
         let diariesData = null;
         let skillsData = null;
         let bossesData = null;
-        let leaguesData = null;
         let clogCategories = null;
         let diaryTasksData = null;
         let wikiCompData = null;
@@ -79,13 +144,13 @@
             // Reset per-account state first, so switching to an account that is
             // missing a data file shows "—"/empty rather than the prior account's values.
             clogData = caData = petsData = cluesData = questsData = diariesData = null;
-            skillsData = bossesData = milestonesData = leaguesData = clogCategories = bankData = null;
+            skillsData = bossesData = milestonesData = clogCategories = null;
             diaryTasksData = null;
             dropsData = [];
             ['totalLevel', 'totalXp', 'combatLevel', 'count99s', 'clogCount', 'caTasks',
-             'petCount', 'clueCount', 'bossKcCard', 'questCount', 'diaryCount', 'leagueCount']
+             'petCount', 'clueCount', 'bossKcCard', 'questCount', 'diaryCount']
                 .forEach(id => { const el = document.getElementById(id); if (el) el.textContent = '—'; });
-            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, diariesRes, bankRes, dropsRes, potionStorageRes, seedVaultRes, leaguesRes, clogCatRes, diaryTasksRes] = await Promise.all([
+            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, diariesRes, dropsRes, clogCatRes, diaryTasksRes] = await Promise.all([
                 fetch(`${D}/skills.json`).then(r=>r.json()).catch(()=>null),
                 fetch(`${D}/bosses.json`).then(r=>r.json()).catch(()=>null),
                 fetch(`${D}/clues.json`).then(r=>r.json()).catch(()=>null),
@@ -94,11 +159,7 @@
                 fetch(`${D}/pets.json`).then(r=>r.json()).catch(()=>null),
                 fetch(`${D}/quests.json`).then(r=>r.json()).catch(()=>null),
                 fetch(`${D}/diaries.yaml`).then(r=>r.text()).catch(()=>null),
-                fetch(`${D}/bank.json`).then(r=>r.json()).catch(()=>null),
                 fetch(`${D}/drops.yaml`).then(r=>r.text()).catch(()=>null),
-                fetch(`${D}/potion_storage.json`).then(r=>r.json()).catch(()=>null),
-                fetch(`${D}/seed_vault.json`).then(r=>r.json()).catch(()=>null),
-                fetch(`${D}/league_tasks.yaml`).then(r=>r.ok?r.text():null).catch(()=>null),
                 fetch(`${D}/clog_categories.yaml`).then(r=>r.ok?r.text():null).catch(()=>null),
                 fetch(`${D}/diary_tasks.yaml`).then(r=>r.ok?r.text():null).catch(()=>null)
             ]);
@@ -172,21 +233,12 @@
             renderPets();
             renderQuests();
             renderDiaries(diariesRes);
-            if (leaguesRes) leaguesData = parseLeagueYaml(leaguesRes);
-            renderLeagues();
             renderDrops(dropsRes);
-            if (bankRes) {
-                renderBank(bankRes, potionStorageRes, seedVaultRes);
-            } else {
-                document.getElementById('bankContainer').innerHTML =
-                    `<div class="empty-state">🔒 Bank data is private.<br>` +
-                    `It is not published to the live site &mdash; only visible when ` +
-                    `viewing this dashboard locally.</div>`;
-            }
             // Targets reference data (wiki_comp_rates/wiki_ca_table) is loaded
             // lazily on first Targets-tab open — see ensureTargetsData().
             renderTargets();
             renderProgress();
+            applyGearAccountView();
         }
 
         // Year-month key ("2026-06") from an ISO or M/D/YYYY date string.
@@ -791,157 +843,6 @@
         // ── Leagues task tracker ──────────────────────────────────────────
         const LEAGUE_TIERS = ['easy', 'medium', 'hard', 'elite', 'master'];
         const LEAGUE_TIER_POINTS = { easy: 10, medium: 30, hard: 80, elite: 200, master: 400 };
-        const LEAGUE_TIER_COLORS = { easy: '#3fb950', medium: '#58a6ff', hard: '#a371f7', elite: '#d4a84b', master: '#f85149' };
-
-        function parseLeagueYaml(yaml) {
-            // Flat list of { region, tier, name, done, date }. A task is marked
-            // done with a trailing "| done" (optionally "| done 2026-01-15").
-            const tasks = [];
-            let region = null;
-            let tier = null;
-            yaml.split('\n').forEach(line => {
-                const text = line.trim();
-                if (!text || text.startsWith('#')) return;
-                const indent = line.length - line.trimStart().length;
-                if (indent === 0 && text.endsWith(':')) {
-                    region = text.slice(0, -1).trim();
-                    tier = null;
-                } else if (indent > 0 && text.endsWith(':') &&
-                           LEAGUE_TIERS.includes(text.slice(0, -1).trim().toLowerCase())) {
-                    tier = text.slice(0, -1).trim().toLowerCase();
-                } else if (text.startsWith('- ') && region && tier) {
-                    let body = text.slice(2).trim();
-                    let done = false, date = null;
-                    const parts = body.split('|');
-                    if (parts.length > 1) {
-                        body = parts[0].trim();
-                        const m = parts[1].trim().match(/^done\b\s*(.*)$/i);
-                        if (m) { done = true; date = m[1].trim() || null; }
-                    }
-                    if (body) tasks.push({ region, tier, name: body, done, date });
-                }
-            });
-            return tasks;
-        }
-
-        function renderLeagues() {
-            const container = document.getElementById('leaguesContainer');
-            if (!leaguesData || leaguesData.length === 0) {
-                container.innerHTML = '<div class="empty-state">No league tasks found. Add some to data/league_tasks.yaml</div>';
-                document.getElementById('leagueCount').textContent = '—';
-                return;
-            }
-
-            const tasks = leaguesData;
-            const totalTasks = tasks.length;
-            const doneTasks = tasks.filter(t => t.done).length;
-            const totalPoints = tasks.reduce((s, t) => s + (t.done ? LEAGUE_TIER_POINTS[t.tier] : 0), 0);
-            const maxPoints = tasks.reduce((s, t) => s + LEAGUE_TIER_POINTS[t.tier], 0);
-            const pct = maxPoints > 0 ? ((totalPoints / maxPoints) * 100).toFixed(1) : '0.0';
-
-            const tierStats = {};
-            LEAGUE_TIERS.forEach(t => tierStats[t] = { done: 0, total: 0 });
-            tasks.forEach(t => { tierStats[t.tier].total++; if (t.done) tierStats[t.tier].done++; });
-
-            const regions = [...new Set(tasks.map(t => t.region))];
-
-            container.innerHTML = `
-                <div class="progress-section">
-                    <div class="progress-header">
-                        <span class="progress-title">🏅 League Points</span>
-                        <span class="progress-stats"><span class="obtained">${totalPoints.toLocaleString()}</span> <span class="total">/ ${maxPoints.toLocaleString()} pts</span></span>
-                    </div>
-                    <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>
-                    <div class="progress-percentage">${pct}% · ${doneTasks}/${totalTasks} tasks complete</div>
-                </div>
-
-                <div class="tier-overview">
-                    <div class="tier-overview-title">Tiers</div>
-                    <div class="tier-overview-grid">
-                        ${LEAGUE_TIERS.map(t => {
-                            const s = tierStats[t];
-                            const allDone = s.total > 0 && s.done === s.total;
-                            return `<div class="tier-badge ${allDone ? 'unlocked' : ''}" style="border-color:${LEAGUE_TIER_COLORS[t]}">
-                                <span class="tier-badge-name" style="color:${LEAGUE_TIER_COLORS[t]}">${t.charAt(0).toUpperCase() + t.slice(1)}</span>
-                                <span class="tier-badge-points">${s.done}/${s.total} · ${LEAGUE_TIER_POINTS[t]} pts</span>
-                                ${allDone ? '<span class="tier-badge-check">✓</span>' : ''}
-                            </div>`;
-                        }).join('')}
-                    </div>
-                </div>
-
-                <div class="search-filter">
-                    <input type="text" class="search-input" id="leagueSearch" placeholder="Search tasks...">
-                    <select class="filter-select" id="leagueRegion">
-                        <option value="all">All Regions</option>
-                        ${regions.map(r => `<option value="${escapeTargets(r)}">${escapeTargets(r)}</option>`).join('')}
-                    </select>
-                    <select class="filter-select" id="leagueStatus">
-                        <option value="all">All Tasks</option>
-                        <option value="done">Completed Only</option>
-                        <option value="todo">Remaining Only</option>
-                    </select>
-                </div>
-
-                <div id="leagueList"></div>`;
-
-            document.getElementById('leagueCount').textContent = `${doneTasks}/${totalTasks}`;
-
-            document.getElementById('leagueSearch').addEventListener('input', renderLeagueList);
-            document.getElementById('leagueRegion').addEventListener('change', renderLeagueList);
-            document.getElementById('leagueStatus').addEventListener('change', renderLeagueList);
-
-            renderLeagueList();
-        }
-
-        function renderLeagueList() {
-            const listEl = document.getElementById('leagueList');
-            if (!listEl || !leaguesData) return;
-            const search = document.getElementById('leagueSearch').value.toLowerCase();
-            const region = document.getElementById('leagueRegion').value;
-            const status = document.getElementById('leagueStatus').value;
-
-            let tasks = leaguesData.slice();
-            if (region !== 'all') tasks = tasks.filter(t => t.region === region);
-            if (status === 'done') tasks = tasks.filter(t => t.done);
-            if (status === 'todo') tasks = tasks.filter(t => !t.done);
-            if (search) tasks = tasks.filter(t =>
-                t.name.toLowerCase().includes(search) || t.region.toLowerCase().includes(search));
-
-            if (tasks.length === 0) {
-                listEl.innerHTML = '<div class="empty-state">No tasks match your filters</div>';
-                return;
-            }
-
-            let html = '';
-            LEAGUE_TIERS.forEach(tier => {
-                const tierTasks = tasks.filter(t => t.tier === tier);
-                if (tierTasks.length === 0) return;
-                const done = tierTasks.filter(t => t.done).length;
-                const color = LEAGUE_TIER_COLORS[tier];
-                const tierPct = (done / tierTasks.length) * 100;
-                html += `<div class="ca-tier expanded">
-                    <div class="ca-tier-header" onclick="this.parentElement.classList.toggle('expanded')">
-                        <span class="ca-tier-name ${tier}">${tier.charAt(0).toUpperCase() + tier.slice(1)} (${LEAGUE_TIER_POINTS[tier]} pts)</span>
-                        <div class="ca-tier-stats">
-                            <span><span style="color:${color}">${done}</span> / ${tierTasks.length}</span>
-                            <div class="ca-tier-progress"><div class="ca-tier-progress-fill" style="width:${tierPct}%;background:${color}"></div></div>
-                        </div>
-                    </div>
-                    <div class="ca-tier-tasks">
-                        <div class="item-list">
-                            ${tierTasks.map(t => `<div class="item ${t.done ? 'obtained' : 'missing'}">
-                                <span class="item-check">${t.done ? '✓' : '○'}</span>
-                                <span class="item-name">${escapeTargets(t.name)} <span style="color:var(--text-muted);font-size:0.75rem;">· ${escapeTargets(t.region)}</span></span>
-                                ${t.date ? `<span class="item-date">${formatShortDate(t.date)}</span>` : ''}
-                            </div>`).join('')}
-                        </div>
-                    </div>
-                </div>`;
-            });
-            listEl.innerHTML = html;
-        }
-
         function renderPets() {
             const container = document.getElementById('petsContainer');
             if (!petsData) {
@@ -1918,295 +1819,6 @@
                     `).join('')}
                 </div>
             `;
-        }
-
-        let bankData = null;
-        let bankSearchTerm = '';
-        let bankCategoryFilter = 'all';
-        let bankSubcategoryFilter = 'all';
-
-        function renderBank(data, potionStorage, seedVault) {
-            bankData = data;
-            const container = document.getElementById('bankContainer');
-            
-            // Calculate storage values
-            let potionValue = 0;
-            let potionVials = 0;
-            if (potionStorage?.items) {
-                potionStorage.items.forEach(item => {
-                    const vials = Math.floor(item.doses / 4);
-                    potionValue += vials * item.ge_price;
-                    potionVials += vials;
-                });
-            }
-            
-            let seedValue = 0;
-            let seedCount = 0;
-            if (seedVault?.items) {
-                seedVault.items.forEach(item => {
-                    seedValue += item.quantity * item.ge_price;
-                    seedCount += item.quantity;
-                });
-            }
-            
-            const totalCombinedValue = (data?.total_value || 0) + potionValue + seedValue;
-
-            const formatGp = (value) => {
-                if (value >= 1000000000) return (value / 1000000000).toFixed(2) + 'B';
-                if (value >= 1000000) return (value / 1000000).toFixed(2) + 'M';
-                if (value >= 1000) return (value / 1000).toFixed(1) + 'K';
-                return value.toLocaleString();
-            };
-
-            if (!data || !data.items) {
-                container.innerHTML = '<div class="empty-state">No bank data available. Update data/bank.txt with your Bank Memory export, then commit and push.</div>';
-                return;
-            }
-
-            // Get unique categories for filter
-            const categories = [...new Set(data.items.map(i => i.category))].sort();
-
-            container.innerHTML = `
-                <div class="bank-updated">
-                    <div>🏦 Bank: ${formatDate(data.updated)}</div>
-                    ${potionStorage ? `<div>🧪 Potion Storage: ${potionStorage.last_updated} (${potionVials.toLocaleString()} vials)</div>` : ''}
-                    ${seedVault ? `<div>🌱 Seed Vault: ${seedVault.last_updated} (${seedCount.toLocaleString()} seeds)</div>` : ''}
-                </div>
-                
-                <div class="bank-summary">
-                    <div class="bank-summary-card highlight">
-                        <div class="bank-summary-label">Total Combined Value</div>
-                        <div class="bank-summary-value">${formatGp(totalCombinedValue)} gp</div>
-                    </div>
-                    <div class="bank-summary-card">
-                        <div class="bank-summary-label">Bank Value</div>
-                        <div class="bank-summary-value">${formatGp(data.total_value)} gp</div>
-                    </div>
-                    <div class="bank-summary-card">
-                        <div class="bank-summary-label">Potion Storage</div>
-                        <div class="bank-summary-value">${formatGp(potionValue)} gp</div>
-                    </div>
-                    <div class="bank-summary-card">
-                        <div class="bank-summary-label">Seed Vault</div>
-                        <div class="bank-summary-value">${formatGp(seedValue)} gp</div>
-                    </div>
-                    <div class="bank-summary-card">
-                        <div class="bank-summary-label">Unique Items</div>
-                        <div class="bank-summary-value green">${data.total_items.toLocaleString()}</div>
-                    </div>
-                    <div class="bank-summary-card">
-                        <div class="bank-summary-label">Total Quantity</div>
-                        <div class="bank-summary-value">${data.total_quantity.toLocaleString()}</div>
-                    </div>
-                </div>
-
-                <div class="bank-top-items">
-                    <h3>💰 Most Valuable Items</h3>
-                    ${data.top_items.map((item, i) => `
-                        <div class="top-item">
-                            <span class="top-item-name">${i + 1}. ${item.name}<span class="top-item-qty">x${item.quantity.toLocaleString()}</span></span>
-                            <span class="top-item-value">${formatGp(item.total_value)} gp</span>
-                        </div>
-                    `).join('')}
-                </div>
-
-                <div class="bank-category-breakdown">
-                    <h3>📊 Value by Category</h3>
-                    <div class="category-cards" id="categoryCards">
-                        ${generateCategoryCards(data)}
-                    </div>
-                </div>
-
-                <div class="bank-filters">
-                    <input type="text" class="bank-search" id="bankSearch" placeholder="Search items..." value="${bankSearchTerm}">
-                    <select class="bank-filter-select" id="bankCategoryFilter">
-                        <option value="all">All Categories</option>
-                        ${categories.map(cat => `<option value="${cat}" ${bankCategoryFilter === cat ? 'selected' : ''}>${cat}</option>`).join('')}
-                    </select>
-                    <select class="bank-filter-select" id="bankSubcategoryFilter">
-                        <option value="all">All Subcategories</option>
-                    </select>
-                </div>
-
-                <div class="bank-filter-stats" id="bankFilterStats"></div>
-
-                <div class="bank-all-items">
-                    <h3>📦 All Items</h3>
-                    <div class="bank-items-grid" id="bankItemsGrid"></div>
-                </div>
-            `;
-
-            // Add event listeners
-            document.getElementById('bankSearch').addEventListener('input', (e) => {
-                bankSearchTerm = e.target.value;
-                filterBankItems();
-                updateCategoryCardSelection();
-            });
-
-            document.getElementById('bankCategoryFilter').addEventListener('change', (e) => {
-                bankCategoryFilter = e.target.value;
-                bankSubcategoryFilter = 'all';
-                updateSubcategoryFilter();
-                filterBankItems();
-                updateCategoryCardSelection();
-            });
-
-            document.getElementById('bankSubcategoryFilter').addEventListener('change', (e) => {
-                bankSubcategoryFilter = e.target.value;
-                filterBankItems();
-            });
-
-            // Add click listeners for category cards
-            document.querySelectorAll('.category-card').forEach(card => {
-                card.addEventListener('click', () => {
-                    const category = card.dataset.category;
-                    if (bankCategoryFilter === category) {
-                        // Clicking same category deselects it
-                        bankCategoryFilter = 'all';
-                    } else {
-                        bankCategoryFilter = category;
-                    }
-                    bankSubcategoryFilter = 'all';
-                    document.getElementById('bankCategoryFilter').value = bankCategoryFilter;
-                    updateSubcategoryFilter();
-                    filterBankItems();
-                    updateCategoryCardSelection();
-                });
-            });
-
-            updateSubcategoryFilter();
-            filterBankItems();
-            updateCategoryCardSelection();
-        }
-
-        function getCategoryClass(category) {
-            return 'cat-' + category.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-');
-        }
-
-        function generateCategoryCards(data) {
-            const formatGp = (value) => {
-                if (value >= 1000000000) return (value / 1000000000).toFixed(2) + 'B';
-                if (value >= 1000000) return (value / 1000000).toFixed(1) + 'M';
-                if (value >= 1000) return (value / 1000).toFixed(0) + 'K';
-                return value.toLocaleString();
-            };
-
-            // Aggregate by category
-            const categoryStats = {};
-            data.items.forEach(item => {
-                if (!categoryStats[item.category]) {
-                    categoryStats[item.category] = { count: 0, quantity: 0, value: 0 };
-                }
-                categoryStats[item.category].count++;
-                categoryStats[item.category].quantity += item.quantity;
-                categoryStats[item.category].value += item.total_value;
-            });
-
-            // Sort by value descending
-            const sortedCategories = Object.entries(categoryStats)
-                .sort((a, b) => b[1].value - a[1].value);
-
-            return sortedCategories.map(([category, stats]) => `
-                <div class="category-card ${getCategoryClass(category)}" data-category="${category}">
-                    <div class="category-card-name">${category}</div>
-                    <div class="category-card-stats">
-                        <span class="category-card-count">${stats.count} items</span>
-                        <span class="category-card-value">${formatGp(stats.value)}</span>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function updateCategoryCardSelection() {
-            document.querySelectorAll('.category-card').forEach(card => {
-                if (bankCategoryFilter === 'all') {
-                    card.classList.remove('active');
-                } else if (card.dataset.category === bankCategoryFilter) {
-                    card.classList.add('active');
-                } else {
-                    card.classList.remove('active');
-                }
-            });
-        }
-
-        function updateSubcategoryFilter() {
-            if (!bankData) return;
-            
-            const subcatSelect = document.getElementById('bankSubcategoryFilter');
-            let subcategories = [];
-            
-            if (bankCategoryFilter === 'all') {
-                subcategories = [...new Set(bankData.items.map(i => i.subcategory))].sort();
-            } else {
-                subcategories = [...new Set(
-                    bankData.items
-                        .filter(i => i.category === bankCategoryFilter)
-                        .map(i => i.subcategory)
-                )].sort();
-            }
-
-            subcatSelect.innerHTML = `
-                <option value="all">All Subcategories</option>
-                ${subcategories.map(sub => `<option value="${sub}" ${bankSubcategoryFilter === sub ? 'selected' : ''}>${sub}</option>`).join('')}
-            `;
-        }
-
-        function filterBankItems() {
-            if (!bankData) return;
-
-            const grid = document.getElementById('bankItemsGrid');
-            const statsDiv = document.getElementById('bankFilterStats');
-            const searchLower = bankSearchTerm.toLowerCase();
-
-            let filteredItems = bankData.items.filter(item => {
-                const matchesSearch = !bankSearchTerm || item.name.toLowerCase().includes(searchLower);
-                const matchesCategory = bankCategoryFilter === 'all' || item.category === bankCategoryFilter;
-                const matchesSubcategory = bankSubcategoryFilter === 'all' || item.subcategory === bankSubcategoryFilter;
-                return matchesSearch && matchesCategory && matchesSubcategory;
-            });
-
-            // Calculate stats for filtered items
-            const filteredCount = filteredItems.length;
-            const filteredQty = filteredItems.reduce((sum, i) => sum + i.quantity, 0);
-            const filteredValue = filteredItems.reduce((sum, i) => sum + i.total_value, 0);
-
-            // Sort by value descending
-            filteredItems.sort((a, b) => b.total_value - a.total_value);
-
-            const formatGp = (value) => {
-                if (value >= 1000000000) return (value / 1000000000).toFixed(2) + 'B';
-                if (value >= 1000000) return (value / 1000000).toFixed(2) + 'M';
-                if (value >= 1000) return (value / 1000).toFixed(1) + 'K';
-                return value.toLocaleString();
-            };
-
-            // Show filter stats
-            const isFiltered = bankSearchTerm || bankCategoryFilter !== 'all' || bankSubcategoryFilter !== 'all';
-            if (isFiltered) {
-                statsDiv.innerHTML = `
-                    <div class="filter-stats-row">
-                        <span class="filter-stat"><strong>${filteredCount}</strong> items</span>
-                        <span class="filter-stat"><strong>${filteredQty.toLocaleString()}</strong> total qty</span>
-                        <span class="filter-stat"><strong>${formatGp(filteredValue)}</strong> gp value</span>
-                    </div>
-                `;
-                statsDiv.style.display = 'block';
-            } else {
-                statsDiv.style.display = 'none';
-            }
-
-            if (filteredItems.length === 0) {
-                grid.innerHTML = '<div class="no-results">No items found matching your filters.</div>';
-                return;
-            }
-
-            grid.innerHTML = filteredItems.map(item => `
-                <div class="bank-item">
-                    <span class="bank-item-name">${item.name}</span>
-                    <span class="bank-item-qty">x${item.quantity.toLocaleString()}</span>
-                    <span class="bank-item-value">${formatGp(item.total_value)}</span>
-                </div>
-            `).join('');
         }
 
         // Direct tab switch

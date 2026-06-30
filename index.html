@@ -33,7 +33,6 @@
             <div class="stat-card" data-tab="bosses"><div class="stat-label">Boss KC</div><div class="stat-value" id="bossKcCard">—</div></div>
             <div class="stat-card" data-tab="quests"><div class="stat-label">Quests</div><div class="stat-value green" id="questCount">—</div></div>
             <div class="stat-card" data-tab="diaries"><div class="stat-label">Diaries</div><div class="stat-value" id="diaryCount">—</div></div>
-            <div class="stat-card" data-tab="leagues"><div class="stat-label">League Tasks</div><div class="stat-value gold" id="leagueCount">—</div></div>
         </div>
 
         <nav class="nav-tabs">
@@ -46,10 +45,8 @@
             <button class="nav-tab" data-tab="quests">Quests</button>
             <button class="nav-tab" data-tab="diaries">Diaries</button>
             <button class="nav-tab" data-tab="drops">Drops</button>
-            <button class="nav-tab" data-tab="bank">Bank</button>
             <button class="nav-tab" data-tab="gearing">Gearing</button>
             <button class="nav-tab" data-tab="targets">Targets</button>
-            <button class="nav-tab" data-tab="leagues">Leagues</button>
             <button class="nav-tab" data-tab="progress">Progress</button>
         </nav>
 
@@ -92,14 +89,6 @@
             <div id="dropsContainer">Loading...</div>
         </div>
 
-        <div id="bank" class="tab-content">
-            <div id="bankContainer">Loading...</div>
-        </div>
-
-        <div id="leagues" class="tab-content">
-            <div id="leaguesContainer">Loading...</div>
-        </div>
-
         <div id="progress" class="tab-content">
             <div id="progressContainer">Loading...</div>
         </div>
@@ -113,6 +102,12 @@
                 <button class="gear-tab" data-style="ranged" onclick="switchGearStyle('ranged')">🏹 Ranged</button>
                 <button class="gear-tab" data-style="magic" onclick="switchGearStyle('magic')">🔮 Magic</button>
             </div>
+
+            <!-- GIM progression view (JS-rendered; shown only for the GIM account) -->
+            <div id="gear-gim" style="display:none"></div>
+
+            <!-- Ironman view (static gear tables) -->
+            <div id="gear-im">
 
             <!-- ══ SECTION 1: Gear progression table ══ -->
             <div class="gear-section-label">Current gear &amp; upgrade targets</div>
@@ -348,6 +343,8 @@
             <div class="upg-row"><span class="upg-gain" style="color:#a371f7">DPS ①</span><span class="upg-slot">weapon</span><span class="upg-chain">Trident of swamp → Sanguinesti staff</span><span class="upg-src"><span class="updot late"></span>Theatre of Blood</span></div>
             <div class="upg-row"><span class="upg-gain" style="color:#f85149">DPS ②</span><span class="upg-slot">weapon</span><span class="upg-chain">Sanguinesti staff → Tumeken's shadow</span><span class="upg-src"><span class="updot end"></span>ToA</span></div>
             </div><!-- gupg-magic -->
+
+            </div><!-- #gear-im -->
 
         </div><!-- #gearing tab-content -->
 
