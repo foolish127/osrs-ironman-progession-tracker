@@ -18,8 +18,8 @@
 
 | Facility | Current | Note |
 |---|---|---|
-| Ship | Sloop ✅ | 2 salvaging hook slots + crew |
-| Crew | Adventurer Ada ✅ | recruited at The Pandemonium |
+| Ship | Sloop | 2 salvaging hook slots + crew |
+| Crew | Ada + Jobless Jim |  |
 | Hull | Wooden *(default)* | Upgrade for speed |
 | Keel | Bronze *(default)* |  |
 | Mast & sails | Oak (linen sails) |  |
@@ -35,28 +35,36 @@
 
 | Sailing | Unlock | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Con&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Materials |
 |:---:|---|:---:|---|
-| 31 ✅ | Teak hull: speed 1.5→2 | 23 ✅ | 50 teak planks · mill 25k (500 ea) |
+| 31 ✅ | Teak hull: speed 1.5→2 | 23 ✅ | 16 large teak hull parts (400 teak planks) · 600 steel nails · 25 swamp tar · 5 lead bars |
 | 44 ✅ | Mithril salvaging hook | 30 ✅ | 4 mahogany planks · 16 mithril nails · 6 mithril bars ❌ (Smithing 50 or ~128 chaos dwarves) · 3 lead bars · 1 rope |
 | 46 ✅ | Mahogany cargo hold (Sloop 120) | 41 ❌ | 8 mahogany planks · 32 mithril nails · 3 lead bars |
-| 48 ✅ | Mahogany hull: speed 1.5→2 (from current Wooden) | 41 ❌ | 50 mahogany planks · mill 75k (1,500 ea) |
+| 48 ✅ | Mahogany hull: speed 1.5→2 | 41 ❌ | 16 large mahogany hull parts (400 mahogany planks) · 600 mithril nails · 25 swamp tar · 5 lead bars |
+| 50 ✅ | Crew: Ex-Captain Siad |  | The Tourist Trap ❌ |
 | 59 ✅ | Adamant salvaging hook | 52 ❌ | 4 camphor planks · 16 adamantite nails · 6 adamantite bars · 3 lead bars · 1 rope |
 | 60 ✅ | Camphor cargo hold (Sloop 160) | 53 ❌ | 8 camphor planks · 32 adamantite nails · 3 lead bars |
+| 60 ✅ | Crew: Cabin Boy Jenkins (Crandor) |  | Dragon Slayer I ❌ · Ghostspeak amulet / Morytania legs 2 |
 | 64 ❌ | Pirate shipwreck, SE of Buccaneers' Haven |  |  |
 <details>
-<summary><strong>Late-game milestones (Sailing 67+)</strong>, collapsed (click to expand)</summary>
+<summary><strong>Late-game milestones (Sailing 65+)</strong>, collapsed (click to expand)</summary>
 
 | Sailing | Unlock | Con | Materials |
 |:---:|---|:---:|---|
+| 65 ❌ | Crew: Oarswoman Olga (Burgh de Rott) |  | In Aid of the Myreque ❌ |
 | 67 ❌ | Camphor hull: speed 2→2.5 | 59 ❌ | 16 large camphor hull parts · 600 adamantite nails · 25 swamp tar · 5 lead bars (~911k gp) |
+| 70 ❌ | Crew: Jittery Jim (Port Khazard) |  | None ✅ |
 | 72 ❌ | Adamant helm (ship fitting): unlocks Southern hazardous waters | 59 ❌ | 3 camphor planks · 6 adamantite bars |
 | 73 ❌ | Mercenary shipwreck, needs adamant helm |  |  |
 | 74 ❌ | Rune salvaging hook | 66 ❌ | 4 ironwood planks · 16 rune nails · 6 runite bars · 4 lead bars · 4 cupronickel bars · 1 rope |
 | 78 ❌ | Eternal brazier (ship fitting): unlocks Northern Ocean; schematic on Buccaneers' Haven (dock at 76) | 72 ❌ | 4 ironwood planks · 16 rune nails · 6 runite bars · 6 cupronickel bars · 250 te + 250 efh + 250 urt salt |
 | 80 ❌ | Fremennik shipwreck · Ironwood cargo hold (Sloop 210), Fremennik needs eternal brazier | 77 ❌ | Hold: 8 ironwood planks · 32 rune nails · 3 cupronickel bars |
+| 80 ❌ | Crew: Bosun Zarah (Etceteria) |  | Royal Trouble ❌ · Hard Fremennik Diary ❌ |
+| 85 ❌ | Crew: Jolly Jim (Brimhaven) |  | None ✅ |
 | 86 ❌ | Dragon salvaging hook | 78 ❌ | 4 rosewood planks · 16 dragon nails · 6 dragon metal sheets · 1 broken dragon hook · 4 cupronickel bars · 1 rope |
 | 87 ❌ | Merchant shipwreck, Dusk's Maw; needs adamant helm (S) / eternal brazier (N) |  |  |
 | 89 ❌ | Rosewood cargo hold (Sloop 240) | 84 ❌ | 8 rosewood planks · 32 dragon nails · 3 cupronickel bars |
+| 90 ❌ | Crew: Spotter Virginia (Ruins of Unkah) |  | 100 Tempoross subdues ❌ |
 | 93 ❌ | Rosewood hull: speed 2.5→3 | 84 ❌ | 16 large rosewood hull parts · 600 dragon nails · 25 swamp tar · 5 cupronickel bars (~10.1M gp) |
+| 95 ❌ | Crew: Sailor Jakob (Catherby) |  | None ✅ |
 
 </details>
 
@@ -136,3 +144,14 @@ Keep, do NOT alch: Mahogany repair kit (use for hull repairs), rune/dragon canno
 | | | | | Total | ~3.33M |
 
 </details>
+
+---
+
+## Wintertodt
+
+| Goal | Target | Note |
+|---|:---:|---|
+| Firemaking | 99 | |
+| Iron ore | 2 | from supply crates |
+| Gold ore | 100 | from supply crates |
+| Combat achievement | 3,000 pts | score 3,000+ in a single game |

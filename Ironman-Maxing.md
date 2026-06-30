@@ -10,13 +10,13 @@
 | ⭐ **Maxing** | **Defence 98 → 99** | **99 cape progress** | **Max** |
 | ⭐ **Bossing** | **Doom** | **Eye of ayak** | **ToA** |
 | ⭐ **Bossing** | **Zulrah** | **Blowpipe** | **ToA** |
-| ⭐ **Bossing (Slayer)** | **K'ril** | **Hasta** | **ToA** |
 | ⭐ **Bossing** | **ToA** | **Fang** | **ToA** |
 | ⭐ **Bossing** | **ToA** | **Lightbearer** | **ToA** |
 | ⭐ **Bossing** | **ToA** | **Ward** | **ToA** |
 | ⭐ **Bossing (Slayer)** | **Cerberus** | **Eternal crystal** | **Avernic treads** |
 | ⭐ **Bossing (Slayer)** | **Smoke Devils** | **Occult necklace** | **ToA** |
 | ⭐ **Bossing (Slayer)** | **Alchemical Hydra** | **Hydra claw** | **ToA** |
+| Bossing (Slayer) | K'ril | Hasta | ToA |
 | Bossing | Muspah (Ancient essence) | Saturated heart (imbued heart upgrade) |  |
 | Bossing | Hueycoatl | Dragon hunter wand |  |
 | Agility | 112 Marks · 9–12 hrs @ Pollnivneach | Graceful |  |
