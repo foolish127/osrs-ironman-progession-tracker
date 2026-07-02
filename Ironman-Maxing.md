@@ -7,7 +7,6 @@
 | Goal | Reqs | Reward | For |
 |---|---|---|---|
 | ⭐ **Maxing** | **Mining 97 → 99** | **99 cape progress** | **Max** |
-| ⭐ **Maxing** | **Defence 98 → 99** | **99 cape progress** | **Max** |
 | ⭐ **Bossing** | **Doom** | **Eye of ayak** | **ToA** |
 | ⭐ **Bossing** | **Zulrah** | **Blowpipe** | **ToA** |
 | ⭐ **Bossing** | **ToA** | **Fang** | **ToA** |
@@ -161,3 +160,4 @@
 | 6 | Strength | 14 May 2026 |
 | 7 | Woodcutting | 7 Jun 2026 |
 | 8 | Attack | 19 Jun 2026 |
+| 9 | Defence | 30 Jun 2026 |

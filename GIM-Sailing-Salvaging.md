@@ -27,7 +27,7 @@
 | Salvaging hook | Steel ×2 | Both Sloop slots filled |
 | Cargo hold | Teak |  |
 | Salvaging station | Built |  |
-| Shipwreck | Large shipwreck |  |
+| Shipwreck | Pirate shipwreck | south of Pest Control |
 
 ---
 
@@ -43,17 +43,16 @@
 | 59 ✅ | Adamant salvaging hook | 52 ❌ | 4 camphor planks · 16 adamantite nails · 6 adamantite bars · 3 lead bars · 1 rope |
 | 60 ✅ | Camphor cargo hold (Sloop 160) | 53 ❌ | 8 camphor planks · 32 adamantite nails · 3 lead bars |
 | 60 ✅ | Crew: Cabin Boy Jenkins (Crandor) |  | Dragon Slayer I ❌ · Ghostspeak amulet / Morytania legs 2 |
-| 64 ❌ | Pirate shipwreck, SE of Buccaneers' Haven |  |  |
-<details>
-<summary><strong>Late-game milestones (Sailing 65+)</strong>, collapsed (click to expand)</summary>
-
-| Sailing | Unlock | Con | Materials |
-|:---:|---|:---:|---|
-| 65 ❌ | Crew: Oarswoman Olga (Burgh de Rott) |  | In Aid of the Myreque ❌ |
-| 67 ❌ | Camphor hull: speed 2→2.5 | 59 ❌ | 16 large camphor hull parts · 600 adamantite nails · 25 swamp tar · 5 lead bars (~911k gp) |
+| 65 ✅ | Crew: Oarswoman Olga (Burgh de Rott) |  | In Aid of the Myreque ❌ |
+| 67 ✅ | Camphor hull: speed 2→2.5 | 59 ❌ | 16 large camphor hull parts · 600 adamantite nails · 25 swamp tar · 5 lead bars (~911k gp) |
 | 70 ❌ | Crew: Jittery Jim (Port Khazard) |  | None ✅ |
 | 72 ❌ | Adamant helm (ship fitting): unlocks Southern hazardous waters | 59 ❌ | 3 camphor planks · 6 adamantite bars |
 | 73 ❌ | Mercenary shipwreck, needs adamant helm |  |  |
+<details>
+<summary><strong>Late-game milestones (Sailing 74+)</strong>, collapsed (click to expand)</summary>
+
+| Sailing | Unlock | Con | Materials |
+|:---:|---|:---:|---|
 | 74 ❌ | Rune salvaging hook | 66 ❌ | 4 ironwood planks · 16 rune nails · 6 runite bars · 4 lead bars · 4 cupronickel bars · 1 rope |
 | 78 ❌ | Eternal brazier (ship fitting): unlocks Northern Ocean; schematic on Buccaneers' Haven (dock at 76) | 72 ❌ | 4 ironwood planks · 16 rune nails · 6 runite bars · 6 cupronickel bars · 250 te + 250 efh + 250 urt salt |
 | 80 ❌ | Fremennik shipwreck · Ironwood cargo hold (Sloop 210), Fremennik needs eternal brazier | 77 ❌ | Hold: 8 ironwood planks · 32 rune nails · 3 cupronickel bars |
@@ -70,34 +69,19 @@
 
 ---
 
-## Progress to 64 (pirate shipwreck)
+## Progress to 73 (mercenary shipwreck)
 
-Sailing **61**. Large salvage unlocked at 53.
+Sailing **69**. Pirate salvage unlocked at 64 (107.5 xp ea).
 
 ```
-53 [████████████░░░░░░░░] 64    61%
+64 [█████████░░░░░░░░░░░] 73    48%
 ```
 
-**61% of the way** (165,694 / 270,421 xp). **104,727 xp left** ≈ **1,520 large salvages** (~68.8 xp ea). After 64, pirate salvage is 107.5 xp ea (~1.6x faster).
+**48% of the way** (278,385 / 585,880 xp). **307,495 xp left** ≈ **2,860 pirate salvages** (~107.5 xp ea). At 72 build the adamant helm fitting to unlock the Mercenary shipwreck at 73.
 
 ---
 
-## Alching large salvage drops
-
-Worth a nat (net profit after −180). Est. qty = expected drops over Sailing 53 → 64 (~3,928 large salvages):
-
-| Drop | Value | High alch (−180) | Est. qty (53→64) | Total net GP |
-|---|---:|---:|---:|---:|
-| Diamond ring | 3,525 | +1,935 | 354 | 684,990 |
-| Oyster pearls | 1,400 | +660 | 354 | 233,640 |
-| Emerald ring | 1,275 | +585 | 531 | 310,635 |
-| Sapphire ring | 900 | +360 | 531 | 191,160 |
-| Total | | | 1,770 nats | ~1,420,425 |
-
----
-
-<details>
-<summary><strong>Alching pirate salvage drops, next wreck (Sailing 64)</strong>, collapsed (click to expand)</summary>
+## Alching pirate salvage drops
 
 Pirate salvage = 107.5 XP each (76 loot + 31.5 sort). Worth a nat (net after −180). Est. qty over Sailing 64 → 73 (~5,335 pirate salvages):
 
@@ -115,8 +99,6 @@ Pirate salvage = 107.5 XP each (76 loot + 31.5 sort). Worth a nat (net after −
 | Total | | | ~2,966 nats | ~2,350,170 |
 
 Keep, do NOT alch: Mahogany repair kit (use for hull repairs), rune/dragon cannonballs (cannon ammo).
-
-</details>
 
 ---
 
