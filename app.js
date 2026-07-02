@@ -1393,9 +1393,12 @@
                     earned: drop.kc,
                     luck,
                     status,
+                    date: drop.date || '',
                     notes: drop.notes || ''
                 };
             }).sort((a, b) => b.luck - a.luck);
+            // Assign a stable overall rank so filtering doesn't renumber the # column
+            luckSummaryData.forEach((item, i) => { item.rank = i + 1; });
 
             // Calculate average luck (excluding nulls)
             const validLuck = luckSummaryData.filter(l => l.luck > 0);
@@ -1441,6 +1444,7 @@
                                 <th>#</th>
                                 <th>Activity</th>
                                 <th>Key Drop</th>
+                                <th>Date</th>
                                 <th style="text-align:right">KC</th>
                                 <th style="text-align:right">Rate</th>
                                 <th style="text-align:right">Luck</th>
@@ -1561,11 +1565,12 @@
             // Sort by luck descending
             filteredLuck.sort((a, b) => b.luck - a.luck);
 
-            luckTbody.innerHTML = filteredLuck.map((item, i) => `
+            luckTbody.innerHTML = filteredLuck.map((item) => `
                 <tr>
-                    <td class="rank-col">${i + 1}</td>
+                    <td class="rank-col">${item.rank}</td>
                     <td class="activity-col">${escapeTargets(item.activity)}</td>
                     <td class="drop-col">${escapeTargets(item.drop)}</td>
+                    <td class="date-col ${item.date ? '' : 'missing'}">${escapeTargets(item.date || '—')}</td>
                     <td class="kc-col">${item.earned ? item.earned.toLocaleString() : '—'}</td>
                     <td class="rate-col">1/${item.droprate.toLocaleString()}</td>
                     <td class="luck-col ${getLuckClass(item.luck)}">${item.luck ? item.luck.toFixed(1) + 'x' : '—'}</td>
