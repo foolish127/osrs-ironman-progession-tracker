@@ -32,7 +32,8 @@
         .stat-value.green { color: var(--accent-green); }
         .stat-value.blue { color: var(--accent-blue); }
         .stat-value.purple { color: var(--accent-purple); }
-        .nav-tabs { display: flex; gap: 0; margin-bottom: 2rem; border-bottom: 1px solid var(--border); overflow-x: auto; }
+        .nav-tabs { display: flex; gap: 0; margin-bottom: 2rem; border-bottom: 1px solid var(--border); overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; }
+        .nav-tabs::-webkit-scrollbar { display: none; }
         .nav-tab { padding: 1rem 1.5rem; font-size: 0.875rem; font-weight: 500; color: var(--text-secondary); background: transparent; border: none; cursor: pointer; position: relative; white-space: nowrap; }
         .nav-tab:hover { color: var(--text-primary); }
         .nav-tab.active { color: var(--accent-gold); }
