@@ -204,7 +204,25 @@
         .clog-latest-items { display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; }
         .clog-latest-item { background: var(--bg-dark); border: 1px solid var(--border); border-radius: 4px; padding: 0.4rem; width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; }
         .clog-latest-item img { max-width: 32px; max-height: 32px; image-rendering: pixelated; }
+        .clog-latest-item { position: relative; }
         .clog-latest-item:hover { border-color: var(--accent-gold); }
+        .clog-latest-item[data-tooltip]:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: calc(100% + 6px);
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            border: 1px solid var(--accent-gold);
+            border-radius: 4px;
+            padding: 0.3rem 0.5rem;
+            font-size: 0.75rem;
+            z-index: 20;
+            pointer-events: none;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+        }
         .kanban-board { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
         @media (max-width: 1000px) { .kanban-board { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 600px) { .kanban-board { grid-template-columns: 1fr; } }

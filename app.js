@@ -579,8 +579,10 @@
                         <div class="clog-latest-items">
                             ${clogData.recent_items.slice(0, 12).map(item => {
                                 const safeChar = item.name.charAt(0).replace(/'/g, '');
+                                const dateLabel = formatShortDate(item.date);
+                                const tip = `${item.name}${dateLabel ? ' · ' + dateLabel : ''}`.replace(/"/g, '&quot;');
                                 return `
-                                <div class="clog-latest-item" title="${item.name.replace(/"/g, '&quot;')} - ${(item.collection || '').replace(/"/g, '&quot;')}">
+                                <div class="clog-latest-item" data-tooltip="${tip}">
                                     <img src="${getItemImageUrl(item.name)}" alt="${item.name.replace(/"/g, '&quot;')}" onerror="this.style.display='none'; this.parentElement.innerHTML='${safeChar}';">
                                 </div>`;
                             }).join('')}
