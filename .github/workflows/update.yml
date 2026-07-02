@@ -94,8 +94,21 @@ jobs:
           git config --local user.name "GitHub Action"
           git add data/
           git diff --staged --quiet || git commit -m "Update stats $(date -u +'%Y-%m-%d %H:%M UTC')"
-          git pull --rebase origin main
-          git push
+          # Regenerated stat JSON can conflict with a concurrent run. Always keep
+          # this run's freshly-generated data (-X theirs) and retry the push so a
+          # race with the scheduled/bot run can't fail the deploy.
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if ! git rebase -X theirs origin/main; then
+              git rebase --abort || true
+              continue
+            fi
+            if git push; then
+              exit 0
+            fi
+          done
+          echo "Commit data changes: failed to rebase/push after retries" >&2
+          exit 1
 
       - name: Stage Pages artifact
         run: |
