@@ -45,7 +45,7 @@
 | 60 ✅ | Crew: Cabin Boy Jenkins (Crandor) |  | Dragon Slayer I ❌ · Ghostspeak amulet / Morytania legs 2 |
 | 65 ✅ | Crew: Oarswoman Olga (Burgh de Rott) |  | In Aid of the Myreque ❌ |
 | 67 ✅ | Camphor hull: speed 2→2.5 | 59 ❌ | 16 large camphor hull parts · 600 adamantite nails · 25 swamp tar · 5 lead bars (~911k gp) |
-| 70 ❌ | Crew: Jittery Jim (Port Khazard) |  | None ✅ |
+| 70 ✅ | Crew: Jittery Jim (Port Khazard) |  | None ✅ |
 | 72 ❌ | Adamant helm (ship fitting): unlocks Southern hazardous waters | 59 ❌ | 3 camphor planks · 6 adamantite bars |
 | 73 ❌ | Mercenary shipwreck, needs adamant helm |  |  |
 <details>
@@ -71,13 +71,13 @@
 
 ## Progress to 73 (mercenary shipwreck)
 
-Sailing **69**. Pirate salvage unlocked at 64 (107.5 xp ea).
+Sailing **71**. Pirate salvage unlocked at 64 (107.5 xp ea).
 
 ```
-64 [█████████░░░░░░░░░░░] 73    48%
+64 [██████████████░░░░░░] 73    70%
 ```
 
-**48% of the way** (278,385 / 585,880 xp). **307,495 xp left** ≈ **2,860 pirate salvages** (~107.5 xp ea). At 72 build the adamant helm fitting to unlock the Mercenary shipwreck at 73.
+**70% of the way** (407,430 / 585,880 xp). **178,450 xp left** ≈ **1,660 pirate salvages** (~107.5 xp ea) ≈ **~920 nats**. At 72 build the adamant helm fitting to unlock the Mercenary shipwreck at 73.
 
 ---
 
