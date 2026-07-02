@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-06-30T19:59:38.395549+00:00",
+  "updated": "2026-07-02T16:01:18.291471+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -27,6 +27,11 @@
       },
       "Alchemical Hydra": {
         "obtained": [
+          {
+            "name": "Ikkle hydra",
+            "date": "2026-07-02",
+            "quantity": 1
+          },
           {
             "name": "Hydra tail",
             "date": "2026-06-25",
@@ -71,8 +76,8 @@
         "missing": [
           "Hydra's claw"
         ],
-        "obtained_count": 8,
-        "total_count": 9
+        "obtained_count": 9,
+        "total_count": 10
       },
       "Amoxliatl": {
         "obtained": [
@@ -2871,6 +2876,11 @@
       "All Pets": {
         "obtained": [
           {
+            "name": "Ikkle hydra",
+            "date": "2026-07-02",
+            "quantity": 1
+          },
+          {
             "name": "Phoenix",
             "date": "2025-02-09",
             "quantity": 1
@@ -2897,8 +2907,8 @@
           }
         ],
         "missing": [],
-        "obtained_count": 5,
-        "total_count": 5
+        "obtained_count": 6,
+        "total_count": 6
       },
       "Boat Paints": {
         "obtained": [
@@ -4219,11 +4229,9 @@
       },
       "Alchemical Hydra, All Pets": {
         "obtained": [],
-        "missing": [
-          "Ikkle hydra"
-        ],
+        "missing": [],
         "obtained_count": 0,
-        "total_count": 1
+        "total_count": 0
       },
       "Alchemical Hydra, Slayer": {
         "obtained": [],
@@ -5558,9 +5566,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 555,
-    "total_items": 1735,
+    "total_obtained": 556,
+    "total_items": 1736,
     "recent_items": [
+      {
+        "name": "Ikkle hydra",
+        "date": "2026-07-02",
+        "collection": "alchemical_hydra"
+      },
       {
         "name": "Hydra leather",
         "date": "2026-06-26",
@@ -5655,11 +5668,6 @@
         "name": "Mud battlestaff",
         "date": "2026-05-23",
         "collection": "dagannoth_kings"
-      },
-      {
-        "name": "Nihil shard",
-        "date": "2026-05-23",
-        "collection": "nex"
       }
     ],
     "source": "templeosrs"
