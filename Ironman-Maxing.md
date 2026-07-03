@@ -9,12 +9,11 @@
 | ⭐ **Maxing** | **Mining 97 → 99** | **99 cape progress** | **Max** |
 | ⭐ **Bossing** | **Doom** | **Eye of ayak** | **ToA** |
 | ⭐ **Bossing** | **Zulrah** | **Blowpipe** | **ToA** |
-| ⭐ **Bossing** | **ToA** | **Fang** | **ToA** |
-| ⭐ **Bossing** | **ToA** | **Lightbearer** | **ToA** |
-| ⭐ **Bossing** | **ToA** | **Ward** | **ToA** |
+| ⭐ **Bossing** | **ToA** | **Fang · Lightbearer · Ward** | **ToA** |
 | ⭐ **Bossing (Slayer)** | **Cerberus** | **Eternal crystal** | **Avernic treads** |
 | ⭐ **Bossing (Slayer)** | **Smoke Devils** | **Occult necklace** | **ToA** |
 | ⭐ **Bossing (Slayer)** | **Alchemical Hydra** | **Hydra claw** | **ToA** |
+| ⭐ **Bossing** | **Maggot King** | **Elder vantor fang · Crimson kisten** |  |
 | Bossing (Slayer) | K'ril | Hasta | ToA |
 | Bossing | Muspah (Ancient essence) | Saturated heart (imbued heart upgrade) |  |
 | Bossing | Hueycoatl | Dragon hunter wand |  |
