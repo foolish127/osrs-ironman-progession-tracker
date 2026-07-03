@@ -46,7 +46,7 @@
 | 65 ✅ | Crew: Oarswoman Olga (Burgh de Rott) |  | In Aid of the Myreque ❌ |
 | 67 ✅ | Camphor hull: speed 2→2.5 | 59 ❌ | 16 large camphor hull parts · 600 adamantite nails · 25 swamp tar · 5 lead bars (~911k gp) |
 | 70 ✅ | Crew: Jittery Jim (Port Khazard) |  | None ✅ |
-| 72 ❌ | Adamant helm (ship fitting): unlocks Southern hazardous waters | 59 ❌ | 3 camphor planks · 6 adamantite bars |
+| 72 ✅ | Adamant helm (ship fitting): unlocks Southern hazardous waters | 59 ❌ | 3 camphor planks · 6 adamantite bars |
 | 73 ❌ | Mercenary shipwreck, needs adamant helm |  |  |
 <details>
 <summary><strong>Late-game milestones (Sailing 74+)</strong>, collapsed (click to expand)</summary>
@@ -71,13 +71,13 @@
 
 ## Progress to 73 (mercenary shipwreck)
 
-Sailing **71**. Pirate salvage unlocked at 64 (107.5 xp ea).
+Sailing **72**. Pirate salvage unlocked at 64 (107.5 xp ea).
 
 ```
-64 [██████████████░░░░░░] 73    70%
+64 [████████████████░░░░] 73    84%
 ```
 
-**70% of the way** (407,430 / 585,880 xp). **178,450 xp left** ≈ **1,660 pirate salvages** (~107.5 xp ea) ≈ **~920 nats**. At 72 build the adamant helm fitting to unlock the Mercenary shipwreck at 73.
+**84% of the way** (492,242 / 585,880 xp). **93,638 xp left** ≈ **871 pirate salvages** (~107.5 xp ea) ≈ **~484 nats**. Build the adamant helm fitting now (72) to unlock the Mercenary shipwreck at 73.
 
 ---
 
@@ -99,6 +99,24 @@ Pirate salvage = 107.5 XP each (76 loot + 31.5 sort). Worth a nat (net after −
 | Total | | | ~2,966 nats | ~2,350,170 |
 
 Keep, do NOT alch: Mahogany repair kit (use for hull repairs), rune/dragon cannonballs (cannon ammo).
+
+---
+
+## Alching martial salvage drops (mercenary, Sailing 73)
+
+Martial salvage = 201.5 XP each (138 loot + 63.5 sort). Worth a nat (net after −180). Est. qty over Sailing 73 → 87 (~11,244 martial salvages):
+
+| Drop | High alch (−180) | Drop rate | Est. qty (73→87) | Total net GP |
+|---|---:|---:|---:|---:|
+| Green d'hide body | +2,152 | 100/2,440 | 461 | 992,072 |
+| Amulet of power | +1,933 | 200/2,440 | 922 | 1,782,226 |
+| Adamant longsword | +1,740 | 200/2,440 | 922 | 1,604,280 |
+| Adamant 2h sword | +1,740 | 100/2,440 | 461 | 802,140 |
+| Mithril longsword | +600 | 300/2,440 | 1,383 | 829,800 |
+| Rune longsword | +780 | 10/2,440 | 46 | 35,880 |
+| Total | | | ~4,195 nats | ~6,046,398 |
+
+Keep, do NOT alch: adamant/rune/dragon cannonballs (cannon ammo), mahogany/camphor/ironwood logs (hull parts). Skip alching mithril/adamant arrowtips, dart tips and arrows — below (or barely above) nat cost.
 
 ---
 

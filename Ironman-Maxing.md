@@ -90,7 +90,7 @@
 
 | Diary | Level | Reqs | Boost | Skill | Current | Status | Diff |
 |---|---|---|---|:---:|:---:|---|:---:|
-| Ardougne | Elite | 90 Agility (boost) | 85 | Agility | 79 | ❌ Not met | -6 |
+| Ardougne | Elite | 90 Agility (boost) | 85 | Agility | 80 | ❌ Not met | -5 |
 | Ardougne | Elite | 91 Smithing (boost) | 86 | Smithing | 84 | ❌ Not met | -2 |
 | ⭐ **Desert** | **Elite** | **91 Thieving** | **91** | **Thieving** | **89** | **❌ Not met** | **-2** |
 | ⭐ **Desert** | **Elite** | **85 Prayer** | **85** | **Prayer** | **84** | **❌ Not met** | **-1** |
@@ -103,9 +103,8 @@
 | ⭐ **Kourend** | **Elite** | **CoX** |  | **Raid** |  |  |  |
 | Morytania | Elite | 96 Fishing (boost) | 91 | Fishing | 88 | ❌ Not met | -3 |
 | Morytania | Elite | Full Barrows set |  | Barrows |  |  |  |
-| Western Prov. | Elite | 85 Agility (boost) | 80 | Agility | 79 | ❌ Not met | -1 |
 | Western Prov. | Elite | 1k Chompy Birds |  | Chompy |  |  |  |
-| Wilderness | Elite | 85 Mining / 90 Smithing (boost) | 80 / 85 | Mining / Smithing |  |  |  |
+| Wilderness | Elite | 85 Mining / 90 Smithing (boost) | 80 / 85 | Mining / Smithing | 98 / 84 | ❌ Not met | -1 |
 | Wilderness | Elite | Kill Callisto / Venenatis / Vet'ion |  | Wildy |  |  |  |
 
 ### Summary - by diary
@@ -118,9 +117,9 @@
 | Kandarin | 4 | Smithing / Pyre / Barb Assault / Stamina mix |
 | ⭐ **Kourend** | **1** | **CoX** |
 | Morytania | 2 | Fishing / Barrows |
-| Western Prov. | 2 | Agility / Chompy |
+| Western Prov. | 1 | Chompy |
 | Wilderness | 2 | Mining-Smithing / Bosses |
-| **Total** | **17** | |
+| **Total** | **16** | |
 
 ### Summary - by requirement
 
@@ -128,7 +127,7 @@
 
 | Requirement | Tasks | Levels short |
 |---|:---:|:---:|
-| Agility | 2 | +6 |
+| Agility | 1 | +5 |
 | Smithing | 2 | +2 |
 | Fishing | 1 | +3 |
 | Thieving | 1 | +2 |
@@ -143,7 +142,7 @@
 | Chompy - 1k kills | 1 | - |
 | CoX | 1 | - |
 | Wilderness bosses | 1 | - |
-| **Total** | **17** | |
+| **Total** | **16** | |
 
 ---
 
