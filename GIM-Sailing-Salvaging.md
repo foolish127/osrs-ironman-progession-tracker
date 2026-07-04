@@ -19,7 +19,7 @@
 | Facility | Current | Note |
 |---|---|---|
 | Ship | Sloop | 2 salvaging hook slots + crew |
-| Crew | Ada + Jobless Jim |  |
+| Crew | Ada + Jobless Jim + Jittery Jim |  |
 | Hull | Wooden *(default)* | Upgrade for speed |
 | Keel | Bronze *(default)* |  |
 | Mast & sails | Oak (linen sails) |  |
@@ -45,9 +45,8 @@
 | 60 ✅ | Crew: Cabin Boy Jenkins (Crandor) |  | Dragon Slayer I ❌ · Ghostspeak amulet / Morytania legs 2 |
 | 65 ✅ | Crew: Oarswoman Olga (Burgh de Rott) |  | In Aid of the Myreque ❌ |
 | 67 ✅ | Camphor hull: speed 2→2.5 | 59 ❌ | 16 large camphor hull parts · 600 adamantite nails · 25 swamp tar · 5 lead bars (~911k gp) |
-| 70 ✅ | Crew: Jittery Jim (Port Khazard) |  | None ✅ |
-| 72 ✅ | Adamant helm (ship fitting): unlocks Southern hazardous waters | 59 ❌ | 3 camphor planks · 6 adamantite bars |
-| 73 ❌ | Mercenary shipwreck, needs adamant helm |  |  |
+| 72 ✅ | Adamant helm (ship fitting): unlocks Southern hazardous waters | 59 ❌ (35) | 3 camphor planks (WC 66 ✅ · needs Troubled Tortugans for Great Conch) · 6 adamantite bars (Smithing 70 ❌ · 30) |
+| 73 ❌ | Mercenary shipwreck (needs Sailing 73 + adamant helm to reach tangled kelp) |  |  |
 <details>
 <summary><strong>Late-game milestones (Sailing 74+)</strong>, collapsed (click to expand)</summary>
 

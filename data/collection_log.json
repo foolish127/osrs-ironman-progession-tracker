@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-07-02T18:11:14.808824+00:00",
+  "updated": "2026-07-04T02:43:22.076700+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -53,6 +53,11 @@
             "quantity": 1
           },
           {
+            "name": "Hydra's heart",
+            "date": "2026-07-04",
+            "quantity": 1
+          },
+          {
             "name": "Dragon knife",
             "date": "2026-06-25",
             "quantity": 999
@@ -76,8 +81,8 @@
         "missing": [
           "Hydra's claw"
         ],
-        "obtained_count": 9,
-        "total_count": 10
+        "obtained_count": 10,
+        "total_count": 11
       },
       "Amoxliatl": {
         "obtained": [
@@ -3901,6 +3906,11 @@
             "quantity": 1
           },
           {
+            "name": "Hydra's heart",
+            "date": "2026-07-04",
+            "quantity": 1
+          },
+          {
             "name": "Mystic hat (light)",
             "date": "2025-12-31",
             "quantity": 12
@@ -4013,8 +4023,8 @@
           "Warped sceptre (uncharged)",
           "Wyvern visage"
         ],
-        "obtained_count": 39,
-        "total_count": 79
+        "obtained_count": 40,
+        "total_count": 80
       },
       "Tormented Demons": {
         "obtained": [
@@ -4235,11 +4245,9 @@
       },
       "Alchemical Hydra, Slayer": {
         "obtained": [],
-        "missing": [
-          "Hydra's heart"
-        ],
+        "missing": [],
         "obtained_count": 0,
-        "total_count": 1
+        "total_count": 0
       },
       "All Pets, Chompy Bird Hunting, Miscellaneous": {
         "obtained": [],
@@ -5566,9 +5574,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 556,
-    "total_items": 1736,
+    "total_obtained": 557,
+    "total_items": 1737,
     "recent_items": [
+      {
+        "name": "Hydra's heart",
+        "date": "2026-07-04",
+        "collection": "alchemical_hydra"
+      },
       {
         "name": "Ikkle hydra",
         "date": "2026-07-02",
@@ -5663,11 +5676,6 @@
         "name": "Noxious pommel",
         "date": "2026-05-23",
         "collection": "araxxor"
-      },
-      {
-        "name": "Mud battlestaff",
-        "date": "2026-05-23",
-        "collection": "dagannoth_kings"
       }
     ],
     "source": "templeosrs"
