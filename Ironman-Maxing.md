@@ -6,7 +6,7 @@
 
 | Goal | Reqs | Reward | For |
 |---|---|---|---|
-| ⭐ **Maxing** | **Mining 97 → 99** | **99 cape progress** | **Max** |
+| ⭐ **Maxing** | **Mining 98 → 99** | **99 cape progress** | **Max** |
 | ⭐ **Bossing** | **Doom** | **Eye of ayak** | **ToA** |
 | ⭐ **Bossing** | **Zulrah** | **Blowpipe** | **ToA** |
 | ⭐ **Bossing** | **ToA** | **Fang · Lightbearer · Ward** | **ToA** |
