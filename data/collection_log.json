@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-07-05T17:41:15.273776+00:00",
+  "updated": "2026-07-06T00:11:30.567491+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -862,6 +862,21 @@
         ],
         "obtained_count": 4,
         "total_count": 10
+      },
+      "Thermonuclear Smoke Devil": {
+        "obtained": [
+          {
+            "name": "Occult necklace",
+            "date": "2026-07-06",
+            "quantity": 1
+          }
+        ],
+        "missing": [
+          "Jar of smoke",
+          "Smoke battlestaff"
+        ],
+        "obtained_count": 1,
+        "total_count": 3
       },
       "Venenatis And Spindel": {
         "obtained": [
@@ -3876,6 +3891,11 @@
             "quantity": 4
           },
           {
+            "name": "Occult necklace",
+            "date": "2026-07-06",
+            "quantity": 1
+          },
+          {
             "name": "Dragon thrownaxe",
             "date": "2026-01-09",
             "quantity": 1823
@@ -4023,8 +4043,8 @@
           "Warped sceptre (uncharged)",
           "Wyvern visage"
         ],
-        "obtained_count": 40,
-        "total_count": 80
+        "obtained_count": 41,
+        "total_count": 81
       },
       "Tormented Demons": {
         "obtained": [
@@ -5392,15 +5412,6 @@
         "obtained_count": 0,
         "total_count": 1
       },
-      "Thermonuclear Smoke Devil": {
-        "obtained": [],
-        "missing": [
-          "Jar of smoke",
-          "Smoke battlestaff"
-        ],
-        "obtained_count": 0,
-        "total_count": 2
-      },
       "Thermonuclear Smoke Devil, All Pets": {
         "obtained": [],
         "missing": [
@@ -5411,11 +5422,9 @@
       },
       "Thermonuclear Smoke Devil, Slayer": {
         "obtained": [],
-        "missing": [
-          "Occult necklace"
-        ],
+        "missing": [],
         "obtained_count": 0,
-        "total_count": 1
+        "total_count": 0
       },
       "Tombs of Amascut, All Pets": {
         "obtained": [],
@@ -5574,9 +5583,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 557,
-    "total_items": 1737,
+    "total_obtained": 558,
+    "total_items": 1738,
     "recent_items": [
+      {
+        "name": "Occult necklace",
+        "date": "2026-07-06",
+        "collection": "smoke_devils"
+      },
       {
         "name": "Hydra's heart",
         "date": "2026-07-04",
@@ -5671,11 +5685,6 @@
         "name": "Warrior ring",
         "date": "2026-05-24",
         "collection": "dagannoth_kings"
-      },
-      {
-        "name": "Noxious pommel",
-        "date": "2026-05-23",
-        "collection": "araxxor"
       }
     ],
     "source": "templeosrs"
