@@ -11,7 +11,6 @@
 | ⭐ **Bossing** | **Zulrah** | **Blowpipe** | **ToA** |
 | ⭐ **Bossing** | **ToA** | **Fang · Lightbearer · Ward** | **ToA** |
 | ⭐ **Bossing (Slayer)** | **Cerberus** | **Eternal crystal** | **Avernic treads** |
-| ⭐ **Bossing (Slayer)** | **Smoke Devils** | **Occult necklace** | **ToA** |
 | ⭐ **Bossing (Slayer)** | **Alchemical Hydra** | **Hydra claw** | **ToA** |
 | ⭐ **Bossing** | **Maggot King** | **Elder vantor fang · Crimson kisten** |  |
 | Bossing (Slayer) | K'ril | Hasta | ToA |

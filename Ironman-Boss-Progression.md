@@ -1,7 +1,5 @@
 # FoolinSlays - Boss Progression Order
 
-Ordered so each phase's loot makes the next tier easier. Loot = the drops actually worth chasing (upgrades / raid uniques), not every table entry. Cross-referenced against the collection log; items already obtained are dropped.
-
 ---
 
 ## Phase 1: Now
@@ -9,13 +7,13 @@ Ordered so each phase's loot makes the next tier easier. Loot = the drops actual
 | # | Boss | Target loot |
 |:--:|---|---|
 | 1 | Cerberus | Eternal crystal |
-| 2 | ToA | Osmumten's fang · Lightbearer · Masori (m/b/c) · Elidinis' ward · Tumeken's shadow |
-| 3 | Zulrah | Tanzanite fang → Toxic blowpipe |
-| 4 | Hueycoatl | Dragon hunter wand · Tome of earth |
-| 5 | Doom of Mokhaiotl | Eye of ayak |
-| 6 | Phantom Muspah | Ancient essence → Saturated heart · Venator shard → Venator bow |
-| 7 | Maggot King | Elder vantor fang · Crimson kisten |
-| 8 | Alchemical Hydra | Hydra's claw → Dragon hunter lance |
+| 2 | Alchemical Hydra | Hydra's claw → Dragon hunter lance |
+| 3 | ToA | Osmumten's fang · Lightbearer · Masori (m/b/c) · Elidinis' ward · Tumeken's shadow |
+| 4 | Zulrah | Tanzanite fang → Toxic blowpipe |
+| 5 | Hueycoatl | Dragon hunter wand · Tome of earth |
+| 6 | Doom of Mokhaiotl | Eye of ayak |
+| 7 | Phantom Muspah | Ancient essence → Saturated heart · Venator shard → Venator bow |
+| 8 | Maggot King | Elder vantor fang · Crimson kisten |
 
 ---
 
@@ -32,9 +30,6 @@ Ordered so each phase's loot makes the next tier easier. Loot = the drops actual
 | 15 | Commander Zilyana | Armadyl crossbow (→ Zaryte crossbow) · Saradomin sword |
 | 16 | K'ril Tsutsaroth | Zamorakian spear → hasta · Staff of the dead |
 | 17 | Yama | Oathplate (helm/chest/legs) · Soulflame horn |
-
-*DT2 (9-12): Virtus is a shared 3-piece set (mask · robe top · robe bottom) from any of the four; the four axe pieces combine into the Soulreaper axe.*
-*GWD (13-16): all four drop godsword shards (3 shards → any godsword). Zilyana's Armadyl crossbow feeds the Zaryte crossbow at Nex.*
 
 ---
 
@@ -63,17 +58,3 @@ Ordered so each phase's loot makes the next tier easier. Loot = the drops actual
 | Kalphite Queen | Dragon chainbody · Dragon 2h sword |
 | Phosani's Nightmare | Harmonised/Eldritch orb (nightmare staff) · Inquisitor's (helm/hauberk/plateskirt) |
 | Corporeal Beast | Arcane / Elysian / Spectral sigil → blessed spirit shield |
-
-*Voidwaker: Artio + Spindel + Calvar'ion each drop one piece (hilt · gem · blade); combine into the Voidwaker, a top-tier spec weapon. Best Optional pick if you raid.*
-*Skotizo & Chaos Elemental: no BIS loot to chase — combat-achievement / pet only.*
-
----
-
-### Order notes
-
-- Blowpipe early (3): ranged workhorse for slayer, Colosseum, and every raid. Get it before the long grinds.
-- DT2 (9 to 12): ordered easiest (Duke) to hardest (Vardorvis); each gives a ring + Soulreaper axe piece + a Virtus shot.
-- GWD (13 to 16): Zilyana's Armadyl crossbow is a prerequisite for the Zaryte crossbow at Nex; K'ril's Zamorakian hasta is a strong crush weapon for Cerberus right now.
-- Nex (18) gears you for the raids: Torva + Zaryte crossbow, finishing melee BIS with Fang (ToA) and Rancour (already have).
-- CoX before the capes (19, then 20 to 22): Twisted bow is the single biggest ranged upgrade and trivialises Colosseum/Inferno.
-- Inferno last: wants blowpipe, tbow, and good prayer/gear all in hand first.
