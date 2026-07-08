@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-07-06T03:37:38.217281+00:00",
+  "updated": "2026-07-08T02:45:29.985925+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -278,6 +278,11 @@
       "Cerberus": {
         "obtained": [
           {
+            "name": "Eternal crystal",
+            "date": "2026-07-08",
+            "quantity": 1
+          },
+          {
             "name": "Pegasian crystal",
             "date": "2026-03-01",
             "quantity": 2
@@ -299,10 +304,9 @@
           }
         ],
         "missing": [
-          "Eternal crystal",
           "Jar of souls"
         ],
-        "obtained_count": 4,
+        "obtained_count": 5,
         "total_count": 6
       },
       "Chaos Elemental": {
@@ -5583,9 +5587,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 558,
+    "total_obtained": 559,
     "total_items": 1738,
     "recent_items": [
+      {
+        "name": "Eternal crystal",
+        "date": "2026-07-08",
+        "collection": "cerberus"
+      },
       {
         "name": "Occult necklace",
         "date": "2026-07-06",
@@ -5680,11 +5689,6 @@
         "name": "Thread of elidinis",
         "date": "2026-06-08",
         "collection": "tombs_of_amascut"
-      },
-      {
-        "name": "Warrior ring",
-        "date": "2026-05-24",
-        "collection": "dagannoth_kings"
       }
     ],
     "source": "templeosrs"
