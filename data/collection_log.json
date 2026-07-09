@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-07-08T19:26:17.764786+00:00",
+  "updated": "2026-07-09T09:40:18.165949+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -391,12 +391,12 @@
           {
             "name": "Mokhaiotl waystone",
             "date": "2026-02-10",
-            "quantity": 90
+            "quantity": 96
           },
           {
             "name": "Demon tear",
             "date": "2026-02-10",
-            "quantity": 38816
+            "quantity": 39776
           }
         ],
         "missing": [
@@ -404,6 +404,27 @@
         ],
         "obtained_count": 5,
         "total_count": 6
+      },
+      "Duke Sucellus": {
+        "obtained": [
+          {
+            "name": "Frozen tablet",
+            "date": "2026-07-09",
+            "quantity": 1
+          },
+          {
+            "name": "Awakener's orb",
+            "date": "2026-07-09",
+            "quantity": 1
+          }
+        ],
+        "missing": [
+          "Eye of the duke",
+          "Ice quartz",
+          "Magus vestige"
+        ],
+        "obtained_count": 2,
+        "total_count": 5
       },
       "The Fight Caves": {
         "obtained": [
@@ -611,6 +632,23 @@
         "missing": [],
         "obtained_count": 3,
         "total_count": 3
+      },
+      "The Leviathan": {
+        "obtained": [
+          {
+            "name": "Awakener's orb",
+            "date": "2026-07-09",
+            "quantity": 1
+          }
+        ],
+        "missing": [
+          "Leviathan's lure",
+          "Scarred tablet",
+          "Smoke quartz",
+          "Venator vestige"
+        ],
+        "obtained_count": 1,
+        "total_count": 5
       },
       "Moons Of Peril": {
         "obtained": [
@@ -882,6 +920,23 @@
         "obtained_count": 1,
         "total_count": 3
       },
+      "Vardorvis": {
+        "obtained": [
+          {
+            "name": "Awakener's orb",
+            "date": "2026-07-09",
+            "quantity": 1
+          }
+        ],
+        "missing": [
+          "Blood quartz",
+          "Executioner's axe head",
+          "Strangled tablet",
+          "Ultor vestige"
+        ],
+        "obtained_count": 1,
+        "total_count": 5
+      },
       "Venenatis And Spindel": {
         "obtained": [
           {
@@ -925,6 +980,23 @@
         ],
         "obtained_count": 1,
         "total_count": 4
+      },
+      "The Whisperer": {
+        "obtained": [
+          {
+            "name": "Awakener's orb",
+            "date": "2026-07-09",
+            "quantity": 1
+          }
+        ],
+        "missing": [
+          "Bellator vestige",
+          "Shadow quartz",
+          "Siren's staff",
+          "Sirenic tablet"
+        ],
+        "obtained_count": 1,
+        "total_count": 5
       },
       "Wintertodt": {
         "obtained": [
@@ -1065,7 +1137,7 @@
           {
             "name": "Cache of runes",
             "date": "2026-06-09",
-            "quantity": 5
+            "quantity": 6
           }
         ],
         "missing": [
@@ -4604,17 +4676,6 @@
         "obtained_count": 0,
         "total_count": 0
       },
-      "Duke Sucellus": {
-        "obtained": [],
-        "missing": [
-          "Eye of the duke",
-          "Frozen tablet",
-          "Ice quartz",
-          "Magus vestige"
-        ],
-        "obtained_count": 0,
-        "total_count": 4
-      },
       "Duke Sucellus, All Pets": {
         "obtained": [],
         "missing": [
@@ -4626,14 +4687,13 @@
       "Duke Sucellus, The Leviathan, Vardorvis, The Whisperer": {
         "obtained": [],
         "missing": [
-          "Awakener's orb",
           "Chromium ingot",
           "Virtus mask",
           "Virtus robe bottom",
           "Virtus robe top"
         ],
         "obtained_count": 0,
-        "total_count": 5
+        "total_count": 4
       },
       "Elder Chaos Druids": {
         "obtained": [],
@@ -5321,17 +5381,6 @@
         "obtained_count": 0,
         "total_count": 1
       },
-      "The Leviathan": {
-        "obtained": [],
-        "missing": [
-          "Leviathan's lure",
-          "Scarred tablet",
-          "Smoke quartz",
-          "Venator vestige"
-        ],
-        "obtained_count": 0,
-        "total_count": 4
-      },
       "The Leviathan, All Pets": {
         "obtained": [],
         "missing": [
@@ -5365,17 +5414,6 @@
         ],
         "obtained_count": 0,
         "total_count": 1
-      },
-      "The Whisperer": {
-        "obtained": [],
-        "missing": [
-          "Bellator vestige",
-          "Shadow quartz",
-          "Siren's staff",
-          "Sirenic tablet"
-        ],
-        "obtained_count": 0,
-        "total_count": 4
       },
       "The Whisperer, All Pets": {
         "obtained": [],
@@ -5492,17 +5530,6 @@
         "obtained_count": 0,
         "total_count": 10
       },
-      "Vardorvis": {
-        "obtained": [],
-        "missing": [
-          "Blood quartz",
-          "Executioner's axe head",
-          "Strangled tablet",
-          "Ultor vestige"
-        ],
-        "obtained_count": 0,
-        "total_count": 4
-      },
       "Vardorvis, All Pets": {
         "obtained": [],
         "missing": [
@@ -5587,9 +5614,19 @@
         "total_count": 1
       }
     },
-    "total_obtained": 559,
-    "total_items": 1738,
+    "total_obtained": 561,
+    "total_items": 1741,
     "recent_items": [
+      {
+        "name": "Frozen tablet",
+        "date": "2026-07-09",
+        "collection": "duke_sucellus"
+      },
+      {
+        "name": "Awakener's orb",
+        "date": "2026-07-09",
+        "collection": "duke_sucellus"
+      },
       {
         "name": "Eternal crystal",
         "date": "2026-07-08",
@@ -5678,16 +5715,6 @@
       {
         "name": "Jewel of amascut",
         "date": "2026-06-09",
-        "collection": "tombs_of_amascut"
-      },
-      {
-        "name": "Cache of runes",
-        "date": "2026-06-09",
-        "collection": "tombs_of_amascut"
-      },
-      {
-        "name": "Thread of elidinis",
-        "date": "2026-06-08",
         "collection": "tombs_of_amascut"
       }
     ],
