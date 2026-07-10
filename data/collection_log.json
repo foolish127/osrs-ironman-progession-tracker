@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-07-10T03:24:30.234400+00:00",
+  "updated": "2026-07-10T09:36:12.442860+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -744,6 +744,11 @@
       "Phantom Muspah": {
         "obtained": [
           {
+            "name": "Venator shard",
+            "date": "2026-07-10",
+            "quantity": 1
+          },
+          {
             "name": "Ancient icon",
             "date": "2026-07-10",
             "quantity": 1
@@ -761,13 +766,11 @@
           {
             "name": "Ancient essence",
             "date": "2026-03-27",
-            "quantity": 9898
+            "quantity": 17145
           }
         ],
-        "missing": [
-          "Venator shard"
-        ],
-        "obtained_count": 4,
+        "missing": [],
+        "obtained_count": 5,
         "total_count": 5
       },
       "Royal Titans": {
@@ -5626,9 +5629,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 564,
+    "total_obtained": 565,
     "total_items": 1741,
     "recent_items": [
+      {
+        "name": "Venator shard",
+        "date": "2026-07-10",
+        "collection": "phantom_muspah"
+      },
       {
         "name": "Ancient icon",
         "date": "2026-07-10",
@@ -5723,11 +5731,6 @@
         "name": "Aranea boots",
         "date": "2026-06-20",
         "collection": "slayer"
-      },
-      {
-        "name": "Eye of the corruptor",
-        "date": "2026-06-17",
-        "collection": "tombs_of_amascut"
       }
     ],
     "source": "templeosrs"
