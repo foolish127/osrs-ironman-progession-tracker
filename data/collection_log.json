@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-07-09T09:40:18.165949+00:00",
+  "updated": "2026-07-10T03:24:30.234400+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -415,7 +415,7 @@
           {
             "name": "Awakener's orb",
             "date": "2026-07-09",
-            "quantity": 1
+            "quantity": 2
           }
         ],
         "missing": [
@@ -638,7 +638,7 @@
           {
             "name": "Awakener's orb",
             "date": "2026-07-09",
-            "quantity": 1
+            "quantity": 2
           }
         ],
         "missing": [
@@ -744,18 +744,30 @@
       "Phantom Muspah": {
         "obtained": [
           {
+            "name": "Ancient icon",
+            "date": "2026-07-10",
+            "quantity": 1
+          },
+          {
+            "name": "Charged ice",
+            "date": "2026-07-10",
+            "quantity": 1
+          },
+          {
+            "name": "Frozen cache",
+            "date": "2026-07-10",
+            "quantity": 2
+          },
+          {
             "name": "Ancient essence",
             "date": "2026-03-27",
-            "quantity": 920
+            "quantity": 9898
           }
         ],
         "missing": [
-          "Ancient icon",
-          "Charged ice",
-          "Frozen cache",
           "Venator shard"
         ],
-        "obtained_count": 1,
+        "obtained_count": 4,
         "total_count": 5
       },
       "Royal Titans": {
@@ -925,7 +937,7 @@
           {
             "name": "Awakener's orb",
             "date": "2026-07-09",
-            "quantity": 1
+            "quantity": 2
           }
         ],
         "missing": [
@@ -986,7 +998,7 @@
           {
             "name": "Awakener's orb",
             "date": "2026-07-09",
-            "quantity": 1
+            "quantity": 2
           }
         ],
         "missing": [
@@ -5614,9 +5626,24 @@
         "total_count": 1
       }
     },
-    "total_obtained": 561,
+    "total_obtained": 564,
     "total_items": 1741,
     "recent_items": [
+      {
+        "name": "Ancient icon",
+        "date": "2026-07-10",
+        "collection": "phantom_muspah"
+      },
+      {
+        "name": "Charged ice",
+        "date": "2026-07-10",
+        "collection": "phantom_muspah"
+      },
+      {
+        "name": "Frozen cache",
+        "date": "2026-07-10",
+        "collection": "phantom_muspah"
+      },
       {
         "name": "Frozen tablet",
         "date": "2026-07-09",
@@ -5700,21 +5727,6 @@
       {
         "name": "Eye of the corruptor",
         "date": "2026-06-17",
-        "collection": "tombs_of_amascut"
-      },
-      {
-        "name": "Jewel of the sun",
-        "date": "2026-06-12",
-        "collection": "tombs_of_amascut"
-      },
-      {
-        "name": "Breach of the scarab",
-        "date": "2026-06-10",
-        "collection": "tombs_of_amascut"
-      },
-      {
-        "name": "Jewel of amascut",
-        "date": "2026-06-09",
         "collection": "tombs_of_amascut"
       }
     ],
