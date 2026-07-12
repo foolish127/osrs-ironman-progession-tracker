@@ -27,7 +27,7 @@
 | Salvaging hook | Steel ×2 | Both Sloop slots filled |
 | Cargo hold | Teak |  |
 | Salvaging station | Built |  |
-| Shipwreck | Pirate shipwreck | south of Pest Control |
+| Shipwreck | Mercenary shipwreck | Southern hazardous waters (adamant helm) |
 
 ---
 
@@ -46,7 +46,7 @@
 | 65 ✅ | Crew: Oarswoman Olga (Burgh de Rott) |  | In Aid of the Myreque ❌ |
 | 67 ✅ | Camphor hull: speed 2→2.5 | 59 ❌ | 16 large camphor hull parts · 600 adamantite nails · 25 swamp tar · 5 lead bars (~911k gp) |
 | 72 ✅ | Adamant helm (ship fitting): unlocks Southern hazardous waters | 59 ❌ (35) | 3 camphor planks (WC 66 ✅ · needs Troubled Tortugans for Great Conch) · 6 adamantite bars (Smithing 70 ❌ · 30) |
-| 73 ❌ | Mercenary shipwreck (needs Sailing 73 + adamant helm to reach tangled kelp) |  |  |
+| 73 ✅ | Mercenary shipwreck (needs Sailing 73 + adamant helm to reach tangled kelp) |  |  |
 <details>
 <summary><strong>Late-game milestones (Sailing 74+)</strong>, collapsed (click to expand)</summary>
 
@@ -68,36 +68,15 @@
 
 ---
 
-## Progress to 73 (mercenary shipwreck)
+## Progress to 80 (Fremennik shipwreck)
 
-Sailing **72**. Pirate salvage unlocked at 64 (107.5 xp ea).
+Sailing **73** ✅. Now running **martial salvage** from the Mercenary shipwreck (201.5 xp ea, Southern hazardous waters via the adamant helm).
 
 ```
-64 [████████████████░░░░] 73    84%
+73 [░░░░░░░░░░░░░░░░░░░░] 80    0%
 ```
 
-**84% of the way** (492,242 / 585,880 xp). **93,638 xp left** ≈ **871 pirate salvages** (~107.5 xp ea) ≈ **~484 nats**. Build the adamant helm fitting now (72) to unlock the Mercenary shipwreck at 73.
-
----
-
-## Alching pirate salvage drops
-
-Pirate salvage = 107.5 XP each (76 loot + 31.5 sort). Worth a nat (net after −180). Est. qty over Sailing 64 → 73 (~5,335 pirate salvages):
-
-| Drop | High alch (−180) | Drop rate | Est. qty (64→73) | Total net GP |
-|---|---:|---:|---:|---:|
-| Rune scimitar | +15,180 | 1/1,036 | 5 | 75,900 |
-| Diamond bracelet | +2,115 | 25/1,036 | 129 | 272,835 |
-| Diamond ring | +1,935 | 25/1,036 | 129 | 249,615 |
-| Ruby bracelet | +1,215 | 75/1,036 | 386 | 468,990 |
-| Emerald bracelet | +735 | 100/1,036 | 515 | 378,525 |
-| Oyster pearls | +660 | 100/1,036 | 515 | 339,900 |
-| Emerald ring | +585 | 50/1,036 | 257 | 150,345 |
-| Mithril scimitar | +444 | 100/1,036 | 515 | 228,660 |
-| Sapphire ring | +360 | 100/1,036 | 515 | 185,400 |
-| Total | | | ~2,966 nats | ~2,350,170 |
-
-Keep, do NOT alch: Mahogany repair kit (use for hull repairs), rune/dragon cannonballs (cannon ammo).
+**Just hit 73** (994,365 / 1,986,068 xp). **991,703 xp left** ≈ **~4,920 martial salvages** (~201.5 xp ea). Next salvage = the **Fremennik shipwreck (80)**, which needs the **eternal brazier** ship fitting (78, unlocks the Northern Ocean — schematic on Buccaneers' Haven, dock at 76). Build the brazier on the way.
 
 ---
 

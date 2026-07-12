@@ -7,10 +7,12 @@
 | Goal | Reqs | Reward | For |
 |---|---|---|---|
 | ⭐ **Maxing** | **Mining 98 → 99** | **99 cape progress** | **Max** |
+| **Smithing** | **84 → 86** | **+5 stew → 91: clears Ardougne + Kandarin + Wilderness Elite Smithing tasks** | **Diaries** |
+| **Prayer** | **84 → 85** | **Desert Elite (dragon bones @ Chaos Altar)** | **Diaries** |
+| **Thieving** | **89 → 91** | **Desert Elite; via elves (crystal shards) or Vyrewatch Sentinels (blood shard)** | **Diaries** |
 | ⭐ **Bossing** | **Doom** | **Eye of ayak** | **ToA** |
 | ⭐ **Bossing** | **Zulrah** | **Blowpipe** | **ToA** |
 | ⭐ **Bossing** | **ToA** | **Fang · Lightbearer · Ward** | **ToA** |
-| ⭐ **Bossing (Slayer)** | **Cerberus** | **Eternal crystal** | **Avernic treads** |
 | ⭐ **Bossing (Slayer)** | **Alchemical Hydra** | **Hydra claw** | **ToA** |
 | ⭐ **Bossing** | **Maggot King** | **Elder vantor fang · Crimson kisten** |  |
 | Bossing (Slayer) | K'ril | Hasta | ToA |
@@ -25,9 +27,66 @@
 
 ---
 
+## Boss Progression Order
+
+### Phase 1: Now
+
+| # | Boss | Target loot |
+|:--:|---|---|
+| 1 | Alchemical Hydra | Hydra's claw → Dragon hunter lance |
+| 2 | ToA | Osmumten's fang · Lightbearer · Masori (m/b/c) · Elidinis' ward · Tumeken's shadow |
+| 3 | Zulrah | Tanzanite fang → Toxic blowpipe |
+| 4 | Hueycoatl | Dragon hunter wand · Tome of earth |
+| 5 | Doom of Mokhaiotl | Eye of ayak |
+| 6 | Phantom Muspah | Ancient essence → Saturated heart · Venator shard → Venator bow |
+| 7 | Maggot King | Elder vantor fang · Crimson kisten |
+
+### Phase 2: Gear upgrades (next)
+
+| # | Boss | Target loot |
+|:--:|---|---|
+| 8 | Duke Sucellus | Magus vestige → Magus ring · Eye of the duke · Virtus |
+| 9 | The Leviathan | Bellator vestige → Bellator ring · Leviathan's lure · Virtus |
+| 10 | The Whisperer | Venator vestige → Venator ring · Siren's staff · Virtus |
+| 11 | Vardorvis | Ultor vestige → Ultor ring · Executioner's axe head · Virtus |
+| 12 | General Graardor | Bandos chestplate · Bandos tassets |
+| 13 | Kree'arra | Armadyl armour (helm/body/skirt) |
+| 14 | Commander Zilyana | Armadyl crossbow (→ Zaryte crossbow) · Saradomin sword |
+| 15 | K'ril Tsutsaroth | Zamorakian spear → hasta · Staff of the dead |
+| 16 | Yama | Oathplate (helm/chest/legs) · Soulflame horn |
+
+### Phase 3: Endgame raids & capes (long-term)
+
+| # | Boss | Target loot |
+|:--:|---|---|
+| 17 | Nex | Torva (helm/plate/legs) · Zaryte vambraces · Nihil horn → Zaryte crossbow · Ancient hilt |
+| 18 | CoX (Chambers of Xeric) | Twisted bow · Dragon hunter crossbow · Ancestral (h/t/b) · Dex/Arcane scrolls · Twisted buckler · Kodai insignia · Elder maul |
+| 19 | Fortis Colosseum | Dizana's quiver · Sunfire fanatic armour · Tonalztics of ralos |
+| 20 | ToB (Theatre of Blood) | Scythe of vitur · Ghrazi rapier · Sanguinesti staff · Justiciar · Avernic defender hilt |
+| 21 | Inferno (TzKal-Zuk) | Infernal cape |
+
+### Optional / lower priority
+
+| Boss | Target loot |
+|---|---|
+| Artio | Voidwaker hilt |
+| Spindel | Voidwaker gem |
+| Calvar'ion | Voidwaker blade |
+| Vorkath | Dragonbone necklace · Skeletal visage → Ancient wyvern shield |
+| Grotesque Guardians | Black tourmaline core → Guardian boots (upgrades Bandos boots) |
+| Dagannoth Kings | Archer ring · Seers ring |
+| Kalphite Queen | Dragon chainbody · Dragon 2h sword |
+| Phosani's Nightmare | Harmonised/Eldritch orb (nightmare staff) · Inquisitor's (helm/hauberk/plateskirt) |
+| Corporeal Beast | Arcane / Elysian / Spectral sigil → blessed spirit shield |
+
+---
+
 ## Slayer Tasks
 
-**Current slayer goals:** roll a Hydra task → kill **Alchemical Hydra** for the **Hydra claw** (→ Dragon hunter lance), and complete tasks to bank Slayer points. Spend points to **block Kalphites** on both Konar and Duradel.
+<details>
+<summary><strong>Task tables &amp; goals (Duradel &amp; Konar)</strong> — click to expand</summary>
+
+**Current slayer goals:** roll a Hydra task → kill **Alchemical Hydra** for the **Hydra claw** (→ Dragon hunter lance).
 
 **Then unblock Greater Demons** (Kalphites takes its block slot) and keep that task - use Greater Demon assignments for **Skotizo**, and eventually **K'ril Tsutsaroth** once **Lightbearer** (ToA) is unlocked.
 
@@ -38,11 +97,11 @@
 | Abyssal Demons | 200–250 | 6.6% |
 | Dark Beasts | 10–20 | 6.1% |
 | Araxytes | 200–250 | 5.5% |
-| ⭐ **Hellhounds** | **130–200** | **5.5%** |
+| Hellhounds | 130–200 | 5.5% |
 | Dagannoth | 130–200 | 5.0% |
 | 🚫 ~~Kalphites~~ (block) | 130–200 | 5.0% |
 | Nechryael | 200–250 | 5.0% |
-| ⭐ **Smoke Devils** | **130–200** | **5.0%** |
+| Smoke Devils | 130–200 | 5.0% |
 | Bloodveld | 200–250 | 4.4% |
 | Gargoyles | 130–200 | 4.4% |
 | Suqahs | 60–90 | 4.4% |
@@ -63,12 +122,12 @@
 |---|:---:|:---:|
 | ⭐ **Hydras** | **125–190** | **7.1%** |
 | Bloodveld | 200–250 | 6.4% |
-| 🚫 ~~Kalphites~~ (block) | 120–170 | 6.4% |
+| Kalphites | 120–170 | 6.4% |
 | Dagannoth | 120–170 | 5.7% |
-| ⭐ **Hellhounds** | **120–170** | **5.7%** |
+| Hellhounds | 120–170 | 5.7% |
 | ⭐ **Greater Demons** | **200–250** | **5.0%** |
 | Nechryael | 200–250 | 5.0% |
-| ⭐ **Smoke Devils** | **120–170** | **5.0%** |
+| Smoke Devils | 120–170 | 5.0% |
 | Aberrant Spectres | 120–170 | 4.3% |
 | Black Dragons | 10–15 | 4.3% |
 | Dust Devils | 200–250 | 4.3% |
@@ -83,28 +142,30 @@
 
 *Partial list - top of Konar's assignment table (lower-weight tasks below 2.8% not shown). Konar assigns a fixed location per task.*
 
+</details>
+
 ---
 
 ## Achievement Diaries - remaining Elite tasks
 
-| Diary | Level | Reqs | Boost | Skill | Current | Status | Diff |
-|---|---|---|---|:---:|:---:|---|:---:|
-| Ardougne | Elite | 90 Agility (boost) | 85 | Agility | 80 | ❌ Not met | -5 |
-| Ardougne | Elite | 91 Smithing (boost) | 86 | Smithing | 84 | ❌ Not met | -2 |
-| ⭐ **Desert** | **Elite** | **91 Thieving** | **91** | **Thieving** | **89** | **❌ Not met** | **-2** |
-| ⭐ **Desert** | **Elite** | **85 Prayer** | **85** | **Prayer** | **84** | **❌ Not met** | **-1** |
-| ⭐ **Desert** | **Elite** | **KQ Head** |  | **KQ** |  |  |  |
-| Falador | Elite | White 2H Sword |  | Black knights |  |  |  |
-| Kandarin | Elite | 90 Smithing (boost) | 85 | Smithing | 84 | ❌ Not met | -1 |
-| Kandarin | Elite | Chewed Bones (pyre) |  | Barb training |  |  |  |
-| Kandarin | Elite | Barbarian Assault Level 5 |  | Barb Assault |  |  |  |
-| Kandarin | Elite | Stamina Mix · 86 Herblore + Barb Herblore (Otto) | 86 | Herblore | 93 | ✅ Met | +7 |
-| ⭐ **Kourend** | **Elite** | **CoX** |  | **Raid** |  |  |  |
-| Morytania | Elite | 96 Fishing (boost) | 91 | Fishing | 88 | ❌ Not met | -3 |
-| Morytania | Elite | Full Barrows set |  | Barrows |  |  |  |
-| Western Prov. | Elite | 1k Chompy Birds |  | Chompy |  |  |  |
-| Wilderness | Elite | 85 Mining / 90 Smithing (boost) | 80 / 85 | Mining / Smithing | 98 / 84 | ❌ Not met | -1 |
-| Wilderness | Elite | Kill Callisto / Venenatis / Vet'ion |  | Wildy |  |  |  |
+| # | Diary | Level | Reqs | Boost | Skill | Current | Status | Diff |
+|:---:|---|---|---|---|:---:|:---:|---|:---:|
+| 1 | Ardougne | Elite | 90 Agility (boost) | 85 | Agility | 80 | ❌ Not met | -5 |
+| 2 | Ardougne | Elite | 91 Smithing (boost) | 86 | Smithing | 84 | ❌ Not met | -2 |
+| 3 | ⭐ **Desert** | **Elite** | **91 Thieving** | **91** | **Thieving** | **89** | **❌ Not met** | **-2** |
+| 4 | ⭐ **Desert** | **Elite** | **85 Prayer** | **85** | **Prayer** | **84** | **❌ Not met** | **-1** |
+| 5 | ⭐ **Desert** | **Elite** | **KQ Head** |  | **KQ** |  |  |  |
+| 6 | Falador | Elite | White 2H Sword |  | Black knights |  |  |  |
+| 7 | Kandarin | Elite | 90 Smithing (boost) | 85 | Smithing | 84 | ❌ Not met | -1 |
+| 8 | Kandarin | Elite | Chewed Bones (pyre) |  | Barb training |  |  |  |
+| 9 | Kandarin | Elite | Barbarian Assault Level 5 |  | Barb Assault |  |  |  |
+| 10 | Kandarin | Elite | Stamina Mix · 86 Herblore + Barb Herblore (Otto) | 86 | Herblore | 93 | ✅ Met | +7 |
+| 11 | ⭐ **Kourend** | **Elite** | **CoX** |  | **Raid** |  |  |  |
+| 12 | Morytania | Elite | 96 Fishing (boost) | 91 | Fishing | 88 | ❌ Not met | -3 |
+| 13 | Morytania | Elite | Full Barrows set |  | Barrows |  |  |  |
+| 14 | Western Prov. | Elite | 1k Chompy Birds |  | Chompy |  |  |  |
+| 15 | Wilderness | Elite | 85 Mining / 90 Smithing (boost) | 80 / 85 | Mining / Smithing | 98 / 84 | ❌ Not met | -1 |
+| 16 | Wilderness | Elite | Kill Callisto / Venenatis / Vet'ion |  | Wildy |  |  |  |
 
 ### Summary - by diary
 
