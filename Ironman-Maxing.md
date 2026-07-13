@@ -7,7 +7,7 @@
 | Goal | Reqs | Reward | For |
 |---|---|---|---|
 | ⭐ **Maxing** | **Mining 98 → 99** | **99 cape progress** | **Max** |
-| **Smithing** | **85 → 86** | **+5 stew → 91: clears Ardougne Elite Smithing (Kandarin done; Wilderness ready to boost at 85)** | **Diaries** |
+| **Smithing** | **85 → 86** | **+5 stew → 91: clears Ardougne Elite Smithing — last one (Kandarin + Wilderness done)** | **Diaries** |
 | **Prayer** | **84 → 85** | **Desert Elite (dragon bones @ Chaos Altar)** | **Diaries** |
 | **Thieving** | **89 → 91** | **Desert Elite; via elves (crystal shards) or Vyrewatch Sentinels (blood shard)** | **Diaries** |
 | ⭐ **Bossing** | **Doom** | **Eye of ayak** | **ToA** |
@@ -162,8 +162,7 @@
 | 11 | Morytania | Elite | 96 Fishing (boost) | 91 | Fishing | 88 | ❌ Not met | -3 |
 | 12 | Morytania | Elite | Full Barrows set |  | Barrows |  |  |  |
 | 13 | Western Prov. | Elite | 1k Chompy Birds |  | Chompy |  |  |  |
-| 14 | Wilderness | Elite | 85 Mining / 90 Smithing (boost) | 80 / 85 | Mining / Smithing | 98 / 85 | ✅ Met (boost) | 0 |
-| 15 | Wilderness | Elite | Kill Callisto / Venenatis / Vet'ion |  | Wildy |  |  |  |
+| 14 | Wilderness | Elite | Kill Callisto / Venenatis / Vet'ion |  | Wildy |  |  |  |
 
 ### Summary - by diary
 
@@ -176,8 +175,8 @@
 | ⭐ **Kourend** | **1** | **CoX** |
 | Morytania | 2 | Fishing / Barrows |
 | Western Prov. | 1 | Chompy |
-| Wilderness | 2 | Mining-Smithing / Bosses |
-| **Total** | **15** | |
+| Wilderness | 1 | Bosses |
+| **Total** | **14** | |
 
 ### Summary - by requirement
 
@@ -190,7 +189,6 @@
 | Fishing | 1 | +3 |
 | Thieving | 1 | +2 |
 | Prayer | 1 | +1 |
-| Mining / Smithing (Wildy) | 1 | met (85) |
 | Herblore - Stamina mix | 1 | met (93) |
 | KQ Head | 1 | - |
 | Barrows set | 1 | - |
@@ -200,7 +198,7 @@
 | Chompy - 1k kills | 1 | - |
 | CoX | 1 | - |
 | Wilderness bosses | 1 | - |
-| **Total** | **15** | |
+| **Total** | **14** | |
 
 ---
 
