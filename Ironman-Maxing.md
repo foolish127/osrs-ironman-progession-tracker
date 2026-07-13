@@ -7,7 +7,7 @@
 | Goal | Reqs | Reward | For |
 |---|---|---|---|
 | ⭐ **Maxing** | **Mining 98 → 99** | **99 cape progress** | **Max** |
-| **Smithing** | **84 → 86** | **+5 stew → 91: clears Ardougne + Kandarin + Wilderness Elite Smithing tasks** | **Diaries** |
+| **Smithing** | **85 → 86** | **+5 stew → 91: clears Ardougne Elite Smithing (Kandarin done; Wilderness ready to boost at 85)** | **Diaries** |
 | **Prayer** | **84 → 85** | **Desert Elite (dragon bones @ Chaos Altar)** | **Diaries** |
 | **Thieving** | **89 → 91** | **Desert Elite; via elves (crystal shards) or Vyrewatch Sentinels (blood shard)** | **Diaries** |
 | ⭐ **Bossing** | **Doom** | **Eye of ayak** | **ToA** |
@@ -16,7 +16,6 @@
 | ⭐ **Bossing (Slayer)** | **Alchemical Hydra** | **Hydra claw** | **ToA** |
 | ⭐ **Bossing** | **Maggot King** | **Elder vantor fang · Crimson kisten** |  |
 | Bossing (Slayer) | K'ril | Hasta | ToA |
-| Bossing | Muspah (Ancient essence) | Saturated heart (imbued heart upgrade) |  |
 | Bossing | Hueycoatl | Dragon hunter wand |  |
 | Agility | 112 Marks · 9–12 hrs @ Pollnivneach | Graceful |  |
 | Achievement Diary | 475 / 492 (96.5%) |  |  |
@@ -38,7 +37,7 @@
 | 3 | Zulrah | Tanzanite fang → Toxic blowpipe |
 | 4 | Hueycoatl | Dragon hunter wand · Tome of earth |
 | 5 | Doom of Mokhaiotl | Eye of ayak |
-| 6 | Phantom Muspah | Ancient essence → Saturated heart · Venator shard → Venator bow |
+| 6 | Phantom Muspah | Venator shard → Venator bow |
 | 7 | Maggot King | Elder vantor fang · Crimson kisten |
 
 ### Phase 2: Gear upgrades (next)
@@ -151,21 +150,20 @@
 | # | Diary | Level | Reqs | Boost | Skill | Current | Status | Diff |
 |:---:|---|---|---|---|:---:|:---:|---|:---:|
 | 1 | Ardougne | Elite | 90 Agility (boost) | 85 | Agility | 80 | ❌ Not met | -5 |
-| 2 | Ardougne | Elite | 91 Smithing (boost) | 86 | Smithing | 84 | ❌ Not met | -2 |
+| 2 | Ardougne | Elite | 91 Smithing (boost) | 86 | Smithing | 85 | ❌ Not met | -1 |
 | 3 | ⭐ **Desert** | **Elite** | **91 Thieving** | **91** | **Thieving** | **89** | **❌ Not met** | **-2** |
 | 4 | ⭐ **Desert** | **Elite** | **85 Prayer** | **85** | **Prayer** | **84** | **❌ Not met** | **-1** |
 | 5 | ⭐ **Desert** | **Elite** | **KQ Head** |  | **KQ** |  |  |  |
 | 6 | Falador | Elite | White 2H Sword |  | Black knights |  |  |  |
-| 7 | Kandarin | Elite | 90 Smithing (boost) | 85 | Smithing | 84 | ❌ Not met | -1 |
-| 8 | Kandarin | Elite | Chewed Bones (pyre) |  | Barb training |  |  |  |
-| 9 | Kandarin | Elite | Barbarian Assault Level 5 |  | Barb Assault |  |  |  |
-| 10 | Kandarin | Elite | Stamina Mix · 86 Herblore + Barb Herblore (Otto) | 86 | Herblore | 93 | ✅ Met | +7 |
-| 11 | ⭐ **Kourend** | **Elite** | **CoX** |  | **Raid** |  |  |  |
-| 12 | Morytania | Elite | 96 Fishing (boost) | 91 | Fishing | 88 | ❌ Not met | -3 |
-| 13 | Morytania | Elite | Full Barrows set |  | Barrows |  |  |  |
-| 14 | Western Prov. | Elite | 1k Chompy Birds |  | Chompy |  |  |  |
-| 15 | Wilderness | Elite | 85 Mining / 90 Smithing (boost) | 80 / 85 | Mining / Smithing | 98 / 84 | ❌ Not met | -1 |
-| 16 | Wilderness | Elite | Kill Callisto / Venenatis / Vet'ion |  | Wildy |  |  |  |
+| 7 | Kandarin | Elite | Chewed Bones (pyre) |  | Barb training |  |  |  |
+| 8 | Kandarin | Elite | Barbarian Assault Level 5 |  | Barb Assault |  |  |  |
+| 9 | Kandarin | Elite | Stamina Mix · 86 Herblore + Barb Herblore (Otto) | 86 | Herblore | 93 | ✅ Met | +7 |
+| 10 | ⭐ **Kourend** | **Elite** | **CoX** |  | **Raid** |  |  |  |
+| 11 | Morytania | Elite | 96 Fishing (boost) | 91 | Fishing | 88 | ❌ Not met | -3 |
+| 12 | Morytania | Elite | Full Barrows set |  | Barrows |  |  |  |
+| 13 | Western Prov. | Elite | 1k Chompy Birds |  | Chompy |  |  |  |
+| 14 | Wilderness | Elite | 85 Mining / 90 Smithing (boost) | 80 / 85 | Mining / Smithing | 98 / 85 | ✅ Met (boost) | 0 |
+| 15 | Wilderness | Elite | Kill Callisto / Venenatis / Vet'ion |  | Wildy |  |  |  |
 
 ### Summary - by diary
 
@@ -174,12 +172,12 @@
 | Ardougne | 2 | Agility / Smithing |
 | ⭐ **Desert** | **3** | **Thieving / Prayer / KQ Head** |
 | Falador | 1 | White 2H Sword |
-| Kandarin | 4 | Smithing / Pyre / Barb Assault / Stamina mix |
+| Kandarin | 3 | Pyre / Barb Assault / Stamina mix |
 | ⭐ **Kourend** | **1** | **CoX** |
 | Morytania | 2 | Fishing / Barrows |
 | Western Prov. | 1 | Chompy |
 | Wilderness | 2 | Mining-Smithing / Bosses |
-| **Total** | **16** | |
+| **Total** | **15** | |
 
 ### Summary - by requirement
 
@@ -188,11 +186,11 @@
 | Requirement | Tasks | Levels short |
 |---|:---:|:---:|
 | Agility | 1 | +5 |
-| Smithing | 2 | +2 |
+| Smithing | 1 | +1 (Ardougne 86) |
 | Fishing | 1 | +3 |
 | Thieving | 1 | +2 |
 | Prayer | 1 | +1 |
-| Mining / Smithing (Wildy) | 1 | +1 (Smithing) |
+| Mining / Smithing (Wildy) | 1 | met (85) |
 | Herblore - Stamina mix | 1 | met (93) |
 | KQ Head | 1 | - |
 | Barrows set | 1 | - |
@@ -202,7 +200,7 @@
 | Chompy - 1k kills | 1 | - |
 | CoX | 1 | - |
 | Wilderness bosses | 1 | - |
-| **Total** | **16** | |
+| **Total** | **15** | |
 
 ---
 
