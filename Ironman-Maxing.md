@@ -7,7 +7,6 @@
 | Goal | Reqs | Reward | For |
 |---|---|---|---|
 | ⭐ **Maxing** | **Mining 98 → 99** | **99 cape progress** | **Max** |
-| **Smithing** | **85 → 86** | **+5 stew → 91: clears Ardougne Elite Smithing — last one (Kandarin + Wilderness done)** | **Diaries** |
 | **Prayer** | **84 → 85** | **Desert Elite (dragon bones @ Chaos Altar)** | **Diaries** |
 | **Thieving** | **89 → 91** | **Desert Elite; via elves (crystal shards) or Vyrewatch Sentinels (blood shard)** | **Diaries** |
 | ⭐ **Bossing** | **Doom** | **Eye of ayak** | **ToA** |
@@ -150,25 +149,24 @@
 | # | Diary | Level | Reqs | Boost | Skill | Current | Status | Diff |
 |:---:|---|---|---|---|:---:|:---:|---|:---:|
 | 1 | Ardougne | Elite | 90 Agility (boost) | 85 | Agility | 80 | ❌ Not met | -5 |
-| 2 | Ardougne | Elite | 91 Smithing (boost) | 86 | Smithing | 85 | ❌ Not met | -1 |
-| 3 | ⭐ **Desert** | **Elite** | **91 Thieving** | **91** | **Thieving** | **89** | **❌ Not met** | **-2** |
-| 4 | ⭐ **Desert** | **Elite** | **85 Prayer** | **85** | **Prayer** | **84** | **❌ Not met** | **-1** |
-| 5 | ⭐ **Desert** | **Elite** | **KQ Head** |  | **KQ** |  |  |  |
-| 6 | Falador | Elite | White 2H Sword |  | Black knights |  |  |  |
-| 7 | Kandarin | Elite | Chewed Bones (pyre) |  | Barb training |  |  |  |
-| 8 | Kandarin | Elite | Barbarian Assault Level 5 |  | Barb Assault |  |  |  |
-| 9 | Kandarin | Elite | Stamina Mix · 86 Herblore + Barb Herblore (Otto) | 86 | Herblore | 93 | ✅ Met | +7 |
-| 10 | ⭐ **Kourend** | **Elite** | **CoX** |  | **Raid** |  |  |  |
-| 11 | Morytania | Elite | 96 Fishing (boost) | 91 | Fishing | 88 | ❌ Not met | -3 |
-| 12 | Morytania | Elite | Full Barrows set |  | Barrows |  |  |  |
-| 13 | Western Prov. | Elite | 1k Chompy Birds |  | Chompy |  |  |  |
-| 14 | Wilderness | Elite | Kill Callisto / Venenatis / Vet'ion |  | Wildy |  |  |  |
+| 2 | ⭐ **Desert** | **Elite** | **91 Thieving** | **91** | **Thieving** | **89** | **❌ Not met** | **-2** |
+| 3 | ⭐ **Desert** | **Elite** | **85 Prayer** | **85** | **Prayer** | **84** | **❌ Not met** | **-1** |
+| 4 | ⭐ **Desert** | **Elite** | **KQ Head** |  | **KQ** |  |  |  |
+| 5 | Falador | Elite | White 2H Sword |  | Black knights |  |  |  |
+| 6 | Kandarin | Elite | Chewed Bones (pyre) |  | Barb training |  |  |  |
+| 7 | Kandarin | Elite | Barbarian Assault Level 5 |  | Barb Assault |  |  |  |
+| 8 | Kandarin | Elite | Stamina Mix · 86 Herblore + Barb Herblore (Otto) | 86 | Herblore | 93 | ✅ Met | +7 |
+| 9 | ⭐ **Kourend** | **Elite** | **CoX** |  | **Raid** |  |  |  |
+| 10 | Morytania | Elite | 96 Fishing (boost) | 91 | Fishing | 88 | ❌ Not met | -3 |
+| 11 | Morytania | Elite | Full Barrows set |  | Barrows |  |  |  |
+| 12 | Western Prov. | Elite | 1k Chompy Birds |  | Chompy |  |  |  |
+| 13 | Wilderness | Elite | Kill Callisto / Venenatis / Vet'ion |  | Wildy |  |  |  |
 
 ### Summary - by diary
 
 | Diary | Count | Details |
 |---|:---:|---|
-| Ardougne | 2 | Agility / Smithing |
+| Ardougne | 1 | Agility |
 | ⭐ **Desert** | **3** | **Thieving / Prayer / KQ Head** |
 | Falador | 1 | White 2H Sword |
 | Kandarin | 3 | Pyre / Barb Assault / Stamina mix |
@@ -176,7 +174,7 @@
 | Morytania | 2 | Fishing / Barrows |
 | Western Prov. | 1 | Chompy |
 | Wilderness | 1 | Bosses |
-| **Total** | **14** | |
+| **Total** | **13** | |
 
 ### Summary - by requirement
 
@@ -185,7 +183,6 @@
 | Requirement | Tasks | Levels short |
 |---|:---:|:---:|
 | Agility | 1 | +5 |
-| Smithing | 1 | +1 (Ardougne 86) |
 | Fishing | 1 | +3 |
 | Thieving | 1 | +2 |
 | Prayer | 1 | +1 |
@@ -198,7 +195,7 @@
 | Chompy - 1k kills | 1 | - |
 | CoX | 1 | - |
 | Wilderness bosses | 1 | - |
-| **Total** | **14** | |
+| **Total** | **13** | |
 
 ---
 
