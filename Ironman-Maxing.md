@@ -155,12 +155,11 @@
 | 5 | Falador | Elite | White 2H Sword |  | Black knights |  |  |  |
 | 6 | Kandarin | Elite | Chewed Bones (pyre) |  | Barb training |  |  |  |
 | 7 | Kandarin | Elite | Barbarian Assault Level 5 |  | Barb Assault |  |  |  |
-| 8 | Kandarin | Elite | Stamina Mix · 86 Herblore + Barb Herblore (Otto) | 86 | Herblore | 93 | ✅ Met | +7 |
-| 9 | ⭐ **Kourend** | **Elite** | **CoX** |  | **Raid** |  |  |  |
-| 10 | Morytania | Elite | 96 Fishing (boost) | 91 | Fishing | 88 | ❌ Not met | -3 |
-| 11 | Morytania | Elite | Full Barrows set |  | Barrows |  |  |  |
-| 12 | Western Prov. | Elite | 1k Chompy Birds |  | Chompy |  |  |  |
-| 13 | Wilderness | Elite | Kill Callisto / Venenatis / Vet'ion |  | Wildy |  |  |  |
+| 8 | ⭐ **Kourend** | **Elite** | **CoX** |  | **Raid** |  |  |  |
+| 9 | Morytania | Elite | 96 Fishing (boost) | 91 | Fishing | 88 | ❌ Not met | -3 |
+| 10 | Morytania | Elite | Full Barrows set |  | Barrows |  |  |  |
+| 11 | Western Prov. | Elite | 1k Chompy Birds |  | Chompy |  |  |  |
+| 12 | Wilderness | Elite | Kill Callisto / Venenatis / Vet'ion |  | Wildy |  |  |  |
 
 ### Summary - by diary
 
@@ -169,12 +168,12 @@
 | Ardougne | 1 | Agility |
 | ⭐ **Desert** | **3** | **Thieving / Prayer / KQ Head** |
 | Falador | 1 | White 2H Sword |
-| Kandarin | 3 | Pyre / Barb Assault / Stamina mix |
+| Kandarin | 2 | Pyre / Barb Assault |
 | ⭐ **Kourend** | **1** | **CoX** |
 | Morytania | 2 | Fishing / Barrows |
 | Western Prov. | 1 | Chompy |
 | Wilderness | 1 | Bosses |
-| **Total** | **13** | |
+| **Total** | **12** | |
 
 ### Summary - by requirement
 
@@ -186,7 +185,6 @@
 | Fishing | 1 | +3 |
 | Thieving | 1 | +2 |
 | Prayer | 1 | +1 |
-| Herblore - Stamina mix | 1 | met (93) |
 | KQ Head | 1 | - |
 | Barrows set | 1 | - |
 | White 2H Sword | 1 | - |
@@ -195,7 +193,7 @@
 | Chompy - 1k kills | 1 | - |
 | CoX | 1 | - |
 | Wilderness bosses | 1 | - |
-| **Total** | **13** | |
+| **Total** | **12** | |
 
 ---
 
