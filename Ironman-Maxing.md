@@ -7,7 +7,6 @@
 | Goal | Reqs | Reward | For |
 |---|---|---|---|
 | ⭐ **Maxing** | **Mining 98 → 99** | **99 cape progress** | **Max** |
-| **Prayer** | **84 → 85** | **Desert Elite (dragon bones @ Chaos Altar)** | **Diaries** |
 | **Thieving** | **89 → 91** | **Desert Elite; via elves (crystal shards) or Vyrewatch Sentinels (blood shard)** | **Diaries** |
 | ⭐ **Bossing** | **Doom** | **Eye of ayak** | **ToA** |
 | ⭐ **Bossing** | **Zulrah** | **Blowpipe** | **ToA** |
@@ -150,30 +149,29 @@
 |:---:|---|---|---|---|:---:|:---:|---|:---:|
 | 1 | Ardougne | Elite | 90 Agility (boost) | 85 | Agility | 80 | ❌ Not met | -5 |
 | 2 | ⭐ **Desert** | **Elite** | **91 Thieving** | **91** | **Thieving** | **89** | **❌ Not met** | **-2** |
-| 3 | ⭐ **Desert** | **Elite** | **85 Prayer** | **85** | **Prayer** | **84** | **❌ Not met** | **-1** |
-| 4 | ⭐ **Desert** | **Elite** | **KQ Head** |  | **KQ** |  |  |  |
-| 5 | Falador | Elite | White 2H Sword |  | Black knights |  |  |  |
-| 6 | Kandarin | Elite | Chewed Bones (pyre) |  | Barb training |  |  |  |
-| 7 | Kandarin | Elite | Barbarian Assault Level 5 |  | Barb Assault |  |  |  |
-| 8 | ⭐ **Kourend** | **Elite** | **CoX** |  | **Raid** |  |  |  |
-| 9 | Morytania | Elite | 96 Fishing (boost) | 91 | Fishing | 88 | ❌ Not met | -3 |
-| 10 | Morytania | Elite | Full Barrows set |  | Barrows |  |  |  |
-| 11 | Western Prov. | Elite | 1k Chompy Birds |  | Chompy |  |  |  |
-| 12 | Wilderness | Elite | Kill Callisto / Venenatis / Vet'ion |  | Wildy |  |  |  |
+| 3 | ⭐ **Desert** | **Elite** | **KQ Head** |  | **KQ** |  |  |  |
+| 4 | Falador | Elite | White 2H Sword |  | Black knights |  |  |  |
+| 5 | Kandarin | Elite | Chewed Bones (pyre) |  | Barb training |  |  |  |
+| 6 | Kandarin | Elite | Barbarian Assault Level 5 |  | Barb Assault |  |  |  |
+| 7 | ⭐ **Kourend** | **Elite** | **CoX** |  | **Raid** |  |  |  |
+| 8 | Morytania | Elite | 96 Fishing (boost) | 91 | Fishing | 88 | ❌ Not met | -3 |
+| 9 | Morytania | Elite | Full Barrows set |  | Barrows |  |  |  |
+| 10 | Western Prov. | Elite | 1k Chompy Birds |  | Chompy |  |  |  |
+| 11 | Wilderness | Elite | Kill Callisto / Venenatis / Vet'ion |  | Wildy |  |  |  |
 
 ### Summary - by diary
 
 | Diary | Count | Details |
 |---|:---:|---|
 | Ardougne | 1 | Agility |
-| ⭐ **Desert** | **3** | **Thieving / Prayer / KQ Head** |
+| ⭐ **Desert** | **2** | **Thieving / KQ Head** |
 | Falador | 1 | White 2H Sword |
 | Kandarin | 2 | Pyre / Barb Assault |
 | ⭐ **Kourend** | **1** | **CoX** |
 | Morytania | 2 | Fishing / Barrows |
 | Western Prov. | 1 | Chompy |
 | Wilderness | 1 | Bosses |
-| **Total** | **12** | |
+| **Total** | **11** | |
 
 ### Summary - by requirement
 
@@ -184,7 +182,6 @@
 | Agility | 1 | +5 |
 | Fishing | 1 | +3 |
 | Thieving | 1 | +2 |
-| Prayer | 1 | +1 |
 | KQ Head | 1 | - |
 | Barrows set | 1 | - |
 | White 2H Sword | 1 | - |
@@ -193,7 +190,7 @@
 | Chompy - 1k kills | 1 | - |
 | CoX | 1 | - |
 | Wilderness bosses | 1 | - |
-| **Total** | **12** | |
+| **Total** | **11** | |
 
 ---
 
