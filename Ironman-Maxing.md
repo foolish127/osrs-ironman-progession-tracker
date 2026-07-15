@@ -16,7 +16,7 @@
 | Bossing (Slayer) | K'ril | Hasta | ToA |
 | Bossing | Hueycoatl | Dragon hunter wand |  |
 | Agility | 112 Marks · 9–12 hrs @ Pollnivneach | Graceful |  |
-| Achievement Diary | 475 / 492 (96.5%) |  |  |
+| Achievement Diary | 481 / 492 (97.8%) |  |  |
 | Prayer | Breakpoints (86 / 90 / 94 / 98) |  |  |
 | Herblore | Mastering Mixology | Reagent pouch | low priority |
 | Herblore | Mastering Mixology | Chugging barrel | low priority |
