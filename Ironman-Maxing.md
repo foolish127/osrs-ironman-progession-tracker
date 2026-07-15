@@ -28,53 +28,53 @@
 
 ### Phase 1: Now
 
-| # | Boss | Target loot |
-|:--:|---|---|
-| 1 | Alchemical Hydra | Hydra's claw → Dragon hunter lance |
-| 2 | ToA | Osmumten's fang · Lightbearer · Masori (m/b/c) · Elidinis' ward · Tumeken's shadow |
-| 3 | Zulrah | Tanzanite fang → Toxic blowpipe |
-| 4 | Hueycoatl | Dragon hunter wand · Tome of earth |
-| 5 | Doom of Mokhaiotl | Eye of ayak |
-| 6 | Phantom Muspah | Venator shard → Venator bow |
-| 7 | Maggot King | Elder vantor fang · Crimson kisten |
+| # | Boss | Target loot | Drops needed |
+|:--:|---|---|:--:|
+| 1 | Alchemical Hydra | Hydra's claw → Dragon hunter lance | 1 |
+| 2 | ToA | Osmumten's fang · Lightbearer · Masori (m/b/c) · Elidinis' ward · Tumeken's shadow | 7 |
+| 3 | Zulrah | Tanzanite fang → Toxic blowpipe | 1 |
+| 4 | Hueycoatl | Dragon hunter wand · Tome of earth | 2 |
+| 5 | Doom of Mokhaiotl | Eye of ayak | 1 |
+| 6 | Phantom Muspah | Venator shard → Venator bow | 3 |
+| 7 | Maggot King | Elder vantor fang · Crimson kisten | 2 |
 
 ### Phase 2: Gear upgrades (next)
 
-| # | Boss | Target loot |
-|:--:|---|---|
-| 8 | Duke Sucellus | Magus vestige → Magus ring · Eye of the duke · Virtus |
-| 9 | The Leviathan | Bellator vestige → Bellator ring · Leviathan's lure · Virtus |
-| 10 | The Whisperer | Venator vestige → Venator ring · Siren's staff · Virtus |
-| 11 | Vardorvis | Ultor vestige → Ultor ring · Executioner's axe head · Virtus |
-| 12 | General Graardor | Bandos chestplate · Bandos tassets |
-| 13 | Kree'arra | Armadyl armour (helm/body/skirt) |
-| 14 | Commander Zilyana | Armadyl crossbow (→ Zaryte crossbow) · Saradomin sword |
-| 15 | K'ril Tsutsaroth | Zamorakian spear → hasta · Staff of the dead |
-| 16 | Yama | Oathplate (helm/chest/legs) · Soulflame horn |
+| # | Boss | Target loot | Drops needed |
+|:--:|---|---|:--:|
+| 8 | Duke Sucellus | Magus vestige → Magus ring · Eye of the duke · Virtus (m/t/b) | 5 |
+| 9 | The Leviathan | Bellator vestige → Bellator ring · Leviathan's lure · Virtus (m/t/b) | 5 |
+| 10 | The Whisperer | Venator vestige → Venator ring · Siren's staff · Virtus (m/t/b) | 5 |
+| 11 | Vardorvis | Ultor vestige → Ultor ring · Executioner's axe head · Virtus (m/t/b) | 5 |
+| 12 | General Graardor | Bandos chestplate · Bandos tassets | 2 |
+| 13 | Kree'arra | Armadyl armour (helm/body/skirt) | 3 |
+| 14 | Commander Zilyana | Armadyl crossbow (→ Zaryte crossbow) · Saradomin sword | 2 |
+| 15 | K'ril Tsutsaroth | Zamorakian spear → hasta · Staff of the dead | 2 |
+| 16 | Yama | Oathplate (helm/chest/legs) · Soulflame horn | 4 |
 
 ### Phase 3: Endgame raids & capes (long-term)
 
-| # | Boss | Target loot |
-|:--:|---|---|
-| 17 | Nex | Torva (helm/plate/legs) · Zaryte vambraces · Nihil horn → Zaryte crossbow · Ancient hilt |
-| 18 | CoX (Chambers of Xeric) | Twisted bow · Dragon hunter crossbow · Ancestral (h/t/b) · Dex/Arcane scrolls · Twisted buckler · Kodai insignia · Elder maul |
-| 19 | Fortis Colosseum | Dizana's quiver · Sunfire fanatic armour · Tonalztics of ralos |
-| 20 | ToB (Theatre of Blood) | Scythe of vitur · Ghrazi rapier · Sanguinesti staff · Justiciar · Avernic defender hilt |
-| 21 | Inferno (TzKal-Zuk) | Infernal cape |
+| # | Boss | Target loot | Drops needed |
+|:--:|---|---|:--:|
+| 17 | Nex | Torva (helm/plate/legs) · Zaryte vambraces · Nihil horn → Zaryte crossbow · Ancient hilt | 6 |
+| 18 | CoX (Chambers of Xeric) | Twisted bow · Dragon hunter crossbow · Ancestral (h/t/b) · Dex/Arcane scrolls · Twisted buckler · Kodai insignia · Elder maul | 10 |
+| 19 | Fortis Colosseum | Dizana's quiver · Sunfire fanatic armour (h/c/c) · Tonalztics of ralos | 5 |
+| 20 | ToB (Theatre of Blood) | Scythe of vitur · Ghrazi rapier · Sanguinesti staff · Justiciar (f/c/l) · Avernic defender hilt | 7 |
+| 21 | Inferno (TzKal-Zuk) | Infernal cape | 1 |
 
 ### Optional / lower priority
 
-| Boss | Target loot |
-|---|---|
-| Artio | Voidwaker hilt |
-| Spindel | Voidwaker gem |
-| Calvar'ion | Voidwaker blade |
-| Vorkath | Dragonbone necklace · Skeletal visage → Ancient wyvern shield |
-| Grotesque Guardians | Black tourmaline core → Guardian boots (upgrades Bandos boots) |
-| Dagannoth Kings | Archer ring · Seers ring |
-| Kalphite Queen | Dragon chainbody · Dragon 2h sword |
-| Phosani's Nightmare | Harmonised/Eldritch orb (nightmare staff) · Inquisitor's (helm/hauberk/plateskirt) |
-| Corporeal Beast | Arcane / Elysian / Spectral sigil → blessed spirit shield |
+| Boss | Target loot | Drops needed |
+|---|---|:--:|
+| Artio | Voidwaker hilt | 1 |
+| Spindel | Voidwaker gem | 1 |
+| Calvar'ion | Voidwaker blade | 1 |
+| Vorkath | Dragonbone necklace · Skeletal visage → Ancient wyvern shield | 2 |
+| Grotesque Guardians | Black tourmaline core → Guardian boots (upgrades Bandos boots) | 1 |
+| Dagannoth Kings | Archer ring · Seers ring | 2 |
+| Kalphite Queen | KQ head | 1 |
+| Phosani's Nightmare | Harmonised/Eldritch orb (nightmare staff) · Inquisitor's (helm/hauberk/plateskirt) · Inquisitor's mace | 6 |
+| Corporeal Beast | Arcane / Elysian / Spectral sigil → blessed spirit shield | 3 |
 
 ---
 
