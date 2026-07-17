@@ -16,7 +16,7 @@
 | Bossing (Slayer) | K'ril | Hasta | ToA |
 | Bossing | Hueycoatl | Dragon hunter wand |  |
 | Agility | 112 Marks · 9–12 hrs @ Pollnivneach | Graceful |  |
-| Achievement Diary | 481 / 492 (97.8%) |  |  |
+| Achievement Diary | 482 / 492 (98.0%) |  |  |
 | Prayer | Breakpoints (86 / 90 / 94 / 98) |  |  |
 | Herblore | Mastering Mixology | Reagent pouch | low priority |
 | Herblore | Mastering Mixology | Chugging barrel | low priority |
@@ -153,11 +153,10 @@
 | 4 | Falador | Elite | White 2H Sword |  | Black knights |  |  |  |
 | 5 | Kandarin | Elite | Chewed Bones (pyre) |  | Barb training |  |  |  |
 | 6 | Kandarin | Elite | Barbarian Assault Level 5 |  | Barb Assault |  |  |  |
-| 7 | ⭐ **Kourend** | **Elite** | **CoX** |  | **Raid** |  |  |  |
-| 8 | Morytania | Elite | 96 Fishing (boost) | 91 | Fishing | 88 | ❌ Not met | -3 |
-| 9 | Morytania | Elite | Full Barrows set |  | Barrows |  |  |  |
-| 10 | Western Prov. | Elite | 1k Chompy Birds |  | Chompy |  |  |  |
-| 11 | Wilderness | Elite | Kill Callisto / Venenatis / Vet'ion |  | Wildy |  |  |  |
+| 7 | Morytania | Elite | 96 Fishing (boost) | 91 | Fishing | 88 | ❌ Not met | -3 |
+| 8 | Morytania | Elite | Full Barrows set |  | Barrows |  |  |  |
+| 9 | Western Prov. | Elite | 1k Chompy Birds |  | Chompy |  |  |  |
+| 10 | Wilderness | Elite | Kill Callisto / Venenatis / Vet'ion |  | Wildy |  |  |  |
 
 ### Summary - by diary
 
@@ -167,11 +166,10 @@
 | ⭐ **Desert** | **2** | **Thieving / KQ Head** |
 | Falador | 1 | White 2H Sword |
 | Kandarin | 2 | Pyre / Barb Assault |
-| ⭐ **Kourend** | **1** | **CoX** |
 | Morytania | 2 | Fishing / Barrows |
 | Western Prov. | 1 | Chompy |
 | Wilderness | 1 | Bosses |
-| **Total** | **11** | |
+| **Total** | **10** | |
 
 ### Summary - by requirement
 
@@ -188,9 +186,8 @@
 | Pyre (Chewed Bones) | 1 | - |
 | Barbarian Assault | 1 | - |
 | Chompy - 1k kills | 1 | - |
-| CoX | 1 | - |
 | Wilderness bosses | 1 | - |
-| **Total** | **11** | |
+| **Total** | **10** | |
 
 ---
 
