@@ -33,6 +33,7 @@ PET_NAMES = {
     'baron', 'butch', 'sol heredit', 'scurry', 'wisp', "lil'viathan",
     "lil' maiden", 'quetzin', 'nexling', 'puppadile', 'tektiny', 'vanguard',
     'vasa minirio', 'metamorphic dust', 'dom', 'bran',
+    'beef', 'maggot marquess',
 }
 
 # ---------------------------------------------------------------------------
