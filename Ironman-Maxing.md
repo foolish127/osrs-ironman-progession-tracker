@@ -6,7 +6,6 @@
 
 | Goal | Reqs | Reward | For |
 |---|---|---|---|
-| ⭐ **Maxing** | **Mining 98 → 99** | **99 cape progress** | **Max** |
 | **Thieving** | **89 → 91** | **Desert Elite; via elves (crystal shards) or Vyrewatch Sentinels (blood shard)** | **Diaries** |
 | ⭐ **Bossing** | **Doom** | **Eye of ayak** | **ToA** |
 | ⭐ **Bossing** | **Zulrah** | **Blowpipe** | **ToA** |
@@ -204,3 +203,5 @@
 | 7 | Woodcutting | 7 Jun 2026 |
 | 8 | Attack | 19 Jun 2026 |
 | 9 | Defence | 30 Jun 2026 |
+| 10 | Slayer | 4 Jul 2026 |
+| 11 | Mining | 20 Jul 2026 |
