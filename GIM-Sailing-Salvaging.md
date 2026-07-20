@@ -45,7 +45,7 @@
 | 60 ✅ | Crew: Cabin Boy Jenkins (Crandor) |  | Dragon Slayer I ❌ · Ghostspeak amulet / Morytania legs 2 |
 | 65 ✅ | Crew: Oarswoman Olga (Burgh de Rott) |  | In Aid of the Myreque ❌ |
 | 67 ✅ | Camphor hull: speed 2→2.5 | 59 ❌ | 16 large camphor hull parts · 600 adamantite nails · 25 swamp tar · 5 lead bars (~911k gp) |
-| 72 ✅ | Adamant helm (ship fitting): unlocks Southern hazardous waters | 59 ❌ (35) | 3 camphor planks (WC 66 ✅ · needs Troubled Tortugans for Great Conch) · 6 adamantite bars (Smithing 70 ❌ · 30) |
+| 72 ✅ | Adamant helm (ship fitting): unlocks Southern hazardous waters | 59 ❌ (35) | Con 59 ❌ (35) · 3 camphor planks (WC 66 ✅ · Troubled Tortugans ❌ [Sailing 45 ✅ quest] → Great Conch camphor trees · sawmill 2.5k ea or Plank Make) · 6 adamantite bars (Smithing 70 ❌ · 30) |
 | 73 ✅ | Mercenary shipwreck (needs Sailing 73 + adamant helm to reach tangled kelp) |  |  |
 <details>
 <summary><strong>Late-game milestones (Sailing 74+)</strong>, collapsed (click to expand)</summary>
