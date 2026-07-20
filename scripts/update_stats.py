@@ -10,7 +10,7 @@ from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 
-from osrs_config import BOSS_EXCLUSIONS, PET_NAMES
+from osrs_config import BOSS_EXCLUSIONS, BOSS_RENAMES, PET_NAMES
 from osrs_utils import (
     DATA_DIR,
     check_no_dropped_items,
@@ -707,7 +707,7 @@ def main():
                 elif "Clue Scrolls" in name:
                     clues[name] = {"count": score, "rank": a.get("rank", -1)}
                 else:
-                    bosses[name] = {"kc": score, "rank": a.get("rank", -1)}
+                    bosses[BOSS_RENAMES.get(name, name)] = {"kc": score, "rank": a.get("rank", -1)}
 
     if bosses:
         save_json(DATA_DIR / "bosses.json", {"rsn": RSN, "updated": now.isoformat(), "bosses": bosses})

@@ -17,6 +17,12 @@ BOSS_EXCLUSIONS = {
     "PvP Arena", "PvP Arena - Rank", "Colosseum Glory",
 }
 
+# Hiscores activity names to display under a nicer/canonical name.
+# The hiscores API reports Guardians of the Rift as "Rifts closed".
+BOSS_RENAMES = {
+    "Rifts closed": "Guardians of the Rift",
+}
+
 # Collection-log item names that are pets. Used to pull a pet list out of the
 # full collection log. Stored lowercase for case-insensitive matching.
 PET_NAMES = {
