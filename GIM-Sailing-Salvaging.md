@@ -23,11 +23,11 @@
 | Hull | Wooden *(default)* | Upgrade for speed |
 | Keel | Bronze *(default)* |  |
 | Mast & sails | Oak (linen sails) |  |
-| Helm | Bronze *(default)* | Adamant (72) required to unlock Mercenary shipwreck @ 73 |
+| Helm | Bronze *(default)* | Adamant helm (Sailing 72) required to unlock Mercenary shipwreck @ 73 — still blocked by Con 59 · Smithing 70 · Troubled Tortugans |
 | Salvaging hook | Steel ×2 | Both Sloop slots filled |
 | Cargo hold | Teak |  |
 | Salvaging station | Built |  |
-| Shipwreck | Mercenary shipwreck | Southern hazardous waters (adamant helm) |
+| Shipwreck | Mercenary shipwreck ❌ *(next unlock)* | Blocked — needs adamant helm (Con 59 · Smithing 70 · Troubled Tortugans). Southern hazardous waters |
 
 ---
 
@@ -46,7 +46,7 @@
 | 65 ✅ | Crew: Oarswoman Olga (Burgh de Rott) |  | In Aid of the Myreque ❌ |
 | 67 ✅ | Camphor hull: speed 2→2.5 | 59 ❌ | 16 large camphor hull parts · 600 adamantite nails · 25 swamp tar · 5 lead bars (~911k gp) |
 | 72 ✅ | Adamant helm (ship fitting): unlocks Southern hazardous waters | 59 ❌ (35) | Con 59 ❌ (35) · 3 camphor planks (WC 66 ✅ · Troubled Tortugans ❌ [Sailing 45 ✅ quest] → Great Conch camphor trees · sawmill 2.5k ea or Plank Make) · 6 adamantite bars (Smithing 70 ❌ · 30) |
-| 73 ✅ | Mercenary shipwreck (needs Sailing 73 + adamant helm to reach tangled kelp) |  |  |
+| 73 ✅ | Mercenary shipwreck ❌ — Sailing 73 ✅ but blocked by the adamant helm (Con 59 · Smithing 70 · Troubled Tortugans) to reach tangled kelp |  |  |
 <details>
 <summary><strong>Late-game milestones (Sailing 74+)</strong>, collapsed (click to expand)</summary>
 
@@ -70,17 +70,19 @@
 
 ## Progress to 80 (Fremennik shipwreck)
 
-Sailing **73** ✅. Now running **martial salvage** from the Mercenary shipwreck (201.5 xp ea, Southern hazardous waters via the adamant helm).
+Sailing **73** ✅, but the **Mercenary shipwreck is not yet accessible** — it needs the **adamant helm** ship fitting, still blocked by **Construction 59** (35), **Smithing 70** (30, for the 6 adamantite bars), and **Troubled Tortugans** (Great Conch → camphor planks). Once the helm is built, **martial salvage** runs at 201.5 xp ea in the Southern hazardous waters.
 
 ```
 73 [░░░░░░░░░░░░░░░░░░░░] 80    0%
 ```
 
-**Just hit 73** (994,365 / 1,986,068 xp). **991,703 xp left** ≈ **~4,920 martial salvages** (~201.5 xp ea). Next salvage = the **Fremennik shipwreck (80)**, which needs the **eternal brazier** ship fitting (78, unlocks the Northern Ocean — schematic on Buccaneers' Haven, dock at 76). Build the brazier on the way.
+**Just hit 73** (994,365 / 1,986,068 xp). **991,703 xp left** ≈ **~4,920 martial salvages** (~201.5 xp ea, *once the adamant helm unlocks Mercenary*). Next salvage unlock = **Mercenary** (build the adamant helm first), then the **Fremennik shipwreck (80)**, which needs the **eternal brazier** ship fitting (78, unlocks the Northern Ocean — schematic on Buccaneers' Haven, dock at 76). Build the brazier on the way.
 
 ---
 
 ## Alching martial salvage drops (mercenary, Sailing 73)
+
+*Planning for once the adamant helm is built and Mercenary is accessible — not yet active.*
 
 Martial salvage = 201.5 XP each (138 loot + 63.5 sort). Worth a nat (net after −180). Est. qty over Sailing 73 → 87 (~11,244 martial salvages):
 
