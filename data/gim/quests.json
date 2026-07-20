@@ -1,6 +1,6 @@
 {
   "rsn": "GIM Foolin",
-  "updated": "2026-07-20T17:48:33.927773+00:00",
+  "updated": "2026-07-20T20:14:44.054590+00:00",
   "quests": {
     "categories": {
       "Free-to-play": {
@@ -193,6 +193,10 @@
           },
           {
             "name": "Zogre Flesh Eaters",
+            "date": "2026-07-20"
+          },
+          {
+            "name": "Temple of the Eye",
             "date": "2026-07-20"
           }
         ],
@@ -451,10 +455,6 @@
           },
           {
             "name": "The Hand in the Sand",
-            "date": null
-          },
-          {
-            "name": "Temple of the Eye",
             "date": null
           },
           {
@@ -740,7 +740,12 @@
         ]
       },
       "Miniquests": {
-        "completed": [],
+        "completed": [
+          {
+            "name": "Enter the Abyss",
+            "date": "2026-07-20"
+          }
+        ],
         "not_completed": [
           {
             "name": "Alfred Grimhand's Barcrawl",
@@ -760,10 +765,6 @@
           },
           {
             "name": "The Enchanted Key",
-            "date": null
-          },
-          {
-            "name": "Enter the Abyss",
             "date": null
           },
           {
@@ -821,9 +822,9 @@
         ]
       }
     },
-    "total_completed": 32,
+    "total_completed": 33,
     "total_quests": 181,
-    "miniquests_completed": 0,
+    "miniquests_completed": 1,
     "total_miniquests": 19
   }
 }
