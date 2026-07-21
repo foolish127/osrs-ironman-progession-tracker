@@ -1,6 +1,6 @@
 {
   "rsn": "GIM Foolin",
-  "updated": "2026-07-20T15:27:47.002673+00:00",
+  "updated": "2026-07-21T12:57:56.789359+00:00",
   "collection_log": {
     "collections": {
       "Dagannoth Kings": {
@@ -46,6 +46,23 @@
         "missing": [],
         "obtained_count": 5,
         "total_count": 5
+      },
+      "Brimhaven Agility Arena": {
+        "obtained": [
+          {
+            "name": "Agility arena ticket",
+            "date": "2026-07-21",
+            "quantity": 1
+          },
+          {
+            "name": "Brimhaven voucher",
+            "date": "2026-07-21",
+            "quantity": 1
+          }
+        ],
+        "missing": [],
+        "obtained_count": 2,
+        "total_count": 2
       },
       "All Pets": {
         "obtained": [
@@ -224,9 +241,19 @@
         "total_count": 1
       }
     },
-    "total_obtained": 28,
+    "total_obtained": 30,
     "total_items": 1706,
     "recent_items": [
+      {
+        "name": "Agility arena ticket",
+        "date": "2026-07-21",
+        "collection": "brimhaven_agility_arena"
+      },
+      {
+        "name": "Brimhaven voucher",
+        "date": "2026-07-21",
+        "collection": "brimhaven_agility_arena"
+      },
       {
         "name": "Mime top",
         "date": "2026-07-20",
@@ -314,16 +341,6 @@
       },
       {
         "name": "Fox whistle",
-        "date": "2026-06-28",
-        "collection": "forestry"
-      },
-      {
-        "name": "Log basket",
-        "date": "2026-06-28",
-        "collection": "forestry"
-      },
-      {
-        "name": "Sturdy beehive parts",
         "date": "2026-06-28",
         "collection": "forestry"
       }
