@@ -1,6 +1,6 @@
 {
   "rsn": "GIM Foolin",
-  "updated": "2026-07-21T12:57:56.789359+00:00",
+  "updated": "2026-07-22T08:29:52.796496+00:00",
   "collection_log": {
     "collections": {
       "Dagannoth Kings": {
@@ -52,17 +52,41 @@
           {
             "name": "Agility arena ticket",
             "date": "2026-07-21",
-            "quantity": 1
+            "quantity": 10
           },
           {
             "name": "Brimhaven voucher",
             "date": "2026-07-21",
-            "quantity": 1
+            "quantity": 10
           }
         ],
         "missing": [],
         "obtained_count": 2,
         "total_count": 2
+      },
+      "Fishing Trawler": {
+        "obtained": [
+          {
+            "name": "Angler boots",
+            "date": "2026-07-22",
+            "quantity": 1
+          }
+        ],
+        "missing": [],
+        "obtained_count": 1,
+        "total_count": 1
+      },
+      "Aerial Fishing": {
+        "obtained": [
+          {
+            "name": "Angler boots",
+            "date": "2026-07-22",
+            "quantity": 1
+          }
+        ],
+        "missing": [],
+        "obtained_count": 1,
+        "total_count": 1
       },
       "All Pets": {
         "obtained": [
@@ -189,7 +213,7 @@
           {
             "name": "Dragon cannonball",
             "date": "2026-07-02",
-            "quantity": 2
+            "quantity": 4
           },
           {
             "name": "Boat bottle (empty)",
@@ -199,7 +223,7 @@
           {
             "name": "Facility bottle (empty)",
             "date": "2026-06-29",
-            "quantity": 1
+            "quantity": 18
           }
         ],
         "missing": [],
@@ -241,9 +265,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 30,
+    "total_obtained": 31,
     "total_items": 1706,
     "recent_items": [
+      {
+        "name": "Angler boots",
+        "date": "2026-07-22",
+        "collection": "fishing_trawler"
+      },
       {
         "name": "Agility arena ticket",
         "date": "2026-07-21",
@@ -338,11 +367,6 @@
         "name": "Rock golem",
         "date": "2026-06-28",
         "collection": "mining"
-      },
-      {
-        "name": "Fox whistle",
-        "date": "2026-06-28",
-        "collection": "forestry"
       }
     ],
     "source": "templeosrs"
