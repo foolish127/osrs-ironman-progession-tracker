@@ -1,5 +1,32 @@
 # Sailing
 
+## To-do - Adamant helm (unlocks Mercenary wreck)
+
+Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern hazardous waters). Sailing 72 ✅. Blockers:
+
+| Blocker | Current | Target | Gap |
+|---|:---:|:---:|:---:|
+| Construction | 35 | 59 | +24 |
+| Smithing | 30 | 70 | +40 |
+| Troubled Tortugans (quest) | ❌ | done | see below |
+
+**Materials to build:** 3 camphor planks · 6 adamantite bars
+
+- **Camphor planks** — via Troubled Tortugans → Great Conch camphor trees (WC 66 ✅) → sawmill 2.5k ea *or* Plank Make
+- **Adamantite bars** — smelt at Smithing 70 (solo GIM, must self-smith)
+
+**Troubled Tortugans quest reqs** (Sailing 45 ✅):
+
+| Skill | Current | Target | Gap |
+|---|:---:|:---:|:---:|
+| Slayer | 20 | 51 | +31 |
+| Hunter | 9 | 45 | +36 |
+| Construction | 35 | 48 | +13 |
+
+*Construction 48 (Tortugans) is a stepping stone to the 59 needed for the helm itself.*
+
+---
+
 ## Current facilities
 
 | Facility | Current | Note |
