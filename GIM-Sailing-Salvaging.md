@@ -1,19 +1,5 @@
 # Sailing
 
-## To-do - Gem storage
-
-| Task | Crafting | Materials | Holds |
-|---|:---:|---|---|
-| Make gem satchel | 39 | gem pouch · 1 bolt of canvas · 1 silk · needle & thread | 10 each (30 uncut gems) |
-
-**Bolt breakdown** (made at a loom):
-
-| Bolt | Crafting | Made from | Yarn from |
-|---|:---:|---|---|
-| Bolt of canvas | 39 | 2 hemp yarn | hemp ❌ Farming 37 (spinning wheel) |
-
----
-
 ## Current facilities
 
 | Facility | Current | Note |
@@ -22,7 +8,7 @@
 | Crew | Ada + Jobless Jim + Jittery Jim |  |
 | Hull | Wooden *(default)* | Upgrade for speed |
 | Keel | Bronze *(default)* |  |
-| Mast & sails | Oak (linen sails) |  |
+| Mast & sails | Mahogany (canvas sails) |  |
 | Helm | Bronze *(default)* | Adamant helm (Sailing 72) required to unlock Mercenary shipwreck @ 73 — still blocked by Con 59 · Smithing 70 · Troubled Tortugans |
 | Salvaging hook | Steel ×2 | Both Sloop slots filled |
 | Cargo hold | Teak |  |
