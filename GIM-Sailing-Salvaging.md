@@ -20,6 +20,12 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 
 *Construction 48 (Tortugans) is a stepping stone to the 59 needed for the helm itself.*
 
+**Plan:**
+- **Construction** → Mahogany Homes (+ some quests)
+- **Smithing** → Giant's Foundry (+ some quests)
+- **Hunter** → Hunter Rumours (+ some quests)
+- **Slayer** → slayer tasks (+ some quests)
+
 ---
 
 ## Current facilities
