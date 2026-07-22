@@ -26,25 +26,52 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 - **Hunter** → Hunter Rumours (+ some quests)
 - **Slayer** → slayer tasks (+ some quests)
 
-### Quest plan
+### Quest plan (validated vs current stats)
 
-Nearly all still to-do = big free XP. ⭐ = do first. (Reqs on the big ones not yet verified.)
+**Reality check:** most XP quests are gated behind the very skills you're training, so they're **supplements, not shortcuts**. The training methods (Mahogany Homes / Giant's Foundry / slayer tasks / Hunter Rumours) do the heavy lifting. Grouped by what's actually accessible:
 
-**Tier 1 — multi-skill (best value):**
+**✅ Do now — free XP, no training:**
 
-| Quest | Reward | Note |
+| Quest | Reward | Prereq to start |
 |---|---|---|
-| Perilous Moons | 40,000 Slayer · 5,000 Hunter · 5,000 Con | ⚠️ **requires 48 Slayer** — capstone, not an opener; needs Twilight's Promise first |
-| Defender of Varrock | 15,000 Smithing · 15,000 Hunter | mid-level quest chain |
-| At First Light | 4,500 Hunter · 800 Con | newer, low-req |
+| Elemental Workshop I → II | 5,000 + 7,500 Smithing | EW I then EW II |
+| The Giant Dwarf | 2,500 Smithing | none |
+| Getting Ahead | 3,200 Con | none |
+| The Fremennik Trials → Isles | 5,000 Con | Trials (doable now) → Isles |
+| A Porcine of Interest | 1,000 Slayer | none |
 
-**Slayer** (20→51 ≈ 107k): grind **20→48 first** via slayer tasks + quests — Path of Glouphrie 20k · The Heart of Darkness 8k · Wanted! 5k · Royal Trouble 5k · Lair of Tarn Razorlor 5k · The General's Shadow 2k · A Porcine of Interest 1k · RFD–Mountain Dwarf 1k (≈ 47k → ~level 44, tasks close to 48). **Then Perilous Moons** (48-req) adds 40k → well past 51 (+5k Hunter, +5k Con as bonus).
+**🔜 Short chain — one trivial quest or +1 level first:**
 
-**Smithing** (30→70 ≈ 724k — Giant's Foundry does the bulk): Dragon Slayer II 80k · Elemental Workshop I+II 12.5k · Cabin Fever 7k · Devious Minds 6.5k · Between a Rock 5k · The Red Reef 5k · The Giant Dwarf 2.5k · Heroes' Quest 2.3k. *(Knight's Sword 12.7k + Sleeping Giants 6k already banked ✅)*
+| Quest | Reward | Unlock |
+|---|---|---|
+| Wanted! | 5,000 Slayer | Goblin Diplomacy → The Lost Tribe |
+| RFD: Freeing the Mountain Dwarf | 1,000 Slayer | Cook's Assistant → Another Cook's Quest + Fishing Contest |
+| Cold War | 1,500 Con | **Hunter 10** (1 level!) |
+| The Ascent of Arceuus | 1,500 Hunter | Client of Kourend + **Hunter 12** |
 
-**Construction** (35→59 ≈ 225k — Mahogany Homes does the bulk): Making Friends with My Arm 10k · The Fremennik Isles 5k · Getting Ahead 3.2k · Cold War 1.5k.
+**🔒 Capstones — do once that skill is already near its target:**
 
-**Hunter** (9→45 ≈ 60k — Rumours does the bulk): Eagles' Peak 2.5k · The Ascent of Arceuus 1.5k. *(+ Tier-1 Hunter above: 24.5k)*
+| Quest | Reward | Gate |
+|---|---|---|
+| Perilous Moons | 40k Slayer · 5k Hunter · 5k Con | Slayer 48, Hunter 20 (+ Twilight's Promise) |
+| The Heart of Darkness | 8,000 Slayer | Slayer 48, Thieving 48, Agility 46 |
+| The Path of Glouphrie | 20,000 Slayer | Slayer 56, Thieving 56, Agility 45 |
+| Between a Rock... | 5,000 Smithing | Smithing 50 (+ Dwarf Cannon, Fishing Contest) |
+| The Red Reef | 5,000 Smithing | Smithing 48 + Troubled Tortugans |
+| Heroes' Quest | 2,275 Smithing | Cooking 53 + Shield of Arrav + Dragon Slayer I |
+| Eagles' Peak / At First Light | 2,500 / 4,500 Hunter | Hunter 27 / Hunter 46 |
+
+**❌ Skip for now — deep chains / far-off reqs:**
+- **Dragon Slayer II** (80k Smithing) — 6 skills short, 200 QP, ~19-quest chain
+- **Defender of Varrock** (15k Smithing · 15k Hunter) — Smithing 55, Hunter 52, 8 prereqs (incl. What Lies Below → Runecraft 35)
+- **Making Friends with My Arm** (10k Con) — Agility 68 + Swan Song (100 QP) chain
+- **Cabin Fever** (7k Smi, Smithing 50 + Rum Deal) · **Devious Minds** (6.5k Smi, Smithing 65 + Runecraft 50) · **Royal Trouble** / **Lair of Tarn** (5k Slayer, Slayer 40 + chains) · **The General's Shadow** (2k Slayer, Desert Treasure I line)
+
+**Realistic quest XP toward each grind (accessible tier):**
+- **Smithing** ~15k now (EW I+II, Giant Dwarf); rest = Giant's Foundry *(Knight's Sword 12.7k + Sleeping Giants 6k already banked ✅)*
+- **Construction** ~10k now (Getting Ahead, Fremennik Isles, Cold War); rest = Mahogany Homes
+- **Slayer** ~7k now (Porcine, Wanted!, RFD-MD); rest = tasks → then Heart of Darkness / Perilous Moons capstones blow past 51
+- **Hunter** ~nothing until trained; Rumours does 9→45, then Perilous Moons overshoots
 
 ---
 
