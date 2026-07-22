@@ -26,6 +26,26 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 - **Hunter** → Hunter Rumours (+ some quests)
 - **Slayer** → slayer tasks (+ some quests)
 
+### Quest plan
+
+Nearly all still to-do = big free XP. ⭐ = do first. (Reqs on the big ones not yet verified.)
+
+**Tier 1 — multi-skill (best value):**
+
+| Quest | Reward | Note |
+|---|---|---|
+| Perilous Moons | 40,000 Slayer · 5,000 Hunter · 5,000 Con | ⚠️ **requires 48 Slayer** — capstone, not an opener; needs Twilight's Promise first |
+| Defender of Varrock | 15,000 Smithing · 15,000 Hunter | mid-level quest chain |
+| At First Light | 4,500 Hunter · 800 Con | newer, low-req |
+
+**Slayer** (20→51 ≈ 107k): grind **20→48 first** via slayer tasks + quests — Path of Glouphrie 20k · The Heart of Darkness 8k · Wanted! 5k · Royal Trouble 5k · Lair of Tarn Razorlor 5k · The General's Shadow 2k · A Porcine of Interest 1k · RFD–Mountain Dwarf 1k (≈ 47k → ~level 44, tasks close to 48). **Then Perilous Moons** (48-req) adds 40k → well past 51 (+5k Hunter, +5k Con as bonus).
+
+**Smithing** (30→70 ≈ 724k — Giant's Foundry does the bulk): Dragon Slayer II 80k · Elemental Workshop I+II 12.5k · Cabin Fever 7k · Devious Minds 6.5k · Between a Rock 5k · The Red Reef 5k · The Giant Dwarf 2.5k · Heroes' Quest 2.3k. *(Knight's Sword 12.7k + Sleeping Giants 6k already banked ✅)*
+
+**Construction** (35→59 ≈ 225k — Mahogany Homes does the bulk): Making Friends with My Arm 10k · The Fremennik Isles 5k · Getting Ahead 3.2k · Cold War 1.5k.
+
+**Hunter** (9→45 ≈ 60k — Rumours does the bulk): Eagles' Peak 2.5k · The Ascent of Arceuus 1.5k. *(+ Tier-1 Hunter above: 24.5k)*
+
 ---
 
 ## Current facilities
