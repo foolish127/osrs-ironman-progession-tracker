@@ -1,6 +1,6 @@
 {
   "rsn": "GIM Foolin",
-  "updated": "2026-07-22T08:29:52.796496+00:00",
+  "updated": "2026-07-23T19:18:37.868677+00:00",
   "collection_log": {
     "collections": {
       "Dagannoth Kings": {
@@ -67,17 +67,15 @@
       "Fishing Trawler": {
         "obtained": [
           {
-            "name": "Angler boots",
-            "date": "2026-07-22",
+            "name": "Angler hat",
+            "date": "2026-07-23",
             "quantity": 1
-          }
-        ],
-        "missing": [],
-        "obtained_count": 1,
-        "total_count": 1
-      },
-      "Aerial Fishing": {
-        "obtained": [
+          },
+          {
+            "name": "Angler top",
+            "date": "2026-07-23",
+            "quantity": 1
+          },
           {
             "name": "Angler boots",
             "date": "2026-07-22",
@@ -85,8 +83,30 @@
           }
         ],
         "missing": [],
-        "obtained_count": 1,
-        "total_count": 1
+        "obtained_count": 3,
+        "total_count": 3
+      },
+      "Aerial Fishing": {
+        "obtained": [
+          {
+            "name": "Angler hat",
+            "date": "2026-07-23",
+            "quantity": 1
+          },
+          {
+            "name": "Angler top",
+            "date": "2026-07-23",
+            "quantity": 1
+          },
+          {
+            "name": "Angler boots",
+            "date": "2026-07-22",
+            "quantity": 1
+          }
+        ],
+        "missing": [],
+        "obtained_count": 3,
+        "total_count": 3
       },
       "All Pets": {
         "obtained": [
@@ -265,9 +285,19 @@
         "total_count": 1
       }
     },
-    "total_obtained": 31,
+    "total_obtained": 33,
     "total_items": 1706,
     "recent_items": [
+      {
+        "name": "Angler hat",
+        "date": "2026-07-23",
+        "collection": "fishing_trawler"
+      },
+      {
+        "name": "Angler top",
+        "date": "2026-07-23",
+        "collection": "fishing_trawler"
+      },
       {
         "name": "Angler boots",
         "date": "2026-07-22",
@@ -357,16 +387,6 @@
         "name": "Pyromancer hood",
         "date": "2026-06-28",
         "collection": "wintertodt"
-      },
-      {
-        "name": "Pyromancer robe",
-        "date": "2026-06-28",
-        "collection": "wintertodt"
-      },
-      {
-        "name": "Rock golem",
-        "date": "2026-06-28",
-        "collection": "mining"
       }
     ],
     "source": "templeosrs"
