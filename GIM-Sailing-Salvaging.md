@@ -1,5 +1,23 @@
 # Sailing
 
+## BRUH sailer Guide
+
+Items from the guide I skipped — go back and do these.
+
+| # | Item / step | Current |
+|:---:|---|:---:|
+| 1 | 49 Thieving | 47 |
+| 2 | Buy 1600 Soda Ash |  |
+| 3 | 56 Fishing @ Tempoross | 53 |
+| 4 | Tempoross CA's |  |
+| 5 | Fishing Trawler for Full Angler set | 3/4 |
+| 6 | 50 Agility @ Barbarian Fishing | 41 |
+| 7 | Full Rogue outfit | 0/5 |
+| 8 | Minigame tele to Burthorpe and buy 5 Asgarnian ale, 39 Wizard mind bombs and 12 Dwarven stouts |  |
+| 9 | Buy 75 lockpicks and 25 ropes |  |
+
+---
+
 ## To-do - Adamant helm (unlocks Mercenary wreck)
 
 Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern hazardous waters). Sailing 72 ✅. Blockers:
