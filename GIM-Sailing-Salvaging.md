@@ -8,13 +8,12 @@ Items from the guide I skipped — go back and do these.
 |:---:|---|:---:|
 | 1 | 49 Thieving | 47 |
 | 2 | Buy 1600 Soda Ash |  |
-| 3 | 56 Fishing @ Tempoross | 53 |
-| 4 | Tempoross CA's |  |
-| 5 | Fishing Trawler for Full Angler set | 3/4 |
-| 6 | 50 Agility @ Barbarian Fishing | 41 |
-| 7 | Full Rogue outfit | 0/5 |
-| 8 | Minigame tele to Burthorpe and buy 5 Asgarnian ale, 39 Wizard mind bombs and 12 Dwarven stouts |  |
-| 9 | Buy 75 lockpicks and 25 ropes |  |
+| 3 | Tempoross CA's |  |
+| 4 | Fishing Trawler for Full Angler set | 3/4 |
+| 5 | 50 Agility @ Barbarian Fishing | 41 |
+| 6 | Full Rogue outfit | 0/5 |
+| 7 | Minigame tele to Burthorpe and buy 5 Asgarnian ale, 39 Wizard mind bombs and 12 Dwarven stouts |  |
+| 8 | Buy 75 lockpicks and 25 ropes |  |
 
 ---
 
