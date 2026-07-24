@@ -18,7 +18,6 @@ Items from the guide I skipped — go back and do these.
 | 10 | Lap of the Falador rooftop agility course (requires 50 Agility) | ❌ |
 | 11 | Make molten glass: buy 1600 soda ash + mine sandstone (1600 buckets of sand) |  |
 | 12 | Catch a Cerulean twitch — Fremennik easy diary (requires 11 Hunter) | ❌ |
-| 13 | RFD — Pirate Pete subquest |  |
 
 ---
 
