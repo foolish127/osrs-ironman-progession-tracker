@@ -17,6 +17,7 @@ Items from the guide I skipped — go back and do these.
 | 9 | Mage Training Arena for a mud rune, 10 mist runes, and Bones to Peaches |  |
 | 10 | Steal from the Keldagrim Gem Stall (requires 75 Thieving) | ❌ |
 | 11 | Lap of the Falador rooftop agility course (requires 50 Agility) | ❌ |
+| 12 | Mine sandstone (1600 buckets) |  |
 
 ---
 
