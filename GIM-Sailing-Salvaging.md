@@ -11,8 +11,9 @@ Items from the guide I skipped — go back and do these.
 | 3 | Tempoross CA's |  |
 | 4 | 50 Agility @ Barbarian Fishing | 41 |
 | 5 | Full Rogue outfit | 0/5 |
-| 6 | Minigame tele to Burthorpe and buy 5 Asgarnian ale, 39 Wizard mind bombs and 12 Dwarven stouts |  |
-| 7 | Buy 75 lockpicks and 25 ropes |  |
+| 6 | Buy 75 lockpicks and 25 ropes (requires 50 Thieving) | ❌ |
+| 7 | 77 Thieving | 47 |
+| 8 | Rune pouch |  |
 
 ---
 
