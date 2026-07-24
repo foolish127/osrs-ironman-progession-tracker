@@ -14,6 +14,7 @@ Items from the guide I skipped — go back and do these.
 | 6 | Buy 75 lockpicks and 25 ropes (requires 50 Thieving) | ❌ |
 | 7 | 77 Thieving | 47 |
 | 8 | Rune pouch |  |
+| 9 | Mage Training Arena for a mud rune, 10 mist runes, and Bones to Peaches |  |
 
 ---
 
