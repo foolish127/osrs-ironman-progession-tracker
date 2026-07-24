@@ -1,6 +1,6 @@
 {
   "rsn": "GIM Foolin",
-  "updated": "2026-07-23T03:43:01.946761+00:00",
+  "updated": "2026-07-24T19:46:01.682898+00:00",
   "combat_achievements": {
     "tiers": {
       "Easy": {
@@ -24,6 +24,10 @@
           {
             "name": "The Walking Volcano",
             "date": "2026-07-22"
+          },
+          {
+            "name": "Brutus Novice",
+            "date": "2026-07-24"
           }
         ],
         "not_completed": [
@@ -33,7 +37,6 @@
           "A Slow Death",
           "Barrows Novice",
           "Big, Black and Fiery",
-          "Brutus Novice",
           "Bryophyta Novice",
           "Calm Before the Storm",
           "Defence? What Defence?",
@@ -64,10 +67,10 @@
           "Tempoross Novice",
           "The Demonic Punching Bag"
         ],
-        "completed_count": 5,
+        "completed_count": 6,
         "total_count": 41,
         "points_per_task": 1,
-        "points_earned": 5
+        "points_earned": 6
       },
       "Medium": {
         "completed": [
@@ -82,6 +85,10 @@
           {
             "name": "Wintertodt Champion",
             "date": "2026-05-25"
+          },
+          {
+            "name": "Brutus Champion",
+            "date": "2026-07-24"
           }
         ],
         "not_completed": [
@@ -96,7 +103,6 @@
           "Barrows Champion",
           "Beef vs Beef",
           "Brutal, Big, Black and Firey",
-          "Brutus Champion",
           "Bryophyta Champion",
           "Can't Touch Me",
           "Chaos Fanatic Champion",
@@ -143,10 +149,10 @@
           "Dagannoth Supreme Champion",
           "Temotli Triumph"
         ],
-        "completed_count": 3,
+        "completed_count": 4,
         "total_count": 60,
         "points_per_task": 2,
-        "points_earned": 6
+        "points_earned": 8
       },
       "Hard": {
         "completed": [],
@@ -721,11 +727,21 @@
         "points_earned": 0
       }
     },
-    "total_completed": 8,
+    "total_completed": 10,
     "total_tasks": 637,
-    "total_points": 11,
+    "total_points": 14,
     "max_points": 2630,
     "recent_tasks": [
+      {
+        "name": "Brutus Novice",
+        "date": "2026-07-24",
+        "tier": "Easy"
+      },
+      {
+        "name": "Brutus Champion",
+        "date": "2026-07-24",
+        "tier": "Medium"
+      },
       {
         "name": "The Walking Volcano",
         "date": "2026-07-22",
