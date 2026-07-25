@@ -6,18 +6,17 @@ Items from the guide I skipped — go back and do these.
 
 | # | Item / step | Current |
 |:---:|---|:---:|
-| 1 | 49 Thieving | 47 |
+| 1 | 49 Thieving | 48 |
 | 2 | Tempoross CA's |  |
-| 3 | 50 Agility @ Barbarian Fishing | 41 |
+| 3 | 50 Agility @ Barbarian Fishing | 42 |
 | 4 | Full Rogue outfit | 0/5 |
 | 5 | Buy 75 lockpicks (requires 50 Thieving) | ❌ |
-| 6 | 77 Thieving | 47 |
-| 7 | Rune pouch |  |
-| 8 | Mage Training Arena for a mud rune, 10 mist runes, and Bones to Peaches |  |
-| 9 | Steal from the Keldagrim Gem Stall (requires 75 Thieving) | ❌ |
-| 10 | Lap of the Falador rooftop agility course (requires 50 Agility) | ❌ |
-| 11 | Make molten glass: buy 1600 soda ash + mine sandstone (1600 buckets of sand) |  |
-| 12 | Make 5 botanical pies (requires 52 Cooking) | ❌ |
+| 6 | 77 Thieving | 48 |
+| 7 | Rune pouch + Mage Training Arena for a mud rune, 10 mist runes, and Bones to Peaches |  |
+| 8 | Steal from the Keldagrim Gem Stall (requires 75 Thieving) | 48 |
+| 9 | Lap of the Falador rooftop agility course (requires 50 Agility) | 42 |
+| 10 | Make molten glass: buy 1600 soda ash + mine sandstone (1600 buckets of sand) |  |
+| 11 | Make 5 botanical pies (requires 52 Cooking) | 48 |
 
 ---
 
