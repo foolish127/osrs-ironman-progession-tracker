@@ -17,6 +17,7 @@ Items from the guide I skipped — go back and do these.
 | 9 | Lap of the Falador rooftop agility course (requires 50 Agility) | 42 |
 | 10 | Make molten glass: buy 1600 soda ash + mine sandstone (1600 buckets of sand) |  |
 | 11 | Make 5 botanical pies (requires 52 Cooking) | 48 |
+| 12 | Boulder leap shortcut near the Arceuus dark altar (requires 49 Agility) | 42 |
 
 ---
 
