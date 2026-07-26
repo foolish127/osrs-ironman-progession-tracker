@@ -1,6 +1,6 @@
 {
   "rsn": "GIM Foolin",
-  "updated": "2026-07-25T01:14:43.707811+00:00",
+  "updated": "2026-07-26T19:11:46.093725+00:00",
   "collection_log": {
     "collections": {
       "Dagannoth Kings": {
@@ -307,19 +307,29 @@
       "Miscellaneous": {
         "obtained": [
           {
+            "name": "Hespori seed",
+            "date": "2026-07-26",
+            "quantity": 1
+          },
+          {
             "name": "Fresh crab claw",
             "date": "2026-07-24",
             "quantity": 1
           }
         ],
         "missing": [],
-        "obtained_count": 1,
-        "total_count": 1
+        "obtained_count": 2,
+        "total_count": 2
       }
     },
-    "total_obtained": 37,
+    "total_obtained": 38,
     "total_items": 1706,
     "recent_items": [
+      {
+        "name": "Hespori seed",
+        "date": "2026-07-26",
+        "collection": "miscellaneous"
+      },
       {
         "name": "Mime legs",
         "date": "2026-07-25",
@@ -414,11 +424,6 @@
         "name": "Rusty coin",
         "date": "2026-07-01",
         "collection": "sea_treasures"
-      },
-      {
-        "name": "Facility bottle (empty)",
-        "date": "2026-06-29",
-        "collection": "sailing_miscellaneous"
       }
     ],
     "source": "templeosrs"
