@@ -21,7 +21,7 @@ Items from the guide I skipped — go back and do these.
 | 13 | Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) |  |
 | 14 | Get the Skull sceptre from the Stronghold of Security |  |
 | 15 | Get a gout tuber |  |
-| 16 | Buy 1200 knives in Burthorpe's Rogues' Den (15 bronze / 10 iron / 5 steel) |  |
+| 16 | Buy 1200 knives in Burthorpe's Rogues' Den (15 bronze / 10 iron / 5 steel) (requires 50 Agility) | 42 |
 
 ---
 
