@@ -21,7 +21,7 @@ Items from the guide I skipped — go back and do these.
 | 13 | Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
 | 14 | Get the Skull sceptre from the Stronghold of Security |  |  |
 | 15 | Get a gout tuber |  |  |
-| 16 | Buy 1200 knives in Burthorpe's Rogues' Den (15 bronze / 10 iron / 5 steel) (requires 50 Agility) | Agility | 42 |
+| 16 | Buy 1200 knives in Burthorpe's Rogues' Den (15 bronze / 10 iron / 5 steel) (requires 50 Agility) — may not need this, it was for Ranged training to 43 | Agility | 42 |
 | 17 | Obstacle pipe in Varrock Sewers (requires 51 Agility) — Varrock hard diary | Agility | 42 |
 
 ---
