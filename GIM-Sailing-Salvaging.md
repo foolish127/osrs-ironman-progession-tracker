@@ -6,22 +6,21 @@ Items from the guide I skipped — go back and do these.
 
 | # | Item / step | Current |
 |:---:|---|:---:|
-| 1 | 49 Thieving | 50 |
-| 2 | Tempoross CA's |  |
-| 3 | 50 Agility @ Barbarian Fishing | 42 |
-| 4 | Full Rogue outfit | 0/5 |
-| 5 | Buy 75 lockpicks (requires 50 Thieving) | ❌ |
-| 6 | 77 Thieving | 50 |
-| 7 | Rune pouch + Mage Training Arena for 10 mist runes and Bones to Peaches |  |
-| 8 | Steal from the Keldagrim Gem Stall (requires 75 Thieving) | 50 |
-| 9 | Lap of the Falador rooftop agility course (requires 50 Agility) | 42 |
-| 10 | Make molten glass: buy 1600 soda ash + mine sandstone (1600 buckets of sand) |  |
-| 11 | Make 5 botanical pies (requires 52 Cooking) | 48 |
-| 12 | Boulder leap shortcut near the Arceuus dark altar (requires 49 Agility) | 42 |
-| 13 | 70 Cooking | 48 |
-| 14 | Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) |  |
-| 15 | Get the Skull sceptre from the Stronghold of Security |  |
-| 16 | Get a gout tuber |  |
+| 1 | Tempoross CA's |  |
+| 2 | 50 Agility @ Barbarian Fishing | 42 |
+| 3 | Full Rogue outfit | 0/5 |
+| 4 | Buy 75 lockpicks (requires 50 Thieving) | ❌ |
+| 5 | 77 Thieving | 50 |
+| 6 | Rune pouch + Mage Training Arena for 10 mist runes and Bones to Peaches |  |
+| 7 | Steal from the Keldagrim Gem Stall (requires 75 Thieving) | 50 |
+| 8 | Lap of the Falador rooftop agility course (requires 50 Agility) | 42 |
+| 9 | Make molten glass: buy 1600 soda ash + mine sandstone (1600 buckets of sand) |  |
+| 10 | Make 5 botanical pies (requires 52 Cooking) | 48 |
+| 11 | Boulder leap shortcut near the Arceuus dark altar (requires 49 Agility) | 42 |
+| 12 | 70 Cooking | 48 |
+| 13 | Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) |  |
+| 14 | Get the Skull sceptre from the Stronghold of Security |  |
+| 15 | Get a gout tuber |  |
 
 ---
 
