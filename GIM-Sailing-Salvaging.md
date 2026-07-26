@@ -21,6 +21,7 @@ Items from the guide I skipped — go back and do these.
 | 13 | 70 Cooking | 48 |
 | 14 | Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) |  |
 | 15 | Get the Skull sceptre from the Stronghold of Security |  |
+| 16 | Get a gout tuber |  |
 
 ---
 
