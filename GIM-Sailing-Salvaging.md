@@ -57,11 +57,11 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 
 | Blocker | Current | Target | Gap | XP needed |
 |---|:---:|:---:|:---:|:---:|
-| Construction | 38 | 59 | ❌ +21 | 217,478 |
-| Smithing | 30 | 70 | ❌ +40 | 724,264 |
+| Construction | 39 | 59 | ❌ +20 | 214,238 |
+| Smithing | 42 | 70 | ❌ +28 | 693,216 |
 | Troubled Tortugans (quest) | ❌ | done | ❌ | — |
 | ↳ Slayer | 25 | 51 | ❌ +26 | 104,103 |
-| ↳ Construction | 38 | 48 | ❌ +10 | 52,606 |
+| ↳ Construction | 39 | 48 | ❌ +9 | 49,366 |
 
 **Materials to build:** 3 camphor planks · 6 adamantite bars
 
