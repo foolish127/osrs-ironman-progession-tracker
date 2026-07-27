@@ -5,9 +5,9 @@
 | Item | Crafting Level | Hunter Level |
 |---|:---:|:---:|
 | Mahogany | 50 | 49 |
-| Yew | 60 | 59 |
-| Magic | 75 | 74 |
-| Redwood | 90 | 89 |
+| Yew | 60 ❌ | 59 ❌ |
+| Magic | 75 ❌ | 74 ❌ |
+| Redwood | 90 ❌ | 89 ❌ |
 
 ## BRUH sailer Guide
 
