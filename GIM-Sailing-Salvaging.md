@@ -138,29 +138,19 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 
 | Quest | Reward | Prereq to start |
 |---|---|---|
-| Elemental Workshop I → II | 5,000 + 7,500 Smithing | EW I then EW II |
-| The Giant Dwarf | 2,500 Smithing | none |
-| Getting Ahead | 3,200 Con | none |
-| The Fremennik Trials → Isles | 5,000 Con | Trials (doable now) → Isles |
-| A Porcine of Interest | 1,000 Slayer | none |
-
-**🔜 Short chain — one trivial quest or +1 level first:**
-
-| Quest | Reward | Unlock |
-|---|---|---|
-| Wanted! | 5,000 Slayer | Goblin Diplomacy → The Lost Tribe |
-| RFD: Freeing the Mountain Dwarf | 1,000 Slayer | Cook's Assistant → Another Cook's Quest + Fishing Contest |
-| Cold War | 1,500 Con | **Hunter 10** (1 level!) |
-| The Ascent of Arceuus | 1,500 Hunter | Client of Kourend + **Hunter 12** |
+| The Fremennik Isles | 5,000 Con | Fremennik Trials ✅ |
+| Wanted! | 5,000 Slayer | The Lost Tribe ✅ |
+| RFD: Freeing the Mountain Dwarf | 1,000 Slayer | Cook's Assistant ✅ + Fishing Contest ✅ |
+| Cold War | 1,500 Con | Hunter 10 ✅ |
 
 **🔒 Capstones — do once that skill is already near its target:**
 
 | Quest | Reward | Gate |
 |---|---|---|
-| Perilous Moons | 40k Slayer · 5k Hunter · 5k Con | Slayer 48, Hunter 20 (+ Twilight's Promise) |
+| Perilous Moons | 40k Slayer · 5k Hunter · 5k Con | Slayer 48 (+ Twilight's Promise ✅, Hunter 20 ✅) |
 | The Heart of Darkness | 8,000 Slayer | Slayer 48, Thieving 48, Agility 46 |
 | The Path of Glouphrie | 20,000 Slayer | Slayer 56, Thieving 56, Agility 45 |
-| Between a Rock... | 5,000 Smithing | Smithing 50 (+ Dwarf Cannon, Fishing Contest) |
+| Between a Rock... | 5,000 Smithing | Smithing 50 (+ Dwarf Cannon ✅, Fishing Contest ✅) |
 | The Red Reef | 5,000 Smithing | Smithing 48 + Troubled Tortugans |
 | Heroes' Quest | 2,275 Smithing | Cooking 53 + Shield of Arrav + Dragon Slayer I |
 | Eagles' Peak / At First Light | 2,500 / 4,500 Hunter | Hunter 27 / Hunter 46 |
@@ -172,10 +162,10 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 - **Cabin Fever** (7k Smi, Smithing 50 + Rum Deal) · **Devious Minds** (6.5k Smi, Smithing 65 + Runecraft 50) · **Royal Trouble** / **Lair of Tarn** (5k Slayer, Slayer 40 + chains) · **The General's Shadow** (2k Slayer, Desert Treasure I line)
 
 **Realistic quest XP toward each grind (accessible tier):**
-- **Smithing** ~15k now (EW I+II, Giant Dwarf); rest = Giant's Foundry *(Knight's Sword 12.7k + Sleeping Giants 6k already banked ✅)*
-- **Construction** ~10k now (Getting Ahead, Fremennik Isles, Cold War); rest = Mahogany Homes
-- **Slayer** ~7k now (Porcine, Wanted!, RFD-MD); rest = tasks → then Heart of Darkness / Perilous Moons capstones blow past 51
-- **Hunter** ~nothing until trained; Rumours does 9→45, then Perilous Moons overshoots
+- **Smithing** — EW I+II (12.5k), Giant Dwarf (2.5k), Knight's Sword (12.7k), Sleeping Giants (6k) all banked ✅; rest = Giant's Foundry
+- **Construction** — Getting Ahead (3.2k) banked ✅; Fremennik Isles + Cold War (~6.5k) still to do; rest = Mahogany Homes
+- **Slayer** — Porcine banked ✅; Wanted! + RFD-MD (~6k) still to do; rest = tasks → then Heart of Darkness / Perilous Moons capstones blow past 51
+- **Hunter** — 51 ✅ (Ascent of Arceuus banked, already past 45); Perilous Moons 5k left as a capstone
 
 ---
 
