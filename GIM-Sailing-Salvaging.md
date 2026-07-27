@@ -39,7 +39,7 @@ Items from the guide I skipped — go back and do these.
 | 20 | Tithe Farm to level 62 for rewards: herb sack, auto-weed, seed box | Farming |  |
 | 21 | Come back to guide step 93 for farm runs | Farming |  |
 | 22 | Quest: Temple of Ikov (need 20 limpwurt roots) |  | 4/20 |
-| 23 | Quest: Desert Treasure I (pre-reqs: Temple of Ikov, 53 Thieving) | Thieving | 50 |
+| 23 | Quest: Desert Treasure I (pre-reqs: Temple of Ikov, 53 Thieving) — also kill a Shadow Hound in the Shadow Dungeon for Kandarin hard diary | Thieving | 50 |
 
 ---
 
