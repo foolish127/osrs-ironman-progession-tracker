@@ -50,6 +50,46 @@ Items from the guide I skipped — go back and do these.
 
 </details>
 
+### End of Chapter — stat check
+
+Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mine. Negative diff = behind the guide.
+
+<details>
+<summary>Show stat comparison (click to expand)</summary>
+
+| Skill | Guide | Mine | Diff |
+|---|:---:|:---:|:---:|
+| Attack | 46 | 78 | +32 |
+| Strength | 50 | 78 | +28 |
+| Defence | 34 | 78 | +44 |
+| Hitpoints | 39 | 80 | +41 |
+| Ranged | 45 | 71 | +26 |
+| Prayer | 43 | 43 | 0 |
+| Magic | 63 | 70 | +7 |
+| Runecraft | 24 | 28 | +4 |
+| Construction | 39 | 39 | 0 |
+| Agility | 51 | 42 | −9 |
+| Herblore | 40 | 39 | −1 |
+| Thieving | 77 | 50 | −27 |
+| Crafting | 56 | 52 | −4 |
+| Fletching | 48 | 50 | +2 |
+| Slayer | 16 | 25 | +9 |
+| Hunter | 49 | 51 | +2 |
+| Mining | 44 | 80 | +36 |
+| Smithing | 42 | 42 | 0 |
+| Fishing | 74 | 56 | −18 |
+| Cooking | 60 | 49 | −11 |
+| Firemaking | 89 | 82 | −7 |
+| Woodcutting | 70 | 75 | +5 |
+| Farming | 63 | 43 | −20 |
+| Sailing | 1 | 73 | +72 |
+
+**Behind the guide:** Thieving −27, Farming −20, Fishing −18, Cooking −11, Agility −9, Firemaking −7, Crafting −4, Herblore −1.
+
+_Mine as of 2026-07-27 (skills.json 07-26 + newer levels since)._
+
+</details>
+
 ---
 
 ## To-do - Adamant helm (unlocks Mercenary wreck)
