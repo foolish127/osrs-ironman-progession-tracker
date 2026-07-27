@@ -59,30 +59,30 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 
 | Skill | Guide | Mine | Diff |
 |---|:---:|:---:|:---:|
-| Attack | 46 | 78 | +32 |
-| Strength | 50 | 78 | +28 |
-| Defence | 34 | 78 | +44 |
-| Hitpoints | 39 | 80 | +41 |
-| Ranged | 45 | 71 | +26 |
+| Attack | 46 | 78 | $\textcolor{green}{+32}$ |
+| Strength | 50 | 78 | $\textcolor{green}{+28}$ |
+| Defence | 34 | 78 | $\textcolor{green}{+44}$ |
+| Hitpoints | 39 | 80 | $\textcolor{green}{+41}$ |
+| Ranged | 45 | 71 | $\textcolor{green}{+26}$ |
 | Prayer | 43 | 43 | 0 |
-| Magic | 63 | 70 | +7 |
-| Runecraft | 24 | 28 | +4 |
+| Magic | 63 | 70 | $\textcolor{green}{+7}$ |
+| Runecraft | 24 | 28 | $\textcolor{green}{+4}$ |
 | Construction | 39 | 39 | 0 |
-| Agility | 51 | 42 | −9 |
-| Herblore | 40 | 39 | −1 |
-| Thieving | 77 | 50 | −27 |
-| Crafting | 56 | 52 | −4 |
-| Fletching | 48 | 50 | +2 |
-| Slayer | 16 | 25 | +9 |
-| Hunter | 49 | 51 | +2 |
-| Mining | 44 | 80 | +36 |
+| Agility | 51 | 42 | $\textcolor{red}{-9}$ |
+| Herblore | 40 | 39 | $\textcolor{red}{-1}$ |
+| Thieving | 77 | 50 | $\textcolor{red}{-27}$ |
+| Crafting | 56 | 52 | $\textcolor{red}{-4}$ |
+| Fletching | 48 | 50 | $\textcolor{green}{+2}$ |
+| Slayer | 16 | 25 | $\textcolor{green}{+9}$ |
+| Hunter | 49 | 51 | $\textcolor{green}{+2}$ |
+| Mining | 44 | 80 | $\textcolor{green}{+36}$ |
 | Smithing | 42 | 42 | 0 |
-| Fishing | 74 | 56 | −18 |
-| Cooking | 60 | 49 | −11 |
-| Firemaking | 89 | 82 | −7 |
-| Woodcutting | 70 | 75 | +5 |
-| Farming | 63 | 43 | −20 |
-| Sailing | 1 | 73 | +72 |
+| Fishing | 74 | 56 | $\textcolor{red}{-18}$ |
+| Cooking | 60 | 49 | $\textcolor{red}{-11}$ |
+| Firemaking | 89 | 82 | $\textcolor{red}{-7}$ |
+| Woodcutting | 70 | 75 | $\textcolor{green}{+5}$ |
+| Farming | 63 | 43 | $\textcolor{red}{-20}$ |
+| Sailing | 1 | 73 | $\textcolor{green}{+72}$ |
 
 **Behind the guide:** Thieving −27, Farming −20, Fishing −18, Cooking −11, Agility −9, Firemaking −7, Crafting −4, Herblore −1.
 
