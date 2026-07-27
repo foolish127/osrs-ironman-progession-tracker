@@ -40,6 +40,7 @@ Items from the guide I skipped — go back and do these.
 | 21 | Come back to guide step 93 for farm runs | Farming |  |
 | 22 | Quest: Temple of Ikov (need 20 limpwurt roots) |  | 4/20 |
 | 23 | Quest: Desert Treasure I (pre-reqs: Temple of Ikov, 53 Thieving) — also kill a Shadow Hound in the Shadow Dungeon for Kandarin hard diary | Thieving | 50 |
+| 24 | Miniquest: Curse of the Empty Lord (pre-req: Desert Treasure I) |  |  |
 
 ---
 
