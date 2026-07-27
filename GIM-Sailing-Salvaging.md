@@ -37,6 +37,7 @@ Items from the guide I skipped — go back and do these.
 | 18 | Guide step 91 — Crafting & Thieving XP | Crafting / Thieving |  |
 | 19 | Steal from the Ardougne royal chest (requires 72 Thieving) | Thieving | 50 |
 | 20 | Tithe Farm to level 62 for rewards: herb sack, auto-weed, seed box | Farming |  |
+| 21 | Come back to guide step 93 for farm runs | Farming |  |
 
 ---
 
