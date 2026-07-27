@@ -1,5 +1,14 @@
 # Sailing
 
+## Birdhouses
+
+| Item | Crafting Level | Hunter Level |
+|---|:---:|:---:|
+| Mahogany | 50 | 49 |
+| Yew | 60 | 59 |
+| Magic | 75 | 74 |
+| Redwood | 90 | 89 |
+
 ## BRUH sailer Guide
 
 Items from the guide I skipped — go back and do these.
