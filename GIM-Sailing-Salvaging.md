@@ -9,6 +9,8 @@
 | Magic | 75 ❌ | 74 ❌ |
 | Redwood | 90 ❌ | 89 ❌ |
 
+_Current: Crafting 52, Hunter 50._
+
 ## BRUH sailer Guide
 
 Items from the guide I skipped — go back and do these.
