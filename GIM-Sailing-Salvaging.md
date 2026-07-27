@@ -69,7 +69,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Runecraft | 24 | 28 | 🟢 +4 |
 | Construction | 39 | 39 | 0 |
 | Agility | 51 | 42 | 🔴 −9 |
-| Herblore | 40 | 39 | 🔴 −1 |
+| Herblore | 40 | 46 | 🟢 +6 |
 | Thieving | 77 | 50 | 🔴 −27 |
 | Crafting | 56 | 52 | 🔴 −4 |
 | Fletching | 48 | 50 | 🟢 +2 |
@@ -81,14 +81,28 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Cooking | 60 | 49 | 🔴 −11 |
 | Firemaking | 89 | 82 | 🔴 −7 |
 | Woodcutting | 70 | 75 | 🟢 +5 |
-| Farming | 63 | 43 | 🔴 −20 |
+| Farming | 63 | 48 | 🔴 −15 |
 | Sailing | 1 | 73 | 🟢 +72 |
-
-**Behind the guide:** Thieving −27, Farming −20, Fishing −18, Cooking −11, Agility −9, Firemaking −7, Crafting −4, Herblore −1.
 
 _Mine as of 2026-07-27 (skills.json 07-26 + newer levels since)._
 
 </details>
+
+### Bridging the gaps (priority order)
+
+Red gaps only, ordered by biggest deficit vs the guide.
+
+| # | Skill | Now → Target | Gap | How to bridge |
+|:---:|---|:---:|:---:|---|
+| 1 | Thieving | 50 → 77 | 🔴 −27 | Arteglass runs (guide: 80 if all); alt Pyramid Plunder / blackjacking. Clears gem stall + Ardougne royal chest goals |
+| 2 | Fishing | 56 → 74 | 🔴 −18 | Barbarian Fishing — also feeds Agility, Strength, and Cooking |
+| 3 | Farming | 48 → 63 | 🔴 −15 | Tithe Farm (rows 20–21) → herb sack, auto-weed, seed box; plus tree/herb runs |
+| 4 | Cooking | 49 → 60 | 🔴 −11 | Cook the barb-fishing catch (cut-eat); else mess hall to 70 |
+| 5 | Agility | 42 → 51 | 🔴 −9 | Barbarian Fishing passive + rooftop courses; unlocks Falador rooftop + boulder leaps |
+| 6 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
+| 7 | Crafting | 52 → 56 | 🔴 −4 | Molten glass → glassblowing (row 9); battlestaves |
+
+**Highest leverage:** Barbarian Fishing knocks out Fishing, Agility, and Strength at once and hands you fish to cook — covering gaps 2, 4, and 5 in one activity.
 
 ---
 
