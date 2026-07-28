@@ -47,6 +47,7 @@ Items from the guide I skipped — go back and do these.
 | 25 | Collect 5 Trollweiss (after the ice diamond step; kill 5 trolls behind the ice gate) |  |  |
 | 26 | Make 4 inventories of Paddewwa tablets — requires Desert Treasure; looks like it's charging orbs from a step above or one I skipped | Magic |  |
 | 27 | Quest: The Hand in the Sand (missing a white berry) — then claim buckets of sand from Bert for the Ardougne diary | |  |
+| 28 | Put next grown cat into the Menagerie in POH | Construction | 39 |
 
 </details>
 
