@@ -177,7 +177,12 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 
 ---
 
-## Current facilities
+## Sailing details
+
+<details>
+<summary>Show Sailing section (click to expand)</summary>
+
+### Current facilities
 
 | Facility | Current | Note |
 |---|---|---|
@@ -194,7 +199,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 
 ---
 
-## Level-by-level milestones (Sailing)
+### Level-by-level milestones (Sailing)
 
 | Sailing | Unlock | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Con&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Materials |
 |:---:|---|:---:|---|
@@ -231,7 +236,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 
 ---
 
-## Progress to 80 (Fremennik shipwreck)
+### Progress to 80 (Fremennik shipwreck)
 
 Sailing **73** ✅, but the **Mercenary shipwreck is not yet accessible** - it needs the **adamant helm** ship fitting, still blocked by **Construction 59** (35), **Smithing 70** (30, for the 6 adamantite bars), and **Troubled Tortugans** (Great Conch → camphor planks). Once the helm is built, **martial salvage** runs at 201.5 xp ea in the Southern hazardous waters.
 
@@ -243,7 +248,7 @@ Sailing **73** ✅, but the **Mercenary shipwreck is not yet accessible** - it n
 
 ---
 
-## Alching martial salvage drops (mercenary, Sailing 73)
+### Alching martial salvage drops (mercenary, Sailing 73)
 
 *Planning for once the adamant helm is built and Mercenary is accessible - not yet active.*
 
@@ -260,6 +265,8 @@ Martial salvage = 201.5 XP each (138 loot + 63.5 sort). Worth a nat (net after �
 | Total | | | ~4,195 nats | ~6,046,398 |
 
 Keep, do NOT alch: adamant/rune/dragon cannonballs (cannon ammo), mahogany/camphor/ironwood logs (hull parts). Skip alching mithril/adamant arrowtips, dart tips and arrows - below (or barely above) nat cost.
+
+</details>
 
 ---
 
