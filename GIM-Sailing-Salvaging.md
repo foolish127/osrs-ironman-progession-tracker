@@ -49,7 +49,7 @@ Items from the guide I skipped - go back and do these.
 | 27 | Quest: The Hand in the Sand (missing a white berry) - then claim buckets of sand from Bert for the Ardougne diary | |  |
 | 28 | Put next grown cat into the Menagerie in POH | Construction | 39 |
 | 29 | Level Construction to 50 using oak planks - hire a Demon Butler at 50 | Construction | 39 |
-| 30 | Build Oak shelves 2 at level 45 Construction (3 oak planks + 6 soft clay) | Construction | 39 |
+| 30 | Build Oak shelves 2 at level 45 Construction (3 oak planks + 6 soft clay); Fancy range at 42 Construction (8 steel bars) | Construction | 39 |
 
 </details>
 
