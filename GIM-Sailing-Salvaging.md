@@ -21,26 +21,26 @@ Items from the guide I skipped - go back and do these.
 | # | Item / step | Skill | Current |
 |:---:|---|:---:|:---:|
 | 1 | Tempoross CA's | Fishing |  |
-| 2 | 50 Agility @ Barbarian Fishing | Agility | 42 |
+| 2 | 50 Agility @ Barbarian Fishing | Agility | 44 |
 | 3 | Full Rogue outfit | Thieving | 0/5 |
 | 4 | Buy 75 lockpicks (requires 50 Thieving) | Thieving | ❌ |
 | 5 | 77 Thieving | Thieving | 50 |
 | 6 | Rune pouch + Mage Training Arena for 10 mist runes and Bones to Peaches | Magic |  |
 | 7 | Steal from the Keldagrim Gem Stall (requires 75 Thieving) | Thieving | 50 |
-| 8 | Lap of the Falador rooftop agility course (requires 50 Agility) | Agility | 42 |
+| 8 | Lap of the Falador rooftop agility course (requires 50 Agility) | Agility | 44 |
 | 9 | Make molten glass: buy 1600 soda ash + mine sandstone (1600 buckets of sand) | Crafting |  |
-| 10 | Make 5 botanical pies (requires 52 Cooking) | Cooking | 48 |
-| 11 | Boulder leap shortcut near the Arceuus dark altar (requires 49 Agility) | Agility | 42 |
-| 12 | 70 Cooking | Cooking | 48 |
+| 10 | Make 5 botanical pies (requires 52 Cooking) | Cooking | 50 |
+| 11 | Boulder leap shortcut near the Arceuus dark altar (requires 49 Agility) | Agility | 44 |
+| 12 | 70 Cooking | Cooking | 50 |
 | 13 | Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
 | 14 | Get the Skull sceptre from the Stronghold of Security |  |  |
 | 15 | Get a gout tuber |  |  |
-| 16 | Buy 1200 knives in Burthorpe's Rogues' Den (15 bronze / 10 iron / 5 steel) (requires 50 Agility) - may not need this, it was for Ranged training to 43 | Agility | 42 |
-| 17 | Obstacle pipe in Varrock Sewers (requires 51 Agility) - Varrock hard diary | Agility | 42 |
+| 16 | Buy 1200 knives in Burthorpe's Rogues' Den (15 bronze / 10 iron / 5 steel) (requires 50 Agility) - may not need this, it was for Ranged training to 43 | Agility | 44 |
+| 17 | Obstacle pipe in Varrock Sewers (requires 51 Agility) - Varrock hard diary | Agility | 44 |
 | 18 | Guide step 91 - Crafting & Thieving XP | Crafting / Thieving |  |
 | 19 | Steal from the Ardougne royal chest (requires 72 Thieving) | Thieving | 50 |
-| 20 | Tithe Farm to level 62 for rewards: herb sack, auto-weed, seed box | Farming |  |
-| 21 | Come back to guide step 93 for farm runs | Farming |  |
+| 20 | Tithe Farm to level 62 for rewards: herb sack, auto-weed, seed box | Farming | 48 |
+| 21 | Come back to guide step 93 for farm runs | Farming | 48 |
 | 22 | Quest: Temple of Ikov (need 20 limpwurt roots) |  | 4/20 |
 | 23 | Quest: Desert Treasure I (pre-reqs: Temple of Ikov, 53 Thieving) - also kill a Shadow Hound in the Shadow Dungeon for Kandarin hard diary | Thieving | 50 |
 | 24 | Miniquest: Curse of the Empty Lord (pre-req: Desert Treasure I) |  |  |
