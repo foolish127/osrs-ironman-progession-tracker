@@ -105,8 +105,6 @@ Red gaps only, ordered by biggest deficit vs the guide.
 | 6 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
 | 7 | Crafting | 52 → 56 | 🔴 −4 | Molten glass → glassblowing (row 9); battlestaves |
 
-**Highest leverage:** Barbarian Fishing knocks out Fishing, Agility, and Strength at once and hands you fish to cook - covering gaps 2, 4, and 5 in one activity.
-
 ---
 
 ## To-do - Adamant helm (unlocks Mercenary wreck)
