@@ -111,6 +111,9 @@ Red gaps only, ordered by biggest deficit vs the guide.
 
 ## To-do - Adamant helm (unlocks Mercenary wreck)
 
+<details>
+<summary>Show details (click to expand)</summary>
+
 Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern hazardous waters). Sailing 72 ✅. Blockers:
 
 | Blocker | Current | Target | Gap | XP needed |
@@ -169,6 +172,8 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 - **Construction** - Getting Ahead (3.2k) banked ✅; Fremennik Isles + Cold War (~6.5k) still to do; rest = Mahogany Homes
 - **Slayer** - Porcine banked ✅; Wanted! + RFD-MD (~6k) still to do; rest = tasks → then Heart of Darkness / Perilous Moons capstones blow past 51
 - **Hunter** - 51 ✅ (Ascent of Arceuus banked, already past 45); Perilous Moons 5k left as a capstone
+
+</details>
 
 ---
 
