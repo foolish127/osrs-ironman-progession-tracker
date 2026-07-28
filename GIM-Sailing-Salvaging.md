@@ -16,7 +16,7 @@ _Current: Crafting 52, Hunter 50._
 <details>
 <summary>Show guide steps (click to expand)</summary>
 
-Items from the guide I skipped — go back and do these.
+Items from the guide I skipped - go back and do these.
 
 | # | Item / step | Skill | Current |
 |:---:|---|:---:|:---:|
@@ -35,25 +35,25 @@ Items from the guide I skipped — go back and do these.
 | 13 | Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
 | 14 | Get the Skull sceptre from the Stronghold of Security |  |  |
 | 15 | Get a gout tuber |  |  |
-| 16 | Buy 1200 knives in Burthorpe's Rogues' Den (15 bronze / 10 iron / 5 steel) (requires 50 Agility) — may not need this, it was for Ranged training to 43 | Agility | 42 |
-| 17 | Obstacle pipe in Varrock Sewers (requires 51 Agility) — Varrock hard diary | Agility | 42 |
-| 18 | Guide step 91 — Crafting & Thieving XP | Crafting / Thieving |  |
+| 16 | Buy 1200 knives in Burthorpe's Rogues' Den (15 bronze / 10 iron / 5 steel) (requires 50 Agility) - may not need this, it was for Ranged training to 43 | Agility | 42 |
+| 17 | Obstacle pipe in Varrock Sewers (requires 51 Agility) - Varrock hard diary | Agility | 42 |
+| 18 | Guide step 91 - Crafting & Thieving XP | Crafting / Thieving |  |
 | 19 | Steal from the Ardougne royal chest (requires 72 Thieving) | Thieving | 50 |
 | 20 | Tithe Farm to level 62 for rewards: herb sack, auto-weed, seed box | Farming |  |
 | 21 | Come back to guide step 93 for farm runs | Farming |  |
 | 22 | Quest: Temple of Ikov (need 20 limpwurt roots) |  | 4/20 |
-| 23 | Quest: Desert Treasure I (pre-reqs: Temple of Ikov, 53 Thieving) — also kill a Shadow Hound in the Shadow Dungeon for Kandarin hard diary | Thieving | 50 |
+| 23 | Quest: Desert Treasure I (pre-reqs: Temple of Ikov, 53 Thieving) - also kill a Shadow Hound in the Shadow Dungeon for Kandarin hard diary | Thieving | 50 |
 | 24 | Miniquest: Curse of the Empty Lord (pre-req: Desert Treasure I) |  |  |
 | 25 | Collect 5 Trollweiss (after the ice diamond step; kill 5 trolls behind the ice gate) |  |  |
-| 26 | Make 4 inventories of Paddewwa tablets — requires Desert Treasure; looks like it's charging orbs from a step above or one I skipped | Magic |  |
-| 27 | Quest: The Hand in the Sand (missing a white berry) — then claim buckets of sand from Bert for the Ardougne diary | |  |
+| 26 | Make 4 inventories of Paddewwa tablets - requires Desert Treasure; looks like it's charging orbs from a step above or one I skipped | Magic |  |
+| 27 | Quest: The Hand in the Sand (missing a white berry) - then claim buckets of sand from Bert for the Ardougne diary | |  |
 | 28 | Put next grown cat into the Menagerie in POH | Construction | 39 |
-| 29 | Level Construction to 50 using oak planks — hire a Demon Butler at 50 | Construction | 39 |
+| 29 | Level Construction to 50 using oak planks - hire a Demon Butler at 50 | Construction | 39 |
 | 30 | Build a Study at level 40 Construction | Construction | 39 |
 
 </details>
 
-### End of Chapter — stat check
+### End of Chapter - stat check
 
 Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mine. Negative diff = behind the guide.
 
@@ -98,14 +98,14 @@ Red gaps only, ordered by biggest deficit vs the guide.
 | # | Skill | Now → Target | Gap | How to bridge |
 |:---:|---|:---:|:---:|---|
 | 1 | Thieving | 50 → 77 | 🔴 −27 | Arteglass runs (guide: 80 if all); alt Pyramid Plunder / blackjacking. Clears gem stall + Ardougne royal chest goals |
-| 2 | Fishing | 56 → 74 | 🔴 −18 | Barbarian Fishing — also feeds Agility, Strength, and Cooking |
+| 2 | Fishing | 56 → 74 | 🔴 −18 | Barbarian Fishing - also feeds Agility, Strength, and Cooking |
 | 3 | Farming | 48 → 63 | 🔴 −15 | Tithe Farm (rows 20–21) → herb sack, auto-weed, seed box; plus tree/herb runs |
 | 4 | Cooking | 49 → 60 | 🔴 −11 | Cook the barb-fishing catch (cut-eat); else mess hall to 70 |
 | 5 | Agility | 42 → 51 | 🔴 −9 | Barbarian Fishing passive + rooftop courses; unlocks Falador rooftop + boulder leaps |
 | 6 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
 | 7 | Crafting | 52 → 56 | 🔴 −4 | Molten glass → glassblowing (row 9); battlestaves |
 
-**Highest leverage:** Barbarian Fishing knocks out Fishing, Agility, and Strength at once and hands you fish to cook — covering gaps 2, 4, and 5 in one activity.
+**Highest leverage:** Barbarian Fishing knocks out Fishing, Agility, and Strength at once and hands you fish to cook - covering gaps 2, 4, and 5 in one activity.
 
 ---
 
@@ -117,14 +117,14 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 |---|:---:|:---:|:---:|:---:|
 | Construction | 39 | 59 | ❌ +20 | 214,238 |
 | Smithing | 42 | 70 | ❌ +28 | 693,216 |
-| Troubled Tortugans (quest) | ❌ | done | ❌ | — |
+| Troubled Tortugans (quest) | ❌ | done | ❌ | - |
 | ↳ Slayer | 25 | 51 | ❌ +26 | 104,103 |
 | ↳ Construction | 39 | 48 | ❌ +9 | 49,366 |
 
 **Materials to build:** 3 camphor planks · 6 adamantite bars
 
-- **Camphor planks** — via Troubled Tortugans → Great Conch camphor trees (WC 66 ✅) → sawmill 2.5k ea *or* Plank Make
-- **Adamantite bars** — smelt at Smithing 70 (solo GIM, must self-smith)
+- **Camphor planks** - via Troubled Tortugans → Great Conch camphor trees (WC 66 ✅) → sawmill 2.5k ea *or* Plank Make
+- **Adamantite bars** - smelt at Smithing 70 (solo GIM, must self-smith)
 
 *Construction 48 (Tortugans) is a stepping stone to the 59 needed for the helm itself.*
 
@@ -137,7 +137,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 
 **Reality check:** most XP quests are gated behind the very skills you're training, so they're **supplements, not shortcuts**. The training methods (Mahogany Homes / Giant's Foundry / slayer tasks / Hunter Rumours) do the heavy lifting. Grouped by what's actually accessible:
 
-**✅ Do now — free XP, no training:**
+**✅ Do now - free XP, no training:**
 
 | Quest | Reward | Prereq to start |
 |---|---|---|
@@ -146,7 +146,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 | RFD: Freeing the Mountain Dwarf | 1,000 Slayer | Cook's Assistant ✅ + Fishing Contest ✅ |
 | Cold War | 1,500 Con | Hunter 10 ✅ |
 
-**🔒 Capstones — do once that skill is already near its target:**
+**🔒 Capstones - do once that skill is already near its target:**
 
 | Quest | Reward | Gate |
 |---|---|---|
@@ -158,17 +158,17 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 | Heroes' Quest | 2,275 Smithing | Cooking 53 + Shield of Arrav + Dragon Slayer I |
 | Eagles' Peak / At First Light | 2,500 / 4,500 Hunter | Hunter 27 / Hunter 46 |
 
-**❌ Skip for now — deep chains / far-off reqs:**
-- **Dragon Slayer II** (80k Smithing) — 6 skills short, 200 QP, ~19-quest chain
-- **Defender of Varrock** (15k Smithing · 15k Hunter) — Smithing 55, Hunter 52, 8 prereqs (incl. What Lies Below → Runecraft 35)
-- **Making Friends with My Arm** (10k Con) — Agility 68 + Swan Song (100 QP) chain
+**❌ Skip for now - deep chains / far-off reqs:**
+- **Dragon Slayer II** (80k Smithing) - 6 skills short, 200 QP, ~19-quest chain
+- **Defender of Varrock** (15k Smithing · 15k Hunter) - Smithing 55, Hunter 52, 8 prereqs (incl. What Lies Below → Runecraft 35)
+- **Making Friends with My Arm** (10k Con) - Agility 68 + Swan Song (100 QP) chain
 - **Cabin Fever** (7k Smi, Smithing 50 + Rum Deal) · **Devious Minds** (6.5k Smi, Smithing 65 + Runecraft 50) · **Royal Trouble** / **Lair of Tarn** (5k Slayer, Slayer 40 + chains) · **The General's Shadow** (2k Slayer, Desert Treasure I line)
 
 **Realistic quest XP toward each grind (accessible tier):**
-- **Smithing** — EW I+II (12.5k), Giant Dwarf (2.5k), Knight's Sword (12.7k), Sleeping Giants (6k) all banked ✅; rest = Giant's Foundry
-- **Construction** — Getting Ahead (3.2k) banked ✅; Fremennik Isles + Cold War (~6.5k) still to do; rest = Mahogany Homes
-- **Slayer** — Porcine banked ✅; Wanted! + RFD-MD (~6k) still to do; rest = tasks → then Heart of Darkness / Perilous Moons capstones blow past 51
-- **Hunter** — 51 ✅ (Ascent of Arceuus banked, already past 45); Perilous Moons 5k left as a capstone
+- **Smithing** - EW I+II (12.5k), Giant Dwarf (2.5k), Knight's Sword (12.7k), Sleeping Giants (6k) all banked ✅; rest = Giant's Foundry
+- **Construction** - Getting Ahead (3.2k) banked ✅; Fremennik Isles + Cold War (~6.5k) still to do; rest = Mahogany Homes
+- **Slayer** - Porcine banked ✅; Wanted! + RFD-MD (~6k) still to do; rest = tasks → then Heart of Darkness / Perilous Moons capstones blow past 51
+- **Hunter** - 51 ✅ (Ascent of Arceuus banked, already past 45); Perilous Moons 5k left as a capstone
 
 ---
 
@@ -181,11 +181,11 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 | Hull | Wooden *(default)* | Upgrade for speed |
 | Keel | Bronze *(default)* |  |
 | Mast & sails | Mahogany (canvas sails) |  |
-| Helm | Bronze *(default)* | Adamant helm (Sailing 72) required to unlock Mercenary shipwreck @ 73 — still blocked by Con 59 · Smithing 70 · Troubled Tortugans |
+| Helm | Bronze *(default)* | Adamant helm (Sailing 72) required to unlock Mercenary shipwreck @ 73 - still blocked by Con 59 · Smithing 70 · Troubled Tortugans |
 | Salvaging hook | Steel ×2 | Both Sloop slots filled |
 | Cargo hold | Teak |  |
 | Salvaging station | Built |  |
-| Shipwreck | Mercenary shipwreck ❌ *(next unlock)* | Blocked — needs adamant helm (Con 59 · Smithing 70 · Troubled Tortugans). Southern hazardous waters |
+| Shipwreck | Mercenary shipwreck ❌ *(next unlock)* | Blocked - needs adamant helm (Con 59 · Smithing 70 · Troubled Tortugans). Southern hazardous waters |
 
 ---
 
@@ -204,7 +204,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 | 65 ✅ | Crew: Oarswoman Olga (Burgh de Rott) |  | In Aid of the Myreque ❌ |
 | 67 ✅ | Camphor hull: speed 2→2.5 | 59 ❌ | 16 large camphor hull parts · 600 adamantite nails · 25 swamp tar · 5 lead bars (~911k gp) |
 | 72 ✅ | Adamant helm (ship fitting): unlocks Southern hazardous waters | 59 ❌ (35) | Con 59 ❌ (35) · 3 camphor planks (WC 66 ✅ · Troubled Tortugans ❌ [Sailing 45 ✅ quest] → Great Conch camphor trees · sawmill 2.5k ea or Plank Make) · 6 adamantite bars (Smithing 70 ❌ · 30) |
-| 73 ✅ | Mercenary shipwreck ❌ — Sailing 73 ✅ but blocked by the adamant helm (Con 59 · Smithing 70 · Troubled Tortugans) to reach tangled kelp |  |  |
+| 73 ✅ | Mercenary shipwreck ❌ - Sailing 73 ✅ but blocked by the adamant helm (Con 59 · Smithing 70 · Troubled Tortugans) to reach tangled kelp |  |  |
 <details>
 <summary><strong>Late-game milestones (Sailing 74+)</strong>, collapsed (click to expand)</summary>
 
@@ -228,19 +228,19 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 
 ## Progress to 80 (Fremennik shipwreck)
 
-Sailing **73** ✅, but the **Mercenary shipwreck is not yet accessible** — it needs the **adamant helm** ship fitting, still blocked by **Construction 59** (35), **Smithing 70** (30, for the 6 adamantite bars), and **Troubled Tortugans** (Great Conch → camphor planks). Once the helm is built, **martial salvage** runs at 201.5 xp ea in the Southern hazardous waters.
+Sailing **73** ✅, but the **Mercenary shipwreck is not yet accessible** - it needs the **adamant helm** ship fitting, still blocked by **Construction 59** (35), **Smithing 70** (30, for the 6 adamantite bars), and **Troubled Tortugans** (Great Conch → camphor planks). Once the helm is built, **martial salvage** runs at 201.5 xp ea in the Southern hazardous waters.
 
 ```
 73 [░░░░░░░░░░░░░░░░░░░░] 80    0%
 ```
 
-**Just hit 73** (994,365 / 1,986,068 xp). **991,703 xp left** ≈ **~4,920 martial salvages** (~201.5 xp ea, *once the adamant helm unlocks Mercenary*). Next salvage unlock = **Mercenary** (build the adamant helm first), then the **Fremennik shipwreck (80)**, which needs the **eternal brazier** ship fitting (78, unlocks the Northern Ocean — schematic on Buccaneers' Haven, dock at 76). Build the brazier on the way.
+**Just hit 73** (994,365 / 1,986,068 xp). **991,703 xp left** ≈ **~4,920 martial salvages** (~201.5 xp ea, *once the adamant helm unlocks Mercenary*). Next salvage unlock = **Mercenary** (build the adamant helm first), then the **Fremennik shipwreck (80)**, which needs the **eternal brazier** ship fitting (78, unlocks the Northern Ocean - schematic on Buccaneers' Haven, dock at 76). Build the brazier on the way.
 
 ---
 
 ## Alching martial salvage drops (mercenary, Sailing 73)
 
-*Planning for once the adamant helm is built and Mercenary is accessible — not yet active.*
+*Planning for once the adamant helm is built and Mercenary is accessible - not yet active.*
 
 Martial salvage = 201.5 XP each (138 loot + 63.5 sort). Worth a nat (net after −180). Est. qty over Sailing 73 → 87 (~11,244 martial salvages):
 
@@ -254,7 +254,7 @@ Martial salvage = 201.5 XP each (138 loot + 63.5 sort). Worth a nat (net after �
 | Rune longsword | +780 | 10/2,440 | 46 | 35,880 |
 | Total | | | ~4,195 nats | ~6,046,398 |
 
-Keep, do NOT alch: adamant/rune/dragon cannonballs (cannon ammo), mahogany/camphor/ironwood logs (hull parts). Skip alching mithril/adamant arrowtips, dart tips and arrows — below (or barely above) nat cost.
+Keep, do NOT alch: adamant/rune/dragon cannonballs (cannon ammo), mahogany/camphor/ironwood logs (hull parts). Skip alching mithril/adamant arrowtips, dart tips and arrows - below (or barely above) nat cost.
 
 ---
 
