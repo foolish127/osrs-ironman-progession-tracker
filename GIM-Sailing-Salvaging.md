@@ -71,7 +71,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Magic | 63 | 70 | 🟢 +7 |
 | Runecraft | 24 | 28 | 🟢 +4 |
 | Construction | 39 | 39 | 0 |
-| Agility | 51 | 42 | 🔴 −9 |
+| Agility | 51 | 44 | 🔴 −7 |
 | Herblore | 40 | 46 | 🟢 +6 |
 | Thieving | 77 | 50 | 🔴 −27 |
 | Crafting | 56 | 52 | 🔴 −4 |
@@ -80,8 +80,8 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Hunter | 49 | 51 | 🟢 +2 |
 | Mining | 44 | 80 | 🟢 +36 |
 | Smithing | 42 | 42 | 0 |
-| Fishing | 74 | 56 | 🔴 −18 |
-| Cooking | 60 | 49 | 🔴 −11 |
+| Fishing | 74 | 61 | 🔴 −13 |
+| Cooking | 60 | 50 | 🔴 −10 |
 | Firemaking | 89 | 82 | 🔴 −7 |
 | Woodcutting | 70 | 75 | 🟢 +5 |
 | Farming | 63 | 48 | 🔴 −15 |
@@ -98,10 +98,10 @@ Red gaps only, ordered by biggest deficit vs the guide.
 | # | Skill | Now → Target | Gap | How to bridge |
 |:---:|---|:---:|:---:|---|
 | 1 | Thieving | 50 → 77 | 🔴 −27 | Arteglass runs (guide: 80 if all); alt Pyramid Plunder / blackjacking. Clears gem stall + Ardougne royal chest goals |
-| 2 | Fishing | 56 → 74 | 🔴 −18 | Barbarian Fishing - also feeds Agility, Strength, and Cooking |
-| 3 | Farming | 48 → 63 | 🔴 −15 | Tithe Farm (rows 20–21) → herb sack, auto-weed, seed box; plus tree/herb runs |
-| 4 | Cooking | 49 → 60 | 🔴 −11 | Cook the barb-fishing catch (cut-eat); else mess hall to 70 |
-| 5 | Agility | 42 → 51 | 🔴 −9 | Barbarian Fishing passive + rooftop courses; unlocks Falador rooftop + boulder leaps |
+| 2 | Farming | 48 → 63 | 🔴 −15 | Tithe Farm (rows 20–21) → herb sack, auto-weed, seed box; plus tree/herb runs |
+| 3 | Fishing | 61 → 74 | 🔴 −13 | Barbarian Fishing - also feeds Agility, Strength, and Cooking |
+| 4 | Cooking | 50 → 60 | 🔴 −10 | Cook the barb-fishing catch (cut-eat); else mess hall to 70 |
+| 5 | Agility | 44 → 51 | 🔴 −7 | Barbarian Fishing passive + rooftop courses; unlocks Falador rooftop + boulder leaps |
 | 6 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
 | 7 | Crafting | 52 → 56 | 🔴 −4 | Molten glass → glassblowing (row 9); battlestaves |
 
