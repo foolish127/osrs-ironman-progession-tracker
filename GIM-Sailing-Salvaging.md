@@ -97,13 +97,30 @@ Red gaps only, ordered by biggest deficit vs the guide.
 
 | # | Skill | Now → Target | Gap | How to bridge |
 |:---:|---|:---:|:---:|---|
-| 1 | Thieving | 50 → 77 | 🔴 −27 | Arteglass runs (guide: 80 if all); alt Pyramid Plunder / blackjacking. Clears gem stall + Ardougne royal chest goals |
+| 1 | Thieving | 50 → 77 | 🔴 −27 | See Thieving 50→77 plan below (Aldarin → Ardy Knights, no blackjacking). Clears gem stall + Ardougne royal chest goals |
 | 2 | Farming | 48 → 63 | 🔴 −15 | Tithe Farm (rows 20–21) → herb sack, auto-weed, seed box; plus tree/herb runs |
 | 3 | Fishing | 61 → 74 | 🔴 −13 | Barbarian Fishing - also feeds Agility, Strength, and Cooking |
 | 4 | Cooking | 50 → 60 | 🔴 −10 | Cook the barb-fishing catch (cut-eat); else mess hall to 70 |
 | 5 | Agility | 44 → 51 | 🔴 −7 | Barbarian Fishing passive + rooftop courses; unlocks Falador rooftop + boulder leaps |
 | 6 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
 | 7 | Crafting | 52 → 56 | 🔴 −4 | Molten glass → glassblowing (row 9); battlestaves |
+
+### Thieving 50 → 77 plan
+
+**~1.37M XP** (50 = 101,333 → 77 = 1,475,581). No blackjacking. **~20 hours** the sensible way (vs ~32 hrs on stalls only). Stretch target 80 (all arteglass) = ~1.88M.
+
+| Level band | Method | ~XP/hr |
+|---|---|:---:|
+| 50 → 55 | Aldarin chests (stopgap) | ~55k w/ lockpicks · ~40k without |
+| **55 → 77** | **Knights of Ardougne** (pickpocket) | ~60k → ~90k |
+
+**Order of operations:**
+1. **50 Agility first** - unlocks buying 75 lockpicks (Rogues' Den), wall safes, and faster run-energy for stalls.
+2. Get the **rogue outfit** (BRUH row 3) during Rogues' Den trips - doubles Ardy Knight loot.
+3. **50 → 55:** Aldarin chests (~55k with lockpicks) or fruit stalls (~43k, run-energy heavy) as brain-off filler.
+4. **55 → 77:** Knights of Ardougne - bring food + **dodgy necklaces** (25% to negate the stun). Semi-AFK, scales with level.
+
+Optional: Pyramid Plunder (~50k+) if Icthlarin's Little Helper ever gets done.
 
 ---
 
