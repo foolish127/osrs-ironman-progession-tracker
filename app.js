@@ -1121,9 +1121,16 @@
                 document.getElementById('diaryCount').textContent = '—';
                 return;
             }
+            // Total diary tasks per region (OSRS Wiki counts; sums to 492).
+            const REGION_TASK_TOTALS = {
+                'Ardougne': 38, 'Desert': 33, 'Falador': 35, 'Fremennik': 39,
+                'Kandarin': 39, 'Karamja': 54, 'Kourend & Kebos': 46,
+                'Lumbridge & Draynor': 40, 'Morytania': 38, 'Varrock': 42,
+                'Western Provinces': 37, 'Wilderness': 51
+            };
             const regions = {};
             let currentRegion = null;
-            
+
             // Parse tasks_completed and tasks_total from header
             let tasksCompleted = 0;
             let tasksTotal = 492;
@@ -1227,11 +1234,15 @@
                 <div class="diaries-grid">
                     ${Object.entries(regions).map(([name, tiers]) => {
                         const completed = Object.values(tiers).filter(v => v).length;
+                        const regionTotal = REGION_TASK_TOTALS[name] || 0;
+                        const regionRemaining = (diaryTasksData && diaryTasksData[name])
+                            ? Object.values(diaryTasksData[name]).reduce((a, arr) => a + arr.length, 0) : 0;
+                        const regionDone = Math.max(0, regionTotal - regionRemaining);
                         return `
                             <div class="diary-card">
                                 <div class="diary-header">
                                     <span>${name}</span>
-                                    <span class="diary-count">${completed}/4</span>
+                                    <span class="diary-count">${completed}/4 tiers · ${regionDone}/${regionTotal} tasks</span>
                                 </div>
                                 <div class="diary-tiers">
                                     ${['easy', 'medium', 'hard', 'elite'].map(tier => `
