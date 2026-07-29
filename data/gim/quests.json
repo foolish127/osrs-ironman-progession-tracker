@@ -1,6 +1,6 @@
 {
   "rsn": "GIM Foolin",
-  "updated": "2026-07-27T02:31:16.897108+00:00",
+  "updated": "2026-07-28T00:46:28.207217+00:00",
   "quests": {
     "categories": {
       "Free-to-play": {
@@ -88,6 +88,10 @@
           {
             "name": "Imp Catcher",
             "date": "2026-07-26"
+          },
+          {
+            "name": "Dragon Slayer I",
+            "date": "2026-07-27"
           }
         ],
         "not_completed": [
@@ -97,10 +101,6 @@
           },
           {
             "name": "Demon Slayer",
-            "date": null
-          },
-          {
-            "name": "Dragon Slayer I",
             "date": null
           }
         ]
@@ -370,13 +370,29 @@
           {
             "name": "Enlightened Journey",
             "date": "2026-07-26"
+          },
+          {
+            "name": "A Soul's Bane",
+            "date": "2026-07-26"
+          },
+          {
+            "name": "Watchtower",
+            "date": "2026-07-27"
+          },
+          {
+            "name": "My Arm's Big Adventure",
+            "date": "2026-07-27"
+          },
+          {
+            "name": "Dwarf Cannon",
+            "date": "2026-07-27"
+          },
+          {
+            "name": "Scrambled!",
+            "date": "2026-07-27"
           }
         ],
         "not_completed": [
-          {
-            "name": "Dwarf Cannon",
-            "date": null
-          },
           {
             "name": "Shilo Village",
             "date": null
@@ -434,10 +450,6 @@
             "date": null
           },
           {
-            "name": "A Soul's Bane",
-            "date": null
-          },
-          {
             "name": "Eagles' Peak",
             "date": null
           },
@@ -470,19 +482,11 @@
             "date": null
           },
           {
-            "name": "My Arm's Big Adventure",
-            "date": null
-          },
-          {
             "name": "Temple of Ikov",
             "date": null
           },
           {
             "name": "Legends' Quest",
-            "date": null
-          },
-          {
-            "name": "Watchtower",
             "date": null
           },
           {
@@ -682,10 +686,6 @@
             "date": null
           },
           {
-            "name": "Scrambled!",
-            "date": null
-          },
-          {
             "name": "Shadows of Custodia",
             "date": null
           },
@@ -822,7 +822,7 @@
         ]
       }
     },
-    "total_completed": 87,
+    "total_completed": 93,
     "total_quests": 181,
     "miniquests_completed": 1,
     "total_miniquests": 19
