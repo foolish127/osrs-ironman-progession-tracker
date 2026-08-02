@@ -592,6 +592,13 @@ def extract_pets_from_clog(clog):
             missing.append({'name': pet_name, 'source': source})
             missing_names.add(pet_name.lower())
 
+    # Match against this account's own pet list as well as the static baseline.
+    # A pet added to pets.yaml is then recognised in the collection log without
+    # anyone having to remember to also edit PET_NAMES.
+    known_pets = set(PET_NAMES)
+    known_pets.update(p['name'].lower() for p in data.get('obtained', []))
+    known_pets.update(p['name'].lower() for p in data.get('missing', []))
+
     # Scan all collections for pet items
     obtained_names = set()
     for category_name, category_data in collections.items():
@@ -601,7 +608,7 @@ def extract_pets_from_clog(clog):
             item_name = item.get('name', '') if isinstance(item, dict) else item
 
             # Check if this is a pet (avoid duplicates)
-            if item_name.lower() in PET_NAMES and item_name.lower() not in obtained_names:
+            if item_name.lower() in known_pets and item_name.lower() not in obtained_names:
                 manual_date = manual_pet_dates.get(item_name.lower())
                 clog_date = item.get('date') if isinstance(item, dict) else None
 

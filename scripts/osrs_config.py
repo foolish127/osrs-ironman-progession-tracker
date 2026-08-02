@@ -25,21 +25,31 @@ BOSS_RENAMES = {
 
 # Collection-log item names that are pets. Used to pull a pet list out of the
 # full collection log. Stored lowercase for case-insensitive matching.
+#
+# This is a baseline only: update_stats unions it with the account's own
+# pets.yaml at runtime, so adding a pet there is enough to have it recognised
+# in the collection log. Names here mirror pets.yaml exactly — punctuation
+# included, since matching is a plain lowercase set lookup.
 PET_NAMES = {
-    'abyssal orphan', 'baby chinchompa', 'baby mole', 'beaver', 'bloodhound',
-    'callisto cub', 'chompy chick', 'giant squirrel', 'hellpuppy', 'herbi',
-    'heron', 'ikkle hydra', 'jal-nib-rek', 'kalphite princess', 'little nightmare',
-    'noon', 'midnight', 'olmlet', 'pet chaos elemental', 'pet dagannoth prime',
-    'pet dagannoth rex', 'pet dagannoth supreme', 'pet dark core', 'pet general graardor',
-    "pet k'ril tsutsaroth", 'pet kraken', 'pet penance queen', 'pet smoke devil',
-    'pet snakeling', 'pet zilyana', 'phoenix', 'prince black dragon', 'rift guardian',
-    'rock golem', 'rocky', "scorpia's offspring", 'skotos', 'smolcano', 'sraracha',
-    'tangleroot', 'tiny tempor', "tumeken's guardian", 'tzrek-jad', 'venenatis spiderling',
-    "vet'ion jr", 'vorki', 'youngllef', 'lil creator', 'muphin', 'smol heredit',
-    'baron', 'butch', 'sol heredit', 'scurry', 'wisp', "lil'viathan",
-    "lil' maiden", 'quetzin', 'nexling', 'puppadile', 'tektiny', 'vanguard',
-    'vasa minirio', 'metamorphic dust', 'dom', 'bran',
-    'beef', 'maggot marquess',
+    'abyssal orphan', 'abyssal protector', 'baby chinchompa', 'baby mole',
+    'baron', 'beaver', 'beef', 'bloodhound', 'bran', 'butch', 'callisto cub',
+    'chompy chick', 'dom', 'giant squirrel', 'gull', 'hellpuppy', 'herbi',
+    'heron', 'huberte', 'ikkle hydra', 'jal-nib-rek', 'kalphite princess',
+    "lil' creator", "lil' zik", "lil'viathan", 'little nightmare',
+    'maggot marquess', 'moxi', 'muphin', 'nexling', 'nid', 'noon', 'olmlet',
+    'pet chaos elemental', 'pet dagannoth prime', 'pet dagannoth rex',
+    'pet dagannoth supreme', 'pet dark core', 'pet general graardor',
+    "pet k'ril tsutsaroth", 'pet kraken', "pet kree'arra", 'pet penance queen',
+    'pet smoke devil', 'pet snakeling', 'pet zilyana', 'phoenix',
+    'prince black dragon', 'quetzin', 'rift guardian', 'rock golem', 'rocky',
+    "scorpia's offspring", 'scurry', 'skotos', 'smol heredit', 'smolcano',
+    'soup', 'sraracha', 'tangleroot', 'tiny tempor', "tumeken's guardian",
+    'tzrek-jad', 'venenatis spiderling', "vet'ion jr.", 'vorki', 'wisp',
+    'yami', 'youngllef',
+    # Metamorphoses and variants — separate collection-log items, not separate
+    # pets.yaml entries.
+    "lil' maiden", 'metamorphic dust', 'midnight', 'puppadile', 'sol heredit',
+    'tektiny', 'vanguard', 'vasa minirio',
 }
 
 # ---------------------------------------------------------------------------
