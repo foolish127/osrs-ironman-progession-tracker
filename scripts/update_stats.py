@@ -402,6 +402,13 @@ def load_combat_achievements():
         'recent_tasks': recent_tasks[:20]
     }
 
+def split_pet_source(name):
+    """Split a "Pet name (Source)" entry into (name, source)."""
+    if '(' in name and name.endswith(')'):
+        base, source = name.rsplit('(', 1)
+        return base.strip(), source[:-1].strip()
+    return name, None
+
 def parse_pets_yaml(content):
     """Parse the flat pets.yaml structure"""
     result = {'obtained': [], 'missing': []}
@@ -433,7 +440,12 @@ def parse_pets_yaml(content):
                 date = None
                 notes = None
 
-            result[current_section].append({'name': name, 'date': date, 'notes': notes})
+            # Both lists may annotate the source as "Pet name (Source)" — keep it
+            # so a pet that moves from missing to obtained keeps its label until
+            # the collection log catches up.
+            name, source = split_pet_source(name)
+            result[current_section].append(
+                {'name': name, 'date': date, 'notes': notes, 'source': source})
 
     return result
 
@@ -537,13 +549,11 @@ def load_pets():
 
     missing_parsed = []
     for item in missing_raw:
-        name = item['name'] if isinstance(item, dict) else item
-        source = None
-        if '(' in name and name.endswith(')'):
-            parts = name.rsplit('(', 1)
-            name = parts[0].strip()
-            source = parts[1][:-1].strip()
-        missing_parsed.append({'name': name, 'source': source})
+        if isinstance(item, dict):
+            missing_parsed.append({'name': item['name'], 'source': item.get('source')})
+        else:
+            name, source = split_pet_source(item)
+            missing_parsed.append({'name': name, 'source': source})
 
     return {
         'obtained': obtained,
@@ -574,14 +584,11 @@ def extract_pets_from_clog(clog):
     # Also get missing pets from YAML for the full list
     missing_names = names_lower(missing)
     for pet in data.get('missing', []):
-        pet_name = pet.get('name', pet) if isinstance(pet, dict) else pet
+        if isinstance(pet, dict):
+            pet_name, source = pet.get('name', ''), pet.get('source')
+        else:
+            pet_name, source = split_pet_source(pet)
         if pet_name.lower() not in missing_names:
-            # Parse source from "name (source)" format
-            source = None
-            if '(' in pet_name and pet_name.endswith(')'):
-                parts = pet_name.rsplit('(', 1)
-                pet_name = parts[0].strip()
-                source = parts[1][:-1].strip()
             missing.append({'name': pet_name, 'source': source})
             missing_names.add(pet_name.lower())
 
@@ -614,7 +621,7 @@ def extract_pets_from_clog(clog):
             obtained.append({
                 'name': name,
                 'date': normalize_date(pet.get('date')),
-                'source': None,
+                'source': pet.get('source'),
                 'notes': pet.get('notes'),
             })
             obtained_names.add(name.lower())
