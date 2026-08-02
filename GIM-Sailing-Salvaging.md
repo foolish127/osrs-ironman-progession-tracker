@@ -21,35 +21,34 @@ Items from the guide I skipped - go back and do these.
 | # | Item / step | Skill | Current |
 |:---:|---|:---:|:---:|
 | 1 | Tempoross CA's | Fishing |  |
-| 2 | 50 Agility @ Barbarian Fishing | Agility | 44 |
+| 2 | 50 Agility @ Barbarian Fishing | Agility | 48 |
 | 3 | Full Rogue outfit | Thieving | 0/5 |
 | 4 | Buy 75 lockpicks (requires 50 Thieving) | Thieving | ❌ |
 | 5 | 77 Thieving | Thieving | 50 |
 | 6 | Rune pouch + Mage Training Arena for 10 mist runes and Bones to Peaches | Magic |  |
 | 7 | Steal from the Keldagrim Gem Stall (requires 75 Thieving) | Thieving | 50 |
-| 8 | Lap of the Falador rooftop agility course (requires 50 Agility) | Agility | 44 |
+| 8 | Lap of the Falador rooftop agility course (requires 50 Agility) | Agility | 48 |
 | 9 | Make molten glass: buy 1600 soda ash + mine sandstone (1600 buckets of sand) | Crafting |  |
-| 10 | Make 5 botanical pies (requires 52 Cooking) | Cooking | 50 |
-| 11 | Boulder leap shortcut near the Arceuus dark altar (requires 49 Agility) | Agility | 44 |
-| 12 | 70 Cooking | Cooking | 50 |
+| 10 | Make 5 botanical pies (requires 52 Cooking) | Cooking | 53 |
+| 11 | Boulder leap shortcut near the Arceuus dark altar (requires 49 Agility) | Agility | 48 |
+| 12 | 70 Cooking | Cooking | 53 |
 | 13 | Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
 | 14 | Get the Skull sceptre from the Stronghold of Security |  |  |
 | 15 | Get a gout tuber |  |  |
-| 16 | Buy 1200 knives in Burthorpe's Rogues' Den (15 bronze / 10 iron / 5 steel) (requires 50 Agility) - may not need this, it was for Ranged training to 43 | Agility | 44 |
-| 17 | Obstacle pipe in Varrock Sewers (requires 51 Agility) - Varrock hard diary | Agility | 44 |
-| 18 | Guide step 91 - Crafting & Thieving XP | Crafting / Thieving |  |
-| 19 | Steal from the Ardougne royal chest (requires 72 Thieving) | Thieving | 50 |
-| 20 | Tithe Farm to level 62 for rewards: herb sack, auto-weed, seed box | Farming | 48 |
-| 21 | Come back to guide step 93 for farm runs | Farming | 48 |
-| 22 | Quest: Temple of Ikov (need 20 limpwurt roots) |  | 4/20 |
-| 23 | Quest: Desert Treasure I (pre-reqs: Temple of Ikov, 53 Thieving) - also kill a Shadow Hound in the Shadow Dungeon for Kandarin hard diary | Thieving | 50 |
-| 24 | Miniquest: Curse of the Empty Lord (pre-req: Desert Treasure I) |  |  |
-| 25 | Collect 5 Trollweiss (after the ice diamond step; kill 5 trolls behind the ice gate) |  |  |
-| 26 | Make 4 inventories of Paddewwa tablets - requires Desert Treasure; looks like it's charging orbs from a step above or one I skipped | Magic |  |
-| 27 | Quest: The Hand in the Sand (missing a white berry) - then claim buckets of sand from Bert for the Ardougne diary | |  |
-| 28 | Put next grown cat into the Menagerie in POH | Construction | 39 |
-| 29 | Level Construction to 50 using oak planks - hire a Demon Butler at 50 | Construction | 39 |
-| 30 | Build Oak shelves 2 at level 45 Construction (3 oak planks + 6 soft clay); Fancy range at 42 Construction (8 steel bars) | Construction | 39 |
+| 16 | Obstacle pipe in Varrock Sewers (requires 51 Agility) - Varrock hard diary | Agility | 48 |
+| 17 | Guide step 91 - Crafting & Thieving XP | Crafting / Thieving |  |
+| 18 | Steal from the Ardougne royal chest (requires 72 Thieving) | Thieving | 50 |
+| 19 | Tithe Farm to level 62 for rewards: herb sack, auto-weed, seed box | Farming | 48 |
+| 20 | Come back to guide step 93 for farm runs | Farming | 48 |
+| 21 | Quest: Temple of Ikov (need 20 limpwurt roots) |  | 4/20 |
+| 22 | Quest: Desert Treasure I (pre-reqs: Temple of Ikov, 53 Thieving) - also kill a Shadow Hound in the Shadow Dungeon for Kandarin hard diary | Thieving | 50 |
+| 23 | Miniquest: Curse of the Empty Lord (pre-req: Desert Treasure I) |  |  |
+| 24 | Collect 5 Trollweiss (after the ice diamond step; kill 5 trolls behind the ice gate) |  |  |
+| 25 | Make 4 inventories of Paddewwa tablets - requires Desert Treasure; looks like it's charging orbs from a step above or one I skipped | Magic |  |
+| 26 | Quest: The Hand in the Sand (missing a white berry) - then claim buckets of sand from Bert for the Ardougne diary | |  |
+| 27 | Put next grown cat into the Menagerie in POH | Construction | 39 |
+| 28 | Level Construction to 50 using oak planks - hire a Demon Butler at 50 | Construction | 39 |
+| 29 | Build Oak shelves 2 at level 45 Construction (3 oak planks + 6 soft clay); Fancy range at 42 Construction (8 steel bars) | Construction | 39 |
 
 </details>
 
@@ -71,7 +70,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Magic | 63 | 70 | 🟢 +7 |
 | Runecraft | 24 | 28 | 🟢 +4 |
 | Construction | 39 | 39 | 0 |
-| Agility | 51 | 44 | 🔴 −7 |
+| Agility | 51 | 48 | 🔴 −3 |
 | Herblore | 40 | 46 | 🟢 +6 |
 | Thieving | 77 | 50 | 🔴 −27 |
 | Crafting | 56 | 52 | 🔴 −4 |
@@ -80,14 +79,14 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Hunter | 49 | 51 | 🟢 +2 |
 | Mining | 44 | 80 | 🟢 +36 |
 | Smithing | 42 | 42 | 0 |
-| Fishing | 74 | 61 | 🔴 −13 |
-| Cooking | 60 | 50 | 🔴 −10 |
+| Fishing | 74 | 68 | 🔴 −6 |
+| Cooking | 60 | 53 | 🔴 −7 |
 | Firemaking | 89 | 82 | 🔴 −7 |
 | Woodcutting | 70 | 75 | 🟢 +5 |
 | Farming | 63 | 48 | 🔴 −15 |
 | Sailing | 1 | 73 | 🟢 +72 |
 
-_Mine as of 2026-07-27 (skills.json 07-26 + newer levels since)._
+_Mine as of 2026-08-01 (skills.json + newer levels since)._
 
 </details>
 
@@ -98,12 +97,12 @@ Red gaps only, ordered by biggest deficit vs the guide.
 | # | Skill | Now → Target | Gap | How to bridge |
 |:---:|---|:---:|:---:|---|
 | 1 | Thieving | 50 → 77 | 🔴 −27 | See Thieving 50→77 plan below (Aldarin → Ardy Knights, no blackjacking). Clears gem stall + Ardougne royal chest goals |
-| 2 | Farming | 48 → 63 | 🔴 −15 | Tithe Farm (rows 20–21) → herb sack, auto-weed, seed box; plus tree/herb runs |
-| 3 | Fishing | 61 → 74 | 🔴 −13 | Barbarian Fishing - also feeds Agility, Strength, and Cooking |
-| 4 | Cooking | 50 → 60 | 🔴 −10 | Cook the barb-fishing catch (cut-eat); else mess hall to 70 |
-| 5 | Agility | 44 → 51 | 🔴 −7 | Barbarian Fishing passive + rooftop courses; unlocks Falador rooftop + boulder leaps |
-| 6 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
-| 7 | Crafting | 52 → 56 | 🔴 −4 | Molten glass → glassblowing (row 9); battlestaves |
+| 2 | Farming | 48 → 63 | 🔴 −15 | Tithe Farm (rows 19–20) → herb sack, auto-weed, seed box; plus tree/herb runs |
+| 3 | Cooking | 53 → 60 | 🔴 −7 | Cook the barb-fishing catch (cut-eat); else mess hall to 70 |
+| 4 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
+| 5 | Fishing | 68 → 74 | 🔴 −6 | Barbarian Fishing - also feeds Agility, Strength, and Cooking |
+| 6 | Crafting | 52 → 56 | 🔴 −4 | Molten glass → glassblowing (row 9); battlestaves |
+| 7 | Agility | 48 → 51 | 🔴 −3 | Barbarian Fishing passive + rooftop courses; unlocks Falador rooftop + boulder leaps |
 
 ### Thieving 50 → 77 plan
 
