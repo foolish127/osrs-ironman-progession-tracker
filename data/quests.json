@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-07-02T03:55:26.495152+00:00",
+  "updated": "2026-08-02T02:42:57.481423+00:00",
   "quests": {
     "categories": {
       "Free-to-play": {
@@ -735,7 +735,12 @@
             "date": "2026-07-01"
           }
         ],
-        "not_completed": []
+        "not_completed": [
+          {
+            "name": "Fallen From Grace",
+            "date": null
+          }
+        ]
       },
       "Miniquests": {
         "completed": [
@@ -821,7 +826,7 @@
       }
     },
     "total_completed": 181,
-    "total_quests": 181,
+    "total_quests": 182,
     "miniquests_completed": 18,
     "total_miniquests": 19
   }
