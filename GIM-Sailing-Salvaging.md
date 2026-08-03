@@ -30,19 +30,18 @@ Items from the guide I skipped - go back and do these.
 | 8 | Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
 | 9 | Get the Skull sceptre from the Stronghold of Security |  |  |
 | 10 | Get a gout tuber |  |  |
-| 11 | ⭐ **Obstacle pipe in Varrock Sewers (requires 51 Agility) - Varrock hard diary** | Agility | 51 |
-| 12 | Guide step 91 - Crafting & Thieving XP | Crafting / Thieving |  |
-| 13 | Steal from the Ardougne royal chest (requires 72 Thieving) | Thieving | 50 |
-| 14 | Tithe Farm to level 62 for rewards: herb sack, auto-weed, seed box | Farming | 48 |
-| 15 | Come back to guide step 93 for farm runs | Farming | 48 |
-| 16 | Quest: Temple of Ikov (need 20 limpwurt roots) |  | 4/20 |
-| 17 | Quest: Desert Treasure I (pre-reqs: Temple of Ikov, 53 Thieving) - also kill a Shadow Hound in the Shadow Dungeon for Kandarin hard diary | Thieving | 50 |
-| 18 | Miniquest: Curse of the Empty Lord (pre-req: Desert Treasure I) |  |  |
-| 19 | Collect 5 Trollweiss (after the ice diamond step; kill 5 trolls behind the ice gate) |  |  |
-| 20 | Make 4 inventories of Paddewwa tablets - requires Desert Treasure; looks like it's charging orbs from a step above or one I skipped | Magic |  |
-| 21 | Quest: The Hand in the Sand (missing a white berry) - then claim buckets of sand from Bert for the Ardougne diary | |  |
-| 22 | Level Construction to 50 using oak planks - hire a Demon Butler at 50 | Construction | 39 |
-| 23 | Build Oak shelves 2 at level 45 Construction (3 oak planks + 6 soft clay); Fancy range at 42 Construction (8 steel bars) | Construction | 39 |
+| 11 | Guide step 91 - Crafting & Thieving XP | Crafting / Thieving |  |
+| 12 | Steal from the Ardougne royal chest (requires 72 Thieving) | Thieving | 50 |
+| 13 | Tithe Farm to level 62 for rewards: herb sack, auto-weed, seed box | Farming | 48 |
+| 14 | Come back to guide step 93 for farm runs | Farming | 48 |
+| 15 | Quest: Temple of Ikov (need 20 limpwurt roots) |  | 4/20 |
+| 16 | Quest: Desert Treasure I (pre-reqs: Temple of Ikov, 53 Thieving) - also kill a Shadow Hound in the Shadow Dungeon for Kandarin hard diary | Thieving | 50 |
+| 17 | Miniquest: Curse of the Empty Lord (pre-req: Desert Treasure I) |  |  |
+| 18 | Collect 5 Trollweiss (after the ice diamond step; kill 5 trolls behind the ice gate) |  |  |
+| 19 | Make 4 inventories of Paddewwa tablets - requires Desert Treasure; looks like it's charging orbs from a step above or one I skipped | Magic |  |
+| 20 | Quest: The Hand in the Sand (missing a white berry) - then claim buckets of sand from Bert for the Ardougne diary | |  |
+| 21 | Level Construction to 50 using oak planks - hire a Demon Butler at 50 | Construction | 39 |
+| 22 | Build Oak shelves 2 at level 45 Construction (3 oak planks + 6 soft clay); Fancy range at 42 Construction (8 steel bars) | Construction | 39 |
 
 </details>
 
@@ -89,7 +88,7 @@ Red gaps only, ordered by biggest deficit vs the guide.
 | # | Skill | Now → Target | Gap | How to bridge |
 |:---:|---|:---:|:---:|---|
 | 1 | Thieving | 50 → 77 | 🔴 −27 | See Thieving 50→77 plan below (Aldarin → Ardy Knights, no blackjacking). Clears gem stall + Ardougne royal chest goals |
-| 2 | Farming | 48 → 63 | 🔴 −15 | Tithe Farm (rows 14–15) → herb sack, auto-weed, seed box; plus tree/herb runs |
+| 2 | Farming | 48 → 63 | 🔴 −15 | Tithe Farm (rows 13–14) → herb sack, auto-weed, seed box; plus tree/herb runs |
 | 3 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
 | 4 | Cooking | 54 → 60 | 🔴 −6 | Cook the barb-fishing catch (cut-eat); else mess hall to 70 |
 | 5 | Crafting | 52 → 56 | 🔴 −4 | Molten glass → glassblowing (row 5); battlestaves |
