@@ -21,7 +21,7 @@ Items from the guide I skipped - go back and do these.
 | # | Item / step | Skill | Current |
 |:---:|---|:---:|:---:|
 | 1 | Tempoross CA's | Fishing |  |
-| 2 | Full Rogue outfit | Thieving | 3/5 |
+| 2 | Full Rogue outfit | Thieving | 4/5 |
 | 3 | 77 Thieving | Thieving | 50 |
 | 4 | Rune pouch + Mage Training Arena for 10 mist runes and Bones to Peaches | Magic |  |
 | 5 | Steal from the Keldagrim Gem Stall (requires 75 Thieving) | Thieving | 50 |
