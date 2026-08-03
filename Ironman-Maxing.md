@@ -152,7 +152,7 @@
 | 4 | Falador | Elite | White 2H Sword |  | Black knights |  |  |  |
 | 5 | Kandarin | Elite | Chewed Bones (pyre) |  | Barb training |  |  |  |
 | 6 | Kandarin | Elite | Barbarian Assault Level 5 |  | Barb Assault |  |  |  |
-| 7 | Morytania | Elite | 96 Fishing (boost) | 91 | Fishing | 90 | ❌ Not met | -1 |
+| 7 | Morytania | Elite | 96 Fishing (admiral pie +5) | 91 | Fishing | 90 | ❌ Not met | -1 |
 | 8 | Morytania | Elite | Full Barrows set |  | Barrows |  |  |  |
 | 9 | Western Prov. | Elite | 1k Chompy Birds |  | Chompy |  |  |  |
 | 10 | Wilderness | Elite | Kill Callisto / Venenatis / Vet'ion |  | Wildy |  |  |  |
