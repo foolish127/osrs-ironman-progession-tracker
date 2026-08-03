@@ -306,13 +306,7 @@
                 <div class="prog-legend">
                     <span><span class="prog-dot clog"></span>Collection log</span>
                     <span><span class="prog-dot ca"></span>Combat achievements</span>
-                    <span><span class="prog-dot drop"></span>Notable drops</span>
-                </div>
-                <div class="prog-note">
-                    <strong>Notable drops</strong> are the ones logged by hand in
-                    <code>drops.yaml</code> with the KC they came at — uniques, pet
-                    and outfit pieces, and anything worth remembering. Common and
-                    stackable loot isn't counted. Newest month first.
+                    <span><span class="prog-dot drop"></span>Notable drops (see drops page)</span>
                 </div>`;
 
             html += [...months].reverse().map(m => `

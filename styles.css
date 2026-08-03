@@ -77,9 +77,6 @@
         .prog-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0.75rem; margin-bottom: 1rem; }
         .prog-legend { display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: 0.78rem; color: var(--text-muted); margin-bottom: 1rem; }
         .prog-legend span { display: flex; align-items: center; }
-        .prog-note { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1.25rem; max-width: 70ch; }
-        .prog-note strong { color: var(--text-secondary); }
-        .prog-note code { background: var(--bg-dark); border: 1px solid var(--border); border-radius: 3px; padding: 0.05rem 0.3rem; font-size: 0.75rem; }
         .prog-dot { width: 10px; height: 10px; border-radius: 2px; margin-right: 0.4rem; display: inline-block; }
         .prog-dot.clog, .prog-fill.clog { background: #3fb950; }
         .prog-dot.ca, .prog-fill.ca { background: #58a6ff; }
