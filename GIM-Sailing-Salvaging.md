@@ -21,31 +21,30 @@ Items from the guide I skipped - go back and do these.
 | # | Item / step | Skill | Current |
 |:---:|---|:---:|:---:|
 | 1 | Tempoross CA's | Fishing |  |
-| 2 | Full Rogue outfit | Thieving | 4/5 |
-| 3 | 77 Thieving | Thieving | 50 |
-| 4 | Rune pouch + Mage Training Arena for 10 mist runes and Bones to Peaches | Magic |  |
-| 5 | Steal from the Keldagrim Gem Stall (requires 75 Thieving) | Thieving | 50 |
-| 6 | Make molten glass: buy 1600 soda ash + mine sandstone (1600 buckets of sand) | Crafting |  |
-| 7 | Make 5 botanical pies (requires 52 Cooking) | Cooking | 53 |
-| 8 | Boulder leap shortcut near the Arceuus dark altar (requires 49 Agility) | Agility | 50 |
-| 9 | 70 Cooking | Cooking | 53 |
-| 10 | Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
-| 11 | Get the Skull sceptre from the Stronghold of Security |  |  |
-| 12 | Get a gout tuber |  |  |
-| 13 | Obstacle pipe in Varrock Sewers (requires 51 Agility) - Varrock hard diary | Agility | 50 |
-| 14 | Guide step 91 - Crafting & Thieving XP | Crafting / Thieving |  |
-| 15 | Steal from the Ardougne royal chest (requires 72 Thieving) | Thieving | 50 |
-| 16 | Tithe Farm to level 62 for rewards: herb sack, auto-weed, seed box | Farming | 48 |
-| 17 | Come back to guide step 93 for farm runs | Farming | 48 |
-| 18 | Quest: Temple of Ikov (need 20 limpwurt roots) |  | 4/20 |
-| 19 | Quest: Desert Treasure I (pre-reqs: Temple of Ikov, 53 Thieving) - also kill a Shadow Hound in the Shadow Dungeon for Kandarin hard diary | Thieving | 50 |
-| 20 | Miniquest: Curse of the Empty Lord (pre-req: Desert Treasure I) |  |  |
-| 21 | Collect 5 Trollweiss (after the ice diamond step; kill 5 trolls behind the ice gate) |  |  |
-| 22 | Make 4 inventories of Paddewwa tablets - requires Desert Treasure; looks like it's charging orbs from a step above or one I skipped | Magic |  |
-| 23 | Quest: The Hand in the Sand (missing a white berry) - then claim buckets of sand from Bert for the Ardougne diary | |  |
-| 24 | Put next grown cat into the Menagerie in POH | Construction | 39 |
-| 25 | Level Construction to 50 using oak planks - hire a Demon Butler at 50 | Construction | 39 |
-| 26 | Build Oak shelves 2 at level 45 Construction (3 oak planks + 6 soft clay); Fancy range at 42 Construction (8 steel bars) | Construction | 39 |
+| 2 | 77 Thieving | Thieving | 50 |
+| 3 | Rune pouch + Mage Training Arena for 10 mist runes and Bones to Peaches | Magic |  |
+| 4 | Steal from the Keldagrim Gem Stall (requires 75 Thieving) | Thieving | 50 |
+| 5 | Make molten glass: buy 1600 soda ash + mine sandstone (1600 buckets of sand) | Crafting |  |
+| 6 | Make 5 botanical pies (requires 52 Cooking) | Cooking | 53 |
+| 7 | Boulder leap shortcut near the Arceuus dark altar (requires 49 Agility) | Agility | 50 |
+| 8 | 70 Cooking | Cooking | 53 |
+| 9 | Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
+| 10 | Get the Skull sceptre from the Stronghold of Security |  |  |
+| 11 | Get a gout tuber |  |  |
+| 12 | Obstacle pipe in Varrock Sewers (requires 51 Agility) - Varrock hard diary | Agility | 50 |
+| 13 | Guide step 91 - Crafting & Thieving XP | Crafting / Thieving |  |
+| 14 | Steal from the Ardougne royal chest (requires 72 Thieving) | Thieving | 50 |
+| 15 | Tithe Farm to level 62 for rewards: herb sack, auto-weed, seed box | Farming | 48 |
+| 16 | Come back to guide step 93 for farm runs | Farming | 48 |
+| 17 | Quest: Temple of Ikov (need 20 limpwurt roots) |  | 4/20 |
+| 18 | Quest: Desert Treasure I (pre-reqs: Temple of Ikov, 53 Thieving) - also kill a Shadow Hound in the Shadow Dungeon for Kandarin hard diary | Thieving | 50 |
+| 19 | Miniquest: Curse of the Empty Lord (pre-req: Desert Treasure I) |  |  |
+| 20 | Collect 5 Trollweiss (after the ice diamond step; kill 5 trolls behind the ice gate) |  |  |
+| 21 | Make 4 inventories of Paddewwa tablets - requires Desert Treasure; looks like it's charging orbs from a step above or one I skipped | Magic |  |
+| 22 | Quest: The Hand in the Sand (missing a white berry) - then claim buckets of sand from Bert for the Ardougne diary | |  |
+| 23 | Put next grown cat into the Menagerie in POH | Construction | 39 |
+| 24 | Level Construction to 50 using oak planks - hire a Demon Butler at 50 | Construction | 39 |
+| 25 | Build Oak shelves 2 at level 45 Construction (3 oak planks + 6 soft clay); Fancy range at 42 Construction (8 steel bars) | Construction | 39 |
 
 </details>
 
@@ -92,11 +91,11 @@ Red gaps only, ordered by biggest deficit vs the guide.
 | # | Skill | Now → Target | Gap | How to bridge |
 |:---:|---|:---:|:---:|---|
 | 1 | Thieving | 50 → 77 | 🔴 −27 | See Thieving 50→77 plan below (Aldarin → Ardy Knights, no blackjacking). Clears gem stall + Ardougne royal chest goals |
-| 2 | Farming | 48 → 63 | 🔴 −15 | Tithe Farm (rows 16–17) → herb sack, auto-weed, seed box; plus tree/herb runs |
+| 2 | Farming | 48 → 63 | 🔴 −15 | Tithe Farm (rows 15–16) → herb sack, auto-weed, seed box; plus tree/herb runs |
 | 3 | Cooking | 53 → 60 | 🔴 −7 | Cook the barb-fishing catch (cut-eat); else mess hall to 70 |
 | 4 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
 | 5 | Fishing | 69 → 74 | 🔴 −5 | Barbarian Fishing - also feeds Agility, Strength, and Cooking |
-| 6 | Crafting | 52 → 56 | 🔴 −4 | Molten glass → glassblowing (row 6); battlestaves |
+| 6 | Crafting | 52 → 56 | 🔴 −4 | Molten glass → glassblowing (row 5); battlestaves |
 | 7 | Agility | 50 → 51 | 🔴 −1 | Barbarian Fishing passive + rooftop courses; unlocks Falador rooftop + boulder leaps |
 
 ### Thieving 50 → 77 plan
@@ -109,8 +108,8 @@ Red gaps only, ordered by biggest deficit vs the guide.
 | **55 → 77** | **Knights of Ardougne** (pickpocket) | ~60k → ~90k |
 
 **Order of operations:**
-1. **50 Agility first** - unlocks buying 75 lockpicks (Rogues' Den), wall safes, and faster run-energy for stalls.
-2. Get the **rogue outfit** (BRUH row 2) during Rogues' Den trips - doubles Ardy Knight loot.
+1. **50 Agility ✅** - unlocked buying 75 lockpicks (Rogues' Den, bought), wall safes, and faster run-energy for stalls.
+2. **Rogue outfit ✅** (full set, 11 safes) - doubles Ardy Knight loot.
 3. **50 → 55:** Aldarin chests (~55k with lockpicks) or fruit stalls (~43k, run-energy heavy) as brain-off filler.
 4. **55 → 77:** Knights of Ardougne - bring food + **dodgy necklaces** (25% to negate the stun). Semi-AFK, scales with level.
 
