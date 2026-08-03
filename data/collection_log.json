@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-08-03T02:18:59.462401+00:00",
+  "updated": "2026-08-03T03:16:59.138687+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -653,6 +653,11 @@
       "The Mad Angel": {
         "obtained": [
           {
+            "name": "Hallowfell",
+            "date": "2026-08-03",
+            "quantity": 1
+          },
+          {
             "name": "Ardeaglais teleport",
             "date": "2026-08-02",
             "quantity": 4
@@ -664,8 +669,8 @@
           }
         ],
         "missing": [],
-        "obtained_count": 2,
-        "total_count": 2
+        "obtained_count": 3,
+        "total_count": 3
       },
       "Moons Of Peril": {
         "obtained": [
@@ -5659,9 +5664,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 568,
-    "total_items": 1744,
+    "total_obtained": 569,
+    "total_items": 1745,
     "recent_items": [
+      {
+        "name": "Hallowfell",
+        "date": "2026-08-03",
+        "collection": "the_mad_angel"
+      },
       {
         "name": "Ardeaglais teleport",
         "date": "2026-08-02",
@@ -5756,11 +5766,6 @@
         "name": "Basilisk jaw",
         "date": "2026-06-23",
         "collection": "slayer"
-      },
-      {
-        "name": "Uncut onyx",
-        "date": "2026-06-22",
-        "collection": "zulrah"
       }
     ],
     "source": "templeosrs"
