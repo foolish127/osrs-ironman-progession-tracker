@@ -1,6 +1,6 @@
 {
   "rsn": "GIM Foolin",
-  "updated": "2026-07-30T08:27:03.646856+00:00",
+  "updated": "2026-08-03T04:38:06.467172+00:00",
   "collection_log": {
     "collections": {
       "Dagannoth Kings": {
@@ -90,6 +90,23 @@
         "missing": [],
         "obtained_count": 4,
         "total_count": 4
+      },
+      "Rogues Den": {
+        "obtained": [
+          {
+            "name": "Rogue mask",
+            "date": "2026-08-03",
+            "quantity": 1
+          },
+          {
+            "name": "Rogue top",
+            "date": "2026-08-03",
+            "quantity": 1
+          }
+        ],
+        "missing": [],
+        "obtained_count": 2,
+        "total_count": 2
       },
       "Aerial Fishing": {
         "obtained": [
@@ -322,9 +339,19 @@
         "total_count": 2
       }
     },
-    "total_obtained": 38,
+    "total_obtained": 40,
     "total_items": 1712,
     "recent_items": [
+      {
+        "name": "Rogue mask",
+        "date": "2026-08-03",
+        "collection": "rogues_den"
+      },
+      {
+        "name": "Rogue top",
+        "date": "2026-08-03",
+        "collection": "rogues_den"
+      },
       {
         "name": "Hespori seed",
         "date": "2026-07-26",
@@ -414,16 +441,6 @@
         "name": "Lederhosen hat",
         "date": "2026-07-05",
         "collection": "random_events"
-      },
-      {
-        "name": "Dragon cannonball",
-        "date": "2026-07-02",
-        "collection": "sailing_miscellaneous"
-      },
-      {
-        "name": "Rusty coin",
-        "date": "2026-07-01",
-        "collection": "sea_treasures"
       }
     ],
     "source": "templeosrs"
