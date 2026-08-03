@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-08-02T03:06:51.812135+00:00",
+  "updated": "2026-08-03T02:18:59.462401+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -521,7 +521,7 @@
           {
             "name": "Granite dust",
             "date": "2025-10-27",
-            "quantity": 1864
+            "quantity": 3744
           }
         ],
         "missing": [
@@ -653,14 +653,19 @@
       "The Mad Angel": {
         "obtained": [
           {
+            "name": "Ardeaglais teleport",
+            "date": "2026-08-02",
+            "quantity": 4
+          },
+          {
             "name": "Granite dust",
             "date": "2025-10-27",
-            "quantity": 1864
+            "quantity": 3744
           }
         ],
         "missing": [],
-        "obtained_count": 1,
-        "total_count": 1
+        "obtained_count": 2,
+        "total_count": 2
       },
       "Moons Of Peril": {
         "obtained": [
@@ -5654,9 +5659,14 @@
         "total_count": 1
       }
     },
-    "total_obtained": 567,
-    "total_items": 1743,
+    "total_obtained": 568,
+    "total_items": 1744,
     "recent_items": [
+      {
+        "name": "Ardeaglais teleport",
+        "date": "2026-08-02",
+        "collection": "the_mad_angel"
+      },
       {
         "name": "Heron",
         "date": "2026-08-01",
@@ -5751,11 +5761,6 @@
         "name": "Uncut onyx",
         "date": "2026-06-22",
         "collection": "zulrah"
-      },
-      {
-        "name": "Belle's folly (tarnished)",
-        "date": "2026-06-22",
-        "collection": "shellbane_gryphon"
       }
     ],
     "source": "templeosrs"
