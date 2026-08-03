@@ -92,7 +92,7 @@ Red gaps only, ordered by biggest deficit vs the guide.
 | 3 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
 | 4 | Cooking | 54 → 60 | 🔴 −6 | Cook the barb-fishing catch (cut-eat); else mess hall to 70 |
 | 5 | Crafting | 52 → 56 | 🔴 −4 | Molten glass → glassblowing (row 5); battlestaves |
-| 6 | Fishing | 71 → 74 | 🔴 −3 | Barbarian Fishing - also feeds Agility, Strength, and Cooking |
+| 6 | Fishing | 71 → 74 | 🔴 −3 | Tempoross - also clears the Tempoross CA's (row 1) and banks fish for Cooking |
 
 ### Thieving 50 → 77 plan
 
