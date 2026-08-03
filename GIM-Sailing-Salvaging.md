@@ -21,21 +21,21 @@ Items from the guide I skipped - go back and do these.
 | # | Item / step | Skill | Current |
 |:---:|---|:---:|:---:|
 | 1 | Tempoross CA's | Fishing |  |
-| 2 | 50 Agility @ Barbarian Fishing | Agility | 48 |
+| 2 | 50 Agility @ Barbarian Fishing | Agility | 49 |
 | 3 | Full Rogue outfit | Thieving | 0/5 |
 | 4 | Buy 75 lockpicks (requires 50 Thieving) | Thieving | ❌ |
 | 5 | 77 Thieving | Thieving | 50 |
 | 6 | Rune pouch + Mage Training Arena for 10 mist runes and Bones to Peaches | Magic |  |
 | 7 | Steal from the Keldagrim Gem Stall (requires 75 Thieving) | Thieving | 50 |
-| 8 | Lap of the Falador rooftop agility course (requires 50 Agility) | Agility | 48 |
+| 8 | Lap of the Falador rooftop agility course (requires 50 Agility) | Agility | 49 |
 | 9 | Make molten glass: buy 1600 soda ash + mine sandstone (1600 buckets of sand) | Crafting |  |
 | 10 | Make 5 botanical pies (requires 52 Cooking) | Cooking | 53 |
-| 11 | Boulder leap shortcut near the Arceuus dark altar (requires 49 Agility) | Agility | 48 |
+| 11 | Boulder leap shortcut near the Arceuus dark altar (requires 49 Agility) | Agility | 49 |
 | 12 | 70 Cooking | Cooking | 53 |
 | 13 | Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
 | 14 | Get the Skull sceptre from the Stronghold of Security |  |  |
 | 15 | Get a gout tuber |  |  |
-| 16 | Obstacle pipe in Varrock Sewers (requires 51 Agility) - Varrock hard diary | Agility | 48 |
+| 16 | Obstacle pipe in Varrock Sewers (requires 51 Agility) - Varrock hard diary | Agility | 49 |
 | 17 | Guide step 91 - Crafting & Thieving XP | Crafting / Thieving |  |
 | 18 | Steal from the Ardougne royal chest (requires 72 Thieving) | Thieving | 50 |
 | 19 | Tithe Farm to level 62 for rewards: herb sack, auto-weed, seed box | Farming | 48 |
@@ -70,7 +70,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Magic | 63 | 70 | 🟢 +7 |
 | Runecraft | 24 | 28 | 🟢 +4 |
 | Construction | 39 | 39 | 0 |
-| Agility | 51 | 48 | 🔴 −3 |
+| Agility | 51 | 49 | 🔴 −2 |
 | Herblore | 40 | 46 | 🟢 +6 |
 | Thieving | 77 | 50 | 🔴 −27 |
 | Crafting | 56 | 52 | 🔴 −4 |
@@ -79,14 +79,12 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Hunter | 49 | 51 | 🟢 +2 |
 | Mining | 44 | 80 | 🟢 +36 |
 | Smithing | 42 | 42 | 0 |
-| Fishing | 74 | 68 | 🔴 −6 |
+| Fishing | 74 | 69 | 🔴 −5 |
 | Cooking | 60 | 53 | 🔴 −7 |
 | Firemaking | 89 | 82 | 🔴 −7 |
 | Woodcutting | 70 | 75 | 🟢 +5 |
 | Farming | 63 | 48 | 🔴 −15 |
 | Sailing | 1 | 73 | 🟢 +72 |
-
-_Mine as of 2026-08-01 (skills.json + newer levels since)._
 
 </details>
 
@@ -100,9 +98,9 @@ Red gaps only, ordered by biggest deficit vs the guide.
 | 2 | Farming | 48 → 63 | 🔴 −15 | Tithe Farm (rows 19–20) → herb sack, auto-weed, seed box; plus tree/herb runs |
 | 3 | Cooking | 53 → 60 | 🔴 −7 | Cook the barb-fishing catch (cut-eat); else mess hall to 70 |
 | 4 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
-| 5 | Fishing | 68 → 74 | 🔴 −6 | Barbarian Fishing - also feeds Agility, Strength, and Cooking |
+| 5 | Fishing | 69 → 74 | 🔴 −5 | Barbarian Fishing - also feeds Agility, Strength, and Cooking |
 | 6 | Crafting | 52 → 56 | 🔴 −4 | Molten glass → glassblowing (row 9); battlestaves |
-| 7 | Agility | 48 → 51 | 🔴 −3 | Barbarian Fishing passive + rooftop courses; unlocks Falador rooftop + boulder leaps |
+| 7 | Agility | 49 → 51 | 🔴 −2 | Barbarian Fishing passive + rooftop courses; unlocks Falador rooftop + boulder leaps |
 
 ### Thieving 50 → 77 plan
 
