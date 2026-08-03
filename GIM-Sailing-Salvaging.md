@@ -25,13 +25,13 @@ Items from the guide I skipped - go back and do these.
 | 3 | Rune pouch + Mage Training Arena for 10 mist runes and Bones to Peaches | Magic |  |
 | 4 | Steal from the Keldagrim Gem Stall (requires 75 Thieving) | Thieving | 50 |
 | 5 | Make molten glass: buy 1600 soda ash + mine sandstone (1600 buckets of sand) | Crafting |  |
-| 6 | Make 5 botanical pies (requires 52 Cooking) | Cooking | 53 |
-| 7 | Boulder leap shortcut near the Arceuus dark altar (requires 49 Agility) | Agility | 50 |
-| 8 | 70 Cooking | Cooking | 53 |
+| 6 | Make 5 botanical pies (requires 52 Cooking) | Cooking | 54 |
+| 7 | ⭐ **Boulder leap shortcut near the Arceuus dark altar (requires 49 Agility)** | Agility | 50 |
+| 8 | 70 Cooking | Cooking | 54 |
 | 9 | Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
 | 10 | Get the Skull sceptre from the Stronghold of Security |  |  |
 | 11 | Get a gout tuber |  |  |
-| 12 | Obstacle pipe in Varrock Sewers (requires 51 Agility) - Varrock hard diary | Agility | 50 |
+| 12 | ⭐ **Obstacle pipe in Varrock Sewers (requires 51 Agility) - Varrock hard diary** | Agility | 50 |
 | 13 | Guide step 91 - Crafting & Thieving XP | Crafting / Thieving |  |
 | 14 | Steal from the Ardougne royal chest (requires 72 Thieving) | Thieving | 50 |
 | 15 | Tithe Farm to level 62 for rewards: herb sack, auto-weed, seed box | Farming | 48 |
@@ -76,7 +76,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Mining | 44 | 80 | 🟢 +36 |
 | Smithing | 42 | 42 | 0 |
 | Fishing | 74 | 69 | 🔴 −5 |
-| Cooking | 60 | 53 | 🔴 −7 |
+| Cooking | 60 | 54 | 🔴 −6 |
 | Firemaking | 89 | 82 | 🔴 −7 |
 | Woodcutting | 70 | 75 | 🟢 +5 |
 | Farming | 63 | 48 | 🔴 −15 |
@@ -92,8 +92,8 @@ Red gaps only, ordered by biggest deficit vs the guide.
 |:---:|---|:---:|:---:|---|
 | 1 | Thieving | 50 → 77 | 🔴 −27 | See Thieving 50→77 plan below (Aldarin → Ardy Knights, no blackjacking). Clears gem stall + Ardougne royal chest goals |
 | 2 | Farming | 48 → 63 | 🔴 −15 | Tithe Farm (rows 15–16) → herb sack, auto-weed, seed box; plus tree/herb runs |
-| 3 | Cooking | 53 → 60 | 🔴 −7 | Cook the barb-fishing catch (cut-eat); else mess hall to 70 |
-| 4 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
+| 3 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
+| 4 | Cooking | 54 → 60 | 🔴 −6 | Cook the barb-fishing catch (cut-eat); else mess hall to 70 |
 | 5 | Fishing | 69 → 74 | 🔴 −5 | Barbarian Fishing - also feeds Agility, Strength, and Cooking |
 | 6 | Crafting | 52 → 56 | 🔴 −4 | Molten glass → glassblowing (row 5); battlestaves |
 | 7 | Agility | 50 → 51 | 🔴 −1 | Barbarian Fishing passive + rooftop courses; unlocks Falador rooftop + boulder leaps |
