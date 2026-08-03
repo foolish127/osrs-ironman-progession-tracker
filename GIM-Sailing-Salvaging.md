@@ -73,7 +73,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Hunter | 49 | 51 | 🟢 +2 |
 | Mining | 44 | 80 | 🟢 +36 |
 | Smithing | 42 | 42 | 0 |
-| Fishing | 74 | 69 | 🔴 −5 |
+| Fishing | 74 | 70 | 🔴 −4 |
 | Cooking | 60 | 54 | 🔴 −6 |
 | Firemaking | 89 | 82 | 🔴 −7 |
 | Woodcutting | 70 | 75 | 🟢 +5 |
@@ -92,7 +92,7 @@ Red gaps only, ordered by biggest deficit vs the guide.
 | 2 | Farming | 48 → 63 | 🔴 −15 | Tithe Farm (rows 14–15) → herb sack, auto-weed, seed box; plus tree/herb runs |
 | 3 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
 | 4 | Cooking | 54 → 60 | 🔴 −6 | Cook the barb-fishing catch (cut-eat); else mess hall to 70 |
-| 5 | Fishing | 69 → 74 | 🔴 −5 | Barbarian Fishing - also feeds Agility, Strength, and Cooking |
+| 5 | Fishing | 70 → 74 | 🔴 −4 | Barbarian Fishing - also feeds Agility, Strength, and Cooking |
 | 6 | Crafting | 52 → 56 | 🔴 −4 | Molten glass → glassblowing (row 5); battlestaves |
 
 ### Thieving 50 → 77 plan
