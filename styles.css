@@ -77,6 +77,9 @@
         .prog-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0.75rem; margin-bottom: 1rem; }
         .prog-legend { display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: 0.78rem; color: var(--text-muted); margin-bottom: 1rem; }
         .prog-legend span { display: flex; align-items: center; }
+        .prog-note { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1.25rem; max-width: 70ch; }
+        .prog-note strong { color: var(--text-secondary); }
+        .prog-note code { background: var(--bg-dark); border: 1px solid var(--border); border-radius: 3px; padding: 0.05rem 0.3rem; font-size: 0.75rem; }
         .prog-dot { width: 10px; height: 10px; border-radius: 2px; margin-right: 0.4rem; display: inline-block; }
         .prog-dot.clog, .prog-fill.clog { background: #3fb950; }
         .prog-dot.ca, .prog-fill.ca { background: #58a6ff; }
@@ -383,17 +386,6 @@
         .drops-table .date-col { font-family: 'Fira Code', monospace; color: var(--text-muted); font-size: 0.8rem; }
         .drops-table .date-col.missing { color: var(--accent-red); opacity: 0.6; }
         .drops-table .notes-col { color: var(--text-secondary); font-size: 0.8rem; font-style: italic; max-width: 250px; }
-        .drops-add-section { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; }
-        .drops-add-section h3 { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
-        .drops-add-form { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1rem; }
-        .drops-add-input { padding: 0.75rem 1rem; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); font-size: 0.9rem; }
-        .drops-add-input:focus { outline: none; border-color: var(--accent-gold); }
-        .drops-add-btn { padding: 0.75rem 1.5rem; background: var(--accent-gold); color: var(--bg-dark); border: none; border-radius: 4px; cursor: pointer; font-weight: 500; }
-        .drops-add-btn:hover { background: #e5b95c; }
-        .drops-yaml-output { margin-top: 1rem; }
-        .drops-yaml-output textarea { width: 100%; height: 120px; padding: 1rem; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); font-family: 'Fira Code', monospace; font-size: 0.8rem; resize: vertical; }
-        .drops-yaml-output .copy-btn { margin-top: 0.5rem; padding: 0.5rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; color: var(--text-secondary); cursor: pointer; font-size: 0.85rem; }
-        .drops-yaml-output .copy-btn:hover { background: var(--bg-card-hover); color: var(--text-primary); }
         .drops-count { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem; }
         /* Drops "to log" callout */
         .drops-tolog { background: rgba(88, 166, 255, 0.08); border: 1px solid var(--accent-blue); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; }

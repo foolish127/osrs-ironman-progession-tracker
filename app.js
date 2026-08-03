@@ -307,9 +307,15 @@
                     <span><span class="prog-dot clog"></span>Collection log</span>
                     <span><span class="prog-dot ca"></span>Combat achievements</span>
                     <span><span class="prog-dot drop"></span>Notable drops</span>
+                </div>
+                <div class="prog-note">
+                    <strong>Notable drops</strong> are the ones logged by hand in
+                    <code>drops.yaml</code> with the KC they came at — uniques, pet
+                    and outfit pieces, and anything worth remembering. Common and
+                    stackable loot isn't counted. Newest month first.
                 </div>`;
 
-            html += months.map(m => `
+            html += [...months].reverse().map(m => `
                 <div class="prog-row">
                     <div class="prog-month">${label(m)}</div>
                     <div class="prog-bars">
@@ -1294,7 +1300,6 @@
             if (status === 'In Progress') return 'status-pending';
             return 'status-onrate';
         };
-        let pendingDrops = [];
 
         function parseDropsYaml(yaml) {
             const drops = [];
@@ -1482,26 +1487,6 @@
                         <tbody id="dropsTableBody"></tbody>
                     </table>
                 </div>
-
-                <div class="drops-add-section">
-                    <h3>➕ Add New Drop</h3>
-                    <div class="drops-add-form">
-                        <input type="text" class="drops-add-input" id="newDropBoss" placeholder="Boss/Source" list="bossList">
-                        <datalist id="bossList">
-                            ${bosses.map(b => `<option value="${b}">`).join('')}
-                        </datalist>
-                        <input type="number" class="drops-add-input" id="newDropKc" placeholder="Kill Count">
-                        <input type="text" class="drops-add-input" id="newDropItem" placeholder="Item Name">
-                        <input type="text" class="drops-add-input" id="newDropDate" placeholder="Date (M/D/YYYY)">
-                        <input type="number" class="drops-add-input" id="newDropRate" placeholder="Drop Rate (e.g. 512)">
-                        <input type="text" class="drops-add-input" id="newDropNotes" placeholder="Notes (optional)">
-                        <button class="drops-add-btn" id="addDropBtn">Add Drop</button>
-                    </div>
-                    <div class="drops-yaml-output" id="dropsYamlOutput" style="display:none;">
-                        <textarea id="dropsYamlText" readonly></textarea>
-                        <button class="copy-btn" id="copyYamlBtn">📋 Copy YAML</button>
-                    </div>
-                </div>
             `;
 
             // Event listeners
@@ -1513,15 +1498,6 @@
             document.getElementById('dropsBossFilter').addEventListener('change', (e) => {
                 dropsBossFilter = e.target.value;
                 filterDrops();
-            });
-
-            document.getElementById('addDropBtn').addEventListener('click', addNewDrop);
-            document.getElementById('copyYamlBtn').addEventListener('click', () => {
-                const textarea = document.getElementById('dropsYamlText');
-                textarea.select();
-                document.execCommand('copy');
-                document.getElementById('copyYamlBtn').textContent = '✓ Copied!';
-                setTimeout(() => document.getElementById('copyYamlBtn').textContent = '📋 Copy YAML', 2000);
             });
 
             filterDrops();
@@ -1588,51 +1564,6 @@
                     <td class="status-col ${getStatusClass(item.status)}">${item.status}</td>
                 </tr>
             `).join('');
-        }
-
-        function addNewDrop() {
-            const boss = document.getElementById('newDropBoss').value.trim();
-            const kc = document.getElementById('newDropKc').value.trim();
-            const item = document.getElementById('newDropItem').value.trim();
-            const date = document.getElementById('newDropDate').value.trim();
-            const droprate = document.getElementById('newDropRate').value.trim();
-            const notes = document.getElementById('newDropNotes').value.trim();
-
-            if (!boss || !kc || !item) {
-                alert('Please fill in Boss, KC, and Item');
-                return;
-            }
-
-            const newDrop = { boss, kc: parseInt(kc), item, date };
-            if (droprate) newDrop.droprate = parseInt(droprate);
-            if (notes) newDrop.notes = notes;
-            pendingDrops.push(newDrop);
-
-            // Generate YAML
-            const yamlLines = pendingDrops.map(d => {
-                let yaml = `
-  - boss: ${d.boss}
-    kc: ${d.kc}
-    item: ${d.item}
-    date: ${d.date}`;
-                if (d.droprate) yaml += `\n    droprate: ${d.droprate}`;
-                if (d.notes) yaml += `\n    notes: ${d.notes}`;
-                return yaml;
-            }).join('\n');
-
-            document.getElementById('dropsYamlText').value = `# Add to data/drops.yaml:\n${yamlLines}`;
-            document.getElementById('dropsYamlOutput').style.display = 'block';
-
-            // Clear inputs
-            document.getElementById('newDropBoss').value = '';
-            document.getElementById('newDropKc').value = '';
-            document.getElementById('newDropItem').value = '';
-            document.getElementById('newDropDate').value = '';
-            document.getElementById('newDropRate').value = '';
-
-            // Add to displayed data temporarily
-            dropsData.push(newDrop);
-            filterDrops();
         }
 
         // Progression Tab
@@ -1999,6 +1930,13 @@
                     .targets-tier-Master      { background:rgba(163,113,247,0.15);color:var(--accent-purple);}
                     .targets-tier-Grandmaster { background:rgba(88,166,255,0.15); color:var(--accent-blue);  }
                     .targets-empty { color:var(--text-secondary); padding:2rem; text-align:center; background:var(--bg-card); border:1px dashed var(--border); border-radius:6px; }
+                    .targets-top { display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:1.25rem; }
+                    .targets-top-title { width:100%; color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.08em; }
+                    .targets-top-chip { display:inline-flex; align-items:baseline; gap:0.4rem; padding:0.35rem 0.75rem; background:var(--bg-card); border:1px solid var(--border); border-radius:999px; font-size:0.82rem; color:var(--text-secondary); cursor:pointer; font-family:inherit; }
+                    .targets-top-chip:hover { border-color:var(--accent-gold); color:var(--text-primary); }
+                    .targets-top-chip.active { border-color:var(--accent-gold); color:var(--accent-gold); }
+                    .targets-top-chip b { color:var(--accent-gold); font-family:'Fira Code', monospace; font-weight:600; }
+                    .targets-top-chip span { color:var(--text-muted); font-size:0.75rem; }
                 `;
                 document.head.appendChild(s);
             }
@@ -2030,6 +1968,30 @@
 
             if (targetsState.mode === 'clog') renderTargetsClog();
             else renderTargetsCA();
+        }
+
+        // Top-10 banner: where the most is still on the table, biggest first.
+        // Each chip filters the list below it; clicking the active one clears the filter.
+        function targetsTopHtml(entries, unit, activeName) {
+            if (!entries.length) return '';
+            return `
+                <div class="targets-top">
+                    <div class="targets-top-title">Most left to get — top ${entries.length}</div>
+                    ${entries.map(e => `<button class="targets-top-chip ${e.name === activeName ? 'active' : ''}"
+                            data-top="${escapeTargets(e.name)}">
+                        ${escapeTargets(e.name)} <b>${e.value.toLocaleString()}</b> ${unit}${e.sub ? ` <span>${escapeTargets(e.sub)}</span>` : ''}
+                    </button>`).join('')}
+                </div>`;
+        }
+
+        // Wire chip clicks: set the filter to that name, or clear it if already active.
+        function bindTargetsTop(body, current, apply) {
+            body.querySelectorAll('.targets-top-chip').forEach(chip => {
+                chip.addEventListener('click', () => {
+                    const name = chip.dataset.top;
+                    apply(current === name ? '' : name);
+                });
+            });
         }
 
         function renderTargetsClog() {
@@ -2086,7 +2048,14 @@
                 : 'name';
             const arrow = sortKey === 'pct-asc' ? ' ▲' : sortKey === 'pct-desc' ? ' ▼' : ' ▲';
 
+            // Sources with the most items still missing
+            const topSources = [...counts.entries()]
+                .sort((a,b) => b[1]-a[1] || a[0].localeCompare(b[0]))
+                .slice(0, 10)
+                .map(([name, n]) => ({ name, value: n }));
+
             body.innerHTML = `
+                ${targetsTopHtml(topSources, 'items', targetsState.clogSource)}
                 <div class="targets-controls">
                     <input type="text" class="search-input" id="targetsClogSearch"
                            placeholder="Search item name…" value="${escapeTargets(targetsState.clogSearch)}">
@@ -2126,6 +2095,9 @@
                 }
             `;
 
+            bindTargetsTop(body, targetsState.clogSource, v => {
+                targetsState.clogSource = v; renderTargetsClog();
+            });
             document.getElementById('targetsClogSearch').addEventListener('input', e => {
                 targetsState.clogSearch = e.target.value; renderTargetsClog();
             });
@@ -2180,6 +2152,21 @@
                 .map(([n,k]) => `<option value="${escapeTargets(n)}" ${targetsState.caType===n?'selected':''}>${escapeTargets(n)} (${k})</option>`)
                 .join('');
 
+            // Monsters holding the most unclaimed points. Ranked by points, not task
+            // count - one Grandmaster task is worth six Easy ones.
+            const ptsByMonster = new Map();
+            for (const r of allRows) {
+                if (!r.monster) continue;
+                const cur = ptsByMonster.get(r.monster) || { pts: 0, n: 0 };
+                cur.pts += r.points || 0;
+                cur.n += 1;
+                ptsByMonster.set(r.monster, cur);
+            }
+            const topMonsters = [...ptsByMonster.entries()]
+                .sort((a,b) => b[1].pts - a[1].pts || a[0].localeCompare(b[0]))
+                .slice(0, 10)
+                .map(([name, v]) => ({ name, value: v.pts, sub: `${v.n} task${v.n === 1 ? '' : 's'}` }));
+
             // Apply filters
             const q = targetsState.caSearch.trim().toLowerCase();
             let rows = allRows.filter(r => {
@@ -2219,6 +2206,7 @@
                 : '';
 
             body.innerHTML = `
+                ${targetsTopHtml(topMonsters, 'pts', targetsState.caMonster)}
                 <div class="targets-controls">
                     <input type="text" class="search-input" id="targetsCaSearch"
                            placeholder="Search task, monster, or description…" value="${escapeTargets(targetsState.caSearch)}">
@@ -2284,6 +2272,9 @@
                 const el = document.getElementById(id);
                 if (el) el.addEventListener(evt, fn);
             };
+            bindTargetsTop(body, targetsState.caMonster, v => {
+                targetsState.caMonster = v; renderTargetsCA();
+            });
             bind('targetsCaSearch',  'input',  e => { targetsState.caSearch  = e.target.value;   renderTargetsCA(); });
             bind('targetsCaMonster', 'change', e => { targetsState.caMonster = e.target.value;   renderTargetsCA(); });
             bind('targetsCaTier',    'change', e => { targetsState.caTier    = e.target.value;   renderTargetsCA(); });
