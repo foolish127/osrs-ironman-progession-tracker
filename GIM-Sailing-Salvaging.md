@@ -42,9 +42,8 @@ Items from the guide I skipped - go back and do these.
 | 20 | Collect 5 Trollweiss (after the ice diamond step; kill 5 trolls behind the ice gate) |  |  |
 | 21 | Make 4 inventories of Paddewwa tablets - requires Desert Treasure; looks like it's charging orbs from a step above or one I skipped | Magic |  |
 | 22 | Quest: The Hand in the Sand (missing a white berry) - then claim buckets of sand from Bert for the Ardougne diary | |  |
-| 23 | Put next grown cat into the Menagerie in POH | Construction | 39 |
-| 24 | Level Construction to 50 using oak planks - hire a Demon Butler at 50 | Construction | 39 |
-| 25 | Build Oak shelves 2 at level 45 Construction (3 oak planks + 6 soft clay); Fancy range at 42 Construction (8 steel bars) | Construction | 39 |
+| 23 | Level Construction to 50 using oak planks - hire a Demon Butler at 50 | Construction | 39 |
+| 24 | Build Oak shelves 2 at level 45 Construction (3 oak planks + 6 soft clay); Fancy range at 42 Construction (8 steel bars) | Construction | 39 |
 
 </details>
 
