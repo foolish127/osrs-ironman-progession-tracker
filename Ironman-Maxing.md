@@ -218,7 +218,7 @@ Rates there assume 99 + full skilling outfits, so expect less in practice.
 | Fletching | Bolt tips · 1:21 · 8.4k | Unstrung bows · 0:32 · **247k** | 6,788,101 |
 | Firemaking | Forester's campfire · **2:31** · **238.6k** | *same* | 2,869,408 |
 | Fishing | Dark crab · **7:32** · 40k | Barb fishing · 1:57 · **57k** | 7,274,205 |
-| Agility | *(tabled - see below)* | | 10,825,513 |
+| Agility | POH agility · **10:00** · 12k *(needs Con 88)* | *nothing better* | 10,825,513 |
 
 **No trade-off needed:**
 
