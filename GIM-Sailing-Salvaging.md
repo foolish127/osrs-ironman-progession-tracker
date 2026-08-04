@@ -99,11 +99,11 @@ Red gaps only, ordered by biggest deficit vs the guide.
 
 | Level band | Method | ~XP/hr |
 |---|---|:---:|
-| 50 → 55 | Aldarin chests (stopgap) | ~55k w/ lockpicks · ~40k without |
+| 50 → 55 | Aldarin chests (stopgap) | ~55k |
 | **55 → 77** | **Knights of Ardougne** (pickpocket) | ~60k → ~90k |
 
 **Order of operations:**
-1. **50 → 55:** Aldarin chests (~55k with lockpicks) or fruit stalls (~43k, run-energy heavy) as brain-off filler.
+1. **50 → 55:** Aldarin chests (~55k) or fruit stalls (~43k, run-energy heavy) as brain-off filler.
 2. **55 → 77:** Knights of Ardougne - bring food + **dodgy necklaces** (25% to negate the stun). Semi-AFK, scales with level.
 
 Optional: Pyramid Plunder (~50k+) if Icthlarin's Little Helper ever gets done.
