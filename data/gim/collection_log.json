@@ -1,6 +1,6 @@
 {
   "rsn": "GIM Foolin",
-  "updated": "2026-08-03T05:01:31.544310+00:00",
+  "updated": "2026-08-04T00:57:42.351717+00:00",
   "collection_log": {
     "collections": {
       "Dagannoth Kings": {
@@ -9,6 +9,18 @@
             "name": "Dragon axe",
             "date": "2026-06-28",
             "quantity": 1
+          }
+        ],
+        "missing": [],
+        "obtained_count": 1,
+        "total_count": 1
+      },
+      "Tempoross": {
+        "obtained": [
+          {
+            "name": "Spirit flakes",
+            "date": "2026-08-04",
+            "quantity": 39
           }
         ],
         "missing": [],
@@ -354,9 +366,14 @@
         "total_count": 2
       }
     },
-    "total_obtained": 43,
+    "total_obtained": 44,
     "total_items": 1712,
     "recent_items": [
+      {
+        "name": "Spirit flakes",
+        "date": "2026-08-04",
+        "collection": "tempoross"
+      },
       {
         "name": "Rogue mask",
         "date": "2026-08-03",
@@ -449,11 +466,6 @@
       },
       {
         "name": "Zombie trousers",
-        "date": "2026-07-18",
-        "collection": "random_events"
-      },
-      {
-        "name": "Zombie gloves",
         "date": "2026-07-18",
         "collection": "random_events"
       }

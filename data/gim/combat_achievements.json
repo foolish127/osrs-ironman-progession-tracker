@@ -1,6 +1,6 @@
 {
   "rsn": "GIM Foolin",
-  "updated": "2026-07-24T19:46:01.682898+00:00",
+  "updated": "2026-08-04T01:03:45.338997+00:00",
   "combat_achievements": {
     "tiers": {
       "Easy": {
@@ -28,6 +28,10 @@
           {
             "name": "Brutus Novice",
             "date": "2026-07-24"
+          },
+          {
+            "name": "Master of Buckets",
+            "date": "2026-08-03"
           }
         ],
         "not_completed": [
@@ -50,7 +54,6 @@
           "Into the Den of Giants",
           "King Black Dragon Novice",
           "Let them fight",
-          "Master of Buckets",
           "Mummy!",
           "Not So Great After All",
           "Noxious Foe",
@@ -67,10 +70,10 @@
           "Tempoross Novice",
           "The Demonic Punching Bag"
         ],
-        "completed_count": 6,
+        "completed_count": 7,
         "total_count": 41,
         "points_per_task": 1,
-        "points_earned": 6
+        "points_earned": 7
       },
       "Medium": {
         "completed": [
@@ -89,6 +92,10 @@
           {
             "name": "Brutus Champion",
             "date": "2026-07-24"
+          },
+          {
+            "name": "The Lone Angler",
+            "date": "2026-08-03"
           }
         ],
         "not_completed": [
@@ -144,18 +151,22 @@
           "Sorry, What Was That?",
           "Squashing the Giant",
           "Tempoross Champion",
-          "The Lone Angler",
           "You're a wizard",
           "Dagannoth Supreme Champion",
           "Temotli Triumph"
         ],
-        "completed_count": 4,
+        "completed_count": 5,
         "total_count": 60,
         "points_per_task": 2,
-        "points_earned": 8
+        "points_earned": 10
       },
       "Hard": {
-        "completed": [],
+        "completed": [
+          {
+            "name": "Dress Like You Mean It",
+            "date": "2026-08-03"
+          }
+        ],
         "not_completed": [
           "\"Theatre of Blood: SM Adept",
           "Abyssal Adept",
@@ -171,7 +182,6 @@
           "Don't Look at the Eclipse",
           "Don't Stop Moving",
           "Don't Whip Me",
-          "Dress Like You Mean It",
           "Faithless Crypt Run",
           "Fat of the Land",
           "Featherweight Fighter",
@@ -243,10 +253,10 @@
           "Venenatis Adept",
           "Who Is the King Now?"
         ],
-        "completed_count": 0,
+        "completed_count": 1,
         "total_count": 85,
         "points_per_task": 3,
-        "points_earned": 0
+        "points_earned": 3
       },
       "Elite": {
         "completed": [],
@@ -727,11 +737,26 @@
         "points_earned": 0
       }
     },
-    "total_completed": 10,
+    "total_completed": 13,
     "total_tasks": 637,
-    "total_points": 14,
+    "total_points": 20,
     "max_points": 2630,
     "recent_tasks": [
+      {
+        "name": "Master of Buckets",
+        "date": "2026-08-03",
+        "tier": "Easy"
+      },
+      {
+        "name": "The Lone Angler",
+        "date": "2026-08-03",
+        "tier": "Medium"
+      },
+      {
+        "name": "Dress Like You Mean It",
+        "date": "2026-08-03",
+        "tier": "Hard"
+      },
       {
         "name": "Brutus Novice",
         "date": "2026-07-24",
