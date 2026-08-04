@@ -1,6 +1,6 @@
 {
   "rsn": "GIM Foolin",
-  "updated": "2026-08-04T01:37:05.241207+00:00",
+  "updated": "2026-08-04T02:02:00.344218+00:00",
   "combat_achievements": {
     "tiers": {
       "Easy": {
@@ -40,6 +40,10 @@
           {
             "name": "Fire in the Hole!",
             "date": "2026-08-03"
+          },
+          {
+            "name": "Tempoross Novice",
+            "date": "2026-08-03"
           }
         ],
         "not_completed": [
@@ -73,13 +77,12 @@
           "Shellbane Adept",
           "Sit Rat",
           "Sleeping Giant",
-          "Tempoross Novice",
           "The Demonic Punching Bag"
         ],
-        "completed_count": 9,
+        "completed_count": 10,
         "total_count": 41,
         "points_per_task": 1,
-        "points_earned": 9
+        "points_earned": 10
       },
       "Medium": {
         "completed": [
@@ -746,9 +749,9 @@
         "points_earned": 0
       }
     },
-    "total_completed": 16,
+    "total_completed": 17,
     "total_tasks": 637,
-    "total_points": 25,
+    "total_points": 26,
     "max_points": 2630,
     "recent_tasks": [
       {
@@ -763,6 +766,11 @@
       },
       {
         "name": "Fire in the Hole!",
+        "date": "2026-08-03",
+        "tier": "Easy"
+      },
+      {
+        "name": "Tempoross Novice",
         "date": "2026-08-03",
         "tier": "Easy"
       },
