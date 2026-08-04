@@ -24,8 +24,8 @@ Items from the guide I skipped - go back and do these.
 | 2 | Mage Training Arena for rune pouch, 10 mist runes and Bones to Peaches | Magic |  |
 | 3 | Steal from the Keldagrim Gem Stall (requires 75 Thieving) | Thieving | 50 |
 | 4 | Make molten glass: buy 1600 soda ash + mine sandstone (1600 buckets of sand) | Crafting |  |
-| 5 | Make 5 botanical pies (requires 52 Cooking) | Cooking | 56 |
-| 6 | 70 Cooking | Cooking | 56 |
+| 5 | Make 5 botanical pies (requires 52 Cooking) | Cooking | 57 |
+| 6 | 70 Cooking | Cooking | 57 |
 | 7 | Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
 | 8 | Get the Skull sceptre from the Stronghold of Security |  |  |
 | 9 | Get a gout tuber |  |  |
@@ -73,7 +73,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Mining | 44 | 80 | 🟢 +36 |
 | Smithing | 42 | 42 | 0 |
 | Fishing | 74 | 72 | 🔴 −2 |
-| Cooking | 60 | 56 | 🔴 −4 |
+| Cooking | 60 | 57 | 🔴 −3 |
 | Firemaking | 89 | 82 | 🔴 −7 |
 | Woodcutting | 70 | 75 | 🟢 +5 |
 | Farming | 63 | 54 | 🔴 −9 |
@@ -90,7 +90,7 @@ Red gaps only, ordered by biggest deficit vs the guide.
 | 1 | Thieving | 50 → 77 | 🔴 −27 | See the [Thieving 50 → 77 plan](#thieving-50--77-plan) below (Aldarin → Ardy Knights, no blackjacking). Clears gem stall + Ardougne royal chest goals |
 | 2 | Farming | 54 → 63 | 🔴 −9 | Tithe Farm (rows 12–13) → herb sack, auto-weed, seed box; plus tree/herb runs |
 | 3 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
-| 4 | Cooking | 56 → 60 | 🔴 −4 | Cook the barb-fishing catch (cut-eat); else mess hall to 70 |
+| 4 | Cooking | 57 → 60 | 🔴 −3 | Cook the barb-fishing catch (cut-eat); else mess hall to 70 |
 | 5 | Crafting | 53 → 56 | 🔴 −3 | Molten glass → glassblowing (row 4); battlestaves |
 | 6 | Fishing | 72 → 74 | 🔴 −2 | Tempoross - banks fish for the Cooking gap too; all its CA's are done |
 
