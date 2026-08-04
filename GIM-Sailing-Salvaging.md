@@ -41,6 +41,7 @@ Items from the guide I skipped - go back and do these.
 | 19 | Quest: The Hand in the Sand (missing a white berry) - then claim buckets of sand from Bert for the Ardougne diary | |  |
 | 20 | Level Construction to 50 using oak planks - hire a Demon Butler at 50 | Construction | 39 |
 | 21 | Build Oak shelves 2 at level 45 Construction (3 oak planks + 6 soft clay); Fancy range at 42 Construction (8 steel bars) | Construction | 39 |
+| 22 | Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3,000+ points in one subdue) | Firemaking | 82 |
 
 </details>
 
