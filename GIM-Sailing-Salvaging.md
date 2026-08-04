@@ -33,7 +33,7 @@ Items from the guide I skipped - go back and do these.
 | 11 | Steal from the Ardougne royal chest (requires 72 Thieving) | Thieving | 53 |
 | 12 | Tithe Farm to level 62 for rewards: herb sack, auto-weed, seed box | Farming | 54 |
 | 13 | Come back to guide step 93 for farm runs | Farming | 54 |
-| 14 | Quest: Temple of Ikov (need 20 limpwurt roots) |  | 4/20 |
+| 14 | Quest: Temple of Ikov (need 20 limpwurt roots) |  | 17/20 |
 | 15 | Quest: Desert Treasure I (pre-reqs: Temple of Ikov, 53 Thieving) - also kill a Shadow Hound in the Shadow Dungeon for Kandarin hard diary | Thieving | 53 |
 | 16 | Miniquest: Curse of the Empty Lord (pre-req: Desert Treasure I) |  |  |
 | 17 | Collect 5 Trollweiss (after the ice diamond step; kill 5 trolls behind the ice gate) |  |  |
