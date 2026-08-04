@@ -20,7 +20,7 @@ Items from the guide I skipped - go back and do these.
 
 | # | Item / step | Skill | Current |
 |:---:|---|:---:|:---:|
-| 1 | [77 Thieving](#thieving-50--77-plan) | Thieving | 55 |
+| 1 | [77 Thieving](#thieving-55--77-plan) | Thieving | 55 |
 | 2 | Mage Training Arena for rune pouch, 10 mist runes and Bones to Peaches | Magic |  |
 | 3 | Steal from the Keldagrim Gem Stall (requires 75 Thieving) | Thieving | 55 |
 | 4 | Make molten glass: buy 1600 soda ash + mine sandstone (1600 buckets of sand) | Crafting |  |
@@ -87,24 +87,22 @@ Red gaps only, ordered by biggest deficit vs the guide.
 
 | # | Skill | Now → Target | Gap | How to bridge |
 |:---:|---|:---:|:---:|---|
-| 1 | Thieving | 55 → 77 | 🔴 −22 | See the [Thieving 50 → 77 plan](#thieving-50--77-plan) below (Aldarin → Ardy Knights, no blackjacking). Clears gem stall + Ardougne royal chest goals |
+| 1 | Thieving | 55 → 77 | 🔴 −22 | See the [Thieving 55 → 77 plan](#thieving-55--77-plan) below (Ardy Knights, no blackjacking). Clears gem stall + Ardougne royal chest goals |
 | 2 | Farming | 54 → 63 | 🔴 −9 | Tithe Farm (rows 12–13) → herb sack, auto-weed, seed box; plus tree/herb runs |
 | 3 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
 | 4 | Crafting | 53 → 56 | 🔴 −3 | Molten glass → glassblowing (row 4); battlestaves |
 | 5 | Fishing | 72 → 74 | 🔴 −2 | Tempoross - banks fish for the 70 Cooking goal (row 6) too; all its CA's are done |
 
-### Thieving 50 → 77 plan
+### Thieving 55 → 77 plan
 
-**~1.37M XP** (50 = 101,333 → 77 = 1,475,581). No blackjacking. **~20 hours** the sensible way (vs ~32 hrs on stalls only). Stretch target 80 (all arteglass) = ~1.88M.
+**~1.31M XP** (55 = 166,636 → 77 = 1,475,581). No blackjacking. **~18 hours**. Stretch target 80 (all arteglass) = ~1.88M.
 
 | Level band | Method | ~XP/hr |
 |---|---|:---:|
-| 50 → 55 | Aldarin chests (stopgap) | ~55k |
 | **55 → 77** | **Knights of Ardougne** (pickpocket) | ~60k → ~90k |
 
 **Order of operations:**
-1. **50 → 55:** Aldarin chests (~55k) or fruit stalls (~43k, run-energy heavy) as brain-off filler.
-2. **55 → 77:** Knights of Ardougne - bring food + **dodgy necklaces** (25% to negate the stun). Semi-AFK, scales with level.
+1. **55 → 77:** Knights of Ardougne - bring food + **dodgy necklaces** (25% to negate the stun). Semi-AFK, scales with level.
 
 Optional: Pyramid Plunder (~50k+) if Icthlarin's Little Helper ever gets done.
 
