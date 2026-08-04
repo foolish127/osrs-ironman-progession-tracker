@@ -1,6 +1,6 @@
 {
   "rsn": "GIM Foolin",
-  "updated": "2026-08-04T01:19:11.949532+00:00",
+  "updated": "2026-08-04T01:37:05.241207+00:00",
   "combat_achievements": {
     "tiers": {
       "Easy": {
@@ -171,6 +171,10 @@
           {
             "name": "Dress Like You Mean It",
             "date": "2026-08-03"
+          },
+          {
+            "name": "Why Cook?",
+            "date": "2026-08-03"
           }
         ],
         "not_completed": [
@@ -228,7 +232,6 @@
           "Weed Whacker",
           "Whack-a-Mole",
           "Why Are You Running?",
-          "Why Cook?",
           "Why Fletch?",
           "Yarr No More",
           "Zulrah Adept",
@@ -259,10 +262,10 @@
           "Venenatis Adept",
           "Who Is the King Now?"
         ],
-        "completed_count": 1,
+        "completed_count": 2,
         "total_count": 85,
         "points_per_task": 3,
-        "points_earned": 3
+        "points_earned": 6
       },
       "Elite": {
         "completed": [],
@@ -743,9 +746,9 @@
         "points_earned": 0
       }
     },
-    "total_completed": 15,
+    "total_completed": 16,
     "total_tasks": 637,
-    "total_points": 22,
+    "total_points": 25,
     "max_points": 2630,
     "recent_tasks": [
       {
@@ -770,6 +773,11 @@
       },
       {
         "name": "Dress Like You Mean It",
+        "date": "2026-08-03",
+        "tier": "Hard"
+      },
+      {
+        "name": "Why Cook?",
         "date": "2026-08-03",
         "tier": "Hard"
       },
