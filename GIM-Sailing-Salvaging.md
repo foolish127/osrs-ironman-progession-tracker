@@ -71,7 +71,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Hunter | 49 | 51 | 🟢 +2 |
 | Mining | 44 | 80 | 🟢 +36 |
 | Smithing | 42 | 42 | 0 |
-| Fishing | 74 | 71 | 🔴 −3 |
+| Fishing | 74 | 72 | 🔴 −2 |
 | Cooking | 60 | 54 | 🔴 −6 |
 | Firemaking | 89 | 82 | 🔴 −7 |
 | Woodcutting | 70 | 75 | 🟢 +5 |
@@ -91,7 +91,7 @@ Red gaps only, ordered by biggest deficit vs the guide.
 | 3 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
 | 4 | Cooking | 54 → 60 | 🔴 −6 | Cook the barb-fishing catch (cut-eat); else mess hall to 70 |
 | 5 | Crafting | 52 → 56 | 🔴 −4 | Molten glass → glassblowing (row 4); battlestaves |
-| 6 | Fishing | 71 → 74 | 🔴 −3 | Tempoross - banks fish for the Cooking gap too; its CA's are done bar Why Fletch? |
+| 6 | Fishing | 72 → 74 | 🔴 −2 | Tempoross - banks fish for the Cooking gap too; its CA's are done bar Why Fletch? |
 
 ### Thieving 50 → 77 plan
 
