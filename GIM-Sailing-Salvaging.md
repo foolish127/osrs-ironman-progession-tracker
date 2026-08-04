@@ -22,7 +22,7 @@ Items from the guide I skipped - go back and do these.
 |:---:|---|:---:|:---:|
 | 1 | Tempoross CA's | Fishing |  |
 | 2 | 77 Thieving | Thieving | 50 |
-| 3 | Rune pouch + Mage Training Arena for 10 mist runes and Bones to Peaches | Magic |  |
+| 3 | Mage Training Arena for rune pouch, 10 mist runes and Bones to Peaches | Magic |  |
 | 4 | Steal from the Keldagrim Gem Stall (requires 75 Thieving) | Thieving | 50 |
 | 5 | Make molten glass: buy 1600 soda ash + mine sandstone (1600 buckets of sand) | Crafting |  |
 | 6 | Make 5 botanical pies (requires 52 Cooking) | Cooking | 54 |
