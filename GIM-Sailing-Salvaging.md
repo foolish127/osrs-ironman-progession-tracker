@@ -9,7 +9,7 @@
 | Magic | 75 ❌ | 74 ❌ |
 | Redwood | 90 ❌ | 89 ❌ |
 
-_Current: Crafting 52, Hunter 50._
+_Current: Crafting 52, Hunter 55._
 
 ## BRUH sailer Guide
 
@@ -68,7 +68,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Crafting | 56 | 52 | 🔴 −4 |
 | Fletching | 48 | 50 | 🟢 +2 |
 | Slayer | 16 | 25 | 🟢 +9 |
-| Hunter | 49 | 51 | 🟢 +2 |
+| Hunter | 49 | 55 | 🟢 +6 |
 | Mining | 44 | 80 | 🟢 +36 |
 | Smithing | 42 | 42 | 0 |
 | Fishing | 74 | 72 | 🔴 −2 |
@@ -172,7 +172,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 - **Smithing** - EW I+II (12.5k), Giant Dwarf (2.5k), Knight's Sword (12.7k), Sleeping Giants (6k) all banked ✅; rest = Giant's Foundry
 - **Construction** - Getting Ahead (3.2k) banked ✅; Fremennik Isles + Cold War (~6.5k) still to do; rest = Mahogany Homes
 - **Slayer** - Porcine banked ✅; Wanted! + RFD-MD (~6k) still to do; rest = tasks → then Heart of Darkness / Perilous Moons capstones blow past 51
-- **Hunter** - 51 ✅ (Ascent of Arceuus banked, already past 45); Perilous Moons 5k left as a capstone
+- **Hunter** - 55 ✅ (Ascent of Arceuus banked, already past 45); Perilous Moons 5k left as a capstone
 
 </details>
 
