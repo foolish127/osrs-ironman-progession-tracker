@@ -24,8 +24,8 @@ Items from the guide I skipped - go back and do these.
 | 2 | Mage Training Arena for rune pouch, 10 mist runes and Bones to Peaches | Magic |  |
 | 3 | Steal from the Keldagrim Gem Stall (requires 75 Thieving) | Thieving | 50 |
 | 4 | Make molten glass: buy 1600 soda ash + mine sandstone (1600 buckets of sand) | Crafting |  |
-| 5 | Make 5 botanical pies (requires 52 Cooking) | Cooking | 62 |
-| 6 | 70 Cooking | Cooking | 62 |
+| 5 | Make 5 botanical pies (requires 52 Cooking) | Cooking | 63 |
+| 6 | 70 Cooking | Cooking | 63 |
 | 7 | Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
 | 8 | Get the Skull sceptre from the Stronghold of Security |  |  |
 | 9 | Get a gout tuber |  |  |
@@ -73,7 +73,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Mining | 44 | 80 | 🟢 +36 |
 | Smithing | 42 | 42 | 0 |
 | Fishing | 74 | 72 | 🔴 −2 |
-| Cooking | 60 | 62 | 🟢 +2 |
+| Cooking | 60 | 63 | 🟢 +3 |
 | Firemaking | 89 | 82 | 🔴 −7 |
 | Woodcutting | 70 | 75 | 🟢 +5 |
 | Farming | 63 | 54 | 🔴 −9 |
