@@ -21,7 +21,7 @@ Items from the guide I skipped - go back and do these.
 | # | Item / step | Skill | Current |
 |:---:|---|:---:|:---:|
 | 1 | [77 Thieving](#thieving-55--77-plan) | Thieving | 59 |
-| 2 | Mage Training Arena for rune pouch, 10 mist runes and Bones to Peaches - only Alchemist left (510 pts) | Magic | 3/4 rooms |
+| 2 | Mage Training Arena for rune pouch, 10 mist runes and Bones to Peaches - only Alchemist left (318/510 pts) | Magic | 3/4 rooms |
 | 3 | Steal from the Keldagrim Gem Stall (requires 75 Thieving) | Thieving | 59 |
 | 4 | Make molten glass: buy 1600 soda ash + mine sandstone (1600 buckets of sand) | Crafting |  |
 | 5 | Make 5 botanical pies (requires 52 Cooking) | Cooking | 63 |
