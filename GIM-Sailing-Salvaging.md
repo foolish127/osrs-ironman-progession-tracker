@@ -60,7 +60,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Hitpoints | 39 | 80 | 🟢 +41 |
 | Ranged | 45 | 71 | 🟢 +26 |
 | Prayer | 43 | 43 | 0 |
-| Magic | 63 | 70 | 🟢 +7 |
+| Magic | 63 | 73 | 🟢 +10 |
 | Runecraft | 24 | 28 | 🟢 +4 |
 | Construction | 39 | 39 | 0 |
 | Agility | 51 | 51 | 0 |
