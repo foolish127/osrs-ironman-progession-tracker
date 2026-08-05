@@ -34,7 +34,7 @@ Items from the guide I skipped - go back and do these.
 | 12 | Farming 68 ❌: palm trees - Brimhaven first (Karamja elite), then Tree Gnome Village (Ardougne hard) | Farming | 57 |
 | 13 | Farming 76 ❌: attas seeds + giant seaweed runs | Farming | 57 |
 | 14 | Farming 82 ❌: boost to 85 for celastrus + hard farming contracts | Farming | 57 |
-| 15 | Quest: Temple of Ikov (need 20 limpwurt roots) |  | 17/20 |
+| 15 | ✅ Quest: Temple of Ikov - 20 limpwurt roots obtained |  | 20/20 |
 | 16 | Quest: Desert Treasure I (pre-req: Temple of Ikov) - also kill a Shadow Hound in the Shadow Dungeon for Kandarin hard diary | Thieving | 67 |
 | 17 | Miniquest: Curse of the Empty Lord (pre-req: Desert Treasure I) |  |  |
 | 18 | Collect 5 Trollweiss (after the ice diamond step; kill 5 trolls behind the ice gate) |  |  |
