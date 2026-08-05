@@ -30,8 +30,8 @@ Items from the guide I skipped - go back and do these.
 | 8 | Get a gout tuber |  |  |
 | 9 | Guide step 91 - Crafting & Thieving XP | Crafting / Thieving |  |
 | 10 | Steal from the Ardougne royal chest (requires 72 Thieving) | Thieving | 60 |
-| 11 | Tithe Farm to level 62 for rewards: herb sack, auto-weed, seed box | Farming | 54 |
-| 12 | Come back to guide step 93 for farm runs | Farming | 54 |
+| 11 | Tithe Farm to level 62 for rewards: herb sack, auto-weed, seed box | Farming | 56 |
+| 12 | Come back to guide step 93 for farm runs | Farming | 56 |
 | 13 | Quest: Temple of Ikov (need 20 limpwurt roots) |  | 17/20 |
 | 14 | Quest: Desert Treasure I (pre-reqs: Temple of Ikov, 53 Thieving) - also kill a Shadow Hound in the Shadow Dungeon for Kandarin hard diary | Thieving | 60 |
 | 15 | Miniquest: Curse of the Empty Lord (pre-req: Desert Treasure I) |  |  |
@@ -75,7 +75,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Cooking | 60 | 63 | 🟢 +3 |
 | Firemaking | 89 | 82 | 🔴 −7 |
 | Woodcutting | 70 | 75 | 🟢 +5 |
-| Farming | 63 | 54 | 🔴 −9 |
+| Farming | 63 | 56 | 🔴 −7 |
 | Sailing | 1 | 73 | 🟢 +72 |
 
 </details>
@@ -87,7 +87,7 @@ Red gaps only, ordered by biggest deficit vs the guide.
 | # | Skill | Now → Target | Gap | How to bridge |
 |:---:|---|:---:|:---:|---|
 | 1 | Thieving | 60 → 77 | 🔴 −17 | See the [Thieving 55 → 77 plan](#thieving-55--77-plan) below (Ardy Knights, no blackjacking). Clears gem stall + Ardougne royal chest goals |
-| 2 | Farming | 54 → 63 | 🔴 −9 | Tithe Farm (rows 11–12) → herb sack, auto-weed, seed box; plus tree/herb runs |
+| 2 | Farming | 56 → 63 | 🔴 −7 | Tithe Farm (rows 11–12) → herb sack, auto-weed, seed box; plus tree/herb runs |
 | 3 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
 | 4 | Crafting | 53 → 56 | 🔴 −3 | Molten glass → glassblowing (row 3); battlestaves |
 | 5 | Fishing | 72 → 74 | 🔴 −2 | Tempoross - banks fish for the 70 Cooking goal (row 5) too; all its CA's are done |
