@@ -22,14 +22,14 @@ Items from the guide I skipped - go back and do these.
 |:---:|---|:---:|:---:|
 | 1 | [77 Thieving](#thieving-55--77-plan) | Thieving | 67 |
 | 2 | Steal from the Keldagrim Gem Stall (requires 75 Thieving) | Thieving | 67 |
-| 3 | Make 5 botanical pies (requires 52 Cooking) | Cooking | 63 |
+| 3 | ✅ Make 5 botanical pies (requires 52 Cooking) | Cooking | 63 |
 | 4 | 70 Cooking | Cooking | 63 |
-| 5 | Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
-| 6 | Get the Skull sceptre from the Stronghold of Security |  |  |
-| 7 | Get a gout tuber |  |  |
+| 5 | ✅ Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
+| 6 | ✅ Get the Skull sceptre from the Stronghold of Security |  |  |
+| 7 | ✅ Get a gout tuber (same Fossil Island trip as row 5) |  |  |
 | 8 | Guide step 91 - Crafting & Thieving XP | Crafting / Thieving |  |
 | 9 | Steal from the Ardougne royal chest (requires 72 Thieving) | Thieving | 67 |
-| 10 | Tithe Farm to level 62 for rewards: herb sack, auto-weed, seed box | Farming | 56 |
+| 10 | ✅ Tithe Farm to level 62 for rewards: herb sack, auto-weed, seed box | Farming | 56 |
 | 11 | Come back to guide step 93 for farm runs | Farming | 56 |
 | 12 | Quest: Temple of Ikov (need 20 limpwurt roots) |  | 17/20 |
 | 13 | Quest: Desert Treasure I (pre-reqs: Temple of Ikov, 53 Thieving) - also kill a Shadow Hound in the Shadow Dungeon for Kandarin hard diary | Thieving | 67 |
@@ -39,7 +39,7 @@ Items from the guide I skipped - go back and do these.
 | 17 | Quest: The Hand in the Sand (missing a white berry) - then claim buckets of sand from Bert for the Ardougne diary | |  |
 | 18 | Level Construction to 50 using oak planks - hire a Demon Butler at 50 | Construction | 40 |
 | 19 | Build Oak shelves 2 at level 45 Construction (3 oak planks + 6 soft clay); Fancy range at 42 Construction (8 steel bars) | Construction | 40 |
-| 20 | Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3,000+ points in one subdue) | Firemaking | 82 |
+| 20 | ✅ Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3,000+ points in one subdue) | Firemaking | 82 |
 
 </details>
 
