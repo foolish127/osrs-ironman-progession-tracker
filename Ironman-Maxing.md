@@ -146,7 +146,7 @@
 
 | # | Diary | Level | Reqs | Boost | Skill | Current | Status | Diff |
 |:---:|---|---|---|---|:---:|:---:|---|:---:|
-| 1 | Ardougne | Elite | 90 Agility (summer pie +5) | 85 | Agility | 80 | ❌ Not met | -5 |
+| 1 | Ardougne | Elite | 90 Agility (summer pie +5) | 85 | Agility | 81 | ❌ Not met | -4 |
 | 2 | ⭐ **Desert** | **Elite** | **91 Thieving** | **91** | **Thieving** | **90** | **❌ Not met** | **-1** |
 | 3 | ⭐ **Desert** | **Elite** | **KQ Head** |  | **KQ** |  |  |  |
 | 4 | Falador | Elite | White 2H Sword |  | Black knights |  |  |  |
@@ -175,7 +175,7 @@
 
 | Requirement | Tasks | Levels short |
 |---|:---:|:---:|
-| Agility | 1 | +5 |
+| Agility | 1 | +4 |
 | Thieving | 1 | +1 |
 | KQ Head | 1 | - |
 | Barrows set | 1 | - |
