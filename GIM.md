@@ -35,7 +35,7 @@ Items from the guide I skipped - go back and do these.
 | 13 | Farming 76 ❌: attas seeds + giant seaweed runs | Farming | 56 |
 | 14 | Farming 82 ❌: boost to 85 for celastrus + hard farming contracts | Farming | 56 |
 | 15 | Quest: Temple of Ikov (need 20 limpwurt roots) |  | 17/20 |
-| 16 | Quest: Desert Treasure I (pre-reqs: Temple of Ikov, 53 Thieving) - also kill a Shadow Hound in the Shadow Dungeon for Kandarin hard diary | Thieving | 67 |
+| 16 | Quest: Desert Treasure I (pre-req: Temple of Ikov) - also kill a Shadow Hound in the Shadow Dungeon for Kandarin hard diary | Thieving | 67 |
 | 17 | Miniquest: Curse of the Empty Lord (pre-req: Desert Treasure I) |  |  |
 | 18 | Collect 5 Trollweiss (after the ice diamond step; kill 5 trolls behind the ice gate) |  |  |
 | 19 | Make 4 inventories of Paddewwa tablets - requires Desert Treasure; looks like it's charging orbs from a step above or one I skipped | Magic |  |
