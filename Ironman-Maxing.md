@@ -6,7 +6,7 @@
 
 | Goal | Reqs | Reward | For |
 |---|---|---|---|
-| **Thieving** | **89 → 91** | **Desert Elite; via elves (crystal shards) or Vyrewatch Sentinels (blood shard)** | **Diaries** |
+| **Thieving** | **90 → 91** | **Desert Elite; via elves (crystal shards) or Vyrewatch Sentinels (blood shard)** | **Diaries** |
 | ⭐ **Bossing** | **Doom** | **Eye of ayak** | **ToA** |
 | ⭐ **Bossing** | **Zulrah** | **Blowpipe** | **ToA** |
 | ⭐ **Bossing** | **ToA** | **Fang · Lightbearer · Ward** | **ToA** |
@@ -147,7 +147,7 @@
 | # | Diary | Level | Reqs | Boost | Skill | Current | Status | Diff |
 |:---:|---|---|---|---|:---:|:---:|---|:---:|
 | 1 | Ardougne | Elite | 90 Agility (summer pie +5) | 85 | Agility | 80 | ❌ Not met | -5 |
-| 2 | ⭐ **Desert** | **Elite** | **91 Thieving** | **91** | **Thieving** | **89** | **❌ Not met** | **-2** |
+| 2 | ⭐ **Desert** | **Elite** | **91 Thieving** | **91** | **Thieving** | **90** | **❌ Not met** | **-1** |
 | 3 | ⭐ **Desert** | **Elite** | **KQ Head** |  | **KQ** |  |  |  |
 | 4 | Falador | Elite | White 2H Sword |  | Black knights |  |  |  |
 | 5 | Kandarin | Elite | Chewed Bones (pyre) |  | Barb training |  |  |  |
@@ -176,7 +176,7 @@
 | Requirement | Tasks | Levels short |
 |---|:---:|:---:|
 | Agility | 1 | +5 |
-| Thieving | 1 | +2 |
+| Thieving | 1 | +1 |
 | KQ Head | 1 | - |
 | Barrows set | 1 | - |
 | White 2H Sword | 1 | - |
@@ -213,7 +213,7 @@ Rates there assume 99 + full skilling outfits, so expect less in practice.
 
 | Skill | Longest AFK | Highest XP | XP to 99 |
 |---|---|---|---:|
-| Thieving | Wealthy citizen · **1:32** · 57.6k | Summer garden · 0:36 · **150k** | 7,987,928 |
+| Thieving | Wealthy citizen · **1:32** · 57.6k | Summer garden · 0:36 · **150k** | 7,688,099 |
 | Smithing | One-bar items · **1:07** · **65k** | *same* | 9,413,922 |
 | Fletching | Bolt tips · 1:21 · 8.4k | Unstrung bows · 0:32 · **247k** | 6,788,101 |
 | Firemaking | Forester's campfire · **2:31** · **238.6k** | *same* | 2,869,408 |
@@ -228,7 +228,7 @@ Rates there assume 99 + full skilling outfits, so expect less in practice.
 **Real trade-offs:**
 
 - **Fishing.** Dark crab is ~4x the idle time of barb fishing for 70% of the rate (182 hrs vs 128). Wins on XP-per-attention if actually away.
-- **Thieving.** Garden is 53 hrs to 99, wealthy citizen 139. For the 89 -> 91 diary gate (856,328 XP): 6 hrs vs 15.
+- **Thieving.** Garden is 51 hrs to 99, wealthy citizen 133. For the 90 -> 91 diary gate (556,499 XP): 4 hrs vs 10.
 - **Fletching.** Redwood shields (0:47 · 193k) need **92** - one level away. Battlestaves (0:49 · 143k) until then.
 
 **Agility - tabled.** POH agility is the longest AFK on the page (10:00) but only 12k XP/hr, so ~900 hrs to 99, and it needs Construction 88 (currently 84). Revisit if Construction gets there; otherwise rooftops or Sepulchre.
