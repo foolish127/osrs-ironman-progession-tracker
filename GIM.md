@@ -28,7 +28,7 @@ Items from the guide I skipped - go back and do these.
 | 6 | ✅ Get a gout tuber (same Fossil Island trip as row 4) |  |  |
 | 7 | Steal from the Ardougne royal chest (requires 72 Thieving ❌) | Thieving | 67 |
 | 8 | ✅ Tithe Farm to level 62 for rewards: herb sack, auto-weed, seed box | Farming | 56 |
-| 9 | Come back to guide step 93 for farm runs - herb patches: Morytania, Varlamore, Falador. Grow limpwurt (row 15), white berries (row 20), toadflax, ranarr, snape grass, watermelons, harralander, nightshade | Farming | 56 |
+| 9 | Come back to guide step 93 for farm runs - herb patches: Morytania, Varlamore, Falador. Grow limpwurt, white berries, toadflax, ranarr, snape grass, watermelons, harralander, nightshade | Farming | 56 |
 | 10 | Farming 60 ❌: plant a yew in Varrock Palace - Varrock hard (2 yew roots), and its logs feed the church-burning task | Farming | 56 |
 | 11 | Farming 62 ❌: boost to 65 (garden pie +3) for medium farming contracts | Farming | 56 |
 | 12 | Farming 68 ❌: palm trees - Brimhaven first (Karamja elite), then Tree Gnome Village (Ardougne hard) | Farming | 56 |
