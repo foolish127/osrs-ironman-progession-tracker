@@ -9,7 +9,7 @@
 | Magic | 75 ❌ | 74 ❌ |
 | Redwood | 90 ❌ | 89 ❌ |
 
-_Current: Crafting 55, Hunter 55._
+_Current: Crafting 56, Hunter 55._
 
 ## BRUH sailer Guide
 
@@ -62,7 +62,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Agility | 51 | 51 | 0 |
 | Herblore | 40 | 46 | 🟢 +6 |
 | Thieving | 77 | 67 | 🔴 −10 |
-| Crafting | 56 | 55 | 🔴 −1 |
+| Crafting | 56 | 56 | 0 |
 | Fletching | 48 | 50 | 🟢 +2 |
 | Slayer | 16 | 25 | 🟢 +9 |
 | Hunter | 49 | 55 | 🟢 +6 |
@@ -87,7 +87,6 @@ Red gaps only, ordered by biggest deficit vs the guide.
 | 2 | Farming | 56 → 63 | 🔴 −7 | Tithe Farm (rows 8–9) → herb sack, auto-weed, seed box; plus tree/herb runs |
 | 3 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
 | 4 | Fishing | 72 → 74 | 🔴 −2 | Tempoross - banks fish for the 70 Cooking goal (row 3) too; all its CA's are done |
-| 5 | Crafting | 55 → 56 | 🔴 −1 | Glassblowing; battlestaves |
 
 ### Thieving 55 → 77 plan
 
