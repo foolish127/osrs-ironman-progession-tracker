@@ -27,7 +27,7 @@ Items from the guide I skipped - go back and do these.
 | 5 | ✅ Get the Skull sceptre from the Stronghold of Security |  |  |
 | 6 | ✅ Get a gout tuber (same Fossil Island trip as row 4) |  |  |
 | 7 | Steal from the Ardougne royal chest (requires 72 Thieving ❌) | Thieving | 67 |
-| 8 | ✅ Tithe Farm to level 62 for rewards: herb sack, auto-weed, seed box | Farming | 57 |
+| 8 | ✅ Tithe Farm to level 62 for rewards: herb sack, seed box | Farming | 57 |
 | 9 | Come back to guide step 93 for farm runs - herb patches: Morytania, Varlamore, Falador. Grow limpwurt, white berries, toadflax, ranarr, snape grass, watermelons, harralander, nightshade | Farming | 57 |
 | 10 | Farming 60 ❌: plant a yew in Varrock Palace - Varrock hard (2 yew roots), and its logs feed the church-burning task | Farming | 57 |
 | 11 | Farming 62 ❌: boost to 65 (garden pie +3) for medium farming contracts | Farming | 57 |
@@ -90,7 +90,7 @@ Red gaps only, ordered by biggest deficit vs the guide.
 |:---:|---|:---:|:---:|---|
 | 1 | Thieving | 67 → 77 | 🔴 −10 | See the [Thieving 55 → 77 plan](#thieving-55--77-plan) below (Ardy Knights, no blackjacking). Clears gem stall + Ardougne royal chest goals |
 | 2 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
-| 3 | Farming | 57 → 63 | 🔴 −6 | Tithe Farm (rows 8–14) → herb sack, auto-weed, seed box; plus tree/herb runs |
+| 3 | Farming | 57 → 63 | 🔴 −6 | Tithe Farm (rows 8–14) → herb sack, seed box; plus tree/herb runs |
 | 4 | Fishing | 72 → 74 | 🔴 −2 | Tempoross - banks fish for the 70 Cooking goal (row 3) too; all its CA's are done |
 
 ### Thieving 55 → 77 plan
