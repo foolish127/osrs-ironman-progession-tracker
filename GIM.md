@@ -28,16 +28,21 @@ Items from the guide I skipped - go back and do these.
 | 6 | ✅ Get a gout tuber (same Fossil Island trip as row 4) |  |  |
 | 7 | Steal from the Ardougne royal chest (requires 72 Thieving) | Thieving | 67 |
 | 8 | ✅ Tithe Farm to level 62 for rewards: herb sack, auto-weed, seed box | Farming | 56 |
-| 9 | Come back to guide step 93 for farm runs - boost at Farming 62 for medium contracts (65 req, garden pie +3). Herb patches: Morytania, Varlamore, Falador. Grow limpwurt (row 10), white berries (row 15), toadflax, ranarr, snape grass, watermelons, harralander, nightshade. At 76: attas seeds + giant seaweed runs. At 82 (boost to 85): celastrus + hard contracts. Yew in Varrock Palace (60, Varrock hard: 2 yew roots). At 68: palm trees - Brimhaven first (Karamja elite), then Tree Gnome Village (Ardougne hard) | Farming | 56 |
-| 10 | Quest: Temple of Ikov (need 20 limpwurt roots) |  | 17/20 |
-| 11 | Quest: Desert Treasure I (pre-reqs: Temple of Ikov, 53 Thieving) - also kill a Shadow Hound in the Shadow Dungeon for Kandarin hard diary | Thieving | 67 |
-| 12 | Miniquest: Curse of the Empty Lord (pre-req: Desert Treasure I) |  |  |
-| 13 | Collect 5 Trollweiss (after the ice diamond step; kill 5 trolls behind the ice gate) |  |  |
-| 14 | Make 4 inventories of Paddewwa tablets - requires Desert Treasure; looks like it's charging orbs from a step above or one I skipped | Magic |  |
-| 15 | Quest: The Hand in the Sand (missing a white berry) - then claim buckets of sand from Bert for the Ardougne diary | |  |
-| 16 | Level Construction to 50 using oak planks - hire a Demon Butler at 50 | Construction | 40 |
-| 17 | Build Oak shelves 2 at level 45 Construction (3 oak planks + 6 soft clay); Fancy range at 42 Construction (8 steel bars) | Construction | 40 |
-| 18 | ✅ Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3,000+ points in one subdue) | Firemaking | 82 |
+| 9 | Come back to guide step 93 for farm runs - herb patches: Morytania, Varlamore, Falador. Grow limpwurt (row 15), white berries (row 20), toadflax, ranarr, snape grass, watermelons, harralander, nightshade | Farming | 56 |
+| 10 | Farming 60: plant a yew in Varrock Palace - Varrock hard (2 yew roots), and its logs feed the church-burning task | Farming | 56 |
+| 11 | Farming 62: boost to 65 (garden pie +3) for medium farming contracts | Farming | 56 |
+| 12 | Farming 68: palm trees - Brimhaven first (Karamja elite), then Tree Gnome Village (Ardougne hard) | Farming | 56 |
+| 13 | Farming 76: attas seeds + giant seaweed runs | Farming | 56 |
+| 14 | Farming 82: boost to 85 for celastrus + hard farming contracts | Farming | 56 |
+| 15 | Quest: Temple of Ikov (need 20 limpwurt roots) |  | 17/20 |
+| 16 | Quest: Desert Treasure I (pre-reqs: Temple of Ikov, 53 Thieving) - also kill a Shadow Hound in the Shadow Dungeon for Kandarin hard diary | Thieving | 67 |
+| 17 | Miniquest: Curse of the Empty Lord (pre-req: Desert Treasure I) |  |  |
+| 18 | Collect 5 Trollweiss (after the ice diamond step; kill 5 trolls behind the ice gate) |  |  |
+| 19 | Make 4 inventories of Paddewwa tablets - requires Desert Treasure; looks like it's charging orbs from a step above or one I skipped | Magic |  |
+| 20 | Quest: The Hand in the Sand (missing a white berry) - then claim buckets of sand from Bert for the Ardougne diary | |  |
+| 21 | Level Construction to 50 using oak planks - hire a Demon Butler at 50 | Construction | 40 |
+| 22 | Build Oak shelves 2 at level 45 Construction (3 oak planks + 6 soft clay); Fancy range at 42 Construction (8 steel bars) | Construction | 40 |
+| 23 | ✅ Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3,000+ points in one subdue) | Firemaking | 82 |
 
 </details>
 
@@ -84,7 +89,7 @@ Red gaps only, ordered by biggest deficit vs the guide.
 | # | Skill | Now → Target | Gap | How to bridge |
 |:---:|---|:---:|:---:|---|
 | 1 | Thieving | 67 → 77 | 🔴 −10 | See the [Thieving 55 → 77 plan](#thieving-55--77-plan) below (Ardy Knights, no blackjacking). Clears gem stall + Ardougne royal chest goals |
-| 2 | Farming | 56 → 63 | 🔴 −7 | Tithe Farm (rows 8–9) → herb sack, auto-weed, seed box; plus tree/herb runs |
+| 2 | Farming | 56 → 63 | 🔴 −7 | Tithe Farm (rows 8–14) → herb sack, auto-weed, seed box; plus tree/herb runs |
 | 3 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
 | 4 | Fishing | 72 → 74 | 🔴 −2 | Tempoross - banks fish for the 70 Cooking goal (row 3) too; all its CA's are done |
 
