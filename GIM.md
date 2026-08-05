@@ -9,7 +9,7 @@
 | Magic | 75 ❌ | 74 ❌ |
 | Redwood | 90 ❌ | 89 ❌ |
 
-_Current: Crafting 53, Hunter 55._
+_Current: Crafting 54, Hunter 55._
 
 ## BRUH sailer Guide
 
@@ -64,7 +64,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Agility | 51 | 51 | 0 |
 | Herblore | 40 | 46 | 🟢 +6 |
 | Thieving | 77 | 67 | 🔴 −10 |
-| Crafting | 56 | 53 | 🔴 −3 |
+| Crafting | 56 | 54 | 🔴 −2 |
 | Fletching | 48 | 50 | 🟢 +2 |
 | Slayer | 16 | 25 | 🟢 +9 |
 | Hunter | 49 | 55 | 🟢 +6 |
@@ -88,7 +88,7 @@ Red gaps only, ordered by biggest deficit vs the guide.
 | 1 | Thieving | 67 → 77 | 🔴 −10 | See the [Thieving 55 → 77 plan](#thieving-55--77-plan) below (Ardy Knights, no blackjacking). Clears gem stall + Ardougne royal chest goals |
 | 2 | Farming | 56 → 63 | 🔴 −7 | Tithe Farm (rows 10–11) → herb sack, auto-weed, seed box; plus tree/herb runs |
 | 3 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
-| 4 | Crafting | 53 → 56 | 🔴 −3 | Glassblowing; battlestaves |
+| 4 | Crafting | 54 → 56 | 🔴 −2 | Glassblowing; battlestaves |
 | 5 | Fishing | 72 → 74 | 🔴 −2 | Tempoross - banks fish for the 70 Cooking goal (row 4) too; all its CA's are done |
 
 ### Thieving 55 → 77 plan
