@@ -28,7 +28,7 @@ Items from the guide I skipped - go back and do these.
 | 6 | ✅ Get a gout tuber (same Fossil Island trip as row 4) |  |  |
 | 7 | Steal from the Ardougne royal chest (requires 72 Thieving) | Thieving | 67 |
 | 8 | ✅ Tithe Farm to level 62 for rewards: herb sack, auto-weed, seed box | Farming | 56 |
-| 9 | Come back to guide step 93 for farm runs - boost at Farming 62 for medium contracts (65 req, garden pie +3). Herb patches: Morytania, Varlamore, Falador. Grow limpwurt (row 10), white berries (row 15), toadflax, ranarr, snape grass, watermelons, harralander, nightshade. At 76: attas seeds + giant seaweed runs. At 82 (boost to 85): celastrus + hard contracts | Farming | 56 |
+| 9 | Come back to guide step 93 for farm runs - boost at Farming 62 for medium contracts (65 req, garden pie +3). Herb patches: Morytania, Varlamore, Falador. Grow limpwurt (row 10), white berries (row 15), toadflax, ranarr, snape grass, watermelons, harralander, nightshade. At 76: attas seeds + giant seaweed runs. At 82 (boost to 85): celastrus + hard contracts. Yew in Varrock Palace (60, Varrock hard: 2 yew roots). At 68: palm trees - Brimhaven first (Karamja elite), then Tree Gnome Village (Ardougne hard) | Farming | 56 |
 | 10 | Quest: Temple of Ikov (need 20 limpwurt roots) |  | 17/20 |
 | 11 | Quest: Desert Treasure I (pre-reqs: Temple of Ikov, 53 Thieving) - also kill a Shadow Hound in the Shadow Dungeon for Kandarin hard diary | Thieving | 67 |
 | 12 | Miniquest: Curse of the Empty Lord (pre-req: Desert Treasure I) |  |  |
