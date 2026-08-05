@@ -20,8 +20,8 @@ Items from the guide I skipped - go back and do these.
 
 | # | Item / step | Skill | Current |
 |:---:|---|:---:|:---:|
-| 1 | [77 Thieving](#thieving-55--77-plan) | Thieving | 65 |
-| 2 | Steal from the Keldagrim Gem Stall (requires 75 Thieving) | Thieving | 65 |
+| 1 | [77 Thieving](#thieving-55--77-plan) | Thieving | 66 |
+| 2 | Steal from the Keldagrim Gem Stall (requires 75 Thieving) | Thieving | 66 |
 | 3 | Make molten glass: buy 1600 soda ash + mine sandstone (1600 buckets of sand) | Crafting |  |
 | 4 | Make 5 botanical pies (requires 52 Cooking) | Cooking | 63 |
 | 5 | 70 Cooking | Cooking | 63 |
@@ -29,11 +29,11 @@ Items from the guide I skipped - go back and do these.
 | 7 | Get the Skull sceptre from the Stronghold of Security |  |  |
 | 8 | Get a gout tuber |  |  |
 | 9 | Guide step 91 - Crafting & Thieving XP | Crafting / Thieving |  |
-| 10 | Steal from the Ardougne royal chest (requires 72 Thieving) | Thieving | 65 |
+| 10 | Steal from the Ardougne royal chest (requires 72 Thieving) | Thieving | 66 |
 | 11 | Tithe Farm to level 62 for rewards: herb sack, auto-weed, seed box | Farming | 56 |
 | 12 | Come back to guide step 93 for farm runs | Farming | 56 |
 | 13 | Quest: Temple of Ikov (need 20 limpwurt roots) |  | 17/20 |
-| 14 | Quest: Desert Treasure I (pre-reqs: Temple of Ikov, 53 Thieving) - also kill a Shadow Hound in the Shadow Dungeon for Kandarin hard diary | Thieving | 65 |
+| 14 | Quest: Desert Treasure I (pre-reqs: Temple of Ikov, 53 Thieving) - also kill a Shadow Hound in the Shadow Dungeon for Kandarin hard diary | Thieving | 66 |
 | 15 | Miniquest: Curse of the Empty Lord (pre-req: Desert Treasure I) |  |  |
 | 16 | Collect 5 Trollweiss (after the ice diamond step; kill 5 trolls behind the ice gate) |  |  |
 | 17 | Make 4 inventories of Paddewwa tablets - requires Desert Treasure; looks like it's charging orbs from a step above or one I skipped | Magic |  |
@@ -64,7 +64,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Construction | 39 | 39 | 0 |
 | Agility | 51 | 51 | 0 |
 | Herblore | 40 | 46 | 🟢 +6 |
-| Thieving | 77 | 65 | 🔴 −12 |
+| Thieving | 77 | 66 | 🔴 −11 |
 | Crafting | 56 | 53 | 🔴 −3 |
 | Fletching | 48 | 50 | 🟢 +2 |
 | Slayer | 16 | 25 | 🟢 +9 |
@@ -86,7 +86,7 @@ Red gaps only, ordered by biggest deficit vs the guide.
 
 | # | Skill | Now → Target | Gap | How to bridge |
 |:---:|---|:---:|:---:|---|
-| 1 | Thieving | 65 → 77 | 🔴 −12 | See the [Thieving 55 → 77 plan](#thieving-55--77-plan) below (Ardy Knights, no blackjacking). Clears gem stall + Ardougne royal chest goals |
+| 1 | Thieving | 66 → 77 | 🔴 −11 | See the [Thieving 55 → 77 plan](#thieving-55--77-plan) below (Ardy Knights, no blackjacking). Clears gem stall + Ardougne royal chest goals |
 | 2 | Farming | 56 → 63 | 🔴 −7 | Tithe Farm (rows 11–12) → herb sack, auto-weed, seed box; plus tree/herb runs |
 | 3 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
 | 4 | Crafting | 53 → 56 | 🔴 −3 | Molten glass → glassblowing (row 3); battlestaves |
