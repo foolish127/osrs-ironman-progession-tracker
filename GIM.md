@@ -38,6 +38,7 @@ Items from the guide I skipped - go back and do these.
 | 16 | Build Oak shelves 2 at level 45 Construction ❌ (3 oak planks + 6 soft clay); Fancy range at 42 Construction ❌ (8 steel bars) | Construction | 40 |
 | 17 | ✅ Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3,000+ points in one subdue) | Firemaking | 82 |
 | 18 | Herblore 50 ❌: see Historian Minas on the 2nd floor of Varrock Museum - 10 kudos + 10k Herblore XP lamp | Herblore | 48 |
+| 19 | Mith grapple: Smithing 59 ❌ (tip) + Fletching 59 ❌ (attach) - gates 3 grapple diary tasks: River Lum (Lumb med), water obelisk to Catherby (Kandarin med), Yanille south wall (Ard med) | Smithing / Fletching | 42 / 51 |
 
 </details>
 
