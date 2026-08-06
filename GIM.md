@@ -36,12 +36,11 @@ Items from the guide I skipped - go back and do these.
 | 14 | Farming 82 ❌: boost to 85 for celastrus + hard farming contracts | Farming | 57 |
 | 15 | ✅ Quest: Desert Treasure I | Thieving | 67 |
 | 16 | Miniquest: Curse of the Empty Lord (pre-req: Desert Treasure I) |  |  |
-| 17 | Collect 5 Trollweiss (after the ice diamond step; kill 5 trolls behind the ice gate) |  |  |
-| 18 | Make 4 inventories of Paddewwa tablets - requires Desert Treasure; looks like it's charging orbs from a step above or one I skipped | Magic |  |
-| 19 | Quest: The Hand in the Sand (missing a white berry) - then claim buckets of sand from Bert for the Ardougne diary | |  |
-| 20 | Level Construction to 50 ❌ using oak planks - hire a Demon Butler at 50 | Construction | 40 |
-| 21 | Build Oak shelves 2 at level 45 Construction ❌ (3 oak planks + 6 soft clay); Fancy range at 42 Construction ❌ (8 steel bars) | Construction | 40 |
-| 22 | ✅ Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3,000+ points in one subdue) | Firemaking | 82 |
+| 17 | Make 4 inventories of Paddewwa tablets - requires Desert Treasure; looks like it's charging orbs from a step above or one I skipped | Magic |  |
+| 18 | Quest: The Hand in the Sand (missing a white berry) - then claim buckets of sand from Bert for the Ardougne diary | |  |
+| 19 | Level Construction to 50 ❌ using oak planks - hire a Demon Butler at 50 | Construction | 40 |
+| 20 | Build Oak shelves 2 at level 45 Construction ❌ (3 oak planks + 6 soft clay); Fancy range at 42 Construction ❌ (8 steel bars) | Construction | 40 |
+| 21 | ✅ Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3,000+ points in one subdue) | Firemaking | 82 |
 
 </details>
 
