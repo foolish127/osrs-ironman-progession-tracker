@@ -35,7 +35,7 @@ Items from the guide I skipped - go back and do these.
 | 13 | Farming 76 ❌: attas seeds + giant seaweed runs | Farming | 57 |
 | 14 | Farming 82 ❌: boost to 85 for celastrus + hard farming contracts | Farming | 57 |
 | 15 | ✅ Make 4 inventories of Paddewwa tablets - looks like it's charging orbs from a step above or one I skipped | Magic |  |
-| 16 | Quest: The Hand in the Sand (missing a white berry) - then claim buckets of sand from Bert for the Ardougne diary | |  |
+| 16 | ⭐ **Quest: The Hand in the Sand - then claim buckets of sand from Bert for the Ardougne diary** | |  |
 | 17 | Level Construction to 50 ❌ using oak planks - hire a Demon Butler at 50 | Construction | 40 |
 | 18 | Build Oak shelves 2 at level 45 Construction ❌ (3 oak planks + 6 soft clay); Fancy range at 42 Construction ❌ (8 steel bars) | Construction | 40 |
 | 19 | ✅ Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3,000+ points in one subdue) | Firemaking | 82 |
