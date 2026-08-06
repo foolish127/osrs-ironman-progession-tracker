@@ -27,13 +27,13 @@ Items from the guide I skipped - go back and do these.
 | 5 | ✅ Get the Skull sceptre from the Stronghold of Security |  |  |
 | 6 | ✅ Get a gout tuber (same Fossil Island trip as row 4) |  |  |
 | 7 | Steal from the Ardougne royal chest (requires 72 Thieving ❌) | Thieving | 67 |
-| 8 | ✅ Tithe Farm to level 62 for rewards: herb sack, seed box | Farming | 58 |
-| 9 | Come back to guide step 93 for farm runs - herb patches: Morytania, Varlamore, Falador. Grow limpwurt, white berries, toadflax, ranarr, snape grass, watermelons, harralander, nightshade | Farming | 58 |
-| 10 | Farming 68 ❌ (65 boosted): yew planted in Varrock Palace - growing. Varrock hard (2 yew roots), and its logs feed the church-burning task | Farming | 58 |
-| 11 | Farming 62 ❌: boost to 65 (garden pie +3) for medium farming contracts | Farming | 58 |
-| 12 | Farming 68 ❌: palm trees - Brimhaven first (Karamja elite), then Tree Gnome Village (Ardougne hard) | Farming | 58 |
-| 13 | Farming 76 ❌: attas seeds + giant seaweed runs | Farming | 58 |
-| 14 | Farming 82 ❌: boost to 85 for celastrus + hard farming contracts | Farming | 58 |
+| 8 | ✅ Tithe Farm to level 62 for rewards: herb sack, seed box | Farming | 59 |
+| 9 | Come back to guide step 93 for farm runs - herb patches: Morytania, Varlamore, Falador. Grow limpwurt, white berries, toadflax, ranarr, snape grass, watermelons, harralander, nightshade | Farming | 59 |
+| 10 | Farming 68 ❌ (65 boosted): yew planted in Varrock Palace - growing. Varrock hard (2 yew roots), and its logs feed the church-burning task | Farming | 59 |
+| 11 | Farming 62 ❌: boost to 65 (garden pie +3) for medium farming contracts | Farming | 59 |
+| 12 | Farming 68 ❌: palm trees - Brimhaven first (Karamja elite), then Tree Gnome Village (Ardougne hard) | Farming | 59 |
+| 13 | Farming 76 ❌: attas seeds + giant seaweed runs | Farming | 59 |
+| 14 | Farming 82 ❌: boost to 85 for celastrus + hard farming contracts | Farming | 59 |
 | 15 | ✅ Make 4 inventories of Paddewwa tablets - looks like it's charging orbs from a step above or one I skipped | Magic |  |
 | 16 | ⭐ **Quest: The Hand in the Sand - then claim buckets of sand from Bert for the Ardougne diary** | |  |
 | 17 | Level Construction to 50 ❌ using oak planks - hire a Demon Butler at 50 | Construction | 40 |
@@ -74,7 +74,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Cooking | 60 | 63 | 🟢 +3 |
 | Firemaking | 89 | 82 | 🔴 −7 |
 | Woodcutting | 70 | 75 | 🟢 +5 |
-| Farming | 63 | 58 | 🔴 −5 |
+| Farming | 63 | 59 | 🔴 −4 |
 | Sailing | 1 | 73 | 🟢 +72 |
 
 </details>
@@ -87,7 +87,7 @@ Red gaps only, ordered by biggest deficit vs the guide.
 |:---:|---|:---:|:---:|---|
 | 1 | Thieving | 67 → 77 | 🔴 −10 | See the [Thieving 55 → 77 plan](#thieving-55--77-plan) below (Ardy Knights, no blackjacking). Clears gem stall + Ardougne royal chest goals |
 | 2 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
-| 3 | Farming | 58 → 63 | 🔴 −5 | Tithe Farm (rows 8–14) → herb sack, seed box; plus tree/herb runs |
+| 3 | Farming | 59 → 63 | 🔴 −4 | Tithe Farm (rows 8–14) → herb sack, seed box; plus tree/herb runs |
 | 4 | Fishing | 72 → 74 | 🔴 −2 | Tempoross - banks fish for the 70 Cooking goal (row 3) too; all its CA's are done |
 
 ### Thieving 55 → 77 plan
