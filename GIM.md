@@ -34,7 +34,7 @@ Items from the guide I skipped - go back and do these.
 | 12 | Farming 68 ❌: palm trees - Brimhaven first (Karamja elite), then Tree Gnome Village (Ardougne hard) | Farming | 57 |
 | 13 | Farming 76 ❌: attas seeds + giant seaweed runs | Farming | 57 |
 | 14 | Farming 82 ❌: boost to 85 for celastrus + hard farming contracts | Farming | 57 |
-| 15 | ✅ Quest: Desert Treasure I - also kill a Shadow Hound in the Shadow Dungeon for Kandarin hard diary | Thieving | 67 |
+| 15 | ✅ Quest: Desert Treasure I | Thieving | 67 |
 | 16 | Miniquest: Curse of the Empty Lord (pre-req: Desert Treasure I) |  |  |
 | 17 | Collect 5 Trollweiss (after the ice diamond step; kill 5 trolls behind the ice gate) |  |  |
 | 18 | Make 4 inventories of Paddewwa tablets - requires Desert Treasure; looks like it's charging orbs from a step above or one I skipped | Magic |  |
