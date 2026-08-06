@@ -20,13 +20,13 @@ Items from the guide I skipped - go back and do these.
 
 | # | Item / step | Skill | Current |
 |:---:|---|:---:|:---:|
-| 1 | [77 Thieving](#thieving-55--77-plan) ❌ | Thieving | 70 |
-| 2 | Steal from the Keldagrim Gem Stall (requires 75 Thieving ❌) | Thieving | 70 |
+| 1 | [77 Thieving](#thieving-55--77-plan) ❌ | Thieving | 71 |
+| 2 | Steal from the Keldagrim Gem Stall (requires 75 Thieving ❌) | Thieving | 71 |
 | 3 | 70 Cooking ❌ | Cooking | 63 |
 | 4 | ✅ Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
 | 5 | ✅ Get the Skull sceptre from the Stronghold of Security |  |  |
 | 6 | ✅ Get a gout tuber (same Fossil Island trip as row 4) |  |  |
-| 7 | Steal from the Ardougne royal chest (requires 72 Thieving ❌) | Thieving | 70 |
+| 7 | Steal from the Ardougne royal chest (requires 72 Thieving ❌) | Thieving | 71 |
 | 8 | ✅ Tithe Farm to level 62 for rewards: herb sack, seed box | Farming | 59 |
 | 9 | Come back to guide step 93 for farm runs - herb patches: Morytania, Varlamore, Falador. Grow limpwurt, white berries, toadflax, ranarr, snape grass, watermelons, harralander, nightshade | Farming | 59 |
 | 10 | Farming 68 ❌ (65 boosted): yew planted in Varrock Palace - growing. Varrock hard (2 yew roots), and its logs feed the church-burning task | Farming | 59 |
@@ -63,7 +63,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Construction | 39 | 40 | 🟢 +1 |
 | Agility | 51 | 51 | 0 |
 | Herblore | 40 | 46 | 🟢 +6 |
-| Thieving | 77 | 70 | 🔴 −7 |
+| Thieving | 77 | 71 | 🔴 −6 |
 | Crafting | 56 | 56 | 0 |
 | Fletching | 48 | 51 | 🟢 +3 |
 | Slayer | 16 | 25 | 🟢 +9 |
@@ -85,8 +85,8 @@ Red gaps only, ordered by biggest deficit vs the guide.
 
 | # | Skill | Now → Target | Gap | How to bridge |
 |:---:|---|:---:|:---:|---|
-| 1 | Thieving | 70 → 77 | 🔴 −7 | See the [Thieving 55 → 77 plan](#thieving-55--77-plan) below (Ardy Knights, no blackjacking). Clears gem stall + Ardougne royal chest goals |
-| 2 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
+| 1 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
+| 2 | Thieving | 71 → 77 | 🔴 −6 | See the [Thieving 55 → 77 plan](#thieving-55--77-plan) below (Ardy Knights, no blackjacking). Clears gem stall + Ardougne royal chest goals |
 | 3 | Farming | 59 → 63 | 🔴 −4 | Tithe Farm (rows 8–14) → herb sack, seed box; plus tree/herb runs |
 | 4 | Fishing | 72 → 74 | 🔴 −2 | Tempoross - banks fish for the 70 Cooking goal (row 3) too; all its CA's are done |
 
