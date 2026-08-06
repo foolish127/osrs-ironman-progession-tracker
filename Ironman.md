@@ -14,7 +14,7 @@
 | Bossing (Slayer) | K'ril | Hasta | ToA |
 | Bossing | Hueycoatl | Dragon hunter wand |  |
 | Agility | 112 Marks · 9–12 hrs @ Pollnivneach | Graceful |  |
-| Achievement Diary | 483 / 492 (98.2%) |  |  |
+| Achievement Diary | 484 / 492 (98.4%) |  |  |
 | Prayer | Breakpoints (86 / 90 / 94 / 98) |  |  |
 | Herblore | Mastering Mixology | Reagent pouch | low priority |
 | Herblore | Mastering Mixology | Chugging barrel | low priority |
@@ -146,27 +146,26 @@
 | # | Diary | Level | Reqs | Boost | Skill | Current | Status | Diff |
 |:---:|---|---|---|---|:---:|:---:|---|:---:|
 | 1 | Ardougne | Elite | 90 Agility (summer pie +5) | 85 | Agility | 81 | ❌ Not met | -4 |
-| 2 | ⭐ **Desert** | **Elite** | **91 Thieving** | **91** | **Thieving** | **91** | **✅ Met** | **0** |
-| 3 | ⭐ **Desert** | **Elite** | **KQ Head** |  | **KQ** |  |  |  |
-| 4 | Falador | Elite | White 2H Sword |  | Black knights |  |  |  |
-| 5 | Kandarin | Elite | Chewed Bones (pyre) |  | Barb training |  |  |  |
-| 6 | Kandarin | Elite | Barbarian Assault Level 5 |  | Barb Assault |  |  |  |
-| 7 | Morytania | Elite | Full Barrows set |  | Barrows |  |  |  |
-| 8 | Western Prov. | Elite | 1k Chompy Birds |  | Chompy |  |  |  |
-| 9 | Wilderness | Elite | Kill Callisto / Venenatis / Vet'ion |  | Wildy |  |  |  |
+| 2 | ⭐ **Desert** | **Elite** | **KQ Head** |  | **KQ** |  |  |  |
+| 3 | Falador | Elite | White 2H Sword |  | Black knights |  |  |  |
+| 4 | Kandarin | Elite | Chewed Bones (pyre) |  | Barb training |  |  |  |
+| 5 | Kandarin | Elite | Barbarian Assault Level 5 |  | Barb Assault |  |  |  |
+| 6 | Morytania | Elite | Full Barrows set |  | Barrows |  |  |  |
+| 7 | Western Prov. | Elite | 1k Chompy Birds |  | Chompy |  |  |  |
+| 8 | Wilderness | Elite | Kill Callisto / Venenatis / Vet'ion |  | Wildy |  |  |  |
 
 ### Summary - by diary
 
 | Diary | Count | Details |
 |---|:---:|---|
 | Ardougne | 1 | Agility |
-| ⭐ **Desert** | **2** | **Thieving / KQ Head** |
+| ⭐ **Desert** | **1** | **KQ Head** |
 | Falador | 1 | White 2H Sword |
 | Kandarin | 2 | Pyre / Barb Assault |
 | Morytania | 1 | Barrows |
 | Western Prov. | 1 | Chompy |
 | Wilderness | 1 | Bosses |
-| **Total** | **9** | |
+| **Total** | **8** | |
 
 ### Summary - by requirement
 
@@ -175,7 +174,6 @@
 | Requirement | Tasks | Levels short |
 |---|:---:|:---:|
 | Agility | 1 | +4 |
-| Thieving | 1 | - |
 | KQ Head | 1 | - |
 | Barrows set | 1 | - |
 | White 2H Sword | 1 | - |
@@ -183,7 +181,7 @@
 | Barbarian Assault | 1 | - |
 | Chompy - 1k kills | 1 | - |
 | Wilderness bosses | 1 | - |
-| **Total** | **9** | |
+| **Total** | **8** | |
 
 ---
 
