@@ -37,7 +37,7 @@ Items from the guide I skipped - go back and do these.
 | 15 | Level Construction to 50 ❌ using oak planks - hire a Demon Butler at 50 | Construction | 40 |
 | 16 | Build Oak shelves 2 at level 45 Construction ❌ (3 oak planks + 6 soft clay); Fancy range at 42 Construction ❌ (8 steel bars) | Construction | 40 |
 | 17 | ✅ Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3,000+ points in one subdue) | Firemaking | 82 |
-| 18 | Herblore 50 ❌: see Historian Minas on the 2nd floor of Varrock Museum - 10 kudos + 10k Herblore XP lamp | Herblore | 47 |
+| 18 | Herblore 50 ❌: see Historian Minas on the 2nd floor of Varrock Museum - 10 kudos + 10k Herblore XP lamp | Herblore | 48 |
 
 </details>
 
@@ -60,7 +60,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Runecraft | 24 | 28 | 🟢 +4 |
 | Construction | 39 | 40 | 🟢 +1 |
 | Agility | 51 | 51 | 0 |
-| Herblore | 40 | 46 | 🟢 +6 |
+| Herblore | 40 | 48 | 🟢 +8 |
 | Thieving | 77 | 71 | 🔴 −6 |
 | Crafting | 56 | 56 | 0 |
 | Fletching | 48 | 51 | 🟢 +3 |
