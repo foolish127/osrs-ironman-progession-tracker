@@ -24,7 +24,7 @@ Items from the guide I skipped - go back and do these.
 | 2 | Steal from the Keldagrim Gem Stall (requires 75 Thieving ❌) | Thieving | 72 |
 | 3 | 70 Cooking ❌ | Cooking | 63 |
 | 4 | ✅ Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
-| 5 | ✅ Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total. 5x20 or 25x4 = 100 fruit = 35 pts/run -> 15 runs; 4x20 = 80 fruit = 26 pts (misses the 100-fruit bonus) -> 20 runs | Farming | 62 |
+| 5 | ✅ Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 62 |
 | 6 | Come back to guide step 93 for farm runs - herb patches: Morytania, Varlamore, Falador. Grow limpwurt, white berries, toadflax, ranarr, snape grass, watermelons, harralander, nightshade | Farming | 62 |
 | 7 | Farming 68 ❌ (65 boosted): yew planted in Varrock Palace - growing. Varrock hard (2 yew roots), and its logs feed the church-burning task | Farming | 62 |
 | 8 | ✅ Farming 62: boost to 65 (garden pie +3) for medium farming contracts | Farming | 62 |
