@@ -200,6 +200,7 @@
 | 9 | Defence | 30 Jun 2026 |
 | 10 | Slayer | 4 Jul 2026 |
 | 11 | Mining | 20 Jul 2026 |
+| 12 | Firemaking | 7 Aug 2026 |
 
 ---
 
@@ -213,13 +214,11 @@ Rates there assume 99 + full skilling outfits, so expect less in practice.
 | Thieving | Wealthy citizen · **1:32** · 57.6k | Summer garden · 0:36 · **150k** | 7,131,600 |
 | Smithing | One-bar items · **1:07** · **65k** | *same* | 9,413,922 |
 | Fletching | Bolt tips · 1:21 · 8.4k | Unstrung bows · 0:32 · **247k** | 6,788,101 |
-| Firemaking | Forester's campfire · **2:31** · **238.6k** | *same* | 2,341,802 |
 | Fishing | Dark crab · **7:32** · 40k | Barb fishing · 1:57 · **57k** | 7,274,205 |
 | Agility | POH agility · **10:00** · 12k *(needs Con 88)* | *nothing better* | 10,825,513 |
 
 **No trade-off needed:**
 
-- **Firemaking - forester's campfire.** 2:31 AFK *and* 238.6k/hr, the best pair on the page. ~10 hrs to 99, the shortest grind left. Volcanic Mine bank is the only bank-adjacent permanent fire.
 - **Smithing - one-bar items.** Beats cannonballs on both axes. ~145 hrs.
 
 **Real trade-offs:**
