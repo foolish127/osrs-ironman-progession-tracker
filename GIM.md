@@ -57,7 +57,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Thieving | 77 | 72 | 🔴 −5 |
 | Crafting | 56 | 56 | 0 |
 | Fletching | 48 | 51 | 🟢 +3 |
-| Slayer | 16 | 28 | 🟢 +12 |
+| Slayer | 16 | 29 | 🟢 +13 |
 | Hunter | 49 | 57 | 🟢 +8 |
 | Mining | 44 | 80 | 🟢 +36 |
 | Smithing | 42 | 42 | 0 |
@@ -108,7 +108,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 | Construction | 50 | 59 | ❌ +9 | 146,553 |
 | Smithing | 42 | 70 | ❌ +28 | 693,216 |
 | Troubled Tortugans (quest) | ❌ | done | ❌ | - |
-| ↳ Slayer | 28 | 51 | ❌ +23 | 101,121 |
+| ↳ Slayer | 29 | 51 | ❌ +22 | 99,914 |
 
 **Materials to build:** 3 camphor planks · 6 adamantite bars
 
