@@ -193,7 +193,6 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 | 31 ✅ | Teak hull: speed 1.5→2 | 23 ✅ | 16 large teak hull parts (400 teak planks) · 600 steel nails · 25 swamp tar · 5 lead bars |
 | 44 ✅ | Mithril salvaging hook | 30 ✅ | 4 mahogany planks · 16 mithril nails · 6 mithril bars ❌ (Smithing 50 or ~128 chaos dwarves) · 3 lead bars · 1 rope |
 | 48 ✅ | Mahogany hull: speed 1.5→2 | 41 ✅ | 16 large mahogany hull parts (400 mahogany planks) · 600 mithril nails · 25 swamp tar · 5 lead bars |
-| 50 ✅ | Crew: Ex-Captain Siad |  | The Tourist Trap ✅ |
 | 59 ✅ | Adamant salvaging hook | 52 ❌ | 4 camphor planks · 16 adamantite nails · 6 adamantite bars · 3 lead bars · 1 rope |
 | 60 ✅ | Camphor cargo hold (Sloop 160) | 53 ❌ | 8 camphor planks · 32 adamantite nails · 3 lead bars |
 | 60 ✅ | Crew: Cabin Boy Jenkins (Crandor) |  | Dragon Slayer I ✅ · Ghostspeak amulet / Morytania legs 2 |
