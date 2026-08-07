@@ -254,30 +254,3 @@ Martial salvage = 201.5 XP each (138 loot + 63.5 sort). Worth a nat (net after �
 Keep, do NOT alch: adamant/rune/dragon cannonballs (cannon ammo), mahogany/camphor/ironwood logs (hull parts). Skip alching mithril/adamant arrowtips, dart tips and arrows - below (or barely above) nat cost.
 
 </details>
-
----
-
-<details>
-<summary><strong>Gem cutting &amp; selling</strong>, collapsed (gem grind complete; click to expand)</summary>
-
-*Current Crafting: ~44, full sapphire → diamond ladder cut ✅. Plan is now pure cut-and-sell: crack stardust bags → cut → sell at Toci's (hop ~12/gem).*
-
-### Current bank gems → gold (face value)
-
-| Gem | Have (cut) | × cut price | = |
-|---|:---:|:---:|---:|
-| Sapphire | 355 | 175 | 62,125 |
-| Emerald | 227 | 350 | 79,450 |
-| | | Total | ~141,600 |
-
-### Stardust → gems (68,484 ÷ 300 = 228 bags, ~40 gems each)
-
-| Gem | Per bag | × 228 bags | + bank | Total pile | Cut value (face) |
-|---|:---:|:---:|:---:|:---:|---:|
-| Sapphire | ~20 | 4,560 | 288 | ~4,840 | ~847,000 |
-| Emerald | ~14 | 3,190 | 186 | ~3,340 | ~1,169,000 |
-| Ruby | ~5 | 1,140 | 129 | ~1,220 | ~854,000 |
-| Diamond | ~1.2 | 274 | 56 | ~330 | ~462,000 |
-| | | | | Total | ~3.33M |
-
-</details>
