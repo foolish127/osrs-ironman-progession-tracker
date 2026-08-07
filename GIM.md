@@ -109,14 +109,11 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 | Smithing | 42 | 70 | ❌ +28 | 693,216 |
 | Troubled Tortugans (quest) | ❌ | done | ❌ | - |
 | ↳ Slayer | 28 | 51 | ❌ +23 | 101,121 |
-| ↳ Construction | 50 | 48 | ✅ met | - |
 
 **Materials to build:** 3 camphor planks · 6 adamantite bars
 
 - **Camphor planks** - partial Troubled Tortugans → Great Conch camphor trees (WC 66 ✅; or grow them at a hardwood patch with Farming 66) → sawmill 2.5k ea *or* Plank Make
 - **Adamantite bars** - smelt at Smithing 70 (solo GIM, must self-smith)
-
-*Construction 48 (Tortugans) is a stepping stone to the 59 needed for the helm itself.*
 
 **Plan:**
 - **Construction** → Mahogany Homes (+ some quests)
