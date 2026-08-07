@@ -24,13 +24,13 @@ Items from the guide I skipped - go back and do these.
 | 2 | Steal from the Keldagrim Gem Stall (requires 75 Thieving ❌) | Thieving | 72 |
 | 3 | 70 Cooking ❌ | Cooking | 63 |
 | 4 | ✅ Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
-| 5 | ✅ Tithe Farm to level 62 for rewards: herb sack (250 pts) + seed box (250) = 500 total. 5x20 or 25x4 = 100 fruit = 35 pts/run -> 15 runs; 4x20 = 80 fruit = 26 pts (misses the 100-fruit bonus) -> 20 runs | Farming | 60 |
-| 6 | Come back to guide step 93 for farm runs - herb patches: Morytania, Varlamore, Falador. Grow limpwurt, white berries, toadflax, ranarr, snape grass, watermelons, harralander, nightshade | Farming | 60 |
-| 7 | Farming 68 ❌ (65 boosted): yew planted in Varrock Palace - growing. Varrock hard (2 yew roots), and its logs feed the church-burning task | Farming | 60 |
-| 8 | Farming 62 ❌: boost to 65 (garden pie +3) for medium farming contracts | Farming | 60 |
-| 9 | Farming 68 ❌: palm trees - Brimhaven first (Karamja elite), then Tree Gnome Village (Ardougne hard) | Farming | 60 |
-| 10 | Farming 76 ❌: attas seeds + giant seaweed runs | Farming | 60 |
-| 11 | Farming 82 ❌: boost to 85 for celastrus + hard farming contracts | Farming | 60 |
+| 5 | ✅ Tithe Farm to level 62 for rewards: herb sack (250 pts) + seed box (250) = 500 total. 5x20 or 25x4 = 100 fruit = 35 pts/run -> 15 runs; 4x20 = 80 fruit = 26 pts (misses the 100-fruit bonus) -> 20 runs | Farming | 62 |
+| 6 | Come back to guide step 93 for farm runs - herb patches: Morytania, Varlamore, Falador. Grow limpwurt, white berries, toadflax, ranarr, snape grass, watermelons, harralander, nightshade | Farming | 62 |
+| 7 | Farming 68 ❌ (65 boosted): yew planted in Varrock Palace - growing. Varrock hard (2 yew roots), and its logs feed the church-burning task | Farming | 62 |
+| 8 | ✅ Farming 62: boost to 65 (garden pie +3) for medium farming contracts | Farming | 62 |
+| 9 | Farming 68 ❌: palm trees - Brimhaven first (Karamja elite), then Tree Gnome Village (Ardougne hard) | Farming | 62 |
+| 10 | Farming 76 ❌: attas seeds + giant seaweed runs | Farming | 62 |
+| 11 | Farming 82 ❌: boost to 85 for celastrus + hard farming contracts | Farming | 62 |
 | 12 | ✅ Make 4 inventories of Paddewwa tablets - looks like it's charging orbs from a step above or one I skipped | Magic |  |
 | 13 | ✅ Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3,000+ points in one subdue) | Firemaking | 82 |
 | 14 | Herblore 50 ❌: see Historian Minas on the 2nd floor of Varrock Museum - 10 kudos + 10k Herblore XP lamp | Herblore | 48 |
@@ -68,7 +68,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Cooking | 60 | 63 | 🟢 +3 |
 | Firemaking | 89 | 82 | 🔴 −7 |
 | Woodcutting | 70 | 75 | 🟢 +5 |
-| Farming | 63 | 60 | 🔴 −3 |
+| Farming | 63 | 62 | 🔴 −1 |
 | Sailing | 1 | 73 | 🟢 +72 |
 
 </details>
@@ -81,8 +81,8 @@ Red gaps only, ordered by biggest deficit vs the guide.
 |:---:|---|:---:|:---:|---|
 | 1 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
 | 2 | Thieving | 72 → 77 | 🔴 −5 | See the [Thieving 55 → 77 plan](#thieving-55--77-plan) below (Ardy Knights, no blackjacking). Clears the Keldagrim gem stall goal (75) |
-| 3 | Farming | 60 → 63 | 🔴 −3 | Tithe Farm (rows 5–11) → herb sack, seed box; plus tree/herb runs |
-| 4 | Fishing | 72 → 74 | 🔴 −2 | Tempoross - banks fish for the 70 Cooking goal (row 3) too; all its CA's are done |
+| 3 | Fishing | 72 → 74 | 🔴 −2 | Tempoross - banks fish for the 70 Cooking goal (row 3) too; all its CA's are done |
+| 4 | Farming | 62 → 63 | 🔴 −1 | Tithe Farm (rows 5–11) → herb sack, seed box; plus tree/herb runs |
 
 ### Thieving 55 → 77 plan
 
