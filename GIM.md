@@ -32,7 +32,7 @@ Items from the guide I skipped - go back and do these.
 | 10 | Farming 76 ❌: attas seeds + giant seaweed runs | Farming | 60 |
 | 11 | Farming 82 ❌: boost to 85 for celastrus + hard farming contracts | Farming | 60 |
 | 12 | ✅ Make 4 inventories of Paddewwa tablets - looks like it's charging orbs from a step above or one I skipped | Magic |  |
-| 13 | Level Construction to 50 ❌ using oak planks - hire a Demon Butler at 50 | Construction | 44 |
+| 13 | Level Construction to 50 ❌ using oak planks - hire a Demon Butler at 50 | Construction | 45 |
 | 14 | ✅ Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3,000+ points in one subdue) | Firemaking | 82 |
 | 15 | Herblore 50 ❌: see Historian Minas on the 2nd floor of Varrock Museum - 10 kudos + 10k Herblore XP lamp | Herblore | 48 |
 
@@ -55,7 +55,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Prayer | 43 | 43 | 0 |
 | Magic | 63 | 75 | 🟢 +12 |
 | Runecraft | 24 | 28 | 🟢 +4 |
-| Construction | 39 | 44 | 🟢 +5 |
+| Construction | 39 | 45 | 🟢 +6 |
 | Agility | 51 | 51 | 0 |
 | Herblore | 40 | 48 | 🟢 +8 |
 | Thieving | 77 | 72 | 🔴 −5 |
@@ -109,11 +109,11 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 
 | Blocker | Current | Target | Gap | XP needed |
 |---|:---:|:---:|:---:|:---:|
-| Construction | 44 | 59 | ❌ +15 | 192,237 |
+| Construction | 45 | 59 | ❌ +14 | 186,374 |
 | Smithing | 42 | 70 | ❌ +28 | 693,216 |
 | Troubled Tortugans (quest) | ❌ | done | ❌ | - |
 | ↳ Slayer | 25 | 51 | ❌ +26 | 104,103 |
-| ↳ Construction | 44 | 48 | ❌ +4 | 27,365 |
+| ↳ Construction | 45 | 48 | ❌ +3 | 21,502 |
 
 **Materials to build:** 3 camphor planks · 6 adamantite bars
 
@@ -204,7 +204,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 | 60 ✅ | Crew: Cabin Boy Jenkins (Crandor) |  | Dragon Slayer I ❌ · Ghostspeak amulet / Morytania legs 2 |
 | 65 ✅ | Crew: Oarswoman Olga (Burgh de Rott) |  | In Aid of the Myreque ❌ |
 | 67 ✅ | Camphor hull: speed 2→2.5 | 59 ❌ | 16 large camphor hull parts · 600 adamantite nails · 25 swamp tar · 5 lead bars (~911k gp) |
-| 72 ✅ | Adamant helm (ship fitting): unlocks Southern hazardous waters | 59 ❌ (44) | Con 59 ❌ (44) · 3 camphor planks (WC 66 ✅ · Troubled Tortugans ❌ [Sailing 45 ✅ quest] → Great Conch camphor trees · sawmill 2.5k ea or Plank Make) · 6 adamantite bars (Smithing 70 ❌ · 42) |
+| 72 ✅ | Adamant helm (ship fitting): unlocks Southern hazardous waters | 59 ❌ (45) | Con 59 ❌ (45) · 3 camphor planks (WC 66 ✅ · Troubled Tortugans ❌ [Sailing 45 ✅ quest] → Great Conch camphor trees · sawmill 2.5k ea or Plank Make) · 6 adamantite bars (Smithing 70 ❌ · 42) |
 | 73 ✅ | Mercenary shipwreck ❌ - Sailing 73 ✅ but blocked by the adamant helm (Con 59 · Smithing 70 · Troubled Tortugans) to reach tangled kelp |  |  |
 <details>
 <summary><strong>Late-game milestones (Sailing 74+)</strong>, collapsed (click to expand)</summary>
@@ -229,7 +229,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 
 ### Progress to 80 (Fremennik shipwreck)
 
-Sailing **73** ✅, but the **Mercenary shipwreck is not yet accessible** - it needs the **adamant helm** ship fitting, still blocked by **Construction 59** (44), **Smithing 70** (42, for the 6 adamantite bars), and **Troubled Tortugans** (Great Conch → camphor planks). Once the helm is built, **martial salvage** runs at 201.5 xp ea in the Southern hazardous waters.
+Sailing **73** ✅, but the **Mercenary shipwreck is not yet accessible** - it needs the **adamant helm** ship fitting, still blocked by **Construction 59** (45), **Smithing 70** (42, for the 6 adamantite bars), and **Troubled Tortugans** (Great Conch → camphor planks). Once the helm is built, **martial salvage** runs at 201.5 xp ea in the Southern hazardous waters.
 
 ```
 73 [░░░░░░░░░░░░░░░░░░░░] 80    0%
