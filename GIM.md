@@ -180,7 +180,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 | Mast & sails | Mahogany (canvas sails) |  |
 | Helm | Bronze *(default)* | Adamant helm (Sailing 72) required to unlock Mercenary shipwreck @ 73 - still blocked by Con 59 · Smithing 70 · Troubled Tortugans |
 | Salvaging hook | Steel ×2 | Both Sloop slots filled |
-| Cargo hold | Teak |  |
+| Cargo hold | Mahogany | Sloop capacity 120 |
 | Salvaging station | Built |  |
 | Shipwreck | Mercenary shipwreck ❌ *(next unlock)* | Blocked - needs adamant helm (Con 59 · Smithing 70 · Troubled Tortugans). Southern hazardous waters |
 
@@ -192,7 +192,6 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 |:---:|---|:---:|---|
 | 31 ✅ | Teak hull: speed 1.5→2 | 23 ✅ | 16 large teak hull parts (400 teak planks) · 600 steel nails · 25 swamp tar · 5 lead bars |
 | 44 ✅ | Mithril salvaging hook | 30 ✅ | 4 mahogany planks · 16 mithril nails · 6 mithril bars ❌ (Smithing 50 or ~128 chaos dwarves) · 3 lead bars · 1 rope |
-| 46 ✅ | Mahogany cargo hold (Sloop 120) | 41 ✅ | 8 mahogany planks · 32 mithril nails · 3 lead bars |
 | 48 ✅ | Mahogany hull: speed 1.5→2 | 41 ✅ | 16 large mahogany hull parts (400 mahogany planks) · 600 mithril nails · 25 swamp tar · 5 lead bars |
 | 50 ✅ | Crew: Ex-Captain Siad |  | The Tourist Trap ✅ |
 | 59 ✅ | Adamant salvaging hook | 52 ❌ | 4 camphor planks · 16 adamantite nails · 6 adamantite bars · 3 lead bars · 1 rope |
