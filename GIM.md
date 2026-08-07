@@ -113,7 +113,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 
 **Materials to build:** 3 camphor planks · 6 adamantite bars
 
-- **Camphor planks** - via Troubled Tortugans → Great Conch camphor trees (WC 66 ✅) → sawmill 2.5k ea *or* Plank Make
+- **Camphor planks** - partial Troubled Tortugans → Great Conch camphor trees (WC 66 ✅; or grow them at a hardwood patch with Farming 66) → sawmill 2.5k ea *or* Plank Make
 - **Adamantite bars** - smelt at Smithing 70 (solo GIM, must self-smith)
 
 *Construction 48 (Tortugans) is a stepping stone to the 59 needed for the helm itself.*
@@ -193,11 +193,11 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 | 31 ✅ | Teak hull: speed 1.5→2 | 23 ✅ | 16 large teak hull parts (400 teak planks) · 600 steel nails · 25 swamp tar · 5 lead bars |
 | 44 ✅ | Mithril salvaging hook | 30 ✅ | 4 mahogany planks · 16 mithril nails · 6 mithril bars ❌ (Smithing 50 or ~128 chaos dwarves) · 3 lead bars · 1 rope |
 | 48 ✅ | Mahogany hull: speed 1.5→2 | 41 ✅ | 16 large mahogany hull parts (400 mahogany planks) · 600 mithril nails · 25 swamp tar · 5 lead bars |
-| 59 ✅ | Adamant salvaging hook | 52 ❌ | 4 camphor planks · 16 adamantite nails · 6 adamantite bars · 3 lead bars · 1 rope |
-| 60 ✅ | Camphor cargo hold (Sloop 160) | 53 ❌ | 8 camphor planks · 32 adamantite nails · 3 lead bars |
+| 59 ✅ | Adamant salvaging hook | 52 ❌ | 4 camphor planks (Troubled Tortugans ❌) · 16 adamantite nails · 6 adamantite bars · 3 lead bars · 1 rope |
+| 60 ✅ | Camphor cargo hold (Sloop 160) | 53 ❌ | 8 camphor planks (Troubled Tortugans ❌) · 32 adamantite nails · 3 lead bars |
 | 60 ✅ | Crew: Cabin Boy Jenkins (Crandor) |  | Dragon Slayer I ✅ · Ghostspeak amulet / Morytania legs 2 |
 | 65 ✅ | Crew: Oarswoman Olga (Burgh de Rott) |  | In Aid of the Myreque ❌ |
-| 67 ✅ | Camphor hull: speed 2→2.5 | 59 ❌ | 16 large camphor hull parts · 600 adamantite nails · 25 swamp tar · 5 lead bars (~911k gp) |
+| 67 ✅ | Camphor hull: speed 2→2.5 | 59 ❌ | 16 large camphor hull parts (Troubled Tortugans ❌) · 600 adamantite nails · 25 swamp tar · 5 lead bars (~911k gp) |
 | 72 ✅ | Adamant helm (ship fitting): unlocks Southern hazardous waters | 59 ❌ (50) | Con 59 ❌ (50) · 3 camphor planks (WC 66 ✅ · Troubled Tortugans ❌ [Sailing 45 ✅ quest] → Great Conch camphor trees · sawmill 2.5k ea or Plank Make) · 6 adamantite bars (Smithing 70 ❌ · 42) |
 | 73 ✅ | Mercenary shipwreck ❌ - Sailing 73 ✅ but blocked by the adamant helm (Con 59 · Smithing 70 · Troubled Tortugans) to reach tangled kelp |  |  |
 <details>
