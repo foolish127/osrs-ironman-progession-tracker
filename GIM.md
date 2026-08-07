@@ -174,7 +174,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 | Facility | Current | Note |
 |---|---|---|
 | Ship | Sloop | 2 salvaging hook slots + crew |
-| Crew | Ada + Jobless Jim + Jittery Jim |  |
+| Crew | Ada + Jobless Jim + Jittery Jim + Ex-Captain Siad |  |
 | Hull | Wooden *(default)* | Upgrade for speed |
 | Keel | Bronze *(default)* |  |
 | Mast & sails | Mahogany (canvas sails) |  |
