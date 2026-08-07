@@ -33,10 +33,9 @@ Items from the guide I skipped - go back and do these.
 | 11 | Farming 82 ❌: boost to 85 for celastrus + hard farming contracts | Farming | 60 |
 | 12 | ✅ Make 4 inventories of Paddewwa tablets - looks like it's charging orbs from a step above or one I skipped | Magic |  |
 | 13 | Level Construction to 50 ❌ using oak planks - hire a Demon Butler at 50 | Construction | 40 |
-| 14 | Fancy range at 42 Construction ❌ (8 steel bars) | Construction | 40 |
-| 15 | Build Oak shelves 2 at 45 Construction ❌ (3 oak planks + 6 soft clay) | Construction | 40 |
-| 16 | ✅ Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3,000+ points in one subdue) | Firemaking | 82 |
-| 17 | Herblore 50 ❌: see Historian Minas on the 2nd floor of Varrock Museum - 10 kudos + 10k Herblore XP lamp | Herblore | 48 |
+| 14 | Build Oak shelves 2 at 45 Construction ❌ (3 oak planks + 6 soft clay) | Construction | 40 |
+| 15 | ✅ Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3,000+ points in one subdue) | Firemaking | 82 |
+| 16 | Herblore 50 ❌: see Historian Minas on the 2nd floor of Varrock Museum - 10 kudos + 10k Herblore XP lamp | Herblore | 48 |
 
 </details>
 
