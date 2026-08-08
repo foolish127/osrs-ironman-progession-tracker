@@ -33,7 +33,9 @@ Items from the guide I skipped - go back and do these.
 | 11 | Herblore 50 ❌: see Historian Minas on the 2nd floor of Varrock Museum - 10 kudos + 10k Herblore XP lamp | Herblore | 48 |
 | 12 | Chop 1175 teak planks - [guide](https://youtu.be/GA987x97AKQ) | Woodcutting | 75 |
 | 13 | Get 352 carpenter points via Mahogany Homes -> plank sack | Construction | 50 |
-| 14 | Slayer 70 ❌: unlocks Mortimer | Slayer | 33 |
+| 14 | Build a mahogany eagle lectern - Construction 67 ❌ (boost from 62: crystal saw + porcelain cup) | Construction | 50 |
+| 15 | Make 106 house teleport tabs at the lectern - butler ferries soft clay from the bank; leave 2 soft clay in the bank | Construction | 50 |
+| 16 | Slayer 70 ❌: unlocks Mortimer | Slayer | 33 |
 
 </details>
 
