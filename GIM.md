@@ -36,8 +36,9 @@ Items from the guide I skipped - go back and do these.
 | 14 | Chop 1175 teak planks - [guide](https://youtu.be/GA987x97AKQ) | Woodcutting | 75 |
 | 15 | Get 352 carpenter points via Mahogany Homes -> plank sack | Construction | 50 |
 | 16 | Build a mahogany eagle lectern - Construction 67 ❌ (boost from 62: crystal saw + porcelain cup) | Construction | 50 |
-| 17 | Make 106 house teleport tabs at the lectern - butler ferries soft clay from the bank; leave 2 soft clay in the bank | Construction | 50 |
-| 18 | Slayer 70 ❌: unlocks Mortimer | Slayer | 33 |
+| 17 | Mine sandstone | Mining | 80 |
+| 18 | Make 106 house teleport tabs at the lectern - butler ferries soft clay from the bank; leave 2 soft clay in the bank | Construction | 50 |
+| 19 | Slayer 70 ❌: unlocks Mortimer | Slayer | 33 |
 
 </details>
 
