@@ -23,20 +23,21 @@ Items from the guide I skipped - go back and do these.
 | 1 | ✅ Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3,000+ points in one subdue) | Firemaking | 82 |
 | 2 | Steal from the Keldagrim Gem Stall (requires 75 Thieving ❌) | Thieving | 72 |
 | 3 | [77 Thieving](#thieving-55--77-plan) ❌ | Thieving | 72 |
-| 4 | 70 Cooking ❌ | Cooking | 63 |
-| 5 | ✅ Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
-| 6 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 64 |
-| 7 | Farming 68 ❌ (65 boosted): yew planted in Varrock Palace - growing. Varrock hard (2 yew roots), and its logs feed the church-burning task | Farming | 64 |
-| 8 | Farming 68 ❌: palm trees - Brimhaven first (Karamja elite), then Tree Gnome Village (Ardougne hard) | Farming | 64 |
-| 9 | Farming 72 ❌: calquat in Tai Bwo Wannai (Karamja elite) - ~21h to mature | Farming | 64 |
-| 10 | Farming 76 ❌: attas seeds + giant seaweed runs | Farming | 64 |
-| 11 | Farming 82 ❌: boost to 85 for celastrus + hard farming contracts | Farming | 64 |
-| 12 | Herblore 50 ❌: see Historian Minas on the 2nd floor of Varrock Museum - 10 kudos + 10k Herblore XP lamp | Herblore | 48 |
-| 13 | Chop 1175 teak planks - [guide](https://youtu.be/GA987x97AKQ) | Woodcutting | 75 |
-| 14 | Get 352 carpenter points via Mahogany Homes -> plank sack | Construction | 50 |
-| 15 | Build a mahogany eagle lectern - Construction 67 ❌ (boost from 62: crystal saw + porcelain cup) | Construction | 50 |
-| 16 | Make 106 house teleport tabs at the lectern - butler ferries soft clay from the bank; leave 2 soft clay in the bank | Construction | 50 |
-| 17 | Slayer 70 ❌: unlocks Mortimer | Slayer | 33 |
+| 4 | Thieving 78 ❌: steal from a Dorgesh-Kaan rich chest - Lumbridge elite | Thieving | 72 |
+| 5 | 70 Cooking ❌ | Cooking | 63 |
+| 6 | ✅ Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
+| 7 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 64 |
+| 8 | Farming 68 ❌ (65 boosted): yew planted in Varrock Palace - growing. Varrock hard (2 yew roots), and its logs feed the church-burning task | Farming | 64 |
+| 9 | Farming 68 ❌: palm trees - Brimhaven first (Karamja elite), then Tree Gnome Village (Ardougne hard) | Farming | 64 |
+| 10 | Farming 72 ❌: calquat in Tai Bwo Wannai (Karamja elite) - ~21h to mature | Farming | 64 |
+| 11 | Farming 76 ❌: attas seeds + giant seaweed runs | Farming | 64 |
+| 12 | Farming 82 ❌: boost to 85 for celastrus + hard farming contracts | Farming | 64 |
+| 13 | Herblore 50 ❌: see Historian Minas on the 2nd floor of Varrock Museum - 10 kudos + 10k Herblore XP lamp | Herblore | 48 |
+| 14 | Chop 1175 teak planks - [guide](https://youtu.be/GA987x97AKQ) | Woodcutting | 75 |
+| 15 | Get 352 carpenter points via Mahogany Homes -> plank sack | Construction | 50 |
+| 16 | Build a mahogany eagle lectern - Construction 67 ❌ (boost from 62: crystal saw + porcelain cup) | Construction | 50 |
+| 17 | Make 106 house teleport tabs at the lectern - butler ferries soft clay from the bank; leave 2 soft clay in the bank | Construction | 50 |
+| 18 | Slayer 70 ❌: unlocks Mortimer | Slayer | 33 |
 
 </details>
 
@@ -84,7 +85,7 @@ Red gaps only, ordered by biggest deficit vs the guide.
 |:---:|---|:---:|:---:|---|
 | 1 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
 | 2 | Thieving | 72 → 77 | 🔴 −5 | See the [Thieving 55 → 77 plan](#thieving-55--77-plan) below (Ardy Knights, no blackjacking). Clears the Keldagrim gem stall goal (75) |
-| 3 | Fishing | 72 → 74 | 🔴 −2 | Tempoross - banks fish for the 70 Cooking goal (row 4) too; all its CA's are done |
+| 3 | Fishing | 72 → 74 | 🔴 −2 | Tempoross - banks fish for the 70 Cooking goal (row 5) too; all its CA's are done |
 
 ### Thieving 55 → 77 plan
 
