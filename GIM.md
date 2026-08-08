@@ -28,14 +28,15 @@ Items from the guide I skipped - go back and do these.
 | 6 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 64 |
 | 7 | Farming 68 ❌ (65 boosted): yew planted in Varrock Palace - growing. Varrock hard (2 yew roots), and its logs feed the church-burning task | Farming | 64 |
 | 8 | Farming 68 ❌: palm trees - Brimhaven first (Karamja elite), then Tree Gnome Village (Ardougne hard) | Farming | 64 |
-| 9 | Farming 76 ❌: attas seeds + giant seaweed runs | Farming | 64 |
-| 10 | Farming 82 ❌: boost to 85 for celastrus + hard farming contracts | Farming | 64 |
-| 11 | Herblore 50 ❌: see Historian Minas on the 2nd floor of Varrock Museum - 10 kudos + 10k Herblore XP lamp | Herblore | 48 |
-| 12 | Chop 1175 teak planks - [guide](https://youtu.be/GA987x97AKQ) | Woodcutting | 75 |
-| 13 | Get 352 carpenter points via Mahogany Homes -> plank sack | Construction | 50 |
-| 14 | Build a mahogany eagle lectern - Construction 67 ❌ (boost from 62: crystal saw + porcelain cup) | Construction | 50 |
-| 15 | Make 106 house teleport tabs at the lectern - butler ferries soft clay from the bank; leave 2 soft clay in the bank | Construction | 50 |
-| 16 | Slayer 70 ❌: unlocks Mortimer | Slayer | 33 |
+| 9 | Farming 72 ❌: calquat in Tai Bwo Wannai (Karamja elite) - ~21h to mature | Farming | 64 |
+| 10 | Farming 76 ❌: attas seeds + giant seaweed runs | Farming | 64 |
+| 11 | Farming 82 ❌: boost to 85 for celastrus + hard farming contracts | Farming | 64 |
+| 12 | Herblore 50 ❌: see Historian Minas on the 2nd floor of Varrock Museum - 10 kudos + 10k Herblore XP lamp | Herblore | 48 |
+| 13 | Chop 1175 teak planks - [guide](https://youtu.be/GA987x97AKQ) | Woodcutting | 75 |
+| 14 | Get 352 carpenter points via Mahogany Homes -> plank sack | Construction | 50 |
+| 15 | Build a mahogany eagle lectern - Construction 67 ❌ (boost from 62: crystal saw + porcelain cup) | Construction | 50 |
+| 16 | Make 106 house teleport tabs at the lectern - butler ferries soft clay from the bank; leave 2 soft clay in the bank | Construction | 50 |
+| 17 | Slayer 70 ❌: unlocks Mortimer | Slayer | 33 |
 
 </details>
 
