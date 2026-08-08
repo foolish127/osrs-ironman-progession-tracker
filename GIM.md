@@ -20,16 +20,16 @@ Items from the guide I skipped - go back and do these.
 
 | # | Item / step | Skill | Current |
 |:---:|---|:---:|:---:|
-| 1 | Steal from the Keldagrim Gem Stall (requires 75 Thieving ❌) | Thieving | 72 |
-| 2 | [77 Thieving](#thieving-55--77-plan) ❌ | Thieving | 72 |
-| 3 | 70 Cooking ❌ | Cooking | 63 |
-| 4 | ✅ Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
-| 5 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 62 |
-| 6 | Farming 68 ❌ (65 boosted): yew planted in Varrock Palace - growing. Varrock hard (2 yew roots), and its logs feed the church-burning task | Farming | 62 |
-| 7 | Farming 68 ❌: palm trees - Brimhaven first (Karamja elite), then Tree Gnome Village (Ardougne hard) | Farming | 62 |
-| 8 | Farming 76 ❌: attas seeds + giant seaweed runs | Farming | 62 |
-| 9 | Farming 82 ❌: boost to 85 for celastrus + hard farming contracts | Farming | 62 |
-| 10 | ✅ Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3,000+ points in one subdue) | Firemaking | 82 |
+| 1 | ✅ Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3,000+ points in one subdue) | Firemaking | 82 |
+| 2 | Steal from the Keldagrim Gem Stall (requires 75 Thieving ❌) | Thieving | 72 |
+| 3 | [77 Thieving](#thieving-55--77-plan) ❌ | Thieving | 72 |
+| 4 | 70 Cooking ❌ | Cooking | 63 |
+| 5 | ✅ Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
+| 6 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 62 |
+| 7 | Farming 68 ❌ (65 boosted): yew planted in Varrock Palace - growing. Varrock hard (2 yew roots), and its logs feed the church-burning task | Farming | 62 |
+| 8 | Farming 68 ❌: palm trees - Brimhaven first (Karamja elite), then Tree Gnome Village (Ardougne hard) | Farming | 62 |
+| 9 | Farming 76 ❌: attas seeds + giant seaweed runs | Farming | 62 |
+| 10 | Farming 82 ❌: boost to 85 for celastrus + hard farming contracts | Farming | 62 |
 | 11 | Herblore 50 ❌: see Historian Minas on the 2nd floor of Varrock Museum - 10 kudos + 10k Herblore XP lamp | Herblore | 48 |
 | 12 | Slayer 70 ❌: unlocks Mortimer | Slayer | 33 |
 
@@ -79,8 +79,8 @@ Red gaps only, ordered by biggest deficit vs the guide.
 |:---:|---|:---:|:---:|---|
 | 1 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
 | 2 | Thieving | 72 → 77 | 🔴 −5 | See the [Thieving 55 → 77 plan](#thieving-55--77-plan) below (Ardy Knights, no blackjacking). Clears the Keldagrim gem stall goal (75) |
-| 3 | Fishing | 72 → 74 | 🔴 −2 | Tempoross - banks fish for the 70 Cooking goal (row 3) too; all its CA's are done |
-| 4 | Farming | 62 → 63 | 🔴 −1 | Tithe Farm (rows 5–9) → herb sack, seed box; plus tree/herb runs |
+| 3 | Fishing | 72 → 74 | 🔴 −2 | Tempoross - banks fish for the 70 Cooking goal (row 4) too; all its CA's are done |
+| 4 | Farming | 62 → 63 | 🔴 −1 | Tithe Farm (rows 6–10) → herb sack, seed box; plus tree/herb runs |
 
 ### Thieving 55 → 77 plan
 
