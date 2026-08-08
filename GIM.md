@@ -20,8 +20,8 @@ Items from the guide I skipped - go back and do these.
 
 | # | Item / step | Skill | Current |
 |:---:|---|:---:|:---:|
-| 1 | [77 Thieving](#thieving-55--77-plan) ❌ | Thieving | 72 |
-| 2 | Steal from the Keldagrim Gem Stall (requires 75 Thieving ❌) | Thieving | 72 |
+| 1 | Steal from the Keldagrim Gem Stall (requires 75 Thieving ❌) | Thieving | 72 |
+| 2 | [77 Thieving](#thieving-55--77-plan) ❌ | Thieving | 72 |
 | 3 | 70 Cooking ❌ | Cooking | 63 |
 | 4 | ✅ Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
 | 5 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 62 |
@@ -31,6 +31,7 @@ Items from the guide I skipped - go back and do these.
 | 9 | Farming 82 ❌: boost to 85 for celastrus + hard farming contracts | Farming | 62 |
 | 10 | ✅ Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3,000+ points in one subdue) | Firemaking | 82 |
 | 11 | Herblore 50 ❌: see Historian Minas on the 2nd floor of Varrock Museum - 10 kudos + 10k Herblore XP lamp | Herblore | 48 |
+| 12 | Slayer 70 ❌: unlocks Mortimer | Slayer | 33 |
 
 </details>
 
@@ -57,7 +58,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Thieving | 77 | 72 | 🔴 −5 |
 | Crafting | 56 | 56 | 0 |
 | Fletching | 48 | 51 | 🟢 +3 |
-| Slayer | 16 | 32 | 🟢 +16 |
+| Slayer | 16 | 33 | 🟢 +17 |
 | Hunter | 49 | 57 | 🟢 +8 |
 | Mining | 44 | 80 | 🟢 +36 |
 | Smithing | 42 | 42 | 0 |
@@ -108,7 +109,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 | Construction | 50 | 59 | ❌ +9 | 146,553 |
 | Smithing | 42 | 70 | ❌ +28 | 693,216 |
 | Troubled Tortugans (quest) | ❌ | done | ❌ | - |
-| ↳ Slayer | 32 | 51 | ❌ +19 | 95,489 |
+| ↳ Slayer | 33 | 51 | ❌ +18 | 93,698 |
 
 **Materials to build:** 3 camphor planks · 6 adamantite bars
 
