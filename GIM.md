@@ -9,7 +9,7 @@
 | Magic | 75 ❌ | 74 ❌ |
 | Redwood | 90 ❌ | 89 ❌ |
 
-_Current: Crafting 56, Hunter 58._
+_Current: Crafting 57, Hunter 58._
 
 ## BRUH sailer Guide
 
@@ -63,7 +63,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Agility | 51 | 51 | 0 |
 | Herblore | 40 | 48 | 🟢 +8 |
 | Thieving | 77 | 72 | 🔴 −5 |
-| Crafting | 56 | 56 | 0 |
+| Crafting | 56 | 57 | 🟢 +1 |
 | Fletching | 48 | 51 | 🟢 +3 |
 | Slayer | 16 | 33 | 🟢 +17 |
 | Hunter | 49 | 58 | 🟢 +9 |
