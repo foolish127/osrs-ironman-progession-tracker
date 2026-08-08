@@ -31,9 +31,9 @@ Items from the guide I skipped - go back and do these.
 | 9 | Farming 76 ❌: attas seeds + giant seaweed runs | Farming | 62 |
 | 10 | Farming 82 ❌: boost to 85 for celastrus + hard farming contracts | Farming | 62 |
 | 11 | Herblore 50 ❌: see Historian Minas on the 2nd floor of Varrock Museum - 10 kudos + 10k Herblore XP lamp | Herblore | 48 |
-| 12 | Slayer 70 ❌: unlocks Mortimer | Slayer | 33 |
-| 13 | Chop 1175 teak planks - [guide](https://youtu.be/GA987x97AKQ) | Woodcutting | 75 |
-| 14 | Get 352 carpenter points via Mahogany Homes -> plank sack | Construction | 50 |
+| 12 | Chop 1175 teak planks - [guide](https://youtu.be/GA987x97AKQ) | Woodcutting | 75 |
+| 13 | Get 352 carpenter points via Mahogany Homes -> plank sack | Construction | 50 |
+| 14 | Slayer 70 ❌: unlocks Mortimer | Slayer | 33 |
 
 </details>
 
