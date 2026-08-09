@@ -5,11 +5,11 @@
 | Item | Crafting Level | Hunter Level |
 |---|:---:|:---:|
 | Mahogany | 50 | 49 |
-| Yew | 60 ❌ | 59 ❌ |
+| Yew | 60 ❌ | 59 ✅ |
 | Magic | 75 ❌ | 74 ❌ |
 | Redwood | 90 ❌ | 89 ❌ |
 
-_Current: Crafting 57, Hunter 58._
+_Current: Crafting 57, Hunter 59._
 
 ## BRUH sailer Guide
 
@@ -56,17 +56,17 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Defence | 34 | 78 | 🟢 +44 |
 | Hitpoints | 39 | 80 | 🟢 +41 |
 | Ranged | 45 | 73 | 🟢 +28 |
-| Prayer | 43 | 44 | 🟢 +1 |
+| Prayer | 43 | 45 | 🟢 +2 |
 | Magic | 63 | 75 | 🟢 +12 |
 | Runecraft | 24 | 36 | 🟢 +12 |
 | Construction | 39 | 50 | 🟢 +11 |
-| Agility | 51 | 51 | 0 |
+| Agility | 51 | 52 | 🟢 +1 |
 | Herblore | 40 | 48 | 🟢 +8 |
 | Thieving | 77 | 72 | 🔴 −5 |
 | Crafting | 56 | 57 | 🟢 +1 |
 | Fletching | 48 | 51 | 🟢 +3 |
 | Slayer | 16 | 33 | 🟢 +17 |
-| Hunter | 49 | 58 | 🟢 +9 |
+| Hunter | 49 | 59 | 🟢 +10 |
 | Mining | 44 | 80 | 🟢 +36 |
 | Smithing | 42 | 42 | 0 |
 | Fishing | 74 | 72 | 🔴 −2 |
@@ -162,7 +162,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 - **Smithing** - EW I+II (12.5k), Giant Dwarf (2.5k), Knight's Sword (12.7k), Sleeping Giants (6k) all banked ✅; rest = Giant's Foundry
 - **Construction** - Getting Ahead (3.2k) banked ✅; Fremennik Isles + Cold War (~6.5k) still to do; rest = Mahogany Homes
 - **Slayer** - Porcine banked ✅; Wanted! + RFD-MD (~6k) still to do; rest = tasks → then Heart of Darkness / Perilous Moons capstones blow past 51
-- **Hunter** - 58 ✅ (Ascent of Arceuus banked, already past 45); Perilous Moons 5k left as a capstone
+- **Hunter** - 59 ✅ (Ascent of Arceuus banked, already past 45); Perilous Moons 5k left as a capstone
 
 </details>
 
