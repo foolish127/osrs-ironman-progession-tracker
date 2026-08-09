@@ -20,25 +20,24 @@ Items from the guide I skipped - go back and do these.
 
 | # | Item / step | Skill | Current |
 |:---:|---|:---:|:---:|
-| 1 | ✅ Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3,000+ points in one subdue) | Firemaking | 82 |
+| 1 | Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3,000+ points in one subdue) | Firemaking | 82 |
 | 2 | Steal from the Keldagrim Gem Stall (requires 75 Thieving ❌) | Thieving | 72 |
 | 3 | [77 Thieving](#thieving-55--77-plan) ❌ | Thieving | 72 |
 | 4 | Thieving 78 ❌: steal from a Dorgesh-Kaan rich chest - Lumbridge elite | Thieving | 72 |
 | 5 | 70 Cooking ❌ | Cooking | 63 |
-| 6 | ✅ Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
-| 7 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 64 |
-| 8 | Farming 68 ❌ (65 boosted): yew planted in Varrock Palace - growing. Varrock hard (2 yew roots), and its logs feed the church-burning task | Farming | 64 |
-| 9 | Farming 68 ❌: palm trees - Brimhaven first (Karamja elite), then Tree Gnome Village (Ardougne hard) | Farming | 64 |
-| 10 | Farming 72 ❌: calquat in Tai Bwo Wannai (Karamja elite) - ~21h to mature | Farming | 64 |
-| 11 | Farming 76 ❌: attas seeds + giant seaweed runs | Farming | 64 |
-| 12 | Farming 82 ❌: boost to 85 for celastrus + hard farming contracts | Farming | 64 |
-| 13 | Herblore 50 ❌: see Historian Minas on the 2nd floor of Varrock Museum - 10 kudos + 10k Herblore XP lamp | Herblore | 48 |
-| 14 | Chop 1175 teak planks - [guide](https://youtu.be/GA987x97AKQ) | Woodcutting | 75 |
-| 15 | Get 352 carpenter points via Mahogany Homes -> plank sack | Construction | 50 |
-| 16 | Build a mahogany eagle lectern - Construction 67 ❌ (boost from 62: crystal saw + porcelain cup) | Construction | 50 |
-| 17 | Mine sandstone | Mining | 80 |
-| 18 | Make 106 house teleport tabs at the lectern - butler ferries soft clay from the bank; leave 2 soft clay in the bank | Construction | 50 |
-| 19 | Slayer 70 ❌: unlocks Mortimer | Slayer | 33 |
+| 6 | Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
+| 7 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 65 |
+| 8 | Farming 68 ❌: palm trees - Brimhaven first (Karamja elite), then Tree Gnome Village (Ardougne hard) | Farming | 65 |
+| 9 | Farming 72 ❌: calquat in Tai Bwo Wannai (Karamja elite) - ~21h to mature | Farming | 65 |
+| 10 | Farming 76 ❌: attas seeds + giant seaweed runs | Farming | 65 |
+| 11 | Farming 82 ❌: boost to 85 for celastrus + hard farming contracts | Farming | 65 |
+| 12 | Herblore 50 ❌: see Historian Minas on the 2nd floor of Varrock Museum - 10 kudos + 10k Herblore XP lamp | Herblore | 48 |
+| 13 | Chop 1175 teak planks - [guide](https://youtu.be/GA987x97AKQ) | Woodcutting | 75 |
+| 14 | Get 352 carpenter points via Mahogany Homes -> plank sack | Construction | 50 |
+| 15 | Build a mahogany eagle lectern - Construction 67 ❌ (boost from 62: crystal saw + porcelain cup) | Construction | 50 |
+| 16 | Mine sandstone | Mining | 80 |
+| 17 | Make 106 house teleport tabs at the lectern - butler ferries soft clay from the bank; leave 2 soft clay in the bank | Construction | 50 |
+| 18 | Slayer 70 ❌: unlocks Mortimer | Slayer | 35 |
 
 </details>
 
@@ -56,7 +55,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Defence | 34 | 78 | 🟢 +44 |
 | Hitpoints | 39 | 80 | 🟢 +41 |
 | Ranged | 45 | 73 | 🟢 +28 |
-| Prayer | 43 | 45 | 🟢 +2 |
+| Prayer | 43 | 46 | 🟢 +3 |
 | Magic | 63 | 75 | 🟢 +12 |
 | Runecraft | 24 | 36 | 🟢 +12 |
 | Construction | 39 | 50 | 🟢 +11 |
@@ -65,7 +64,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Thieving | 77 | 72 | 🔴 −5 |
 | Crafting | 56 | 57 | 🟢 +1 |
 | Fletching | 48 | 51 | 🟢 +3 |
-| Slayer | 16 | 33 | 🟢 +17 |
+| Slayer | 16 | 35 | 🟢 +19 |
 | Hunter | 49 | 59 | 🟢 +10 |
 | Mining | 44 | 80 | 🟢 +36 |
 | Smithing | 42 | 42 | 0 |
@@ -73,7 +72,7 @@ Guide's expected stats (guide followed completely, bird runs to 49 Hunter) vs mi
 | Cooking | 60 | 63 | 🟢 +3 |
 | Firemaking | 89 | 82 | 🔴 −7 |
 | Woodcutting | 70 | 75 | 🟢 +5 |
-| Farming | 63 | 64 | 🟢 +1 |
+| Farming | 63 | 65 | 🟢 +2 |
 | Sailing | 1 | 73 | 🟢 +72 |
 
 </details>
@@ -84,9 +83,9 @@ Red gaps only, ordered by biggest deficit vs the guide.
 
 | # | Skill | Now → Target | Gap | How to bridge |
 |:---:|---|:---:|:---:|---|
-| 1 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
-| 2 | Thieving | 72 → 77 | 🔴 −5 | See the [Thieving 55 → 77 plan](#thieving-55--77-plan) below (Ardy Knights, no blackjacking). Clears the Keldagrim gem stall goal (75) |
-| 3 | Fishing | 72 → 74 | 🔴 −2 | Tempoross - banks fish for the 70 Cooking goal (row 5) too; all its CA's are done |
+| 0 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
+| 1 | Thieving | 72 → 77 | 🔴 −5 | See the [Thieving 55 → 77 plan](#thieving-55--77-plan) below (Ardy Knights, no blackjacking). Clears the Keldagrim gem stall goal (75) |
+| 2 | Fishing | 72 → 74 | 🔴 −2 | Tempoross - banks fish for the 70 Cooking goal (row 5) too; all its CA's are done |
 
 ### Thieving 55 → 77 plan
 
@@ -136,7 +135,6 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 | Quest | Reward | Prereq to start |
 |---|---|---|
 | The Fremennik Isles | 5,000 Con | Fremennik Trials ✅ |
-| Wanted! | 5,000 Slayer | The Lost Tribe ✅ |
 | RFD: Freeing the Mountain Dwarf | 1,000 Slayer | Cook's Assistant ✅ + Fishing Contest ✅ |
 | Cold War | 1,500 Con | Hunter 10 ✅ |
 
@@ -161,7 +159,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 **Realistic quest XP toward each grind (accessible tier):**
 - **Smithing** - EW I+II (12.5k), Giant Dwarf (2.5k), Knight's Sword (12.7k), Sleeping Giants (6k) all banked ✅; rest = Giant's Foundry
 - **Construction** - Getting Ahead (3.2k) banked ✅; Fremennik Isles + Cold War (~6.5k) still to do; rest = Mahogany Homes
-- **Slayer** - Porcine banked ✅; Wanted! + RFD-MD (~6k) still to do; rest = tasks → then Heart of Darkness / Perilous Moons capstones blow past 51
+- **Slayer** - Porcine + Wanted! banked ✅; RFD-MD (1k) still to do; rest = tasks → then Heart of Darkness / Perilous Moons capstones blow past 51
 - **Hunter** - 59 ✅ (Ascent of Arceuus banked, already past 45); Perilous Moons 5k left as a capstone
 
 </details>
