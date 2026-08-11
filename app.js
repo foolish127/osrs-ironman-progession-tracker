@@ -93,6 +93,12 @@
             return n.toLocaleString();
         }
 
+        // Hiscores rank. The API returns -1 for a skill the account isn't ranked
+        // in (too low to appear on the board), which is not the same as rank 0.
+        function formatRank(rank) {
+            return (rank == null || rank < 0) ? 'Unranked' : '#' + rank.toLocaleString();
+        }
+
         function formatDate(iso) {
             if (!iso) return '—';
             // TempleOSRS uses "YYYY-MM-DD HH:MM:SS"; normalize the space to 'T' so
@@ -147,7 +153,7 @@
             skillsData = bossesData = milestonesData = clogCategories = null;
             diaryTasksData = null;
             dropsData = [];
-            ['totalLevel', 'totalXp', 'combatLevel', 'count99s', 'clogCount', 'caTasks',
+            ['totalLevel', 'totalXp', 'combatLevel', 'count99s', 'overallRank', 'clogCount', 'caTasks',
              'petCount', 'clueCount', 'bossKcCard', 'questCount', 'diaryCount']
                 .forEach(id => { const el = document.getElementById(id); if (el) el.textContent = '—'; });
             const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, diariesRes, dropsRes, clogCatRes, diaryTasksRes] = await Promise.all([
@@ -221,6 +227,7 @@
 
             if (skillsRes?.skills) {
                 skillsData = skillsRes.skills;
+                document.getElementById('overallRank').textContent = formatRank(skillsRes.skills.Overall?.rank);
                 renderSkills(skillsRes.skills);
             }
             if (bossesRes?.bosses) {
@@ -360,6 +367,81 @@
                         <span class="skill-bar-xp">${formatNumber(s.xp)}</span>
                     </div>`).join('');
             }
+        }
+
+        // Ranks tab. Unlike every other tab this one is cross-account: it fetches
+        // skills.json for *both* accounts once and compares them side by side, so
+        // it does not reset when you switch accounts.
+        let ranksData = null;
+
+        async function ensureRanksData() {
+            if (ranksData) return;
+            ranksData = await Promise.all(ACCOUNTS.map(a =>
+                fetch(`${a.dir}/skills.json`).then(r => r.json()).catch(() => null)
+            ));
+            renderRanks();
+        }
+
+        function renderRanks() {
+            const heroes = document.getElementById('rankHeroes');
+            const table = document.getElementById('rankSkills');
+            if (!heroes || !table) return;
+            if (!ranksData) { table.textContent = 'Loading...'; return; }
+
+            heroes.innerHTML = ACCOUNTS.map((a, i) => {
+                const res = ranksData[i];
+                const overall = res?.skills?.Overall;
+                const m = res?.milestones;
+                return `<div class="rank-hero${a.id === currentAccount.id ? ' current' : ''}">
+                    <div class="rank-hero-head">
+                        <img src="${a.badge}" alt="${a.type}" class="iron-icon">
+                        <span class="rank-hero-name">${a.label}</span>
+                    </div>
+                    <div class="rank-hero-value">${formatRank(overall?.rank)}</div>
+                    <div class="rank-hero-sub">
+                        ${m?.total_level?.toLocaleString() || '—'} total &middot; ${formatNumber(m?.total_xp || 0)} XP
+                    </div>
+                </div>`;
+            }).join('');
+
+            // Lower rank number = better. Only mark a winner when both accounts
+            // are actually ranked in that skill.
+            const better = (a, b) => (a != null && a >= 0 && b != null && b >= 0) ? (a < b ? 0 : b < a ? 1 : -1) : -1;
+
+            const rows = SKILL_ORDER.map(name => {
+                const cells = ranksData.map(res => res?.skills?.[name] || null);
+                const win = better(cells[0]?.rank, cells[1]?.rank);
+                return `<tr>
+                    <td class="rank-skill-name">
+                        <img src="${SKILL_ICONS[name]}" alt="${name}" class="rank-skill-icon">${name}
+                    </td>
+                    ${cells.map((s, i) => `
+                        <td class="rank-lvl">${s?.level ?? '—'}</td>
+                        <td class="rank-val${win === i ? ' best' : ''}">${formatRank(s?.rank)}</td>
+                    `).join('')}
+                </tr>`;
+            }).join('');
+
+            const overallCells = ranksData.map(res => res?.skills?.Overall || null);
+            const overallWin = better(overallCells[0]?.rank, overallCells[1]?.rank);
+
+            table.innerHTML = `<h3>🏅 Rank by Skill</h3>
+                <div class="rank-table-wrap"><table class="rank-table">
+                    <thead>
+                        <tr><th rowspan="2">Skill</th>${ACCOUNTS.map(a => `<th colspan="2">${a.label}</th>`).join('')}</tr>
+                        <tr>${ACCOUNTS.map(() => '<th>Lvl</th><th>Rank</th>').join('')}</tr>
+                    </thead>
+                    <tbody>
+                        <tr class="rank-overall">
+                            <td class="rank-skill-name">Overall</td>
+                            ${overallCells.map((s, i) => `
+                                <td class="rank-lvl">${s?.level?.toLocaleString() ?? '—'}</td>
+                                <td class="rank-val${overallWin === i ? ' best' : ''}">${formatRank(s?.rank)}</td>
+                            `).join('')}
+                        </tr>
+                        ${rows}
+                    </tbody>
+                </table></div>`;
         }
 
         function renderBosses(bosses) {
@@ -2311,6 +2393,7 @@
         function switchTab(tabId) {
             switchTabDirect(tabId);
             if (tabId === 'targets') ensureTargetsData();
+            if (tabId === 'ranks') ensureRanksData();
         }
 
         document.querySelectorAll('.nav-tab').forEach(t => t.addEventListener('click', () => {
@@ -2351,6 +2434,9 @@
             localStorage.setItem('account', id);
             applyAccountChrome();
             loadData();
+            // Ranks is cross-account, so it only needs its "current account"
+            // highlight moved rather than a refetch.
+            if (ranksData) renderRanks();
         }
         const accountSelect = document.getElementById('accountSelect');
         if (accountSelect) {

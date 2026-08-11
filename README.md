@@ -65,6 +65,10 @@ These update automatically - **no action needed** from you:
   way (`wiki_ca_table.json`). Each opens with a **top-10 banner** — CA by points
   still available per monster, clog by items missing per source — and the chips
   filter the table below.
+- **Ranks tab** — the only cross-account view: hiscores rank for both accounts
+  side by side, overall up top and then every skill, with the better rank of the
+  two highlighted. Skills the account is too low to be ranked in show *Unranked*
+  rather than a bogus number. An **Overall Rank** stat card links straight to it.
 - **`scripts/update_bank_local.ps1`** — refreshes your private bank values
   locally; can be scheduled via Windows Task Scheduler (instructions inside the
   file) to keep `bank.json` current hands-off without ever touching the cloud.

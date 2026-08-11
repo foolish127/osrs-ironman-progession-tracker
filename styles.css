@@ -526,3 +526,29 @@
         .upg-flag.free { background: rgba(63,185,80,0.15); color: #3fb950; }
         .upg-flag.active { background: rgba(212,168,75,0.2); color: var(--accent-gold); }
         .upg-flag.bis { background: rgba(212,168,75,0.12); color: var(--accent-gold-dim); }
+
+        /* Ranks tab - cross-account hiscores comparison */
+        .rank-heroes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .rank-hero { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; text-align: center; }
+        .rank-hero.current { border-color: var(--accent-gold); }
+        .rank-hero-head { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; }
+        .rank-hero-head .iron-icon { width: 16px; height: 16px; }
+        .rank-hero-name { font-size: 0.8rem; color: var(--text-secondary); font-family: 'Fira Code', monospace; }
+        .rank-hero-value { font-family: 'Fira Code', monospace; font-size: 2rem; font-weight: 500; color: var(--accent-gold); }
+        .rank-hero-sub { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem; }
+        .rank-skills h3 { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .rank-table-wrap { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; overflow-x: auto; }
+        .rank-table { width: 100%; border-collapse: collapse; }
+        .rank-table th { padding: 0.5rem 0.75rem; background: var(--bg-dark); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); border-bottom: 1px solid var(--border); text-align: center; }
+        .rank-table thead tr:first-child th { border-left: 1px solid var(--border); }
+        .rank-table thead tr:first-child th:first-child { border-left: none; text-align: left; }
+        .rank-table td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); font-size: 0.85rem; text-align: center; }
+        .rank-table tr:last-child td { border-bottom: none; }
+        .rank-table tbody tr:hover { background: var(--bg-card-hover); }
+        .rank-skill-name { text-align: left !important; color: var(--text-secondary); white-space: nowrap; }
+        .rank-skill-icon { width: 16px; height: 16px; vertical-align: middle; margin-right: 0.5rem; }
+        .rank-lvl { font-family: 'Fira Code', monospace; color: var(--text-primary); }
+        .rank-val { font-family: 'Fira Code', monospace; color: var(--text-muted); }
+        .rank-val.best { color: var(--accent-green); }
+        .rank-overall td { background: rgba(212,168,75,0.06); font-weight: 600; }
+        .rank-overall .rank-skill-name { color: var(--accent-gold); }

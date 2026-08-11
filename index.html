@@ -27,6 +27,7 @@
             <div class="stat-card" data-tab="skills"><div class="stat-label">Total XP</div><div class="stat-value" id="totalXp">—</div></div>
             <div class="stat-card" data-tab="skills"><div class="stat-label">Combat Level</div><div class="stat-value blue" id="combatLevel">—</div></div>
             <div class="stat-card" data-tab="skills"><div class="stat-label">99s</div><div class="stat-value green" id="count99s">—</div></div>
+            <div class="stat-card" data-tab="ranks"><div class="stat-label">Overall Rank</div><div class="stat-value gold" id="overallRank">—</div></div>
             <div class="stat-card" data-tab="clog"><div class="stat-label">Collection Log</div><div class="stat-value green" id="clogCount">—</div></div>
             <div class="stat-card" data-tab="ca"><div class="stat-label">CA Tasks</div><div class="stat-value" id="caTasks">—</div></div>
             <div class="stat-card" data-tab="pets"><div class="stat-label">Pets</div><div class="stat-value purple" id="petCount">—</div></div>
@@ -38,6 +39,7 @@
 
         <nav class="nav-tabs">
             <button class="nav-tab active" data-tab="skills">Skills</button>
+            <button class="nav-tab" data-tab="ranks">Ranks</button>
             <button class="nav-tab" data-tab="bosses">Bosses</button>
             <button class="nav-tab" data-tab="clues">Clues</button>
             <button class="nav-tab" data-tab="clog">Collection Log</button>
@@ -54,6 +56,11 @@
         <div id="skills" class="tab-content active">
             <div class="skills-grid" id="skillsGrid">Loading...</div>
             <div class="skill-xp-chart" id="skillXpChart"></div>
+        </div>
+
+        <div id="ranks" class="tab-content">
+            <div class="rank-heroes" id="rankHeroes"></div>
+            <div class="rank-skills" id="rankSkills">Loading...</div>
         </div>
 
         <div id="bosses" class="tab-content">
