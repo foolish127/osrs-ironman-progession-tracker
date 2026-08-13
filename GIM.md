@@ -34,7 +34,7 @@ Hunter 80 push).
 | Magic | 75 ❌ | 74 ❌ |
 | Redwood | 90 ❌ | 89 ❌ |
 
-_Current: Crafting 57, Hunter 61._
+_Current: Crafting 58, Hunter 61._
 
 ## BRUH sailer Guide
 
@@ -47,33 +47,32 @@ Items from the guide I skipped - go back and do these.
 |:---:|---|:---:|:---:|
 | 1 | Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3,000+ points in one subdue) | Firemaking | 82 |
 | 2 | Smithing 59 ❌ (50) + Fletching 59 ❌ (51) for the mithril grapple - Yanille south wall, 1 of the 2 Ardougne medium tasks left (other = Ardougne strawberries). The tier reward raises the coin pouch cap 28 → 56 for Ardy knights | Smi / Fle | 50 / 51 |
-| 3 | 77 Thieving ❌ | Thieving | 76 |
-| 4 | Thieving 78 ❌: steal from a Dorgesh-Kaan rich chest - Lumbridge elite | Thieving | 76 |
-| 5 | 70 Cooking ❌ | Cooking | 63 |
-| 6 | Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
-| 7 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 67 |
-| 8 | Farming 68 ❌: palm trees - Brimhaven first (Karamja elite), then Tree Gnome Village (Ardougne hard) | Farming | 67 |
-| 9 | Farming 72 ❌: calquat in Tai Bwo Wannai (Karamja elite) - ~21h to mature | Farming | 67 |
-| 10 | Farming 76 ❌: attas seeds + giant seaweed runs | Farming | 67 |
-| 11 | Farming 82 ❌: boost to 85 for celastrus + hard farming contracts | Farming | 67 |
-| 12 | Herblore 50 ❌: see Historian Minas on the 2nd floor of Varrock Museum - 10 kudos + 10k Herblore XP lamp | Herblore | 49 |
-| 13 | Chop 1175 teak planks - [guide](https://youtu.be/GA987x97AKQ) | Woodcutting | 75 |
-| 14 | Get 352 carpenter points via Mahogany Homes -> plank sack | Construction | 51 |
-| 15 | Build a mahogany eagle lectern - Construction 67 ❌ (boost from 62: crystal saw + porcelain cup) | Construction | 51 |
-| 16 | Mine sandstone | Mining | 80 |
-| 17 | Make 106 house teleport tabs at the lectern - butler ferries soft clay from the bank; leave 2 soft clay in the bank | Construction | 51 |
-| 18 | Get a raw chompy bird | Ranged | 73 |
-| 19 | Mithril grapple - Smithing 59 ❌ (tip) + Fletching 59 ❌ (attach rope). Used by 5 diary tasks: Ardougne med (Yanille south wall) · Falador med (north Falador wall) · Kandarin med (water obelisk → Catherby shore) · Lumbridge med (River Lum) · Lumbridge elite (Dorgesh-Kaan pylon) | Smi / Fle | 50 / 51 |
-| 20 | Do a ton of sea charting | Sailing | 73 |
-| 21 | Upgrade to a teak hull (speed 1.5→2) - 16 large teak hull parts (400 teak planks, row 12) · 600 steel nails · 25 swamp tar · 5 lead bars | Sailing | 73 |
-| 22 | Complete the Swordfish rank of the Tempor Tantrum Barracuda trial, and eventually Marlin - collect the stormy key, barrel stand and whirlpool surprises | Sailing | 73 |
-| 23 | Build a keg and fill it with whirlpool surprises | Sailing | 73 |
-| 24 | Kill Dagannoth Rex for the berserker ring - keep the Fremennik shield if it drops | Combat |  |
-| 25 | Hunter 80 ❌ via mahogany birdhouses - logs from the Miscellania kingdom (Throne of Miscellania ✅) | Hunter | 61 |
-| 26 | Barbarian fishing to Agility 65 ❌ + Fishing 88 ❌ (CoX) - cut fishing to get as close to 70 Cooking (row 5) as possible | Fis / Agi | 72 / 52 |
-| 27 | **Lunar Diplomacy** - blocked on Crafting 61 ❌ (57); all other reqs met | Crafting | 57 |
-| 28 | **Fallen From Grace** - missing reqs: Crafting 60 ❌ (57) · Runecraft 47 ❌ (37) | Cra / RC | 57 / 37 |
-| 29 | Slayer 70 ❌: unlocks Mortimer | Slayer | 42 |
+| 3 | 70 Cooking ❌ | Cooking | 63 |
+| 4 | Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
+| 5 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 68 |
+| 6 | Farming 68 ✅: palm tree at Tree Gnome Village (Ardougne hard) | Farming | 68 |
+| 7 | Farming 72 ❌: calquat in Tai Bwo Wannai (Karamja elite) - ~21h to mature | Farming | 68 |
+| 8 | Farming 76 ❌: attas seeds + giant seaweed runs | Farming | 68 |
+| 9 | Farming 82 ❌: boost to 85 for celastrus + hard farming contracts | Farming | 68 |
+| 10 | Chop 1175 teak planks - [guide](https://youtu.be/GA987x97AKQ) | Woodcutting | 75 |
+| 11 | Get 352 carpenter points via Mahogany Homes -> plank sack | Construction | 51 |
+| 12 | Build a mahogany eagle lectern - Construction 67 ❌ (boost from 62: crystal saw + porcelain cup) | Construction | 51 |
+| 13 | Mine sandstone | Mining | 80 |
+| 14 | Make 106 house teleport tabs at the lectern - butler ferries soft clay from the bank; leave 2 soft clay in the bank | Construction | 51 |
+| 15 | Get a raw chompy bird | Ranged | 73 |
+| 16 | Mithril grapple - Smithing 59 ❌ (tip) + Fletching 59 ❌ (attach rope). Used by 5 diary tasks: Ardougne med (Yanille south wall) · Falador med (north Falador wall) · Kandarin med (water obelisk → Catherby shore) · Lumbridge med (River Lum) · Lumbridge elite (Dorgesh-Kaan pylon) | Smi / Fle | 50 / 51 |
+| 17 | Do a ton of sea charting | Sailing | 73 |
+| 18 | Upgrade to a teak hull (speed 1.5→2) - 16 large teak hull parts (400 teak planks - see the *chop 1175 teak planks* row) · 600 steel nails · 25 swamp tar · 5 lead bars | Sailing | 73 |
+| 19 | Complete the Swordfish rank of the Tempor Tantrum Barracuda trial, and eventually Marlin - collect the stormy key, barrel stand and whirlpool surprises | Sailing | 73 |
+| 20 | Build a keg and fill it with whirlpool surprises | Sailing | 73 |
+| 21 | Kill Dagannoth Rex for the berserker ring - keep the Fremennik shield if it drops | Combat |  |
+| 22 | Hunter 80 ❌ via mahogany birdhouses - logs from the Miscellania kingdom (Throne of Miscellania ✅) | Hunter | 61 |
+| 23 | Barbarian fishing to Agility 65 ❌ + Fishing 88 ❌ (CoX) - cut fishing to get as close to the *70 Cooking* row as possible | Fis / Agi | 72 / 53 |
+| 24 | **Lunar Diplomacy** - blocked on Crafting 61 ❌ (58); all other reqs met | Crafting | 58 |
+| 25 | Slayer 58 ❌ for the **black mask** (cave horrors) - the guide sinks its lamps into Slayer, but I'm putting mine into Herblore, so this is trained the traditional way. Also clears Morytania hard "Kill a Cave Horror" | Slayer | 44 |
+| 26 | Motherlode Mine for the coal bag, gem bag and prospector helmet - the helmet also clears Falador hard "enter the mining guild while wearing a Prospector helmet" | Mining | 80 |
+| 27 | **Fallen From Grace** - missing reqs: Crafting 60 ❌ (58) · Runecraft 47 ❌ (39) | Cra / RC | 58 / 39 |
+| 28 | Slayer 70 ❌: unlocks Mortimer | Slayer | 44 |
 
 </details>
 
@@ -95,14 +94,14 @@ Negative diff = behind that chapter's target.
 | Ranged | 45 | 62 | 73 | 🟢 +28 | 🟢 +11 |
 | Prayer | 43 | 70 | 46 | 🟢 +3 | 🔴 −24 |
 | Magic | 63 | 89 | 76 | 🟢 +13 | 🔴 −13 |
-| Runecraft | 24 | 40 | 37 | 🟢 +13 | 🔴 −3 |
+| Runecraft | 24 | 40 | 39 | 🟢 +15 | 🔴 −1 |
 | Construction | 39 | 71 | 51 | 🟢 +12 | 🔴 −20 |
-| Agility | 51 | 98 | 52 | 🟢 +1 | 🔴 −46 |
-| Herblore | 40 | 73 | 49 | 🟢 +9 | 🔴 −24 |
-| Thieving | 77 | 84 | 76 | 🔴 −1 | 🔴 −8 |
-| Crafting | 56 | 65 | 57 | 🟢 +1 | 🔴 −8 |
+| Agility | 51 | 98 | 53 | 🟢 +2 | 🔴 −45 |
+| Herblore | 40 | 73 | 52 | 🟢 +12 | 🔴 −21 |
+| Thieving | 77 | 84 | 78 | 🟢 +1 | 🔴 −6 |
+| Crafting | 56 | 65 | 58 | 🟢 +2 | 🔴 −7 |
 | Fletching | 48 | 69 | 51 | 🟢 +3 | 🔴 −18 |
-| Slayer | 16 | 59 | 42 | 🟢 +26 | 🔴 −17 |
+| Slayer | 16 | 59 | 44 | 🟢 +28 | 🔴 −15 |
 | Hunter | 49 | 82 | 61 | 🟢 +12 | 🔴 −21 |
 | Mining | 44 | 73 | 80 | 🟢 +36 | 🟢 +7 |
 | Smithing | 42 | 74 | 50 | 🟢 +8 | 🔴 −24 |
@@ -110,7 +109,7 @@ Negative diff = behind that chapter's target.
 | Cooking | 60 | 81 | 63 | 🟢 +3 | 🔴 −18 |
 | Firemaking | 89 | 89 | 82 | 🔴 −7 | 🔴 −7 |
 | Woodcutting | 70 | 73 | 75 | 🟢 +5 | 🟢 +2 |
-| Farming | 63 | 94 | 67 | 🟢 +4 | 🔴 −27 |
+| Farming | 63 | 94 | 68 | 🟢 +5 | 🔴 −26 |
 | Sailing | 1 | 67 | 73 | 🟢 +72 | 🟢 +6 |
 
 </details>
@@ -122,8 +121,7 @@ Red gaps only, ordered by biggest deficit vs the guide.
 | # | Skill | Now → Target | Gap | How to bridge |
 |:---:|---|:---:|:---:|---|
 | 0 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
-| 1 | Thieving | 76 → 77 | 🔴 −1 | Knights of Ardougne (pickpocket), no blackjacking |
-| 2 | Fishing | 72 → 74 | 🔴 −2 | Tempoross - banks fish for the 70 Cooking goal (row 4) too; all its CA's are done |
+| 1 | Fishing | 72 → 74 | 🔴 −2 | Tempoross - banks fish for the *70 Cooking* goal too; all its CA's are done |
 
 ---
 
@@ -139,7 +137,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 | Construction | 51 | 59 | ❌ +8 | 136,802 |
 | Smithing | 50 | 70 | ❌ +20 | 636,294 |
 | Troubled Tortugans (quest) | ❌ | done | ❌ | - |
-| ↳ Slayer | 42 | 51 | ❌ +9 | 63,548 |
+| ↳ Slayer | 44 | 51 | ❌ +7 | 56,296 |
 
 **Materials to build:** 3 camphor planks · 6 adamantite bars
 
@@ -169,18 +167,17 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 | Perilous Moons | 40k Slayer · 5k Hunter · 5k Con | Slayer 48 (+ Twilight's Promise ✅, Hunter 20 ✅) |
 | The Heart of Darkness | 8,000 Slayer | Slayer 48, Thieving 48, Agility 46 |
 | The Path of Glouphrie | 20,000 Slayer | Slayer 56, Thieving 56, Agility 45 |
-| Between a Rock... | 5,000 Smithing | Smithing 50 ✅ (+ Dwarf Cannon ✅, Fishing Contest ✅) |
 | The Red Reef | 5,000 Smithing | Smithing 48 ✅ + Troubled Tortugans |
-| Eagles' Peak / At First Light | 2,500 / 4,500 Hunter | Hunter 27 / Hunter 46 |
+| At First Light | 4,500 Hunter | Hunter 46 ✅ (Eagles' Peak ✅) |
 
 **❌ Skip for now - deep chains / far-off reqs:**
 - **Dragon Slayer II** (80k Smithing) - 6 skills short, 200 QP, ~19-quest chain
-- **Defender of Varrock** (15k Smithing · 15k Hunter) - Smithing 55, Hunter 52, 8 prereqs (incl. What Lies Below → Runecraft 35)
+- **Defender of Varrock** (15k Smithing · 15k Hunter) - Smithing 55, Hunter 52, 8 prereqs (What Lies Below ✅)
 - **Making Friends with My Arm** (10k Con) - Agility 68 + Swan Song (100 QP) chain
 - **Cabin Fever** (7k Smi, Smithing 50 ✅ + Rum Deal) · **Devious Minds** (6.5k Smi, Smithing 65 + Runecraft 50) · **The General's Shadow** (2k Slayer, Desert Treasure I line)
 
 **Realistic quest XP toward each grind (accessible tier):**
-- **Smithing** - EW I+II (12.5k), Giant Dwarf (2.5k), Knight's Sword (12.7k), Sleeping Giants (6k) all banked ✅; rest = Giant's Foundry
+- **Smithing** - EW I+II (12.5k), Giant Dwarf (2.5k), Knight's Sword (12.7k), Sleeping Giants (6k), Between a Rock (5k) all banked ✅; rest = Giant's Foundry
 - **Construction** - Getting Ahead (3.2k) + Fremennik Isles (5k) banked ✅; Cold War (1.5k) still to do; rest = Mahogany Homes
 - **Slayer** - Porcine + Wanted! banked ✅; RFD-MD (1k) still to do; rest = tasks → then Heart of Darkness / Perilous Moons capstones blow past 51
 - **Hunter** - 61 ✅ (Ascent of Arceuus banked, already past 45); Perilous Moons 5k left as a capstone
