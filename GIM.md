@@ -13,9 +13,6 @@ Hunter 80 push).
 
 | Day | Date | Done |
 |:---:|---|:---:|
-| 1 | Tue Aug 11 | ☐ |
-| 2 | Wed Aug 12 | ☐ |
-| 3 | Thu Aug 13 | ☐ |
 | 4 | Fri Aug 14 | ☐ |
 | 5 | Sat Aug 15 | ☐ |
 | 6 | Sun Aug 16 | ☐ |
@@ -45,45 +42,68 @@ Items from the guide I skipped - go back and do these.
 
 | # | Item / step | Skill | Current |
 |:---:|---|:---:|:---:|
-| 1 | Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3,000+ points in one subdue) | Firemaking | 82 |
-| 2 | Smithing 59 ❌ (50) + Fletching 59 ❌ (51) for the mithril grapple - Yanille south wall, 1 of the 2 Ardougne medium tasks left (other = Ardougne strawberries). The tier reward raises the coin pouch cap 28 → 56 for Ardy knights | Smi / Fle | 50 / 51 |
-| 3 | 70 Cooking ❌ | Cooking | 63 |
+| 1 | Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3k+ points in one subdue) | Firemaking | 82 |
+| 2 | Smith 59 ❌ (50) Fletch 59 ❌ (51) for the mith grap | Smi / Fle | 50 / 51 |
+| 3 | 70 Cooking ❌ - gates RFD: Freeing King Awowogei, so RFD completion and the barrows gloves (Lumb hard) | Cooking | 64 |
 | 4 | Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
-| 5 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 68 |
-| 6 | Farming 68 ✅: palm tree at Tree Gnome Village (Ardougne hard) | Farming | 68 |
-| 7 | Farming 72 ❌: calquat in Tai Bwo Wannai (Karamja elite) - ~21h to mature | Farming | 68 |
-| 8 | Farming 76 ❌: attas seeds + giant seaweed runs | Farming | 68 |
-| 9 | Farming 82 ❌: boost to 85 for celastrus + hard farming contracts | Farming | 68 |
-| 10 | Chop 1175 teak planks - [guide](https://youtu.be/GA987x97AKQ) | Woodcutting | 75 |
-| 11 | Get 352 carpenter points via Mahogany Homes -> plank sack | Construction | 51 |
-| 12 | Build a mahogany eagle lectern - Construction 67 ❌ (boost from 62: crystal saw + porcelain cup) | Construction | 51 |
+| 5 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 69 |
+| 6 | Farming 68 ✅: palm tree at Tree Gnome Village (Ardougne hard) | Farming | 69 |
+| 7 | Farming 76 ❌ (73 boosted): attas seeds + giant seaweed runs | Farming | 69 |
+| 8 | Farming 85 ❌ (82 boosted): celastrus + hard farming contracts | Farming | 69 |
+| 9 | Chop 1175 teak planks - [guide](https://youtu.be/GA987x97AKQ) | Woodcutting | 76 |
+| 10 | Get 352 carpenter points via Mahogany Homes -> plank sack -> ~63 Construction | Construction | 51 |
+| 11 | Build a mahogany eagle lectern - Construction 67 ❌ (boost from 62: crystal saw + porcelain cup) | Construction | 51 |
+| 12 | Make 106 house teleport tabs at the lectern - butler ferries soft clay from the bank | Construction | 51 |
 | 13 | Mine sandstone | Mining | 80 |
-| 14 | Make 106 house teleport tabs at the lectern - butler ferries soft clay from the bank; leave 2 soft clay in the bank | Construction | 51 |
-| 15 | Get a raw chompy bird | Ranged | 73 |
-| 16 | Mithril grapple - Smithing 59 ❌ (tip) + Fletching 59 ❌ (attach rope). Used by 5 diary tasks: Ardougne med (Yanille south wall) · Falador med (north Falador wall) · Kandarin med (water obelisk → Catherby shore) · Lumbridge med (River Lum) · Lumbridge elite (Dorgesh-Kaan pylon) | Smi / Fle | 50 / 51 |
-| 17 | Do a ton of sea charting | Sailing | 73 |
-| 18 | Upgrade to a teak hull (speed 1.5→2) - 16 large teak hull parts (400 teak planks - see the *chop 1175 teak planks* row) · 600 steel nails · 25 swamp tar · 5 lead bars | Sailing | 73 |
-| 19 | Complete the Swordfish rank of the Tempor Tantrum Barracuda trial, and eventually Marlin - collect the stormy key, barrel stand and whirlpool surprises | Sailing | 73 |
-| 20 | Build a keg and fill it with whirlpool surprises | Sailing | 73 |
-| 21 | Kill Dagannoth Rex for the berserker ring - keep the Fremennik shield if it drops | Combat |  |
-| 22 | Hunter 80 ❌ via mahogany birdhouses - logs from the Miscellania kingdom (Throne of Miscellania ✅) | Hunter | 61 |
-| 23 | Barbarian fishing to Agility 65 ❌ + Fishing 88 ❌ (CoX) - cut fishing to get as close to the *70 Cooking* row as possible | Fis / Agi | 72 / 53 |
-| 24 | **Lunar Diplomacy** - blocked on Crafting 61 ❌ (58); all other reqs met | Crafting | 58 |
-| 25 | Slayer 58 ❌ for the **black mask** (cave horrors) - the guide sinks its lamps into Slayer, but I'm putting mine into Herblore, so this is trained the traditional way. Also clears Morytania hard "Kill a Cave Horror" | Slayer | 44 |
-| 26 | Motherlode Mine for the coal bag, gem bag and prospector helmet - the helmet also clears Falador hard "enter the mining guild while wearing a Prospector helmet" | Mining | 80 |
-| 27 | **Fallen From Grace** - missing reqs: Crafting 60 ❌ (58) · Runecraft 47 ❌ (39) | Cra / RC | 58 / 39 |
-| 28 | Slayer 70 ❌: unlocks Mortimer | Slayer | 44 |
+| 14 | Mith grap - Smith 59 ❌ Fletch 59 ❌. 5 tasks: Ard med · Fal med · Kand med · Lumb med/elite | Smi / Fle | 50 / 51 |
+| 15 | Do a ton of sea charting | Sailing | 73 |
+| 16 | Upgrade to a teak hull (speed 1.5→2) | Sailing | 73 |
+| 17 | Swordfish/Marlin rank of Tempor Tantrum Barracuda trial, collect stormy key, barrel stand and whirlpool surprises | Sailing | 73 |
+| 18 | Build a keg and fill it with whirlpool surprises | Sailing | 73 |
+| 19 | Kill Dagannoth Rex for the berserker ring - keep the Fremennik shield if it drops | Combat |  |
+| 20 | Imbue the berserker ring and salve amulet at the PvP arena | Combat |  |
+| 21 | Hunter 80 ❌ via mahogany birdhouses - logs from the Miscellania kingdom | Hunter | 61 |
+| 22 | Barbarian fishing to Agility 65 ❌ + Fishing 88 ❌ (CoX) - cut fish for 70 Cooking | Fis / Agi | 74 / 54 |
+| 23 | Lunar Diplomacy - blocked on Crafting 61 ❌ (58) | Crafting | 58 |
+| 24 | Slayer 58 ❌ for the black mask (cave horrors) | Slayer | 44 |
+| 25 | Motherlode Mine for the coal bag, gem bag and prospector helmet - the helmet also clears Falador hard "enter the mining guild while wearing a Prospector helmet" | Mining | 80 |
+| 26 | Making Friends with My Arm - Agility 68 ❌ (54) | Agility | 54 |
+| 27 | Fire of Nourishment (3 Fires of Eternal Light optional) - bring an iron pickaxe; mine 200 basalt with the rune pick + 1,550 Efh / 1,500 Urt / 1,800 Te salt for the fires and 2 eternal braziers. Make 100 Stony + 100 Icy basalt in the mine, bank the leftover salts | Mining | 80 |
+| 28 | Optional: Fire of Dehumidification + Fire of Unseasonal Warmth (350 Efh, 150 Te, 400 Urt salt) | Mining | 80 |
+| 29 | Barb fish to 99 Fishing at CoX, or manually train Agility to 72 at Seers' agility course | Fis / Agi | 74 / 54 |
+| 30 | Fallen From Grace - missing reqs: Crafting 60 ❌ (58) · Runecraft 47 ❌ (39) | Cra / RC | 58 / 39 |
+| 31 | Slayer 70 ❌: unlocks Mortimer | Slayer | 44 |
 
 </details>
 
 ### End of Chapter - stat check
 
-Guide's expected stats at the end of each chapter vs mine. **Ch 1** = end of chapter 1
-(guide followed completely, bird runs to 49 Hunter); **Ch 2** = end of chapter 2.
-Negative diff = behind that chapter's target.
-
 <details>
 <summary>Show stat comparison (click to expand)</summary>
+
+| Skill | Ch 1 | Ch 2 | Mine | vs Ch 1 | vs Ch 2 |
+|---|:---:|:---:|:---:|:---:|:---:|
+| Prayer | 43 | 70 | 48 | 🟢 +5 | 🔴 −22 |
+| Magic | 63 | 89 | 76 | 🟢 +13 | 🔴 −13 |
+| Runecraft | 24 | 40 | 39 | 🟢 +15 | 🔴 −1 |
+| Construction | 39 | 71 | 51 | 🟢 +12 | 🔴 −20 |
+| Agility | 51 | 98 | 54 | 🟢 +3 | 🔴 −44 |
+| Herblore | 40 | 73 | 59 | 🟢 +19 | 🔴 −14 |
+| Thieving | 77 | 84 | 78 | 🟢 +1 | 🔴 −6 |
+| Crafting | 56 | 65 | 58 | 🟢 +2 | 🔴 −7 |
+| Fletching | 48 | 69 | 51 | 🟢 +3 | 🔴 −18 |
+| Slayer | 16 | 59 | 44 | 🟢 +28 | 🔴 −15 |
+| Hunter | 49 | 82 | 61 | 🟢 +12 | 🔴 −21 |
+| Smithing | 42 | 74 | 50 | 🟢 +8 | 🔴 −24 |
+| Fishing | 74 | 99 | 74 | 0 | 🔴 −25 |
+| Cooking | 60 | 81 | 64 | 🟢 +4 | 🔴 −17 |
+| Firemaking | 89 | 89 | 82 | 🔴 −7 | 🔴 −7 |
+| Farming | 63 | 94 | 69 | 🟢 +6 | 🔴 −25 |
+
+</details>
+
+<details>
+<summary>Show skills already past both chapters (click to expand)</summary>
 
 | Skill | Ch 1 | Ch 2 | Mine | vs Ch 1 | vs Ch 2 |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -92,24 +112,8 @@ Negative diff = behind that chapter's target.
 | Defence | 34 | 70 | 78 | 🟢 +44 | 🟢 +8 |
 | Hitpoints | 39 | 64 | 80 | 🟢 +41 | 🟢 +16 |
 | Ranged | 45 | 62 | 73 | 🟢 +28 | 🟢 +11 |
-| Prayer | 43 | 70 | 46 | 🟢 +3 | 🔴 −24 |
-| Magic | 63 | 89 | 76 | 🟢 +13 | 🔴 −13 |
-| Runecraft | 24 | 40 | 39 | 🟢 +15 | 🔴 −1 |
-| Construction | 39 | 71 | 51 | 🟢 +12 | 🔴 −20 |
-| Agility | 51 | 98 | 53 | 🟢 +2 | 🔴 −45 |
-| Herblore | 40 | 73 | 52 | 🟢 +12 | 🔴 −21 |
-| Thieving | 77 | 84 | 78 | 🟢 +1 | 🔴 −6 |
-| Crafting | 56 | 65 | 58 | 🟢 +2 | 🔴 −7 |
-| Fletching | 48 | 69 | 51 | 🟢 +3 | 🔴 −18 |
-| Slayer | 16 | 59 | 44 | 🟢 +28 | 🔴 −15 |
-| Hunter | 49 | 82 | 61 | 🟢 +12 | 🔴 −21 |
 | Mining | 44 | 73 | 80 | 🟢 +36 | 🟢 +7 |
-| Smithing | 42 | 74 | 50 | 🟢 +8 | 🔴 −24 |
-| Fishing | 74 | 99 | 72 | 🔴 −2 | 🔴 −27 |
-| Cooking | 60 | 81 | 63 | 🟢 +3 | 🔴 −18 |
-| Firemaking | 89 | 89 | 82 | 🔴 −7 | 🔴 −7 |
-| Woodcutting | 70 | 73 | 75 | 🟢 +5 | 🟢 +2 |
-| Farming | 63 | 94 | 68 | 🟢 +5 | 🔴 −26 |
+| Woodcutting | 70 | 73 | 76 | 🟢 +6 | 🟢 +3 |
 | Sailing | 1 | 67 | 73 | 🟢 +72 | 🟢 +6 |
 
 </details>
@@ -121,7 +125,6 @@ Red gaps only, ordered by biggest deficit vs the guide.
 | # | Skill | Now → Target | Gap | How to bridge |
 |:---:|---|:---:|:---:|---|
 | 0 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
-| 1 | Fishing | 72 → 74 | 🔴 −2 | Tempoross - banks fish for the *70 Cooking* goal too; all its CA's are done |
 
 ---
 
@@ -173,7 +176,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 **❌ Skip for now - deep chains / far-off reqs:**
 - **Dragon Slayer II** (80k Smithing) - 6 skills short, 200 QP, ~19-quest chain
 - **Defender of Varrock** (15k Smithing · 15k Hunter) - Smithing 55, Hunter 52, 8 prereqs (What Lies Below ✅)
-- **Making Friends with My Arm** (10k Con) - Agility 68 + Swan Song (100 QP) chain
+- **Making Friends with My Arm** (10k Con) - Agility 68 (Swan Song ✅)
 - **Cabin Fever** (7k Smi, Smithing 50 ✅ + Rum Deal) · **Devious Minds** (6.5k Smi, Smithing 65 + Runecraft 50) · **The General's Shadow** (2k Slayer, Desert Treasure I line)
 
 **Realistic quest XP toward each grind (accessible tier):**

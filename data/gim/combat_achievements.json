@@ -1,6 +1,6 @@
 {
   "rsn": "GIM Foolin",
-  "updated": "2026-08-04T02:48:51.547796+00:00",
+  "updated": "2026-08-13T21:55:51.135782+00:00",
   "combat_achievements": {
     "tiers": {
       "Easy": {
@@ -44,6 +44,10 @@
           {
             "name": "Tempoross Novice",
             "date": "2026-08-03"
+          },
+          {
+            "name": "King Black Dragon Novice",
+            "date": "2026-08-13"
           }
         ],
         "not_completed": [
@@ -62,7 +66,6 @@
           "Fighting as Intended II",
           "Giant Mole Novice",
           "Into the Den of Giants",
-          "King Black Dragon Novice",
           "Let them fight",
           "Mummy!",
           "Not So Great After All",
@@ -79,10 +82,10 @@
           "Sleeping Giant",
           "The Demonic Punching Bag"
         ],
-        "completed_count": 10,
+        "completed_count": 11,
         "total_count": 41,
         "points_per_task": 1,
-        "points_earned": 10
+        "points_earned": 11
       },
       "Medium": {
         "completed": [
@@ -752,11 +755,16 @@
         "points_earned": 0
       }
     },
-    "total_completed": 18,
+    "total_completed": 19,
     "total_tasks": 637,
-    "total_points": 28,
+    "total_points": 29,
     "max_points": 2630,
     "recent_tasks": [
+      {
+        "name": "King Black Dragon Novice",
+        "date": "2026-08-13",
+        "tier": "Easy"
+      },
       {
         "name": "Tempoross Champion",
         "date": "2026-08-04",
