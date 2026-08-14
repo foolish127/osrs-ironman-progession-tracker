@@ -1,6 +1,6 @@
 {
   "rsn": "GIM Foolin",
-  "updated": "2026-08-12T19:01:58.113995+00:00",
+  "updated": "2026-08-14T07:24:54.958099+00:00",
   "collection_log": {
     "collections": {
       "Dagannoth Kings": {
@@ -390,6 +390,11 @@
       "Miscellaneous": {
         "obtained": [
           {
+            "name": "Long bone",
+            "date": "2026-08-14",
+            "quantity": 1
+          },
+          {
             "name": "Right skull half",
             "date": "2026-08-07",
             "quantity": 1
@@ -421,13 +426,18 @@
           }
         ],
         "missing": [],
-        "obtained_count": 6,
-        "total_count": 6
+        "obtained_count": 7,
+        "total_count": 7
       }
     },
-    "total_obtained": 53,
+    "total_obtained": 54,
     "total_items": 1712,
     "recent_items": [
+      {
+        "name": "Long bone",
+        "date": "2026-08-14",
+        "collection": "miscellaneous"
+      },
       {
         "name": "Attas seed",
         "date": "2026-08-12",
@@ -522,11 +532,6 @@
         "name": "Angler waders",
         "date": "2026-07-24",
         "collection": "fishing_trawler"
-      },
-      {
-        "name": "Fresh crab claw",
-        "date": "2026-07-24",
-        "collection": "miscellaneous"
       }
     ],
     "source": "templeosrs"
