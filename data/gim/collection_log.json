@@ -1,6 +1,6 @@
 {
   "rsn": "GIM Foolin",
-  "updated": "2026-08-14T17:20:39.340773+00:00",
+  "updated": "2026-08-15T01:15:21.462621+00:00",
   "collection_log": {
     "collections": {
       "Dagannoth Kings": {
@@ -9,6 +9,18 @@
             "name": "Dragon axe",
             "date": "2026-06-28",
             "quantity": 1
+          }
+        ],
+        "missing": [],
+        "obtained_count": 1,
+        "total_count": 1
+      },
+      "Grotesque Guardians": {
+        "obtained": [
+          {
+            "name": "Granite dust",
+            "date": "2026-08-14",
+            "quantity": 29
           }
         ],
         "missing": [],
@@ -31,6 +43,18 @@
         "missing": [],
         "obtained_count": 2,
         "total_count": 2
+      },
+      "The Mad Angel": {
+        "obtained": [
+          {
+            "name": "Granite dust",
+            "date": "2026-08-14",
+            "quantity": 29
+          }
+        ],
+        "missing": [],
+        "obtained_count": 1,
+        "total_count": 1
       },
       "Tempoross": {
         "obtained": [
@@ -124,6 +148,18 @@
         "missing": [],
         "obtained_count": 4,
         "total_count": 4
+      },
+      "Guardians Of The Rift": {
+        "obtained": [
+          {
+            "name": "Abyssal pearls",
+            "date": "2026-08-14",
+            "quantity": 14
+          }
+        ],
+        "missing": [],
+        "obtained_count": 1,
+        "total_count": 1
       },
       "Rogues Den": {
         "obtained": [
@@ -477,9 +513,19 @@
         "total_count": 7
       }
     },
-    "total_obtained": 62,
+    "total_obtained": 64,
     "total_items": 1712,
     "recent_items": [
+      {
+        "name": "Granite dust",
+        "date": "2026-08-14",
+        "collection": "grotesque_guardians"
+      },
+      {
+        "name": "Abyssal pearls",
+        "date": "2026-08-14",
+        "collection": "guardians_of_the_rift"
+      },
       {
         "name": "Bronze defender",
         "date": "2026-08-14",
@@ -569,16 +615,6 @@
         "name": "Soaked page",
         "date": "2026-08-04",
         "collection": "tempoross"
-      },
-      {
-        "name": "Spirit flakes",
-        "date": "2026-08-04",
-        "collection": "tempoross"
-      },
-      {
-        "name": "Rogue mask",
-        "date": "2026-08-03",
-        "collection": "rogues_den"
       }
     ],
     "source": "templeosrs"
