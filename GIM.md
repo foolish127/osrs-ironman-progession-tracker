@@ -27,11 +27,11 @@ Hunter 80 push).
 | Item | Crafting Level | Hunter Level |
 |---|:---:|:---:|
 | Mahogany | 50 | 49 |
-| Yew | 60 ❌ | 59 ✅ |
+| Yew | 60 ✅ | 59 ✅ |
 | Magic | 75 ❌ | 74 ❌ |
 | Redwood | 90 ❌ | 89 ❌ |
 
-_Current: Crafting 58, Hunter 61._
+_Current: Crafting 60, Hunter 62._
 
 ## BRUH sailer Guide
 
@@ -62,17 +62,19 @@ Items from the guide I skipped - go back and do these.
 | 18 | Build a keg and fill it with whirlpool surprises | Sailing | 73 |
 | 19 | Kill Dagannoth Rex for the berserker ring - keep the Fremennik shield if it drops | Combat |  |
 | 20 | Imbue the berserker ring and salve amulet at the PvP arena | Combat |  |
-| 21 | Hunter 80 ❌ via mahogany birdhouses - logs from the Miscellania kingdom | Hunter | 61 |
+| 21 | Hunter 80 ❌ via mahogany birdhouses - logs from the Miscellania kingdom | Hunter | 62 |
 | 22 | Barbarian fishing to Agility 65 ❌ + Fishing 88 ❌ (CoX) - cut fish for 70 Cooking | Fis / Agi | 74 / 54 |
-| 23 | Lunar Diplomacy - blocked on Crafting 61 ❌ (58) | Crafting | 58 |
+| 23 | Lunar Diplomacy - blocked on Crafting 61 ❌ (60) | Crafting | 60 |
 | 24 | Slayer 58 ❌ for the black mask (cave horrors) | Slayer | 44 |
 | 25 | Motherlode Mine for the coal bag, gem bag and prospector helmet - the helmet also clears Falador hard "enter the mining guild while wearing a Prospector helmet" | Mining | 80 |
 | 26 | Making Friends with My Arm - Agility 68 ❌ (54) | Agility | 54 |
 | 27 | Fire of Nourishment (3 Fires of Eternal Light optional) - bring an iron pickaxe; mine 200 basalt with the rune pick + 1,550 Efh / 1,500 Urt / 1,800 Te salt for the fires and 2 eternal braziers. Make 100 Stony + 100 Icy basalt in the mine, bank the leftover salts | Mining | 80 |
 | 28 | Optional: Fire of Dehumidification + Fire of Unseasonal Warmth (350 Efh, 150 Te, 400 Urt salt) | Mining | 80 |
 | 29 | Barb fish to 99 Fishing at CoX, or manually train Agility to 72 at Seers' agility course | Fis / Agi | 74 / 54 |
-| 30 | Fallen From Grace - missing reqs: Crafting 60 ❌ (58) · Runecraft 47 ❌ (39) | Cra / RC | 58 / 39 |
-| 31 | Slayer 70 ❌: unlocks Mortimer | Slayer | 44 |
+| 30 | Slayer 48 ❌ (44) for The Heart of Darkness and Perilous Moons | Slayer | 44 |
+| 31 | The Final Dawn - Runecraft 52 ❌ (48) · Fletching 52 ❌ (51) · The Heart of Darkness ❌ · Perilous Moons ❌ | RC / Fle | 48 / 51 |
+| 32 | Defender of Varrock - Smithing 55 ✅ | Smithing | 55 |
+| 33 | Slayer 70 ❌: unlocks Mortimer | Slayer | 44 |
 
 </details>
 
@@ -84,17 +86,16 @@ Items from the guide I skipped - go back and do these.
 | Skill | Ch 1 | Ch 2 | Mine | vs Ch 1 | vs Ch 2 |
 |---|:---:|:---:|:---:|:---:|:---:|
 | Prayer | 43 | 70 | 48 | 🟢 +5 | 🔴 −22 |
-| Magic | 63 | 89 | 76 | 🟢 +13 | 🔴 −13 |
-| Runecraft | 24 | 40 | 39 | 🟢 +15 | 🔴 −1 |
+| Magic | 63 | 89 | 77 | 🟢 +14 | 🔴 −12 |
 | Construction | 39 | 71 | 51 | 🟢 +12 | 🔴 −20 |
 | Agility | 51 | 98 | 54 | 🟢 +3 | 🔴 −44 |
 | Herblore | 40 | 73 | 59 | 🟢 +19 | 🔴 −14 |
 | Thieving | 77 | 84 | 78 | 🟢 +1 | 🔴 −6 |
-| Crafting | 56 | 65 | 58 | 🟢 +2 | 🔴 −7 |
+| Crafting | 56 | 65 | 60 | 🟢 +4 | 🔴 −5 |
 | Fletching | 48 | 69 | 51 | 🟢 +3 | 🔴 −18 |
 | Slayer | 16 | 59 | 44 | 🟢 +28 | 🔴 −15 |
-| Hunter | 49 | 82 | 61 | 🟢 +12 | 🔴 −21 |
-| Smithing | 42 | 74 | 50 | 🟢 +8 | 🔴 −24 |
+| Hunter | 49 | 82 | 62 | 🟢 +13 | 🔴 −20 |
+| Smithing | 42 | 74 | 55 | 🟢 +13 | 🔴 −19 |
 | Fishing | 74 | 99 | 74 | 0 | 🔴 −25 |
 | Cooking | 60 | 81 | 64 | 🟢 +4 | 🔴 −17 |
 | Firemaking | 89 | 89 | 82 | 🔴 −7 | 🔴 −7 |
@@ -103,15 +104,16 @@ Items from the guide I skipped - go back and do these.
 </details>
 
 <details>
-<summary>Show skills already past both chapters (click to expand)</summary>
+<summary>Show skills that have met both chapters (click to expand)</summary>
 
 | Skill | Ch 1 | Ch 2 | Mine | vs Ch 1 | vs Ch 2 |
 |---|:---:|:---:|:---:|:---:|:---:|
-| Attack | 46 | 62 | 79 | 🟢 +33 | 🟢 +17 |
+| Attack | 46 | 62 | 80 | 🟢 +34 | 🟢 +18 |
 | Strength | 50 | 77 | 79 | 🟢 +29 | 🟢 +2 |
 | Defence | 34 | 70 | 78 | 🟢 +44 | 🟢 +8 |
 | Hitpoints | 39 | 64 | 80 | 🟢 +41 | 🟢 +16 |
 | Ranged | 45 | 62 | 73 | 🟢 +28 | 🟢 +11 |
+| Runecraft | 24 | 40 | 48 | 🟢 +24 | 🟢 +8 |
 | Mining | 44 | 73 | 80 | 🟢 +36 | 🟢 +7 |
 | Woodcutting | 70 | 73 | 76 | 🟢 +6 | 🟢 +3 |
 | Sailing | 1 | 67 | 73 | 🟢 +72 | 🟢 +6 |
@@ -138,7 +140,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 | Blocker | Current | Target | Gap | XP needed |
 |---|:---:|:---:|:---:|:---:|
 | Construction | 51 | 59 | ❌ +8 | 136,802 |
-| Smithing | 50 | 70 | ❌ +20 | 636,294 |
+| Smithing | 55 | 70 | ❌ +15 | 552,587 |
 | Troubled Tortugans (quest) | ❌ | done | ❌ | - |
 | ↳ Slayer | 44 | 51 | ❌ +7 | 56,296 |
 
@@ -175,7 +177,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 
 **❌ Skip for now - deep chains / far-off reqs:**
 - **Dragon Slayer II** (80k Smithing) - 6 skills short, 200 QP, ~19-quest chain
-- **Defender of Varrock** (15k Smithing · 15k Hunter) - Smithing 55, Hunter 52, 8 prereqs (What Lies Below ✅)
+- **Defender of Varrock** (15k Smithing · 15k Hunter) - Smithing 55 ✅, Hunter 52 ✅, 8 prereqs (What Lies Below ✅)
 - **Making Friends with My Arm** (10k Con) - Agility 68 (Swan Song ✅)
 - **Cabin Fever** (7k Smi, Smithing 50 ✅ + Rum Deal) · **Devious Minds** (6.5k Smi, Smithing 65 + Runecraft 50) · **The General's Shadow** (2k Slayer, Desert Treasure I line)
 
@@ -183,7 +185,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 - **Smithing** - EW I+II (12.5k), Giant Dwarf (2.5k), Knight's Sword (12.7k), Sleeping Giants (6k), Between a Rock (5k) all banked ✅; rest = Giant's Foundry
 - **Construction** - Getting Ahead (3.2k) + Fremennik Isles (5k) banked ✅; Cold War (1.5k) still to do; rest = Mahogany Homes
 - **Slayer** - Porcine + Wanted! banked ✅; RFD-MD (1k) still to do; rest = tasks → then Heart of Darkness / Perilous Moons capstones blow past 51
-- **Hunter** - 61 ✅ (Ascent of Arceuus banked, already past 45); Perilous Moons 5k left as a capstone
+- **Hunter** - 62 ✅ (Ascent of Arceuus banked, already past 45); Perilous Moons 5k left as a capstone
 
 </details>
 
@@ -224,7 +226,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 | 60 ✅ | Crew: Cabin Boy Jenkins (Crandor) |  | Dragon Slayer I ✅ · Ghostspeak amulet / Morytania legs 2 |
 | 65 ✅ | Crew: Oarswoman Olga (Burgh de Rott) |  | In Aid of the Myreque ❌ |
 | 67 ✅ | Camphor hull: speed 2→2.5 | 59 ❌ | 16 large camphor hull parts (Troubled Tortugans ❌) · 600 adamantite nails · 25 swamp tar · 5 lead bars (~911k gp) |
-| 72 ✅ | Adamant helm (ship fitting): unlocks Southern hazardous waters | 59 ❌ (51) | Con 59 ❌ (51) · 3 camphor planks (WC 66 ✅ · Troubled Tortugans ❌ [Sailing 45 ✅ quest] → Great Conch camphor trees · sawmill 2.5k ea or Plank Make) · 6 adamantite bars (Smithing 70 ❌ · 50) |
+| 72 ✅ | Adamant helm (ship fitting): unlocks Southern hazardous waters | 59 ❌ (51) | Con 59 ❌ (51) · 3 camphor planks (WC 66 ✅ · Troubled Tortugans ❌ [Sailing 45 ✅ quest] → Great Conch camphor trees · sawmill 2.5k ea or Plank Make) · 6 adamantite bars (Smithing 70 ❌ · 55) |
 | 73 ✅ | Mercenary shipwreck ❌ - Sailing 73 ✅ but blocked by the adamant helm (Con 59 · Smithing 70 · Troubled Tortugans) to reach tangled kelp |  |  |
 <details>
 <summary><strong>Late-game milestones (Sailing 74+)</strong>, collapsed (click to expand)</summary>
@@ -249,7 +251,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 
 ### Progress to 80 (Fremennik shipwreck)
 
-Sailing **73** ✅, but the **Mercenary shipwreck is not yet accessible** - it needs the **adamant helm** ship fitting, still blocked by **Construction 59** (51), **Smithing 70** (50, for the 6 adamantite bars), and **Troubled Tortugans** (Great Conch → camphor planks). Once the helm is built, **martial salvage** runs at 201.5 xp ea in the Southern hazardous waters.
+Sailing **73** ✅, but the **Mercenary shipwreck is not yet accessible** - it needs the **adamant helm** ship fitting, still blocked by **Construction 59** (51), **Smithing 70** (55, for the 6 adamantite bars), and **Troubled Tortugans** (Great Conch → camphor planks). Once the helm is built, **martial salvage** runs at 201.5 xp ea in the Southern hazardous waters.
 
 ```
 73 [░░░░░░░░░░░░░░░░░░░░] 80    0%
