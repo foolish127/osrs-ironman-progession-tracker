@@ -13,9 +13,6 @@ Hunter 80 push).
 
 | Day | Date | Done |
 |:---:|---|:---:|
-| 4 | Fri Aug 14 | ☐ |
-| 5 | Sat Aug 15 | ☐ |
-| 6 | Sun Aug 16 | ☐ |
 | 7 | Mon Aug 17 | ☐ |
 | 8 | Tue Aug 18 | ☐ |
 | 9 | Wed Aug 19 | ☐ |
@@ -26,12 +23,11 @@ Hunter 80 push).
 
 | Item | Crafting Level | Hunter Level |
 |---|:---:|:---:|
-| Mahogany | 50 | 49 |
 | Yew | 60 ✅ | 59 ✅ |
 | Magic | 75 ❌ | 74 ❌ |
 | Redwood | 90 ❌ | 89 ❌ |
 
-_Current: Crafting 60, Hunter 62._
+_Current: Crafting 61, Hunter 62._
 
 ## BRUH sailer Guide
 
@@ -43,7 +39,7 @@ Items from the guide I skipped - go back and do these.
 | # | Item / step | Skill | Current |
 |:---:|---|:---:|:---:|
 | 1 | Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3k+ points in one subdue) | Firemaking | 82 |
-| 2 | Smith 59 ❌ (50) Fletch 59 ❌ (51) for the mith grap | Smi / Fle | 50 / 51 |
+| 2 | Smith 59 ❌ (55) Fletch 59 ❌ (52) for the mith grap | Smi / Fle | 55 / 52 |
 | 3 | 70 Cooking ❌ - gates RFD: Freeing King Awowogei, so RFD completion and the barrows gloves (Lumb hard) | Cooking | 64 |
 | 4 | Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
 | 5 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 69 |
@@ -55,7 +51,7 @@ Items from the guide I skipped - go back and do these.
 | 11 | Build a mahogany eagle lectern - Construction 67 ❌ (boost from 62: crystal saw + porcelain cup) | Construction | 51 |
 | 12 | Make 106 house teleport tabs at the lectern - butler ferries soft clay from the bank | Construction | 51 |
 | 13 | Mine sandstone | Mining | 80 |
-| 14 | Mith grap - Smith 59 ❌ Fletch 59 ❌. 5 tasks: Ard med · Fal med · Kand med · Lumb med/elite | Smi / Fle | 50 / 51 |
+| 14 | Mith grap - Smith 59 ❌ Fletch 59 ❌. 5 tasks: Ard med · Fal med · Kand med · Lumb med/elite | Smi / Fle | 55 / 52 |
 | 15 | Do a ton of sea charting | Sailing | 73 |
 | 16 | Upgrade to a teak hull (speed 1.5→2) | Sailing | 73 |
 | 17 | Swordfish/Marlin rank of Tempor Tantrum Barracuda trial, collect stormy key, barrel stand and whirlpool surprises | Sailing | 73 |
@@ -64,17 +60,16 @@ Items from the guide I skipped - go back and do these.
 | 20 | Imbue the berserker ring and salve amulet at the PvP arena | Combat |  |
 | 21 | Hunter 80 ❌ via mahogany birdhouses - logs from the Miscellania kingdom | Hunter | 62 |
 | 22 | Barbarian fishing to Agility 65 ❌ + Fishing 88 ❌ (CoX) - cut fish for 70 Cooking | Fis / Agi | 74 / 54 |
-| 23 | Lunar Diplomacy - blocked on Crafting 61 ❌ (60) | Crafting | 60 |
-| 24 | Slayer 58 ❌ for the black mask (cave horrors) | Slayer | 44 |
-| 25 | Motherlode Mine for the coal bag, gem bag and prospector helmet - the helmet also clears Falador hard "enter the mining guild while wearing a Prospector helmet" | Mining | 80 |
-| 26 | Making Friends with My Arm - Agility 68 ❌ (54) | Agility | 54 |
-| 27 | Fire of Nourishment (3 Fires of Eternal Light optional) - bring an iron pickaxe; mine 200 basalt with the rune pick + 1,550 Efh / 1,500 Urt / 1,800 Te salt for the fires and 2 eternal braziers. Make 100 Stony + 100 Icy basalt in the mine, bank the leftover salts | Mining | 80 |
-| 28 | Optional: Fire of Dehumidification + Fire of Unseasonal Warmth (350 Efh, 150 Te, 400 Urt salt) | Mining | 80 |
-| 29 | Barb fish to 99 Fishing at CoX, or manually train Agility to 72 at Seers' agility course | Fis / Agi | 74 / 54 |
-| 30 | Slayer 48 ❌ (44) for The Heart of Darkness and Perilous Moons | Slayer | 44 |
-| 31 | The Final Dawn - Runecraft 52 ❌ (48) · Fletching 52 ❌ (51) · The Heart of Darkness ❌ · Perilous Moons ❌ | RC / Fle | 48 / 51 |
-| 32 | Defender of Varrock - Smithing 55 ✅ | Smithing | 55 |
-| 33 | Slayer 70 ❌: unlocks Mortimer | Slayer | 44 |
+| 23 | Slayer 58 ❌ for the black mask (cave horrors) | Slayer | 46 |
+| 24 | Motherlode Mine for the coal bag, gem bag and prospector helmet - the helmet also clears Falador hard "enter the mining guild while wearing a Prospector helmet" | Mining | 80 |
+| 25 | Making Friends with My Arm - Agility 68 ❌ (54) | Agility | 54 |
+| 26 | Fire of Nourishment (3 Fires of Eternal Light optional) - bring an iron pickaxe; mine 200 basalt with the rune pick + 1,550 Efh / 1,500 Urt / 1,800 Te salt for the fires and 2 eternal braziers. Make 100 Stony + 100 Icy basalt in the mine, bank the leftover salts | Mining | 80 |
+| 27 | Optional: Fire of Dehumidification + Fire of Unseasonal Warmth (350 Efh, 150 Te, 400 Urt salt) | Mining | 80 |
+| 28 | Barb fish to 99 Fishing at CoX, or manually train Agility to 72 at Seers' agility course | Fis / Agi | 74 / 54 |
+| 29 | Slayer 48 ❌ (46) for The Heart of Darkness and Perilous Moons | Slayer | 46 |
+| 30 | The Final Dawn - Runecraft 52 ❌ (48) · Fletching 52 ✅ · The Heart of Darkness ❌ · Perilous Moons ❌ | RC / Fle | 48 / 52 |
+| 31 | Defender of Varrock - reqs met ✅, holding until the zombie axe drops | Smithing | 55 |
+| 32 | Slayer 70 ❌: unlocks Mortimer | Slayer | 46 |
 
 </details>
 
@@ -86,14 +81,14 @@ Items from the guide I skipped - go back and do these.
 | Skill | Ch 1 | Ch 2 | Mine | vs Ch 1 | vs Ch 2 |
 |---|:---:|:---:|:---:|:---:|:---:|
 | Prayer | 43 | 70 | 48 | 🟢 +5 | 🔴 −22 |
-| Magic | 63 | 89 | 77 | 🟢 +14 | 🔴 −12 |
+| Magic | 63 | 89 | 78 | 🟢 +15 | 🔴 −11 |
 | Construction | 39 | 71 | 51 | 🟢 +12 | 🔴 −20 |
 | Agility | 51 | 98 | 54 | 🟢 +3 | 🔴 −44 |
 | Herblore | 40 | 73 | 59 | 🟢 +19 | 🔴 −14 |
 | Thieving | 77 | 84 | 78 | 🟢 +1 | 🔴 −6 |
-| Crafting | 56 | 65 | 60 | 🟢 +4 | 🔴 −5 |
-| Fletching | 48 | 69 | 51 | 🟢 +3 | 🔴 −18 |
-| Slayer | 16 | 59 | 44 | 🟢 +28 | 🔴 −15 |
+| Crafting | 56 | 65 | 61 | 🟢 +5 | 🔴 −4 |
+| Fletching | 48 | 69 | 52 | 🟢 +4 | 🔴 −17 |
+| Slayer | 16 | 59 | 46 | 🟢 +30 | 🔴 −13 |
 | Hunter | 49 | 82 | 62 | 🟢 +13 | 🔴 −20 |
 | Smithing | 42 | 74 | 55 | 🟢 +13 | 🔴 −19 |
 | Fishing | 74 | 99 | 74 | 0 | 🔴 −25 |
@@ -142,7 +137,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 | Construction | 51 | 59 | ❌ +8 | 136,802 |
 | Smithing | 55 | 70 | ❌ +15 | 552,587 |
 | Troubled Tortugans (quest) | ❌ | done | ❌ | - |
-| ↳ Slayer | 44 | 51 | ❌ +7 | 56,296 |
+| ↳ Slayer | 46 | 51 | ❌ +5 | 47,109 |
 
 **Materials to build:** 3 camphor planks · 6 adamantite bars
 
@@ -163,7 +158,8 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 | Quest | Reward | Prereq to start |
 |---|---|---|
 | RFD: Freeing the Mountain Dwarf | 1,000 Slayer | Cook's Assistant ✅ + Fishing Contest ✅ |
-| Cold War | 1,500 Con | Hunter 10 ✅ |
+| At First Light | 4,500 Hunter | Hunter 46 ✅ · Eagles' Peak ✅ |
+| Defender of Varrock | 15k Smithing · 15k Hunter | All met ✅ - **holding until the zombie axe drops** |
 
 **🔒 Capstones - do once that skill is already near its target:**
 
@@ -173,17 +169,15 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 | The Heart of Darkness | 8,000 Slayer | Slayer 48, Thieving 48, Agility 46 |
 | The Path of Glouphrie | 20,000 Slayer | Slayer 56, Thieving 56, Agility 45 |
 | The Red Reef | 5,000 Smithing | Smithing 48 ✅ + Troubled Tortugans |
-| At First Light | 4,500 Hunter | Hunter 46 ✅ (Eagles' Peak ✅) |
 
 **❌ Skip for now - deep chains / far-off reqs:**
 - **Dragon Slayer II** (80k Smithing) - 6 skills short, 200 QP, ~19-quest chain
-- **Defender of Varrock** (15k Smithing · 15k Hunter) - Smithing 55 ✅, Hunter 52 ✅, 8 prereqs (What Lies Below ✅)
 - **Making Friends with My Arm** (10k Con) - Agility 68 (Swan Song ✅)
 - **Cabin Fever** (7k Smi, Smithing 50 ✅ + Rum Deal) · **Devious Minds** (6.5k Smi, Smithing 65 + Runecraft 50) · **The General's Shadow** (2k Slayer, Desert Treasure I line)
 
 **Realistic quest XP toward each grind (accessible tier):**
 - **Smithing** - EW I+II (12.5k), Giant Dwarf (2.5k), Knight's Sword (12.7k), Sleeping Giants (6k), Between a Rock (5k) all banked ✅; rest = Giant's Foundry
-- **Construction** - Getting Ahead (3.2k) + Fremennik Isles (5k) banked ✅; Cold War (1.5k) still to do; rest = Mahogany Homes
+- **Construction** - Getting Ahead (3.2k) + Fremennik Isles (5k) + Cold War (1.5k) all banked ✅; rest = Mahogany Homes
 - **Slayer** - Porcine + Wanted! banked ✅; RFD-MD (1k) still to do; rest = tasks → then Heart of Darkness / Perilous Moons capstones blow past 51
 - **Hunter** - 62 ✅ (Ascent of Arceuus banked, already past 45); Perilous Moons 5k left as a capstone
 
