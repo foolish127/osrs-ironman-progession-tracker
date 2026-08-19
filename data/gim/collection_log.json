@@ -1,6 +1,6 @@
 {
   "rsn": "GIM Foolin",
-  "updated": "2026-08-17T01:16:53.688137+00:00",
+  "updated": "2026-08-19T06:42:52.446468+00:00",
   "collection_log": {
     "collections": {
       "Dagannoth Kings": {
@@ -9,6 +9,18 @@
             "name": "Dragon axe",
             "date": "2026-06-28",
             "quantity": 1
+          }
+        ],
+        "missing": [],
+        "obtained_count": 1,
+        "total_count": 1
+      },
+      "Fortis Colosseum": {
+        "obtained": [
+          {
+            "name": "Sunfire splinters",
+            "date": "2026-08-19",
+            "quantity": 3
           }
         ],
         "missing": [],
@@ -335,6 +347,18 @@
         "obtained_count": 3,
         "total_count": 3
       },
+      "Hunter Guild": {
+        "obtained": [
+          {
+            "name": "Huntsman's kit",
+            "date": "2026-08-19",
+            "quantity": 1
+          }
+        ],
+        "missing": [],
+        "obtained_count": 1,
+        "total_count": 1
+      },
       "Lost Schematics": {
         "obtained": [
           {
@@ -547,9 +571,19 @@
         "total_count": 7
       }
     },
-    "total_obtained": 68,
+    "total_obtained": 70,
     "total_items": 1712,
     "recent_items": [
+      {
+        "name": "Sunfire splinters",
+        "date": "2026-08-19",
+        "collection": "fortis_colosseum"
+      },
+      {
+        "name": "Huntsman's kit",
+        "date": "2026-08-19",
+        "collection": "hunter_guild"
+      },
       {
         "name": "Kronos seed",
         "date": "2026-08-16",
@@ -639,16 +673,6 @@
         "name": "Mime mask",
         "date": "2026-08-09",
         "collection": "random_events"
-      },
-      {
-        "name": "Celestial ring (uncharged)",
-        "date": "2026-08-08",
-        "collection": "shooting_stars"
-      },
-      {
-        "name": "Right skull half",
-        "date": "2026-08-07",
-        "collection": "miscellaneous"
       }
     ],
     "source": "templeosrs"
