@@ -1,6 +1,6 @@
 {
   "rsn": "GIM Foolin",
-  "updated": "2026-08-16T19:44:10.294648+00:00",
+  "updated": "2026-08-19T15:54:34.115109+00:00",
   "combat_achievements": {
     "tiers": {
       "Easy": {
@@ -190,6 +190,10 @@
           {
             "name": "Why Cook?",
             "date": "2026-08-03"
+          },
+          {
+            "name": "Hespori Adept",
+            "date": "2026-08-17"
           }
         ],
         "not_completed": [
@@ -214,7 +218,6 @@
           "Granite Footwork",
           "Grotesque Guardians Adept",
           "Heal No More",
-          "Hespori Adept",
           "Hesporisn't",
           "Hueycoatl Adept",
           "I need room",
@@ -277,10 +280,10 @@
           "Venenatis Adept",
           "Who Is the King Now?"
         ],
-        "completed_count": 2,
+        "completed_count": 3,
         "total_count": 85,
         "points_per_task": 3,
-        "points_earned": 6
+        "points_earned": 9
       },
       "Elite": {
         "completed": [],
@@ -761,11 +764,16 @@
         "points_earned": 0
       }
     },
-    "total_completed": 21,
+    "total_completed": 22,
     "total_tasks": 637,
-    "total_points": 33,
+    "total_points": 36,
     "max_points": 2630,
     "recent_tasks": [
+      {
+        "name": "Hespori Adept",
+        "date": "2026-08-17",
+        "tier": "Hard"
+      },
       {
         "name": "Back to Our Roots",
         "date": "2026-08-16",
@@ -858,11 +866,6 @@
       },
       {
         "name": "Can We Fix It?",
-        "date": "2026-05-25",
-        "tier": "Medium"
-      },
-      {
-        "name": "Leaving No One Behind",
         "date": "2026-05-25",
         "tier": "Medium"
       }
