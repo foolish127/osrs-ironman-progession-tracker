@@ -86,6 +86,21 @@
         const SKILL_ICONS = {};
         SKILL_ORDER.forEach(s => SKILL_ICONS[s] = `https://oldschool.runescape.wiki/images/${s}_icon.png`);
 
+        // Stackable items' wiki icons are named "<Name>_<qty>.png", so the plain name
+        // 404s. Retry the common quantity suffixes before falling back to a letter.
+        const ITEM_ICON_SUFFIXES = ['_5', '_4'];
+        function clogIconFallback(img, char) {
+            const base = img.dataset.iconBase;
+            const step = Number(img.dataset.iconStep || 0);
+            if (base && step < ITEM_ICON_SUFFIXES.length) {
+                img.dataset.iconStep = step + 1;
+                img.src = `https://oldschool.runescape.wiki/images/${base}${ITEM_ICON_SUFFIXES[step]}.png`;
+                return;
+            }
+            img.style.display = 'none';
+            img.parentElement.innerHTML = char;
+        }
+
         function formatNumber(n) {
             if (n >= 1e9) return (n/1e9).toFixed(1) + 'B';
             if (n >= 1e6) return (n/1e6).toFixed(1) + 'M';
@@ -626,10 +641,26 @@
                 : getCategoryStats();
             const pct = ((clogData.total_obtained / clogData.total_items) * 100).toFixed(1);
             
+            // Stackable items whose wiki inventory icon carries a quantity suffix,
+            // so the plain "<Name>.png" URL 404s.
+            const ITEM_IMAGE_OVERRIDES = {
+                'Sunfire splinters': 'Sunfire_splinters_4',
+                'Kronos seed': 'Kronos_seed_5',
+                'Abyssal pearls': 'Abyssal_pearls_5'
+            };
+
+            // Plain wiki filename for an item, no extension - also the base the
+            // onerror handler appends quantity suffixes to.
+            function getItemImageFile(itemName) {
+                return encodeURIComponent(itemName.replace(/ /g, '_'));
+            }
+
             // Helper to get wiki image URL
             function getItemImageUrl(itemName) {
                 // Use wiki's standard image naming convention
-                const formatted = encodeURIComponent(itemName.replace(/ /g, '_'));
+                const formatted = ITEM_IMAGE_OVERRIDES[itemName]
+                    ? encodeURIComponent(ITEM_IMAGE_OVERRIDES[itemName])
+                    : getItemImageFile(itemName);
                 return `https://oldschool.runescape.wiki/images/${formatted}.png`;
             }
             
@@ -665,7 +696,7 @@
                                 const tip = `${item.name}${dateLabel ? ' · ' + dateLabel : ''}`.replace(/"/g, '&quot;');
                                 return `
                                 <div class="clog-latest-item" data-tooltip="${tip}">
-                                    <img src="${getItemImageUrl(item.name)}" alt="${item.name.replace(/"/g, '&quot;')}" onerror="this.style.display='none'; this.parentElement.innerHTML='${safeChar}';">
+                                    <img src="${getItemImageUrl(item.name)}" data-icon-base="${getItemImageFile(item.name)}" alt="${item.name.replace(/"/g, '&quot;')}" onerror="clogIconFallback(this, '${safeChar}')">
                                 </div>`;
                             }).join('')}
                         </div>

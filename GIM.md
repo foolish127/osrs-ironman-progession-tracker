@@ -1,47 +1,30 @@
 # Sailing
 
-## Miscellania - 11 day cycle
+## Miscellania - 4 day teak cycle
 
-Kingdom accrues while subjects are assigned. Tick a box per day; **on day 12 pull
-everything** - all resources *and* the coffer gold - then reset the boxes and set a
-new cycle start.
+**Goal for the cycle: ~1,175 teak logs** (feeds the teak planks in guide row 7 -
+Mahogany Homes + the teak hull). Switched from mahogany 2026-08-19; teak yields
+~301/day at max approval vs mahogany 223. **260 banked, 915 to go.**
 
-**Goal for the cycle: ~1,974 mahogany logs** (feeds the mahogany birdhouses in the
-Hunter 80 push).
-
-**Cycle start:** 2026-08-11 &nbsp;&nbsp;·&nbsp;&nbsp; **Pull on:** Saturday August 22, 2026
+**Cycle start:** 2026-08-19 &nbsp;&nbsp;·&nbsp;&nbsp; **Pull on:** Sunday August 23, 2026
 
 | Day | Date | Done |
 |:---:|---|:---:|
-| 7 | Mon Aug 17 | ☐ |
-| 8 | Tue Aug 18 | ☐ |
-| 9 | Wed Aug 19 | ☐ |
-| 10 | Thu Aug 20 | ☐ |
-| 11 | Fri Aug 21 | ☐ |
-
-## Birdhouses
-
-| Item | Crafting Level | Hunter Level |
-|---|:---:|:---:|
-| Yew | 60 ✅ | 59 ✅ |
-| Magic | 75 ❌ | 74 ❌ |
-| Redwood | 90 ❌ | 89 ❌ |
-
-_Current: Crafting 61, Hunter 65._
+| 1 | Wed Aug 19 | ☐ |
+| 2 | Thu Aug 20 | ☐ |
+| 3 | Fri Aug 21 | ☐ |
+| 4 | Sat Aug 22 | ☐ |
 
 ## Hunter
 
-**Goals**
+**Goals / breakpoints**
 
-| # | Item / step | Skill | Current |
-|:---:|---|:---:|:---:|
-| 1 | **10 rumours** → basic quetzal whistle blueprint | Rumours | 8 |
-| 2 | 25 rumours → cooking recipes for hunter meats | Rumours | 8 |
-| 3 | Large meat pouch: Crafting 65 ❌ (61, +4 mushroom pie) · 3x sunlight antelope fur (Hunter 72 ❌) | Cra / Hun | 61 / 65 |
-| 4 | 50 rumours → enhanced abilities and keys | Rumours | 8 |
-| 5 | Moonlight moths - Hunter 75 ❌ (73 w/ trapper's tipple +2 · 72 w/ hunter potion +3) | Hunter | 65 |
-| 6 | Hunter 80 ❌ via mahogany birdhouses | Hunter | 65 |
-| 7 | 250 rumours → perfected quetzal whistle blueprint | Rumours | 8 |
+| Hunter | Unlock |
+|:---:|---|
+| 60 ✅ | **4 traps** - box + net combined, one shared cap |
+| **72** ❌ | **Moonlight moth** (75, -3 hunter potion) · **Expert rumours** *(not boostable)* · Aco + Teco unlock as givers |
+| 80 ❌ | **5 traps** · herbiboar (Mushroom Forest) |
+| 91 ❌ | **Master rumours** · moonlight antelope |
 
 **Rumours**
 
@@ -49,28 +32,18 @@ Hunter Guild, Civitas illa Fortis. XP per rumour = **(Hunter level + 5) × tier 
 
 | Tier | Hunter | Giver | Modifier | XP / rumour |
 |---|:---:|---|:---:|---:|
-| Novice | 46 ✅ | Huntmaster Gilman | 50 | 3,500 |
-| **Adept** *(current)* | 57 ✅ | Cervus · Ornus | 50 | **3,500** |
+| Novice | 46 ✅ | Huntmaster Gilman | 50 | 3,700 |
+| **Adept** *(current)* | 57 ✅ | Cervus · Ornus | 50 | **3,700** |
 | Expert | 72 ❌ | Aco · Teco | 55 | 4,235 @ 72 |
-| Master | 91 ❌ + At First Light ✅ | Wolf | 60 | 5,760 @ 91 |
-
-**Breakpoints**
-
-| Hunter | Unlock |
-|:---:|---|
-| 60 ✅ | **4 traps** |
-| 69 ❌ | Sunlight antelope (72, -3 hunter potion) |
-| 72 ❌ | Moonlight moth (75, -3 hunter potion) · **Expert rumours** *(not boostable)* |
-| 80 ❌ | **5 traps** · herbiboar (Mushroom Forest) |
-| 91 ❌ | **Master rumours** (+ At First Light) · moonlight antelope |
+| Master | 91 ❌ | Wolf | 60 | 5,760 @ 91 |
 
 **Blocklist** - hold an unwanted rumour at a hunter you're not using so it can't be reassigned.
 
 | Hunter | Tier | Held / blocked |
 |---|:---:|---|
-| Gilman | Novice | Sabre-toothed kebbit ✅ |
-| Cervus | Adept | Grey chinchompas ✅ |
-| Ornus | Adept | *in progress* |
+| Gilman | Novice | *free* |
+| Cervus | Adept | *free* |
+| Ornus | Adept | Sabre-toothed kebbit - blocked, not doing |
 | Aco | Expert | locked - Hunter 72 ❌ |
 | Teco | Expert | locked - Hunter 72 ❌ |
 | Wolf | Master | locked - Hunter 91 ❌ |
@@ -87,9 +60,9 @@ Items from the guide I skipped - go back and do these.
 | 1 | Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3k+ points in one subdue) | Firemaking | 82 |
 | 2 | 70 Cooking ❌ - gates RFD: Freeing King Awowogei, the barrows gloves (Lumb hard) | Cooking | 65 |
 | 3 | Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
-| 4 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 71 |
-| 5 | Farming 76 ❌ (73 boosted): attas seeds + giant seaweed runs | Farming | 71 |
-| 6 | Farming 85 ❌ (82 boosted): celastrus + hard farming contracts | Farming | 71 |
+| 4 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 73 |
+| 5 | Farming 76 ❌ (73 boosted ✅): attas seeds + giant seaweed runs | Farming | 73 |
+| 6 | Farming 85 ❌ (82 boosted): celastrus + hard farming contracts | Farming | 73 |
 | 7 | Chop 1175 teak planks - [guide](https://youtu.be/GA987x97AKQ) | Woodcutting | 76 |
 | ↳ | Get 352 carpenter points via Mahogany Homes -> plank sack -> ~63 Construction | Construction | 51 |
 | ↳ | Build a mahogany eagle lectern - Construction 67 ❌ (boost from 62: crystal saw + porcelain cup) | Construction | 51 |
@@ -125,16 +98,16 @@ Items from the guide I skipped - go back and do these.
 | Construction | 39 | 71 | 51 | 🟢 +12 | 🔴 −20 |
 | Agility | 51 | 98 | 56 | 🟢 +5 | 🔴 −42 |
 | Herblore | 40 | 73 | 60 | 🟢 +20 | 🔴 −13 |
-| Thieving | 77 | 84 | 78 | 🟢 +1 | 🔴 −6 |
+| Thieving | 77 | 84 | 80 | 🟢 +3 | 🔴 −4 |
 | Crafting | 56 | 65 | 61 | 🟢 +5 | 🔴 −4 |
 | Fletching | 48 | 69 | 59 | 🟢 +11 | 🔴 −10 |
 | Slayer | 16 | 59 | 53 | 🟢 +37 | 🔴 −6 |
-| Hunter | 49 | 82 | 65 | 🟢 +16 | 🔴 −17 |
+| Hunter | 49 | 82 | 69 | 🟢 +20 | 🔴 −13 |
 | Smithing | 42 | 74 | 59 | 🟢 +17 | 🔴 −15 |
 | Fishing | 74 | 99 | 75 | 🟢 +1 | 🔴 −24 |
 | Cooking | 60 | 81 | 65 | 🟢 +5 | 🔴 −16 |
 | Firemaking | 89 | 89 | 82 | 🔴 −7 | 🔴 −7 |
-| Farming | 63 | 94 | 71 | 🟢 +8 | 🔴 −23 |
+| Farming | 63 | 94 | 73 | 🟢 +10 | 🔴 −21 |
 
 </details>
 
