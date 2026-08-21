@@ -2,9 +2,9 @@
 
 ## Miscellania - 4 day teak cycle
 
-**Goal for the cycle: ~1,175 teak logs** (feeds the teak planks in guide row 7 -
-Mahogany Homes + the teak hull). Switched from mahogany 2026-08-19; teak yields
-~301/day at max approval vs mahogany 223. **260 banked, 915 to go.**
+**Goal for the cycle: ~1,424 teak logs** (feeds the teak planks in guide row 7 -
+1,024 Mahogany Homes + 400 teak hull; the guide's number was 1,175). Switched from mahogany 2026-08-19; teak yields
+~301/day at max approval vs mahogany 223. **260 banked, 1,164 to go.**
 
 **Cycle start:** 2026-08-19 &nbsp;&nbsp;·&nbsp;&nbsp; **Pull on:** Sunday August 23, 2026
 
@@ -15,14 +15,44 @@ Mahogany Homes + the teak hull). Switched from mahogany 2026-08-19; teak yields
 | 3 | Fri Aug 21 | ☐ |
 | 4 | Sat Aug 22 | ☐ |
 
+## What to work on
+
+<details>
+<summary>Show activities (click to expand)</summary>
+
+**AFK**
+
+| Activity | Trains | Rate / hr | Feeds |
+|---|---|---|---|
+| Barbarian fishing (Otto's Grotto) | Fishing · Agility · Strength · Cooking | 50k Fis · 4.5k Agi · 4.5k Str · ~7.5k Cook (caviar) | Fishing 88 · Agility 65 |
+| **Wealthy citizens (Fortis bazaar)** *(current)* | Thieving | ~70k + ~6k gp | **Thieving 84** (Ch 2, 2 levels) · sawmill gold |
+| Motherlode Mine | Mining | - | coal bag · gem bag · prospector (clears Fal hard task) |
+| Karambwan at sea (raft, S of Musa Point) | Fishing | 50 XP / catch, spot never moves | Fishing 88 · raw karambwan for Cooking 70 |
+
+**Active**
+
+| Activity | Trains | Rate | Feeds |
+|---|---|---|---|
+| Hunter rumours - Expert, work Aco | Hunter | 4,235 / rumour | **Hunter 80** (5 traps) · moonlight moths |
+| Mahogany Homes - adept contracts | Construction | 3,260 XP + 4 pts / contract | **Construction 63** · plank sack @ 350 pts |
+| Blast Furnace - gold w/ goldsmith gauntlets | Smithing | 56.2 XP / bar, ~4,000 bars/hr | **Smithing 70** - 4.00 gp/XP, 8,715 ore from Ordan @225 = 1.96M gp |
+| Giant's Foundry - alloy swords | Smithing | ~135k (medium alloy, ~15 swords/hr) | **Smithing 70** - free XP, but 28 bars/sword and a solo GIM must self-smelt every one |
+| Vale Totems - maple to 65, then yew | Fletching | 106k maple · 203k yew | **Fletching 69** (Ch 2) |
+| Farming runs - attas + giant seaweed | Farming | - | Farming 76 · 85 |
+
+</details>
+
 ## Hunter
+
+<details>
+<summary>Show Hunter section (click to expand)</summary>
 
 **Goals / breakpoints**
 
 | Hunter | Unlock |
 |:---:|---|
 | 60 ✅ | **4 traps** - box + net combined, one shared cap |
-| **72** ❌ | **Moonlight moth** (75, -3 hunter potion) · **Expert rumours** *(not boostable)* · Aco + Teco unlock as givers |
+| **72** ✅ | **Moonlight moth** (75, -3 hunter potion) · **Expert rumours** *(not boostable)* · Aco + Teco unlock as givers |
 | 80 ❌ | **5 traps** · herbiboar (Mushroom Forest) |
 | 91 ❌ | **Master rumours** · moonlight antelope |
 
@@ -32,21 +62,21 @@ Hunter Guild, Civitas illa Fortis. XP per rumour = **(Hunter level + 5) × tier 
 
 | Tier | Hunter | Giver | Modifier | XP / rumour |
 |---|:---:|---|:---:|---:|
-| Novice | 46 ✅ | Huntmaster Gilman | 50 | 3,700 |
-| **Adept** *(current)* | 57 ✅ | Cervus · Ornus | 50 | **3,700** |
-| Expert | 72 ❌ | Aco · Teco | 55 | 4,235 @ 72 |
+| **Expert** *(current)* | 72 ✅ | Aco · Teco | 55 | **4,235** |
 | Master | 91 ❌ | Wolf | 60 | 5,760 @ 91 |
 
 **Blocklist** - hold an unwanted rumour at a hunter you're not using so it can't be reassigned.
 
 | Hunter | Tier | Held / blocked |
 |---|:---:|---|
-| Gilman | Novice | *free* |
-| Cervus | Adept | *free* |
-| Ornus | Adept | Sabre-toothed kebbit - blocked, not doing |
-| Aco | Expert | locked - Hunter 72 ❌ |
-| Teco | Expert | locked - Hunter 72 ❌ |
+| Gilman | Novice | Grey chinchompas ✅ |
+| Cervus | Adept | Sabre-toothed kebbit ✅ |
+| Ornus | Adept | Sabre-toothed kyatt ✅ |
+| Aco | Expert | Sunlight antelope ✅ |
+| Teco | Expert | *free* |
 | Wolf | Master | locked - Hunter 91 ❌ |
+
+</details>
 
 ## BRUH sailer Guide
 
@@ -57,32 +87,27 @@ Items from the guide I skipped - go back and do these.
 
 | # | Item / step | Skill | Current |
 |:---:|---|:---:|:---:|
-| 1 | Wintertodt CA's: Mummy! (heal a fallen pyromancer) and Why Fletch? (3k+ points in one subdue) | Firemaking | 82 |
-| 2 | 70 Cooking ❌ - gates RFD: Freeing King Awowogei, the barrows gloves (Lumb hard) | Cooking | 65 |
-| 3 | Get 5x Sulliuscep caps on Fossil Island for mushroom pies (+4 Crafting) | Woodcutting |  |
-| 4 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 73 |
-| 5 | Farming 76 ❌ (73 boosted ✅): attas seeds + giant seaweed runs | Farming | 73 |
-| 6 | Farming 85 ❌ (82 boosted): celastrus + hard farming contracts | Farming | 73 |
-| 7 | Chop 1175 teak planks - [guide](https://youtu.be/GA987x97AKQ) | Woodcutting | 76 |
-| ↳ | Get 352 carpenter points via Mahogany Homes -> plank sack -> ~63 Construction | Construction | 51 |
-| ↳ | Build a mahogany eagle lectern - Construction 67 ❌ (boost from 62: crystal saw + porcelain cup) | Construction | 51 |
-| ↳ | Make 106 house teleport tabs at the lectern - butler ferries soft clay from the bank | Construction | 51 |
+| 1 | 70 Cooking ❌ - gates RFD: Freeing King Awowogei, the barrows gloves (Lumb hard) | Cooking | 65 |
+| 2 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 75 |
+| 3 | Farming 76 ❌ (73 boosted ✅): attas seeds + giant seaweed runs | Farming | 75 |
+| 4 | Farming 85 ❌ (82 boosted): celastrus + hard farming contracts | Farming | 75 |
+| 5 | Teak planks - **94 left**. 400 for the teak hull - [guide](https://youtu.be/GA987x97AKQ) | Woodcutting | 76 |
 | ↳ | Upgrade to a teak hull (speed 1.5→2) | Sailing | 73 |
-| 8 | Mine sandstone | Mining | 80 |
-| 9 | Do a ton of sea charting | Sailing | 73 |
-| 10 | Swordfish/Marlin rank of Tempor Tantrum Barracuda trial, collect stormy key, barrel stand and whirlpool surprises | Sailing | 73 |
-| 11 | Build a keg and fill it with whirlpool surprises | Sailing | 73 |
-| 12 | Kill Dagannoth Rex for the berserker ring - keep the Fremennik shield if it drops | Combat |  |
-| 13 | Imbue the berserker ring and salve amulet at the PvP arena | Combat |  |
-| 14 | Barbarian fishing to Agility 65 ❌ + Fishing 88 ❌ (CoX) - cut fish for 70 Cooking | Fis / Agi | 75 / 56 |
-| 15 | Slayer 58 ❌ for the black mask (cave horrors) | Slayer | 53 |
-| 16 | MLM for the coal bag, gem bag and prospector helmet | Mining | 80 |
-| 17 | Making Friends with My Arm - Agility 68 ❌ (56) | Agility | 56 |
-| 18 | Fire of Nourishment: 200 basalt + 1,550 Efh / 1,500 Urt / 1,800 Te salt for the fires and 2 eternal braziers. Make 100 Stony + 100 Icy basalt in the mine | Mining | 80 |
-| 19 | Optional: Fire of Dehumidification + Fire of Unseasonal Warmth (350 Efh, 150 Te, 400 Urt salt) | Mining | 80 |
-| 20 | Barb fish to 99 Fishing at CoX, or manually train Agility to 72 at Seers' agility course | Fis / Agi | 75 / 56 |
-| 21 | Defender of Varrock - reqs met ✅, holding until the zombie axe drops | Smithing | 59 |
-| 22 | Slayer 70 ❌: unlocks Mortimer | Slayer | 53 |
+| 6 | Mine sandstone | Mining | 80 |
+| 7 | Do a ton of sea charting | Sailing | 73 |
+| 8 | Swordfish/Marlin rank of Tempor Tantrum Barracuda trial, collect stormy key, barrel stand and whirlpool surprises | Sailing | 73 |
+| 9 | Build a keg and fill it with whirlpool surprises | Sailing | 73 |
+| 10 | Kill Dagannoth Rex for the berserker ring - keep the Fremennik shield if it drops | Combat |  |
+| 11 | Imbue the berserker ring and salve amulet at the PvP arena | Combat |  |
+| 12 | Barbarian fishing to Agility 65 ❌ + Fishing 88 ❌ (CoX) - cut fish for 70 Cooking | Fis / Agi | 75 / 56 |
+| 13 | Slayer 58 ❌ for the black mask (cave horrors) | Slayer | 53 |
+| 14 | MLM for the coal bag, gem bag and prospector helmet | Mining | 80 |
+| 15 | Making Friends with My Arm - Agility 68 ❌ (56) | Agility | 56 |
+| 16 | Fire of Nourishment: 200 basalt + 1,550 Efh / 1,500 Urt / 1,800 Te salt for the fires and 2 eternal braziers. Make 100 Stony + 100 Icy basalt in the mine | Mining | 80 |
+| 17 | Optional: Fire of Dehumidification + Fire of Unseasonal Warmth (350 Efh, 150 Te, 400 Urt salt) | Mining | 80 |
+| 18 | Barb fish to 99 Fishing at CoX, or manually train Agility to 72 at Seers' agility course | Fis / Agi | 75 / 56 |
+| 19 | Defender of Varrock - reqs met ✅, holding until the zombie axe drops | Smithing | 59 |
+| 20 | Slayer 70 ❌: unlocks Mortimer | Slayer | 53 |
 
 </details>
 
@@ -93,21 +118,20 @@ Items from the guide I skipped - go back and do these.
 
 | Skill | Ch 1 | Ch 2 | Mine | vs Ch 1 | vs Ch 2 |
 |---|:---:|:---:|:---:|:---:|:---:|
-| Prayer | 43 | 70 | 53 | 🟢 +10 | 🔴 −17 |
+| Prayer | 43 | 70 | 54 | 🟢 +11 | 🔴 −16 |
 | Magic | 63 | 89 | 78 | 🟢 +15 | 🔴 −11 |
-| Construction | 39 | 71 | 51 | 🟢 +12 | 🔴 −20 |
+| Construction | 39 | 71 | 62 | 🟢 +23 | 🔴 −9 |
 | Agility | 51 | 98 | 56 | 🟢 +5 | 🔴 −42 |
 | Herblore | 40 | 73 | 60 | 🟢 +20 | 🔴 −13 |
-| Thieving | 77 | 84 | 80 | 🟢 +3 | 🔴 −4 |
-| Crafting | 56 | 65 | 61 | 🟢 +5 | 🔴 −4 |
+| Thieving | 77 | 84 | 82 | 🟢 +5 | 🔴 −2 |
 | Fletching | 48 | 69 | 59 | 🟢 +11 | 🔴 −10 |
 | Slayer | 16 | 59 | 53 | 🟢 +37 | 🔴 −6 |
-| Hunter | 49 | 82 | 69 | 🟢 +20 | 🔴 −13 |
+| Hunter | 49 | 82 | 72 | 🟢 +23 | 🔴 −10 |
 | Smithing | 42 | 74 | 59 | 🟢 +17 | 🔴 −15 |
 | Fishing | 74 | 99 | 75 | 🟢 +1 | 🔴 −24 |
 | Cooking | 60 | 81 | 65 | 🟢 +5 | 🔴 −16 |
 | Firemaking | 89 | 89 | 82 | 🔴 −7 | 🔴 −7 |
-| Farming | 63 | 94 | 73 | 🟢 +10 | 🔴 −21 |
+| Farming | 63 | 94 | 75 | 🟢 +12 | 🔴 −19 |
 
 </details>
 
@@ -117,11 +141,12 @@ Items from the guide I skipped - go back and do these.
 | Skill | Ch 1 | Ch 2 | Mine | vs Ch 1 | vs Ch 2 |
 |---|:---:|:---:|:---:|:---:|:---:|
 | Attack | 46 | 62 | 80 | 🟢 +34 | 🟢 +18 |
+| Crafting | 56 | 65 | 65 | 🟢 +9 | 🟢 +0 |
 | Strength | 50 | 77 | 79 | 🟢 +29 | 🟢 +2 |
 | Defence | 34 | 70 | 78 | 🟢 +44 | 🟢 +8 |
 | Hitpoints | 39 | 64 | 80 | 🟢 +41 | 🟢 +16 |
 | Ranged | 45 | 62 | 73 | 🟢 +28 | 🟢 +11 |
-| Runecraft | 24 | 40 | 53 | 🟢 +29 | 🟢 +13 |
+| Runecraft | 24 | 40 | 54 | 🟢 +30 | 🟢 +14 |
 | Mining | 44 | 73 | 80 | 🟢 +36 | 🟢 +7 |
 | Woodcutting | 70 | 73 | 76 | 🟢 +6 | 🟢 +3 |
 | Sailing | 1 | 67 | 73 | 🟢 +72 | 🟢 +6 |
@@ -147,7 +172,6 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 
 | Blocker | Current | Target | Gap | XP needed |
 |---|:---:|:---:|:---:|:---:|
-| Construction | 51 | 59 | ❌ +8 | 128,532 |
 | Smithing | 59 | 70 | ❌ +11 | 488,385 |
 
 **Materials to build:** 3 camphor planks · 6 adamantite bars
@@ -166,9 +190,8 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 
 | Quest | Reward | Prereq to start |
 |---|---|---|
-| RFD: Freeing the Mountain Dwarf | 1,000 Slayer | Cook's Assistant ✅ + Fishing Contest ✅ |
 | Defender of Varrock | 15k Smithing · 15k Hunter | All met ✅ - **holding until the zombie axe drops** |
-| The Red Reef | 5,000 Smithing | Smithing 48 ✅ · Troubled Tortugans ✅ |
+| The Red Reef | 15k Sailing · 5k Smithing | Sailing 52 ✅ · Smithing 48 ✅ · Troubled Tortugans ✅ · Pandemonium ✅. Ship combat: cannons **or** Mage/Range gear · 300+ hp of repair kits (teak+) · Prayer 40 ✅ for Protect from Missiles |
 
 **🔒 Capstones - do once that skill is already near its target:**
 
@@ -182,9 +205,9 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 - **Cabin Fever** (7k Smi, Smithing 50 ✅ + Rum Deal) · **Devious Minds** (6.5k Smi, Smithing 65 + Runecraft 50) · **The General's Shadow** (2k Slayer, Desert Treasure I line)
 
 **Realistic quest XP toward each grind - what's still unclaimed:**
-- **Smithing** - Defender of Varrock (15k, holding for the zombie axe) · The Red Reef (5k); rest = Blast Furnace
+- **Smithing** - Defender of Varrock (15k, holding for the zombie axe) · The Red Reef (5k, + 15k Sailing); rest = Blast Furnace
 - **Construction** - nothing accessible; all = Mahogany Homes
-- **Slayer** - RFD: Freeing the Mountain Dwarf (1k) · The Path of Glouphrie (20k, Slayer 56); rest = tasks
+- **Slayer** - The Path of Glouphrie (20k, Slayer 56); rest = tasks
 - **Hunter** - Defender of Varrock (15k); rest = birdhouses / rumours
 
 </details>
@@ -205,13 +228,13 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 | Hull | Wooden *(default)* | Upgrade for speed |
 | Keel | Bronze *(default)* |  |
 | Mast & sails | Mahogany (canvas sails) |  |
-| Helm | Bronze *(default)* | Adamant helm (Sailing 72) required to unlock Mercenary shipwreck @ 73 - still blocked by Con 59 · Smithing 70 |
+| Helm | Bronze *(default)* | Adamant helm (Sailing 72) required to unlock Mercenary shipwreck @ 73 - blocked by Smithing 70 (Con 59 ✅) |
 | Salvaging hook | Mithril ×2 | Both Sloop slots filled |
 | Cargo hold | Mahogany | Sloop capacity 120 |
 | Salvaging station | Built |  |
 | Inoculation station | Built |  |
 | Teleport focus | Built |  |
-| Shipwreck | Mercenary shipwreck ❌ *(next unlock)* | Blocked - needs adamant helm (Con 59 · Smithing 70). Southern hazardous waters |
+| Shipwreck | Mercenary shipwreck ❌ *(next unlock)* | Blocked - needs adamant helm (Smithing 70; Con 59 ✅). Southern hazardous waters |
 
 ---
 
@@ -221,13 +244,13 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 |:---:|---|:---:|---|
 | 31 ✅ | Teak hull: speed 1.5→2 | 23 ✅ | 16 large teak hull parts (400 teak planks) · 600 steel nails · 25 swamp tar · 5 lead bars |
 | 48 ✅ | Mahogany hull: speed 1.5→2 | 41 ✅ | 16 large mahogany hull parts (400 mahogany planks) · 600 mithril nails · 25 swamp tar · 5 lead bars |
-| 59 ✅ | Adamant salvaging hook | 52 ❌ | 4 camphor planks · 16 adamantite nails · 6 adamantite bars · 3 lead bars · 1 rope |
-| 60 ✅ | Camphor cargo hold (Sloop 160) | 53 ❌ | 8 camphor planks · 32 adamantite nails · 3 lead bars |
+| 59 ✅ | Adamant salvaging hook | 52 ✅ | 4 camphor planks · 16 adamantite nails · 6 adamantite bars · 3 lead bars · 1 rope |
+| 60 ✅ | Camphor cargo hold (Sloop 160) | 53 ✅ | 8 camphor planks · 32 adamantite nails · 3 lead bars |
 | 60 ✅ | Crew: Cabin Boy Jenkins (Crandor) |  | Dragon Slayer I ✅ · Ghostspeak amulet / Morytania legs 2 |
 | 65 ✅ | Crew: Oarswoman Olga (Burgh de Rott) |  | In Aid of the Myreque ✅ |
 | 67 ✅ | Camphor hull: speed 2→2.5 | 59 ❌ | 16 large camphor hull parts · 600 adamantite nails · 25 swamp tar · 5 lead bars (~911k gp) |
-| 72 ✅ | Adamant helm (ship fitting): unlocks Southern hazardous waters | 59 ❌ (51) | Con 59 ❌ (51) · 3 camphor planks (Great Conch camphor trees · WC 66 ✅ · sawmill 2.5k ea) · 6 adamantite bars (Smithing 70 ❌ · 59) |
-| 73 ✅ | Mercenary shipwreck ❌ - Sailing 73 ✅ but blocked by the adamant helm (Con 59 · Smithing 70) to reach tangled kelp |  |  |
+| 72 ✅ | Adamant helm (ship fitting): unlocks Southern hazardous waters | 59 ✅ | Con 59 ✅ · 3 camphor planks (Great Conch camphor trees · WC 66 ✅ · sawmill 2.5k ea) · 6 adamantite bars (Smithing 70 ❌ · 59) |
+| 73 ✅ | Mercenary shipwreck ❌ - Sailing 73 ✅ but blocked by the adamant helm (Smithing 70) to reach tangled kelp |  |  |
 <details>
 <summary><strong>Late-game milestones (Sailing 74+)</strong>, collapsed (click to expand)</summary>
 
@@ -251,7 +274,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 
 ### Progress to 80 (Fremennik shipwreck)
 
-Sailing **73** ✅, but the **Mercenary shipwreck is not yet accessible** - it needs the **adamant helm** ship fitting, still blocked by **Construction 59** (51), **Smithing 70** (59, for the 6 adamantite bars). Once the helm is built, **martial salvage** runs at 201.5 xp ea in the Southern hazardous waters.
+Sailing **73** ✅, but the **Mercenary shipwreck is not yet accessible** - it needs the **adamant helm** ship fitting, now blocked only by **Smithing 70** (59, for the 6 adamantite bars). Once the helm is built, **martial salvage** runs at 201.5 xp ea in the Southern hazardous waters.
 
 ```
 73 [░░░░░░░░░░░░░░░░░░░░] 80    0%

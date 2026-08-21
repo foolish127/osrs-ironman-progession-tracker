@@ -201,6 +201,7 @@
 | 10 | Slayer | 4 Jul 2026 |
 | 11 | Mining | 20 Jul 2026 |
 | 12 | Firemaking | 7 Aug 2026 |
+| 13 | Thieving | 21 Aug 2026 |
 
 ---
 
@@ -211,10 +212,9 @@ Rates there assume 99 + full skilling outfits, so expect less in practice.
 
 | Skill | Longest AFK | Highest XP | XP to 99 |
 |---|---|---|---:|
-| Thieving | Wealthy citizen · **1:32** · 57.6k | Summer garden · 0:36 · **150k** | 5,838,802 |
 | Smithing | One-bar items · **1:07** · **65k** | *same* | 9,413,922 |
 | Fletching | Bolt tips · 1:21 · 8.4k | Unstrung bows · 0:32 · **247k** | 6,788,101 |
-| Fishing | Dark crab · **7:32** · 40k | Barb fishing · 1:57 · **57k** | 7,274,205 |
+| Fishing | Anglerfish at sea (sloop, Gulf of Kourend) · spot never moves · 120 XP/catch on sandworms | | 7,274,205 |
 | Agility | POH agility · **10:00** · 12k *(needs Con 88)* | *nothing better* | 10,825,513 |
 
 **No trade-off needed:**
@@ -223,8 +223,6 @@ Rates there assume 99 + full skilling outfits, so expect less in practice.
 
 **Real trade-offs:**
 
-- **Fishing.** Dark crab is ~4x the idle time of barb fishing for 70% of the rate (182 hrs vs 128). Wins on XP-per-attention if actually away.
-- **Thieving.** Garden is 39 hrs to 99, wealthy citizen 101. The Desert elite gate (91) is cleared, so this is pure maxing now.
 - **Fletching.** Redwood shields (0:47 · 193k) need **92** - one level away. Battlestaves (0:49 · 143k) until then.
 
 **Agility - tabled.** POH agility is the longest AFK on the page (10:00) but only 12k XP/hr, so ~900 hrs to 99, and it needs Construction 88 (currently 84). Revisit if Construction gets there; otherwise rooftops or Sepulchre.
