@@ -1,6 +1,6 @@
 {
   "rsn": "GIM Foolin",
-  "updated": "2026-08-19T06:42:52.446468+00:00",
+  "updated": "2026-08-21T06:47:04.653727+00:00",
   "collection_log": {
     "collections": {
       "Dagannoth Kings": {
@@ -182,6 +182,18 @@
         "missing": [],
         "obtained_count": 2,
         "total_count": 2
+      },
+      "Mahogany Homes": {
+        "obtained": [
+          {
+            "name": "Plank sack",
+            "date": "2026-08-21",
+            "quantity": 1
+          }
+        ],
+        "missing": [],
+        "obtained_count": 1,
+        "total_count": 1
       },
       "Rogues Den": {
         "obtained": [
@@ -571,9 +583,14 @@
         "total_count": 7
       }
     },
-    "total_obtained": 70,
+    "total_obtained": 71,
     "total_items": 1712,
     "recent_items": [
+      {
+        "name": "Plank sack",
+        "date": "2026-08-21",
+        "collection": "mahogany_homes"
+      },
       {
         "name": "Sunfire splinters",
         "date": "2026-08-19",
@@ -668,11 +685,6 @@
         "name": "Iasor seed",
         "date": "2026-08-11",
         "collection": "hespori"
-      },
-      {
-        "name": "Mime mask",
-        "date": "2026-08-09",
-        "collection": "random_events"
       }
     ],
     "source": "templeosrs"
