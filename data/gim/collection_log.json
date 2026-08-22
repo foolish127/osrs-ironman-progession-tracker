@@ -1,6 +1,6 @@
 {
   "rsn": "GIM Foolin",
-  "updated": "2026-08-21T06:47:04.653727+00:00",
+  "updated": "2026-08-22T01:14:36.103411+00:00",
   "collection_log": {
     "collections": {
       "Dagannoth Kings": {
@@ -20,7 +20,7 @@
           {
             "name": "Sunfire splinters",
             "date": "2026-08-19",
-            "quantity": 3
+            "quantity": 12
           }
         ],
         "missing": [],
@@ -32,7 +32,7 @@
           {
             "name": "Granite dust",
             "date": "2026-08-14",
-            "quantity": 29
+            "quantity": 383
           }
         ],
         "missing": [],
@@ -44,17 +44,17 @@
           {
             "name": "Iasor seed",
             "date": "2026-08-11",
-            "quantity": 2
+            "quantity": 7
           },
           {
             "name": "Kronos seed",
             "date": "2026-08-16",
-            "quantity": 2
+            "quantity": 3
           },
           {
             "name": "Attas seed",
             "date": "2026-08-12",
-            "quantity": 2
+            "quantity": 3
           }
         ],
         "missing": [],
@@ -66,7 +66,19 @@
           {
             "name": "Granite dust",
             "date": "2026-08-14",
-            "quantity": 29
+            "quantity": 383
+          }
+        ],
+        "missing": [],
+        "obtained_count": 1,
+        "total_count": 1
+      },
+      "Moons Of Peril": {
+        "obtained": [
+          {
+            "name": "Atlatl dart",
+            "date": "2026-08-21",
+            "quantity": 111
           }
         ],
         "missing": [],
@@ -83,7 +95,7 @@
           {
             "name": "Spirit flakes",
             "date": "2026-08-04",
-            "quantity": 39
+            "quantity": 877
           }
         ],
         "missing": [],
@@ -171,7 +183,7 @@
           {
             "name": "Abyssal pearls",
             "date": "2026-08-14",
-            "quantity": 14
+            "quantity": 92
           },
           {
             "name": "Catalytic talisman",
@@ -182,6 +194,18 @@
         "missing": [],
         "obtained_count": 2,
         "total_count": 2
+      },
+      "Magic Training Arena": {
+        "obtained": [
+          {
+            "name": "Bones to peaches",
+            "date": "2026-08-21",
+            "quantity": 1
+          }
+        ],
+        "missing": [],
+        "obtained_count": 1,
+        "total_count": 1
       },
       "Mahogany Homes": {
         "obtained": [
@@ -230,14 +254,24 @@
       "Vale Totems": {
         "obtained": [
           {
+            "name": "Fletching knife",
+            "date": "2026-08-21",
+            "quantity": 1
+          },
+          {
+            "name": "Bow string spool",
+            "date": "2026-08-21",
+            "quantity": 1
+          },
+          {
             "name": "Ent branch",
             "date": "2026-08-16",
-            "quantity": 1
+            "quantity": 6
           }
         ],
         "missing": [],
-        "obtained_count": 1,
-        "total_count": 1
+        "obtained_count": 3,
+        "total_count": 3
       },
       "Aerial Fishing": {
         "obtained": [
@@ -570,7 +604,7 @@
           {
             "name": "Hespori seed",
             "date": "2026-07-26",
-            "quantity": 1
+            "quantity": 9
           },
           {
             "name": "Fresh crab claw",
@@ -583,13 +617,33 @@
         "total_count": 7
       }
     },
-    "total_obtained": 71,
+    "total_obtained": 75,
     "total_items": 1712,
     "recent_items": [
+      {
+        "name": "Atlatl dart",
+        "date": "2026-08-21",
+        "collection": "moons_of_peril"
+      },
+      {
+        "name": "Bones to peaches",
+        "date": "2026-08-21",
+        "collection": "magic_training_arena"
+      },
       {
         "name": "Plank sack",
         "date": "2026-08-21",
         "collection": "mahogany_homes"
+      },
+      {
+        "name": "Fletching knife",
+        "date": "2026-08-21",
+        "collection": "vale_totems"
+      },
+      {
+        "name": "Bow string spool",
+        "date": "2026-08-21",
+        "collection": "vale_totems"
       },
       {
         "name": "Sunfire splinters",
@@ -665,26 +719,6 @@
         "name": "Rune defender",
         "date": "2026-08-14",
         "collection": "cyclopes"
-      },
-      {
-        "name": "Dragon defender",
-        "date": "2026-08-14",
-        "collection": "cyclopes"
-      },
-      {
-        "name": "Long bone",
-        "date": "2026-08-14",
-        "collection": "miscellaneous"
-      },
-      {
-        "name": "Attas seed",
-        "date": "2026-08-12",
-        "collection": "hespori"
-      },
-      {
-        "name": "Iasor seed",
-        "date": "2026-08-11",
-        "collection": "hespori"
       }
     ],
     "source": "templeosrs"
