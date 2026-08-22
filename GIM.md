@@ -32,8 +32,6 @@
 | Activity | Trains | Rate | Feeds |
 |---|---|---|---|
 | Hunter rumours - Expert, work Aco | Hunter | 4,235 / rumour | **Hunter 80** (5 traps) · moonlight moths |
-| Blast Furnace - gold w/ goldsmith gauntlets | Smithing | 56.2 XP / bar, ~4,000 bars/hr | **Smithing 70** - 4.00 gp/XP, 8,715 ore from Ordan @225 = 1.96M gp |
-| Giant's Foundry - alloy swords | Smithing | ~135k (medium alloy, ~15 swords/hr) | **Smithing 70** - free XP, but 28 bars/sword and a solo GIM must self-smelt every one |
 | Vale Totems - maple to 65, then yew | Fletching | 106k maple · 203k yew | **Fletching 69** (Ch 2) |
 | Farming runs - attas + giant seaweed | Farming | - | Farming 76 · 85 |
 
@@ -130,6 +128,12 @@ Items from the guide I skipped - go back and do these.
 | Firemaking | 89 | 89 | 82 | 🔴 −7 | 🔴 −7 |
 | Farming | 63 | 94 | 75 | 🟢 +12 | 🔴 −19 |
 
+**Bridging the gaps** - red gaps only, ordered by biggest deficit vs the guide.
+
+| # | Skill | Now → Target | Gap | How to bridge |
+|:---:|---|:---:|:---:|---|
+| 0 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
+
 </details>
 
 <details>
@@ -149,14 +153,6 @@ Items from the guide I skipped - go back and do these.
 | Sailing | 1 | 67 | 73 | 🟢 +72 | 🟢 +6 |
 
 </details>
-
-### Bridging the gaps (priority order)
-
-Red gaps only, ordered by biggest deficit vs the guide.
-
-| # | Skill | Now → Target | Gap | How to bridge |
-|:---:|---|:---:|:---:|---|
-| 0 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
 
 ---
 
@@ -198,53 +194,6 @@ Blast Furnace gold.
 
 </details>
 
-## To-do - Adamant helm (unlocks Mercenary wreck)
-
-<details>
-<summary>Show details (click to expand)</summary>
-
-Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern hazardous waters).
-**All levels met** - Sailing 72 ✅ · Construction 59 ✅ · Smithing 70 ✅. Just build it.
-
-**Materials to build:** 3 camphor planks (Great Conch · sawmill 7.5k) · 6 adamantite bars
-(mine 6 adamantite ore + 18 coal from Ordan, smelt at the Blast Furnace)
-
-**Plan:**
-- **Construction** → Mahogany Homes (+ some quests)
-- **Smithing** → Giant's Foundry (+ some quests)
-
-### Quest plan (validated vs current stats)
-
-**Reality check:** most XP quests are gated behind the very skills you're training, so they're **supplements, not shortcuts**. The training methods (Mahogany Homes / Giant's Foundry / slayer tasks / Hunter Rumours) do the heavy lifting. Grouped by what's actually accessible:
-
-**✅ Do now - free XP, no training:**
-
-| Quest | Reward | Prereq to start |
-|---|---|---|
-| Defender of Varrock | 15k Smithing · 15k Hunter | All met ✅ - **holding until the zombie axe drops** |
-| The Red Reef | 15k Sailing · 5k Smithing | Sailing 52 ✅ · Smithing 48 ✅ · Troubled Tortugans ✅ · Pandemonium ✅. Ship combat: cannons **or** Mage/Range gear · 300+ hp of repair kits (teak+) · Prayer 40 ✅ for Protect from Missiles |
-
-**🔒 Capstones - do once that skill is already near its target:**
-
-| Quest | Reward | Gate |
-|---|---|---|
-| The Path of Glouphrie | 20,000 Slayer | Slayer 56, Thieving 56, Agility 45 |
-
-**❌ Skip for now - deep chains / far-off reqs:**
-- **Dragon Slayer II** (80k Smithing) - 6 skills short, 200 QP, ~19-quest chain
-- **Making Friends with My Arm** (10k Con) - Agility 68 (Swan Song ✅)
-- **Cabin Fever** (7k Smi, Smithing 50 ✅ + Rum Deal) · **Devious Minds** (6.5k Smi, Smithing 65 + Runecraft 50) · **The General's Shadow** (2k Slayer, Desert Treasure I line)
-
-**Realistic quest XP toward each grind - what's still unclaimed:**
-- **Smithing** - Defender of Varrock (15k, holding for the zombie axe) · The Red Reef (5k, + 15k Sailing); rest = Blast Furnace
-- **Construction** - nothing accessible; all = Mahogany Homes
-- **Slayer** - The Path of Glouphrie (20k, Slayer 56); rest = tasks
-- **Hunter** - Defender of Varrock (15k); rest = birdhouses / rumours
-
-</details>
-
----
-
 ## Sailing details
 
 <details>
@@ -255,7 +204,7 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 | Facility | Current | Note |
 |---|---|---|
 | Ship | Sloop | 2 salvaging hook slots + crew |
-| Crew | Ada + Jobless Jim + Jittery Jim + Ex-Captain Siad + Oarswoman Olga |  |
+| Crew | Ada + Jobless Jim + Jittery Jim + Ex-Captain Siad + Oarswoman Olga + Cabin Boy Jenkins |  |
 | Hull | Wooden *(default)* | Upgrade for speed |
 | Keel | Bronze *(default)* |  |
 | Mast & sails | Mahogany (canvas sails) |  |
@@ -275,7 +224,6 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 |:---:|---|:---:|---|
 | 31 ✅ | Teak hull: speed 1.5→2 | 23 ✅ | 16 large teak hull parts (400 teak planks) · 600 steel nails · 25 swamp tar · 5 lead bars |
 | 48 ✅ | Mahogany hull: speed 1.5→2 | 41 ✅ | 16 large mahogany hull parts (400 mahogany planks) · 600 mithril nails · 25 swamp tar · 5 lead bars |
-| 60 ✅ | Crew: Cabin Boy Jenkins (Crandor) |  |  |
 | 67 ✅ | Camphor hull: speed 2→2.5 | 59 ✅ | 16 large camphor hull parts · 600 adamantite nails (**Smithing 74**) · 25 swamp tar · 5 lead bars (~911k gp) |
 <details>
 <summary><strong>Late-game milestones (Sailing 74+)</strong>, collapsed (click to expand)</summary>
@@ -300,8 +248,6 @@ Adamant helm ship fitting → unlocks the **Mercenary shipwreck** (Southern haza
 
 ### Progress to 80 (Fremennik shipwreck)
 
-Sailing **73** ✅. The **adamant helm** is now unlocked on every requirement - build it and the **Mercenary shipwreck** opens, with **martial salvage** at 201.5 xp ea in the Southern hazardous waters.
-
 ```
 73 [░░░░░░░░░░░░░░░░░░░░] 80    0%
 ```
@@ -311,8 +257,6 @@ Sailing **73** ✅. The **adamant helm** is now unlocked on every requirement - 
 ---
 
 ### Alching martial salvage drops (mercenary, Sailing 73)
-
-*Planning for once the adamant helm is built and Mercenary is accessible - not yet active.*
 
 Martial salvage = 201.5 XP each (138 loot + 63.5 sort). Worth a nat (net after −180). Est. qty over Sailing 73 → 87 (~11,244 martial salvages):
 
