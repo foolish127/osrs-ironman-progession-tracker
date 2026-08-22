@@ -1,6 +1,6 @@
 {
   "rsn": "GIM Foolin",
-  "updated": "2026-08-22T01:14:36.103411+00:00",
+  "updated": "2026-08-22T05:04:04.419271+00:00",
   "collection_log": {
     "collections": {
       "Dagannoth Kings": {
@@ -177,6 +177,18 @@
         "missing": [],
         "obtained_count": 4,
         "total_count": 4
+      },
+      "Giants Foundry": {
+        "obtained": [
+          {
+            "name": "Kovac's grog",
+            "date": "2026-08-22",
+            "quantity": 1
+          }
+        ],
+        "missing": [],
+        "obtained_count": 1,
+        "total_count": 1
       },
       "Guardians Of The Rift": {
         "obtained": [
@@ -617,9 +629,14 @@
         "total_count": 7
       }
     },
-    "total_obtained": 75,
+    "total_obtained": 76,
     "total_items": 1712,
     "recent_items": [
+      {
+        "name": "Kovac's grog",
+        "date": "2026-08-22",
+        "collection": "giants_foundry"
+      },
       {
         "name": "Atlatl dart",
         "date": "2026-08-21",
@@ -712,11 +729,6 @@
       },
       {
         "name": "Adamant defender",
-        "date": "2026-08-14",
-        "collection": "cyclopes"
-      },
-      {
-        "name": "Rune defender",
         "date": "2026-08-14",
         "collection": "cyclopes"
       }
