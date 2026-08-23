@@ -1,18 +1,5 @@
 # Sailing
 
-## Miscellania - 4 day teak cycle
-
-**Goal for the cycle: ~1,424 teak logs** (feeds the teak planks in guide row 5 -
-1,024 Mahogany Homes + 400 teak hull; the guide's number was 1,175). Switched from mahogany 2026-08-19; teak yields
-~301/day at max approval vs mahogany 223. **260 banked, 1,164 to go.**
-
-**Cycle start:** 2026-08-19 &nbsp;&nbsp;·&nbsp;&nbsp; **Pull on:** Sunday August 23, 2026
-
-| Day | Date | Done |
-|:---:|---|:---:|
-| 3 | Fri Aug 21 | ☐ |
-| 4 | Sat Aug 22 | ☐ |
-
 ## What to work on
 
 <details>
@@ -57,7 +44,7 @@ Hunter Guild, Civitas illa Fortis. XP per rumour = **(Hunter level + 5) × tier 
 
 | Tier | Hunter | Giver | Modifier | XP / rumour |
 |---|:---:|---|:---:|---:|
-| **Expert** *(current)* | 72 ✅ | Aco · Teco | 55 | **4,235** |
+| **Expert** *(current)* | 72 ✅ | Aco · Teco | 55 | **4,290** |
 | Master | 91 ❌ | Wolf | 60 | 5,760 @ 91 |
 
 **Blocklist** - hold an unwanted rumour at a hunter you're not using so it can't be reassigned.
@@ -86,23 +73,20 @@ Items from the guide I skipped - go back and do these.
 | 2 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 75 |
 | 3 | Farming 76 ❌ (73 boosted ✅): attas seeds + giant seaweed runs | Farming | 75 |
 | 4 | Farming 85 ❌ (82 boosted): celastrus + hard farming contracts | Farming | 75 |
-| 5 | Teak planks - **94 left**. 400 for the teak hull - [guide](https://youtu.be/GA987x97AKQ) | Woodcutting | 76 |
-| ↳ | Upgrade to a teak hull (speed 1.5→2) | Sailing | 73 |
-| 6 | Mine sandstone | Mining | 80 |
-| 7 | Do a ton of sea charting | Sailing | 73 |
-| 8 | Swordfish/Marlin rank of Tempor Tantrum Barracuda trial, collect stormy key, barrel stand and whirlpool surprises | Sailing | 73 |
-| 9 | Build a keg and fill it with whirlpool surprises | Sailing | 73 |
-| 10 | Kill Dagannoth Rex for the berserker ring - keep the Fremennik shield if it drops | Combat |  |
-| 11 | Imbue the berserker ring and salve amulet at the PvP arena | Combat |  |
-| 12 | Barbarian fishing to Agility 65 ❌ + Fishing 88 ❌ (CoX) - cut fish for 70 Cooking | Fis / Agi | 75 / 56 |
-| 13 | Slayer 58 ❌ for the black mask (cave horrors) | Slayer | 53 |
-| 14 | MLM for the coal bag, gem bag and prospector helmet | Mining | 80 |
-| 15 | Making Friends with My Arm - Agility 68 ❌ (56) | Agility | 56 |
-| 16 | Fire of Nourishment: 200 basalt + 1,550 Efh / 1,500 Urt / 1,800 Te salt for the fires and 2 eternal braziers. Make 100 Stony + 100 Icy basalt in the mine | Mining | 80 |
-| 17 | Optional: Fire of Dehumidification + Fire of Unseasonal Warmth (350 Efh, 150 Te, 400 Urt salt) | Mining | 80 |
-| 18 | Barb fish to 99 Fishing at CoX, or manually train Agility to 72 at Seers' agility course | Fis / Agi | 75 / 56 |
-| 19 | Defender of Varrock - reqs met ✅, holding until the zombie axe drops | Smithing | 70 |
-| 20 | Slayer 70 ❌: unlocks Mortimer | Slayer | 53 |
+| 5 | Mine sandstone | Mining | 80 |
+| 6 | Do a ton of sea charting | Sailing | 74 |
+| 7 | Swordfish/Marlin rank of Tempor Tantrum Barracuda trial, collect stormy key, barrel stand and whirlpool surprises | Sailing | 74 |
+| 8 | Build a keg and fill it with whirlpool surprises | Sailing | 74 |
+| 9 | Kill Dagannoth Rex for the berserker ring - keep the Fremennik shield if it drops | Combat |  |
+| 10 | Imbue the berserker ring and salve amulet at the PvP arena | Combat |  |
+| 11 | Barbarian fishing to Agility 65 ❌ + Fishing 88 ❌ (CoX) - cut fish for 70 Cooking | Fis / Agi | 75 / 56 |
+| 12 | Slayer 58 ❌ for the black mask (cave horrors) | Slayer | 53 |
+| 13 | MLM for the coal bag, gem bag and prospector helmet | Mining | 80 |
+| 14 | Making Friends with My Arm - Agility 68 ❌ (56) | Agility | 56 |
+| 15 | Fire of Nourishment: 200 basalt + 1,550 Efh / 1,500 Urt / 1,800 Te salt for the fires and 2 eternal braziers. Make 100 Stony + 100 Icy basalt in the mine | Mining | 80 |
+| 16 | Optional: Fire of Dehumidification + Fire of Unseasonal Warmth (350 Efh, 150 Te, 400 Urt salt) | Mining | 80 |
+| 17 | Barb fish to 99 Fishing at CoX, or manually train Agility to 72 at Seers' agility course | Fis / Agi | 75 / 56 |
+| 18 | Slayer 70 ❌: unlocks Mortimer | Slayer | 53 |
 
 </details>
 
@@ -114,14 +98,14 @@ Items from the guide I skipped - go back and do these.
 | Skill | Ch 1 | Ch 2 | Mine | vs Ch 1 | vs Ch 2 |
 |---|:---:|:---:|:---:|:---:|:---:|
 | Prayer | 43 | 70 | 54 | 🟢 +11 | 🔴 −16 |
-| Magic | 63 | 89 | 78 | 🟢 +15 | 🔴 −11 |
-| Construction | 39 | 71 | 62 | 🟢 +23 | 🔴 −9 |
+| Magic | 63 | 89 | 79 | 🟢 +16 | 🔴 −10 |
+| Construction | 39 | 71 | 63 | 🟢 +24 | 🔴 −8 |
 | Agility | 51 | 98 | 56 | 🟢 +5 | 🔴 −42 |
-| Herblore | 40 | 73 | 60 | 🟢 +20 | 🔴 −13 |
+| Herblore | 40 | 73 | 61 | 🟢 +21 | 🔴 −12 |
 | Thieving | 77 | 84 | 82 | 🟢 +5 | 🔴 −2 |
 | Fletching | 48 | 69 | 59 | 🟢 +11 | 🔴 −10 |
 | Slayer | 16 | 59 | 53 | 🟢 +37 | 🔴 −6 |
-| Hunter | 49 | 82 | 72 | 🟢 +23 | 🔴 −10 |
+| Hunter | 49 | 82 | 73 | 🟢 +24 | 🔴 −9 |
 | Smithing | 42 | 74 | 70 | 🟢 +28 | 🔴 −4 |
 | Fishing | 74 | 99 | 75 | 🟢 +1 | 🔴 −24 |
 | Cooking | 60 | 81 | 65 | 🟢 +5 | 🔴 −16 |
@@ -150,7 +134,7 @@ Items from the guide I skipped - go back and do these.
 | Runecraft | 24 | 40 | 54 | 🟢 +30 | 🟢 +14 |
 | Mining | 44 | 73 | 80 | 🟢 +36 | 🟢 +7 |
 | Woodcutting | 70 | 73 | 76 | 🟢 +6 | 🟢 +3 |
-| Sailing | 1 | 67 | 73 | 🟢 +72 | 🟢 +6 |
+| Sailing | 1 | 67 | 74 | 🟢 +73 | 🟢 +7 |
 
 </details>
 
@@ -205,7 +189,7 @@ Blast Furnace gold.
 |---|---|---|
 | Ship | Sloop | 2 salvaging hook slots + crew |
 | Crew | Ada + Jobless Jim + Jittery Jim + Ex-Captain Siad + Oarswoman Olga + Cabin Boy Jenkins |  |
-| Hull | Wooden *(default)* | Upgrade for speed |
+| Hull | **Mahogany** | Speed 2 · 100 HP · 40 defence |
 | Keel | Bronze *(default)* |  |
 | Mast & sails | Mahogany (canvas sails) |  |
 | Helm | **Adamant** | Unlocks Southern hazardous waters · Mercenary shipwreck |
@@ -222,18 +206,16 @@ Blast Furnace gold.
 
 | Sailing | Unlock | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Con&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Materials |
 |:---:|---|:---:|---|
-| 31 ✅ | Teak hull: speed 1.5→2 | 23 ✅ | 16 large teak hull parts (400 teak planks) · 600 steel nails · 25 swamp tar · 5 lead bars |
-| 48 ✅ | Mahogany hull: speed 1.5→2 | 41 ✅ | 16 large mahogany hull parts (400 mahogany planks) · 600 mithril nails · 25 swamp tar · 5 lead bars |
 | 67 ✅ | Camphor hull: speed 2→2.5 | 59 ✅ | 16 large camphor hull parts · 600 adamantite nails (**Smithing 74**) · 25 swamp tar · 5 lead bars (~911k gp) |
-<details>
-<summary><strong>Late-game milestones (Sailing 74+)</strong>, collapsed (click to expand)</summary>
-
-| Sailing | Unlock | Con | Materials |
-|:---:|---|:---:|---|
-| 74 ❌ | Rune salvaging hook | 66 ❌ | 4 ironwood planks · 16 rune nails · 6 runite bars · 4 lead bars · 4 cupronickel bars · 1 rope |
+| 74 ✅ | Rune salvaging hook | 66 ❌ | 4 ironwood planks · 16 rune nails · 6 runite bars · 4 lead bars · 4 cupronickel bars · 1 rope |
 | 78 ❌ | Eternal brazier (ship fitting): unlocks Northern Ocean; schematic on Buccaneers' Haven (dock at 76) | 72 ❌ | 4 ironwood planks · 16 rune nails · 6 runite bars · 6 cupronickel bars · 250 te + 250 efh + 250 urt salt |
 | 80 ❌ | Fremennik shipwreck · Ironwood cargo hold (Sloop 210), Fremennik needs eternal brazier | 77 ❌ | Hold: 8 ironwood planks · 32 rune nails · 3 cupronickel bars |
 | 80 ❌ | Crew: Bosun Zarah (Etceteria) |  | Royal Trouble ✅ · Hard Fremennik Diary ❌ |
+<details>
+<summary><strong>Late-game milestones (Sailing 85+)</strong>, collapsed (click to expand)</summary>
+
+| Sailing | Unlock | Con | Materials |
+|:---:|---|:---:|---|
 | 85 ❌ | Crew: Jolly Jim (Brimhaven) |  | None ✅ |
 | 86 ❌ | Dragon salvaging hook | 78 ❌ | 4 rosewood planks · 16 dragon nails · 6 dragon metal sheets · 1 broken dragon hook · 4 cupronickel bars · 1 rope |
 | 87 ❌ | Merchant shipwreck, Dusk's Maw; needs adamant helm (S) / eternal brazier (N) |  |  |
@@ -249,10 +231,10 @@ Blast Furnace gold.
 ### Progress to 80 (Fremennik shipwreck)
 
 ```
-73 [░░░░░░░░░░░░░░░░░░░░] 80    0%
+74 [██░░░░░░░░░░░░░░░░░░] 80   10%
 ```
 
-**Just hit 73** (994,365 / 1,986,068 xp). **991,703 xp left** ≈ **~4,920 martial salvages** (~201.5 xp ea, *once the adamant helm unlocks Mercenary*). Next salvage unlock = **Mercenary** (build the adamant helm first), then the **Fremennik shipwreck (80)**, which needs the **eternal brazier** ship fitting (78, unlocks the Northern Ocean - schematic on Buccaneers' Haven, dock at 76). Build the brazier on the way.
+**Sailing 74** (1,096,278 / 1,986,068 xp). **889,790 xp left** ≈ **~4,416 martial salvages** (~201.5 xp ea). Next salvage unlock = the **Fremennik shipwreck (80)**, which needs the **eternal brazier** ship fitting (78, unlocks the Northern Ocean - schematic on Buccaneers' Haven, dock at 76). Build the brazier on the way.
 
 ---
 

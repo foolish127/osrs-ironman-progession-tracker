@@ -205,6 +205,35 @@
 
 ---
 
+## Ladlors - gear to pursue
+
+<details>
+<summary>Show gear list (click to expand)</summary>
+
+| Item | Source | Got |
+|---|---|:---:|
+| Fighter torso | Barbarian Assault | ☐ |
+| Hallowed crystal shard | Hallowed Sepulchre | ☐ |
+| Spirit tree | Construction | ☐ |
+| Mage's book | Mage Arena | ☐ |
+| Bloodbark body | ? | ☐ |
+| Bloodbark helm | ? | ☐ |
+| Bloodbark legs | ? | ☐ |
+| Warped sceptre | Slayer | ☐ |
+| Greater challenge | Slayer | ☐ |
+| Zamorakian hasta | K'ril | ☐ |
+| Bandos godsword | Graardor | ☐ |
+| Voidwaker | PvP | ☐ |
+| Lightbearer | ToA | ☐ |
+| Ghommal's hilt 4 | Combat Achievements | ☐ |
+| Rite of vile transferrence | Yama | ☐ |
+| Desert amulet 4 | Diary | ☐ |
+| Eye of ayak | Doom | ☐ |
+| Toxic blowpipe | Zulrah | ☐ |
+| Osmumten's fang | ToA | ☐ |
+
+</details>
+
 ## AFK skilling methods
 
 Skills I care about AFKing, from the wiki's [AFK Skilling Methods](https://oldschool.runescape.wiki/w/Guide:AFK_Skilling_Methods) guide.
