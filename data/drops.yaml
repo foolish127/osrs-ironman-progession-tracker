@@ -899,6 +899,7 @@ drops:
     item: Hydra's eye
     date: 3/24/2026
     droprate: 181
+    notes: 1st ring piece, 118 kc
 
   - boss: Alchemical Hydra
     kc: 175
@@ -907,10 +908,11 @@ drops:
     droprate: 256
 
   - boss: Alchemical Hydra
-    kc: 203
+    kc: 85
     item: Hydra's fang
     date: 3/26/2026
     droprate: 181
+    notes: 2nd ring piece, 85 kc after eye (203 total)
 
   - boss: Corrupted Gauntlet
     kc: 819
@@ -1184,10 +1186,11 @@ drops:
     notes: Pet
 
   - boss: Alchemical Hydra
-    kc: 582
+    kc: 379
     item: Hydra's heart
     date: 7/3/2026
-    droprate: 180
+    droprate: 181
+    notes: 3rd ring piece, 379 kc after fang - full ring at 582 kc vs ~543 expected
 
   - boss: Cerberus
     kc: 948
