@@ -487,12 +487,6 @@ drops:
     date: 12/6/2025
     droprate: 200
 
-  - boss: Frost Dragon
-    kc: 50
-    item: Dragon Metal Sheet
-    date: 
-    droprate: 100
-
   - boss: Pyramid Plunder
     kc: 10
     item: Pharaoh's Sceptre
@@ -719,7 +713,7 @@ drops:
   - boss: Araxytes
     kc: 1712
     item: Aranea boots
-    date:
+    date: 6/20/2026
     droprate: 800
 
   - boss: Guardians of the Rift
@@ -880,6 +874,7 @@ drops:
     item: Noxious point
     date: 3/19/2026
     droprate: 200
+    notes: 1st piece, 266 kc
 
   - boss: Araxxor
     kc: 356
@@ -980,10 +975,11 @@ drops:
     notes: 2nd drop
 
   - boss: Araxxor
-    kc: 527
+    kc: 261
     item: Noxious blade
     date: 5/11/2026
     droprate: 200
+    notes: 2nd piece, 261 kc after point (527 total)
 
   - boss: Giant Mole
     kc: 21
@@ -1041,10 +1037,11 @@ drops:
     notes: 8th drop
 
   - boss: Araxxor
-    kc: 803
+    kc: 276
     item: Noxious pommel
     date: 5/23/2026
     droprate: 200
+    notes: 3rd piece, 276 kc after blade - full halberd at 803 kc vs 600 expected
 
   - boss: Dagganoth Rex
     kc: 35
