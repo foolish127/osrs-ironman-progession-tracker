@@ -9,12 +9,14 @@ drops:
     item: Pyromancer garb
     date: 5/26/2026
     droprate: 150
+    notes: 1st piece, 71 kc
 
   - boss: Wintertodt
-    kc: 215
+    kc: 144
     item: Pyromancer hood
     date: 5/27/2026
     droprate: 150
+    notes: 2nd piece, 144 kc after garb (215 total)
 
   - boss: Wintertodt
     kc: 288
@@ -23,10 +25,11 @@ drops:
     droprate: 10000
 
   - boss: Wintertodt
-    kc: 320
+    kc: 105
     item: Pyromancer robe
     date: 5/29/2026
     droprate: 150
+    notes: 3rd piece, 105 kc after hood (320 total)
 
   - boss: Mining
     item: Rock golem
