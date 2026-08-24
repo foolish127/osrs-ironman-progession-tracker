@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-08-10T07:41:56.721594+00:00",
+  "updated": "2026-08-24T01:18:44.939924+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -4114,6 +4114,11 @@
             "quantity": 307
           },
           {
+            "name": "Broken antler",
+            "date": "2026-08-23",
+            "quantity": 1
+          },
+          {
             "name": "Dragon metal sheet",
             "date": "2025-12-07",
             "quantity": 22
@@ -4127,6 +4132,16 @@
             "name": "Gryphon feather",
             "date": "2025-12-11",
             "quantity": 250
+          },
+          {
+            "name": "Venator tooth",
+            "date": "2026-08-23",
+            "quantity": 16
+          },
+          {
+            "name": "Venator fang",
+            "date": "2026-08-23",
+            "quantity": 13
           }
         ],
         "missing": [
@@ -4138,7 +4153,6 @@
           "Ancient ceremonial top",
           "Antler guard",
           "Brine sabre",
-          "Broken antler",
           "Broken dragon hasta",
           "Cockatrice head",
           "Crawling hand (item)",
@@ -4171,8 +4185,8 @@
           "Warped sceptre (uncharged)",
           "Wyvern visage"
         ],
-        "obtained_count": 41,
-        "total_count": 81
+        "obtained_count": 44,
+        "total_count": 83
       },
       "Tormented Demons": {
         "obtained": [
@@ -5664,9 +5678,24 @@
         "total_count": 1
       }
     },
-    "total_obtained": 569,
-    "total_items": 1745,
+    "total_obtained": 572,
+    "total_items": 1747,
     "recent_items": [
+      {
+        "name": "Broken antler",
+        "date": "2026-08-23",
+        "collection": "slayer"
+      },
+      {
+        "name": "Venator tooth",
+        "date": "2026-08-23",
+        "collection": "slayer"
+      },
+      {
+        "name": "Venator fang",
+        "date": "2026-08-23",
+        "collection": "slayer"
+      },
       {
         "name": "Hallowfell",
         "date": "2026-08-03",
@@ -5751,21 +5780,6 @@
         "name": "Hydra tail",
         "date": "2026-06-25",
         "collection": "alchemical_hydra"
-      },
-      {
-        "name": "Dragon knife",
-        "date": "2026-06-25",
-        "collection": "alchemical_hydra"
-      },
-      {
-        "name": "Jar of chemicals",
-        "date": "2026-06-24",
-        "collection": "alchemical_hydra"
-      },
-      {
-        "name": "Basilisk jaw",
-        "date": "2026-06-23",
-        "collection": "slayer"
       }
     ],
     "source": "templeosrs"
