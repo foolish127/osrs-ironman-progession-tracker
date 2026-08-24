@@ -81,6 +81,19 @@
 <details>
 <summary><strong>Task tables &amp; goals (Duradel &amp; Konar)</strong> — click to expand</summary>
 
+**Mortimer tasks completed: 6**
+
+| Tasks | Unlock | |
+|:---:|---|:---:|
+| 15 | Clue Scroll Modifier | ❌ |
+| 25 | Superior Drop Rate Modifier | ❌ |
+| 40 | Slayer XP Modifier | ❌ |
+| 50 | Third task choice | ❌ |
+
+**Costs to know:** task skip is **100 points** (30 elsewhere), and he has only **2 block slots
+at 120 points each** (others give 6-7). Tasks can't be swapped via Turael.
+
+
 **Current slayer goals:** roll a Hydra task → kill **Alchemical Hydra** for the **Hydra claw** (→ Dragon hunter lance).
 
 **Then unblock Greater Demons** (Kalphites takes its block slot) and keep that task - use Greater Demon assignments for **Skotizo**, and eventually **K'ril Tsutsaroth** once **Lightbearer** (ToA) is unlocked.
@@ -210,6 +223,8 @@
 <details>
 <summary>Show gear list (click to expand)</summary>
 
+Ref: [ladlorchart.com](https://ladlorchart.com/) - current as of at least **v1.9**
+
 | Item | Source | Got |
 |---|---|:---:|
 | Fighter torso | Barbarian Assault | ☐ |
@@ -220,17 +235,39 @@
 | Bloodbark helm | ? | ☐ |
 | Bloodbark legs | ? | ☐ |
 | Warped sceptre | Slayer | ☐ |
-| Greater challenge | Slayer | ☐ |
 | Zamorakian hasta | K'ril | ☐ |
 | Bandos godsword | Graardor | ☐ |
 | Voidwaker | PvP | ☐ |
+| Necklace of rupture | ? | ☐ |
 | Lightbearer | ToA | ☐ |
-| Ghommal's hilt 4 | Combat Achievements | ☐ |
 | Rite of vile transferrence | Yama | ☐ |
 | Desert amulet 4 | Diary | ☐ |
 | Eye of ayak | Doom | ☐ |
 | Toxic blowpipe | Zulrah | ☐ |
 | Osmumten's fang | ToA | ☐ |
+| Ghommal's hilt 4 | Combat Achievements | ☐ |
+| Rigour | Chambers of Xeric | ☐ |
+| Augury | Chambers of Xeric | ☐ |
+| Infernal cape | Inferno | ☐ |
+| Oathplate helm | Yama | ☐ |
+| Oathplate chest | Yama | ☐ |
+| Oathplate legs | Yama | ☐ |
+| Ultor ring | Vardorvis (Ultor vestige) | ☐ |
+| Dizana's quiver | Fortis Colosseum | ☐ |
+| Avernic defender | Theatre of Blood | ☐ |
+| Scythe of vitur | Theatre of Blood | ☐ |
+| Tumeken's shadow | Tombs of Amascut | ☐ |
+| Magus ring | Duke Sucellus (Magus vestige) | ☐ |
+| Twisted bow | Chambers of Xeric | ☐ |
+| Ancestral hat | Chambers of Xeric | ☐ |
+| Ancestral robe top | Chambers of Xeric | ☐ |
+| Ancestral robe bottom | Chambers of Xeric | ☐ |
+| Dragon claws | Chambers of Xeric | ☐ |
+| Elder maul | Chambers of Xeric | ☐ |
+| Masori mask (f) | Tombs of Amascut + armadyl plate | ☐ |
+| Masori body (f) | Tombs of Amascut + armadyl plate | ☐ |
+| Masori chaps (f) | Tombs of Amascut + armadyl plate | ☐ |
+| Elidinis' ward | Tombs of Amascut | ☐ |
 
 </details>
 

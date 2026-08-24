@@ -20,9 +20,91 @@
 |---|---|---|---|
 | Hunter rumours - Expert, work Aco | Hunter | 4,235 / rumour | **Hunter 80** (5 traps) · moonlight moths |
 | Vale Totems - maple to 65, then yew | Fletching | 106k maple · 203k yew | **Fletching 69** (Ch 2) |
-| Farming runs - attas + giant seaweed | Farming | - | Farming 76 · 85 |
+| Farming runs - herbs · **attas** · **giant seaweed** | Farming | - | Farming 85 (82 boosted) · celastrus |
 
 </details>
+
+## BRUH sailer Guide
+
+<details>
+<summary>Show guide steps (click to expand)</summary>
+
+Items from the guide I skipped - go back and do these.
+
+| # | Item / step | Skill | Current |
+|:---:|---|:---:|:---:|
+| 1 | 70 Cooking ❌ - gates RFD: Freeing King Awowogei, the barrows gloves (Lumb hard) | Cooking | 65 |
+| 2 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 76 |
+| 3 | Farming 85 ❌ (82 boosted): celastrus + hard farming contracts | Farming | 76 |
+| 4 | Mine sandstone | Mining | 81 |
+| 5 | Do a ton of sea charting | Sailing | 74 |
+| 6 | Swordfish/Marlin rank of Tempor Tantrum Barracuda trial, collect stormy key, barrel stand and whirlpool surprises | Sailing | 74 |
+| 7 | Build a keg and fill it with whirlpool surprises | Sailing | 74 |
+| 8 | Kill Dagannoth Rex for the berserker ring - keep the Fremennik shield if it drops | Combat |  |
+| 9 | Imbue the berserker ring and salve amulet at the PvP arena | Combat |  |
+| 10 | Barbarian fishing to Agility 65 ❌ + Fishing 88 ❌ (CoX) - cut fish for 70 Cooking | Fis / Agi | 75 / 56 |
+| 11 | Slayer 58 ❌ for the black mask (cave horrors) | Slayer | 53 |
+| 12 | MLM - 240 golden nuggets left. Skip the super hopper (50) | Mining | 81 |
+| ↳ | Prospector helmet - **40** · also clears the Falador hard mining guild task | Mining | 81 |
+| ↳ | Coal bag - **100** | Mining | 81 |
+| ↳ | Gem bag - **100** | Mining | 81 |
+| 13 | Making Friends with My Arm - Agility 68 ❌ (56) | Agility | 56 |
+| 14 | Fire of Nourishment: 200 basalt + 1,550 Efh / 1,500 Urt / 1,800 Te salt for the fires and 2 eternal braziers. Make 100 Stony + 100 Icy basalt in the mine | Mining | 81 |
+| 15 | Optional: Fire of Dehumidification + Fire of Unseasonal Warmth (350 Efh, 150 Te, 400 Urt salt) | Mining | 81 |
+| 16 | Barb fish to 99 Fishing at CoX, or manually train Agility to 72 at Seers' agility course | Fis / Agi | 75 / 56 |
+| 17 | Slayer 70 ❌: unlocks Mortimer | Slayer | 53 |
+
+</details>
+
+### End of Chapter - stat check
+
+<details>
+<summary>Show stat comparison (click to expand)</summary>
+
+| Skill | Ch 1 | Ch 2 | Mine | vs Ch 1 | vs Ch 2 |
+|---|:---:|:---:|:---:|:---:|:---:|
+| Prayer | 43 | 70 | 54 | 🟢 +11 | 🔴 −16 |
+| Magic | 63 | 89 | 79 | 🟢 +16 | 🔴 −10 |
+| Construction | 39 | 71 | 63 | 🟢 +24 | 🔴 −8 |
+| Agility | 51 | 98 | 56 | 🟢 +5 | 🔴 −42 |
+| Herblore | 40 | 73 | 61 | 🟢 +21 | 🔴 −12 |
+| Thieving | 77 | 84 | 82 | 🟢 +5 | 🔴 −2 |
+| Fletching | 48 | 69 | 59 | 🟢 +11 | 🔴 −10 |
+| Slayer | 16 | 59 | 53 | 🟢 +37 | 🔴 −6 |
+| Hunter | 49 | 82 | 73 | 🟢 +24 | 🔴 −9 |
+| Smithing | 42 | 74 | 70 | 🟢 +28 | 🔴 −4 |
+| Fishing | 74 | 99 | 75 | 🟢 +1 | 🔴 −24 |
+| Cooking | 60 | 81 | 65 | 🟢 +5 | 🔴 −16 |
+| Firemaking | 89 | 89 | 82 | 🔴 −7 | 🔴 −7 |
+| Farming | 63 | 94 | 76 | 🟢 +13 | 🔴 −18 |
+
+**Bridging the gaps** - red gaps only, ordered by biggest deficit vs the guide.
+
+| # | Skill | Now → Target | Gap | How to bridge |
+|:---:|---|:---:|:---:|---|
+| 0 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
+
+</details>
+
+<details>
+<summary>Show skills that have met both chapters (click to expand)</summary>
+
+| Skill | Ch 1 | Ch 2 | Mine | vs Ch 1 | vs Ch 2 |
+|---|:---:|:---:|:---:|:---:|:---:|
+| Attack | 46 | 62 | 80 | 🟢 +34 | 🟢 +18 |
+| Crafting | 56 | 65 | 65 | 🟢 +9 | 🟢 +0 |
+| Strength | 50 | 77 | 80 | 🟢 +30 | 🟢 +3 |
+| Defence | 34 | 70 | 79 | 🟢 +45 | 🟢 +9 |
+| Hitpoints | 39 | 64 | 81 | 🟢 +42 | 🟢 +17 |
+| Ranged | 45 | 62 | 73 | 🟢 +28 | 🟢 +11 |
+| Runecraft | 24 | 40 | 54 | 🟢 +30 | 🟢 +14 |
+| Mining | 44 | 73 | 81 | 🟢 +37 | 🟢 +8 |
+| Woodcutting | 70 | 73 | 76 | 🟢 +6 | 🟢 +3 |
+| Sailing | 1 | 67 | 74 | 🟢 +73 | 🟢 +7 |
+
+</details>
+
+---
 
 ## Hunter
 
@@ -59,86 +141,6 @@ Hunter Guild, Civitas illa Fortis. XP per rumour = **(Hunter level + 5) × tier 
 | Wolf | Master | locked - Hunter 91 ❌ |
 
 </details>
-
-## BRUH sailer Guide
-
-<details>
-<summary>Show guide steps (click to expand)</summary>
-
-Items from the guide I skipped - go back and do these.
-
-| # | Item / step | Skill | Current |
-|:---:|---|:---:|:---:|
-| 1 | 70 Cooking ❌ - gates RFD: Freeing King Awowogei, the barrows gloves (Lumb hard) | Cooking | 65 |
-| 2 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 75 |
-| 3 | Farming 76 ❌ (73 boosted ✅): attas seeds + giant seaweed runs | Farming | 75 |
-| 4 | Farming 85 ❌ (82 boosted): celastrus + hard farming contracts | Farming | 75 |
-| 5 | Mine sandstone | Mining | 80 |
-| 6 | Do a ton of sea charting | Sailing | 74 |
-| 7 | Swordfish/Marlin rank of Tempor Tantrum Barracuda trial, collect stormy key, barrel stand and whirlpool surprises | Sailing | 74 |
-| 8 | Build a keg and fill it with whirlpool surprises | Sailing | 74 |
-| 9 | Kill Dagannoth Rex for the berserker ring - keep the Fremennik shield if it drops | Combat |  |
-| 10 | Imbue the berserker ring and salve amulet at the PvP arena | Combat |  |
-| 11 | Barbarian fishing to Agility 65 ❌ + Fishing 88 ❌ (CoX) - cut fish for 70 Cooking | Fis / Agi | 75 / 56 |
-| 12 | Slayer 58 ❌ for the black mask (cave horrors) | Slayer | 53 |
-| 13 | MLM for the coal bag, gem bag and prospector helmet | Mining | 80 |
-| 14 | Making Friends with My Arm - Agility 68 ❌ (56) | Agility | 56 |
-| 15 | Fire of Nourishment: 200 basalt + 1,550 Efh / 1,500 Urt / 1,800 Te salt for the fires and 2 eternal braziers. Make 100 Stony + 100 Icy basalt in the mine | Mining | 80 |
-| 16 | Optional: Fire of Dehumidification + Fire of Unseasonal Warmth (350 Efh, 150 Te, 400 Urt salt) | Mining | 80 |
-| 17 | Barb fish to 99 Fishing at CoX, or manually train Agility to 72 at Seers' agility course | Fis / Agi | 75 / 56 |
-| 18 | Slayer 70 ❌: unlocks Mortimer | Slayer | 53 |
-
-</details>
-
-### End of Chapter - stat check
-
-<details>
-<summary>Show stat comparison (click to expand)</summary>
-
-| Skill | Ch 1 | Ch 2 | Mine | vs Ch 1 | vs Ch 2 |
-|---|:---:|:---:|:---:|:---:|:---:|
-| Prayer | 43 | 70 | 54 | 🟢 +11 | 🔴 −16 |
-| Magic | 63 | 89 | 79 | 🟢 +16 | 🔴 −10 |
-| Construction | 39 | 71 | 63 | 🟢 +24 | 🔴 −8 |
-| Agility | 51 | 98 | 56 | 🟢 +5 | 🔴 −42 |
-| Herblore | 40 | 73 | 61 | 🟢 +21 | 🔴 −12 |
-| Thieving | 77 | 84 | 82 | 🟢 +5 | 🔴 −2 |
-| Fletching | 48 | 69 | 59 | 🟢 +11 | 🔴 −10 |
-| Slayer | 16 | 59 | 53 | 🟢 +37 | 🔴 −6 |
-| Hunter | 49 | 82 | 73 | 🟢 +24 | 🔴 −9 |
-| Smithing | 42 | 74 | 70 | 🟢 +28 | 🔴 −4 |
-| Fishing | 74 | 99 | 75 | 🟢 +1 | 🔴 −24 |
-| Cooking | 60 | 81 | 65 | 🟢 +5 | 🔴 −16 |
-| Firemaking | 89 | 89 | 82 | 🔴 −7 | 🔴 −7 |
-| Farming | 63 | 94 | 75 | 🟢 +12 | 🔴 −19 |
-
-**Bridging the gaps** - red gaps only, ordered by biggest deficit vs the guide.
-
-| # | Skill | Now → Target | Gap | How to bridge |
-|:---:|---|:---:|:---:|---|
-| 0 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
-
-</details>
-
-<details>
-<summary>Show skills that have met both chapters (click to expand)</summary>
-
-| Skill | Ch 1 | Ch 2 | Mine | vs Ch 1 | vs Ch 2 |
-|---|:---:|:---:|:---:|:---:|:---:|
-| Attack | 46 | 62 | 80 | 🟢 +34 | 🟢 +18 |
-| Crafting | 56 | 65 | 65 | 🟢 +9 | 🟢 +0 |
-| Strength | 50 | 77 | 80 | 🟢 +30 | 🟢 +3 |
-| Defence | 34 | 70 | 79 | 🟢 +45 | 🟢 +9 |
-| Hitpoints | 39 | 64 | 81 | 🟢 +42 | 🟢 +17 |
-| Ranged | 45 | 62 | 73 | 🟢 +28 | 🟢 +11 |
-| Runecraft | 24 | 40 | 54 | 🟢 +30 | 🟢 +14 |
-| Mining | 44 | 73 | 80 | 🟢 +36 | 🟢 +7 |
-| Woodcutting | 70 | 73 | 76 | 🟢 +6 | 🟢 +3 |
-| Sailing | 1 | 67 | 74 | 🟢 +73 | 🟢 +7 |
-
-</details>
-
----
 
 ## Smithing - Giants' Foundry
 
