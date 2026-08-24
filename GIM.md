@@ -36,7 +36,7 @@ Items from the guide I skipped - go back and do these.
 | 1 | 70 Cooking ❌ - gates RFD: Freeing King Awowogei, the barrows gloves (Lumb hard) | Cooking | 65 |
 | 2 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 76 |
 | 3 | Farming 85 ❌ (82 boosted): celastrus + hard farming contracts | Farming | 76 |
-| 4 | Mine sandstone | Mining | 81 |
+| 4 | Mine sandstone | Mining | 82 |
 | 5 | Do a ton of sea charting | Sailing | 74 |
 | 6 | Swordfish/Marlin rank of Tempor Tantrum Barracuda trial, collect stormy key, barrel stand and whirlpool surprises | Sailing | 74 |
 | 7 | Build a keg and fill it with whirlpool surprises | Sailing | 74 |
@@ -44,13 +44,13 @@ Items from the guide I skipped - go back and do these.
 | 9 | Imbue the berserker ring and salve amulet at the PvP arena | Combat |  |
 | 10 | Barbarian fishing to Agility 65 ❌ + Fishing 88 ❌ (CoX) - cut fish for 70 Cooking | Fis / Agi | 75 / 56 |
 | 11 | Slayer 58 ❌ for the black mask (cave horrors) | Slayer | 53 |
-| 12 | MLM - 240 golden nuggets left. Skip the super hopper (50) | Mining | 81 |
-| ↳ | Prospector helmet - **40** · also clears the Falador hard mining guild task | Mining | 81 |
-| ↳ | Coal bag - **100** | Mining | 81 |
-| ↳ | Gem bag - **100** | Mining | 81 |
+| 12 | MLM - 240 golden nuggets left. Skip the super hopper (50) | Mining | 82 |
+| ↳ | Prospector helmet - **40** · also clears the Falador hard mining guild task | Mining | 82 |
+| ↳ | Coal bag - **100** | Mining | 82 |
+| ↳ | Gem bag - **100** | Mining | 82 |
 | 13 | Making Friends with My Arm - Agility 68 ❌ (56) | Agility | 56 |
-| 14 | Fire of Nourishment: 200 basalt + 1,550 Efh / 1,500 Urt / 1,800 Te salt for the fires and 2 eternal braziers. Make 100 Stony + 100 Icy basalt in the mine | Mining | 81 |
-| 15 | Optional: Fire of Dehumidification + Fire of Unseasonal Warmth (350 Efh, 150 Te, 400 Urt salt) | Mining | 81 |
+| 14 | Fire of Nourishment: 200 basalt + 1,550 Efh / 1,500 Urt / 1,800 Te salt for the fires and 2 eternal braziers. Make 100 Stony + 100 Icy basalt in the mine | Mining | 82 |
+| 15 | Optional: Fire of Dehumidification + Fire of Unseasonal Warmth (350 Efh, 150 Te, 400 Urt salt) | Mining | 82 |
 | 16 | Barb fish to 99 Fishing at CoX, or manually train Agility to 72 at Seers' agility course | Fis / Agi | 75 / 56 |
 | 17 | Slayer 70 ❌: unlocks Mortimer | Slayer | 53 |
 
@@ -98,7 +98,7 @@ Items from the guide I skipped - go back and do these.
 | Hitpoints | 39 | 64 | 81 | 🟢 +42 | 🟢 +17 |
 | Ranged | 45 | 62 | 73 | 🟢 +28 | 🟢 +11 |
 | Runecraft | 24 | 40 | 54 | 🟢 +30 | 🟢 +14 |
-| Mining | 44 | 73 | 81 | 🟢 +37 | 🟢 +8 |
+| Mining | 44 | 73 | 82 | 🟢 +38 | 🟢 +9 |
 | Woodcutting | 70 | 73 | 76 | 🟢 +6 | 🟢 +3 |
 | Sailing | 1 | 67 | 74 | 🟢 +73 | 🟢 +7 |
 

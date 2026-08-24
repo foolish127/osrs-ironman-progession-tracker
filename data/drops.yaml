@@ -1305,24 +1305,28 @@ drops:
     item: Angler boots
     date: 8/14/2025
     droprate: 12
+    notes: 1st piece, 16 trips
 
   - boss: Fishing Trawler
-    kc: 18
+    kc: 2
     item: Angler waders
     date: 8/14/2025
     droprate: 12
+    notes: 2nd piece, 2 trips after boots (18 total)
 
   - boss: Fishing Trawler
-    kc: 35
+    kc: 17
     item: Angler top
     date: 8/14/2025
     droprate: 12
+    notes: 3rd piece, 17 trips after waders (35 total)
 
   - boss: Fishing Trawler
-    kc: 46
+    kc: 11
     item: Angler hat
     date: 8/14/2025
     droprate: 12
+    notes: 4th piece, 11 trips after top - full outfit at 46 trips vs 48 expected
 
   - boss: The Mad Angel
     kc: 138

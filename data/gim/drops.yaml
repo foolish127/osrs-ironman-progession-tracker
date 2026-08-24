@@ -49,24 +49,28 @@ drops:
     item: Angler boots
     date: 7/20/2026
     droprate: 12
+    notes: 1st piece, 1 trip
 
   - boss: Fishing Trawler
-    kc: 16
+    kc: 15
     item: Angler top
     date: 7/23/2026
     droprate: 12
+    notes: 2nd piece, 15 trips after boots (16 total)
 
   - boss: Fishing Trawler
-    kc: 36
+    kc: 20
     item: Angler hat
     date: 7/23/2026
     droprate: 12
+    notes: 3rd piece, 20 trips after top (36 total)
 
   - boss: Fishing Trawler
-    kc: 60
+    kc: 24
     item: Angler waders
     date: 7/23/2026
     droprate: 12
+    notes: 4th piece, 24 trips after hat - full outfit at 60 trips vs 48 expected
 
   - boss: Rogues' Den
     kc: 2
