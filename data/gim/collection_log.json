@@ -1,6 +1,6 @@
 {
   "rsn": "GIM Foolin",
-  "updated": "2026-08-23T04:54:18.127409+00:00",
+  "updated": "2026-08-26T01:19:36.969674+00:00",
   "collection_log": {
     "collections": {
       "Dagannoth Kings": {
@@ -285,6 +285,18 @@
         "obtained_count": 3,
         "total_count": 3
       },
+      "Volcanic Mine": {
+        "obtained": [
+          {
+            "name": "Prospector helmet",
+            "date": "2026-08-25",
+            "quantity": 1
+          }
+        ],
+        "missing": [],
+        "obtained_count": 1,
+        "total_count": 1
+      },
       "Aerial Fishing": {
         "obtained": [
           {
@@ -428,6 +440,28 @@
         "missing": [],
         "obtained_count": 1,
         "total_count": 1
+      },
+      "Motherlode Mine": {
+        "obtained": [
+          {
+            "name": "Coal bag",
+            "date": "2026-08-25",
+            "quantity": 1
+          },
+          {
+            "name": "Gem bag",
+            "date": "2026-08-25",
+            "quantity": 1
+          },
+          {
+            "name": "Prospector helmet",
+            "date": "2026-08-25",
+            "quantity": 1
+          }
+        ],
+        "missing": [],
+        "obtained_count": 3,
+        "total_count": 3
       },
       "Random Events": {
         "obtained": [
@@ -639,9 +673,24 @@
         "total_count": 8
       }
     },
-    "total_obtained": 78,
+    "total_obtained": 81,
     "total_items": 1712,
     "recent_items": [
+      {
+        "name": "Prospector helmet",
+        "date": "2026-08-25",
+        "collection": "volcanic_mine"
+      },
+      {
+        "name": "Coal bag",
+        "date": "2026-08-25",
+        "collection": "motherlode_mine"
+      },
+      {
+        "name": "Gem bag",
+        "date": "2026-08-25",
+        "collection": "motherlode_mine"
+      },
       {
         "name": "Broken zombie axe",
         "date": "2026-08-23",
@@ -724,21 +773,6 @@
       },
       {
         "name": "Bronze defender",
-        "date": "2026-08-14",
-        "collection": "cyclopes"
-      },
-      {
-        "name": "Iron defender",
-        "date": "2026-08-14",
-        "collection": "cyclopes"
-      },
-      {
-        "name": "Steel defender",
-        "date": "2026-08-14",
-        "collection": "cyclopes"
-      },
-      {
-        "name": "Black defender",
         "date": "2026-08-14",
         "collection": "cyclopes"
       }
