@@ -11,7 +11,6 @@
 |---|---|---|---|
 | Barbarian fishing (Otto's Grotto) | Fishing · Agility · Strength · Cooking | 50k Fis · 4.5k Agi · 4.5k Str · ~7.5k Cook (caviar) | Fishing 88 · Agility 65 |
 | **Wealthy citizens (Fortis bazaar)** *(current)* | Thieving | ~70k + ~6k gp | **Thieving 84** (Ch 2, 2 levels) · sawmill gold |
-| Motherlode Mine | Mining | - | coal bag · gem bag · prospector (clears Fal hard task) |
 | Karambwan at sea (raft, S of Musa Point) | Fishing | 50 XP / catch, spot never moves | Fishing 88 · raw karambwan for Cooking 70 |
 
 **Active**
@@ -36,7 +35,7 @@ Items from the guide I skipped - go back and do these.
 | 1 | 70 Cooking ❌ - gates RFD: Freeing King Awowogei, the barrows gloves (Lumb hard) | Cooking | 65 |
 | 2 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 76 |
 | 3 | Farming 85 ❌ (82 boosted): celastrus + hard farming contracts | Farming | 76 |
-| 4 | Mine sandstone | Mining | 82 |
+| 4 | Mine sandstone | Mining | 84 |
 | 5 | Do a ton of sea charting | Sailing | 74 |
 | 6 | Swordfish/Marlin rank of Tempor Tantrum Barracuda trial, collect stormy key, barrel stand and whirlpool surprises | Sailing | 74 |
 | 7 | Build a keg and fill it with whirlpool surprises | Sailing | 74 |
@@ -44,15 +43,11 @@ Items from the guide I skipped - go back and do these.
 | 9 | Imbue the berserker ring and salve amulet at the PvP arena | Combat |  |
 | 10 | Barbarian fishing to Agility 65 ❌ + Fishing 88 ❌ (CoX) - cut fish for 70 Cooking | Fis / Agi | 75 / 56 |
 | 11 | Slayer 58 ❌ for the black mask (cave horrors) | Slayer | 53 |
-| 12 | MLM - 240 golden nuggets left. Skip the super hopper (50) | Mining | 82 |
-| ↳ | Prospector helmet - **40** · also clears the Falador hard mining guild task | Mining | 82 |
-| ↳ | Coal bag - **100** | Mining | 82 |
-| ↳ | Gem bag - **100** | Mining | 82 |
-| 13 | Making Friends with My Arm - Agility 68 ❌ (56) | Agility | 56 |
-| 14 | Fire of Nourishment: 200 basalt + 1,550 Efh / 1,500 Urt / 1,800 Te salt for the fires and 2 eternal braziers. Make 100 Stony + 100 Icy basalt in the mine | Mining | 82 |
-| 15 | Optional: Fire of Dehumidification + Fire of Unseasonal Warmth (350 Efh, 150 Te, 400 Urt salt) | Mining | 82 |
-| 16 | Barb fish to 99 Fishing at CoX, or manually train Agility to 72 at Seers' agility course | Fis / Agi | 75 / 56 |
-| 17 | Slayer 70 ❌: unlocks Mortimer | Slayer | 53 |
+| 12 | Making Friends with My Arm - Agility 68 ❌ (56) | Agility | 56 |
+| 13 | Fire of Nourishment: 200 basalt + 1,550 Efh / 1,500 Urt / 1,800 Te salt for the fires and 2 eternal braziers. Make 100 Stony + 100 Icy basalt in the mine | Mining | 84 |
+| 14 | Optional: Fire of Dehumidification + Fire of Unseasonal Warmth (350 Efh, 150 Te, 400 Urt salt) | Mining | 84 |
+| 15 | Barb fish to 99 Fishing at CoX, or manually train Agility to 72 at Seers' agility course | Fis / Agi | 75 / 56 |
+| 16 | Slayer 70 ❌: unlocks Mortimer | Slayer | 53 |
 
 </details>
 
@@ -61,22 +56,22 @@ Items from the guide I skipped - go back and do these.
 <details>
 <summary>Show stat comparison (click to expand)</summary>
 
-| Skill | Ch 1 | Ch 2 | Mine | vs Ch 1 | vs Ch 2 |
-|---|:---:|:---:|:---:|:---:|:---:|
-| Prayer | 43 | 70 | 54 | 🟢 +11 | 🔴 −16 |
-| Magic | 63 | 89 | 79 | 🟢 +16 | 🔴 −10 |
-| Construction | 39 | 71 | 63 | 🟢 +24 | 🔴 −8 |
-| Agility | 51 | 98 | 56 | 🟢 +5 | 🔴 −42 |
-| Herblore | 40 | 73 | 61 | 🟢 +21 | 🔴 −12 |
-| Thieving | 77 | 84 | 82 | 🟢 +5 | 🔴 −2 |
-| Fletching | 48 | 69 | 59 | 🟢 +11 | 🔴 −10 |
-| Slayer | 16 | 59 | 53 | 🟢 +37 | 🔴 −6 |
-| Hunter | 49 | 82 | 73 | 🟢 +24 | 🔴 −9 |
-| Smithing | 42 | 74 | 70 | 🟢 +28 | 🔴 −4 |
-| Fishing | 74 | 99 | 75 | 🟢 +1 | 🔴 −24 |
-| Cooking | 60 | 81 | 65 | 🟢 +5 | 🔴 −16 |
-| Firemaking | 89 | 89 | 82 | 🔴 −7 | 🔴 −7 |
-| Farming | 63 | 94 | 76 | 🟢 +13 | 🔴 −18 |
+| Skill | Ch 1 | Ch 2 | Ch 3 | Mine | vs Ch 1 | vs Ch 2 | vs Ch 3 |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Prayer | 43 | 70 | 76 | 54 | 🟢 +11 | 🔴 −16 | 🔴 −22 |
+| Magic | 63 | 89 | 96 | 79 | 🟢 +16 | 🔴 −10 | 🔴 −17 |
+| Construction | 39 | 71 | 83 | 63 | 🟢 +24 | 🔴 −8 | 🔴 −20 |
+| Agility | 51 | 98 | 98 | 56 | 🟢 +5 | 🔴 −42 | 🔴 −42 |
+| Herblore | 40 | 73 | 84 | 61 | 🟢 +21 | 🔴 −12 | 🔴 −23 |
+| Thieving | 77 | 84 | 98 | 82 | 🟢 +5 | 🔴 −2 | 🔴 −16 |
+| Fletching | 48 | 69 | 99 | 59 | 🟢 +11 | 🔴 −10 | 🔴 −40 |
+| Slayer | 16 | 59 | 76 | 53 | 🟢 +37 | 🔴 −6 | 🔴 −23 |
+| Hunter | 49 | 82 | 95 | 73 | 🟢 +24 | 🔴 −9 | 🔴 −22 |
+| Smithing | 42 | 74 | 86 | 70 | 🟢 +28 | 🔴 −4 | 🔴 −16 |
+| Fishing | 74 | 99 | 99 | 75 | 🟢 +1 | 🔴 −24 | 🔴 −24 |
+| Cooking | 60 | 81 | 81 | 65 | 🟢 +5 | 🔴 −16 | 🔴 −16 |
+| Firemaking | 89 | 89 | 89 | 82 | 🔴 −7 | 🔴 −7 | 🔴 −7 |
+| Farming | 63 | 94 | 96 | 76 | 🟢 +13 | 🔴 −18 | 🔴 −20 |
 
 **Bridging the gaps** - red gaps only, ordered by biggest deficit vs the guide.
 
@@ -89,18 +84,26 @@ Items from the guide I skipped - go back and do these.
 <details>
 <summary>Show skills that have met both chapters (click to expand)</summary>
 
-| Skill | Ch 1 | Ch 2 | Mine | vs Ch 1 | vs Ch 2 |
-|---|:---:|:---:|:---:|:---:|:---:|
-| Attack | 46 | 62 | 80 | 🟢 +34 | 🟢 +18 |
-| Crafting | 56 | 65 | 65 | 🟢 +9 | 🟢 +0 |
-| Strength | 50 | 77 | 80 | 🟢 +30 | 🟢 +3 |
-| Defence | 34 | 70 | 79 | 🟢 +45 | 🟢 +9 |
-| Hitpoints | 39 | 64 | 81 | 🟢 +42 | 🟢 +17 |
-| Ranged | 45 | 62 | 73 | 🟢 +28 | 🟢 +11 |
-| Runecraft | 24 | 40 | 54 | 🟢 +30 | 🟢 +14 |
-| Mining | 44 | 73 | 82 | 🟢 +38 | 🟢 +9 |
-| Woodcutting | 70 | 73 | 76 | 🟢 +6 | 🟢 +3 |
-| Sailing | 1 | 67 | 74 | 🟢 +73 | 🟢 +7 |
+| Skill | Ch 1 | Ch 2 | Ch 3 | Mine | vs Ch 1 | vs Ch 2 | vs Ch 3 |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Crafting | 56 | 65 | 93 | 65 | 🟢 +9 | 🟢 +0 | 🔴 −28 |
+| Strength | 50 | 77 | 88 | 80 | 🟢 +30 | 🟢 +3 | 🔴 −8 |
+| Hitpoints | 39 | 64 | 87 | 81 | 🟢 +42 | 🟢 +17 | 🔴 −6 |
+| Ranged | 45 | 62 | 93 | 73 | 🟢 +28 | 🟢 +11 | 🔴 −20 |
+| Runecraft | 24 | 40 | 95 | 54 | 🟢 +30 | 🟢 +14 | 🔴 −41 |
+| Mining | 44 | 73 | 97 | 84 | 🟢 +40 | 🟢 +11 | 🔴 −13 |
+| Woodcutting | 70 | 73 | 80 | 78 | 🟢 +8 | 🟢 +5 | 🔴 −2 |
+| Sailing | 1 | 67 | 78 | 74 | 🟢 +73 | 🟢 +7 | 🔴 −4 |
+
+</details>
+
+<details>
+<summary>Show skills that have met <strong>all three</strong> chapters (click to expand)</summary>
+
+| Skill | Ch 1 | Ch 2 | Ch 3 | Mine | vs Ch 1 | vs Ch 2 | vs Ch 3 |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Attack | 46 | 62 | 78 | 80 | 🟢 +34 | 🟢 +18 | 🟢 +2 |
+| Defence | 34 | 70 | 76 | 79 | 🟢 +45 | 🟢 +9 | 🟢 +3 |
 
 </details>
 
