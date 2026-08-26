@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-07-17T16:05:50.988575+00:00",
+  "updated": "2026-08-26T12:52:56.454074+00:00",
   "combat_achievements": {
     "tiers": {
       "Easy": {
@@ -409,16 +409,23 @@
           {
             "name": "You're a wizard",
             "date": "2025-08-16"
+          },
+          {
+            "name": "Mad Angel Adept",
+            "date": "2026-08-26"
           }
         ],
         "not_completed": [
           "Dagannoth Supreme Champion",
-          "Temotli Triumph"
+          "Temotli Triumph",
+          "Juggling Act",
+          "Smite Fight",
+          "Dancing Queen"
         ],
-        "completed_count": 58,
-        "total_count": 60,
+        "completed_count": 59,
+        "total_count": 64,
         "points_per_task": 2,
-        "points_earned": 116
+        "points_earned": 118
       },
       "Hard": {
         "completed": [
@@ -657,6 +664,10 @@
           {
             "name": "Zulrah Adept",
             "date": "2026-02-01"
+          },
+          {
+            "name": "Mad Angel Veteran",
+            "date": "2026-08-26"
           }
         ],
         "not_completed": [
@@ -685,12 +696,14 @@
           "The Flincher",
           "Titan Killer",
           "Venenatis Adept",
-          "Who Is the King Now?"
+          "Who Is the King Now?",
+          "Perfect Mad Angel",
+          "Mad Angel Speed-Runner"
         ],
-        "completed_count": 59,
-        "total_count": 85,
+        "completed_count": 60,
+        "total_count": 88,
         "points_per_task": 3,
-        "points_earned": 177
+        "points_earned": 180
       },
       "Elite": {
         "completed": [
@@ -1031,10 +1044,12 @@
           "Yama Adept",
           "Yama Speed-Trialist",
           "Zalcano Veteran",
-          "Zombie Destroyer"
+          "Zombie Destroyer",
+          "This Is Madness",
+          "The Pen Is Mightier"
         ],
         "completed_count": 58,
-        "total_count": 162,
+        "total_count": 164,
         "points_per_task": 4,
         "points_earned": 232
       },
@@ -1459,11 +1474,21 @@
         "points_earned": 30
       }
     },
-    "total_completed": 253,
-    "total_tasks": 637,
-    "total_points": 756,
-    "max_points": 2630,
+    "total_completed": 255,
+    "total_tasks": 646,
+    "total_points": 761,
+    "max_points": 2655,
     "recent_tasks": [
+      {
+        "name": "Mad Angel Adept",
+        "date": "2026-08-26",
+        "tier": "Medium"
+      },
+      {
+        "name": "Mad Angel Veteran",
+        "date": "2026-08-26",
+        "tier": "Hard"
+      },
       {
         "name": "Anvil No More",
         "date": "2026-07-17",
@@ -1553,16 +1578,6 @@
         "name": "Novice Tomb Raider",
         "date": "2026-06-14",
         "tier": "Elite"
-      },
-      {
-        "name": "Perfect Crondis",
-        "date": "2026-06-14",
-        "tier": "Elite"
-      },
-      {
-        "name": "Perfect Scabaras",
-        "date": "2026-06-14",
-        "tier": "Master"
       }
     ]
   }

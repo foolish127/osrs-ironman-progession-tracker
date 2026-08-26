@@ -790,12 +790,12 @@
             
             // CA tier unlock thresholds (from OSRS Wiki - updated)
             const tierUnlocks = [
-                { name: 'Easy', points: 38, rewards: ['Ghommal\'s hilt 1', '5% easy clue boost', '+5 boss task kills'] },
-                { name: 'Medium', points: 148, rewards: ['Ghommal\'s hilt 2', '5% medium clue boost', '+10 boss task kills'] },
-                { name: 'Hard', points: 394, rewards: ['Ghommal\'s hilt 3', 'Unlimited GWD teles', 'GWD private instances'] },
-                { name: 'Elite', points: 1038, rewards: ['Ghommal\'s hilt 4', '5% elite clue boost', 'Cannon holds 60'] },
-                { name: 'Master', points: 1878, rewards: ['Ghommal\'s hilt 5', 'Red slayer helmet'] },
-                { name: 'Grandmaster', points: 2618, rewards: ['Ghommal\'s hilt 6', 'Green slayer helmet'] }
+                { name: 'Easy', points: 41, rewards: ['Ghommal\'s hilt 1', '5% easy clue boost', '+5 boss task kills'] },
+                { name: 'Medium', points: 161, rewards: ['Ghommal\'s hilt 2', '5% medium clue boost', '+10 boss task kills'] },
+                { name: 'Hard', points: 419, rewards: ['Ghommal\'s hilt 3', 'Unlimited GWD teles', 'GWD private instances'] },
+                { name: 'Elite', points: 1100, rewards: ['Ghommal\'s hilt 4', '5% elite clue boost', 'Cannon holds 60'] },
+                { name: 'Master', points: 1940, rewards: ['Ghommal\'s hilt 5', 'Red slayer helmet'] },
+                { name: 'Grandmaster', points: 2655, rewards: ['Ghommal\'s hilt 6', 'Green slayer helmet'] }
             ];
             
             // Find current and next tier
