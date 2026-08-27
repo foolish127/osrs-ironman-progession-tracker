@@ -552,3 +552,33 @@
         .rank-val.best { color: var(--accent-green); }
         .rank-overall td { background: rgba(212,168,75,0.06); font-weight: 600; }
         .rank-overall .rank-skill-name { color: var(--accent-gold); }
+
+/* ── Ladlor gear progression grid ── */
+.gt-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(44px, 1fr));
+    gap: 6px;
+    margin: 12px 0 24px;
+}
+.gt-item {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-card, #1b1b1b);
+    border: 1px solid var(--border, #333);
+    border-radius: 6px;
+    opacity: 0.32;
+    filter: grayscale(1);
+    transition: opacity .15s, filter .15s, border-color .15s;
+    font-size: .8rem;
+    color: var(--text-muted, #888);
+}
+.gt-item img { max-width: 80%; max-height: 80%; image-rendering: -webkit-optimize-contrast; }
+.gt-item:hover { opacity: 1; filter: none; }
+.gt-item.gt-have {
+    opacity: 1;
+    filter: none;
+    border-color: var(--accent-green, #4caf50);
+    background: color-mix(in srgb, var(--accent-green, #4caf50) 12%, transparent);
+}

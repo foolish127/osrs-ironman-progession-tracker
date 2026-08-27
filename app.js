@@ -43,6 +43,52 @@
             },
         };
 
+        let gearTargets = [];
+
+        function parseGearTargets(text) {
+            if (!text) return [];
+            const out = []; let cur = null;
+            text.split('\n').forEach(line => {
+                const t = line.trim();
+                if (!t || t.startsWith('#')) return;
+                if (t.startsWith('- name:')) {
+                    if (cur) out.push(cur);
+                    cur = { name: t.slice(7).trim() };
+                } else if (cur) {
+                    const i = t.indexOf(':');
+                    if (i > 0) cur[t.slice(0, i).trim()] = t.slice(i + 1).trim();
+                }
+            });
+            if (cur) out.push(cur);
+            return out;
+        }
+
+        function renderGearTargets() {
+            const host = document.getElementById('gear-targets');
+            if (!host) return;
+            if (!gearTargets.length) { host.innerHTML = ''; return; }
+            const have = g => String(g.got).toLowerCase() === 'yes';
+            const got = gearTargets.filter(have).length;
+            const pct = got / gearTargets.length * 100;
+            const cells = gearTargets.map(g => {
+                const tip = (g.name + (g.source ? ' - ' + g.source : '')).replace(/"/g, '&quot;');
+                const ch = g.name.charAt(0).replace(/'/g, '');
+                return '<div class="gt-item' + (have(g) ? ' gt-have' : '') + '" data-tooltip="' + tip + '">'
+                     + '<img src="' + (g.img || '') + '" alt="' + tip + '" loading="lazy" '
+                     + 'onerror="this.style.display=&quot;none&quot;; this.parentElement.textContent=&quot;' + ch + '&quot;;">'
+                     + '</div>';
+            }).join('');
+            host.innerHTML =
+                '<div class="gear-section-label">Gear progression &middot; '
+              + '<a href="https://ladlorchart.com/" target="_blank" rel="noopener">Ladlor\u2019s Chart</a></div>'
+              + '<div class="progress-section">'
+              + '<div class="progress-header"><span class="progress-title">Gear obtained</span>'
+              + '<span class="progress-stats"><span class="obtained">' + got + '</span> <span class="total">/ ' + gearTargets.length + '</span></span></div>'
+              + '<div class="progress-bar"><div class="progress-fill" style="width:' + pct + '%"></div></div>'
+              + '<div class="progress-percentage">' + pct.toFixed(1) + '%</div></div>'
+              + '<div class="gt-grid">' + cells + '</div>';
+        }
+
         function renderGimGearing(style) {
             currentGearStyle = style || currentGearStyle;
             const host = document.getElementById('gear-gim');
@@ -171,7 +217,7 @@
             ['totalLevel', 'totalXp', 'combatLevel', 'count99s', 'overallRank', 'clogCount', 'caTasks',
              'petCount', 'clueCount', 'bossKcCard', 'questCount', 'diaryCount']
                 .forEach(id => { const el = document.getElementById(id); if (el) el.textContent = '—'; });
-            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, diariesRes, dropsRes, clogCatRes, diaryTasksRes] = await Promise.all([
+            const [skillsRes, bossesRes, cluesRes, clogRes, caRes, petsRes, questsRes, diariesRes, dropsRes, clogCatRes, diaryTasksRes, gearTargetsRes] = await Promise.all([
                 fetch(`${D}/skills.json`).then(r=>r.json()).catch(()=>null),
                 fetch(`${D}/bosses.json`).then(r=>r.json()).catch(()=>null),
                 fetch(`${D}/clues.json`).then(r=>r.json()).catch(()=>null),
@@ -182,8 +228,11 @@
                 fetch(`${D}/diaries.yaml`).then(r=>r.text()).catch(()=>null),
                 fetch(`${D}/drops.yaml`).then(r=>r.text()).catch(()=>null),
                 fetch(`${D}/clog_categories.yaml`).then(r=>r.ok?r.text():null).catch(()=>null),
-                fetch(`${D}/diary_tasks.yaml`).then(r=>r.ok?r.text():null).catch(()=>null)
+                fetch(`${D}/diary_tasks.yaml`).then(r=>r.ok?r.text():null).catch(()=>null),
+                fetch(`${D}/gear_targets.yaml`).then(r=>r.ok?r.text():null).catch(()=>null)
             ]);
+            gearTargets = parseGearTargets(gearTargetsRes);
+            renderGearTargets();
             diaryTasksData = parseDiaryTasks(diaryTasksRes);
 
             if (clogCatRes) {

@@ -36,9 +36,9 @@ Items from the guide I skipped - go back and do these.
 | 2 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 76 |
 | 3 | Farming 85 ❌ (82 boosted): celastrus + hard farming contracts | Farming | 76 |
 | 4 | Mine sandstone | Mining | 84 |
-| 5 | Do a ton of sea charting | Sailing | 74 |
-| 6 | Swordfish/Marlin rank of Tempor Tantrum Barracuda trial, collect stormy key, barrel stand and whirlpool surprises | Sailing | 74 |
-| 7 | Build a keg and fill it with whirlpool surprises | Sailing | 74 |
+| 5 | Do a ton of sea charting | Sailing | 75 |
+| 6 | Swordfish/Marlin rank of Tempor Tantrum Barracuda trial, collect stormy key, barrel stand and whirlpool surprises | Sailing | 75 |
+| 7 | Build a keg and fill it with whirlpool surprises | Sailing | 75 |
 | 8 | Kill Dagannoth Rex for the berserker ring - keep the Fremennik shield if it drops | Combat |  |
 | 9 | Imbue the berserker ring and salve amulet at the PvP arena | Combat |  |
 | 10 | Barbarian fishing to Agility 65 ❌ + Fishing 88 ❌ (CoX) - cut fish for 70 Cooking | Fis / Agi | 75 / 56 |
@@ -52,6 +52,15 @@ Items from the guide I skipped - go back and do these.
 </details>
 
 ### End of Chapter - stat check
+
+<details>
+<summary>Show skills that have met <strong>no</strong> chapter (click to expand)</summary>
+
+| Skill | Ch 1 | Ch 2 | Ch 3 | Mine | vs Ch 1 | vs Ch 2 | vs Ch 3 |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Firemaking | 89 | 89 | 89 | 82 | 🔴 −7 | 🔴 −7 | 🔴 −7 |
+
+</details>
 
 <details>
 <summary>Show stat comparison (click to expand)</summary>
@@ -70,14 +79,7 @@ Items from the guide I skipped - go back and do these.
 | Smithing | 42 | 74 | 86 | 70 | 🟢 +28 | 🔴 −4 | 🔴 −16 |
 | Fishing | 74 | 99 | 99 | 75 | 🟢 +1 | 🔴 −24 | 🔴 −24 |
 | Cooking | 60 | 81 | 81 | 65 | 🟢 +5 | 🔴 −16 | 🔴 −16 |
-| Firemaking | 89 | 89 | 89 | 82 | 🔴 −7 | 🔴 −7 | 🔴 −7 |
 | Farming | 63 | 94 | 96 | 76 | 🟢 +13 | 🔴 −18 | 🔴 −20 |
-
-**Bridging the gaps** - red gaps only, ordered by biggest deficit vs the guide.
-
-| # | Skill | Now → Target | Gap | How to bridge |
-|:---:|---|:---:|:---:|---|
-| 0 | Firemaking | 82 → 89 | 🔴 −7 | Burn logs from Woodcutting / Wintertodt |
 
 </details>
 
@@ -92,8 +94,7 @@ Items from the guide I skipped - go back and do these.
 | Ranged | 45 | 62 | 93 | 73 | 🟢 +28 | 🟢 +11 | 🔴 −20 |
 | Runecraft | 24 | 40 | 95 | 54 | 🟢 +30 | 🟢 +14 | 🔴 −41 |
 | Mining | 44 | 73 | 97 | 84 | 🟢 +40 | 🟢 +11 | 🔴 −13 |
-| Woodcutting | 70 | 73 | 80 | 78 | 🟢 +8 | 🟢 +5 | 🔴 −2 |
-| Sailing | 1 | 67 | 78 | 74 | 🟢 +73 | 🟢 +7 | 🔴 −4 |
+| Sailing | 1 | 67 | 78 | 75 | 🟢 +74 | 🟢 +8 | 🔴 −3 |
 
 </details>
 
@@ -104,6 +105,7 @@ Items from the guide I skipped - go back and do these.
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Attack | 46 | 62 | 78 | 80 | 🟢 +34 | 🟢 +18 | 🟢 +2 |
 | Defence | 34 | 70 | 76 | 79 | 🟢 +45 | 🟢 +9 | 🟢 +3 |
+| Woodcutting | 70 | 73 | 80 | 80 | 🟢 +10 | 🟢 +7 | 🟢 +0 |
 
 </details>
 
@@ -236,26 +238,27 @@ Blast Furnace gold.
 ### Progress to 80 (Fremennik shipwreck)
 
 ```
-74 [██░░░░░░░░░░░░░░░░░░] 80   10%
+75 [████░░░░░░░░░░░░░░░░] 80   22%
 ```
 
-**Sailing 74** (1,096,278 / 1,986,068 xp). **889,790 xp left** ≈ **~4,416 martial salvages** (~201.5 xp ea). Next salvage unlock = the **Fremennik shipwreck (80)**, which needs the **eternal brazier** ship fitting (78, unlocks the Northern Ocean - schematic on Buccaneers' Haven, dock at 76). Build the brazier on the way.
+**Sailing 75** (1,210,421 / 1,986,068 xp). **775,647 xp left** ≈ **~3,850 martial salvages** (~201.5 xp ea). Next salvage unlock = the **Fremennik shipwreck (80)**, which needs the **eternal brazier** ship fitting (78, unlocks the Northern Ocean - schematic on Buccaneers' Haven, dock at 76). Build the brazier on the way.
 
 ---
 
-### Alching martial salvage drops (mercenary, Sailing 73)
+### Alching martial salvage drops (mercenary)
 
-Martial salvage = 201.5 XP each (138 loot + 63.5 sort). Worth a nat (net after −180). Est. qty over Sailing 73 → 87 (~11,244 martial salvages):
+Martial salvage = 201.5 XP each (138 loot + 63.5 sort). Worth a nat (net after −180).
+Est. qty over **Sailing 75 → 80** (~3,850 martial salvages):
 
-| Drop | High alch (−180) | Drop rate | Est. qty (73→87) | Total net GP |
+| Drop | High alch (−180) | Drop rate | Est. qty (75→80) | Total net GP |
 |---|---:|---:|---:|---:|
-| Green d'hide body | +2,152 | 100/2,440 | 461 | 992,072 |
-| Amulet of power | +1,933 | 200/2,440 | 922 | 1,782,226 |
-| Adamant longsword | +1,740 | 200/2,440 | 922 | 1,604,280 |
-| Adamant 2h sword | +1,740 | 100/2,440 | 461 | 802,140 |
-| Mithril longsword | +600 | 300/2,440 | 1,383 | 829,800 |
-| Rune longsword | +780 | 10/2,440 | 46 | 35,880 |
-| Total | | | ~4,195 nats | ~6,046,398 |
+| Green d'hide body | +2,152 | 100/2,440 | 158 | 340,016 |
+| Amulet of power | +1,933 | 200/2,440 | 316 | 610,828 |
+| Adamant longsword | +1,740 | 200/2,440 | 316 | 549,840 |
+| Adamant 2h sword | +1,740 | 100/2,440 | 158 | 274,920 |
+| Mithril longsword | +600 | 300/2,440 | 473 | 283,800 |
+| Rune longsword | +780 | 10/2,440 | 16 | 12,480 |
+| Total | | | **~1,437 nats** | **~2,071,884** |
 
 Keep, do NOT alch: adamant/rune/dragon cannonballs (cannon ammo), mahogany/camphor/ironwood logs (hull parts). Skip alching mithril/adamant arrowtips, dart tips and arrows - below (or barely above) nat cost.
 
