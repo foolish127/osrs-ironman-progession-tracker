@@ -118,9 +118,12 @@
         function applyGearAccountView() {
             const im = document.getElementById('gear-im');
             const gim = document.getElementById('gear-gim');
+            const targets = document.getElementById('gear-targets');
             const isGim = (typeof currentAccount !== 'undefined' && currentAccount && currentAccount.id === 'gim');
             if (im) im.style.display = isGim ? 'none' : '';
             if (gim) gim.style.display = isGim ? '' : 'none';
+            // Ladlor chart is Ironman-only; it now sits above the shared style tabs.
+            if (targets) targets.style.display = isGim ? 'none' : '';
             if (isGim) renderGimGearing(currentGearStyle);
         }
 
