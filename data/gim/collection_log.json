@@ -1,6 +1,6 @@
 {
   "rsn": "GIM Foolin",
-  "updated": "2026-08-26T01:19:36.969674+00:00",
+  "updated": "2026-08-27T19:00:43.260627+00:00",
   "collection_log": {
     "collections": {
       "Dagannoth Kings": {
@@ -329,6 +329,18 @@
           {
             "name": "Rock golem",
             "date": "2026-06-28",
+            "quantity": 1
+          }
+        ],
+        "missing": [],
+        "obtained_count": 1,
+        "total_count": 1
+      },
+      "Boat Paints": {
+        "obtained": [
+          {
+            "name": "Salvor's paint",
+            "date": "2026-08-27",
             "quantity": 1
           }
         ],
@@ -673,9 +685,14 @@
         "total_count": 8
       }
     },
-    "total_obtained": 81,
+    "total_obtained": 82,
     "total_items": 1712,
     "recent_items": [
+      {
+        "name": "Salvor's paint",
+        "date": "2026-08-27",
+        "collection": "boat_paints"
+      },
       {
         "name": "Prospector helmet",
         "date": "2026-08-25",
@@ -770,11 +787,6 @@
         "name": "Abyssal pearls",
         "date": "2026-08-14",
         "collection": "guardians_of_the_rift"
-      },
-      {
-        "name": "Bronze defender",
-        "date": "2026-08-14",
-        "collection": "cyclopes"
       }
     ],
     "source": "templeosrs"
