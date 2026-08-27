@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-08-26T12:52:56.454074+00:00",
+  "updated": "2026-08-27T04:19:11.141858+00:00",
   "combat_achievements": {
     "tiers": {
       "Easy": {
@@ -413,19 +413,25 @@
           {
             "name": "Mad Angel Adept",
             "date": "2026-08-26"
+          },
+          {
+            "name": "Juggling Act",
+            "date": "2026-08-26"
+          },
+          {
+            "name": "Smite Fight",
+            "date": "2026-08-26"
           }
         ],
         "not_completed": [
           "Dagannoth Supreme Champion",
           "Temotli Triumph",
-          "Juggling Act",
-          "Smite Fight",
           "Dancing Queen"
         ],
-        "completed_count": 59,
+        "completed_count": 61,
         "total_count": 64,
         "points_per_task": 2,
-        "points_earned": 118
+        "points_earned": 122
       },
       "Hard": {
         "completed": [
@@ -668,6 +674,14 @@
           {
             "name": "Mad Angel Veteran",
             "date": "2026-08-26"
+          },
+          {
+            "name": "Perfect Mad Angel",
+            "date": "2026-08-26"
+          },
+          {
+            "name": "Mad Angel Speed-Runner",
+            "date": "2026-08-26"
           }
         ],
         "not_completed": [
@@ -696,14 +710,12 @@
           "The Flincher",
           "Titan Killer",
           "Venenatis Adept",
-          "Who Is the King Now?",
-          "Perfect Mad Angel",
-          "Mad Angel Speed-Runner"
+          "Who Is the King Now?"
         ],
-        "completed_count": 60,
+        "completed_count": 62,
         "total_count": 88,
         "points_per_task": 3,
-        "points_earned": 180
+        "points_earned": 186
       },
       "Elite": {
         "completed": [
@@ -938,6 +950,14 @@
           {
             "name": "Zulrah Veteran",
             "date": "2026-05-17"
+          },
+          {
+            "name": "This Is Madness",
+            "date": "2026-08-26"
+          },
+          {
+            "name": "The Pen Is Mightier",
+            "date": "2026-08-26"
           }
         ],
         "not_completed": [
@@ -1044,14 +1064,12 @@
           "Yama Adept",
           "Yama Speed-Trialist",
           "Zalcano Veteran",
-          "Zombie Destroyer",
-          "This Is Madness",
-          "The Pen Is Mightier"
+          "Zombie Destroyer"
         ],
-        "completed_count": 58,
+        "completed_count": 60,
         "total_count": 164,
         "points_per_task": 4,
-        "points_earned": 232
+        "points_earned": 240
       },
       "Master": {
         "completed": [
@@ -1474,9 +1492,9 @@
         "points_earned": 30
       }
     },
-    "total_completed": 255,
+    "total_completed": 261,
     "total_tasks": 646,
-    "total_points": 761,
+    "total_points": 779,
     "max_points": 2655,
     "recent_tasks": [
       {
@@ -1485,9 +1503,39 @@
         "tier": "Medium"
       },
       {
+        "name": "Juggling Act",
+        "date": "2026-08-26",
+        "tier": "Medium"
+      },
+      {
+        "name": "Smite Fight",
+        "date": "2026-08-26",
+        "tier": "Medium"
+      },
+      {
         "name": "Mad Angel Veteran",
         "date": "2026-08-26",
         "tier": "Hard"
+      },
+      {
+        "name": "Perfect Mad Angel",
+        "date": "2026-08-26",
+        "tier": "Hard"
+      },
+      {
+        "name": "Mad Angel Speed-Runner",
+        "date": "2026-08-26",
+        "tier": "Hard"
+      },
+      {
+        "name": "This Is Madness",
+        "date": "2026-08-26",
+        "tier": "Elite"
+      },
+      {
+        "name": "The Pen Is Mightier",
+        "date": "2026-08-26",
+        "tier": "Elite"
       },
       {
         "name": "Anvil No More",
@@ -1548,36 +1596,6 @@
         "name": "The Flame Skipper",
         "date": "2026-06-26",
         "tier": "Master"
-      },
-      {
-        "name": "Working Overtime",
-        "date": "2026-06-24",
-        "tier": "Master"
-      },
-      {
-        "name": "Alcleanical Hydra",
-        "date": "2026-06-23",
-        "tier": "Master"
-      },
-      {
-        "name": "Snake. Snake!? Snaaaaaake!",
-        "date": "2026-06-20",
-        "tier": "Elite"
-      },
-      {
-        "name": "Down Do Specs",
-        "date": "2026-06-15",
-        "tier": "Elite"
-      },
-      {
-        "name": "Tomb Raider",
-        "date": "2026-06-15",
-        "tier": "Master"
-      },
-      {
-        "name": "Novice Tomb Raider",
-        "date": "2026-06-14",
-        "tier": "Elite"
       }
     ]
   }
