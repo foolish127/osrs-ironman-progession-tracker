@@ -582,3 +582,22 @@
     border-color: var(--accent-green, #4caf50);
     background: color-mix(in srgb, var(--accent-green, #4caf50) 12%, transparent);
 }
+.gt-item { position: relative; }
+.gt-item[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    border: 1px solid var(--accent-gold);
+    border-radius: 4px;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.75rem;
+    z-index: 20;
+    pointer-events: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+.gt-item:hover { border-color: var(--accent-gold); }
