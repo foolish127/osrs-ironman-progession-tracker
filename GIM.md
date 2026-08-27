@@ -36,9 +36,9 @@ Items from the guide I skipped - go back and do these.
 | 2 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 76 |
 | 3 | Farming 85 ❌ (82 boosted): celastrus + hard farming contracts | Farming | 76 |
 | 4 | Mine sandstone | Mining | 84 |
-| 5 | Do a ton of sea charting | Sailing | 76 |
-| 6 | Swordfish/Marlin rank of Tempor Tantrum Barracuda trial, collect stormy key, barrel stand and whirlpool surprises | Sailing | 76 |
-| 7 | Build a keg and fill it with whirlpool surprises | Sailing | 76 |
+| 5 | Do a ton of sea charting | Sailing | 77 |
+| 6 | Swordfish/Marlin rank of Tempor Tantrum Barracuda trial, collect stormy key, barrel stand and whirlpool surprises | Sailing | 77 |
+| 7 | Build a keg and fill it with whirlpool surprises | Sailing | 77 |
 | 8 | Kill Dagannoth Rex for the berserker ring - keep the Fremennik shield if it drops | Combat |  |
 | 9 | Imbue the berserker ring and salve amulet at the PvP arena | Combat |  |
 | 10 | Barbarian fishing to Agility 65 ❌ + Fishing 88 ❌ (CoX) - cut fish for 70 Cooking | Fis / Agi | 75 / 56 |
@@ -94,7 +94,7 @@ Items from the guide I skipped - go back and do these.
 | Ranged | 45 | 62 | 93 | 73 | 🟢 +28 | 🟢 +11 | 🔴 −20 |
 | Runecraft | 24 | 40 | 95 | 54 | 🟢 +30 | 🟢 +14 | 🔴 −41 |
 | Mining | 44 | 73 | 97 | 84 | 🟢 +40 | 🟢 +11 | 🔴 −13 |
-| Sailing | 1 | 67 | 78 | 76 | 🟢 +75 | 🟢 +9 | 🔴 −2 |
+| Sailing | 1 | 67 | 78 | 77 | 🟢 +76 | 🟢 +10 | 🔴 −1 |
 
 </details>
 
@@ -238,10 +238,10 @@ Blast Furnace gold.
 ### Progress to 80 (Fremennik shipwreck)
 
 ```
-76 [██████░░░░░░░░░░░░░░] 80   34%
+77 [█████████░░░░░░░░░░░] 80   48%
 ```
 
-**Sailing 76** (1,336,443 / 1,986,068 xp). **649,625 xp left** ≈ **~3,224 martial salvages** (~201.5 xp ea). Next salvage unlock = the **Fremennik shipwreck (80)**, which needs the **eternal brazier** ship fitting (78, unlocks the Northern Ocean - schematic on Buccaneers' Haven, dock at 76). Build the brazier on the way.
+**Sailing 77** (1,475,581 / 1,986,068 xp). **510,487 xp left** ≈ **~2,533 martial salvages** (~201.5 xp ea). Next salvage unlock = the **Fremennik shipwreck (80)**, which needs the **eternal brazier** ship fitting (78, unlocks the Northern Ocean - schematic on Buccaneers' Haven, dock at 76). Build the brazier on the way.
 
 ---
 

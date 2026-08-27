@@ -81,11 +81,11 @@
 <details>
 <summary><strong>Task tables &amp; goals (Duradel &amp; Konar)</strong> — click to expand</summary>
 
-**Mortimer tasks completed: 12**
+**Mortimer tasks completed: 15**
 
 | Tasks | Unlock | |
 |:---:|---|:---:|
-| 15 | Clue Scroll Modifier | ❌ |
+| 15 | Clue Scroll Modifier | ✅ |
 | 25 | Superior Drop Rate Modifier | ❌ |
 | 40 | Slayer XP Modifier | ❌ |
 | 50 | Third task choice | ❌ |
