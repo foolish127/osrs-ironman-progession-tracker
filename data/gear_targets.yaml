@@ -1,5 +1,7 @@
-# Ironman gear targets - full Ladlor chart
-# Ref: https://ladlorchart.com/  (parsed from the site, v1.9+)
+# Ironman gear targets - Ladlor chart
+# Ref: https://ladlorchart.com/  (node list parsed from the site bundle)
+# The live chart has 184 nodes. This file also keeps 10 entries Ladlor has
+# since removed - each marked "# off-chart" - so our totals run 194, not 184.
 # Format: name / type / img / source / got
 
 gear:
@@ -105,6 +107,10 @@ gear:
     type: item
     img: https://oldschool.runescape.wiki/images/Black_mask_(i).png
     got: yes
+  - name: Bonecrusher
+    type: item
+    img: https://oldschool.runescape.wiki/images/Bonecrusher.png
+    got: yes
   - name: Imbued zamorak cape
     type: item
     img: https://oldschool.runescape.wiki/images/Imbued_Zamorak_cape.png
@@ -112,6 +118,16 @@ gear:
   - name: Ash sanctifier
     type: item
     img: https://oldschool.runescape.wiki/images/Ash_sanctifier.png
+    got: yes
+  - name: Slayer 69
+    type: skill
+    img: https://oldschool.runescape.wiki/images/Slayer_icon.png
+    source: Skill milestone
+    got: yes
+  - name: Strength 86
+    type: skill
+    img: https://oldschool.runescape.wiki/images/Strength_icon.png
+    source: Skill milestone
     got: yes
   - name: Bigger and Badder
     type: slayer
@@ -142,6 +158,11 @@ gear:
     type: item
     img: https://oldschool.runescape.wiki/images/Red_chinchompa.png
     got: yes
+  - name: Ranged 70
+    type: skill
+    img: https://oldschool.runescape.wiki/images/Ranged_icon.png
+    source: Skill milestone
+    got: yes
   - name: Broader Fletching
     type: slayer
     img: https://oldschool.runescape.wiki/images/Broad_arrowheads_5.png
@@ -169,6 +190,11 @@ gear:
   - name: Crystal halberd
     type: item
     img: https://oldschool.runescape.wiki/images/Crystal_halberd.png
+    got: yes
+  - name: Ranged 92
+    type: skill
+    img: https://oldschool.runescape.wiki/images/Ranged_icon.png
+    source: Skill milestone
     got: yes
   - name: Crystal helm
     type: item
@@ -213,6 +239,10 @@ gear:
   - name: Pharaoh's sceptre
     type: item
     img: https://oldschool.runescape.wiki/images/Pharaoh's_sceptre_(1).png
+    got: yes
+  - name: Arclight
+    type: item
+    img: https://oldschool.runescape.wiki/images/Arclight.png
     got: yes
   - name: Karamja gloves 4
     type: item
@@ -267,6 +297,7 @@ gear:
     type: slayer
     img: https://oldschool.runescape.wiki/images/Lizardmen_icon.png
     got: yes
+  # off-chart: dropped by Ladlor after v1.9; tracked by choice
   - name: Greater Challenge
     type: slayer
     img: https://oldschool.runescape.wiki/images/Greater_demon_icon.png
@@ -297,6 +328,15 @@ gear:
     img: https://oldschool.runescape.wiki/images/Bandos_godsword.png
     source: Graardor
     got: no
+  - name: Voidwaker
+    type: item
+    img: https://oldschool.runescape.wiki/images/Voidwaker.png
+    source: PvP
+    got: no
+  - name: Deadeye
+    type: prayer
+    img: https://oldschool.runescape.wiki/images/Deadeye.png
+    got: yes
   - name: Dragon pickaxe
     type: item
     img: https://oldschool.runescape.wiki/images/Dragon_pickaxe.png
@@ -321,10 +361,14 @@ gear:
   - name: Abyssal tentacle
     type: item
     img: https://oldschool.runescape.wiki/images/Abyssal_tentacle.png
-    got: no
+    got: yes
   - name: Dragon warhammer
     type: item
     img: https://oldschool.runescape.wiki/images/Dragon_warhammer.png
+    got: yes
+  - name: Emberlight
+    type: item
+    img: https://oldschool.runescape.wiki/images/Emberlight.png
     got: yes
   - name: Dragon boots
     type: item
@@ -350,6 +394,11 @@ gear:
     type: item
     img: https://oldschool.runescape.wiki/images/Avernic_treads.png
     got: yes
+  - name: Lightbearer
+    type: item
+    img: https://oldschool.runescape.wiki/images/Lightbearer.png
+    source: ToA
+    got: no
   - name: Rite of vile transference
     type: item
     img: https://oldschool.runescape.wiki/images/Rite_of_vile_transference.png
@@ -402,6 +451,16 @@ gear:
     type: item
     img: https://oldschool.runescape.wiki/images/Ferocious_gloves.png
     got: yes
+  - name: Rigour
+    type: prayer
+    img: https://oldschool.runescape.wiki/images/Rigour.png
+    source: Chambers of Xeric
+    got: no
+  - name: Augury
+    type: prayer
+    img: https://oldschool.runescape.wiki/images/Augury.png
+    source: Chambers of Xeric
+    got: no
   - name: Infernal cape
     type: item
     img: https://oldschool.runescape.wiki/images/Infernal_cape.png
@@ -538,6 +597,7 @@ gear:
     type: item
     img: https://oldschool.runescape.wiki/images/Spectral_spirit_shield.png
     got: no
+  # off-chart: dropped by Ladlor after v1.9; tracked by choice
   - name: Arcane spirit shield
     type: item
     img: https://oldschool.runescape.wiki/images/Arcane_spirit_shield.png
@@ -582,6 +642,7 @@ gear:
     type: item
     img: https://oldschool.runescape.wiki/images/Saradomin_godsword.png
     got: no
+  # off-chart: dropped by Ladlor after v1.9; tracked by choice
   - name: Armadyl godsword
     type: item
     img: https://oldschool.runescape.wiki/images/Armadyl_godsword.png
@@ -590,6 +651,7 @@ gear:
     type: item
     img: https://oldschool.runescape.wiki/images/Ancient_godsword.png
     got: no
+  # off-chart: dropped by Ladlor after v1.9; tracked by choice
   - name: Staff of the dead
     type: item
     img: https://oldschool.runescape.wiki/images/Staff_of_the_dead.png
@@ -602,10 +664,12 @@ gear:
     type: item
     img: https://oldschool.runescape.wiki/images/Tonalztics_of_Ralos.png
     got: no
+  # off-chart: dropped by Ladlor after v1.9; tracked by choice
   - name: Tyrannical ring
     type: item
     img: https://oldschool.runescape.wiki/images/Tyrannical_ring.png
     got: no
+  # off-chart: dropped by Ladlor after v1.9; tracked by choice
   - name: Treasonous ring
     type: item
     img: https://oldschool.runescape.wiki/images/Treasonous_ring.png
@@ -614,14 +678,17 @@ gear:
     type: item
     img: https://oldschool.runescape.wiki/images/Ring_of_the_gods.png
     got: no
+  # off-chart: dropped by Ladlor after v1.9; tracked by choice
   - name: Craw's bow
     type: item
     img: https://oldschool.runescape.wiki/images/Craw's_bow_(u).png
     got: no
+  # off-chart: dropped by Ladlor after v1.9; tracked by choice
   - name: Thammaron's sceptre
     type: item
     img: https://oldschool.runescape.wiki/images/Thammaron's_sceptre.png
     got: no
+  # off-chart: dropped by Ladlor after v1.9; tracked by choice
   - name: Viggora's chainmace
     type: item
     img: https://oldschool.runescape.wiki/images/Viggora's_chainmace_(u).png
@@ -642,6 +709,7 @@ gear:
     type: item
     img: https://oldschool.runescape.wiki/images/Inquisitor's_great_helm.png
     got: no
+  # off-chart: dropped by Ladlor after v1.9; tracked by choice
   - name: Dragon hunter lance
     type: item
     img: https://oldschool.runescape.wiki/images/Dragon_hunter_lance.png
@@ -681,6 +749,10 @@ gear:
   - name: Salve amulet(ei)
     type: item
     img: https://oldschool.runescape.wiki/images/Salve_amulet(ei).png
+    got: yes
+  - name: Piety
+    type: prayer
+    img: https://oldschool.runescape.wiki/images/Piety.png
     got: yes
   - name: void knight top
     type: item

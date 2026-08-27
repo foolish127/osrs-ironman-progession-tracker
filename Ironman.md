@@ -215,6 +215,7 @@ at 120 points each** (others give 6-7). Tasks can't be swapped via Turael.
 | 11 | Mining | 20 Jul 2026 |
 | 12 | Firemaking | 7 Aug 2026 |
 | 13 | Thieving | 21 Aug 2026 |
+| 14 | Cooking | 27 Aug 2026 |
 
 ---
 
@@ -229,7 +230,6 @@ Ref: [ladlorchart.com](https://ladlorchart.com/) - current as of at least **v1.9
 |---|---|:---:|
 | Fighter torso | Barbarian Assault | ☐ |
 | Hallowed crystal shard | Hallowed Sepulchre | ☐ |
-| Spirit tree | Construction | ☐ |
 | Mage's book | Mage Arena | ☐ |
 | Bloodbark body | ? | ☐ |
 | Bloodbark helm | ? | ☐ |
@@ -240,7 +240,7 @@ Ref: [ladlorchart.com](https://ladlorchart.com/) - current as of at least **v1.9
 | Voidwaker | PvP | ☐ |
 | Necklace of rupture | ? | ☐ |
 | Lightbearer | ToA | ☐ |
-| Rite of vile transferrence | Yama | ☐ |
+| Rite of vile transference | Yama | ☐ |
 | Desert amulet 4 | Diary | ☐ |
 | Eye of ayak | Doom | ☐ |
 | Toxic blowpipe | Zulrah | ☐ |
