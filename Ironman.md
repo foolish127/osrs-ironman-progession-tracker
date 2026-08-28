@@ -81,10 +81,45 @@
 <details>
 <summary><strong>Task tables &amp; goals (Duradel &amp; Konar)</strong> — click to expand</summary>
 
-
 **Current slayer goals:** roll a Hydra task → kill **Alchemical Hydra** for the **Hydra claw** (→ Dragon hunter lance).
 
 **Then unblock Greater Demons** (Kalphites takes its block slot) and keep that task - use Greater Demon assignments for **Skotizo**, and eventually **K'ril Tsutsaroth** once **Lightbearer** (ToA) is unlocked.
+
+### Mortimer
+
+Nothing blocked. All tasks have a superior variant.
+
+| Monster | Quantity | Weight |
+|---|:---:|:---:|
+| Aberrant Spectres | 80–120 | 3.7% |
+| Aquanites | 40–60 | 3.7% |
+| Banshees | 35–50 | 3.7% |
+| Basilisks | 40–60 | 3.7% |
+| Cave Crawlers | 35–50 | 3.7% |
+| Cave Horrors | 80–120 | 3.7% |
+| Cockatrice | 35–50 | 3.7% |
+| Crawling Hands | 35–50 | 3.7% |
+| Dark Beasts | 40–60 | 3.7% |
+| Drakes | 40–60 | 3.7% |
+| Gargoyles | 120–180 | 3.7% |
+| Gryphons | 80–120 | 3.7% |
+| Hydras | 150–200 | 3.7% |
+| Infernal Mages | 35–50 | 3.7% |
+| Jellies | 80–120 | 3.7% |
+| Kurask | 40–60 | 3.7% |
+| Pyrefiends | 35–50 | 3.7% |
+| Turoth | 80–120 | 3.7% |
+| Venators | 120–180 | 3.7% |
+| Warped Creatures | 80–120 | 3.7% |
+| Wyrms | 80–120 | 3.7% |
+| Abyssal Demons | 200–250 | 3.0% |
+| Araxytes | 200–250 | 3.0% |
+| Bloodveld | 200–250 | 3.0% |
+| Custodian Stalkers | 80–120 | 3.0% |
+| Dust Devils | 200–250 | 3.0% |
+| Nechryael | 200–250 | 3.0% |
+| Smoke Devils | 80–120 | 3.0% |
+| 🔒 Rockslugs | 35–50 | 0.0% |
 
 ### Duradel
 
