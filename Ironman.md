@@ -81,7 +81,7 @@
 <details>
 <summary><strong>Task tables &amp; goals (Duradel &amp; Konar)</strong> — click to expand</summary>
 
-**Mortimer tasks completed: 19**
+**Mortimer tasks completed: 20**
 
 | Tasks | Unlock | |
 |:---:|---|:---:|
