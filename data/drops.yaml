@@ -1348,3 +1348,12 @@ drops:
     notes: 2nd drop, 545 kc after the ring completed at 582 - 1127 total kc. Rate is
       1/543 not 1/181 - duplicate protection ends once the set is complete, so a roll
       splits three ways between eye, fang and heart
+
+  - boss: Superior Slayer Creatures
+    kc: 167
+    item: Mist battlestaff
+    date: 8/26/2026
+    droprate: 67
+    notes: Rate scales with the monster's Slayer requirement - the mist staff
+      denominator is always exactly 1/3 of the imbued heart's, so 1/67 pairs with
+      the 1/200 used for the heart above
