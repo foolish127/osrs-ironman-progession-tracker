@@ -121,6 +121,14 @@ Nothing blocked. All tasks have a superior variant.
 | Smoke Devils | 80–120 | 3.0% |
 | 🔒 Rockslugs | 35–50 | 0.0% |
 
+Goal: eternal gem. Rate is `1/(8 x (200 - floor((req+55)^2/125)))`, so pick by Slayer req.
+Best picks: Hydras 1/160, Smoke Devils 1/200, Araxytes 1/224, Dark Beasts 1/256.
+
+Extensions: keep Araxytes (1/224) and Abyssal Demons (1/352, also Sire). Drop Bloodveld
+(1/896) and Dust Devils (1/680) - worst rates on his list, extended to 200-250, and long
+tasks cost re-rolls at the good ones. Greater Demons and Cave Krakens have no superior so
+he never assigns them; Greater Demons still earns its slot via other masters.
+
 ### Duradel
 
 | Monster | Quantity | Weight |
