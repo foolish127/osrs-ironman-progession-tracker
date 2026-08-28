@@ -81,11 +81,6 @@
 <details>
 <summary><strong>Task tables &amp; goals (Duradel &amp; Konar)</strong> — click to expand</summary>
 
-**Mortimer tasks completed: 50** - all Mortifiers unlocked.
-
-**Costs to know:** task skip is **100 points** (30 elsewhere), and he has only **2 block slots
-at 120 points each** (others give 6-7). Tasks can't be swapped via Turael.
-
 
 **Current slayer goals:** roll a Hydra task → kill **Alchemical Hydra** for the **Hydra claw** (→ Dragon hunter lance).
 
