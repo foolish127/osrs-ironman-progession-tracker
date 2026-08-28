@@ -81,11 +81,10 @@
 <details>
 <summary><strong>Task tables &amp; goals (Duradel &amp; Konar)</strong> — click to expand</summary>
 
-**Mortimer tasks completed: 24**
+**Mortimer tasks completed: 25**
 
 | Tasks | Unlock |
 |:---:|---|
-| 25 | Superior Drop Rate Modifier |
 | 40 | Slayer XP Modifier |
 | 50 | Third task choice |
 
