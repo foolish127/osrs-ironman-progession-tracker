@@ -24,6 +24,7 @@ OSRS_DATA_DIR=data/gim RSN="GIM Foolin" HISCORES_VARIANT=hiscore_oldschool pytho
 Planning notes live alongside the data as plain markdown: **[Ironman.md](Ironman.md)**
 (maxing, boss order, remaining elite diary tasks, AFK methods) and
 **[GIM.md](GIM.md)** (Sailing, guide-parity gaps, Thieving plan).
+**[Wishlist.md](Wishlist.md)** (additions I’d want in the game).
 
 ---
 
