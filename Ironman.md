@@ -81,11 +81,10 @@
 <details>
 <summary><strong>Task tables &amp; goals (Duradel &amp; Konar)</strong> — click to expand</summary>
 
-**Mortimer tasks completed: 39**
+**Mortimer tasks completed: 40**
 
 | Tasks | Unlock |
 |:---:|---|
-| 40 | Slayer XP Modifier |
 | 50 | Third task choice |
 
 **Costs to know:** task skip is **100 points** (30 elsewhere), and he has only **2 block slots
