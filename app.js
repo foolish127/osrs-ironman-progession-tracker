@@ -68,12 +68,21 @@
             if (!host) return;
             if (!gearTargets.length) { host.innerHTML = ''; return; }
             const have = g => String(g.got).toLowerCase() === 'yes';
-            const got = gearTargets.filter(have).length;
-            const pct = got / gearTargets.length * 100;
+            const skip = g => String(g.skip).toLowerCase() === 'yes';
+            const total = gearTargets.length;
+            const nSkip = gearTargets.filter(skip).length;
+            const got = gearTargets.filter(g => have(g) && !skip(g)).length;
+            // Skipped items drop out of the goal entirely: the bar's red tail is
+            // carved off the right, and green reaching it means 100% of what's left.
+            const chasing = total - nSkip;
+            const pct = chasing ? got / chasing * 100 : 0;
+            const greenW = total ? got / total * 100 : 0;
+            const skipW = total ? nSkip / total * 100 : 0;
             const cells = gearTargets.map(g => {
-                const tip = (g.name + (g.source ? ' - ' + g.source : '')).replace(/"/g, '&quot;');
+                const tip = (g.name + (g.source ? ' - ' + g.source : '')
+                          + (skip(g) ? ' - skipping' : '')).replace(/"/g, '&quot;');
                 const ch = g.name.charAt(0).replace(/'/g, '');
-                return '<div class="gt-item' + (have(g) ? ' gt-have' : '') + '" data-tooltip="' + tip + '">'
+                return '<div class="gt-item' + (have(g) ? ' gt-have' : '') + (skip(g) ? ' gt-skip' : '') + '" data-tooltip="' + tip + '">'
                      + '<img src="' + (g.img || '') + '" alt="' + tip + '" loading="lazy" '
                      + 'onerror="this.style.display=&quot;none&quot;; this.parentElement.textContent=&quot;' + ch + '&quot;;">'
                      + '</div>';
@@ -83,9 +92,13 @@
               + '<a href="https://ladlorchart.com/" target="_blank" rel="noopener">Ladlor\u2019s Chart</a></div>'
               + '<div class="progress-section">'
               + '<div class="progress-header"><span class="progress-title">Gear obtained</span>'
-              + '<span class="progress-stats"><span class="obtained">' + got + '</span> <span class="total">/ ' + gearTargets.length + '</span></span></div>'
-              + '<div class="progress-bar"><div class="progress-fill" style="width:' + pct + '%"></div></div>'
-              + '<div class="progress-percentage">' + pct.toFixed(1) + '%</div></div>'
+              + '<span class="progress-stats"><span class="obtained">' + got + '</span> <span class="total">/ ' + chasing + '</span>'
+              + (nSkip ? '<span class="skipped"> · ' + nSkip + ' skipped</span>' : '') + '</span></div>'
+              + '<div class="progress-bar"><div class="progress-fill" style="width:' + greenW + '%"></div>'
+              + (nSkip ? '<div class="progress-skip" style="width:' + skipW + '%" title="' + nSkip + ' skipped - not counted toward the goal"></div>' : '')
+              + '</div>'
+              + '<div class="progress-percentage">' + pct.toFixed(1) + '%'
+              + (nSkip ? ' of ' + chasing + ' chased' : '') + '</div></div>'
               + '<div class="gt-grid">' + cells + '</div>';
         }
 

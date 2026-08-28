@@ -37,6 +37,7 @@ gear:
     type: item
     img: https://oldschool.runescape.wiki/images/Fighter_torso.png
     source: Barbarian Assault
+    skip: yes
     got: no
   - name: Granite body
     type: item
@@ -145,6 +146,7 @@ gear:
     type: item
     img: https://oldschool.runescape.wiki/images/Mage's_book.png
     source: Mage Arena
+    skip: yes
     got: no
   - name: Mixed hide cape
     type: item
@@ -271,14 +273,17 @@ gear:
   - name: Bloodbark helm
     type: item
     img: https://oldschool.runescape.wiki/images/Bloodbark_helm.png
+    skip: yes
     got: no
   - name: Bloodbark body
     type: item
     img: https://oldschool.runescape.wiki/images/Bloodbark_body.png
+    skip: yes
     got: no
   - name: Bloodbark legs
     type: item
     img: https://oldschool.runescape.wiki/images/Bloodbark_legs.png
+    skip: yes
     got: no
   - name: Ancient icon
     type: item
@@ -292,6 +297,7 @@ gear:
     type: item
     img: https://oldschool.runescape.wiki/images/Warped_sceptre.png
     source: Slayer
+    skip: yes
     got: no
   - name: Reptile Got Ripped
     type: slayer
@@ -301,6 +307,7 @@ gear:
   - name: Greater Challenge
     type: slayer
     img: https://oldschool.runescape.wiki/images/Greater_demon_icon.png
+    skip: yes
     got: no
   - name: Prescription goggles
     type: item

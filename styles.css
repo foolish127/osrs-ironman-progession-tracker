@@ -601,3 +601,37 @@
     box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 .gt-item:hover { border-color: var(--accent-gold); }
+
+/* Skipped gear: not being chased, struck through in red and carved out of the goal. */
+.gt-item.gt-skip {
+    opacity: 0.45;
+    filter: grayscale(1);
+    border-color: color-mix(in srgb, var(--accent-red, #f85149) 50%, var(--border, #333));
+    background: color-mix(in srgb, var(--accent-red, #f85149) 8%, transparent);
+}
+.gt-item.gt-skip::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 6px;
+    pointer-events: none;
+    background: linear-gradient(to top right,
+        transparent calc(50% - 1px),
+        var(--accent-red, #f85149) calc(50% - 1px),
+        var(--accent-red, #f85149) calc(50% + 1px),
+        transparent calc(50% + 1px));
+}
+.gt-item.gt-skip:hover { opacity: 0.85; filter: grayscale(0.4); }
+
+#gear-targets .progress-bar { position: relative; }
+#gear-targets .progress-skip {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    opacity: 0.7;
+    background: repeating-linear-gradient(45deg,
+        var(--accent-red, #f85149) 0 4px,
+        color-mix(in srgb, var(--accent-red, #f85149) 45%, transparent) 4px 8px);
+}
+#gear-targets .progress-stats .skipped { color: var(--accent-red, #f85149); }
