@@ -81,11 +81,7 @@
 <details>
 <summary><strong>Task tables &amp; goals (Duradel &amp; Konar)</strong> — click to expand</summary>
 
-**Mortimer tasks completed: 49**
-
-| Tasks | Unlock |
-|:---:|---|
-| 50 | Third task choice |
+**Mortimer tasks completed: 50** - all Mortifiers unlocked.
 
 **Costs to know:** task skip is **100 points** (30 elsewhere), and he has only **2 block slots
 at 120 points each** (others give 6-7). Tasks can't be swapped via Turael.
