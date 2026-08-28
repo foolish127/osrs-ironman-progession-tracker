@@ -215,7 +215,7 @@ Blast Furnace gold.
 |:---:|---|:---:|---|
 | 67 ✅ | Camphor hull: speed 2→2.5 | 59 ✅ | 16 large camphor hull parts · 600 adamantite nails (**Smithing 74**) · 25 swamp tar · 5 lead bars (~911k gp) |
 | 74 ✅ | Rune salvaging hook | 66 ❌ | 4 ironwood planks · 16 rune nails · 6 runite bars · 4 lead bars · 4 cupronickel bars · 1 rope |
-| 78 ❌ | Eternal brazier (ship fitting): unlocks Northern Ocean; schematic on Buccaneers' Haven (dock at 76) | 72 ❌ | 4 ironwood planks · 16 rune nails · 6 runite bars · 6 cupronickel bars · 250 te + 250 efh + 250 urt salt |
+| 78 ✅ | Eternal brazier (ship fitting): unlocks Northern Ocean; schematic on Buccaneers' Haven (dock at 76) | 72 ❌ | 4 ironwood planks · 16 rune nails · 6 runite bars · 6 cupronickel bars · 250 te + 250 efh + 250 urt salt |
 | 80 ❌ | Fremennik shipwreck · Ironwood cargo hold (Sloop 210), Fremennik needs eternal brazier | 77 ❌ | Hold: 8 ironwood planks · 32 rune nails · 3 cupronickel bars |
 | 80 ❌ | Crew: Bosun Zarah (Etceteria) |  | Royal Trouble ✅ · Hard Fremennik Diary ❌ |
 <details>
@@ -241,7 +241,7 @@ Blast Furnace gold.
 78 [████████████░░░░░░░░] 80   64%
 ```
 
-**Sailing 78** (1,629,200 / 1,986,068 xp). **356,868 xp left** ≈ **~1,771 martial salvages** (~201.5 xp ea). Next salvage unlock = the **Fremennik shipwreck (80)**, which needs the **eternal brazier** ship fitting (78, unlocks the Northern Ocean - schematic on Buccaneers' Haven, dock at 76), now buildable.
+**Sailing 78** (1,629,200 / 1,986,068 xp). **356,868 xp left** ≈ **~1,771 martial salvages** (~201.5 xp ea). Next salvage unlock = the **Fremennik shipwreck (80)**, which needs the **eternal brazier** ship fitting (78, unlocks the Northern Ocean - schematic on Buccaneers' Haven, dock at 76). Sailing 78 is met, but the build still needs **Construction 72** (currently 63).
 
 ---
 
