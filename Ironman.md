@@ -83,11 +83,11 @@
 
 **Mortimer tasks completed: 21**
 
-| Tasks | Unlock | |
-|:---:|---|:---:|
-| 25 | Superior Drop Rate Modifier | ❌ |
-| 40 | Slayer XP Modifier | ❌ |
-| 50 | Third task choice | ❌ |
+| Tasks | Unlock |
+|:---:|---|
+| 25 | Superior Drop Rate Modifier |
+| 40 | Slayer XP Modifier |
+| 50 | Third task choice |
 
 **Costs to know:** task skip is **100 points** (30 elsewhere), and he has only **2 block slots
 at 120 points each** (others give 6-7). Tasks can't be swapped via Turael.
