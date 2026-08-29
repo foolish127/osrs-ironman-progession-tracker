@@ -36,9 +36,9 @@ Items from the guide I skipped - go back and do these.
 | 2 | Tithe Farm for rewards: herb sack (250 pts) + seed box (250) = 500 total | Farming | 76 |
 | 3 | Farming 85 ❌ (82 boosted): celastrus + hard farming contracts | Farming | 76 |
 | 4 | Mine sandstone | Mining | 84 |
-| 5 | Do a ton of sea charting | Sailing | 79 |
-| 6 | Swordfish/Marlin rank of Tempor Tantrum Barracuda trial, collect stormy key, barrel stand and whirlpool surprises | Sailing | 79 |
-| 7 | Build a keg and fill it with whirlpool surprises | Sailing | 79 |
+| 5 | Do a ton of sea charting | Sailing | 80 |
+| 6 | Swordfish/Marlin rank of Tempor Tantrum Barracuda trial, collect stormy key, barrel stand and whirlpool surprises | Sailing | 80 |
+| 7 | Build a keg and fill it with whirlpool surprises | Sailing | 80 |
 | 8 | Kill Dagannoth Rex for the berserker ring - keep the Fremennik shield if it drops | Combat |  |
 | 9 | Imbue the berserker ring and salve amulet at the PvP arena | Combat |  |
 | 10 | Barbarian fishing to Agility 65 ❌ + Fishing 88 ❌ (CoX) - cut fish for 70 Cooking | Fis / Agi | 75 / 56 |
@@ -94,7 +94,7 @@ Items from the guide I skipped - go back and do these.
 | Ranged | 45 | 62 | 93 | 73 | 🟢 +28 | 🟢 +11 | 🔴 −20 |
 | Runecraft | 24 | 40 | 95 | 54 | 🟢 +30 | 🟢 +14 | 🔴 −41 |
 | Mining | 44 | 73 | 97 | 84 | 🟢 +40 | 🟢 +11 | 🔴 −13 |
-| Sailing | 1 | 67 | 78 | 79 | 🟢 +78 | 🟢 +12 | 🟢 +1 |
+| Sailing | 1 | 67 | 78 | 80 | 🟢 +79 | 🟢 +13 | 🟢 +2 |
 
 </details>
 
@@ -216,8 +216,8 @@ Blast Furnace gold.
 | 67 ✅ | Camphor hull: speed 2→2.5 | 59 ✅ | 16 large camphor hull parts · 600 adamantite nails (**Smithing 74**) · 25 swamp tar · 5 lead bars (~911k gp) |
 | 74 ✅ | Rune salvaging hook | 66 ❌ | 4 ironwood planks · 16 rune nails · 6 runite bars · 4 lead bars · 4 cupronickel bars · 1 rope |
 | 78 ✅ | Eternal brazier (ship fitting): unlocks Northern Ocean; schematic on Buccaneers' Haven (dock at 76) | 72 ❌ | 4 ironwood planks · 16 rune nails · 6 runite bars · 6 cupronickel bars · 250 te + 250 efh + 250 urt salt |
-| 80 ❌ | Fremennik shipwreck · Ironwood cargo hold (Sloop 210), Fremennik needs eternal brazier | 77 ❌ | Hold: 8 ironwood planks · 32 rune nails · 3 cupronickel bars |
-| 80 ❌ | Crew: Bosun Zarah (Etceteria) |  | Royal Trouble ✅ · Hard Fremennik Diary ❌ |
+| 80 ✅ | Fremennik shipwreck · Ironwood cargo hold (Sloop 210), Fremennik needs eternal brazier | 77 ❌ | Hold: 8 ironwood planks · 32 rune nails · 3 cupronickel bars |
+| 80 ✅ | Crew: Bosun Zarah (Etceteria) |  | Royal Trouble ✅ · Hard Fremennik Diary ❌ |
 <details>
 <summary><strong>Late-game milestones (Sailing 85+)</strong>, collapsed (click to expand)</summary>
 
@@ -235,31 +235,39 @@ Blast Furnace gold.
 
 ---
 
-### Progress to 80 (Fremennik shipwreck)
+### Progress to 87 (Merchant shipwreck)
 
 ```
-79 [████████████████░░░░] 80   81%
+80 [░░░░░░░░░░░░░░░░░░░░] 87   0%
 ```
 
-**Sailing 79** (1,798,808 / 1,986,068 xp). **187,260 xp left** ≈ **~1,660 martial salvages** (~112.8 xp ea, Jenkins D4 + Siad D3 on the hooks while you sort). Next salvage unlock = the **Fremennik shipwreck (80)**, which needs the **eternal brazier** ship fitting (78, unlocks the Northern Ocean - schematic on Buccaneers' Haven, dock at 76). Sailing 78 is met, but the build still needs **Construction 72** (currently 63).
+**Sailing 80** (1,986,068 / 3,972,294 xp). **1,986,226 xp left** to the **Merchant shipwreck (87)**,
+the next salvage tier after Fremennik. At ~132.9 xp per Fremennik salvage (Jenkins D4 + Siad D3 on
+the hooks while you sort) that is **~14,950 salvages**.
+
+Fremennik salvage itself is gated on the **eternal brazier** (Sailing 78 met, **Construction 72**),
+so 69 Construction plus a crystal saw. Until then you are still on martial salvage at ~112.8.
 
 ---
 
-### Alching martial salvage drops (mercenary)
+### Alching Fremennik salvage drops
 
-Martial salvage = 201.5 XP each (138 loot + 63.5 sort). Worth a nat (net after −180).
-Est. qty over **Sailing 75 → 80** (~3,850 martial salvages):
+Fremennik salvage = 162 loot + 75 sort. The four Fremennik helms alch for 36,000 each, which is
+what makes this worth casting on.
+Est. qty over **Sailing 80 → 87** (~14,950 Fremennik salvages):
 
-| Drop | High alch (−180) | Drop rate | Est. qty (75→80) | Total net GP |
+| Drop | High alch (−180) | Drop rate | Est. qty (80→87) | Total net GP |
 |---|---:|---:|---:|---:|
-| Green d'hide body | +2,152 | 100/2,440 | 158 | 340,016 |
-| Amulet of power | +1,933 | 200/2,440 | 316 | 610,828 |
-| Adamant longsword | +1,740 | 200/2,440 | 316 | 549,840 |
-| Adamant 2h sword | +1,740 | 100/2,440 | 158 | 274,920 |
-| Mithril longsword | +600 | 300/2,440 | 473 | 283,800 |
-| Rune longsword | +780 | 10/2,440 | 16 | 12,480 |
-| Total | | | **~1,437 nats** | **~2,071,884** |
+| Archer helm | +35,820 | 8/2,670 | 45 | 1,604,521 |
+| Berserker helm | +35,820 | 8/2,670 | 45 | 1,604,521 |
+| Farseer helm | +35,820 | 8/2,670 | 45 | 1,604,521 |
+| Warrior helm | +35,820 | 8/2,670 | 45 | 1,604,521 |
+| Fremennik helm | +2,820 | 8/2,670 | 45 | 126,319 |
+| Total | | | **~224 nats** | **~6,544,404** |
 
-Keep, do NOT alch: adamant/rune/dragon cannonballs (cannon ammo), mahogany/camphor/ironwood logs (hull parts). Skip alching mithril/adamant arrowtips, dart tips and arrows - below (or barely above) nat cost.
+Keep, do NOT alch: rune cannonballs (cannon ammo), mahogany planks and ironwood/rosewood logs
+(hull parts and shipbuilding), ensouled troll heads (soul bearer, reanimate at the Dark Altar),
+cotton/ironwood/rosewood seeds, umbral frags, and the raw fish. Mithril ore alchs for 97 and
+astral runes for 30, both below nat cost.
 
 </details>
