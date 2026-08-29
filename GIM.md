@@ -68,7 +68,7 @@ Items from the guide I skipped - go back and do these.
 | Skill | Ch 1 | Ch 2 | Ch 3 | Mine | vs Ch 1 | vs Ch 2 | vs Ch 3 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Prayer | 43 | 70 | 76 | 54 | 🟢 +11 | 🔴 −16 | 🔴 −22 |
-| Magic | 63 | 89 | 96 | 79 | 🟢 +16 | 🔴 −10 | 🔴 −17 |
+| Magic | 63 | 89 | 96 | 80 | 🟢 +17 | 🔴 −9 | 🔴 −16 |
 | Construction | 39 | 71 | 83 | 63 | 🟢 +24 | 🔴 −8 | 🔴 −20 |
 | Agility | 51 | 98 | 98 | 56 | 🟢 +5 | 🔴 −42 | 🔴 −42 |
 | Herblore | 40 | 73 | 84 | 61 | 🟢 +21 | 🔴 −12 | 🔴 −23 |
