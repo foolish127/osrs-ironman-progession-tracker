@@ -11,6 +11,7 @@ more than a sentence of reasoning, put the detail in a section below the table.
 | 1 | POH / Construction | Add the necklace of passage to the jewellery box | The obvious gap in the box |
 | 2 | Slayer | A direct teleport to Mortimer in Wyrmscraig Cavern | You must walk there to read a task's exact modifier |
 | 3 | Slayer | Let Mortimer's Mortifiers be toggled off individually | Dead rolls crowd out useful ones: XP at 99 Slayer, clues when I don't want them |
+| 4 | Herblore | Bastion potions should not need vials of blood | The vial is the whole bottleneck, not the herb |
 
 ---
 
