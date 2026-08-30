@@ -623,6 +623,27 @@
             return merged;
         }
 
+        // Stackable items whose wiki inventory icon carries a quantity suffix, so the
+        // plain "<Name>.png" URL 404s. Shared by the overview and the collection grids.
+        const ITEM_IMAGE_OVERRIDES = {
+            'Sunfire splinters': 'Sunfire_splinters_4',
+            'Kronos seed': 'Kronos_seed_5',
+            'Abyssal pearls': 'Abyssal_pearls_5'
+        };
+
+        // Plain wiki filename for an item, no extension - also the base the onerror
+        // handler appends quantity suffixes to.
+        function getItemImageFile(itemName) {
+            return encodeURIComponent(itemName.replace(/ /g, '_'));
+        }
+
+        function getItemImageUrl(itemName) {
+            const formatted = ITEM_IMAGE_OVERRIDES[itemName]
+                ? encodeURIComponent(ITEM_IMAGE_OVERRIDES[itemName])
+                : getItemImageFile(itemName);
+            return `https://oldschool.runescape.wiki/images/${formatted}.png`;
+        }
+
         function renderCollectionLog(searchTerm = '', statusFilter = 'all') {
             const container = document.getElementById('clogContainer');
             if (!clogData) {
@@ -705,29 +726,6 @@
                 ? Object.fromEntries(clogCategories.map(c => [c.name, { obtained: c.obtained, total: c.total, icon: CAT_ICONS[c.name] || '📦' }]))
                 : getCategoryStats();
             const pct = ((clogData.total_obtained / clogData.total_items) * 100).toFixed(1);
-            
-            // Stackable items whose wiki inventory icon carries a quantity suffix,
-            // so the plain "<Name>.png" URL 404s.
-            const ITEM_IMAGE_OVERRIDES = {
-                'Sunfire splinters': 'Sunfire_splinters_4',
-                'Kronos seed': 'Kronos_seed_5',
-                'Abyssal pearls': 'Abyssal_pearls_5'
-            };
-
-            // Plain wiki filename for an item, no extension - also the base the
-            // onerror handler appends quantity suffixes to.
-            function getItemImageFile(itemName) {
-                return encodeURIComponent(itemName.replace(/ /g, '_'));
-            }
-
-            // Helper to get wiki image URL
-            function getItemImageUrl(itemName) {
-                // Use wiki's standard image naming convention
-                const formatted = ITEM_IMAGE_OVERRIDES[itemName]
-                    ? encodeURIComponent(ITEM_IMAGE_OVERRIDES[itemName])
-                    : getItemImageFile(itemName);
-                return `https://oldschool.runescape.wiki/images/${formatted}.png`;
-            }
             
             // Build overview HTML
             let html = `
@@ -836,12 +834,15 @@
                         <span class="collection-count"><span class="obtained">${coll.obtained_count}</span> <span class="total">/ ${coll.total_count}</span></span>
                     </div>
                     <div class="collection-items">
-                        <div class="item-list">
-                            ${items.map(i => `<div class="item ${i.obtained ? 'obtained' : 'missing'}">
-                                <span class="item-check">${i.obtained ? '✓' : '○'}</span>
-                                <span class="item-name">${escapeTargets(i.name)}</span>
-                                ${i.date ? `<span class="item-date">${formatShortDate(i.date)}</span>` : ''}
-                            </div>`).join('')}
+                        <div class="clog-grid">
+                            ${items.map(i => {
+                                const date = i.obtained && i.date ? formatShortDate(i.date) : '';
+                                const tip = (i.name + (date ? ' · ' + date : '')).replace(/"/g, '&quot;');
+                                const ch = i.name.charAt(0).replace(/'/g, '');
+                                return `<div class="clog-cell ${i.obtained ? 'obtained' : 'missing'}" data-tooltip="${tip}">
+                                <img src="${getItemImageUrl(i.name)}" data-icon-base="${getItemImageFile(i.name)}" alt="${tip}" loading="lazy" onerror="clogIconFallback(this, '${ch}')">
+                            </div>`;
+                            }).join('')}
                         </div>
                     </div>
                 </div>`;

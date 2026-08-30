@@ -149,6 +149,26 @@
         .collection.complete .collection-count .total { color: var(--accent-green); }
         .clog-toggle { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: var(--text-muted); white-space: nowrap; cursor: pointer; }
         .clog-toggle input { accent-color: var(--accent-gold); cursor: pointer; }
+        /* Collection contents as an icon grid rather than stacked text rows. */
+        .clog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(42px, 1fr)); gap: 5px; }
+        .clog-cell {
+            position: relative; aspect-ratio: 1; display: flex; align-items: center; justify-content: center;
+            background: var(--bg-dark); border: 1px solid var(--border); border-radius: 4px;
+            font-size: 0.75rem; color: var(--text-muted);
+            transition: opacity .15s, filter .15s, border-color .15s;
+        }
+        .clog-cell img { max-width: 78%; max-height: 78%; image-rendering: pixelated; }
+        .clog-cell.missing { opacity: 0.3; filter: grayscale(1); }
+        .clog-cell.missing:hover { opacity: 1; filter: none; }
+        .clog-cell.obtained { border-color: color-mix(in srgb, var(--accent-green) 45%, var(--border)); background: color-mix(in srgb, var(--accent-green) 8%, var(--bg-dark)); }
+        .clog-cell:hover { border-color: var(--accent-gold); }
+        .clog-cell[data-tooltip]:hover::after {
+            content: attr(data-tooltip);
+            position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%);
+            white-space: nowrap; background: var(--bg-dark); color: var(--text-primary);
+            border: 1px solid var(--accent-gold); border-radius: 4px; padding: 0.3rem 0.5rem;
+            font-size: 0.75rem; z-index: 20; pointer-events: none; box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+        }
         .collection-items { display: none; padding: 0.75rem 1rem; border-top: 1px solid var(--border); background: var(--bg-dark); }
         .collection.expanded .collection-items { display: block; }
         .item-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.25rem; }
