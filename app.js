@@ -768,17 +768,8 @@
                     </div>` : ''}
                 </div>`;
 
-            // Progress section
-            html += `
-                <div class="progress-section">
-                    <div class="progress-header">
-                        <span class="progress-title">Collection Log Progress</span>
-                        <span class="progress-stats"><span class="obtained">${clogData.total_obtained}</span> <span class="total">/ ${clogData.total_items}</span></span>
-                    </div>
-                    <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>
-                    <div class="progress-percentage">${pct}%</div>
-                </div>`;
             
+            const untouched = Object.values(clogData.collections).filter(c => !c.obtained_count).length;
             html += `<div class="search-filter">
                     <input type="text" class="search-input" id="clogSearch" placeholder="Search items or collections..." value="${searchTerm}">
                     <select class="filter-select" id="clogFilter">
@@ -786,23 +777,38 @@
                         <option value="obtained" ${statusFilter==='obtained'?'selected':''}>Obtained Only</option>
                         <option value="missing" ${statusFilter==='missing'?'selected':''}>Missing Only</option>
                     </select>
+                    <label class="clog-toggle"><input type="checkbox" id="clogUntouched"> Show ${untouched} untouched</label>
                 </div>
                 <div id="clogList"></div>`;
-            
+
             container.innerHTML = html;
-            
-            document.getElementById('clogSearch').addEventListener('input', e => renderClogList(e.target.value, document.getElementById('clogFilter').value));
-            document.getElementById('clogFilter').addEventListener('change', e => renderClogList(document.getElementById('clogSearch').value, e.target.value));
-            
-            renderClogList(searchTerm, statusFilter);
+
+            const readState = () => [
+                document.getElementById('clogSearch').value,
+                document.getElementById('clogFilter').value,
+                document.getElementById('clogUntouched').checked
+            ];
+            const rerender = () => renderClogList(...readState());
+            document.getElementById('clogSearch').addEventListener('input', rerender);
+            document.getElementById('clogFilter').addEventListener('change', rerender);
+            document.getElementById('clogUntouched').addEventListener('change', rerender);
+
+            renderClogList(searchTerm, statusFilter, false);
         }
 
-        function renderClogList(searchTerm, statusFilter) {
+        function renderClogList(searchTerm, statusFilter, showUntouched = false) {
             const list = document.getElementById('clogList');
             const search = searchTerm.toLowerCase();
             let html = '';
 
-            for (const [collName, coll] of Object.entries(clogData.collections).sort((a,b) => a[0].localeCompare(b[0]))) {
+            // Partial first (what you're actually working on), then complete, then
+            // untouched. Untouched are hidden unless toggled on or a search is active.
+            const rank = c => !c.obtained_count ? 2 : (c.obtained_count >= c.total_count ? 1 : 0);
+            const entries = Object.entries(clogData.collections)
+                .filter(([, c]) => showUntouched || search || c.obtained_count)
+                .sort((a, b) => rank(a[1]) - rank(b[1]) || a[0].localeCompare(b[0]));
+
+            for (const [collName, coll] of entries) {
                 let obtained = coll.obtained || [];
                 let missing = coll.missing || [];
                 
@@ -823,7 +829,8 @@
                 
                 if (items.length === 0) continue;
                 
-                html += `<div class="collection">
+                const done = coll.total_count > 0 && coll.obtained_count >= coll.total_count;
+                html += `<div class="collection${done ? ' complete' : ''}">
                     <div class="collection-header" onclick="this.parentElement.classList.toggle('expanded')">
                         <span class="collection-name">${escapeTargets(collName)}</span>
                         <span class="collection-count"><span class="obtained">${coll.obtained_count}</span> <span class="total">/ ${coll.total_count}</span></span>

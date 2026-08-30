@@ -141,6 +141,14 @@
         .collection-count { font-family: 'Fira Code', monospace; font-size: 0.85rem; }
         .collection-count .obtained { color: var(--accent-green); }
         .collection-count .total { color: var(--text-muted); }
+        /* Fully logged collections read as done at a glance. */
+        .collection.complete { border-color: var(--accent-green); background: color-mix(in srgb, var(--accent-green) 7%, var(--bg-card)); }
+        .collection.complete .collection-name { color: var(--accent-green); }
+        .collection.complete .collection-name::after { content: ' ¹3'; }
+        .collection.complete .collection-count .obtained,
+        .collection.complete .collection-count .total { color: var(--accent-green); }
+        .clog-toggle { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: var(--text-muted); white-space: nowrap; cursor: pointer; }
+        .clog-toggle input { accent-color: var(--accent-gold); cursor: pointer; }
         .collection-items { display: none; padding: 0.75rem 1rem; border-top: 1px solid var(--border); background: var(--bg-dark); }
         .collection.expanded .collection-items { display: block; }
         .item-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.25rem; }
