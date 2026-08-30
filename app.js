@@ -623,6 +623,49 @@
             return merged;
         }
 
+        // Define category mappings (matching in-game categories)
+        const categoryMappings = {
+            'Bosses': [
+                'Abyssal Sire', 'Alchemical Hydra', 'Araxxor', 'Barrows', 'Bryophyta',
+                'Callisto', 'Cerberus', 'Chaos Elemental', 'Chaos Fanatic', 'Commander Zilyana',
+                'Corporeal Beast', 'Crazy Archaeologist', 'Dagannoth', 'Duke Sucellus',
+                'General Graardor', 'Giant Mole', 'Grotesque Guardians', 'Hespori', 'Kalphite Queen',
+                'King Black Dragon', 'Kraken', 'Kree', 'K\'ril', 'Lunar Chests',
+                'Nex', 'Nightmare', 'Obor', 'Phantom Muspah', 'Sarachnis', 'Scorpia', 'Scurrius',
+                'Skotizo', 'Sol Heredit', 'Spindel', 'Hueycoatl', 'Leviathan', 'Whisperer',
+                'Thermonuclear', 'Smoke Devil', 'Vardorvis', 'Venenatis', 'Vet\'ion', 'Vorkath',
+                'Zulrah', 'Amoxliatl', 'Artio', 'Calvar', 'Tormented Demons', 'Perilous Moons', 'Yama',
+                'Gauntlet', 'Inferno', 'Fight Caves', 'Colosseum', 'Fortis'
+            ],
+            'Raids': [
+                'Chambers of Xeric', 'Theatre of Blood', 'Tombs of Amascut'
+            ],
+            'Clues': [
+                'Treasure Trails', 'Beginner Clue', 'Easy Clue', 'Medium Clue',
+                'Hard Clue', 'Elite Clue', 'Master Clue', 'Shared Clue', 'Shared Treasure'
+            ],
+            'Minigames': [
+                'Barbarian Assault', 'Brimhaven Agility', 'Castle Wars', 'Fishing Trawler',
+                'Gnome Restaurant', 'Guardians of the Rift', 'Hallowed Sepulchre', 'Last Man Standing',
+                'Magic Training Arena', 'Mahogany Homes', 'Pest Control', 'Rogues',
+                'Shades of Mort', 'Soul Wars', 'Tempoross', 'Tithe Farm', 'Trouble Brewing',
+                'Volcanic Mine', 'Wintertodt', 'Giants\' Foundry', 'Zalcano', 'Mage Arena'
+            ],
+            'Other': [] // Everything else goes here
+        };
+
+        // Which overview card is filtering the list, or null for all.
+        let clogCategoryFilter = null;
+
+        function clogCategoryOf(collName) {
+            const lower = collName.toLowerCase();
+            for (const [cat, patterns] of Object.entries(categoryMappings)) {
+                if (cat === 'Other') continue;
+                if (patterns.some(pat => lower.includes(pat.toLowerCase()))) return cat;
+            }
+            return 'Other';
+        }
+
         // Stackable items whose wiki inventory icon carries a quantity suffix, so the
         // plain "<Name>.png" URL 404s. Shared by the overview and the collection grids.
         const ITEM_IMAGE_OVERRIDES = {
@@ -651,36 +694,6 @@
                 return;
             }
 
-            // Define category mappings (matching in-game categories)
-            const categoryMappings = {
-                'Bosses': [
-                    'Abyssal Sire', 'Alchemical Hydra', 'Araxxor', 'Barrows', 'Bryophyta',
-                    'Callisto', 'Cerberus', 'Chaos Elemental', 'Chaos Fanatic', 'Commander Zilyana',
-                    'Corporeal Beast', 'Crazy Archaeologist', 'Dagannoth', 'Duke Sucellus',
-                    'General Graardor', 'Giant Mole', 'Grotesque Guardians', 'Hespori', 'Kalphite Queen',
-                    'King Black Dragon', 'Kraken', 'Kree', 'K\'ril', 'Lunar Chests',
-                    'Nex', 'Nightmare', 'Obor', 'Phantom Muspah', 'Sarachnis', 'Scorpia', 'Scurrius',
-                    'Skotizo', 'Sol Heredit', 'Spindel', 'Hueycoatl', 'Leviathan', 'Whisperer',
-                    'Thermonuclear', 'Smoke Devil', 'Vardorvis', 'Venenatis', 'Vet\'ion', 'Vorkath',
-                    'Zulrah', 'Amoxliatl', 'Artio', 'Calvar', 'Tormented Demons', 'Perilous Moons', 'Yama',
-                    'Gauntlet', 'Inferno', 'Fight Caves', 'Colosseum', 'Fortis'
-                ],
-                'Raids': [
-                    'Chambers of Xeric', 'Theatre of Blood', 'Tombs of Amascut'
-                ],
-                'Clues': [
-                    'Treasure Trails', 'Beginner Clue', 'Easy Clue', 'Medium Clue',
-                    'Hard Clue', 'Elite Clue', 'Master Clue', 'Shared Clue', 'Shared Treasure'
-                ],
-                'Minigames': [
-                    'Barbarian Assault', 'Brimhaven Agility', 'Castle Wars', 'Fishing Trawler',
-                    'Gnome Restaurant', 'Guardians of the Rift', 'Hallowed Sepulchre', 'Last Man Standing',
-                    'Magic Training Arena', 'Mahogany Homes', 'Pest Control', 'Rogues',
-                    'Shades of Mort', 'Soul Wars', 'Tempoross', 'Tithe Farm', 'Trouble Brewing',
-                    'Volcanic Mine', 'Wintertodt', 'Giants\' Foundry', 'Zalcano', 'Mage Arena'
-                ],
-                'Other': [] // Everything else goes here
-            };
 
             // Calculate category totals
             // Fallback when data/<account>/clog_categories.yaml isn't present:
@@ -696,25 +709,7 @@
                 };
 
                 for (const [collName, coll] of Object.entries(clogData.collections)) {
-                    let matched = false;
-                    const collNameLower = collName.toLowerCase();
-
-                    // Check each category (except Other which is the default)
-                    for (const [catName, patterns] of Object.entries(categoryMappings)) {
-                        if (catName === 'Other') continue; // Skip Other, it's the default
-
-                        // Check if collection name contains any pattern
-                        const matchesPattern = patterns.some(p => collNameLower.includes(p.toLowerCase()));
-                        if (matchesPattern) {
-                            stats[catName].obtained += coll.obtained_count || 0;
-                            matched = true;
-                            break;
-                        }
-                    }
-                    // Default to Other if no match
-                    if (!matched) {
-                        stats['Other'].obtained += coll.obtained_count || 0;
-                    }
+                    stats[clogCategoryOf(collName)].obtained += coll.obtained_count || 0;
                 }
                 return stats;
             }
@@ -735,7 +730,7 @@
                         ${Object.entries(categoryStats).map(([name, stats]) => {
                             const catPct = stats.total > 0 ? (stats.obtained / stats.total * 100) : 0;
                             return `
-                            <div class="clog-category">
+                            <div class="clog-category${clogCategoryFilter === name ? ' active' : ''}" data-cat="${name}" role="button" tabindex="0" title="Filter the list by ${name}">
                                 <div class="clog-category-icon">${stats.icon}</div>
                                 <div class="clog-category-name">${name}</div>
                                 <div class="clog-category-count"><span class="obtained">${stats.obtained}</span>/${stats.total}</div>
@@ -791,6 +786,21 @@
             document.getElementById('clogFilter').addEventListener('change', rerender);
             document.getElementById('clogUntouched').addEventListener('change', rerender);
 
+            // Overview cards double as category filters; clicking the active one clears it.
+            container.querySelectorAll('.clog-category').forEach(card => {
+                const pick = () => {
+                    const cat = card.dataset.cat;
+                    clogCategoryFilter = clogCategoryFilter === cat ? null : cat;
+                    container.querySelectorAll('.clog-category').forEach(c =>
+                        c.classList.toggle('active', c.dataset.cat === clogCategoryFilter));
+                    rerender();
+                };
+                card.addEventListener('click', pick);
+                card.addEventListener('keydown', e => {
+                    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(); }
+                });
+            });
+
             renderClogList(searchTerm, statusFilter, false);
         }
 
@@ -803,6 +813,7 @@
             // untouched. Untouched are hidden unless toggled on or a search is active.
             const rank = c => !c.obtained_count ? 2 : (c.obtained_count >= c.total_count ? 1 : 0);
             const entries = Object.entries(clogData.collections)
+                .filter(([name]) => !clogCategoryFilter || clogCategoryOf(name) === clogCategoryFilter)
                 .filter(([, c]) => showUntouched || search || c.obtained_count)
                 .sort((a, b) => rank(a[1]) - rank(b[1]) || a[0].localeCompare(b[0]));
 
@@ -848,7 +859,7 @@
                 </div>`;
             }
             
-            list.innerHTML = html || '<div class="empty-state">No items match your search</div>';
+            list.innerHTML = html || `<div class="empty-state">No items match your search${clogCategoryFilter ? ' in ' + clogCategoryFilter : ''}</div>`;
         }
 
         function renderCombatAchievements(searchTerm = '', statusFilter = 'all') {

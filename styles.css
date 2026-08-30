@@ -217,7 +217,12 @@
         .clog-categories { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.75rem; margin-bottom: 1.25rem; }
         @media (max-width: 768px) { .clog-categories { grid-template-columns: repeat(3, 1fr); } }
         @media (max-width: 480px) { .clog-categories { grid-template-columns: repeat(2, 1fr); } }
-        .clog-category { background: var(--bg-dark); border: 1px solid var(--border); border-radius: 6px; padding: 0.75rem; text-align: center; }
+        .clog-category { background: var(--bg-dark); border: 1px solid var(--border); border-radius: 6px; padding: 0.75rem; text-align: center; cursor: pointer; transition: border-color .15s, background .15s; }
+        .clog-category:hover { border-color: var(--accent-gold); }
+        .clog-category:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 2px; }
+        /* Active card is the list filter; clicking it again clears. */
+        .clog-category.active { border-color: var(--accent-gold); background: color-mix(in srgb, var(--accent-gold) 12%, var(--bg-dark)); }
+        .clog-category.active .clog-category-name { color: var(--accent-gold); }
         .clog-category-icon { font-size: 1.5rem; margin-bottom: 0.25rem; }
         .clog-category-name { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
         .clog-category-count { font-family: 'Fira Code', monospace; font-size: 1rem; color: var(--text-primary); }
