@@ -69,7 +69,7 @@ Items from the guide I skipped - go back and do these.
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Prayer | 43 | 70 | 76 | 54 | 🟢 +11 | 🔴 −16 | 🔴 −22 |
 | Magic | 63 | 89 | 96 | 80 | 🟢 +17 | 🔴 −9 | 🔴 −16 |
-| Construction | 39 | 71 | 83 | 63 | 🟢 +24 | 🔴 −8 | 🔴 −20 |
+| Construction | 39 | 71 | 83 | 64 | 🟢 +25 | 🔴 −7 | 🔴 −19 |
 | Agility | 51 | 98 | 98 | 56 | 🟢 +5 | 🔴 −42 | 🔴 −42 |
 | Herblore | 40 | 73 | 84 | 61 | 🟢 +21 | 🔴 −12 | 🔴 −23 |
 | Thieving | 77 | 84 | 98 | 82 | 🟢 +5 | 🔴 −2 | 🔴 −16 |
@@ -244,9 +244,9 @@ Blast Furnace gold.
 **Sailing 80** (1,986,068 / 3,972,294 xp). **1,986,226 xp left** to the **Merchant shipwreck (87)**.
 On martial salvage at ~112.8 xp ea that is **~17,608 salvages**.
 
-**Main goal: bank chest on Sunbleak Island** (Construction 70). Crystal saw (+3) stacks with
-visible Construction boosts, and orange spice covers Construction, so **Construction 64** plus saw
-plus a +3 orange stew gets there. That is **31,142 xp** from 63.
+**Main goal: bank chest on Sunbleak Island** (Construction 70). **Construction 64 reached.**
+Crystal saw (+3) stacks with visible Construction boosts and orange spice covers Construction, so
+64 + saw + a +3 orange stew hits 70. Boost is in place; the chest is now a materials problem.
 
 Chest bill: magic stone (**975,000 gp**, Stonemason in Keldagrim or Metla at Stonecutter Outpost)
 · 2 cupronickel bars · 2 adamantite bars (Smithing 70 ✓) · 4 ironwood planks (WC 80 ✓, 5k gp ea).
