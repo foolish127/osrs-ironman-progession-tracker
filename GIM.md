@@ -244,14 +244,8 @@ Blast Furnace gold.
 **Sailing 80** (1,986,068 / 3,972,294 xp). **1,986,226 xp left** to the **Merchant shipwreck (87)**.
 On martial salvage at ~112.8 xp ea that is **~17,608 salvages**.
 
-**Main goal: bank chest on Sunbleak Island** (Construction 70). **Construction 64 reached.**
-Crystal saw (+3) stacks with visible Construction boosts and orange spice covers Construction, so
-64 + saw + a +3 orange stew hits 70. Boost is in place; the chest is now a materials problem.
-
-Chest bill: magic stone (**975,000 gp**, Stonemason in Keldagrim or Metla at Stonecutter Outpost)
-· 2 cupronickel bars · 2 adamantite bars (Smithing 70 ✓) · 4 ironwood planks (WC 80 ✓, 5k gp ea).
-Cupronickel needs **Smithing 74** against your 71, boostable the same way since orange and red
-spice both cover Smithing (+3 now covers it). Nickel ore is Mining 74, you are 84.
+**Sunbleak bank chest built.** Ironwood chopping is now bankable on site: 14 ironwood trees,
+Woodcutting 80 and Sailing 72 to moor, both met. Ironwood planks are 5,000 gp each at a sawmill.
 
 **Brazier parked.** Its real gate is Smithing, not Construction: 6 runite bars (Smithing 85) and
 16 rune nails (89, plus 2 more bars). With stew that is Smithing 84 base, ~2.06M xp from 71. Drop
