@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-08-27T04:19:11.141858+00:00",
+  "updated": "2026-08-30T03:50:19.988091+00:00",
   "combat_achievements": {
     "tiers": {
       "Easy": {
@@ -421,17 +421,20 @@
           {
             "name": "Smite Fight",
             "date": "2026-08-26"
+          },
+          {
+            "name": "Dancing Queen",
+            "date": "2026-08-29"
           }
         ],
         "not_completed": [
           "Dagannoth Supreme Champion",
-          "Temotli Triumph",
-          "Dancing Queen"
+          "Temotli Triumph"
         ],
-        "completed_count": 61,
+        "completed_count": 62,
         "total_count": 64,
         "points_per_task": 2,
-        "points_earned": 122
+        "points_earned": 124
       },
       "Hard": {
         "completed": [
@@ -1492,11 +1495,16 @@
         "points_earned": 30
       }
     },
-    "total_completed": 261,
+    "total_completed": 262,
     "total_tasks": 646,
-    "total_points": 779,
+    "total_points": 781,
     "max_points": 2655,
     "recent_tasks": [
+      {
+        "name": "Dancing Queen",
+        "date": "2026-08-29",
+        "tier": "Medium"
+      },
       {
         "name": "Mad Angel Adept",
         "date": "2026-08-26",
@@ -1590,11 +1598,6 @@
       {
         "name": "Perfect Zebak",
         "date": "2026-06-28",
-        "tier": "Master"
-      },
-      {
-        "name": "The Flame Skipper",
-        "date": "2026-06-26",
         "tier": "Master"
       }
     ]
