@@ -241,21 +241,14 @@ Blast Furnace gold.
 80 [░░░░░░░░░░░░░░░░░░░░] 87   0%
 ```
 
-**Sailing 80** (1,986,068 / 3,972,294 xp). **1,986,226 xp left** to the **Merchant shipwreck (87)**,
-the next salvage tier after Fremennik. At ~132.9 xp per Fremennik salvage (Jenkins D4 + Siad D3 on
-the hooks while you sort) that is **~14,950 salvages**.
+**Sailing 80** (1,986,068 / 3,972,294 xp). **1,986,226 xp left** to the **Merchant shipwreck (87)**.
+On martial salvage at ~112.8 xp ea that is **~17,608 salvages**.
 
-Fremennik salvage itself is gated on the **eternal brazier** (Sailing 78 met, **Construction 72**).
-Until then you are still on martial salvage at ~112.8.
-
-**Current goal: Construction 69** (+ crystal saw = 72).
-
-```
-63 [░░░░░░░░░░░░░░░░░░░░] 69   2%
-```
-
-**Construction 63** (375,873 / 668,051 xp). **292,178 xp left**. Building the brazier grants 1,373
-Construction xp. Later gates: Sunbleak bank chest at 70 and the ironwood cargo hold at 77 (74 w/ saw).
+**Brazier parked.** Fremennik salvage needs the eternal brazier, whose real gate is Smithing, not
+Construction: 6 runite bars (Smithing 85) and 16 rune nails (89, and 2 more bars). With spicy stew
+that is Smithing 84 base, ~2.19M xp from 70. Construction 72 (69 + crystal saw) is the easy half.
+Drop routes are closed too - Zalcano, Vyrewatch Sentinel and demonic gorillas are quest-locked,
+Kraken/Sire/Grotesque Guardians need Slayer 75-87 against 54.
 
 ---
 
