@@ -6,6 +6,7 @@ Preserves manually-entered dates from YAML files.
 """
 
 import os
+import re
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
@@ -232,16 +233,26 @@ def process_temple_clog(temple_data, manual_dates, yaml_data, item_names):
             total_obtained += len(obtained)
 
     # Now merge missing items from YAML
-    # We need to match YAML category names to Temple category names
+    # We need to match YAML category names to Temple category names.
+    # Temple's keys come back apostrophe-free ("champions_challenge"), while the
+    # YAML scaffold spells them properly ("Champion's Challenge"), so match on
+    # alphanumerics only or the same collection lands twice in the output.
+    def _norm_cat(name):
+        return re.sub(r'[^a-z0-9]', '', name.lower())
+
     yaml_to_temple_map = {}
+    temple_by_norm = {_norm_cat(t): t for t in collections}
     for yaml_cat in yaml_data.keys():
-        # Try exact match first
-        yaml_lower = yaml_cat.lower().replace(' ', '_').replace(',', '')
-        for temple_cat in collections.keys():
-            temple_lower = temple_cat.lower().replace(' ', '_')
-            if yaml_lower == temple_lower or yaml_cat == temple_cat:
-                yaml_to_temple_map[yaml_cat] = temple_cat
-                break
+        temple_cat = temple_by_norm.get(_norm_cat(yaml_cat))
+        if temple_cat:
+            yaml_to_temple_map[yaml_cat] = temple_cat
+
+    # Prefer the YAML spelling for any category that matched, since it carries
+    # the apostrophes Temple drops.
+    for yaml_cat, temple_cat in list(yaml_to_temple_map.items()):
+        if yaml_cat != temple_cat and temple_cat in collections:
+            collections[yaml_cat] = collections.pop(temple_cat)
+            yaml_to_temple_map[yaml_cat] = yaml_cat
 
     # Add missing items from YAML to matching categories
     missing_added = 0
