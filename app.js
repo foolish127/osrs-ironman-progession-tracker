@@ -725,7 +725,7 @@
             // Build overview HTML
             let html = `
                 <div class="clog-overview">
-                    <div class="clog-overview-title">Collection Log – Overview for ${clogData.rsn || 'FoolinSlays'}</div>
+                    <div class="clog-overview-title">Collection Log – Overview for ${clogData.rsn || 'FoolinSlays'}<span class="clog-overview-hint">click a category to filter</span></div>
                     <div class="clog-categories">
                         ${Object.entries(categoryStats).map(([name, stats]) => {
                             const catPct = stats.total > 0 ? (stats.obtained / stats.total * 100) : 0;
@@ -809,9 +809,9 @@
             const search = searchTerm.toLowerCase();
             let html = '';
 
-            // Partial first (what you're actually working on), then complete, then
-            // untouched. Untouched are hidden unless toggled on or a search is active.
-            const rank = c => !c.obtained_count ? 2 : (c.obtained_count >= c.total_count ? 1 : 0);
+            // Complete first, then partial, then untouched. Untouched are hidden
+            // unless toggled on or a search is active.
+            const rank = c => !c.obtained_count ? 2 : (c.obtained_count >= c.total_count ? 0 : 1);
             const entries = Object.entries(clogData.collections)
                 .filter(([name]) => !clogCategoryFilter || clogCategoryOf(name) === clogCategoryFilter)
                 .filter(([, c]) => showUntouched || search || c.obtained_count)
