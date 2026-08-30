@@ -76,7 +76,7 @@ Items from the guide I skipped - go back and do these.
 | Fletching | 48 | 69 | 99 | 59 | 🟢 +11 | 🔴 −10 | 🔴 −40 |
 | Slayer | 16 | 59 | 76 | 53 | 🟢 +37 | 🔴 −6 | 🔴 −23 |
 | Hunter | 49 | 82 | 95 | 73 | 🟢 +24 | 🔴 −9 | 🔴 −22 |
-| Smithing | 42 | 74 | 86 | 70 | 🟢 +28 | 🔴 −4 | 🔴 −16 |
+| Smithing | 42 | 74 | 86 | 71 | 🟢 +29 | 🔴 −3 | 🔴 −15 |
 | Fishing | 74 | 99 | 99 | 75 | 🟢 +1 | 🔴 −24 | 🔴 −24 |
 | Cooking | 60 | 81 | 81 | 65 | 🟢 +5 | 🔴 −16 | 🔴 −16 |
 | Farming | 63 | 94 | 96 | 76 | 🟢 +13 | 🔴 −18 | 🔴 −20 |
@@ -250,11 +250,11 @@ Crystal saw (+3) stacks with visible Construction boosts and orange spice covers
 
 Chest bill: magic stone (**975,000 gp**, Stonemason in Keldagrim or Metla at Stonecutter Outpost)
 · 2 cupronickel bars · 2 adamantite bars (Smithing 70 ✓) · 4 ironwood planks (WC 80 ✓, 5k gp ea).
-Cupronickel needs **Smithing 74** against your 70, boostable the same way since orange and red
-spice both cover Smithing. Nickel ore is Mining 74, you are 84.
+Cupronickel needs **Smithing 74** against your 71, boostable the same way since orange and red
+spice both cover Smithing (+3 now covers it). Nickel ore is Mining 74, you are 84.
 
 **Brazier parked.** Its real gate is Smithing, not Construction: 6 runite bars (Smithing 85) and
-16 rune nails (89, plus 2 more bars). With stew that is Smithing 84 base, ~2.19M xp from 70. Drop
+16 rune nails (89, plus 2 more bars). With stew that is Smithing 84 base, ~2.06M xp from 71. Drop
 routes are closed - Zalcano, Vyrewatch Sentinel and demonic gorillas are quest-locked, and
 Kraken/Sire/Grotesque Guardians need Slayer 75-87 against 54.
 
