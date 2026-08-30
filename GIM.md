@@ -244,10 +244,18 @@ Blast Furnace gold.
 **Sailing 80** (1,986,068 / 3,972,294 xp). **1,986,226 xp left** to the **Merchant shipwreck (87)**.
 On martial salvage at ~112.8 xp ea that is **~17,608 salvages**.
 
-**Brazier parked.** Fremennik salvage needs the eternal brazier, whose real gate is Smithing, not
-Construction: 6 runite bars (Smithing 85) and 16 rune nails (89, and 2 more bars). With spicy stew
-that is Smithing 84 base, ~2.19M xp from 70. Construction 72 (69 + crystal saw) is the easy half.
-Drop routes are closed too - Zalcano, Vyrewatch Sentinel and demonic gorillas are quest-locked,
+**Main goal: bank chest on Sunbleak Island** (Construction 70). Crystal saw (+3) stacks with
+visible Construction boosts, and orange spice covers Construction, so **Construction 64** plus saw
+plus a +3 orange stew gets there. That is **31,142 xp** from 63.
+
+Chest bill: magic stone (**975,000 gp**, Stonemason in Keldagrim or Metla at Stonecutter Outpost)
+· 2 cupronickel bars · 2 adamantite bars (Smithing 70 ✓) · 4 ironwood planks (WC 80 ✓, 5k gp ea).
+Cupronickel needs **Smithing 74** against your 70, boostable the same way since orange and red
+spice both cover Smithing. Nickel ore is Mining 74, you are 84.
+
+**Brazier parked.** Its real gate is Smithing, not Construction: 6 runite bars (Smithing 85) and
+16 rune nails (89, plus 2 more bars). With stew that is Smithing 84 base, ~2.19M xp from 70. Drop
+routes are closed - Zalcano, Vyrewatch Sentinel and demonic gorillas are quest-locked, and
 Kraken/Sire/Grotesque Guardians need Slayer 75-87 against 54.
 
 ---
