@@ -656,6 +656,9 @@
 
         // Which overview card is filtering the list, or null for all.
         let clogCategoryFilter = null;
+        // Which summary card is filtering the list. null is the default view:
+        // complete and partial, with not-started hidden.
+        let clogStatusFilter = null;
 
         function clogCategoryOf(collName) {
             const lower = collName.toLowerCase();
@@ -762,7 +765,6 @@
                 </div>`;
 
             
-            const untouched = Object.values(clogData.collections).filter(c => !c.obtained_count).length;
             html += `<div class="search-filter">
                     <input type="text" class="search-input" id="clogSearch" placeholder="Search items or collections..." value="${searchTerm}">
                     <select class="filter-select" id="clogFilter">
@@ -770,7 +772,6 @@
                         <option value="obtained" ${statusFilter==='obtained'?'selected':''}>Obtained Only</option>
                         <option value="missing" ${statusFilter==='missing'?'selected':''}>Missing Only</option>
                     </select>
-                    <label class="clog-toggle"><input type="checkbox" id="clogUntouched"> Show ${untouched} untouched</label>
                 </div>
                 <div id="clogList"></div>`;
 
@@ -778,13 +779,11 @@
 
             const readState = () => [
                 document.getElementById('clogSearch').value,
-                document.getElementById('clogFilter').value,
-                document.getElementById('clogUntouched').checked
+                document.getElementById('clogFilter').value
             ];
             const rerender = () => renderClogList(...readState());
             document.getElementById('clogSearch').addEventListener('input', rerender);
             document.getElementById('clogFilter').addEventListener('change', rerender);
-            document.getElementById('clogUntouched').addEventListener('change', rerender);
 
             // Overview cards double as category filters; clicking the active one clears it.
             container.querySelectorAll('.clog-category').forEach(card => {
@@ -801,21 +800,51 @@
                 });
             });
 
-            renderClogList(searchTerm, statusFilter, false);
+            renderClogList(searchTerm, statusFilter);
         }
 
-        function renderClogList(searchTerm, statusFilter, showUntouched = false) {
+        // complete | partial | untouched, for both the summary and the sort.
+        function clogState(c) {
+            if (!c.obtained_count) return 'untouched';
+            return c.obtained_count >= c.total_count ? 'complete' : 'partial';
+        }
+
+        function renderClogList(searchTerm, statusFilter) {
             const list = document.getElementById('clogList');
             const search = searchTerm.toLowerCase();
             let html = '';
 
-            // Complete first, then partial, then untouched. Untouched are hidden
-            // unless toggled on or a search is active.
-            const rank = c => !c.obtained_count ? 2 : (c.obtained_count >= c.total_count ? 0 : 1);
-            const entries = Object.entries(clogData.collections)
-                .filter(([name]) => !clogCategoryFilter || clogCategoryOf(name) === clogCategoryFilter)
-                .filter(([, c]) => showUntouched || search || c.obtained_count)
-                .sort((a, b) => rank(a[1]) - rank(b[1]) || a[0].localeCompare(b[0]));
+            // Summary counts are scoped to the active category so the cards always
+            // describe the list underneath them.
+            const inCategory = Object.entries(clogData.collections)
+                .filter(([name]) => !clogCategoryFilter || clogCategoryOf(name) === clogCategoryFilter);
+            const tally = { complete: 0, partial: 0, untouched: 0 };
+            inCategory.forEach(([, c]) => tally[clogState(c)]++);
+
+            const cards = [
+                ['all', 'Total', inCategory.length, ''],
+                ['complete', 'Logged', tally.complete, 'complete'],
+                ['partial', 'Partial', tally.partial, 'partial'],
+                ['untouched', 'Not started', tally.untouched, 'untouched']
+            ];
+            html += `<div class="clog-summary">${cards.map(([key, label, n, cls]) => `
+                <div class="clog-summary-card ${cls}${clogStatusFilter === key ? ' active' : ''}" data-state="${key}" role="button" tabindex="0">
+                    <div class="clog-summary-count">${n}</div>
+                    <div class="clog-summary-label">${label}</div>
+                </div>`).join('')}</div>`;
+
+            // Complete first, then partial, then not started. Not started are hidden
+            // by default, shown when a search is active or a card selects them.
+            const rank = { complete: 0, partial: 1, untouched: 2 };
+            const visible = ([, c]) => {
+                const st = clogState(c);
+                if (clogStatusFilter && clogStatusFilter !== 'all') return st === clogStatusFilter;
+                if (clogStatusFilter === 'all' || search) return true;
+                return st !== 'untouched';
+            };
+            const entries = inCategory
+                .filter(visible)
+                .sort((a, b) => rank[clogState(a[1])] - rank[clogState(b[1])] || a[0].localeCompare(b[0]));
 
             for (const [collName, coll] of entries) {
                 let obtained = coll.obtained || [];
@@ -859,7 +888,22 @@
                 </div>`;
             }
             
-            list.innerHTML = html || `<div class="empty-state">No items match your search${clogCategoryFilter ? ' in ' + clogCategoryFilter : ''}</div>`;
+            if (entries.length === 0) {
+                html += `<div class="empty-state">Nothing to show${clogCategoryFilter ? ' in ' + clogCategoryFilter : ''}</div>`;
+            }
+            list.innerHTML = html;
+
+            list.querySelectorAll('.clog-summary-card').forEach(card => {
+                const pick = () => {
+                    const st = card.dataset.state;
+                    clogStatusFilter = clogStatusFilter === st ? null : st;
+                    renderClogList(searchTerm, statusFilter);
+                };
+                card.addEventListener('click', pick);
+                card.addEventListener('keydown', e => {
+                    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(); }
+                });
+            });
         }
 
         function renderCombatAchievements(searchTerm = '', statusFilter = 'all') {

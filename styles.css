@@ -147,6 +147,22 @@
         .collection.complete .collection-name::after { content: ' ✓'; }
         .collection.complete .collection-count .obtained,
         .collection.complete .collection-count .total { color: var(--accent-green); }
+        /* Summary of the list below: total, logged, partial, not started. */
+        .clog-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 0.5rem; margin-bottom: 1rem; }
+        .clog-summary-card {
+            background: var(--bg-dark); border: 1px solid var(--border); border-radius: 6px;
+            padding: 0.6rem 0.5rem; text-align: center; cursor: pointer;
+            transition: border-color .15s, background .15s;
+        }
+        .clog-summary-card:hover { border-color: var(--accent-gold); }
+        .clog-summary-card:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 2px; }
+        .clog-summary-count { font-family: 'Fira Code', monospace; font-size: 1.15rem; color: var(--text-primary); }
+        .clog-summary-label { font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.15rem; }
+        .clog-summary-card.complete .clog-summary-count { color: var(--accent-green); }
+        .clog-summary-card.partial .clog-summary-count { color: var(--accent-gold); }
+        .clog-summary-card.untouched .clog-summary-count { color: var(--text-muted); }
+        .clog-summary-card.active { border-color: var(--accent-gold); background: color-mix(in srgb, var(--accent-gold) 12%, var(--bg-dark)); }
+        .clog-summary-card.active.complete { border-color: var(--accent-green); background: color-mix(in srgb, var(--accent-green) 12%, var(--bg-dark)); }
         .clog-toggle { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: var(--text-muted); white-space: nowrap; cursor: pointer; }
         .clog-toggle input { accent-color: var(--accent-gold); cursor: pointer; }
         /* Collection contents as an icon grid rather than stacked text rows. */
