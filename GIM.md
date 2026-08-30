@@ -1,5 +1,15 @@
 # Sailing
 
+| Section |
+|---|
+| [What to work on](#what-to-work-on) |
+| [BRUH sailer Guide](#bruh-sailer-guide) |
+| [Hunter](#hunter) |
+| [Smithing - Giants' Foundry](#smithing---giants-foundry) |
+| [Sailing details](#sailing-details) |
+
+---
+
 ## What to work on
 
 <details>
