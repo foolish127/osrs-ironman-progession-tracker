@@ -144,7 +144,7 @@
         /* Fully logged collections read as done at a glance. */
         .collection.complete { border-color: var(--accent-green); background: color-mix(in srgb, var(--accent-green) 7%, var(--bg-card)); }
         .collection.complete .collection-name { color: var(--accent-green); }
-        .collection.complete .collection-name::after { content: ' ¹3'; }
+        .collection.complete .collection-name::after { content: ' ✓'; }
         .collection.complete .collection-count .obtained,
         .collection.complete .collection-count .total { color: var(--accent-green); }
         .clog-toggle { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: var(--text-muted); white-space: nowrap; cursor: pointer; }
