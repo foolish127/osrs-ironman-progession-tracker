@@ -22,7 +22,7 @@
 | ⭐ **Bossing** | **Zulrah** | **Blowpipe** | **ToA** |
 | ⭐ **Bossing** | **ToA** | **Fang · Lightbearer · Ward** | **ToA** |
 | ⭐ **Bossing (Slayer)** | **Alchemical Hydra** | **Hydra claw** | **ToA** |
-| ⭐ **Bossing** | **Maggot King** | **Elder vantor fang · Crimson kisten** |  |
+| Bossing | Maggot King | Elder vantor fang · Crimson kisten |  |
 | ⭐ **Bossing** | **Phantom Muspah** | **Venator bow (3/5 shards)** |  |
 | Bossing (Slayer) | K'ril | Hasta | ToA |
 | Bossing | Hueycoatl | Dragon hunter wand |  |
