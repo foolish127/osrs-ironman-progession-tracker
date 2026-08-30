@@ -1,8 +1,20 @@
 # FoolinSlays - Maxing Progress
 
+| Section |
+|---|
+| [Current Goals](#current-goals) |
+| [Boss Progression Order](#boss-progression-order) |
+| [Slayer Tasks](#slayer-tasks) |
+| [Achievement Diaries](#achievement-diaries---remaining-elite-tasks) |
+| [99s Achieved](#99s-achieved) |
+| [AFK skilling methods](#afk-skilling-methods) |
+
 ---
 
 ## Current Goals
+
+<details>
+<summary>Show current goals (click to expand)</summary>
 
 | Goal | Reqs | Reward | For |
 |---|---|---|---|
@@ -21,9 +33,14 @@
 | Herblore | Mastering Mixology | Chugging barrel | low priority |
 | Fishing | Spirit flakes (1933 / 4800) | Spirit angler's outfit (1,200 ea × 4 pieces) | Tempoross CA |
 
+</details>
+
 ---
 
 ## Boss Progression Order
+
+<details>
+<summary>Show boss progression order (click to expand)</summary>
 
 ### Phase 1: Now
 
@@ -75,12 +92,14 @@
 | Phosani's Nightmare | Harmonised/Eldritch orb (nightmare staff) · Inquisitor's (helm/hauberk/plateskirt) · Inquisitor's mace | 6 |
 | Corporeal Beast | Arcane / Elysian / Spectral sigil → blessed spirit shield | 3 |
 
+</details>
+
 ---
 
 ## Slayer Tasks
 
 <details>
-<summary><strong>Task tables &amp; goals (Duradel &amp; Konar)</strong> — click to expand</summary>
+<summary>Show task tables &amp; goals, Duradel &amp; Konar (click to expand)</summary>
 
 **Current slayer goals:** roll a Hydra task → kill **Alchemical Hydra** for the **Hydra claw** (→ Dragon hunter lance).
 
@@ -188,6 +207,9 @@ he never assigns them; Greater Demons still earns its slot via other masters.
 
 ## Achievement Diaries - remaining Elite tasks
 
+<details>
+<summary>Show achievement diaries, remaining elite tasks (click to expand)</summary>
+
 | # | Diary | Level | Reqs | Boost | Skill | Current | Status | Diff |
 |:---:|---|---|---|---|:---:|:---:|---|:---:|
 | 1 | Ardougne | Elite | 90 Agility (summer pie +5) | 85 | Agility | 81 | ❌ Not met | -4 |
@@ -228,9 +250,14 @@ he never assigns them; Greater Demons still earns its slot via other masters.
 | Wilderness bosses | 1 | - |
 | **Total** | **8** | |
 
+</details>
+
 ---
 
 ## 99s Achieved
+
+<details>
+<summary>Show 99s achieved (click to expand)</summary>
 
 | # | Skill | Date |
 |:---:|---|---|
@@ -249,9 +276,14 @@ he never assigns them; Greater Demons still earns its slot via other masters.
 | 13 | Thieving | 21 Aug 2026 |
 | 14 | Cooking | 27 Aug 2026 |
 
+</details>
+
 ---
 
 ## AFK skilling methods
+
+<details>
+<summary>Show AFK skilling methods (click to expand)</summary>
 
 Skills I care about AFKing, from the wiki's [AFK Skilling Methods](https://oldschool.runescape.wiki/w/Guide:AFK_Skilling_Methods) guide.
 Rates there assume 99 + full skilling outfits, so expect less in practice.
@@ -272,3 +304,5 @@ Rates there assume 99 + full skilling outfits, so expect less in practice.
 - **Fletching.** Redwood shields (0:47 · 193k) need **92** - one level away. Battlestaves (0:49 · 143k) until then.
 
 **Agility - tabled.** POH agility is the longest AFK on the page (10:00) but only 12k XP/hr, so ~900 hrs to 99, and it needs Construction 88 (currently 84). Revisit if Construction gets there; otherwise rooftops or Sepulchre.
+
+</details>
