@@ -245,8 +245,17 @@ Blast Furnace gold.
 the next salvage tier after Fremennik. At ~132.9 xp per Fremennik salvage (Jenkins D4 + Siad D3 on
 the hooks while you sort) that is **~14,950 salvages**.
 
-Fremennik salvage itself is gated on the **eternal brazier** (Sailing 78 met, **Construction 72**),
-so 69 Construction plus a crystal saw. Until then you are still on martial salvage at ~112.8.
+Fremennik salvage itself is gated on the **eternal brazier** (Sailing 78 met, **Construction 72**).
+Until then you are still on martial salvage at ~112.8.
+
+**Current goal: Construction 69** (+ crystal saw = 72).
+
+```
+63 [░░░░░░░░░░░░░░░░░░░░] 69   2%
+```
+
+**Construction 63** (375,873 / 668,051 xp). **292,178 xp left**. Building the brazier grants 1,373
+Construction xp. Later gates: Sunbleak bank chest at 70 and the ironwood cargo hold at 77 (74 w/ saw).
 
 ---
 
