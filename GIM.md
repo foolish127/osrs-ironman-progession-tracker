@@ -2,11 +2,39 @@
 
 | Section |
 |---|
+| [Current plan](#current-plan) |
 | [What to work on](#what-to-work-on) |
 | [BRUH sailer Guide](#bruh-sailer-guide) |
 | [Hunter](#hunter) |
 | [Smithing - Giants' Foundry](#smithing---giants-foundry) |
 | [Sailing details](#sailing-details) |
+
+---
+
+## Current plan
+
+Everything is AFK.
+
+| | |
+|---|---|
+| Now | Ironwood at Sunbleak to **Woodcutting 90**, then redwoods to 99 |
+| Then | AFK Firemaking on campfires (~3.5 min a light), burning the ironwood/redwood |
+| Running | Miscellania, teak 10 / herbs 5, set 30 Aug 2026 - **needs collecting** |
+| Goal | **Song of the Elves** |
+
+SotE wants 70 in Agility, Construction, Farming, Herblore, Hunter, Mining and Smithing.
+**None of them are boostable.** Farming 76, Hunter 73, Mining 84 and Smithing 71 are already met,
+so three remain:
+
+| Skill | Now | To 70 |
+|---|:---:|---:|
+| Agility | 56 | 553,148 xp |
+| Herblore | 61 | 422,977 xp |
+| Construction | 64 | 327,741 xp |
+
+Construction is the smallest of the three, not the only one. Agility is the real wall and the
+hardest to AFK. SotE also unlocks Zalcano, which drops runite bars, so it feeds the parked
+eternal brazier.
 
 ---
 
