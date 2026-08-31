@@ -162,7 +162,7 @@ Items from the guide I skipped - go back and do these.
 | Attack | 46 | 62 | 78 | 80 | 🟢 +34 | 🟢 +18 | 🟢 +2 |
 | Defence | 34 | 70 | 76 | 79 | 🟢 +45 | 🟢 +9 | 🟢 +3 |
 | Sailing | 1 | 67 | 78 | 80 | 🟢 +79 | 🟢 +13 | 🟢 +2 |
-| Woodcutting | 70 | 73 | 80 | 82 | 🟢 +12 | 🟢 +9 | 🟢 +2 |
+| Woodcutting | 70 | 73 | 80 | 83 | 🟢 +13 | 🟢 +10 | 🟢 +3 |
 
 </details>
 
