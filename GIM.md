@@ -115,7 +115,7 @@ Items from the guide I skipped - go back and do these.
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Attack | 46 | 62 | 78 | 80 | 🟢 +34 | 🟢 +18 | 🟢 +2 |
 | Defence | 34 | 70 | 76 | 79 | 🟢 +45 | 🟢 +9 | 🟢 +3 |
-| Woodcutting | 70 | 73 | 80 | 80 | 🟢 +10 | 🟢 +7 | 🟢 +0 |
+| Woodcutting | 70 | 73 | 80 | 81 | 🟢 +11 | 🟢 +8 | 🟢 +1 |
 
 </details>
 
