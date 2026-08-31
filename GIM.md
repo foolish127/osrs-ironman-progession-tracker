@@ -19,7 +19,7 @@ Everything is AFK.
 |---|---|
 | Now | Ironwood at Sunbleak to **Woodcutting 90**, then redwoods to 99 |
 | Then | AFK Firemaking on campfires (~3.5 min a light), burning the ironwood/redwood |
-| Running | Miscellania, teak 10 / herbs 5, set 30 Aug 2026 - **needs collecting** |
+| Running | Miscellania, teak 10 / herbs 5, set 30 Aug 2026 |
 | Goal | **Song of the Elves** |
 
 SotE wants 70 in Agility, Construction, Farming, Herblore, Hunter, Mining and Smithing.
@@ -35,6 +35,25 @@ so three remain:
 Construction is the smallest of the three, not the only one. Agility is the real wall and the
 hardest to AFK. SotE also unlocks Zalcano, which drops runite bars, so it feeds the parked
 eternal brazier.
+
+### Miscellania checkpoints
+
+Construction goes through **Mahogany Homes Adept** at **287.9 xp per teak plank**, three times
+better than teak larders (93.8). Adept needs Con 50, so it is open now; Expert needs 70 and cannot
+help get there. Bring a few steel bars.
+
+10 of 15 workers on hardwood at full approval and max wage is **~201 teak logs a day**
+(301 is the all-15 figure). Holding **567 planks**.
+
+| Goal | xp | Planks | Still need | Check after |
+|---|---:|---:|---:|---:|
+| Con 70 (SotE) | 327,741 | 1,138 | 571 | **~3 days** (approx 2 Sep) |
+| Con 83 (Ch 3) | 2,263,228 | 7,861 | 7,294 | **~36 days** (early Oct) |
+
+Coffer holds 7.5M against a 75k daily wage, so ~100 days of funding, not the constraint.
+Approval drops 1% a day after Royal Trouble, so the 83 run tapers unless topped up. Cutting teak
+on Etceteria gives +1 approval per log and teak logs, which is the same AFK woodcutting already
+being done.
 
 ---
 
