@@ -13,6 +13,7 @@ more than a sentence of reasoning, put the detail in a section below the table.
 | 3 | Slayer | Let Mortimer's Mortifiers be toggled off individually | Dead rolls crowd out useful ones: XP at 99 Slayer, clues when I don't want them |
 | 4 | Herblore | Bastion potions should not need vials of blood | The vial is the whole bottleneck, not the herb |
 | 5 | Quality of life | Easier hopping to an open world for slayer tasks and other activities | Manual hop-and-check is a tax on every crowded spot |
+| 6 | Quality of life | Queue for a full world instead of being turned away | Failed poll, but waiting in line beats hop-and-pray |
 
 ---
 
