@@ -104,7 +104,6 @@ Items from the guide I skipped - go back and do these.
 | Ranged | 45 | 62 | 93 | 73 | 🟢 +28 | 🟢 +11 | 🔴 −20 |
 | Runecraft | 24 | 40 | 95 | 54 | 🟢 +30 | 🟢 +14 | 🔴 −41 |
 | Mining | 44 | 73 | 97 | 84 | 🟢 +40 | 🟢 +11 | 🔴 −13 |
-| Sailing | 1 | 67 | 78 | 80 | 🟢 +79 | 🟢 +13 | 🟢 +2 |
 
 </details>
 
@@ -115,6 +114,7 @@ Items from the guide I skipped - go back and do these.
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Attack | 46 | 62 | 78 | 80 | 🟢 +34 | 🟢 +18 | 🟢 +2 |
 | Defence | 34 | 70 | 76 | 79 | 🟢 +45 | 🟢 +9 | 🟢 +3 |
+| Sailing | 1 | 67 | 78 | 80 | 🟢 +79 | 🟢 +13 | 🟢 +2 |
 | Woodcutting | 70 | 73 | 80 | 81 | 🟢 +11 | 🟢 +8 | 🟢 +1 |
 
 </details>
