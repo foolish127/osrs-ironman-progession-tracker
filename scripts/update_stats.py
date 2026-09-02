@@ -5,6 +5,7 @@ Fetches data from official hiscores and TempleOSRS API.
 Preserves manually-entered dates from YAML files.
 """
 
+import json
 import os
 import re
 from collections import Counter
@@ -118,6 +119,8 @@ def ironman_equivalent_rank(total_level, total_xp):
     if not total_level or not total_xp:
         return None
 
+    UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+          "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
     base = "https://secure.runescape.com/m=hiscore_oldschool_ironman/overall?table=0&page="
     row_re = re.compile(
         r"<td[^>]*>\s*([\d,]+)\s*</td>\s*<td[^>]*>.*?</td>"
@@ -130,7 +133,8 @@ def ironman_equivalent_rank(total_level, total_xp):
         if n in cache:
             return cache[n]
         try:
-            req = urllib.request.Request(base + str(n), headers={"User-Agent": "osrs-tracker/1.0"})
+            # Jagex serves the ranking pages to browsers; a bare tool UA can be refused.
+            req = urllib.request.Request(base + str(n), headers={"User-Agent": UA})
             with urllib.request.urlopen(req, timeout=20) as r:
                 html = r.read().decode("utf-8", "replace")
         except Exception:
@@ -787,7 +791,18 @@ def main():
     equiv_rank = None
     if skills and HISCORES_VARIANT == "hiscore_oldschool":
         equiv_rank = ironman_equivalent_rank(overall.get("level", 0), overall.get("xp", 0))
-        print(f"  Ironman-board equivalent rank: {equiv_rank if equiv_rank else 'unavailable'}")
+        if equiv_rank:
+            print(f"  Ironman-board equivalent rank: {equiv_rank:,}")
+        else:
+            # The scrape can fail from CI (Jagex is picky about who reads the
+            # ranking pages). Keep the last known value rather than blanking it.
+            prev = read_data_file("skills.json")
+            if prev:
+                try:
+                    equiv_rank = json.loads(prev).get("milestones", {}).get("ironman_equiv_rank")
+                except Exception:
+                    equiv_rank = None
+            print(f"  Ironman-board equivalent rank: lookup failed, kept {equiv_rank or 'nothing'}")
 
     if skills:
         save_json(DATA_DIR / "skills.json", {
