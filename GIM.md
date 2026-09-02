@@ -137,7 +137,7 @@ Items from the guide I skipped - go back and do these.
 | Smithing | 42 | 74 | 86 | 71 | 🟢 +29 | 🔴 −3 | 🔴 −15 |
 | Fishing | 74 | 99 | 99 | 75 | 🟢 +1 | 🔴 −24 | 🔴 −24 |
 | Cooking | 60 | 81 | 81 | 65 | 🟢 +5 | 🔴 −16 | 🔴 −16 |
-| Farming | 63 | 94 | 96 | 76 | 🟢 +13 | 🔴 −18 | 🔴 −20 |
+| Farming | 63 | 94 | 96 | 77 | 🟢 +14 | 🔴 −17 | 🔴 −19 |
 
 </details>
 
