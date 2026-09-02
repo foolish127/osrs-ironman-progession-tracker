@@ -102,6 +102,80 @@ def load_item_names():
         return items
     return {}
 
+def ironman_equivalent_rank(total_level, total_xp):
+    """Where this account's stats would sit on the ironman overall hiscores.
+
+    Group ironmen are absent from every ironman board and Jagex publishes no
+    per-player GIM rank, so comparing a GIM against the main board (which is
+    mostly mains) is misleading. This binary-searches the ironman overall
+    ranking for the account's total level, then walks that level's band to
+    find where its total xp slots in. Best effort - returns None on any
+    failure, since it is a nicety and must never break a stats run.
+    """
+    import re
+    import urllib.request
+
+    if not total_level or not total_xp:
+        return None
+
+    base = "https://secure.runescape.com/m=hiscore_oldschool_ironman/overall?table=0&page="
+    row_re = re.compile(
+        r"<td[^>]*>\s*([\d,]+)\s*</td>\s*<td[^>]*>.*?</td>"
+        r"\s*<td[^>]*>\s*([\d,]+)\s*</td>\s*<td[^>]*>\s*([\d,]+)\s*</td>",
+        re.S,
+    )
+    cache = {}
+
+    def page(n):
+        if n in cache:
+            return cache[n]
+        try:
+            req = urllib.request.Request(base + str(n), headers={"User-Agent": "osrs-tracker/1.0"})
+            with urllib.request.urlopen(req, timeout=20) as r:
+                html = r.read().decode("utf-8", "replace")
+        except Exception:
+            cache[n] = []
+            return []
+        rows = [tuple(int(x.replace(",", "")) for x in m.groups()) for m in row_re.finditer(html)]
+        cache[n] = rows
+        return rows
+
+    try:
+        # Bracket the page holding our total level (pages are 25 rows each).
+        lo, hi = 1, None
+        for probe in (500, 1000, 2000, 4000, 8000, 16000, 32000):
+            rows = page(probe)
+            if not rows:
+                break
+            if rows[0][1] < total_level:
+                hi = probe
+                break
+            lo = probe
+        if hi is None:
+            return None
+
+        while hi - lo > 1:
+            mid = (lo + hi) // 2
+            rows = page(mid)
+            if not rows:
+                return None
+            if rows[0][1] >= total_level:
+                lo = mid
+            else:
+                hi = mid
+
+        # Walk forward through the band until xp drops below ours.
+        for n in range(max(1, lo - 4), lo + 6):
+            for rank, lvl, xp in page(n):
+                if lvl < total_level:
+                    return rank
+                if lvl == total_level and xp <= total_xp:
+                    return rank
+    except Exception:
+        return None
+    return None
+
+
 def load_collection_log(temple_data, item_names):
     """
     Build the collection log from pre-fetched TempleOSRS data, preserving manual
@@ -707,6 +781,14 @@ def main():
     mag = skills.get("Magic", {}).get("level", 1)
     combat = 0.25 * (def_ + hp + (pray // 2)) + max(0.325 * (att + str_), 0.325 * rng * 1.5, 0.325 * mag * 1.5)
 
+    # A GIM is only on the main board, where it is ranked against mains. Work out
+    # what the same stats would be worth on the ironman board so the site can show
+    # both cleanly. Ironman accounts are already on it, so skip the lookup.
+    equiv_rank = None
+    if skills and HISCORES_VARIANT == "hiscore_oldschool":
+        equiv_rank = ironman_equivalent_rank(overall.get("level", 0), overall.get("xp", 0))
+        print(f"  Ironman-board equivalent rank: {equiv_rank if equiv_rank else 'unavailable'}")
+
     if skills:
         save_json(DATA_DIR / "skills.json", {
             "rsn": RSN, "updated": now.isoformat(), "skills": skills,
@@ -716,7 +798,9 @@ def main():
                 "combat_level": round(combat, 2),
                 "skills_99": n99, "num_skills": NUM_SKILLS,
                 "ca_points": ca_points, "ca_rank": ca_rank,
-                "collections_logged": collections_logged, "collections_rank": collections_rank
+                "collections_logged": collections_logged, "collections_rank": collections_rank,
+                "hiscore_board": HISCORES_VARIANT,
+                "ironman_equiv_rank": equiv_rank
             }
         })
 

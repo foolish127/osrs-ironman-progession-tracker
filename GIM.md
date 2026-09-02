@@ -19,6 +19,7 @@ Everything is AFK.
 |---|---|
 | Now | Ironwood at Sunbleak to **Woodcutting 90**, then redwoods to 99 |
 | Then | AFK Firemaking on campfires (~3.5 min a light), burning the ironwood/redwood |
+| Also | Farming tree runs, cheap levels for the effort and a SotE requirement already met |
 | Running | Miscellania, teak 10 / herbs 5, set 30 Aug 2026 |
 | Goal | **Song of the Elves** |
 

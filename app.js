@@ -472,15 +472,29 @@
                 const res = ranksData[i];
                 const overall = res?.skills?.Overall;
                 const m = res?.milestones;
+                // Each account is ranked on a different board: the ironman sits on the
+                // ironman hiscores, a GIM only on the main board against mains. Label
+                // both, and for the GIM show the ironman-board equivalent alongside.
+                const onMain = m?.hiscore_board === 'hiscore_oldschool';
+                const equiv = m?.ironman_equiv_rank;
+                const stats = `${m?.total_level?.toLocaleString() || '—'} total &middot; ${formatNumber(m?.total_xp || 0)} XP`;
+                const primary = `
+                    <div class="rank-hero-slot">
+                        <div class="rank-hero-value">${formatRank(overall?.rank)}</div>
+                        <div class="rank-hero-board">${onMain ? 'Main hiscores' : 'Ironman hiscores'}</div>
+                    </div>`;
+                const secondary = (onMain && equiv > 0) ? `
+                    <div class="rank-hero-slot equiv">
+                        <div class="rank-hero-value">~${'#' + equiv.toLocaleString()}</div>
+                        <div class="rank-hero-board">Ironman equivalent</div>
+                    </div>` : '';
                 return `<div class="rank-hero${a.id === currentAccount.id ? ' current' : ''}">
                     <div class="rank-hero-head">
                         <img src="${a.badge}" alt="${a.type}" class="iron-icon">
                         <span class="rank-hero-name">${a.label}</span>
                     </div>
-                    <div class="rank-hero-value">${formatRank(overall?.rank)}</div>
-                    <div class="rank-hero-sub">
-                        ${m?.total_level?.toLocaleString() || '—'} total &middot; ${formatNumber(m?.total_xp || 0)} XP
-                    </div>
+                    <div class="rank-hero-splits${secondary ? ' two' : ''}">${primary}${secondary}</div>
+                    <div class="rank-hero-sub">${stats}</div>
                 </div>`;
             }).join('');
 
@@ -521,7 +535,11 @@
                         </tr>
                         ${rows}
                     </tbody>
-                </table></div>`;
+                </table></div>
+                <p class="rank-note">Ranks come from different boards, so the highlight is
+                indicative only: FoolinSlays is on the ironman hiscores, GIM Foolin only on the
+                main board. Jagex publishes no per-player Group Ironman rank, so the ironman
+                equivalent above is where those stats would land on the ironman board.</p>`;
         }
 
         function renderBosses(bosses) {
