@@ -24,7 +24,16 @@
 | ⭐ **Bossing (Slayer)** | **Alchemical Hydra** | **Hydra claw** | **ToA** |
 | ⭐ **Bossing** | **Phantom Muspah** | **Venator bow (3/5 shards)** |  |
 | Bossing | Maggot King | Elder vantor fang · Crimson kisten |  |
+| ⭐ **Skilling** | **Agility 81 → 85** | **959,971 xp** | **beat FoolinSlayz** |
+| ⭐ **Skilling** | **Smithing 86 → 89** | **1,219,711 xp** | **beat FoolinSlayz** |
+| ⭐ **Skilling** | **Fishing 92 → 93** | **290,044 xp** | **beat FoolinSlayz** |
+| ⭐ **Skilling** | **Prayer 85 → 86** | **193,400 xp** | **beat FoolinSlayz** |
+| ⭐ **Pet** | **Guardians of the Rift** | **Abyssal protector** | **beat FoolinSlayz** |
 | Bossing (Slayer) | K'ril | Hasta | ToA |
+| Bossing | General Graardor | Bandos hilt · tassets | soon |
+| Bossing | Kree'arra | Armadyl hilt · Masori plate | soon |
+| Bossing | Commander Zilyana | Saradomin hilt | soon |
+| Bossing | Giant Mole | KC gap only | maybe |
 | Bossing | Hueycoatl | Dragon hunter wand |  |
 | Agility | 112 Marks · 9–12 hrs @ Pollnivneach | Graceful |  |
 | Achievement Diary | 484 / 492 (98.4%) |  |  |
