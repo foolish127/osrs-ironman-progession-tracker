@@ -482,6 +482,17 @@ def load_combat_achievements():
 
     recent_tasks.sort(key=lambda x: date_sort_key(x.get('date')), reverse=True)
 
+    # A tier's reward unlocks at the running total of every point available up to
+    # and including it, so the thresholds move whenever Jagex adds tasks. Derive
+    # them instead of hardcoding, which is what left the old figures stale.
+    running = 0
+    for tier_name in ['Easy', 'Medium', 'Hard', 'Elite', 'Master', 'Grandmaster']:
+        if tier_name not in tiers:
+            continue
+        t = tiers[tier_name]
+        running += t['total_count'] * t['points_per_task']
+        t['unlock_points'] = running
+
     return {
         'tiers': tiers,
         'total_completed': total_completed,
