@@ -934,15 +934,21 @@
             const pct = ((caData.total_points / caData.max_points) * 100).toFixed(1);
             const tierColors = { Easy: '#3fb950', Medium: '#58a6ff', Hard: '#a371f7', Elite: '#d4a84b', Master: '#f85149', Grandmaster: '#ff7b72' };
             
-            // CA tier unlock thresholds (from OSRS Wiki - updated)
-            const tierUnlocks = [
-                { name: 'Easy', points: 41, rewards: ['Ghommal\'s hilt 1', '5% easy clue boost', '+5 boss task kills'] },
-                { name: 'Medium', points: 161, rewards: ['Ghommal\'s hilt 2', '5% medium clue boost', '+10 boss task kills'] },
-                { name: 'Hard', points: 419, rewards: ['Ghommal\'s hilt 3', 'Unlimited GWD teles', 'GWD private instances'] },
-                { name: 'Elite', points: 1100, rewards: ['Ghommal\'s hilt 4', '5% elite clue boost', 'Cannon holds 60'] },
-                { name: 'Master', points: 1940, rewards: ['Ghommal\'s hilt 5', 'Red slayer helmet'] },
-                { name: 'Grandmaster', points: 2655, rewards: ['Ghommal\'s hilt 6', 'Green slayer helmet'] }
-            ];
+            // Reward text is stable; the point thresholds are not. A tier unlocks at
+            // the running total of every point available up to and including it, so
+            // they shift whenever Jagex adds tasks. update_stats.py derives them into
+            // tiers[].unlock_points - hardcoding is what left four of six stale.
+            const TIER_REWARDS = {
+                Easy: ["Ghommal's hilt 1", '5% easy clue boost', '+5 boss task kills'],
+                Medium: ["Ghommal's hilt 2", '5% medium clue boost', '+10 boss task kills'],
+                Hard: ["Ghommal's hilt 3", 'Unlimited GWD teles', 'GWD private instances'],
+                Elite: ["Ghommal's hilt 4", '5% elite clue boost', 'Cannon holds 60'],
+                Master: ["Ghommal's hilt 5", 'Red slayer helmet'],
+                Grandmaster: ["Ghommal's hilt 6", 'Green slayer helmet']
+            };
+            const tierUnlocks = Object.keys(TIER_REWARDS)
+                .filter(name => caData.tiers?.[name]?.unlock_points)
+                .map(name => ({ name, points: caData.tiers[name].unlock_points, rewards: TIER_REWARDS[name] }));
             
             // Find current and next tier
             let currentTier = null;
