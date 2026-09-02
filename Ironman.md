@@ -30,10 +30,6 @@
 | ⭐ **Skilling** | **Prayer 85 → 86** | **193,400 xp** | **beat FoolinSlayz** |
 | ⭐ **Pet** | **Guardians of the Rift** | **Abyssal protector** | **beat FoolinSlayz** |
 | Bossing (Slayer) | K'ril | Hasta | ToA |
-| Bossing | General Graardor | Bandos hilt · tassets | soon |
-| Bossing | Kree'arra | Armadyl hilt · Masori plate | soon |
-| Bossing | Commander Zilyana | Saradomin hilt | soon |
-| Bossing | Giant Mole | KC gap only | maybe |
 | Bossing | Hueycoatl | Dragon hunter wand |  |
 | Agility | 112 Marks · 9–12 hrs @ Pollnivneach | Graceful |  |
 | Achievement Diary | 484 / 492 (98.4%) |  |  |
