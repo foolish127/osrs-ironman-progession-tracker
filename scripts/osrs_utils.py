@@ -154,8 +154,15 @@ def date_sort_key(value: Any) -> date:
 # ---------------------------------------------------------------------------
 
 def parse_item_with_date(line: str) -> dict:
-    """Parse 'item name | 2024-01-15' or 'item name |' or 'item name'."""
+    """Parse 'item name | 2024-01-15' or 'item name |' or 'item name'.
+
+    A name containing ": " has to be quoted to stay valid YAML. Strip a matching
+    pair of wrapping quotes first, or the quote characters end up glued to the
+    name and the date ('"Theatre of Blood: SM Adept' / '2025-11-12"').
+    """
     line = line.strip()
+    if len(line) > 1 and line[0] == line[-1] and line[0] in ('"', "'"):
+        line = line[1:-1].strip()
     if ' | ' in line:
         name, _, rest = line.partition(' | ')
         rest = rest.strip()
