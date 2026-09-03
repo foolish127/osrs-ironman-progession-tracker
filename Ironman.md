@@ -55,8 +55,7 @@
 | 3 | Zulrah | Tanzanite fang → Toxic blowpipe | 1 |
 | 4 | Hueycoatl | Dragon hunter wand · Tome of earth | 2 |
 | 5 | Doom of Mokhaiotl | Eye of ayak | 1 |
-| 6 | Phantom Muspah | Venator shard → Venator bow | 3 |
-| 7 | Maggot King | Elder vantor fang · Crimson kisten | 2 |
+| 6 | Maggot King | Elder vantor fang · Crimson kisten | 2 |
 
 ### Phase 2: Gear upgrades (next)
 
