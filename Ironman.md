@@ -61,25 +61,25 @@
 
 | # | Boss | Target loot | Drops needed |
 |:--:|---|---|:--:|
-| 8 | Duke Sucellus | Magus vestige → Magus ring · Eye of the duke · Virtus (m/t/b) | 5 |
-| 9 | The Leviathan | Bellator vestige → Bellator ring · Leviathan's lure · Virtus (m/t/b) | 5 |
-| 10 | The Whisperer | Venator vestige → Venator ring · Siren's staff · Virtus (m/t/b) | 5 |
-| 11 | Vardorvis | Ultor vestige → Ultor ring · Executioner's axe head · Virtus (m/t/b) | 5 |
-| 12 | General Graardor | Bandos chestplate · Bandos tassets | 2 |
-| 13 | Kree'arra | Armadyl armour (helm/body/skirt) | 3 |
-| 14 | Commander Zilyana | Armadyl crossbow (→ Zaryte crossbow) · Saradomin sword | 2 |
-| 15 | K'ril Tsutsaroth | Zamorakian spear → hasta · Staff of the dead | 2 |
-| 16 | Yama | Oathplate (helm/chest/legs) · Soulflame horn | 4 |
+| 7 | Duke Sucellus | Magus vestige → Magus ring · Eye of the duke · Virtus (m/t/b) | 5 |
+| 8 | The Leviathan | Bellator vestige → Bellator ring · Leviathan's lure · Virtus (m/t/b) | 5 |
+| 9 | The Whisperer | Venator vestige → Venator ring · Siren's staff · Virtus (m/t/b) | 5 |
+| 10 | Vardorvis | Ultor vestige → Ultor ring · Executioner's axe head · Virtus (m/t/b) | 5 |
+| 11 | General Graardor | Bandos chestplate · Bandos tassets | 2 |
+| 12 | Kree'arra | Armadyl armour (helm/body/skirt) | 3 |
+| 13 | Commander Zilyana | Armadyl crossbow (→ Zaryte crossbow) · Saradomin sword | 2 |
+| 14 | K'ril Tsutsaroth | Zamorakian spear → hasta · Staff of the dead | 2 |
+| 15 | Yama | Oathplate (helm/chest/legs) · Soulflame horn | 4 |
 
 ### Phase 3: Endgame raids & capes (long-term)
 
 | # | Boss | Target loot | Drops needed |
 |:--:|---|---|:--:|
-| 17 | Nex | Torva (helm/plate/legs) · Zaryte vambraces · Nihil horn → Zaryte crossbow · Ancient hilt | 6 |
-| 18 | CoX (Chambers of Xeric) | Twisted bow · Dragon hunter crossbow · Ancestral (h/t/b) · Dex/Arcane scrolls · Twisted buckler · Kodai insignia · Elder maul | 10 |
-| 19 | Fortis Colosseum | Dizana's quiver · Sunfire fanatic armour (h/c/c) · Tonalztics of ralos | 5 |
-| 20 | ToB (Theatre of Blood) | Scythe of vitur · Ghrazi rapier · Sanguinesti staff · Justiciar (f/c/l) · Avernic defender hilt | 7 |
-| 21 | Inferno (TzKal-Zuk) | Infernal cape | 1 |
+| 16 | Nex | Torva (helm/plate/legs) · Zaryte vambraces · Nihil horn → Zaryte crossbow · Ancient hilt | 6 |
+| 17 | CoX (Chambers of Xeric) | Twisted bow · Dragon hunter crossbow · Ancestral (h/t/b) · Dex/Arcane scrolls · Twisted buckler · Kodai insignia · Elder maul | 10 |
+| 18 | Fortis Colosseum | Dizana's quiver · Sunfire fanatic armour (h/c/c) · Tonalztics of ralos | 5 |
+| 19 | ToB (Theatre of Blood) | Scythe of vitur · Ghrazi rapier · Sanguinesti staff · Justiciar (f/c/l) · Avernic defender hilt | 7 |
+| 20 | Inferno (TzKal-Zuk) | Infernal cape | 1 |
 
 ### Optional / lower priority
 
