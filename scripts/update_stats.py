@@ -801,19 +801,29 @@ def main():
     # both cleanly. Ironman accounts are already on it, so skip the lookup.
     equiv_rank = None
     if skills and HISCORES_VARIANT == "hiscore_oldschool":
+        # The scrape works locally but fails from CI, and skills.json is rewritten
+        # every run, so a failed run used to blank the value permanently. Cache it
+        # in its own file that only a *successful* lookup ever writes.
+        cache_path = DATA_DIR / "rank_equiv.json"
         equiv_rank = ironman_equivalent_rank(overall.get("level", 0), overall.get("xp", 0))
         if equiv_rank:
+            save_json(cache_path, {
+                "ironman_equiv_rank": equiv_rank,
+                "total_level": overall.get("level", 0),
+                "total_xp": overall.get("xp", 0),
+                "updated": now.isoformat(),
+            })
             print(f"  Ironman-board equivalent rank: {equiv_rank:,}")
+        elif cache_path.exists():
+            try:
+                cached = json.loads(cache_path.read_text(encoding="utf-8"))
+                equiv_rank = cached.get("ironman_equiv_rank")
+                print(f"  Ironman-board equivalent rank: lookup failed, cached "
+                      f"{equiv_rank:,} from {cached.get('updated', '?')[:10]}")
+            except Exception:
+                equiv_rank = None
         else:
-            # The scrape can fail from CI (Jagex is picky about who reads the
-            # ranking pages). Keep the last known value rather than blanking it.
-            prev = read_data_file("skills.json")
-            if prev:
-                try:
-                    equiv_rank = json.loads(prev).get("milestones", {}).get("ironman_equiv_rank")
-                except Exception:
-                    equiv_rank = None
-            print(f"  Ironman-board equivalent rank: lookup failed, kept {equiv_rank or 'nothing'}")
+            print("  Ironman-board equivalent rank: unavailable, no cache")
 
     if skills:
         save_json(DATA_DIR / "skills.json", {
