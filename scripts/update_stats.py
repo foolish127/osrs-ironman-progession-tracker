@@ -799,12 +799,13 @@ def main():
     # A GIM is only on the main board, where it is ranked against mains. Work out
     # what the same stats would be worth on the ironman board so the site can show
     # both cleanly. Ironman accounts are already on it, so skip the lookup.
+    # Cached in its own file because skills.json is rewritten every run: a run that
+    # does not look this up (wrong HISCORES_VARIANT, or a failed scrape) would
+    # otherwise write null over a good value and every later run would preserve it.
+    # Only a successful lookup writes the cache; everything else just reads it.
     equiv_rank = None
+    cache_path = DATA_DIR / "rank_equiv.json"
     if skills and HISCORES_VARIANT == "hiscore_oldschool":
-        # The scrape works locally but fails from CI, and skills.json is rewritten
-        # every run, so a failed run used to blank the value permanently. Cache it
-        # in its own file that only a *successful* lookup ever writes.
-        cache_path = DATA_DIR / "rank_equiv.json"
         equiv_rank = ironman_equivalent_rank(overall.get("level", 0), overall.get("xp", 0))
         if equiv_rank:
             save_json(cache_path, {
@@ -814,16 +815,14 @@ def main():
                 "updated": now.isoformat(),
             })
             print(f"  Ironman-board equivalent rank: {equiv_rank:,}")
-        elif cache_path.exists():
-            try:
-                cached = json.loads(cache_path.read_text(encoding="utf-8"))
-                equiv_rank = cached.get("ironman_equiv_rank")
-                print(f"  Ironman-board equivalent rank: lookup failed, cached "
-                      f"{equiv_rank:,} from {cached.get('updated', '?')[:10]}")
-            except Exception:
-                equiv_rank = None
-        else:
-            print("  Ironman-board equivalent rank: unavailable, no cache")
+    if equiv_rank is None and cache_path.exists():
+        try:
+            cached = json.loads(cache_path.read_text(encoding="utf-8"))
+            equiv_rank = cached.get("ironman_equiv_rank")
+            print(f"  Ironman-board equivalent rank: reusing cached {equiv_rank:,} "
+                  f"from {cached.get('updated', '?')[:10]}")
+        except Exception:
+            equiv_rank = None
 
     if skills:
         save_json(DATA_DIR / "skills.json", {
