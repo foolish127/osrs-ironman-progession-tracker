@@ -22,7 +22,7 @@
 | ⭐ **Bossing** | **Zulrah** | **Blowpipe** | **ToA** |
 | ⭐ **Bossing** | **ToA** | **Fang · Lightbearer · Ward** | **ToA** |
 | ⭐ **Bossing (Slayer)** | **Alchemical Hydra** | **Hydra claw** | **ToA** |
-| ⭐ **Bossing** | **Phantom Muspah** | **Venator bow (3/5 shards)** |  |
+| ⭐ **Bossing** | **Phantom Muspah** | **Venator bow (4/5 shards)** |  |
 | Bossing | Maggot King | Elder vantor fang · Crimson kisten |  |
 | ⭐ **Skilling** | **Agility 81 → 85** | **959,971 xp** | **beat FoolinSlayz** |
 | ⭐ **Skilling** | **Smithing 86 → 89** | **1,219,711 xp** | **beat FoolinSlayz** |
