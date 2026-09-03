@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-09-02T17:28:23.588816+00:00",
+  "updated": "2026-09-03T20:27:21.076156+00:00",
   "combat_achievements": {
     "tiers": {
       "Easy": {
@@ -1210,6 +1210,10 @@
           {
             "name": "Zulrah Master",
             "date": "2026-05-18"
+          },
+          {
+            "name": "Zulrah Speed-Chaser",
+            "date": "2026-09-03"
           }
         ],
         "not_completed": [
@@ -1348,17 +1352,16 @@
           "Yama Veteran",
           "You are not prepared",
           "You Didn't Say Anything About a Bat",
-          "Zulrah Speed-Chaser",
           "Digging in",
           "Camping the King",
           "Cordoned Off",
           "Perfect Maggot King",
           "King-sized clobbering"
         ],
-        "completed_count": 32,
+        "completed_count": 33,
         "total_count": 173,
         "points_per_task": 5,
-        "points_earned": 160,
+        "points_earned": 165,
         "unlock_points": 1965
       },
       "Grandmaster": {
@@ -1510,11 +1513,16 @@
         "unlock_points": 2697
       }
     },
-    "total_completed": 262,
+    "total_completed": 263,
     "total_tasks": 655,
-    "total_points": 781,
+    "total_points": 786,
     "max_points": 2697,
     "recent_tasks": [
+      {
+        "name": "Zulrah Speed-Chaser",
+        "date": "2026-09-03",
+        "tier": "Master"
+      },
       {
         "name": "Dancing Queen",
         "date": "2026-08-29",
@@ -1608,11 +1616,6 @@
       {
         "name": "Space is Tight",
         "date": "2026-07-09",
-        "tier": "Master"
-      },
-      {
-        "name": "Perfect Zebak",
-        "date": "2026-06-28",
         "tier": "Master"
       }
     ]
