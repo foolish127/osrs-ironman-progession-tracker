@@ -26,7 +26,7 @@
 | ⭐ **Skilling** | **Agility 81 → 85** | **959,971 xp** | **beat FoolinSlayz** |
 | ⭐ **Skilling** | **Smithing 86 → 89** | **1,219,711 xp** | **beat FoolinSlayz** |
 | ⭐ **Skilling** | **Prayer 85 → 86** | **193,400 xp** | **beat FoolinSlayz** |
-| ⭐ **Pet** | **Guardians of the Rift** | **Abyssal protector** | **beat FoolinSlayz** |
+| Pet | Guardians of the Rift | Abyssal protector | beat FoolinSlayz |
 | Bossing (Slayer) | K'ril | Hasta | ToA |
 | Bossing | Hueycoatl | Dragon hunter wand |  |
 | Agility | 112 Marks · 9–12 hrs @ Pollnivneach | Graceful |  |
