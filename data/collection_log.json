@@ -1,6 +1,6 @@
 {
   "rsn": "FoolinSlays",
-  "updated": "2026-09-03T20:27:21.076156+00:00",
+  "updated": "2026-09-04T20:22:42.812569+00:00",
   "collection_log": {
     "collections": {
       "Abyssal Sire": {
@@ -30,6 +30,11 @@
           {
             "name": "Ikkle Hydra",
             "date": "2026-07-02",
+            "quantity": 1
+          },
+          {
+            "name": "Hydra's claw",
+            "date": "2026-09-04",
             "quantity": 1
           },
           {
@@ -78,10 +83,8 @@
             "quantity": 4
           }
         ],
-        "missing": [
-          "Hydra's claw"
-        ],
-        "obtained_count": 10,
+        "missing": [],
+        "obtained_count": 11,
         "total_count": 11
       },
       "Amoxliatl": {
@@ -2398,6 +2401,48 @@
         "missing": [],
         "obtained_count": 4,
         "total_count": 4
+      },
+      "Hallowed Sepulchre": {
+        "obtained": [
+          {
+            "name": "Hallowed mark",
+            "date": "2026-09-04",
+            "quantity": 5
+          },
+          {
+            "name": "Hallowed token",
+            "date": "2026-09-04",
+            "quantity": 1
+          },
+          {
+            "name": "Mysterious page",
+            "date": "2026-09-04",
+            "quantity": 1
+          },
+          {
+            "name": "Mysterious page",
+            "date": "2026-09-04",
+            "quantity": 1
+          }
+        ],
+        "missing": [
+          "Dark acorn",
+          "Dark dye",
+          "Hallowed focus",
+          "Hallowed grapple",
+          "Hallowed hammer",
+          "Hallowed ring",
+          "Hallowed symbol",
+          "Mysterious page (fifth floor)",
+          "Mysterious page (first floor)",
+          "Mysterious page (fourth floor)",
+          "Mysterious page (second floor)",
+          "Mysterious page (third floor)",
+          "Ring of endurance (uncharged)",
+          "Strange old lockpick (full)"
+        ],
+        "obtained_count": 4,
+        "total_count": 18
       },
       "Magic Training Arena": {
         "obtained": [
@@ -4952,29 +4997,6 @@
         "obtained_count": 0,
         "total_count": 1
       },
-      "Hallowed Sepulchre": {
-        "obtained": [],
-        "missing": [
-          "Dark acorn",
-          "Dark dye",
-          "Hallowed focus",
-          "Hallowed grapple",
-          "Hallowed hammer",
-          "Hallowed mark",
-          "Hallowed ring",
-          "Hallowed symbol",
-          "Hallowed token",
-          "Mysterious page (fifth floor)",
-          "Mysterious page (first floor)",
-          "Mysterious page (fourth floor)",
-          "Mysterious page (second floor)",
-          "Mysterious page (third floor)",
-          "Ring of endurance (uncharged)",
-          "Strange old lockpick (full)"
-        ],
-        "obtained_count": 0,
-        "total_count": 16
-      },
       "Hard Treasure Trails (Rare), Elite Treasure Trails (Rare), Master Treasure Trails (Rare)": {
         "obtained": [],
         "missing": [
@@ -5700,9 +5722,29 @@
         "total_count": 1
       }
     },
-    "total_obtained": 583,
-    "total_items": 1752,
+    "total_obtained": 588,
+    "total_items": 1754,
     "recent_items": [
+      {
+        "name": "Hydra's claw",
+        "date": "2026-09-04",
+        "collection": "alchemical_hydra"
+      },
+      {
+        "name": "Hallowed mark",
+        "date": "2026-09-04",
+        "collection": "hallowed_sepulchre"
+      },
+      {
+        "name": "Hallowed token",
+        "date": "2026-09-04",
+        "collection": "hallowed_sepulchre"
+      },
+      {
+        "name": "Mysterious page",
+        "date": "2026-09-04",
+        "collection": "hallowed_sepulchre"
+      },
       {
         "name": "Air diamond",
         "date": "2026-09-03",
@@ -5782,26 +5824,6 @@
         "name": "Ardeaglais teleport",
         "date": "2026-08-02",
         "collection": "the_mad_angel"
-      },
-      {
-        "name": "Heron",
-        "date": "2026-08-01",
-        "collection": "all_pets"
-      },
-      {
-        "name": "Smiths trousers",
-        "date": "2026-07-13",
-        "collection": "giants_foundry"
-      },
-      {
-        "name": "Venator shard",
-        "date": "2026-07-10",
-        "collection": "phantom_muspah"
-      },
-      {
-        "name": "Ancient icon",
-        "date": "2026-07-10",
-        "collection": "phantom_muspah"
       }
     ],
     "source": "templeosrs"
