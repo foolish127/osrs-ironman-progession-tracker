@@ -16,6 +16,7 @@ more than a sentence of reasoning, put the detail in a section below the table.
 | 6 | Quality of life | Queue for a full world instead of being turned away | Failed poll, but waiting in line beats hop-and-pray |
 | 7 | Quality of life | Kill shopscape: every store stocks its offerings without limit | Hopping worlds to drain stock is not gameplay |
 | 8 | Raids | Remove the dark relic (CoX reward) from the game | Underwhelming and pointless as a reward |
+| 9 | Bossing | Zulrah should be attackable the moment she surfaces | The wind-up before she can be hit is dead time, not difficulty |
 
 ---
 
