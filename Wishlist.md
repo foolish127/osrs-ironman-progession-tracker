@@ -17,6 +17,7 @@ more than a sentence of reasoning, put the detail in a section below the table.
 | 7 | Quality of life | Kill shopscape: every store stocks its offerings without limit | Hopping worlds to drain stock is not gameplay |
 | 8 | Raids | Remove the dark relic (CoX reward) from the game | Underwhelming and pointless as a reward |
 | 9 | Bossing | Zulrah should be attackable the moment she surfaces | The wind-up before she can be hit is dead time, not difficulty |
+| 10 | Bossing | Hits landed as Zulrah submerges should resolve immediately | Damage should not sit queued until she resurfaces |
 
 ---
 
