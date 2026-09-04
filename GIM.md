@@ -17,8 +17,8 @@ Everything is AFK.
 
 | | |
 |---|---|
-| Now | **Woodcutting 90 reached.** Redwoods to 99, 350 xp a log against ironwood’s 220.5 |
-| Then | AFK Firemaking on campfires (~3.5 min a light), burning the ironwood/redwood |
+| Now | Burn the banked ironwood on campfires, 220.5 xp a log (~3.5 min a light) |
+| Then | Redwoods to Woodcutting 99, 350 xp a log and better Firemaking fuel |
 | Also | Farming tree runs, cheap levels for the effort and a SotE requirement already met |
 | Running | Miscellania, teak 10 / herbs 5, set 30 Aug 2026 |
 | Goal | **Song of the Elves** |
