@@ -2253,8 +2253,28 @@
             });
         }
 
+        // Both Targets panes rebuild their whole innerHTML on every keystroke, which
+        // destroys the focused input and drops the caret. Capture where it was and
+        // put it back after the rebuild.
+        function captureTargetsFocus() {
+            const el = document.activeElement;
+            if (!el || !el.id || !el.id.startsWith('targets')) return null;
+            return { id: el.id, start: el.selectionStart, end: el.selectionEnd };
+        }
+
+        function restoreTargetsFocus(f) {
+            if (!f) return;
+            const el = document.getElementById(f.id);
+            if (!el) return;
+            el.focus();
+            if (f.start != null && typeof el.setSelectionRange === 'function') {
+                try { el.setSelectionRange(f.start, f.end); } catch (e) { /* not a text input */ }
+            }
+        }
+
         function renderTargetsClog() {
             const body = document.getElementById('targetsBody');
+            const focus = captureTargetsFocus();
             if (!body) return;
 
             if (!wikiCompData?.items) {
@@ -2381,10 +2401,13 @@
                     renderTargetsClog();
                 });
             });
+
+            restoreTargetsFocus(focus);
         }
 
         function renderTargetsCA() {
             const body = document.getElementById('targetsBody');
+            const focus = captureTargetsFocus();
             if (!body) return;
 
             if (!caData) {
@@ -2555,6 +2578,8 @@
                     renderTargetsCA();
                 });
             });
+
+            restoreTargetsFocus(focus);
         }
 
         // The Targets tab's reference tables (~1,700 items + 637 tasks) are large
