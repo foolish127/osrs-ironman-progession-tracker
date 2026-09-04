@@ -116,7 +116,7 @@ Items from the guide I skipped - go back and do these.
 
 | Skill | Ch 1 | Ch 2 | Ch 3 | Mine | vs Ch 1 | vs Ch 2 | vs Ch 3 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Firemaking | 89 | 89 | 89 | 82 | 🔴 −7 | 🔴 −7 | 🔴 −7 |
+| Firemaking | 89 | 89 | 89 | 83 | 🔴 −6 | 🔴 −6 | 🔴 −6 |
 
 </details>
 
