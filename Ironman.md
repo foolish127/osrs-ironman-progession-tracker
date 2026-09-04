@@ -23,10 +23,10 @@
 | ⭐ **Bossing** | **ToA** | **Fang · Lightbearer · Ward** | **ToA** |
 | ⭐ **Bossing (Slayer)** | **Alchemical Hydra** | **Hydra claw** | **ToA** |
 | Bossing | Maggot King | Elder vantor fang · Crimson kisten |  |
-| ⭐ **Skilling** | **Agility 81 → 85** | **959,971 xp** | **beat FoolinSlayz** |
-| ⭐ **Skilling** | **Smithing 86 → 89** | **1,219,711 xp** | **beat FoolinSlayz** |
-| ⭐ **Skilling** | **Prayer 85 → 86** | **193,400 xp** | **beat FoolinSlayz** |
-| Pet | Guardians of the Rift | Abyssal protector | beat FoolinSlayz |
+| ⭐ **Skilling** | **Agility 81 → 85** | **959,971 xp** | **FoolinSlayz** |
+| ⭐ **Skilling** | **Smithing 86 → 89** | **1,219,711 xp** | **FoolinSlayz** |
+| ⭐ **Skilling** | **Prayer 85 → 86** | **193,400 xp** | **FoolinSlayz** |
+| Pet | Guardians of the Rift | Abyssal protector | FoolinSlayz |
 | Bossing (Slayer) | K'ril | Hasta | ToA |
 | Bossing | Hueycoatl | Dragon hunter wand |  |
 | Agility | 112 Marks · 9–12 hrs @ Pollnivneach | Graceful |  |
