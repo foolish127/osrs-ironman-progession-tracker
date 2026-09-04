@@ -220,7 +220,7 @@ he never assigns them; Greater Demons still earns its slot via other masters.
 | 4 | Kandarin | Elite | Chewed Bones (pyre) |  | Barb training |  |  |  |
 | 5 | Kandarin | Elite | Barbarian Assault Level 5 |  | Barb Assault |  |  |  |
 | 6 | Morytania | Elite | Full Barrows set |  | Barrows |  |  |  |
-| 7 | Western Prov. | Elite | 1k Chompy Birds |  | Chompy |  |  |  |
+| 7 | Western Prov. | Elite | 1k Chompy Birds |  | Chompy | 403 |  | 597 |
 | 8 | Wilderness | Elite | Kill Callisto / Venenatis / Vet'ion |  | Wildy |  |  |  |
 
 ### Summary - by diary
@@ -248,7 +248,7 @@ he never assigns them; Greater Demons still earns its slot via other masters.
 | White 2H Sword | 1 | - |
 | Pyre (Chewed Bones) | 1 | - |
 | Barbarian Assault | 1 | - |
-| Chompy - 1k kills | 1 | - |
+| Chompy - 1k kills (403 / 1,000) | 1 | - |
 | Wilderness bosses | 1 | - |
 | **Total** | **8** | |
 
