@@ -17,7 +17,7 @@ Everything is AFK.
 
 | | |
 |---|---|
-| Now | Ironwood at Sunbleak to **Woodcutting 90**, then redwoods to 99 |
+| Now | **Woodcutting 90 reached.** Redwoods to 99, 350 xp a log against ironwood’s 220.5 |
 | Then | AFK Firemaking on campfires (~3.5 min a light), burning the ironwood/redwood |
 | Also | Farming tree runs, cheap levels for the effort and a SotE requirement already met |
 | Running | Miscellania, teak 10 / herbs 5, set 30 Aug 2026 |
@@ -163,7 +163,7 @@ Items from the guide I skipped - go back and do these.
 | Attack | 46 | 62 | 78 | 80 | 🟢 +34 | 🟢 +18 | 🟢 +2 |
 | Defence | 34 | 70 | 76 | 79 | 🟢 +45 | 🟢 +9 | 🟢 +3 |
 | Sailing | 1 | 67 | 78 | 80 | 🟢 +79 | 🟢 +13 | 🟢 +2 |
-| Woodcutting | 70 | 73 | 80 | 89 | 🟢 +19 | 🟢 +16 | 🟢 +9 |
+| Woodcutting | 70 | 73 | 80 | 90 | 🟢 +20 | 🟢 +17 | 🟢 +10 |
 
 </details>
 
